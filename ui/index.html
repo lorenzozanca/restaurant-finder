@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>restaurant-finder</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#111117;--bg2:#1a1a24;--bg3:#242438;--bg4:#2e2e44;
+  --fg:#e0e0e0;--fg2:#9090a0;--fg3:#606070;
+  --green:#4ade80;--red:#f87171;--yellow:#fbbf24;--blue:#60a5fa;
+  --radius:6px;--gap:12px;
+  --font:'JetBrains Mono','Fira Code','Cascadia Code','Consolas',monospace;
+}
+html,body{height:100%;background:var(--bg);color:var(--fg);font:14px/1.5 var(--font)}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+button{cursor:pointer;font:inherit;border:none;border-radius:var(--radius)}
+input{font:16px/1.5 var(--font);background:var(--bg2);color:var(--fg);border:1px solid var(--bg3);border-radius:var(--radius);padding:8px 12px;outline:none;width:100%}
+input:focus{border-color:var(--blue)}
+input::placeholder{color:var(--fg3)}
+
+#app{display:flex;height:100%;max-width:1100px;margin:0 auto}
+
+#header{position:fixed;top:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:var(--bg);border-bottom:1px solid var(--bg3);z-index:100}
+#header .logo{color:var(--fg2);font-weight:600;font-size:15px}
+#header .status{font-size:12px;color:var(--fg2)}
+#header .status.done{color:var(--green)}
+#header .status.error{color:var(--red)}
+#header .status .spinner{display:inline-block;width:12px;height:12px;border:2px solid var(--bg3);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;margin-right:6px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+#sidebar{width:260px;flex-shrink:0;padding:60px 12px 16px;overflow-y:auto;border-right:1px solid var(--bg3)}
+#sidebar h2{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--fg3);margin-bottom:12px}
+#sidebar .town{border-radius:var(--radius);padding:6px 10px;cursor:pointer;color:var(--fg2);font-size:13px;transition:background .15s}
+#sidebar .town:hover{background:var(--bg2);color:var(--fg)}
+#sidebar .town.active{background:var(--bg3);color:var(--fg)}
+#sidebar .dates{padding-left:12px}
+#sidebar .date{display:block;padding:4px 8px;font-size:12px;color:var(--fg3);cursor:pointer;border-radius:4px;transition:all .15s}
+#sidebar .date:hover{background:var(--bg2);color:var(--fg)}
+#sidebar .date.active{background:var(--bg3);color:var(--green)}
+#sidebar .dim{font-size:12px;color:var(--fg3);font-style:italic;padding:6px 10px}
+#sidebar .town-name{cursor:pointer}
+#sidebar .town-name:hover{color:var(--blue)}
+
+#main{flex:1;padding:60px 24px 24px;overflow-y:auto;min-width:0}
+#main h1{font-size:18px;margin-bottom:20px}
+
+.form{max-width:400px}
+.form label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--fg2);margin-bottom:4px}
+.form .field{margin-bottom:16px}
+.form .btn{
+  background:var(--green);color:#111;padding:10px 20px;font-size:14px;font-weight:600;
+  transition:opacity .15s;
+}
+.form .btn:hover{opacity:.85}
+.form .btn:disabled{opacity:.4;cursor:not-allowed}
+
+#progress .phase{font-size:14px;color:var(--fg2);margin-bottom:4px}
+#progress .source-line{font-size:13px;color:var(--fg3);padding-left:16px}
+#progress .source-line .count{color:var(--fg)}
+#progress .menu-line{font-size:13px;padding-left:16px;color:var(--fg3)}
+#progress .menu-line .name{color:var(--fg)}
+#progress .menu-line .found{color:var(--green)}
+#progress .menu-line .not-found{color:var(--fg3)}
+#progress .timer{font-size:12px;color:var(--fg3);margin-top:12px}
+
+#results .summary{font-size:13px;color:var(--fg2);margin-bottom:4px}
+#results .summary .count{color:var(--green)}
+#results .summary .nocount{color:var(--fg3)}
+#results .actions{margin-bottom:16px;display:flex;gap:8px}
+#results .actions .btn{background:var(--bg3);color:var(--fg);padding:7px 14px;font-size:13px;transition:background .15s}
+#results .actions .btn:hover{background:var(--bg4)}
+#results .actions .btn.primary{background:var(--green);color:#111}
+
+.table{width:100%;border-collapse:collapse;font-size:13px}
+.table th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--fg3);padding:8px 10px;border-bottom:1px solid var(--bg3);position:sticky;top:44px;background:var(--bg);z-index:10}
+.table td{padding:8px 10px;border-bottom:1px solid var(--bg2);color:var(--fg2)}
+.table tr:nth-child(even) td{background:var(--bg2)}
+.table tr.expanded td{background:var(--bg3)}
+.table .menu-col{text-align:center;cursor:pointer;user-select:none}
+.table .menu-col .has{color:var(--green);font-weight:bold}
+.table .menu-col .none{color:var(--fg3)}
+.table .sources-col{cursor:pointer;user-select:none}
+.table .sources-count{color:var(--blue)}
+.table .name-col{color:var(--fg)}
+.table tr{cursor:pointer}
+.table tr:hover td{background:var(--bg3)}
+
+.detail-row td{padding:0!important;background:var(--bg2)!important}
+.detail{padding:10px 10px 10px 16px;font-size:12px}
+.detail .source{display:flex;align-items:center;gap:8px;padding:3px 0;color:var(--fg2)}
+.detail .source:last-child{margin-bottom:0}
+.detail .badge{display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;text-transform:uppercase;letter-spacing:.5px}
+.detail .badge.pdf{background:#7c3aed;color:#ddd6fe}
+.detail .badge.webpage{background:#1d4ed8;color:#bfdbfe}
+
+.error-box{max-width:500px}
+.error-box .icon{font-size:24px;color:var(--red);margin-bottom:12px}
+.error-box .msg{color:var(--red);font-size:14px;margin-bottom:16px;word-break:break-all}
+.error-box .btn{background:var(--bg3);color:var(--fg);padding:8px 16px;font-size:13px}
+
+.empty{color:var(--fg3);font-size:13px}
+
+@media(max-width:700px){
+  #app{flex-direction:column}
+  #sidebar{width:100%;border-right:none;border-bottom:1px solid var(--bg3);padding:56px 12px 12px;max-height:35vh;overflow-y:auto}
+  #main{padding:16px}
+}
+
+.sidebar-toggle{display:none}
+@media(max-width:700px){
+  .sidebar-toggle{display:block;position:fixed;top:10px;left:10px;z-index:200;background:var(--bg3);color:var(--fg);padding:6px 10px;border-radius:var(--radius);font-size:14px}
+  #sidebar.collapsed{display:none}
+}
+</style>
+</head>
+<body>
+
+<div id="header">
+  <span class="logo">restaurant-finder</span>
+  <span class="status" id="status"></span>
+</div>
+
+<button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
+
+<div id="app">
+  <nav id="sidebar">
+    <h2>Past scans</h2>
+    <div id="sidebarContent" class="dim">No past scans yet.</div>
+  </nav>
+  <main id="main"></main>
+</div>
+
+<script>
+(function() {
+  const $ = (s) => document.querySelector(s);
+  const $$ = (s) => document.querySelectorAll(s);
+  const main = $("#main");
+  const statusEl = $("#status");
+  const sidebarContent = $("#sidebarContent");
+
+  let state = {
+    currentView: "input",
+    scanRunning: false,
+    pastScans: [],
+    results: null,
+    eventSource: null,
+    timerInterval: null,
+    scanStart: 0,
+    expandedRow: null,
+  };
+
+  async function api(method, path, body) {
+    const opts = { method, headers: {} };
+    if (body) {
+      opts.headers["Content-Type"] = "application/json";
+      opts.body = JSON.stringify(body);
+    }
+    const res = await fetch(path, opts);
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ error: res.statusText }));
+      throw new Error(err.error || `HTTP ${res.status}`);
+    }
+    return res.json();
+  }
+
+  function streamSSE(init, onStreamEnd) {
+    fetch("/api/scan", init).then(async (res) => {
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ error: res.statusText }));
+        if (err.attachable) {
+          startReattach(err.town, err.province);
+          return;
+        }
+        showError(err.error || "Scan failed");
+        state.scanRunning = false;
+        setStatus();
+        return;
+      }
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+      let streamEnded = false;
+
+      async function read() {
+        try {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            const parts = buffer.split("\n\n");
+            buffer = parts.pop();
+            for (const part of parts) {
+              if (!part.trim()) continue;
+              const lines = part.split("\n");
+              let eventName = "message";
+              let data = "";
+              for (const line of lines) {
+                if (line.startsWith("event: ")) eventName = line.slice(7);
+                else if (line.startsWith("data: ")) data = line.slice(6);
+              }
+              if (data) {
+                try { handleSSE(eventName, JSON.parse(data)); } catch {}
+              }
+            }
+          }
+          if (buffer.trim()) {
+            const lines = buffer.split("\n");
+            let eventName = "message";
+            let data = "";
+            for (const line of lines) {
+              if (line.startsWith("event: ")) eventName = line.slice(7);
+              else if (line.startsWith("data: ")) data = line.slice(6);
+            }
+            if (data) {
+              try { handleSSE(eventName, JSON.parse(data)); } catch {}
+            }
+          }
+        } catch (err) {
+          streamEnded = true;
+          if (!state.results && state.scanRunning) {
+            showDisconnected(state.currentScan.town, state.currentScan.province);
+          }
+        }
+        if (!streamEnded) {
+          if (!state.results && state.scanRunning) {
+            showDisconnected(state.currentScan.town, state.currentScan.province);
+          }
+          onStreamEnd && onStreamEnd();
+        }
+      }
+      await read();
+    }).catch((err) => {
+      if (err.name !== "AbortError" && !state.results && state.scanRunning) {
+        showDisconnected(state.currentScan?.town, state.currentScan?.province);
+      }
+    });
+  }
+
+  function attachToScan() {
+    fetch("/api/scan/attach", { method: "POST" }).then(async (res) => {
+      if (!res.ok) {
+        if (!state.results) showError("Scan is no longer running");
+        return;
+      }
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+
+      async function read() {
+        try {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            const parts = buffer.split("\n\n");
+            buffer = parts.pop();
+            for (const part of parts) {
+              if (!part.trim()) continue;
+              const lines = part.split("\n");
+              let eventName = "message";
+              let data = "";
+              for (const line of lines) {
+                if (line.startsWith("event: ")) eventName = line.slice(7);
+                else if (line.startsWith("data: ")) data = line.slice(6);
+              }
+              if (data) {
+                try {
+                  const parsed = JSON.parse(data);
+                  if (eventName === "attached") {
+                    handleAttached(parsed);
+                  } else {
+                    handleSSE(eventName, parsed);
+                  }
+                } catch {}
+              }
+            }
+          }
+        } catch {}
+        if (!state.results && state.scanRunning) {
+          showDisconnected(state.currentScan.town, state.currentScan.province);
+        }
+      }
+      await read();
+    }).catch(() => {
+      if (!state.results && state.scanRunning) {
+        showDisconnected(state.currentScan?.town, state.currentScan?.province);
+      }
+    });
+  }
+
+  function handleAttached(data) {
+    state.scanRunning = true;
+    state.scanStart = Date.now() - (data.elapsed || 0);
+    state.currentView = "progress";
+    setStatus();
+    showProgressView(data.town, data.province);
+    if (data.progress) {
+      updateSourceLine("nominatim", data.progress.sources?.nominatim || 0);
+      updateSourceLine("thefork", data.progress.sources?.thefork || 0);
+      updateSourceLine("web_search", data.progress.sources?.web_search || 0);
+      if (data.progress.sources?.total_raw) updateSourceLine("total_raw", data.progress.sources.total_raw);
+      if (data.progress.sources?.deduped) updateSourceLine("deduped", data.progress.sources.deduped);
+    }
+  }
+
+  function startReattach(town, province) {
+    state.currentScan = { town, province: province || "" };
+    state.scanRunning = true;
+    state.scanStart = Date.now();
+    state.currentView = "progress";
+    state.results = null;
+    state.expandedRow = null;
+    setStatus();
+    showProgressView(town, province);
+    attachToScan();
+  }
+
+  function handleSSE(event, data) {
+    if (event === "phase") {
+      if (data.phase === "discovery") addPhase("Discovering restaurants…");
+      else if (data.phase === "menu_hunting") addPhase("Hunting menus…");
+      else if (data.phase === "writing") addPhase("Writing output…");
+    } else if (event === "progress") {
+      updateSourceLine(data.source, data.count);
+    } else if (event === "menu-progress") {
+      addMenuLine(data.n, data.total, data.name, data.found);
+    } else if (event === "result") {
+      showResults(data);
+      loadPastScans();
+    } else if (event === "error") {
+      showError(data.error);
+    }
+  }
+
+  function addPhase(text) {
+    const el = $("#progress");
+    if (!el) return;
+    const div = document.createElement("div");
+    div.className = "phase";
+    div.textContent = text;
+    el.appendChild(div);
+    el.scrollTop = el.scrollHeight;
+  }
+
+  function updateSourceLine(source, count) {
+    const el = $("#progress");
+    if (!el) return;
+    let line = el.querySelector(`[data-source="${source}"]`);
+    if (!line) {
+      line = document.createElement("div");
+      line.className = "source-line";
+      line.setAttribute("data-source", source);
+      const label = source
+        .replace("_", " ")
+        .replace("nominatim", "nominatim:")
+        .replace("thefork", "thefork:")
+        .replace("web search", "web search:")
+        .replace("paginegialle", "paginegialle:")
+        .replace("total raw", "total raw:")
+        .replace("deduped", "after dedup & filter:");
+      line.innerHTML = `  ${label} <span class="count">${count}</span>`;
+      el.appendChild(line);
+    } else {
+      const countEl = line.querySelector(".count");
+      if (countEl) countEl.textContent = count;
+    }
+    el.scrollTop = el.scrollHeight;
+  }
+
+  function addMenuLine(n, total, name, found) {
+    const el = $("#progress");
+    if (!el) return;
+    const div = document.createElement("div");
+    div.className = "menu-line";
+    const foundClass = found > 0 ? "found" : "not-found";
+    const foundText = found > 0 ? `${found} source${found>1?"s":""} ✓` : "no menu found —";
+    div.innerHTML = `  [${n}/${total}] <span class="name">${escapeHtml(name)}</span> — <span class="${foundClass}">${foundText}</span>`;
+    el.appendChild(div);
+    el.scrollTop = el.scrollHeight;
+  }
+
+  function formatTime(ms) {
+    const s = Math.floor(ms / 1000);
+    const m = Math.floor(s / 60);
+    const sec = String(s % 60).padStart(2, "0");
+    return `${m}:${sec}`;
+  }
+
+  function setStatus() {
+    if (state.scanRunning) {
+      statusEl.innerHTML = '<span class="spinner"></span> Scanning…';
+      statusEl.className = "status";
+    } else if (state.currentView === "error") {
+      statusEl.textContent = "Scan failed ✕";
+      statusEl.className = "status error";
+    } else if (state.results) {
+      const d = state.results;
+      statusEl.textContent = `${d.total_found} restaurants, ${d.with_menu} with menus ✓`;
+      statusEl.className = "status done";
+    } else {
+      statusEl.textContent = "";
+      statusEl.className = "status";
+    }
+  }
+
+  function escapeHtml(s) {
+    const d = document.createElement("div");
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function showInput() {
+    state.currentView = "input";
+    state.results = null;
+    setStatus();
+    main.innerHTML = `
+      <h1>Scan a town</h1>
+      <div class="form" onsubmit="return false">
+        <div class="field">
+          <label for="townInput">Town *</label>
+          <input id="townInput" placeholder="e.g. Oderzo, Mogliano Veneto" autofocus>
+        </div>
+        <div class="field">
+          <label for="provinceInput">Province</label>
+          <input id="provinceInput" placeholder="e.g. TV, RM" maxlength="2" style="text-transform:uppercase">
+        </div>
+        <button class="btn" id="scanBtn" disabled>Scan</button>
+      </div>`;
+
+    const townInput = $("#townInput");
+    const provInput = $("#provinceInput");
+    const btn = $("#scanBtn");
+
+    const check = () => { btn.disabled = !townInput.value.trim(); };
+    townInput.addEventListener("input", check);
+    provInput.addEventListener("input", check);
+
+    btn.addEventListener("click", () => startScan(townInput.value.trim(), provInput.value.trim().toUpperCase()));
+    townInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && townInput.value.trim()) {
+        startScan(townInput.value.trim(), provInput.value.trim().toUpperCase());
+      }
+    });
+  }
+
+  async function startScan(town, province) {
+    if (state.scanRunning) return;
+
+    state.currentScan = { town, province: province || "" };
+    state.scanRunning = true;
+    state.scanStart = Date.now();
+    state.currentView = "progress";
+    state.results = null;
+    state.expandedRow = null;
+    sessionStorage.setItem("restaurant-finder-scan", JSON.stringify({
+      town, province: province || "", startedAt: Date.now()
+    }));
+    setStatus();
+
+    showProgressView(town, province);
+
+    state.timerInterval = setInterval(() => {
+      const el = $("#timer");
+      if (el) el.textContent = formatTime(Date.now() - state.scanStart);
+    }, 1000);
+
+    const init = { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ town, province }) };
+    streamSSE(init);
+  }
+
+  function showProgressView(town, province) {
+    main.innerHTML = `
+      <h1>Scanning ${escapeHtml(town)}${province ? ` (${escapeHtml(province)})` : ""}…</h1>
+      <div id="progress"></div>
+      <div class="timer" id="timer">${formatTime(Date.now() - state.scanStart)}</div>`;
+    state.timerInterval = setInterval(() => {
+      const el = $("#timer");
+      if (el) el.textContent = formatTime(Date.now() - state.scanStart);
+    }, 1000);
+  }
+
+  function showDisconnected(town, province) {
+    state.scanRunning = true;
+    const pv = province ? ` (${province})` : "";
+    main.innerHTML = `
+      <h1>Scanning ${escapeHtml(town)}${escapeHtml(pv)}…</h1>
+      <div id="progress"></div>
+      <div class="timer" id="timer">${formatTime(Date.now() - state.scanStart)}</div>
+      <div style="margin-top:16px;padding:12px;background:var(--bg2);border-radius:var(--radius);border-left:3px solid var(--yellow)">
+        <div style="color:var(--yellow);font-size:13px;margin-bottom:8px">Connection lost — scan continues in background.</div>
+        <div style="color:var(--fg3);font-size:12px;margin-bottom:10px">The scan will finish and appear in Past scans. You can also reattach to see live progress.</div>
+        <button class="btn primary" id="reattachBtn" style="margin-right:8px">Reattach</button>
+        <button class="btn" id="cancelBtn">Cancel</button>
+      </div>`;
+    document.getElementById("reattachBtn").addEventListener("click", () => {
+      document.getElementById("reattachBtn").disabled = true;
+      addPhase("Reconnecting…");
+      attachToScan();
+    });
+    document.getElementById("cancelBtn").addEventListener("click", () => {
+      cancelScan();
+    });
+  }
+
+  function showResults(data) {
+    clearInterval(state.timerInterval);
+    state.timerInterval = null;
+    state.scanRunning = false;
+    state.results = data;
+    state.currentView = "results";
+    sessionStorage.removeItem("restaurant-finder-scan");
+    setStatus();
+
+    const loc = data.province ? `${data.location} (${data.province})` : data.location;
+    const withMenu = data.with_menu || 0;
+    const without = data.total_found - withMenu;
+
+    main.innerHTML = `
+      <h1>${escapeHtml(loc)}</h1>
+      <div class="summary">
+        <span class="count">${withMenu} with menus</span>,
+        <span class="nocount">${without} without</span>
+        &nbsp;·&nbsp; ${escapeHtml(data.searched_at || "")}
+        &nbsp;·&nbsp; ${(data.sources_used || []).join(", ")}
+      </div>
+      <div class="actions">
+        <button class="btn primary" onclick="showInput()">New scan</button>
+        <button class="btn" id="downloadBtn">Download JSON</button>
+      </div>
+      ${renderTable(data.restaurants)}
+    `;
+
+    $("#downloadBtn").addEventListener("click", () => {
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${data.location.toLowerCase()}-${data.searched_at}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  }
+
+  function renderTable(restaurants) {
+    if (!restaurants || restaurants.length === 0) {
+      return '<div class="empty">No restaurants found.</div>';
+    }
+    let html = `<table class="table">
+      <thead><tr>
+        <th style="width:36px">#</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th style="width:60px" class="menu-col">Menu</th>
+        <th style="width:120px">Sources</th>
+      </tr></thead><tbody>`;
+
+    for (let i = 0; i < restaurants.length; i++) {
+      const r = restaurants[i];
+      const hasMenu = !r.no_menu_found && r.menu_sources && r.menu_sources.length > 0;
+      const menuIcon = hasMenu ? '<span class="has">✓</span>' : '<span class="none">—</span>';
+      const sourceText = hasMenu ? `<span class="sources-count">${r.menu_sources.length} source${r.menu_sources.length>1?"s":""} ▸</span>` : '<span class="none">—</span>';
+      const rid = `r-${i}`;
+      html += `<tr onclick="toggleRow('${rid}')" id="${rid}-row">
+        <td>${i + 1}</td>
+        <td class="name-col">${escapeHtml(r.name)}</td>
+        <td>${escapeHtml(r.type || "restaurant")}</td>
+        <td class="menu-col">${menuIcon}</td>
+        <td class="sources-col">${sourceText}</td>
+      </tr>`;
+      if (hasMenu) {
+        html += `<tr class="detail-row" id="${rid}-detail" style="display:none">
+          <td colspan="5"><div class="detail">`;
+        for (const s of r.menu_sources) {
+          html += `<div class="source">
+            <span class="badge ${s.type}">${escapeHtml(s.type)}</span>
+            <span class="badge webpage">${escapeHtml(s.found_via)}</span>
+            <a href="${escapeHtml(s.url)}" target="_blank" onclick="event.stopPropagation()">${escapeHtml(s.url)}</a>
+          </div>`;
+        }
+        html += `</div></td></tr>`;
+      }
+    }
+    html += "</tbody></table>";
+    return html;
+  }
+
+  window.toggleRow = function(rid) {
+    const detail = document.getElementById(rid + "-detail");
+    const row = document.getElementById(rid + "-row");
+    if (!detail) return;
+    const isOpen = detail.style.display !== "none";
+    if (isOpen) {
+      detail.style.display = "none";
+      row.classList.remove("expanded");
+      state.expandedRow = null;
+    } else {
+      if (state.expandedRow) {
+        const prev = document.getElementById(state.expandedRow + "-detail");
+        const prevRow = document.getElementById(state.expandedRow + "-row");
+        if (prev) prev.style.display = "none";
+        if (prevRow) prevRow.classList.remove("expanded");
+      }
+      detail.style.display = "";
+      row.classList.add("expanded");
+      state.expandedRow = rid;
+    }
+  };
+
+  function showError(msg) {
+    clearInterval(state.timerInterval);
+    state.timerInterval = null;
+    state.scanRunning = false;
+    state.currentView = "error";
+    state.results = null;
+    sessionStorage.removeItem("restaurant-finder-scan");
+    setStatus();
+    main.innerHTML = `
+      <div class="error-box">
+        <div class="icon">✕</div>
+        <div class="msg">${escapeHtml(msg)}</div>
+        <button class="btn" onclick="showInput()">Try again</button>
+      </div>`;
+  }
+
+  function cancelScan() {
+    clearInterval(state.timerInterval);
+    state.timerInterval = null;
+    state.scanRunning = false;
+    state.currentScan = null;
+    state.results = null;
+    state.expandedRow = null;
+    sessionStorage.removeItem("restaurant-finder-scan");
+    setStatus();
+    showInput();
+  }
+
+  function showToast(msg, color) {
+    const existing = document.querySelector(".toast");
+    if (existing) existing.remove();
+    const el = document.createElement("div");
+    el.className = "toast";
+    el.style.cssText = `
+      position:fixed;bottom:20px;right:20px;background:var(--bg3);color:var(--${color});
+      padding:10px 16px;border-radius:var(--radius);font-size:13px;z-index:300;
+      border:1px solid var(--${color});animation:fadeIn .2s;
+    `;
+    el.textContent = msg;
+    document.body.appendChild(el);
+    setTimeout(() => { el.style.opacity = "0"; el.style.transition = "opacity .3s"; setTimeout(() => el.remove(), 300); }, 3000);
+  }
+
+  async function loadPastScans() {
+    try {
+      const scans = await api("GET", "/api/scans");
+      state.pastScans = scans;
+      renderSidebar();
+    } catch {}
+  }
+
+  function renderSidebar() {
+    if (state.pastScans.length === 0) {
+      sidebarContent.innerHTML = '<div class="dim">No past scans yet.</div>';
+      return;
+    }
+    let html = "";
+    for (const s of state.pastScans) {
+      html += `<div class="town">
+        <span class="town-name" onclick="event.stopPropagation();setTown('${escapeHtml(s.town_slug)}')">${escapeHtml(s.town)}</span>
+        — ${s.dates.length} scan${s.dates.length>1?"s":""}
+        (${s.restaurants} venues, ${s.with_menu} menus)
+      </div>`;
+      html += '<div class="dates">';
+      for (const d of s.dates) {
+        html += `<span class="date" onclick="event.stopPropagation();viewScan('${escapeHtml(s.town_slug)}','${d}')">${d}</span>`;
+      }
+      html += '</div>';
+    }
+    sidebarContent.innerHTML = html;
+  }
+
+  window.setTown = function(slug) {
+    const town = slug.replace(/-/g, " ");
+    showInput();
+    setTimeout(() => {
+      const inp = $("#townInput");
+      if (inp) { inp.value = town; inp.dispatchEvent(new Event("input")); }
+    }, 50);
+  };
+
+  window.viewScan = async function(townSlug, date) {
+    try {
+      const data = await api("GET", `/api/scan/${townSlug}/${date}`);
+      showResults(data);
+    } catch (err) {
+      showError(err.message);
+    }
+  };
+
+  window.toggleSidebar = function() {
+    const sb = $("#sidebar");
+    sb.classList.toggle("collapsed");
+  };
+
+  window.showInput = showInput;
+  window.cancelScan = cancelScan;
+
+  loadPastScans();
+  recoverOrShowInput();
+
+  async function recoverOrShowInput() {
+    try {
+      const stored = sessionStorage.getItem("restaurant-finder-scan");
+      if (!stored) return showInput();
+      const { town, province, startedAt } = JSON.parse(stored);
+      const status = await api("GET", "/api/scan/status");
+      if (status.running && status.town === town) {
+        state.currentScan = { town, province: province || "" };
+        state.scanRunning = true;
+        state.scanStart = startedAt || Date.now();
+        state.currentView = "progress";
+        state.results = null;
+        state.expandedRow = null;
+        setStatus();
+        showProgressView(town, province);
+        attachToScan();
+      } else {
+        sessionStorage.removeItem("restaurant-finder-scan");
+        showInput();
+      }
+    } catch {
+      sessionStorage.removeItem("restaurant-finder-scan");
+      showInput();
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
