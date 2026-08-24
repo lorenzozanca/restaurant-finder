@@ -806,7 +806,7 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
     main.innerHTML = `
       <section class="result-head">
         <h1 class="view-title">${esc(loc)}</h1>
-        <div class="sub">${data.total_found} venues · ${mapped} mapped · <span style="color:var(--green)">${withRes} with links</span> · ${esc(data.searched_at || "")}</div>
+        <div class="sub">${data.total_found} venues · ${mapped} mapped · <span style="color:var(--green)">${withRes} with links</span> · ${esc(data.searched_at || "")} · Data may include <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a></div>
         <div class="result-controls">
           <div class="tools">
             <input type="text" id="filter" aria-label="Filter by name or address" placeholder="Search restaurants" autocomplete="off" enterkeyhint="search">

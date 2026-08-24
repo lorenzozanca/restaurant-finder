@@ -1,0 +1,72 @@
+# Data sources, licensing, and attribution
+
+Last reviewed: 2026-08-24
+
+This document covers data fetched or referenced by Restaurant Finder. It does
+not license the source code itself, and it does not replace the terms of any
+upstream service. Recheck the linked terms before a public or commercial
+release because service policies can change.
+
+## Source register
+
+| Source | Data used | Licence or terms | Required treatment |
+| --- | --- | --- | --- |
+| OpenStreetMap, located through Nominatim and queried through Overpass | Venue names, categories, addresses, coordinates, websites, phone numbers, cuisine, and OSM identifiers | OpenStreetMap data is available under the [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/). Public services also have separate [Nominatim](https://operations.osmfoundation.org/policies/nominatim/) and [Overpass](https://wiki.openstreetmap.org/wiki/Overpass_API) usage policies. | Display `© OpenStreetMap contributors` linked to <https://www.openstreetmap.org/copyright>. Preserve the attribution metadata in exported JSON. Assess ODbL share-alike obligations before publicly distributing a database derived from OSM. |
+| Web-search results | Result title, URL, snippet, and reported search engine; results are cached for discovery | No open-data licence is assumed. The actual search provider is selected by the external `search.sh` tool and may vary. Its contract and API terms are not contained in this repository. | Treat results as limited discovery metadata. Before deployment, record the provider, contract, permitted storage period, attribution requirements, and redistribution restrictions. Do not publish cached raw responses. |
+| PagineGialle links surfaced by web search | Venue name inferred from result metadata, broad location/type, and listing URL | No open-data licence or permission to republish a PagineGialle database is asserted here. Applicable website/database rights and terms must be checked by the operator. | Keep source provenance (`paginegialle`) and link to the listing. Do not copy listing pages, reviews, images, or a substantial part of the directory. Obtain legal review before systematic or commercial reuse. |
+| Restaurant and other public websites | Public business name, address, phone, structured metadata, website URL, and links to menus/resources | Facts may not themselves be copyrightable, but page text, photos, menus, branding, and database selections may be protected. Each site retains its own rights and terms. | Store links and minimal factual metadata only. Do not copy or redistribute menu files or images. A link is not a licence; downstream users must follow the destination site's terms. |
+
+## OpenStreetMap service use
+
+Venue discovery no longer sends category searches to the public Nominatim
+endpoint. Nominatim resolves the town explicitly requested by the user in one
+cached request; one Overpass query then retrieves the relevant OSM objects
+inside the resolved boundary. This separates location search from area-based
+POI selection and avoids Nominatim's prohibition on systematic POI collection.
+
+Automated address-by-address geocoding is disabled when the configured endpoint
+is the public Nominatim service. It is enabled only when `NOMINATIM_URL` points
+to a compatible self-hosted or contracted service. `OVERPASS_URL` is also
+configurable. Public Overpass instances are best-effort shared infrastructure,
+so recurring or multi-user production deployments should use a provider whose
+terms cover the expected volume, self-host, or process OSM extracts locally.
+The 24-hour HTTP cache reduces repeat requests but is not a substitute for an
+appropriate production service.
+
+## Repository behaviour
+
+- Each restaurant record retains `sources`, and OSM records retain `osm_id`.
+- Generated JSON includes an `attribution` block for OpenStreetMap.
+- The results view and interactive map display OpenStreetMap attribution.
+- `output/.cache` may contain copies of HTML or search results. It is an
+  internal transient cache, is git-ignored, and must not be distributed.
+- The application does not download menu documents or images; it records URLs.
+
+## Redistribution checklist
+
+Before sharing an output file or exposing the UI outside the operating
+organisation:
+
+1. Keep the JSON `attribution` block and show the OpenStreetMap credit wherever
+   OSM-derived data is viewed. Do not hide it behind user interaction.
+2. Decide, with qualified advice where necessary, whether the release is a
+   Produced Work, Derivative Database, or Collective Database under the ODbL.
+   If share-alike applies, provide the covered database under ODbL 1.0 and a
+   practical way to obtain it or the means of recreating it.
+3. Confirm the current terms for the configured search provider, PagineGialle,
+   Nominatim, Overpass, and every other source added later. Record the review
+   date and reviewer in this file or the release record.
+4. Exclude cache files, scan logs, and third-party menu/image contents.
+5. Complete the privacy release gate in [`PRIVACY.md`](PRIVACY.md), including
+   handling sole-trader and individual contact data.
+
+## Adding a source
+
+A change that adds a source is incomplete until this register records its
+owner, fields collected, licence/terms URL, attribution text, storage limits,
+redistribution rules, and personal-data implications. Preserve source-level
+provenance in the output so records can be corrected or removed by origin.
+
+The OSMF [attribution guidelines](https://osmfoundation.org/wiki/Licence/Attribution_Guidelines)
+and [licensing FAQ](https://osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ)
+explain the attribution and database-distribution concepts used above.
