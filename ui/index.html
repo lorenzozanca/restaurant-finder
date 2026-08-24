@@ -2,739 +2,1291 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>restaurant-finder</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme:dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme:light)">
+<title>Restaurant Finder</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍝</text></svg>">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
 :root{
-  --bg:#111117;--bg2:#1a1a24;--bg3:#242438;--bg4:#2e2e44;
-  --fg:#e0e0e0;--fg2:#9090a0;--fg3:#606070;
-  --green:#4ade80;--red:#f87171;--yellow:#fbbf24;--blue:#60a5fa;
-  --radius:6px;--gap:12px;
-  --font:'JetBrains Mono','Fira Code','Cascadia Code','Consolas',monospace;
+  --bg:#0f1115; --surface:#171a21; --surface2:#1e222c; --surface3:#272c38;
+  --border:#2b313d; --text:#e8eaf0; --muted:#98a1b3; --faint:#6b7385;
+  --accent:#ff7a45; --accent-ink:#1a0d06;
+  --green:#34d399; --red:#f87171; --amber:#fbbf24; --blue:#7dd3fc;
+  --r:14px; --r-sm:10px;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  --mono:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.22);
+  --header-h:56px; --tabbar-h:60px;
 }
-html,body{height:100%;background:var(--bg);color:var(--fg);font:14px/1.5 var(--font)}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f6f7f9; --surface:#ffffff; --surface2:#f1f2f6; --surface3:#e7e9ef;
+    --border:#e2e5ec; --text:#141922; --muted:#5d6675; --faint:#8b93a3;
+    --accent:#e4572e; --accent-ink:#fff;
+    --green:#0f9d63; --red:#d64545; --amber:#b7791f; --blue:#0369a1;
+    --shadow:0 1px 2px rgba(20,25,34,.06),0 8px 24px rgba(20,25,34,.08);
+  }
+}
+
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--text);
+  font:16px/1.5 var(--sans);
+  -webkit-font-smoothing:antialiased;
+  overscroll-behavior-y:none;
+  height:100vh;height:100dvh;overflow:hidden;
+  display:grid;grid-template-rows:auto minmax(0,1fr) auto;
+}
 a{color:var(--blue);text-decoration:none}
-a:hover{text-decoration:underline}
-button{cursor:pointer;font:inherit;border:none;border-radius:var(--radius)}
-input{font:16px/1.5 var(--font);background:var(--bg2);color:var(--fg);border:1px solid var(--bg3);border-radius:var(--radius);padding:8px 12px;outline:none;width:100%}
-input:focus{border-color:var(--blue)}
-input::placeholder{color:var(--fg3)}
+h1,h2,h3{line-height:1.25;font-weight:650;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
 
-#app{display:flex;height:100%;max-width:1100px;margin:0 auto}
+/* ---------- header ---------- */
+header.app{
+  position:relative;z-index:50;
+  display:flex;align-items:center;gap:10px;
+  height:calc(var(--header-h) + env(safe-area-inset-top));
+  padding:env(safe-area-inset-top) 16px 0;
+  background:color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--border);
+}
+header.app .brand{display:flex;align-items:center;gap:8px;min-width:0;font-size:17px;font-weight:700;letter-spacing:-.02em}
+header.app .brand .dot{width:9px;height:9px;flex:none;border-radius:50%;background:var(--accent)}
+header.app .brand-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+header.app .spacer{flex:1}
+.desktop-tabs{display:none;align-items:center;gap:4px}
+.desktop-tabs button{appearance:none;border:0;background:transparent;color:var(--muted);font:inherit;font-size:14px;font-weight:650;padding:8px 12px;border-radius:999px;cursor:pointer}
+.desktop-tabs button.on{background:var(--surface2);color:var(--accent)}
+@media (min-width:900px){.desktop-tabs{display:flex}}
 
-#header{position:fixed;top:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:var(--bg);border-bottom:1px solid var(--bg3);z-index:100}
-#header .logo{color:var(--fg2);font-weight:600;font-size:15px}
-#header .status{font-size:12px;color:var(--fg2)}
-#header .status.done{color:var(--green)}
-#header .status.error{color:var(--red)}
-#header .status .spinner{display:inline-block;width:12px;height:12px;border:2px solid var(--bg3);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;margin-right:6px;vertical-align:middle}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:5px 10px;border-radius:999px;
+  background:var(--surface2);border:1px solid var(--border);
+  font-size:12.5px;color:var(--muted);white-space:nowrap;
+}
+.chip.live{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 40%,var(--border))}
+.chip.ok{color:var(--green)}
+.chip.err{color:var(--red)}
+.spinner{
+  width:12px;height:12px;border-radius:50%;
+  border:2px solid color-mix(in srgb,currentColor 25%,transparent);
+  border-top-color:currentColor;animation:spin .7s linear infinite;flex:none;
+}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-#sidebar{width:260px;flex-shrink:0;padding:60px 12px 16px;overflow-y:auto;border-right:1px solid var(--bg3)}
-#sidebar h2{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--fg3);margin-bottom:12px}
-#sidebar .town{border-radius:var(--radius);padding:6px 10px;cursor:pointer;color:var(--fg2);font-size:13px;transition:background .15s}
-#sidebar .town:hover{background:var(--bg2);color:var(--fg)}
-#sidebar .town.active{background:var(--bg3);color:var(--fg)}
-#sidebar .dates{padding-left:12px}
-#sidebar .date{display:block;padding:4px 8px;font-size:12px;color:var(--fg3);cursor:pointer;border-radius:4px;transition:all .15s}
-#sidebar .date:hover{background:var(--bg2);color:var(--fg)}
-#sidebar .date.active{background:var(--bg3);color:var(--green)}
-#sidebar .dim{font-size:12px;color:var(--fg3);font-style:italic;padding:6px 10px}
-#sidebar .town-name{cursor:pointer}
-#sidebar .town-name:hover{color:var(--blue)}
-
-#main{flex:1;padding:60px 24px 24px;overflow-y:auto;min-width:0}
-#main h1{font-size:18px;margin-bottom:20px}
-
-.form{max-width:400px}
-.form label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--fg2);margin-bottom:4px}
-.form .field{margin-bottom:16px}
-.form .btn{
-  background:var(--green);color:#111;padding:10px 20px;font-size:14px;font-weight:600;
-  transition:opacity .15s;
-}
-.form .btn:hover{opacity:.85}
-.form .btn:disabled{opacity:.4;cursor:not-allowed}
-
-#progress .phase{font-size:14px;color:var(--fg2);margin-bottom:4px}
-#progress .source-line{font-size:13px;color:var(--fg3);padding-left:16px}
-#progress .source-line .count{color:var(--fg)}
-#progress .menu-line{font-size:13px;padding-left:16px;color:var(--fg3)}
-#progress .menu-line .name{color:var(--fg)}
-#progress .menu-line .found{color:var(--green)}
-#progress .menu-line .not-found{color:var(--fg3)}
-#progress .timer{font-size:12px;color:var(--fg3);margin-top:12px}
-
-#results .summary{font-size:13px;color:var(--fg2);margin-bottom:4px}
-#results .summary .count{color:var(--green)}
-#results .summary .nocount{color:var(--fg3)}
-#results .actions{margin-bottom:16px;display:flex;gap:8px}
-#results .actions .btn{background:var(--bg3);color:var(--fg);padding:7px 14px;font-size:13px;transition:background .15s}
-#results .actions .btn:hover{background:var(--bg4)}
-#results .actions .btn.primary{background:var(--green);color:#111}
-
-.table{width:100%;border-collapse:collapse;font-size:13px}
-.table th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--fg3);padding:8px 10px;border-bottom:1px solid var(--bg3);position:sticky;top:44px;background:var(--bg);z-index:10}
-.table td{padding:8px 10px;border-bottom:1px solid var(--bg2);color:var(--fg2)}
-.table tr:nth-child(even) td{background:var(--bg2)}
-.table tr.expanded td{background:var(--bg3)}
-.table .menu-col{text-align:center;cursor:pointer;user-select:none}
-.table .menu-col .has{color:var(--green);font-weight:bold}
-.table .menu-col .none{color:var(--fg3)}
-.table .sources-col{cursor:pointer;user-select:none}
-.table .sources-count{color:var(--blue)}
-.table .name-col{color:var(--fg)}
-.table tr{cursor:pointer}
-.table tr:hover td{background:var(--bg3)}
-
-.detail-row td{padding:0!important;background:var(--bg2)!important}
-.detail{padding:10px 10px 10px 16px;font-size:12px}
-.detail .source{display:flex;align-items:center;gap:8px;padding:3px 0;color:var(--fg2)}
-.detail .source:last-child{margin-bottom:0}
-.detail .badge{display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;text-transform:uppercase;letter-spacing:.5px}
-.detail .badge.pdf{background:#7c3aed;color:#ddd6fe}
-.detail .badge.webpage{background:#1d4ed8;color:#bfdbfe}
-
-.error-box{max-width:500px}
-.error-box .icon{font-size:24px;color:var(--red);margin-bottom:12px}
-.error-box .msg{color:var(--red);font-size:14px;margin-bottom:16px;word-break:break-all}
-.error-box .btn{background:var(--bg3);color:var(--fg);padding:8px 16px;font-size:13px}
-
-.empty{color:var(--fg3);font-size:13px}
-
-@media(max-width:700px){
-  #app{flex-direction:column}
-  #sidebar{width:100%;border-right:none;border-bottom:1px solid var(--bg3);padding:56px 12px 12px;max-height:35vh;overflow-y:auto}
-  #main{padding:16px}
+/* ---------- layout ---------- */
+.shell{width:100%;max-width:1080px;min-height:0;margin:0 auto;padding:12px 12px 10px;display:block;overflow-y:auto;overscroll-behavior:contain}
+.shell main{min-width:0}
+@media (min-width:900px){
+  body{grid-template-rows:auto minmax(0,1fr)}
+  .shell{display:grid;grid-template-columns:290px minmax(0,1fr);gap:24px;padding:24px}
 }
 
-.sidebar-toggle{display:none}
-@media(max-width:700px){
-  .sidebar-toggle{display:block;position:fixed;top:10px;left:10px;z-index:200;background:var(--bg3);color:var(--fg);padding:6px 10px;border-radius:var(--radius);font-size:14px}
-  #sidebar.collapsed{display:none}
+/* ---------- sidebar / history ---------- */
+#history{display:none}
+#history.show{display:block}
+@media (min-width:900px){ #history{display:block !important;position:sticky;top:0;align-self:start;max-height:100%;overflow:auto} }
+
+.section-title{display:none;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:4px 0 10px}
+@media (min-width:900px){.section-title{display:block}}
+
+.town-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;margin-bottom:10px;box-shadow:var(--shadow)}
+.town-card h3{font-size:16px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.town-card .meta{font-size:13px;color:var(--muted);margin-top:2px}
+.town-card .dates{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.date-btn{
+  appearance:none;border:1px solid var(--border);background:var(--surface2);color:var(--text);
+  font:inherit;font-size:13px;padding:8px 12px;border-radius:999px;cursor:pointer;min-height:36px;
 }
+.date-btn:active{transform:scale(.97)}
+.date-btn.rescan{background:transparent;color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,var(--border))}
+
+/* ---------- generic surfaces ---------- */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}
+.pad{padding:16px}
+
+label.field{display:block;margin-bottom:14px}
+label.field .lbl{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px}
+input[type=text]{
+  width:100%;font:16px/1.4 var(--sans);color:var(--text);
+  background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);
+  padding:13px 14px;min-height:48px;
+}
+select{
+  font:14px/1.4 var(--sans);color:var(--text);background:var(--surface2);
+  border:1px solid var(--border);border-radius:var(--r-sm);padding:10px 34px 10px 12px;min-height:44px;
+}
+input[type=text]:focus{outline:none;border-color:var(--accent);background:var(--surface)}
+input::placeholder{color:var(--faint)}
+
+.btn{
+  appearance:none;border:1px solid var(--border);background:var(--surface2);color:var(--text);
+  font:inherit;font-weight:600;font-size:15px;
+  padding:13px 18px;min-height:48px;border-radius:var(--r-sm);
+  cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  transition:transform .08s ease, filter .15s ease;
+}
+.btn:active{transform:scale(.98)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.btn.danger{color:var(--red);border-color:color-mix(in srgb,var(--red) 35%,var(--border))}
+.btn.block{width:100%}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn-row .btn{flex:1 1 140px}
+@media (min-width:900px){ .btn-row .btn{flex:0 0 auto} }
+
+/* ---------- progress ---------- */
+.progress-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:4px}
+.progress-head .phase{font-size:15px;font-weight:600}
+.progress-head .time{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px}
+.bar{height:8px;border-radius:999px;background:var(--surface3);overflow:hidden;margin:12px 0 4px}
+.bar > i{display:block;height:100%;border-radius:999px;background:var(--accent);width:0;transition:width .35s ease}
+.bar.indeterminate > i{width:35%;animation:slide 1.4s ease-in-out infinite}
+@keyframes slide{0%{margin-left:-35%}100%{margin-left:100%}}
+.bar-note{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+.counters{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.counter{
+  display:flex;align-items:baseline;gap:6px;
+  background:var(--surface2);border:1px solid var(--border);border-radius:999px;padding:5px 11px;
+}
+.counter .k{font-size:12px;color:var(--faint)}
+.counter .v{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums}
+
+.log{
+  margin-top:14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);
+  font:12.5px/1.6 var(--mono);padding:10px 12px;max-height:46vh;overflow:auto;overscroll-behavior:contain;
+}
+.log .l{display:flex;gap:8px;padding:1px 0;color:var(--muted);word-break:break-word}
+.log .l .idx{color:var(--faint);flex:none;font-variant-numeric:tabular-nums}
+.log .l.phase{color:var(--text);font-weight:600;margin-top:8px}
+.log .l.phase:first-child{margin-top:0}
+.log .l .nm{color:var(--text)}
+.log .l .ok{color:var(--green)}
+.log .l .no{color:var(--faint)}
+.log .l.err{color:var(--red)}
+.log-empty{color:var(--faint)}
+
+.notice{border-left:3px solid var(--amber);background:var(--surface2);border-radius:var(--r-sm);padding:12px 14px;margin-top:14px}
+.notice .t{color:var(--amber);font-weight:600;font-size:14px;margin-bottom:4px}
+.notice .d{font-size:13.5px;color:var(--muted);margin-bottom:10px}
+
+/* ---------- results ---------- */
+.result-head h1{font-size:24px}
+.result-head .sub{color:var(--muted);font-size:14px;margin-top:4px}
+.view-title{display:none}
+.result-controls{position:sticky;top:-12px;z-index:20;margin:10px -2px 12px;padding:2px 2px 8px;background:var(--bg)}
+.tools{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin-bottom:8px}
+.tools input[type=text]{min-width:0;min-height:42px;padding:9px 12px}
+.action-strip{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:1px}
+.action-strip::-webkit-scrollbar{display:none}
+.action-strip .btn{flex:none;min-height:40px;padding:8px 12px;font-size:13.5px}
+.action-strip .icon-btn{width:40px;padding:8px;font-size:17px}
+.result-tabs{display:flex;gap:8px;flex:none}
+.result-tabs .btn{min-height:40px;padding:8px 12px}
+.result-tabs .btn.on{background:var(--accent);border-color:transparent;color:var(--accent-ink)}
+.seg{display:inline-flex;background:var(--surface2);border:1px solid var(--border);border-radius:999px;padding:3px;flex:none}
+.seg button{
+  appearance:none;border:none;background:transparent;color:var(--muted);font:inherit;font-size:14px;font-weight:600;
+  padding:8px 14px;border-radius:999px;cursor:pointer;min-height:38px;
+}
+.seg button.on{background:var(--surface);color:var(--text);box-shadow:var(--shadow)}
+.compact-toggle{cursor:pointer;min-height:42px;padding:6px 10px;color:var(--text);font-weight:600}
+.compact-toggle input{accent-color:var(--accent)}
+
+.list{display:flex;flex-direction:column;gap:10px}
+.list[hidden]{display:none}
+.venue{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.venue.has{border-left:3px solid var(--green)}
+.venue > .top{display:flex;align-items:flex-start;gap:12px;padding:14px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.venue .n{font-size:16px;font-weight:650;line-height:1.3}
+.venue .a{font-size:13.5px;color:var(--muted);margin-top:3px}
+.venue .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{font-size:11.5px;padding:3px 8px;border-radius:999px;background:var(--surface2);border:1px solid var(--border);color:var(--muted);white-space:nowrap}
+.tag.res{color:var(--green);border-color:color-mix(in srgb,var(--green) 40%,var(--border))}
+.venue .caret{margin-left:auto;color:var(--faint);flex:none;transition:transform .2s ease;font-size:13px;padding-top:2px}
+.venue.open .caret{transform:rotate(90deg)}
+.venue .body{display:none;padding:0 14px 14px;border-top:1px solid var(--border);margin-top:0}
+.venue.open .body{display:block;padding-top:12px}
+.res-item{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:var(--r-sm);background:var(--surface2);margin-bottom:8px;min-height:48px}
+.res-item .badge{font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 7px;border-radius:6px;flex:none}
+.badge.pdf{background:color-mix(in srgb,#a855f7 22%,transparent);color:#c4a5fb}
+.badge.webpage{background:color-mix(in srgb,#3b82f6 22%,transparent);color:#8fbcfb}
+.badge.image{background:color-mix(in srgb,#22c55e 22%,transparent);color:#7ee2a8}
+@media (prefers-color-scheme:light){
+  .badge.pdf{color:#7c3aed}.badge.webpage{color:#1d4ed8}.badge.image{color:#15803d}
+}
+.res-item .u{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13.5px}
+.res-item .via{font-size:11.5px;color:var(--faint);flex:none}
+.quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
+.quick a{
+  font-size:13.5px;font-weight:600;padding:9px 13px;border-radius:999px;min-height:40px;
+  display:inline-flex;align-items:center;gap:6px;background:var(--surface2);border:1px solid var(--border);color:var(--text);
+}
+
+.empty{color:var(--muted);font-size:14.5px;text-align:center;padding:28px 16px}
+.error-card{border-left:3px solid var(--red)}
+.error-card .msg{color:var(--red);font-size:14.5px;margin:6px 0 14px;word-break:break-word}
+
+/* ---------- map ---------- */
+#mapView,#globalMap{height:min(68vh,650px);min-height:420px;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:var(--surface2)}
+#mapView[hidden]{display:none}
+.global-map-page{height:100%;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr)}
+.global-map-head{margin-bottom:10px}
+.global-map-head h1{font-size:24px}
+.global-map-head .sub,#globalMapNote{color:var(--muted);font-size:14px;margin-top:4px}
+.global-map-tools{display:grid;grid-template-columns:minmax(110px,1fr) minmax(92px,auto) auto;gap:8px;margin-top:10px}
+.global-map-tools input{min-width:0;min-height:42px;padding:9px 12px}
+.global-map-tools select{min-width:0;max-width:150px;min-height:42px;padding-top:8px;padding-bottom:8px}
+.map-cluster{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent);border:3px solid color-mix(in srgb,var(--accent) 35%,white);color:var(--accent-ink);font:700 12px/1 var(--sans);box-shadow:0 2px 9px rgba(0,0,0,.35)}
+.leaflet-div-icon.map-cluster-wrap{background:transparent;border:0}
+.leaflet-container{font-family:var(--sans);color:#141922}
+.map-popup .name{font-weight:700;font-size:14px;line-height:1.3;margin-bottom:3px}
+.map-popup .address{color:#5d6675;font-size:12.5px;line-height:1.35;margin-bottom:8px}
+.map-popup a{font-weight:650;font-size:12.5px;color:#0369a1}
+.map-empty{height:100%;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted)}
+@media (max-width:899px){
+  .global-map-page #globalMap{height:100%;min-height:0}
+  .results-page.results-map-mode{height:100%;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr)}
+  .results-page.results-map-mode #mapView{height:100%;min-height:0}
+  .results-page.results-map-mode .result-controls{margin-bottom:8px}
+  .results-page.results-map-mode .result-head .sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
+
+/* ---------- bottom tab bar (mobile) ---------- */
+nav.tabs{
+  position:relative;z-index:60;
+  display:flex;
+  height:calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+  padding-bottom:env(safe-area-inset-bottom);
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:saturate(180%) blur(12px);
+  border-top:1px solid var(--border);
+}
+nav.tabs button{
+  flex:1;appearance:none;border:none;background:transparent;color:var(--muted);
+  font:inherit;font-size:11.5px;font-weight:600;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  -webkit-tap-highlight-color:transparent;
+}
+nav.tabs button .ic{font-size:19px;line-height:1}
+nav.tabs button.on{color:var(--accent)}
+nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);width:7px;height:7px;border-radius:50%;background:var(--accent)}
+@media (min-width:900px){ nav.tabs{display:none} }
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 </style>
 </head>
 <body>
 
-<div id="header">
-  <span class="logo">restaurant-finder</span>
-  <span class="status" id="status"></span>
-</div>
-
-<button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
-
-<div id="app">
-  <nav id="sidebar">
-    <h2>Past scans</h2>
-    <div id="sidebarContent" class="dim">No past scans yet.</div>
+<header class="app">
+  <h1 class="brand"><span class="dot"></span><span class="brand-title" id="appTitle">Scan a town</span></h1>
+  <span class="spacer"></span>
+  <nav class="desktop-tabs" aria-label="Main navigation">
+    <button class="on" data-tab="scan">Scan</button>
+    <button data-tab="map">Map</button>
   </nav>
+  <span id="status"></span>
+</header>
+
+<div class="shell">
+  <aside id="history">
+    <div class="section-title">Past scans</div>
+    <div id="historyList"></div>
+  </aside>
   <main id="main"></main>
 </div>
 
+<nav class="tabs" role="tablist">
+  <button id="tabScan" class="on" data-tab="scan" role="tab"><span class="ic">🔎</span>Scan</button>
+  <button id="tabMap" data-tab="map" role="tab"><span class="ic">📍</span>Map</button>
+  <button id="tabHistory" data-tab="history" role="tab"><span class="ic">🗂️</span>History</button>
+</nav>
+
 <script>
-(function() {
-  const $ = (s) => document.querySelector(s);
-  const $$ = (s) => document.querySelectorAll(s);
+(function () {
+  "use strict";
+  const $ = (s, r) => (r || document).querySelector(s);
   const main = $("#main");
   const statusEl = $("#status");
-  const sidebarContent = $("#sidebarContent");
+  const appTitle = $("#appTitle");
+  const shell = $(".shell");
+  const historyEl = $("#history");
+  const historyList = $("#historyList");
 
-  let state = {
-    currentView: "input",
-    scanRunning: false,
-    pastScans: [],
+  const state = {
+    tab: "scan",
+    view: "input",          // input | progress | results | error
+    running: false,
+    scan: null,             // {town, province}
+    startedAt: 0,
+    log: [],                // [{kind, ...}] rendered progress log
+    progress: { phase: "", done: 0, total: 0, sources: {} },
     results: null,
-    eventSource: null,
-    timerInterval: null,
-    scanStart: 0,
-    expandedRow: null,
+    resultsLog: null,
+    filter: "",
+    onlyWithRes: false,
+    resultMode: "list",
+    open: new Set(),
+    map: null,
+    markerLayer: null,
+    globalMapData: null,
+    globalFilter: "",
+    globalTown: "",
+    globalOnlyWithRes: false,
+    globalRequest: 0,
+    pastScans: [],
+    timer: null,
+    disconnected: false,
   };
+
+  /* ---------------- utils ---------------- */
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  const fmtTime = (ms) => {
+    const s = Math.max(0, Math.floor(ms / 1000));
+    return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+  };
+
+  function setAppTitle(title) {
+    appTitle.textContent = title;
+    document.title = `${title} · Restaurant Finder`;
+  }
+
+  function prepareMain(className, title) {
+    main.className = className || "";
+    setAppTitle(title);
+  }
 
   async function api(method, path, body) {
     const opts = { method, headers: {} };
-    if (body) {
-      opts.headers["Content-Type"] = "application/json";
-      opts.body = JSON.stringify(body);
-    }
+    if (body) { opts.headers["Content-Type"] = "application/json"; opts.body = JSON.stringify(body); }
     const res = await fetch(path, opts);
     if (!res.ok) {
       const err = await res.json().catch(() => ({ error: res.statusText }));
-      throw new Error(err.error || `HTTP ${res.status}`);
+      const e = new Error(err.error || `HTTP ${res.status}`);
+      e.payload = err;
+      throw e;
     }
     return res.json();
   }
 
-  function streamSSE(init, onStreamEnd) {
-    fetch("/api/scan", init).then(async (res) => {
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({ error: res.statusText }));
-        if (err.attachable) {
-          startReattach(err.town, err.province);
-          return;
-        }
-        showError(err.error || "Scan failed");
-        state.scanRunning = false;
-        setStatus();
+  /* ---------------- log model ----------------
+     Progress events are folded into a flat, replayable list. The same
+     reducer runs for live events and for the log the server replays on
+     attach, so a reload rebuilds the exact same view.                    */
+  function applyEvent(event, data) {
+    if (event === "phase") {
+      const text = data.phase === "discovery" ? "Discovering restaurants"
+        : data.phase === "resources" ? "Gathering online resources"
+        : data.phase === "writing" ? "Writing output" : data.phase;
+      state.progress.phase = text;
+      state.log.push({ kind: "phase", text });
+    } else if (event === "progress") {
+      state.progress.sources[data.source] = data.count;
+      const existing = state.log.find((l) => l.kind === "source" && l.source === data.source);
+      if (existing) existing.count = data.count;
+      else state.log.push({ kind: "source", source: data.source, count: data.count });
+    } else if (event === "resources-progress") {
+      state.progress.done = data.n;
+      state.progress.total = data.total;
+      state.log.push({ kind: "res", n: data.n, total: data.total, name: data.name, found: data.found });
+    } else if (event === "error") {
+      state.log.push({ kind: "err", text: data.error });
+    }
+  }
+
+  const SOURCE_LABELS = {
+    nominatim: "OpenStreetMap", web_search: "Web search",
+    paginegialle: "PagineGialle", total_raw: "Total raw", deduped: "After dedup",
+  };
+
+  function replay(log) {
+    state.log = [];
+    state.progress = { phase: "", done: 0, total: 0, sources: {} };
+    for (const item of log || []) applyEvent(item.event, item.data);
+  }
+
+  function renderLog(log) {
+    if (!log.length) return '<div class="log-empty">Waiting for the first output…</div>';
+    return log.map((l) => {
+      if (l.kind === "phase") return `<div class="l phase">▸ ${esc(l.text)}</div>`;
+      if (l.kind === "source") return `<div class="l"><span class="idx">·</span><span>${esc(SOURCE_LABELS[l.source] || l.source)}: <span class="nm">${l.count}</span></span></div>`;
+      if (l.kind === "err") return `<div class="l err">✕ ${esc(l.text)}</div>`;
+      const tail = l.found > 0
+        ? `<span class="ok">${l.found} source${l.found > 1 ? "s" : ""} ✓</span>`
+        : `<span class="no">nothing found</span>`;
+      return `<div class="l"><span class="idx">${l.n}/${l.total}</span><span class="nm">${esc(l.name)}</span> ${tail}</div>`;
+    }).join("");
+  }
+
+  /* ---------------- status chip ---------------- */
+  function setStatus() {
+    if (state.running) {
+      statusEl.innerHTML = '<span class="chip live"><span class="spinner"></span>Scanning</span>';
+    } else if (state.view === "global-map") {
+      const count = state.globalMapData ? state.globalMapData.restaurants.length : 0;
+      statusEl.innerHTML = count ? `<span class="chip">${count} mapped</span>` : "";
+    } else if (state.view === "error") {
+      statusEl.innerHTML = '<span class="chip err">Failed</span>';
+    } else if (state.results) {
+      const d = state.results;
+      const w = d.with_resources != null ? d.with_resources : (d.with_menu || 0);
+      statusEl.innerHTML = `<span class="chip ok">${w}/${d.total_found} with links</span>`;
+    } else {
+      statusEl.innerHTML = "";
+    }
+  }
+
+  /* ---------------- tabs ---------------- */
+  function setTab(tab) {
+    state.tab = tab;
+    historyEl.classList.toggle("show", tab === "history");
+    main.style.display = tab === "history" && window.innerWidth < 900 ? "none" : "";
+    for (const b of document.querySelectorAll("[data-tab]")) {
+      b.classList.toggle("on", b.dataset.tab === tab);
+    }
+    if (tab === "history") setAppTitle("Past scans");
+    shell.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  for (const b of document.querySelectorAll("[data-tab]")) {
+    b.addEventListener("click", () => {
+      const tab = b.dataset.tab;
+      if (tab === "map") showGlobalMap();
+      else if (tab === "scan" && state.running) showProgress();
+      else if (tab === "scan" && state.view !== "input") showInput();
+      else setTab(tab);
+    });
+  }
+  window.addEventListener("resize", () => {
+    historyEl.classList.toggle("show", state.tab === "history");
+    main.style.display = state.tab === "history" && window.innerWidth < 900 ? "none" : "";
+    if (state.map) requestAnimationFrame(() => state.map && state.map.invalidateSize());
+  });
+
+  /* ---------------- views ---------------- */
+  function showInput(prefillTown) {
+    destroyMap();
+    prepareMain("", "Scan a town");
+    state.view = "input";
+    state.results = null;
+    state.resultsLog = null;
+    setStatus();
+    setTab("scan");
+    main.innerHTML = `
+      <section class="card pad">
+        <h1 class="view-title">Scan a town</h1>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:18px">Finds restaurants and hunts for their menus online. Takes a few minutes.</p>
+        <label class="field">
+          <span class="lbl">Town</span>
+          <input type="text" id="town" placeholder="Oderzo" autocomplete="off" autocapitalize="words" enterkeyhint="go" value="${esc(prefillTown || "")}">
+        </label>
+        <label class="field">
+          <span class="lbl">Province <span style="font-weight:400;color:var(--faint)">— optional</span></span>
+          <input type="text" id="province" placeholder="TV" maxlength="2" autocomplete="off" style="text-transform:uppercase" enterkeyhint="go">
+        </label>
+        <button class="btn primary block" id="go" disabled>Start scan</button>
+      </section>`;
+
+    const town = $("#town"), prov = $("#province"), go = $("#go");
+    const sync = () => { go.disabled = !town.value.trim(); };
+    const submit = () => { if (town.value.trim()) startScan(town.value.trim(), prov.value.trim().toUpperCase()); };
+    town.addEventListener("input", sync);
+    go.addEventListener("click", submit);
+    for (const el of [town, prov]) {
+      el.addEventListener("keydown", (e) => { if (e.key === "Enter") { el.blur(); submit(); } });
+    }
+    sync();
+    if (prefillTown) town.focus();
+  }
+
+  function showProgress() {
+    destroyMap();
+    state.view = "progress";
+    setStatus();
+    setTab("scan");
+    const { town, province } = state.scan;
+    prepareMain("", `${town}${province ? ` (${province})` : ""}`);
+    main.innerHTML = `
+      <section class="card pad">
+        <div class="progress-head">
+          <div>
+            <h1 class="view-title">${esc(town)}${province ? ` <span>${esc(province)}</span>` : ""}</h1>
+            <div class="phase" id="phase" style="color:var(--muted);font-weight:500;font-size:14px"></div>
+          </div>
+          <div class="time" id="timer">0:00</div>
+        </div>
+        <div class="bar" id="bar"><i></i></div>
+        <div class="bar-note" id="barNote"></div>
+        <div class="counters" id="counters"></div>
+        <div class="log" id="log"></div>
+        <div id="notice"></div>
+        <div class="btn-row" style="margin-top:14px">
+          <button class="btn danger" id="cancel">Stop scan</button>
+        </div>
+      </section>`;
+    $("#cancel").addEventListener("click", cancelScan);
+    paintProgress(true);
+    startTimer();
+  }
+
+  function paintProgress(force) {
+    if (state.view !== "progress") return;
+    const phaseEl = $("#phase"), bar = $("#bar"), note = $("#barNote"),
+          counters = $("#counters"), logEl = $("#log");
+    if (!phaseEl) return;
+
+    phaseEl.textContent = state.progress.phase || "Starting…";
+
+    const { done, total } = state.progress;
+    if (total > 0) {
+      bar.classList.remove("indeterminate");
+      bar.firstElementChild.style.width = `${Math.round((done / total) * 100)}%`;
+      note.textContent = `${done} of ${total} venues checked`;
+    } else {
+      bar.classList.add("indeterminate");
+      bar.firstElementChild.style.width = "";
+      note.textContent = "Querying sources…";
+    }
+
+    const s = state.progress.sources;
+    const keys = ["nominatim", "web_search", "paginegialle", "deduped"];
+    counters.innerHTML = keys.filter((k) => s[k] != null).map((k) =>
+      `<div class="counter"><div class="k">${esc(SOURCE_LABELS[k])}</div><div class="v">${s[k]}</div></div>`).join("");
+
+    const nearBottom = logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 60;
+    logEl.innerHTML = renderLog(state.log);
+    if (force || nearBottom) logEl.scrollTop = logEl.scrollHeight;
+  }
+
+  function showDisconnected() {
+    state.disconnected = true;
+    const n = $("#notice");
+    if (!n) return;
+    n.innerHTML = `
+      <div class="notice">
+        <div class="t">Connection lost</div>
+        <div class="d">The scan keeps running on the server. Reconnect to follow it live — nothing is lost.</div>
+        <button class="btn" id="reattach">Reconnect</button>
+      </div>`;
+    $("#reattach").addEventListener("click", () => {
+      $("#reattach").disabled = true;
+      attachToScan();
+    });
+  }
+
+  function clearNotice() {
+    state.disconnected = false;
+    const n = $("#notice");
+    if (n) n.innerHTML = "";
+  }
+
+  async function showGlobalMap() {
+    destroyMap();
+    stopTimer();
+    state.view = "global-map";
+    state.globalFilter = "";
+    state.globalTown = "";
+    state.globalOnlyWithRes = false;
+    setTab("map");
+    prepareMain("", "All restaurants");
+    setStatus();
+    main.innerHTML = `
+      <section class="card pad">
+        <h1 class="view-title">All restaurants</h1>
+        <div class="sub" style="color:var(--muted);font-size:14px;margin-top:4px">Loading saved locations…</div>
+        <div class="bar indeterminate"><i></i></div>
+      </section>`;
+
+    const request = ++state.globalRequest;
+    try {
+      if (!state.globalMapData) state.globalMapData = await api("GET", "/api/map");
+      if (request !== state.globalRequest || state.view !== "global-map") return;
+      renderGlobalMapShell();
+      setStatus();
+    } catch (err) {
+      if (request !== state.globalRequest || state.view !== "global-map") return;
+      main.innerHTML = `
+        <section class="card pad error-card">
+          <h1 style="font-size:19px">Could not load the map</h1>
+          <div class="msg">${esc(err.message)}</div>
+          <button class="btn primary" id="retryGlobalMap">Try again</button>
+        </section>`;
+      $("#retryGlobalMap").addEventListener("click", () => {
+        state.globalMapData = null;
+        showGlobalMap();
+      });
+    }
+  }
+
+  function renderGlobalMapShell() {
+    const data = state.globalMapData || { restaurants: [], towns: [] };
+    if (!data.restaurants.length) {
+      main.className = "";
+      main.innerHTML = `
+        <section class="card pad">
+          <h1 class="view-title">All restaurants</h1>
+          <div class="empty">No mapped restaurants yet. Run a city scan and they will appear here.</div>
+          <button class="btn primary" id="globalNewScan">Start a scan</button>
+        </section>`;
+      $("#globalNewScan").addEventListener("click", () => showInput());
+      return;
+    }
+
+    main.className = "global-map-page";
+    main.innerHTML = `
+      <section class="global-map-head">
+        <h1 class="view-title">All restaurants</h1>
+        <div class="sub">${data.restaurants.length} unique locations across ${data.towns.length} ${data.towns.length === 1 ? "city" : "cities"}</div>
+        <div class="global-map-tools">
+          <input type="text" id="globalFilter" aria-label="Filter restaurants" placeholder="Search" autocomplete="off" enterkeyhint="search">
+          <select id="globalTown" aria-label="Filter by city">
+            <option value="">All cities</option>
+            ${data.towns.map((town) => `<option value="${esc(town)}">${esc(town)}</option>`).join("")}
+          </select>
+          <label class="chip compact-toggle" title="Show only restaurants with links">
+            <input type="checkbox" id="globalWithLinks"> Links
+          </label>
+        </div>
+        <div id="globalMapNote"></div>
+      </section>
+      <div id="globalMap" aria-label="All saved restaurant locations"></div>`;
+
+    $("#globalFilter").addEventListener("input", (e) => {
+      state.globalFilter = e.target.value.toLowerCase();
+      paintGlobalMarkers(true);
+    });
+    $("#globalTown").addEventListener("change", (e) => {
+      state.globalTown = e.target.value;
+      paintGlobalMarkers(true);
+    });
+    $("#globalWithLinks").addEventListener("change", (e) => {
+      state.globalOnlyWithRes = e.target.checked;
+      paintGlobalMarkers(true);
+    });
+
+    const mapEl = $("#globalMap");
+    if (!window.L) {
+      mapEl.innerHTML = '<div class="map-empty">The map library could not be loaded. Check your connection and try again.</div>';
+      return;
+    }
+
+    state.map = createBaseMap(mapEl);
+    state.markerLayer = L.layerGroup().addTo(state.map);
+    state.map.on("moveend zoomend", () => paintGlobalMarkers(false));
+    paintGlobalMarkers(true);
+  }
+
+  function filteredGlobalRestaurants() {
+    const data = state.globalMapData || { restaurants: [] };
+    return data.restaurants.filter((r) => {
+      if (state.globalOnlyWithRes && !r.resource_count) return false;
+      if (state.globalTown && !(r.towns || []).includes(state.globalTown)) return false;
+      if (!state.globalFilter) return true;
+      return (`${r.name} ${r.address || ""} ${r.cuisine || ""} ${(r.towns || []).join(" ")}`)
+        .toLowerCase().includes(state.globalFilter);
+    });
+  }
+
+  function paintGlobalMarkers(fit) {
+    if (state.view !== "global-map" || !state.map || !state.markerLayer) return;
+    const items = filteredGlobalRestaurants();
+    const note = $("#globalMapNote");
+    state.markerLayer.clearLayers();
+
+    if (!items.length) {
+      if (note) note.textContent = "No restaurants match these filters.";
+      return;
+    }
+
+    const allBounds = items.map((r) => [r.latitude, r.longitude]);
+    if (fit) {
+      if (allBounds.length === 1) state.map.setView(allBounds[0], 16);
+      else state.map.fitBounds(allBounds, { padding: [28, 28], maxZoom: 15 });
+    }
+
+    const zoom = state.map.getZoom();
+    const gridSize = zoom < 8 ? 80 : zoom < 11 ? 64 : zoom < 14 ? 48 : 0;
+    const visibleBounds = state.map.getBounds().pad(.25);
+    const visible = items.filter((r) => visibleBounds.contains([r.latitude, r.longitude]));
+    const groups = new Map();
+
+    for (const r of visible) {
+      let key = r;
+      if (gridSize) {
+        const point = state.map.project([r.latitude, r.longitude], zoom);
+        key = `${Math.floor(point.x / gridSize)}:${Math.floor(point.y / gridSize)}`;
+      }
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(r);
+    }
+
+    for (const group of groups.values()) {
+      if (group.length > 1) {
+        const latitude = group.reduce((sum, r) => sum + r.latitude, 0) / group.length;
+        const longitude = group.reduce((sum, r) => sum + r.longitude, 0) / group.length;
+        const icon = L.divIcon({
+          className: "map-cluster-wrap",
+          html: `<div class="map-cluster">${group.length}</div>`,
+          iconSize: [40, 40],
+          iconAnchor: [20, 20],
+        });
+        L.marker([latitude, longitude], { icon })
+          .bindTooltip(`${group.length} restaurants`)
+          .on("click", () => state.map.setView([latitude, longitude], Math.min(zoom + 2, 16)))
+          .addTo(state.markerLayer);
+      } else {
+        addGlobalRestaurantMarker(group[0]);
+      }
+    }
+
+    if (note) note.textContent = `${items.length} restaurants · ${visible.length} in view`;
+  }
+
+  function addGlobalRestaurantMarker(r) {
+    const marker = L.circleMarker([r.latitude, r.longitude], {
+      radius: 7,
+      weight: 2,
+      color: r.resource_count ? "#087a4d" : "#b84726",
+      fillColor: r.resource_count ? "#34d399" : "#ff7a45",
+      fillOpacity: .9,
+    });
+    const popup = document.createElement("div");
+    popup.className = "map-popup";
+    const name = document.createElement("div");
+    name.className = "name";
+    name.textContent = r.name;
+    popup.appendChild(name);
+    for (const value of [r.address, (r.towns || []).join(" · ")]) {
+      if (!value) continue;
+      const line = document.createElement("div");
+      line.className = "address";
+      line.textContent = value;
+      popup.appendChild(line);
+    }
+    const link = document.createElement("a");
+    link.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${r.name} ${r.address || ""}`)}`;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "Open in Maps ↗";
+    popup.appendChild(link);
+    marker.bindPopup(popup).addTo(state.markerLayer);
+  }
+
+  function showResults(data, rawLog) {
+    // A live scan already has a folded log in state; a stored scan ships its
+    // raw event list, which we fold the same way.
+    const log = rawLog ? foldLog(rawLog) : (state.log.length ? state.log.slice() : null);
+    stopTimer();
+    destroyMap();
+    state.running = false;
+    state.view = "results";
+    state.results = data;
+    state.resultsLog = log || null;
+    state.filter = "";
+    state.onlyWithRes = false;
+    state.resultMode = "list";
+    state.open = new Set();
+    setStatus();
+    setTab("scan");
+
+    const withRes = data.with_resources != null ? data.with_resources : (data.with_menu || 0);
+    const loc = data.province ? `${data.location} (${data.province})` : data.location;
+    const mapped = (data.restaurants || []).filter(hasCoordinates).length;
+
+    prepareMain("results-page", loc);
+    main.innerHTML = `
+      <section class="result-head">
+        <h1 class="view-title">${esc(loc)}</h1>
+        <div class="sub">${data.total_found} venues · ${mapped} mapped · <span style="color:var(--green)">${withRes} with links</span> · ${esc(data.searched_at || "")}</div>
+        <div class="result-controls">
+          <div class="tools">
+            <input type="text" id="filter" aria-label="Filter by name or address" placeholder="Search restaurants" autocomplete="off" enterkeyhint="search">
+            <label class="chip compact-toggle" title="Show only restaurants with links">
+              <input type="checkbox" id="onlyWithLinks"> Links
+            </label>
+          </div>
+          <div class="action-strip">
+            <div class="result-tabs" role="tablist" aria-label="Results view">
+              <button class="btn on" data-result-mode="list" role="tab" aria-selected="true">☰ List</button>
+              <button class="btn" data-result-mode="map" role="tab" aria-selected="false">📍 Map <span class="sr">(${mapped} locations)</span></button>
+            </div>
+            <button class="btn primary" id="new" title="Start a new scan">＋ New</button>
+            <button class="btn icon-btn" id="dl" title="Download results as JSON" aria-label="Download results as JSON">⇩</button>
+            ${log && log.length ? '<button class="btn icon-btn" id="showLog" title="Show scan log" aria-label="Show scan log">☷</button>' : ""}
+          </div>
+        </div>
+      </section>
+      <div class="list" id="list"></div>
+      <div id="mapView" aria-label="Restaurant locations" hidden></div>`;
+
+    $("#new").addEventListener("click", () => showInput());
+    $("#dl").addEventListener("click", () => download(data));
+    const logBtn = $("#showLog");
+    if (logBtn) logBtn.addEventListener("click", () => {
+      const existing = $("#logPanel");
+      if (existing) { existing.remove(); logBtn.textContent = "☷"; logBtn.setAttribute("aria-label", "Show scan log"); return; }
+      const div = document.createElement("div");
+      div.id = "logPanel";
+      div.className = "log";
+      div.style.margin = "0 0 14px";
+      div.innerHTML = renderLog(log);
+      $(".result-controls").after(div);
+      logBtn.textContent = "×";
+      logBtn.setAttribute("aria-label", "Hide scan log");
+    });
+
+    $("#filter").addEventListener("input", (e) => { state.filter = e.target.value.toLowerCase(); renderResultsView(); });
+    $("#onlyWithLinks").addEventListener("change", (e) => {
+      state.onlyWithRes = e.target.checked;
+      renderResultsView();
+    });
+    for (const b of document.querySelectorAll("[data-result-mode]")) {
+      b.addEventListener("click", () => setResultMode(b.dataset.resultMode));
+    }
+    renderResultsView();
+  }
+
+  function foldLog(rawLog) {
+    const keep = state.log;
+    state.log = [];
+    const saved = state.progress;
+    state.progress = { phase: "", done: 0, total: 0, sources: {} };
+    for (const item of rawLog || []) applyEvent(item.event, item.data);
+    const folded = state.log;
+    state.log = keep;
+    state.progress = saved;
+    return folded;
+  }
+
+  function filteredRestaurants() {
+    const all = state.results.restaurants || [];
+    const f = state.filter;
+    return all.filter((r) => {
+      const res = r.resources || r.menu_sources || [];
+      if (state.onlyWithRes && res.length === 0 && r.website_kind !== "official") return false;
+      if (!f) return true;
+      return (`${r.name} ${r.address || ""} ${r.cuisine || ""}`).toLowerCase().includes(f);
+    });
+  }
+
+  function renderResultsView() {
+    renderList();
+    if (state.resultMode === "map") renderMap();
+  }
+
+  function setResultMode(mode) {
+    state.resultMode = mode;
+    main.classList.toggle("results-map-mode", mode === "map");
+    const listEl = $("#list"), mapEl = $("#mapView");
+    if (!listEl || !mapEl) return;
+    listEl.hidden = mode !== "list";
+    mapEl.hidden = mode !== "map";
+    for (const b of document.querySelectorAll("[data-result-mode]")) {
+      const selected = b.dataset.resultMode === mode;
+      b.classList.toggle("on", selected);
+      b.setAttribute("aria-selected", String(selected));
+    }
+    if (mode === "map") {
+      renderMap();
+      requestAnimationFrame(() => state.map && state.map.invalidateSize());
+    }
+  }
+
+  function renderList() {
+    const listEl = $("#list");
+    if (!listEl) return;
+    const all = state.results.restaurants || [];
+    const items = filteredRestaurants();
+
+    if (!items.length) {
+      listEl.innerHTML = '<div class="empty">Nothing matches that filter.</div>';
+      return;
+    }
+
+    listEl.innerHTML = items.map((r) => {
+      const res = r.resources || r.menu_sources || [];
+      const hasOfficial = r.website_kind === "official" && r.website;
+      const linkCount = res.length + (hasOfficial ? 1 : 0);
+      const id = `v-${all.indexOf(r)}`;
+      const open = state.open.has(id);
+      const mapsQ = encodeURIComponent(`${r.name} ${r.address || state.results.location || ""}`);
+      return `
+      <article class="venue${linkCount ? " has" : ""}${open ? " open" : ""}" data-id="${id}">
+        <div class="top">
+          <div style="min-width:0">
+            <div class="n">${esc(r.name)}</div>
+            ${r.address ? `<div class="a">${esc(r.address)}</div>` : ""}
+            <div class="tags">
+              <span class="tag">${esc(r.type || "restaurant")}</span>
+              ${r.cuisine ? `<span class="tag">${esc(r.cuisine)}</span>` : ""}
+              ${hasOfficial ? '<span class="tag res">official site</span>' : ""}
+              ${res.length ? `<span class="tag res">${res.length} resource${res.length > 1 ? "s" : ""}</span>` : ""}
+            </div>
+          </div>
+          <span class="caret">›</span>
+        </div>
+        <div class="body">
+          ${hasOfficial ? `
+            <a class="res-item" href="${esc(r.website)}" target="_blank" rel="noopener">
+              <span class="badge webpage">official</span>
+              <span class="u">${esc(prettyUrl(r.website))}</span>
+              <span class="via">${esc(r.website_confidence || "verified")}</span>
+            </a>` : ""}
+          ${res.map((s) => `
+            <a class="res-item" href="${esc(s.url)}" target="_blank" rel="noopener">
+              <span class="badge ${esc(s.type || "webpage")}">${esc(s.role || s.type || "link")}</span>
+              <span class="u">${esc(s.label || prettyUrl(s.url))}</span>
+              ${s.confidence ? `<span class="via">${esc(s.confidence)}</span>` : ""}
+            </a>`).join("")
+          || (!hasOfficial ? '<div style="color:var(--muted);font-size:13.5px;margin-bottom:10px">No verified menu or official website found online.</div>' : "")}
+          <div class="quick">
+            <a href="https://www.google.com/maps/search/?api=1&query=${mapsQ}" target="_blank" rel="noopener">📍 Maps</a>
+            ${r.phone ? `<a href="tel:${esc(r.phone.replace(/\s/g, ""))}">📞 ${esc(r.phone)}</a>` : ""}
+            ${r.directory_url ? `<a href="${esc(r.directory_url)}" target="_blank" rel="noopener">Directory listing</a>` : ""}
+            <a href="https://duckduckgo.com/?q=${mapsQ}+menu" target="_blank" rel="noopener">🔍 Search menu</a>
+          </div>
+        </div>
+      </article>`;
+    }).join("");
+  }
+
+  function hasCoordinates(r) {
+    const lat = Number(r.latitude), lon = Number(r.longitude);
+    return Number.isFinite(lat) && Number.isFinite(lon)
+      && lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180;
+  }
+
+  function renderMap() {
+    const mapEl = $("#mapView");
+    if (!mapEl || mapEl.hidden) return;
+    const items = filteredRestaurants();
+    const located = items.filter(hasCoordinates);
+
+    if (!located.length) {
+      destroyMap();
+      mapEl.innerHTML = '<div class="map-empty">No locations are available for these results.</div>';
+      return;
+    }
+
+    if (!window.L) {
+      mapEl.innerHTML = '<div class="map-empty">The map library could not be loaded. Check your connection and try again.</div>';
+      return;
+    }
+
+    if (!state.map) {
+      mapEl.innerHTML = "";
+      state.map = createBaseMap(mapEl);
+      state.markerLayer = L.layerGroup().addTo(state.map);
+    }
+
+    state.markerLayer.clearLayers();
+    const bounds = [];
+    for (const r of located) {
+      const latlng = [Number(r.latitude), Number(r.longitude)];
+      const resources = r.resources || r.menu_sources || [];
+      const marker = L.circleMarker(latlng, {
+        radius: 7,
+        weight: 2,
+        color: resources.length ? "#087a4d" : "#b84726",
+        fillColor: resources.length ? "#34d399" : "#ff7a45",
+        fillOpacity: .9,
+      });
+      const popup = document.createElement("div");
+      popup.className = "map-popup";
+      const name = document.createElement("div");
+      name.className = "name";
+      name.textContent = r.name || "Restaurant";
+      popup.appendChild(name);
+      if (r.address) {
+        const address = document.createElement("div");
+        address.className = "address";
+        address.textContent = r.address;
+        popup.appendChild(address);
+      }
+      const link = document.createElement("a");
+      link.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${r.name} ${r.address || state.results.location || ""}`)}`;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = "Open in Maps ↗";
+      popup.appendChild(link);
+      marker.bindPopup(popup).addTo(state.markerLayer);
+      bounds.push(latlng);
+    }
+
+    if (bounds.length === 1) state.map.setView(bounds[0], 16);
+    else state.map.fitBounds(bounds, { padding: [28, 28], maxZoom: 16 });
+  }
+
+  function createBaseMap(element) {
+    const map = L.map(element, { zoomControl: true, preferCanvas: true });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+    return map;
+  }
+
+  function destroyMap() {
+    if (state.map) state.map.remove();
+    state.map = null;
+    state.markerLayer = null;
+  }
+
+  function prettyUrl(url) {
+    try {
+      const u = new URL(url);
+      const path = u.pathname === "/" ? "" : u.pathname;
+      return u.hostname.replace(/^www\./, "") + path;
+    } catch { return url; }
+  }
+
+  // Expanding a venue is delegated so the list can re-render freely.
+  document.addEventListener("click", (e) => {
+    const top = e.target.closest(".venue > .top");
+    if (!top) return;
+    const venue = top.parentElement;
+    const id = venue.dataset.id;
+    venue.classList.toggle("open");
+    if (venue.classList.contains("open")) state.open.add(id); else state.open.delete(id);
+  });
+
+  function download(data) {
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${String(data.location || "scan").toLowerCase()}-${data.searched_at}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function showError(msg) {
+    stopTimer();
+    destroyMap();
+    state.running = false;
+    state.view = "error";
+    state.results = null;
+    setStatus();
+    setTab("scan");
+    prepareMain("", "Scan failed");
+    main.innerHTML = `
+      <section class="card pad error-card">
+        <h1 style="font-size:19px">Scan failed</h1>
+        <div class="msg">${esc(msg)}</div>
+        ${state.log.length ? `<div class="log">${renderLog(state.log)}</div>` : ""}
+        <div class="btn-row" style="margin-top:14px">
+          <button class="btn primary" id="retry">Try again</button>
+        </div>
+      </section>`;
+    $("#retry").addEventListener("click", () => showInput(state.scan && state.scan.town));
+  }
+
+  /* ---------------- timer ---------------- */
+  function startTimer() {
+    stopTimer();
+    const tick = () => { const el = $("#timer"); if (el) el.textContent = fmtTime(Date.now() - state.startedAt); };
+    tick();
+    state.timer = setInterval(tick, 1000);
+  }
+  function stopTimer() { if (state.timer) clearInterval(state.timer); state.timer = null; }
+
+  /* ---------------- scanning ---------------- */
+  async function startScan(town, province) {
+    if (state.running) return;
+    state.scan = { town, province: province || "" };
+    state.startedAt = Date.now();
+    state.running = true;
+    state.results = null;
+    state.log = [];
+    state.progress = { phase: "Starting…", done: 0, total: 0, sources: {} };
+    showProgress();
+
+    let res;
+    try {
+      res = await fetch("/api/scan", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ town, province }),
+      });
+    } catch {
+      showDisconnected();
+      return;
+    }
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ error: res.statusText }));
+      if (err.attachable) {
+        // Another scan is already running — follow that one instead.
+        state.scan = { town: err.town, province: err.province || "" };
+        state.startedAt = err.startedAt || Date.now();
+        showProgress();
+        attachToScan();
         return;
       }
-      const reader = res.body.getReader();
-      const decoder = new TextDecoder();
-      let buffer = "";
-      let streamEnded = false;
-
-      async function read() {
-        try {
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            buffer += decoder.decode(value, { stream: true });
-            const parts = buffer.split("\n\n");
-            buffer = parts.pop();
-            for (const part of parts) {
-              if (!part.trim()) continue;
-              const lines = part.split("\n");
-              let eventName = "message";
-              let data = "";
-              for (const line of lines) {
-                if (line.startsWith("event: ")) eventName = line.slice(7);
-                else if (line.startsWith("data: ")) data = line.slice(6);
-              }
-              if (data) {
-                try { handleSSE(eventName, JSON.parse(data)); } catch {}
-              }
-            }
-          }
-          if (buffer.trim()) {
-            const lines = buffer.split("\n");
-            let eventName = "message";
-            let data = "";
-            for (const line of lines) {
-              if (line.startsWith("event: ")) eventName = line.slice(7);
-              else if (line.startsWith("data: ")) data = line.slice(6);
-            }
-            if (data) {
-              try { handleSSE(eventName, JSON.parse(data)); } catch {}
-            }
-          }
-        } catch (err) {
-          streamEnded = true;
-          if (!state.results && state.scanRunning) {
-            showDisconnected(state.currentScan.town, state.currentScan.province);
-          }
-        }
-        if (!streamEnded) {
-          if (!state.results && state.scanRunning) {
-            showDisconnected(state.currentScan.town, state.currentScan.province);
-          }
-          onStreamEnd && onStreamEnd();
-        }
-      }
-      await read();
-    }).catch((err) => {
-      if (err.name !== "AbortError" && !state.results && state.scanRunning) {
-        showDisconnected(state.currentScan?.town, state.currentScan?.province);
-      }
-    });
+      showError(err.error || "Scan failed");
+      return;
+    }
+    consume(res);
   }
 
   function attachToScan() {
-    fetch("/api/scan/attach", { method: "POST" }).then(async (res) => {
+    fetch("/api/scan/attach", { method: "POST" }).then((res) => {
       if (!res.ok) {
-        if (!state.results) showError("Scan is no longer running");
+        if (!state.results) refreshFromServer();
         return;
       }
-      const reader = res.body.getReader();
-      const decoder = new TextDecoder();
-      let buffer = "";
-
-      async function read() {
-        try {
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            buffer += decoder.decode(value, { stream: true });
-            const parts = buffer.split("\n\n");
-            buffer = parts.pop();
-            for (const part of parts) {
-              if (!part.trim()) continue;
-              const lines = part.split("\n");
-              let eventName = "message";
-              let data = "";
-              for (const line of lines) {
-                if (line.startsWith("event: ")) eventName = line.slice(7);
-                else if (line.startsWith("data: ")) data = line.slice(6);
-              }
-              if (data) {
-                try {
-                  const parsed = JSON.parse(data);
-                  if (eventName === "attached") {
-                    handleAttached(parsed);
-                  } else {
-                    handleSSE(eventName, parsed);
-                  }
-                } catch {}
-              }
-            }
-          }
-        } catch {}
-        if (!state.results && state.scanRunning) {
-          showDisconnected(state.currentScan.town, state.currentScan.province);
-        }
-      }
-      await read();
-    }).catch(() => {
-      if (!state.results && state.scanRunning) {
-        showDisconnected(state.currentScan?.town, state.currentScan?.province);
-      }
-    });
+      clearNotice();
+      consume(res);
+    }).catch(() => { if (state.running) showDisconnected(); });
   }
 
-  function handleAttached(data) {
-    state.scanRunning = true;
-    state.scanStart = Date.now() - (data.elapsed || 0);
-    state.currentView = "progress";
-    setStatus();
-    showProgressView(data.town, data.province);
-    if (data.progress) {
-      updateSourceLine("nominatim", data.progress.sources?.nominatim || 0);
-      updateSourceLine("thefork", data.progress.sources?.thefork || 0);
-      updateSourceLine("web_search", data.progress.sources?.web_search || 0);
-      if (data.progress.sources?.total_raw) updateSourceLine("total_raw", data.progress.sources.total_raw);
-      if (data.progress.sources?.deduped) updateSourceLine("deduped", data.progress.sources.deduped);
-    }
-  }
-
-  function startReattach(town, province) {
-    state.currentScan = { town, province: province || "" };
-    state.scanRunning = true;
-    state.scanStart = Date.now();
-    state.currentView = "progress";
-    state.results = null;
-    state.expandedRow = null;
-    setStatus();
-    showProgressView(town, province);
-    attachToScan();
-  }
-
-  function handleSSE(event, data) {
-    if (event === "phase") {
-      if (data.phase === "discovery") addPhase("Discovering restaurants…");
-      else if (data.phase === "menu_hunting") addPhase("Hunting menus…");
-      else if (data.phase === "writing") addPhase("Writing output…");
-    } else if (event === "progress") {
-      updateSourceLine(data.source, data.count);
-    } else if (event === "menu-progress") {
-      addMenuLine(data.n, data.total, data.name, data.found);
-    } else if (event === "result") {
-      showResults(data);
-      loadPastScans();
-    } else if (event === "error") {
-      showError(data.error);
-    }
-  }
-
-  function addPhase(text) {
-    const el = $("#progress");
-    if (!el) return;
-    const div = document.createElement("div");
-    div.className = "phase";
-    div.textContent = text;
-    el.appendChild(div);
-    el.scrollTop = el.scrollHeight;
-  }
-
-  function updateSourceLine(source, count) {
-    const el = $("#progress");
-    if (!el) return;
-    let line = el.querySelector(`[data-source="${source}"]`);
-    if (!line) {
-      line = document.createElement("div");
-      line.className = "source-line";
-      line.setAttribute("data-source", source);
-      const label = source
-        .replace("_", " ")
-        .replace("nominatim", "nominatim:")
-        .replace("thefork", "thefork:")
-        .replace("web search", "web search:")
-        .replace("paginegialle", "paginegialle:")
-        .replace("total raw", "total raw:")
-        .replace("deduped", "after dedup & filter:");
-      line.innerHTML = `  ${label} <span class="count">${count}</span>`;
-      el.appendChild(line);
-    } else {
-      const countEl = line.querySelector(".count");
-      if (countEl) countEl.textContent = count;
-    }
-    el.scrollTop = el.scrollHeight;
-  }
-
-  function addMenuLine(n, total, name, found) {
-    const el = $("#progress");
-    if (!el) return;
-    const div = document.createElement("div");
-    div.className = "menu-line";
-    const foundClass = found > 0 ? "found" : "not-found";
-    const foundText = found > 0 ? `${found} source${found>1?"s":""} ✓` : "no menu found —";
-    div.innerHTML = `  [${n}/${total}] <span class="name">${escapeHtml(name)}</span> — <span class="${foundClass}">${foundText}</span>`;
-    el.appendChild(div);
-    el.scrollTop = el.scrollHeight;
-  }
-
-  function formatTime(ms) {
-    const s = Math.floor(ms / 1000);
-    const m = Math.floor(s / 60);
-    const sec = String(s % 60).padStart(2, "0");
-    return `${m}:${sec}`;
-  }
-
-  function setStatus() {
-    if (state.scanRunning) {
-      statusEl.innerHTML = '<span class="spinner"></span> Scanning…';
-      statusEl.className = "status";
-    } else if (state.currentView === "error") {
-      statusEl.textContent = "Scan failed ✕";
-      statusEl.className = "status error";
-    } else if (state.results) {
-      const d = state.results;
-      statusEl.textContent = `${d.total_found} restaurants, ${d.with_menu} with menus ✓`;
-      statusEl.className = "status done";
-    } else {
-      statusEl.textContent = "";
-      statusEl.className = "status";
-    }
-  }
-
-  function escapeHtml(s) {
-    const d = document.createElement("div");
-    d.textContent = s;
-    return d.innerHTML;
-  }
-
-  function showInput() {
-    state.currentView = "input";
-    state.results = null;
-    setStatus();
-    main.innerHTML = `
-      <h1>Scan a town</h1>
-      <div class="form" onsubmit="return false">
-        <div class="field">
-          <label for="townInput">Town *</label>
-          <input id="townInput" placeholder="e.g. Oderzo, Mogliano Veneto" autofocus>
-        </div>
-        <div class="field">
-          <label for="provinceInput">Province</label>
-          <input id="provinceInput" placeholder="e.g. TV, RM" maxlength="2" style="text-transform:uppercase">
-        </div>
-        <button class="btn" id="scanBtn" disabled>Scan</button>
-      </div>`;
-
-    const townInput = $("#townInput");
-    const provInput = $("#provinceInput");
-    const btn = $("#scanBtn");
-
-    const check = () => { btn.disabled = !townInput.value.trim(); };
-    townInput.addEventListener("input", check);
-    provInput.addEventListener("input", check);
-
-    btn.addEventListener("click", () => startScan(townInput.value.trim(), provInput.value.trim().toUpperCase()));
-    townInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" && townInput.value.trim()) {
-        startScan(townInput.value.trim(), provInput.value.trim().toUpperCase());
-      }
-    });
-  }
-
-  async function startScan(town, province) {
-    if (state.scanRunning) return;
-
-    state.currentScan = { town, province: province || "" };
-    state.scanRunning = true;
-    state.scanStart = Date.now();
-    state.currentView = "progress";
-    state.results = null;
-    state.expandedRow = null;
-    sessionStorage.setItem("restaurant-finder-scan", JSON.stringify({
-      town, province: province || "", startedAt: Date.now()
-    }));
-    setStatus();
-
-    showProgressView(town, province);
-
-    state.timerInterval = setInterval(() => {
-      const el = $("#timer");
-      if (el) el.textContent = formatTime(Date.now() - state.scanStart);
-    }, 1000);
-
-    const init = { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ town, province }) };
-    streamSSE(init);
-  }
-
-  function showProgressView(town, province) {
-    main.innerHTML = `
-      <h1>Scanning ${escapeHtml(town)}${province ? ` (${escapeHtml(province)})` : ""}…</h1>
-      <div id="progress"></div>
-      <div class="timer" id="timer">${formatTime(Date.now() - state.scanStart)}</div>`;
-    state.timerInterval = setInterval(() => {
-      const el = $("#timer");
-      if (el) el.textContent = formatTime(Date.now() - state.scanStart);
-    }, 1000);
-  }
-
-  function showDisconnected(town, province) {
-    state.scanRunning = true;
-    const pv = province ? ` (${province})` : "";
-    main.innerHTML = `
-      <h1>Scanning ${escapeHtml(town)}${escapeHtml(pv)}…</h1>
-      <div id="progress"></div>
-      <div class="timer" id="timer">${formatTime(Date.now() - state.scanStart)}</div>
-      <div style="margin-top:16px;padding:12px;background:var(--bg2);border-radius:var(--radius);border-left:3px solid var(--yellow)">
-        <div style="color:var(--yellow);font-size:13px;margin-bottom:8px">Connection lost — scan continues in background.</div>
-        <div style="color:var(--fg3);font-size:12px;margin-bottom:10px">The scan will finish and appear in Past scans. You can also reattach to see live progress.</div>
-        <button class="btn primary" id="reattachBtn" style="margin-right:8px">Reattach</button>
-        <button class="btn" id="cancelBtn">Cancel</button>
-      </div>`;
-    document.getElementById("reattachBtn").addEventListener("click", () => {
-      document.getElementById("reattachBtn").disabled = true;
-      addPhase("Reconnecting…");
-      attachToScan();
-    });
-    document.getElementById("cancelBtn").addEventListener("click", () => {
-      cancelScan();
-    });
-  }
-
-  function showResults(data) {
-    clearInterval(state.timerInterval);
-    state.timerInterval = null;
-    state.scanRunning = false;
-    state.results = data;
-    state.currentView = "results";
-    sessionStorage.removeItem("restaurant-finder-scan");
-    setStatus();
-
-    const loc = data.province ? `${data.location} (${data.province})` : data.location;
-    const withMenu = data.with_menu || 0;
-    const without = data.total_found - withMenu;
-
-    main.innerHTML = `
-      <h1>${escapeHtml(loc)}</h1>
-      <div class="summary">
-        <span class="count">${withMenu} with menus</span>,
-        <span class="nocount">${without} without</span>
-        &nbsp;·&nbsp; ${escapeHtml(data.searched_at || "")}
-        &nbsp;·&nbsp; ${(data.sources_used || []).join(", ")}
-      </div>
-      <div class="actions">
-        <button class="btn primary" onclick="showInput()">New scan</button>
-        <button class="btn" id="downloadBtn">Download JSON</button>
-      </div>
-      ${renderTable(data.restaurants)}
-    `;
-
-    $("#downloadBtn").addEventListener("click", () => {
-      const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `${data.location.toLowerCase()}-${data.searched_at}.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-    });
-  }
-
-  function renderTable(restaurants) {
-    if (!restaurants || restaurants.length === 0) {
-      return '<div class="empty">No restaurants found.</div>';
-    }
-    let html = `<table class="table">
-      <thead><tr>
-        <th style="width:36px">#</th>
-        <th>Name</th>
-        <th>Type</th>
-        <th style="width:60px" class="menu-col">Menu</th>
-        <th style="width:120px">Sources</th>
-      </tr></thead><tbody>`;
-
-    for (let i = 0; i < restaurants.length; i++) {
-      const r = restaurants[i];
-      const hasMenu = !r.no_menu_found && r.menu_sources && r.menu_sources.length > 0;
-      const menuIcon = hasMenu ? '<span class="has">✓</span>' : '<span class="none">—</span>';
-      const sourceText = hasMenu ? `<span class="sources-count">${r.menu_sources.length} source${r.menu_sources.length>1?"s":""} ▸</span>` : '<span class="none">—</span>';
-      const rid = `r-${i}`;
-      html += `<tr onclick="toggleRow('${rid}')" id="${rid}-row">
-        <td>${i + 1}</td>
-        <td class="name-col">${escapeHtml(r.name)}</td>
-        <td>${escapeHtml(r.type || "restaurant")}</td>
-        <td class="menu-col">${menuIcon}</td>
-        <td class="sources-col">${sourceText}</td>
-      </tr>`;
-      if (hasMenu) {
-        html += `<tr class="detail-row" id="${rid}-detail" style="display:none">
-          <td colspan="5"><div class="detail">`;
-        for (const s of r.menu_sources) {
-          html += `<div class="source">
-            <span class="badge ${s.type}">${escapeHtml(s.type)}</span>
-            <span class="badge webpage">${escapeHtml(s.found_via)}</span>
-            <a href="${escapeHtml(s.url)}" target="_blank" onclick="event.stopPropagation()">${escapeHtml(s.url)}</a>
-          </div>`;
-        }
-        html += `</div></td></tr>`;
-      }
-    }
-    html += "</tbody></table>";
-    return html;
-  }
-
-  window.toggleRow = function(rid) {
-    const detail = document.getElementById(rid + "-detail");
-    const row = document.getElementById(rid + "-row");
-    if (!detail) return;
-    const isOpen = detail.style.display !== "none";
-    if (isOpen) {
-      detail.style.display = "none";
-      row.classList.remove("expanded");
-      state.expandedRow = null;
-    } else {
-      if (state.expandedRow) {
-        const prev = document.getElementById(state.expandedRow + "-detail");
-        const prevRow = document.getElementById(state.expandedRow + "-row");
-        if (prev) prev.style.display = "none";
-        if (prevRow) prevRow.classList.remove("expanded");
-      }
-      detail.style.display = "";
-      row.classList.add("expanded");
-      state.expandedRow = rid;
-    }
-  };
-
-  function showError(msg) {
-    clearInterval(state.timerInterval);
-    state.timerInterval = null;
-    state.scanRunning = false;
-    state.currentView = "error";
-    state.results = null;
-    sessionStorage.removeItem("restaurant-finder-scan");
-    setStatus();
-    main.innerHTML = `
-      <div class="error-box">
-        <div class="icon">✕</div>
-        <div class="msg">${escapeHtml(msg)}</div>
-        <button class="btn" onclick="showInput()">Try again</button>
-      </div>`;
-  }
-
-  function cancelScan() {
-    clearInterval(state.timerInterval);
-    state.timerInterval = null;
-    state.scanRunning = false;
-    state.currentScan = null;
-    state.results = null;
-    state.expandedRow = null;
-    sessionStorage.removeItem("restaurant-finder-scan");
-    setStatus();
-    showInput();
-  }
-
-  function showToast(msg, color) {
-    const existing = document.querySelector(".toast");
-    if (existing) existing.remove();
-    const el = document.createElement("div");
-    el.className = "toast";
-    el.style.cssText = `
-      position:fixed;bottom:20px;right:20px;background:var(--bg3);color:var(--${color});
-      padding:10px 16px;border-radius:var(--radius);font-size:13px;z-index:300;
-      border:1px solid var(--${color});animation:fadeIn .2s;
-    `;
-    el.textContent = msg;
-    document.body.appendChild(el);
-    setTimeout(() => { el.style.opacity = "0"; el.style.transition = "opacity .3s"; setTimeout(() => el.remove(), 300); }, 3000);
-  }
-
-  async function loadPastScans() {
+  // Read an SSE body from a fetch stream (works for both POST endpoints).
+  async function consume(res) {
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
     try {
-      const scans = await api("GET", "/api/scans");
-      state.pastScans = scans;
-      renderSidebar();
-    } catch {}
-  }
-
-  function renderSidebar() {
-    if (state.pastScans.length === 0) {
-      sidebarContent.innerHTML = '<div class="dim">No past scans yet.</div>';
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const parts = buffer.split("\n\n");
+        buffer = parts.pop();
+        for (const part of parts) dispatch(part);
+      }
+      if (buffer.trim()) dispatch(buffer);
+    } catch {
+      if (state.running) showDisconnected();
       return;
     }
-    let html = "";
-    for (const s of state.pastScans) {
-      html += `<div class="town">
-        <span class="town-name" onclick="event.stopPropagation();setTown('${escapeHtml(s.town_slug)}')">${escapeHtml(s.town)}</span>
-        — ${s.dates.length} scan${s.dates.length>1?"s":""}
-        (${s.restaurants} venues, ${s.with_menu} menus)
-      </div>`;
-      html += '<div class="dates">';
-      for (const d of s.dates) {
-        html += `<span class="date" onclick="event.stopPropagation();viewScan('${escapeHtml(s.town_slug)}','${d}')">${d}</span>`;
-      }
-      html += '</div>';
-    }
-    sidebarContent.innerHTML = html;
+    // Stream closed without a result or error: scan is still alive server-side.
+    if (state.running) refreshFromServer();
   }
 
-  window.setTown = function(slug) {
-    const town = slug.replace(/-/g, " ");
-    showInput();
-    setTimeout(() => {
-      const inp = $("#townInput");
-      if (inp) { inp.value = town; inp.dispatchEvent(new Event("input")); }
-    }, 50);
-  };
+  function dispatch(chunk) {
+    let event = "message", data = "";
+    for (const line of chunk.split("\n")) {
+      if (line.startsWith("event: ")) event = line.slice(7);
+      else if (line.startsWith("data: ")) data = line.slice(6);
+    }
+    if (!data) return;
+    let parsed;
+    try { parsed = JSON.parse(data); } catch { return; }
 
-  window.viewScan = async function(townSlug, date) {
+    if (event === "attached") {
+      state.scan = { town: parsed.town, province: parsed.province || "" };
+      state.startedAt = Date.now() - (parsed.elapsed || 0);
+      state.running = true;
+      replay(parsed.log);
+      if (state.view !== "progress") showProgress();
+      else { clearNotice(); paintProgress(true); startTimer(); }
+      setStatus();
+      return;
+    }
+    if (event === "result") {
+      state.globalMapData = null;
+      showResults(parsed, null);
+      loadHistory();
+      return;
+    }
+    if (event === "error") { applyEvent(event, parsed); showError(parsed.error); return; }
+
+    applyEvent(event, parsed);
+    paintProgress(false);
+  }
+
+  async function cancelScan() {
+    const btn = $("#cancel");
+    if (btn) { btn.disabled = true; btn.textContent = "Stopping…"; }
+    try { await api("POST", "/api/scan/cancel"); } catch {}
+    state.running = false;
+    stopTimer();
+    showInput(state.scan && state.scan.town);
+  }
+
+  /* ---------------- history ---------------- */
+  async function loadHistory() {
     try {
-      const data = await api("GET", `/api/scan/${townSlug}/${date}`);
-      showResults(data);
+      state.pastScans = await api("GET", "/api/scans");
+    } catch { return; }
+    if (!state.pastScans.length) {
+      historyList.innerHTML = '<div class="empty">No scans yet. Run one from the Scan tab.</div>';
+      return;
+    }
+    historyList.innerHTML = state.pastScans.map((s) => `
+      <div class="town-card">
+        <h3>${esc(s.town)}</h3>
+        <div class="meta">${s.restaurants} venues · ${s.with_resources} with links</div>
+        <div class="dates">
+          ${s.dates.map((d) => `<button class="date-btn" data-town="${esc(s.town_slug)}" data-date="${esc(d)}">${esc(d)}</button>`).join("")}
+          <button class="date-btn rescan" data-rescan="${esc(s.town)}">Re-scan</button>
+        </div>
+      </div>`).join("");
+  }
+
+  historyList.addEventListener("click", (e) => {
+    const btn = e.target.closest("button");
+    if (!btn) return;
+    if (btn.dataset.rescan) return showInput(btn.dataset.rescan);
+    if (btn.dataset.town) viewScan(btn.dataset.town, btn.dataset.date);
+  });
+
+  async function viewScan(slug, date) {
+    try {
+      const data = await api("GET", `/api/scan/${encodeURIComponent(slug)}/${encodeURIComponent(date)}`);
+      const log = await api("GET", `/api/scan/${encodeURIComponent(slug)}/${encodeURIComponent(date)}/log`).catch(() => null);
+      state.log = [];  // don't let a previous run's log leak into this view
+      showResults(data, log);
     } catch (err) {
       showError(err.message);
     }
-  };
-
-  window.toggleSidebar = function() {
-    const sb = $("#sidebar");
-    sb.classList.toggle("collapsed");
-  };
-
-  window.showInput = showInput;
-  window.cancelScan = cancelScan;
-
-  loadPastScans();
-  recoverOrShowInput();
-
-  async function recoverOrShowInput() {
-    try {
-      const stored = sessionStorage.getItem("restaurant-finder-scan");
-      if (!stored) return showInput();
-      const { town, province, startedAt } = JSON.parse(stored);
-      const status = await api("GET", "/api/scan/status");
-      if (status.running && status.town === town) {
-        state.currentScan = { town, province: province || "" };
-        state.scanRunning = true;
-        state.scanStart = startedAt || Date.now();
-        state.currentView = "progress";
-        state.results = null;
-        state.expandedRow = null;
-        setStatus();
-        showProgressView(town, province);
-        attachToScan();
-      } else {
-        sessionStorage.removeItem("restaurant-finder-scan");
-        showInput();
-      }
-    } catch {
-      sessionStorage.removeItem("restaurant-finder-scan");
-      showInput();
-    }
   }
+
+  /* ---------------- boot / recovery ---------------- */
+  async function refreshFromServer() {
+    let status;
+    try { status = await api("GET", "/api/scan/status"); } catch { return showInput(); }
+
+    if (status.running) {
+      state.scan = { town: status.town, province: status.province || "" };
+      state.startedAt = Date.now() - (status.elapsed || 0);
+      state.running = true;
+      replay(status.log);
+      showProgress();
+      attachToScan();
+      return;
+    }
+
+    const last = status.last;
+    if (last && last.result) {
+      state.scan = { town: last.town, province: last.province };
+      showResults(last.result, last.log);
+      return;
+    }
+    if (last && last.error) {
+      state.scan = { town: last.town, province: last.province };
+      replay(last.log);
+      showError(last.error);
+      return;
+    }
+    showInput();
+  }
+
+  loadHistory();
+  refreshFromServer();
+
+  // Coming back to the tab after the phone slept: re-sync with the server.
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && state.running && state.disconnected) attachToScan();
+  });
 })();
 </script>
 

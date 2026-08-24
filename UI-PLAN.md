@@ -74,7 +74,6 @@ Response: SSE stream (`text/event-stream`).
    - `"🏘️  Restaurant Finder"` → `phase: discovery`
    - `"[1/3] Discovering restaurants..."` → `phase: discovery`
    - `"nominatim: N"` → `progress: {count: N, source: "nominatim"}`
-   - `"thefork: N"` → `progress: {count: N, source: "thefork"}`
    - `"web search: N"` → `progress: {count: N, source: "web_search"}`
    - `"[2/3] Hunting menus..."` → `phase: {phase: "menu_hunting"}`
    - `"[N/TOTAL] Name ... K sources"` → `menu-progress: {n: N, total: TOTAL, name: "Name", found: K}`
@@ -197,7 +196,6 @@ Scanning Oderzo (TV)…
 
 Discovering restaurants…
   nominatim: 23
-  thefork:    8  ↵
   web search: 12  ↵
   38 restaurants after dedup
 
@@ -219,7 +217,7 @@ Hunting menus…
 
 ```
 Oderzo (TV) — 38 restaurants, 7 with menus ✓
-Scanned 2026-08-23 from nominatim, thefork, web_search
+Scanned 2026-08-23 from nominatim, web_search, paginegialle
 
 ┌──────────────────────────────────────────────────────────────────┐
 │  #  │ Name                │ Type       │ Menu │ Sources         │

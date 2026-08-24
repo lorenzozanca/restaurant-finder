@@ -1,4 +1,4 @@
-import { get } from "../../scripts/lib.mjs";
+import { get } from "../lib/lib.mjs";
 
 const NOMINATIM = "https://nominatim.openstreetmap.org";
 const UA = "restaurant-finder/0.1 (pomovi research; nominatim)";
@@ -14,36 +14,56 @@ export async function discover(town, province = "") {
   const loc = province ? `${town} ${province}` : town;
   const encoded = loc.replace(/\s+/g, "+");
 
-  const typeQueries = ["restaurant", "bar", "pizzeria", "fast_food"];
+  // Nominatim's free-text search does not treat these as synonyms: a `bar`
+  // query can omit POIs tagged as `cafe` or `pub`, even though we accept both.
+  const typeQueries = ["restaurant", "bar", "cafe", "pub", "pizzeria", "fast_food"];
+
+  const queries = [];
+  for (const tq of typeQueries) queries.push(`${tq}+${encoded}`);
+  for (const tq of typeQueries) queries.push(`${tq}+near+${encoded}`);
 
   const all = [];
   const seenOsm = new Set();
 
-  for (const tq of typeQueries) {
-    const data = await queryNominatim(`${tq}+${encoded}`);
-    for (const place of data) {
-      const osmId = `${place.osm_type}/${place.osm_id}`;
-      if (seenOsm.has(osmId)) continue;
-      seenOsm.add(osmId);
+  // Nominatim allows ~1 request/sec. Stagger starts so the queries overlap
+  // while staying within the rate limit.
+  let nextSlot = 0;
+  const schedule = (query) => {
+    const slot = Math.max(nextSlot, Date.now());
+    nextSlot = slot + 1000;
+    return new Promise((resolvePromise) => {
+      setTimeout(async () => {
+        const data = await queryNominatim(query);
+        for (const place of data) {
+          const osmId = `${place.osm_type}/${place.osm_id}`;
+          if (seenOsm.has(osmId)) continue;
+          seenOsm.add(osmId);
 
-      const result = formatPlace(place);
-      if (result) all.push(result);
-    }
-  }
+          const result = formatPlace(place);
+          if (result) all.push(result);
+        }
+        resolvePromise();
+      }, Math.max(slot - Date.now(), 0));
+    });
+  };
 
-  for (const tq of typeQueries) {
-    const data = await queryNominatim(`${tq}+near+${encoded}`);
-    for (const place of data) {
-      const osmId = `${place.osm_type}/${place.osm_id}`;
-      if (seenOsm.has(osmId)) continue;
-      seenOsm.add(osmId);
-
-      const result = formatPlace(place);
-      if (result) all.push(result);
-    }
-  }
+  await Promise.all(queries.map(schedule));
 
   return all;
+}
+
+export async function geocode(address, town, province = "") {
+  const query = [address, town, province, "Italy"]
+    .filter(Boolean)
+    .join(", ");
+  const data = await queryNominatim(encodeURIComponent(query), 1);
+  const place = data[0];
+  if (!place) return null;
+
+  const latitude = Number(place.lat);
+  const longitude = Number(place.lon);
+  if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) return null;
+  return { latitude, longitude };
 }
 
 function formatPlace(place) {
@@ -71,6 +91,9 @@ function formatPlace(place) {
     name: normalizeName(name),
     type: type.replace("_", " "),
     address: formattedAddress,
+    latitude: Number(place.lat),
+    longitude: Number(place.lon),
+    coordinates_source: "osm",
     website: extratags.website || extratags["contact:website"] || undefined,
     phone: extratags.phone || extratags["contact:phone"] || undefined,
     cuisine: extratags.cuisine || undefined,
@@ -79,8 +102,8 @@ function formatPlace(place) {
   };
 }
 
-async function queryNominatim(query) {
-  const url = `${NOMINATIM}/search?q=${query}&format=json&limit=50&addressdetails=1&extratags=1&accept-language=it&countrycodes=it`;
+async function queryNominatim(query, limit = 50) {
+  const url = `${NOMINATIM}/search?q=${query}&format=json&limit=${limit}&addressdetails=1&extratags=1&accept-language=it&countrycodes=it`;
 
   const res = await get(url, {
     timeout: 30_000,

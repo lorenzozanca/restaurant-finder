@@ -1,5 +1,5 @@
 import { createServer } from "node:http";
-import { readFile, readdir, stat } from "node:fs/promises";
+import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { resolve, dirname, extname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const UI_DIR = __dirname;
 const OUTPUT_DIR = resolve(__dirname, "..", "output");
 const DISCOVER = resolve(__dirname, "..", "discover.mjs");
-const PORT = 4188;
+const PORT = Number(process.env.PORT || 4188);
 
 const CTYPES = {
   ".html": "text/html; charset=utf-8",
@@ -22,6 +22,9 @@ const CTYPES = {
 };
 
 let runningScan = null;
+// Kept after a scan finishes so a page reload can restore the last run's
+// results and full log instead of showing an empty form.
+let lastScan = null;
 
 const server = createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host || "localhost"}`);
@@ -33,10 +36,14 @@ const server = createServer(async (req, res) => {
       await handleScan(req, res);
     } else if (url.pathname === "/api/scan/status" && req.method === "GET") {
       await handleScanStatus(req, res);
+    } else if (url.pathname === "/api/scan/cancel" && req.method === "POST") {
+      handleScanCancel(req, res);
     } else if (url.pathname === "/api/scan/attach" && req.method === "POST") {
       await handleScanAttach(req, res);
     } else if (url.pathname === "/api/scans" && req.method === "GET") {
       await handleScans(req, res);
+    } else if (url.pathname === "/api/map" && req.method === "GET") {
+      await handleMap(req, res);
     } else if (url.pathname.startsWith("/api/scan/")) {
       await handleScanGet(req, res, url);
     } else {
@@ -110,6 +117,7 @@ async function handleScan(req, res) {
     stdio: ["ignore", "pipe", "pipe"],
   });
 
+  lastScan = null;
   runningScan = {
     proc, town, province, startedAt: Date.now(),
     clients: new Set([res]),
@@ -117,7 +125,8 @@ async function handleScan(req, res) {
     resultPath: "",
     scanComplete: false,
     error: null,
-    progress: { phase: "discovery", sources: {}, menuTotal: 0, menuDone: 0 },
+    log: [],
+    progress: { phase: "discovery", sources: {}, resourcesTotal: 0, resourcesDone: 0 },
   };
   const timer = setTimeout(() => {
     if (runningScan) runningScan.cancelled = true;
@@ -139,18 +148,20 @@ async function handleScan(req, res) {
       const trimmed = line.trim();
       if (!trimmed) continue;
 
-      if (trimmed.startsWith("[1/3]")) {
+      // Phase markers are printed flush-left; per-venue lines like
+      // "  [1/3] Trattoria ..." are indented, so match on the raw line.
+      if (line.startsWith("[1/3]")) {
         runningScan.progress.phase = "discovery";
         broadcast("phase", { phase: "discovery" });
-      } else if (trimmed.startsWith("[2/3]")) {
-        runningScan.progress.phase = "menu_hunting";
-        broadcast("phase", { phase: "menu_hunting" });
-      } else if (trimmed.startsWith("[3/3]")) {
+      } else if (line.startsWith("[2/3]")) {
+        runningScan.progress.phase = "resources";
+        broadcast("phase", { phase: "resources" });
+      } else if (line.startsWith("[3/3]")) {
         runningScan.progress.phase = "writing";
         broadcast("phase", { phase: "writing" });
       }
 
-      const srcMatch = trimmed.match(/^\s*(nominatim|thefork|web search|paginegialle):\s*(\d+)/);
+      const srcMatch = trimmed.match(/^\s*(nominatim|web search|paginegialle):\s*(\d+)/);
       if (srcMatch) {
         const sourceName = srcMatch[1] === "web search" ? "web_search" : srcMatch[1];
         runningScan.progress.sources[sourceName] = parseInt(srcMatch[2]);
@@ -169,22 +180,22 @@ async function handleScan(req, res) {
         broadcast("progress", { count: parseInt(dedupMatch[1]), source: "deduped" });
       }
 
-      const menuMatch = trimmed.match(/^\s*\[(\d+)\/(\d+)\]\s+(.+?)\s+\.{3}\s+(.+)/);
-      if (menuMatch) {
-        const name = menuMatch[3];
-        const tail = menuMatch[4];
+      const resMatch = trimmed.match(/^\s*\[(\d+)\/(\d+)\]\s+(.+?)\s+\.{3}\s+(.+)/);
+      if (resMatch) {
+        const name = resMatch[3];
+        const tail = resMatch[4];
         let found = 0;
-        if (tail === "no menu found") {
+        if (tail === "no resources found") {
           found = 0;
         } else {
           const fMatch = tail.match(/^(\d+)\s+source/);
           if (fMatch) found = parseInt(fMatch[1]);
         }
-        runningScan.progress.menuDone = parseInt(menuMatch[1]);
-        runningScan.progress.menuTotal = parseInt(menuMatch[2]);
-        broadcast("menu-progress", {
-          n: parseInt(menuMatch[1]),
-          total: parseInt(menuMatch[2]),
+        runningScan.progress.resourcesDone = parseInt(resMatch[1]);
+        runningScan.progress.resourcesTotal = parseInt(resMatch[2]);
+        broadcast("resources-progress", {
+          n: parseInt(resMatch[1]),
+          total: parseInt(resMatch[2]),
           name,
           found,
         });
@@ -205,20 +216,33 @@ async function handleScan(req, res) {
   proc.on("close", async (code) => {
     clearTimeout(timer);
 
+    let result = null;
     if (runningScan.scanComplete && runningScan.resultPath) {
       try {
         const data = await readFile(runningScan.resultPath, "utf-8");
-        const parsed = JSON.parse(data);
-        broadcast("result", parsed);
+        result = JSON.parse(data);
+        broadcast("result", result);
       } catch (err) {
         runningScan.error = `Failed to read result: ${err.message}`;
         broadcast("error", { error: runningScan.error });
       }
     } else if (!runningScan.scanComplete) {
-      const msg = runningScan.cancelled ? "Scan timed out" : stderrBuf.trim() || (code === null ? "timeout" : `exit code ${code}`);
+      const msg = runningScan.cancelReason
+        || (runningScan.cancelled ? "Scan timed out" : stderrBuf.trim() || (code === null ? "timeout" : `exit code ${code}`));
       runningScan.error = msg;
       broadcast("error", { error: msg });
     }
+
+    lastScan = {
+      town: runningScan.town,
+      province: runningScan.province || "",
+      startedAt: runningScan.startedAt,
+      finishedAt: Date.now(),
+      log: runningScan.log,
+      error: runningScan.error || null,
+      result,
+    };
+    if (result) await saveLog(runningScan.resultPath, runningScan.log);
 
     for (const client of runningScan.clients) {
       try { client.end(); } catch {}
@@ -235,17 +259,29 @@ async function handleScan(req, res) {
 
 async function handleScanStatus(_req, res) {
   if (!runningScan) {
-    return json(res, 200, { running: false });
+    return json(res, 200, { running: false, last: lastScan });
   }
   json(res, 200, {
     running: true,
     town: runningScan.town,
     province: runningScan.province || "",
     startedAt: runningScan.startedAt,
+    elapsed: Date.now() - runningScan.startedAt,
     completed: runningScan.scanComplete,
     error: runningScan.error || null,
     progress: runningScan.progress,
+    log: runningScan.log,
   });
+}
+
+// Store the event log next to the result JSON: output/<town>/<date>.log.json
+async function saveLog(resultPath, log) {
+  if (!resultPath) return;
+  try {
+    const logPath = resultPath.replace(/\.json$/, ".log.json");
+    await mkdir(dirname(logPath), { recursive: true });
+    await writeFile(logPath, JSON.stringify(log), "utf-8");
+  } catch {}
 }
 
 async function handleScanAttach(req, res) {
@@ -267,6 +303,7 @@ async function handleScanAttach(req, res) {
     province: runningScan.province || "",
     progress: runningScan.progress,
     elapsed: Date.now() - runningScan.startedAt,
+    log: runningScan.log,
   });
 
   req.on("close", () => {
@@ -274,6 +311,16 @@ async function handleScanAttach(req, res) {
       runningScan.clients.delete(res);
     }
   });
+}
+
+function handleScanCancel(_req, res) {
+  if (!runningScan) return json(res, 200, { cancelled: false });
+  runningScan.cancelled = true;
+  runningScan.cancelReason = "Scan cancelled";
+  const proc = runningScan.proc;
+  try { proc.kill("SIGTERM"); } catch {}
+  setTimeout(() => { try { proc.kill("SIGKILL"); } catch {} }, 3000);
+  json(res, 200, { cancelled: true });
 }
 
 async function handleScans(_req, res) {
@@ -285,19 +332,19 @@ async function handleScans(_req, res) {
 
   const entries = await readdir(OUTPUT_DIR, { withFileTypes: true });
   for (const entry of entries) {
-    if (!entry.isDirectory()) continue;
+    if (!entry.isDirectory() || entry.name.startsWith(".")) continue;
 
     const dirPath = resolve(OUTPUT_DIR, entry.name);
     const files = await readdir(dirPath);
     const jsonFiles = files
-      .filter((f) => f.endsWith(".json"))
+      .filter((f) => f.endsWith(".json") && !f.endsWith(".log.json"))
       .sort()
       .reverse();
 
     if (jsonFiles.length === 0) continue;
 
     let totalFound = 0;
-    let withMenu = 0;
+    let withResources = 0;
     const dates = [];
 
     for (const f of jsonFiles.slice(0, 5)) {
@@ -309,7 +356,7 @@ async function handleScans(_req, res) {
       const latest = jsonFiles[0];
       const data = JSON.parse(await readFile(resolve(dirPath, latest), "utf-8"));
       totalFound = data.total_found || 0;
-      withMenu = data.with_menu || 0;
+      withResources = data.with_resources || data.with_menu || 0;
     } catch {}
 
     scans.push({
@@ -317,12 +364,85 @@ async function handleScans(_req, res) {
       town_slug: entry.name,
       dates,
       restaurants: totalFound,
-      with_menu: withMenu,
+      with_resources: withResources,
     });
   }
 
   scans.sort((a, b) => a.town.localeCompare(b.town, "it"));
   json(res, 200, scans);
+}
+
+async function handleMap(_req, res) {
+  if (!existsSync(OUTPUT_DIR)) {
+    return json(res, 200, { restaurants: [], towns: [] });
+  }
+
+  const byKey = new Map();
+  const towns = new Set();
+  const entries = await readdir(OUTPUT_DIR, { withFileTypes: true });
+
+  for (const entry of entries) {
+    if (!entry.isDirectory() || entry.name.startsWith(".")) continue;
+    const dirPath = resolve(OUTPUT_DIR, entry.name);
+    const files = (await readdir(dirPath))
+      .filter((f) => f.endsWith(".json") && !f.endsWith(".log.json"))
+      .sort()
+      .reverse();
+    if (!files.length) continue;
+
+    let data;
+    try {
+      data = JSON.parse(await readFile(resolve(dirPath, files[0]), "utf-8"));
+    } catch {
+      continue;
+    }
+
+    const town = data.location
+      ? (data.province ? `${data.location} (${data.province})` : data.location)
+      : capitalizeTown(entry.name);
+    let townHasLocations = false;
+
+    for (const r of data.restaurants || []) {
+      const latitude = Number(r.latitude);
+      const longitude = Number(r.longitude);
+      if (!Number.isFinite(latitude) || !Number.isFinite(longitude)
+          || latitude < -90 || latitude > 90 || longitude < -180 || longitude > 180) continue;
+      townHasLocations = true;
+
+      const normalizedName = String(r.name || "restaurant").toLowerCase().replace(/\W+/g, " ").trim();
+      const key = r.osm_id
+        ? `osm:${r.osm_id}`
+        : `place:${normalizedName}:${latitude.toFixed(5)}:${longitude.toFixed(5)}`;
+      const resources = r.resources || r.menu_sources || [];
+      const existing = byKey.get(key);
+
+      if (existing) {
+        if (r.address && !existing.address) existing.address = r.address;
+        if (r.cuisine && !existing.cuisine) existing.cuisine = r.cuisine;
+        existing.resource_count = Math.max(existing.resource_count, resources.length);
+        if (!existing.towns.includes(town)) existing.towns.push(town);
+        continue;
+      }
+
+      byKey.set(key, {
+        name: r.name || "Restaurant",
+        address: r.address || "",
+        type: r.type || "restaurant",
+        cuisine: r.cuisine || "",
+        latitude,
+        longitude,
+        resource_count: resources.length,
+        towns: [town],
+      });
+    }
+    if (townHasLocations) towns.add(town);
+  }
+
+  const restaurants = [...byKey.values()].sort((a, b) => a.name.localeCompare(b.name, "it"));
+  json(res, 200, {
+    restaurants,
+    towns: [...towns].sort((a, b) => a.localeCompare(b, "it")),
+  });
 }
 
 async function handleScanGet(_req, res, url) {
@@ -336,16 +456,23 @@ async function handleScanGet(_req, res, url) {
     return json(res, 404, { error: "town not found" });
   }
 
+  const wantLog = parts[2] === "log";
+  const suffix = wantLog ? ".log.json" : ".json";
+
   let filename;
   if (parts[1] === "latest") {
     const files = await readdir(dirPath);
-    const jsons = files.filter((f) => f.endsWith(".json")).sort().reverse();
+    const jsons = files.filter((f) => f.endsWith(".json") && !f.endsWith(".log.json")).sort().reverse();
     if (jsons.length === 0) return json(res, 404, { error: "no scans for town" });
-    filename = jsons[0];
+    filename = wantLog ? jsons[0].replace(/\.json$/, suffix) : jsons[0];
   } else if (parts[1]) {
-    filename = parts[1] + ".json";
+    filename = parts[1] + suffix;
   } else {
     return json(res, 400, { error: "date or 'latest' required" });
+  }
+
+  if (filename.includes("/") || filename.includes("..")) {
+    return json(res, 400, { error: "invalid path" });
   }
 
   try {
@@ -357,8 +484,13 @@ async function handleScanGet(_req, res, url) {
   }
 }
 
+// Every progress event is appended to runningScan.log so that a client which
+// reloads (or connects late) can replay the whole run, not just the tail.
 function broadcast(event, data) {
   if (!runningScan) return;
+  if (event !== "result") {
+    runningScan.log.push({ event, data, at: Date.now() - runningScan.startedAt });
+  }
   for (const client of runningScan.clients) {
     try { sse(client, event, data); } catch {}
   }

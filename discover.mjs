@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { discover as nominatim } from "./sources/nominatim.mjs";
-import { discover as thefork } from "./sources/thefork.mjs";
+import { discover as nominatim, geocode } from "./sources/nominatim.mjs";
 import { discover as webSearch } from "./sources/web-search.mjs";
 import { discover as paginegialle } from "./sources/paginegialle.mjs";
 import { findMenuSources } from "./find-menu.mjs";
@@ -22,28 +21,28 @@ if (args.length < 1) {
 const town = args[0];
 const province = args[1] || "";
 const today = new Date().toISOString().slice(0, 10);
+const ENRICHMENT_VERSION = 8;
+const outputVariant = String(process.env.OUTPUT_VARIANT || "")
+  .toLowerCase().replace(/[^a-z0-9_-]+/g, "-").replace(/^-+|-+$/g, "");
 
 console.log(`\n🏘️  Restaurant Finder — "${town}"${province ? ` (${province})` : ""}\n`);
 
 console.log("[1/3] Discovering restaurants...\n");
 
-const nominatimResults = await safeCall(nominatim, town, province);
-await sleep(2000);
-const theforkResults = await safeCall(thefork, town);
-await sleep(2000);
-const webSearchResults = await safeCall(webSearch, town);
-await sleep(2000);
-const paginegialleResults = await safeCall(paginegialle, town);
+const [nominatimResults, webSearchResults, paginegialleResults] =
+  await Promise.all([
+    safeCall(nominatim, town, province),
+    safeCall(webSearch, town),
+    safeCall(paginegialle, town),
+  ]);
 
 const allRaw = [
   ...nominatimResults,
-  ...theforkResults,
   ...webSearchResults,
   ...paginegialleResults,
 ];
 
 console.log(`  nominatim:    ${nominatimResults.length}`);
-console.log(`  thefork:      ${theforkResults.length}`);
 console.log(`  web search:   ${webSearchResults.length}`);
 console.log(`  paginegialle: ${paginegialleResults.length}`);
 console.log(`  total raw:    ${allRaw.length}\n`);
@@ -53,59 +52,100 @@ const merged = mergeAndDedupe(allRaw)
   .map(normalizeRecord);
 console.log(`  after dedup & filter: ${merged.length} restaurants\n`);
 
-console.log("[2/3] Hunting menus...\n");
+await addMissingCoordinates(merged, town, province);
+
+console.log("[2/3] Gathering online resources...\n");
 
 const TOP_N = 20;
-const toProcess = merged.slice(0, TOP_N);
-const rest = merged.slice(TOP_N);
-
-const enriched = [];
-for (let i = 0; i < toProcess.length; i++) {
-  const r = toProcess[i];
+// Spend the resource-hunting budget on the strongest candidates, rather than
+// whichever names happen to come first alphabetically. Keep original indexes
+// so the final result remains an alphabetical list.
+const toProcess = merged
+  .map((restaurant, index) => ({ restaurant, index }))
+  .sort((a, b) => enrichmentPriority(b.restaurant) - enrichmentPriority(a.restaurant)
+    || a.restaurant.name.localeCompare(b.restaurant.name, "it"))
+  .slice(0, TOP_N);
 const locationStr = province ? `${town} ${province}` : town;
-    process.stdout.write(`  [${i + 1}/${toProcess.length}] ${r.name} ... `);
-    const menuSources = await findMenuSources(r, locationStr);
-  const found = menuSources.length;
-  if (found === 0) {
-    process.stdout.write("no menu found\n");
-  } else {
-    process.stdout.write(`${found} source${found > 1 ? "s" : ""}\n`);
+
+const outDir = resolve(OUTPUT_DIR, town.toLowerCase());
+const outPath = resolve(outDir, `${today}${outputVariant ? `.${outputVariant}` : ""}.json`);
+
+let previousByName = new Map();
+try {
+  const previous = JSON.parse(await readFile(outPath, "utf-8"));
+  if (previous.enrichment_version === ENRICHMENT_VERSION && Array.isArray(previous.restaurants)) {
+    for (const r of previous.restaurants) {
+      if (r.name && r.resources_checked) {
+        previousByName.set(r.name.toLowerCase(), {
+          website: r.website,
+          website_kind: r.website_kind,
+          website_confidence: r.website_confidence,
+          directory_url: r.directory_url,
+          resources: Array.isArray(r.resources) ? r.resources : [],
+        });
+      }
+    }
   }
-  enriched.push({
-    ...r,
-    menu_sources: menuSources,
-    no_menu_found: menuSources.length === 0,
-  });
+} catch {}
+
+const WORKERS = 4;
+const enriched = merged.map((r) => ({
+  ...r,
+  resources: [],
+  resources_checked: false,
+  no_resources_found: true,
+}));
+let nextIndex = 0;
+
+async function worker() {
+  while (true) {
+    const i = nextIndex++;
+    if (i >= toProcess.length) return;
+    const { restaurant: r, index } = toProcess[i];
+
+    const cachedOnline = previousByName.get((r.name || "").toLowerCase());
+    const online = cachedOnline !== undefined
+      ? cachedOnline
+      : await findMenuSources(r, locationStr);
+
+    enriched[index] = {
+      ...r,
+      website: online.website,
+      website_kind: online.website_kind,
+      website_confidence: online.website_confidence,
+      directory_url: online.directory_url,
+      resources: online.resources,
+      resources_checked: true,
+      no_resources_found: online.resources.length === 0 && !online.website,
+    };
+    process.stdout.write(resourcesLine(i, toProcess.length, r.name, online.resources.length));
+  }
 }
 
-for (const r of rest) {
-  enriched.push({
-    ...r,
-    menu_sources: [],
-    no_menu_found: true,
-  });
-}
+await Promise.all(
+  Array.from({ length: Math.min(WORKERS, toProcess.length) }, () => worker())
+);
 
 const output = {
   location: town,
   province: province || undefined,
   searched_at: today,
-  sources_used: ["nominatim", "thefork", "web_search", "paginegialle"],
+  enrichment_version: ENRICHMENT_VERSION,
+  sources_used: ["nominatim", "web_search", "paginegialle"],
   total_found: enriched.length,
-  with_menu: enriched.filter((r) => r.menu_sources.length > 0).length,
+  with_resources: enriched.filter((r) => r.resources.length > 0).length,
+  with_official_website: enriched.filter((r) => r.website_kind === "official").length,
   restaurants: enriched,
 };
 
 console.log("\n[3/3] Writing output...");
 
-const outDir = resolve(OUTPUT_DIR, town.toLowerCase());
 await mkdir(outDir, { recursive: true });
 
-const outPath = resolve(outDir, `${today}.json`);
 await writeFile(outPath, JSON.stringify(output, null, 2), "utf-8");
 
 console.log(`\n✅ Done. ${enriched.length} restaurants → ${outPath}`);
-console.log(`   ${output.with_menu} with menus, ${enriched.length - output.with_menu} without\n`);
+console.log(`   ${output.with_resources} with online resources, ${enriched.length - output.with_resources} without\n`);
 
 function unwrap(result) {
   return result.status === "fulfilled" ? result.value : [];
@@ -120,8 +160,57 @@ async function safeCall(fn, ...args) {
   }
 }
 
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
+function resourcesLine(i, total, name, found) {
+  const tail = found === 0
+    ? "no resources found"
+    : `${found} source${found > 1 ? "s" : ""}`;
+  return `  [${i + 1}/${total}] ${name} ... ${tail}\n`;
+}
+
+async function addMissingCoordinates(restaurants, townName, provinceName) {
+  const missing = restaurants.filter((r) =>
+    r.address && (!Number.isFinite(r.latitude) || !Number.isFinite(r.longitude))
+  );
+  if (!missing.length) return;
+
+  let found = 0;
+  for (let i = 0; i < missing.length; i++) {
+    const r = missing[i];
+    let coordinates = null;
+    try {
+      coordinates = await geocode(r.address, townName, provinceName);
+    } catch (err) {
+      console.error(`  address geocoding failed for ${r.name}: ${err.message}`);
+    }
+    if (coordinates) {
+      Object.assign(r, coordinates, { coordinates_source: "address" });
+      found++;
+    }
+    if (i < missing.length - 1) await wait(1_050);
+  }
+  console.log(`  address geocoding: ${found}/${missing.length} additional locations\n`);
+}
+
+function wait(ms) {
+  return new Promise((resolvePromise) => setTimeout(resolvePromise, ms));
+}
+
+function enrichmentPriority(restaurant) {
+  let score = 0;
+  if (restaurant.website) {
+    score += isDirectoryWebsite(restaurant.website) ? 40 : 100;
+  }
+  score += Math.min((restaurant.sources || []).length, 3) * 10;
+  if (restaurant.address) score += 3;
+  if (Number.isFinite(restaurant.latitude) && Number.isFinite(restaurant.longitude)) score += 2;
+  return score;
+}
+
+function isDirectoryWebsite(website) {
+  return [
+    "paginegialle.it", "thefork.it", "thefork.com", "facebook.com",
+    "instagram.com", "tripadvisor.", "restaurantguru.", "sluurpy.",
+  ].some((domain) => String(website || "").toLowerCase().includes(domain));
 }
 
 function normalizeKey(s) {
@@ -182,6 +271,7 @@ function isNotGarbage(r) {
     /^ricerca/i,
   ];
   if (metaPatterns.some((p) => p.test(name))) return false;
+  if (/^(ristorante|pizzeria|trattoria|osteria|bar|pub|sushi)$/i.test(name.trim())) return false;
 
   if (looksLikeAddress(r.name, r.address)) return false;
 
@@ -226,10 +316,19 @@ function mergeAndDedupe(restaurants) {
     if (!existing) {
       groups.set(key, { ...r });
     } else {
-      if (r.website && !existing.website) existing.website = r.website;
+      if (r.website && (!existing.website
+          || websiteQuality(r.website) > websiteQuality(existing.website))) {
+        existing.website = r.website;
+      }
       if (r.phone && !existing.phone) existing.phone = r.phone;
       if (r.address && !existing.address) existing.address = r.address;
       if (r.cuisine && !existing.cuisine) existing.cuisine = r.cuisine;
+      if (Number.isFinite(r.latitude) && Number.isFinite(r.longitude)
+          && (!Number.isFinite(existing.latitude) || !Number.isFinite(existing.longitude))) {
+        existing.latitude = r.latitude;
+        existing.longitude = r.longitude;
+      }
+      if (r.osm_id && !existing.osm_id) existing.osm_id = r.osm_id;
       if (r.type && existing.type === "restaurant" && r.type !== "restaurant") {
         existing.type = r.type;
       }
@@ -246,4 +345,13 @@ function mergeAndDedupe(restaurants) {
       return { ...rest, sources: r.sources || (source ? [source] : []) };
     })
     .sort((a, b) => a.name.localeCompare(b.name, "it"));
+}
+
+function websiteQuality(website) {
+  const value = String(website || "").toLowerCase();
+  if (!value) return 0;
+  if (isDirectoryWebsite(value)) return 1;
+  if (["outdooractive.com", "wheree.com", "paginebianche.it", "virgilio.it"]
+    .some((domain) => value.includes(domain))) return 1;
+  return 3;
 }

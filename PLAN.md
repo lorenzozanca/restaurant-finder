@@ -21,7 +21,7 @@ restaurant-finder/
 │   └── search.mjs        # Thin wrapper around scripts/search.sh
 ├── sources/
 │   ├── nominatim.mjs     # OpenStreetMap venues (free API, JSON)
-│   ├── thefork.mjs       # TheFork via search engine
+│   ├── paginegialle.mjs  # Directory results surfaced through web search
 │   └── web-search.mjs    # Generic web search discovery
 ├── find-menu.mjs         # Given restaurant info, hunt for menu
 ├── output/               # JSON output per location
@@ -33,8 +33,8 @@ restaurant-finder/
 ### Phase 1 — Discovery (parallel)
 Three sources queried simultaneously:
 - **Nominatim (OpenStreetMap):** Structured data — name, type, address, website, phone, cuisine
-- **TheFork:** Crawled via `site:thefork.it ristoranti <town>` search
 - **Web search:** `"ristoranti <town>"` → parses results for restaurant names + websites
+- **PagineGialle:** Individual listings surfaced through web-search results
 
 Results are merged and deduplicated by normalized name.
 
@@ -50,7 +50,7 @@ Single JSON file per location, per run. Schema:
 {
   "location": "Oderzo",
   "searched_at": "2026-08-23",
-  "sources_used": ["nominatim", "thefork", "web_search"],
+  "sources_used": ["nominatim", "web_search", "paginegialle"],
   "total_found": 42,
   "with_menu": 8,
   "restaurants": [
@@ -61,7 +61,7 @@ Single JSON file per location, per run. Schema:
       "website": "https://trattoriadamario.it",
       "phone": "+39 0422 123456",
       "cuisine": "italian",
-      "sources": ["nominatim", "thefork"],
+      "sources": ["nominatim", "web_search"],
       "menu_sources": [
         { "type": "pdf", "url": "https://...menu.pdf", "found_via": "website_links" }
       ],
