@@ -2,7 +2,11 @@
 import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { discover as nominatim, geocode } from "./sources/nominatim.mjs";
+import {
+  discover as nominatim,
+  geocode,
+  canBulkGeocode,
+} from "./sources/nominatim.mjs";
 import { discover as webSearch } from "./sources/web-search.mjs";
 import { discover as paginegialle } from "./sources/paginegialle.mjs";
 import { findMenuSources } from "./find-menu.mjs";
@@ -132,6 +136,14 @@ const output = {
   searched_at: today,
   enrichment_version: ENRICHMENT_VERSION,
   sources_used: ["nominatim", "web_search", "paginegialle"],
+  attribution: [
+    {
+      source: "OpenStreetMap",
+      notice: "© OpenStreetMap contributors",
+      license: "ODbL-1.0",
+      url: "https://www.openstreetmap.org/copyright",
+    },
+  ],
   total_found: enriched.length,
   with_resources: enriched.filter((r) => r.resources.length > 0).length,
   with_official_website: enriched.filter((r) => r.website_kind === "official").length,
@@ -172,6 +184,10 @@ async function addMissingCoordinates(restaurants, townName, provinceName) {
     r.address && (!Number.isFinite(r.latitude) || !Number.isFinite(r.longitude))
   );
   if (!missing.length) return;
+  if (!canBulkGeocode()) {
+    console.log(`  address geocoding: skipped ${missing.length} non-OSM locations (configure a permitted NOMINATIM_URL to enable)\n`);
+    return;
+  }
 
   let found = 0;
   for (let i = 0; i < missing.length; i++) {
