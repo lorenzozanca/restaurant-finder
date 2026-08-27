@@ -1,0 +1,18 @@
+{
+  "extends": "benchmark.json",
+  "version": "1.1.0-session-2",
+  "configuration": {
+    "candidate_policy": "Session 2 evidence-based web admission"
+  },
+  "provenance": {
+    "session_2_source": "Frozen expected output from the unit-tested admission decisions in sources/web-search.test.mjs"
+  },
+  "scan_overrides": {
+    "oderzo": "scans-session-2/oderzo.json",
+    "sauris-rural": "scans-session-2/sauris-rural.json",
+    "taormina-tourism": "scans-session-2/taormina-tourism.json",
+    "castro-ambiguity": "scans-session-2/castro-ambiguity.json",
+    "parma-medium": "scans-session-2/parma-medium.json",
+    "roma-municipio-i": "scans-session-2/roma-municipio-i.json"
+  }
+}

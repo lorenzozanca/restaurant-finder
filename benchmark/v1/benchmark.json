@@ -1,0 +1,136 @@
+{
+  "version": "1.0.0",
+  "configuration": {
+    "mode": "offline-frozen-snapshots",
+    "admission_rule": "Every restaurant row in a scan is treated as published",
+    "url_normalization": "Ignore www, fragment, and trailing slash",
+    "unlabeled_record_policy": "fail"
+  },
+  "provenance": {
+    "created_at": "2026-08-26",
+    "oderzo_source": "output/oderzo/2026-08-25.json curated from ODERZO-SCAN-REPORT.md",
+    "stratified_source": "Synthetic regression scenarios; names use reserved .example domains and are not claims about real businesses",
+    "live_requests_required": false
+  },
+  "municipalities": [
+    {
+      "id": "oderzo",
+      "stratum": "known-failure-set",
+      "scan": "scans/oderzo.json",
+      "cases": [
+        {
+          "id": "barhacca",
+          "selector": { "name": "Barhacca" },
+          "expected": {
+            "venue": "accepted", "canonical_venue_id": "barhacca",
+            "aliases": ["Barhacca"],
+            "official_websites": ["https://www.barhacca.it/"],
+            "resources": [{ "url": "https://www.barhacca.it/ordina/", "role": "order" }]
+          }
+        },
+        {
+          "id": "pub-gatto-nero",
+          "selector": { "name": "Pub Gatto Nero" },
+          "expected": {
+            "venue": "accepted", "canonical_venue_id": "gatto-nero",
+            "aliases": ["Pub Gatto Nero", "Gatto Nero"],
+            "official_websites": ["http://www.gattoneropub.it/"],
+            "resources": [
+              { "url": "http://www.gattoneropub.it/le-birre/", "role": "menu" },
+              { "url": "http://www.gattoneropub.it/download/Pieghevole.pdf", "role": "menu" },
+              { "url": "http://www.gattoneropub.it/menu-take-away/", "role": "order" },
+              { "url": "http://www.gattoneropub.it/wp-content/uploads/2013/06/menu1.png", "role": "menu_image" }
+            ]
+          }
+        },
+        {
+          "id": "calozzio-way",
+          "selector": { "name": "Ca' Lozzio", "osm_id": "way/178807553" },
+          "expected": {
+            "venue": "accepted", "canonical_venue_id": "calozzio",
+            "aliases": ["Ca' Lozzio", "Ca'Lozzio"],
+            "official_websites": ["https://www.calozzio.com/"], "resources": []
+          }
+        },
+        {
+          "id": "calozzio-node",
+          "selector": { "name": "Ca'Lozzio", "osm_id": "node/2538162437" },
+          "expected": {
+            "venue": "accepted", "canonical_venue_id": "calozzio",
+            "aliases": ["Ca' Lozzio", "Ca'Lozzio"],
+            "official_websites": ["https://www.calozzio.com/"], "resources": []
+          }
+        },
+        {
+          "id": "giardinetto",
+          "selector": { "name": "Al Giardinetto" },
+          "expected": {
+            "venue": "accepted", "canonical_venue_id": "giardinetto",
+            "aliases": ["Giardinetto", "Al Giardinetto"],
+            "official_websites": [], "resources": []
+          }
+        },
+        {
+          "id": "locanda-dussin",
+          "selector": { "name": "Ristorante Locanda Dussin" },
+          "expected": {
+            "venue": "accepted", "canonical_venue_id": "dussin",
+            "aliases": ["Dussin", "Locanda Dussin", "Ristorante Locanda Dussin"],
+            "official_websites": [], "resources": []
+          }
+        },
+        {
+          "id": "gli-ingordi",
+          "selector": { "name": "Gli Ingordi" },
+          "expected": {
+            "venue": "accepted", "canonical_venue_id": "gli-ingordi",
+            "aliases": ["Gli Ingordi"], "official_websites": [], "resources": []
+          }
+        },
+        { "id": "bdueb", "selector": { "name": "BdueB" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } },
+        { "id": "cercare-vicino", "selector": { "name": "Cercare Vicino A Me" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } },
+        { "id": "wikimedia", "selector": { "name": "Contributori Ai Progetti Wikimedia" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } },
+        { "id": "milano-pocket", "selector": { "name": "Milano Pocket" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } },
+        { "id": "roma-pop", "selector": { "name": "Roma Pop" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } },
+        { "id": "san-filippo-neri", "selector": { "name": "San Filippo Neri" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } },
+        { "id": "scatti-di-gusto", "selector": { "name": "Scatti Di Gusto" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } },
+        { "id": "trattoria-contemporanea", "selector": { "name": "Trattoria Contemporanea" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } }
+      ]
+    },
+    {
+      "id": "sauris-rural", "stratum": "rural-town", "scan": "scans/sauris-rural.json",
+      "cases": [
+        { "id": "rural-osm", "selector": { "name": "Fixture Rifugio Sauris", "osm_id": "node/fixture-sauris-1" }, "expected": { "venue": "accepted", "canonical_venue_id": "fixture-sauris", "aliases": ["Fixture Rifugio Sauris"], "official_websites": ["https://rifugio-sauris.example/"], "resources": [{ "url": "https://rifugio-sauris.example/menu.pdf", "role": "menu" }] } },
+        { "id": "rural-wrong-city", "selector": { "name": "Fixture Rifugio Dolomiti" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } }
+      ]
+    },
+    {
+      "id": "taormina-tourism", "stratum": "tourism-heavy-town", "scan": "scans/taormina-tourism.json",
+      "cases": [
+        { "id": "tourism-local", "selector": { "name": "Fixture Trattoria Taormina", "osm_id": "node/fixture-taormina-1" }, "expected": { "venue": "accepted", "canonical_venue_id": "fixture-taormina", "aliases": ["Fixture Trattoria Taormina"], "official_websites": ["https://trattoria-taormina.example/"], "resources": [{ "url": "https://trattoria-taormina.example/carta/", "role": "menu" }] } },
+        { "id": "tourism-listicle", "selector": { "name": "Top Ten Taormina" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } }
+      ]
+    },
+    {
+      "id": "castro-ambiguity", "stratum": "same-name-municipality", "scan": "scans/castro-ambiguity.json",
+      "cases": [
+        { "id": "castro-le", "selector": { "name": "Fixture Porto Castro" }, "expected": { "venue": "accepted", "canonical_venue_id": "fixture-castro-le", "aliases": ["Fixture Porto Castro"], "official_websites": ["https://porto-castro-le.example/"], "resources": [] } },
+        { "id": "castro-bg", "selector": { "name": "Fixture Lago Castro" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } }
+      ]
+    },
+    {
+      "id": "parma-medium", "stratum": "medium-city", "scan": "scans/parma-medium.json",
+      "cases": [
+        { "id": "parma-local", "selector": { "name": "Fixture Cucina Parma", "osm_id": "way/fixture-parma-1" }, "expected": { "venue": "accepted", "canonical_venue_id": "fixture-parma", "aliases": ["Fixture Cucina Parma"], "official_websites": ["https://cucina-parma.example/"], "resources": [{ "url": "https://cucina-parma.example/menu/", "role": "menu" }] } },
+        { "id": "parma-directory", "selector": { "name": "Ristoranti Parma Directory" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } }
+      ]
+    },
+    {
+      "id": "roma-municipio-i", "stratum": "large-city-district", "scan": "scans/roma-municipio-i.json",
+      "cases": [
+        { "id": "roma-branch", "selector": { "name": "Fixture Roma Centro", "osm_id": "node/fixture-roma-1" }, "expected": { "venue": "accepted", "canonical_venue_id": "fixture-roma-centro", "aliases": ["Fixture Roma Centro"], "official_websites": ["https://roma-centro.example/location/municipio-i"], "resources": [{ "url": "https://roma-centro.example/location/municipio-i/menu", "role": "menu" }] } },
+        { "id": "roma-wrong-branch", "selector": { "name": "Fixture Roma EUR" }, "expected": { "venue": "rejected", "canonical_venue_id": null, "aliases": [], "official_websites": [], "resources": [] } }
+      ]
+    }
+  ]
+}

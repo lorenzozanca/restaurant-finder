@@ -1,0 +1,116 @@
+{
+  "version": "1.0-session-7",
+  "thresholds": { "published_resource_precision": 0.95 },
+  "cases": [
+    {
+      "id": "menu-pdf",
+      "restaurant": { "name": "Locanda Dussin" },
+      "location": "Oderzo TV",
+      "official_website": "https://dussin.test/",
+      "candidate": { "url": "https://dussin.test/Listino.pdf", "role": "menu", "label": "Listino", "evidence": ["same_official_domain", "pdf_url"] },
+      "response": { "ok": true, "status": 200, "final_url": "https://dussin.test/Listino.pdf", "content_type": "application/pdf", "body": "" },
+      "expected_status": "accepted",
+      "expected_role": "menu"
+    },
+    {
+      "id": "drinks-list",
+      "restaurant": { "name": "Gatto Nero" },
+      "location": "Oderzo TV",
+      "official_website": "https://gattonero.test/",
+      "candidate": { "url": "https://gattonero.test/carta-vini", "role": "drinks", "label": "Carta dei vini" },
+      "response": { "ok": true, "status": 200, "final_url": "https://gattonero.test/carta-vini", "content_type": "text/html", "body": "Gatto Nero Oderzo — vini, birre e cocktail" },
+      "expected_status": "accepted",
+      "expected_role": "drinks"
+    },
+    {
+      "id": "external-order-page",
+      "restaurant": { "name": "Al Giardinetto" },
+      "location": "Oderzo TV",
+      "official_website": "https://giardinetto.test/",
+      "candidate": { "url": "https://orders.test/al-giardinetto", "role": "order", "label": "Ordina online" },
+      "response": { "ok": true, "status": 200, "final_url": "https://orders.test/al-giardinetto", "content_type": "text/html", "body": "Ordina da Al Giardinetto, ristorante a Oderzo" },
+      "expected_status": "accepted",
+      "expected_role": "order"
+    },
+    {
+      "id": "specialty-page",
+      "restaurant": { "name": "Al Bivio" },
+      "location": "Oderzo TV",
+      "official_website": "https://albivio.test/",
+      "candidate": { "url": "https://albivio.test/specialita-pesce", "role": "specialty", "label": "Specialità di pesce" },
+      "response": { "ok": true, "status": 200, "final_url": "https://albivio.test/specialita-pesce", "content_type": "text/html", "body": "Al Bivio Oderzo, specialità di pesce" },
+      "expected_status": "accepted",
+      "expected_role": "specialty"
+    },
+    {
+      "id": "menu-image",
+      "restaurant": { "name": "Pizza Oderzo" },
+      "location": "Oderzo TV",
+      "official_website": "https://pizzaoderzo.test/",
+      "candidate": { "url": "https://pizzaoderzo.test/uploads/menu-estate.jpg", "role": "menu_image", "label": "Menu estate" },
+      "response": { "ok": true, "status": 200, "final_url": "https://pizzaoderzo.test/uploads/menu-estate.jpg", "content_type": "image/jpeg", "body": "" },
+      "expected_status": "accepted",
+      "expected_role": "menu_image"
+    },
+    {
+      "id": "expired-pdf",
+      "restaurant": { "name": "Locanda Dussin" },
+      "location": "Oderzo TV",
+      "official_website": "https://dussin.test/",
+      "candidate": { "url": "https://dussin.test/menu-2022.pdf", "role": "menu", "label": "Menu" },
+      "response": { "ok": false, "status": 404, "final_url": "https://dussin.test/menu-2022.pdf", "content_type": "text/html", "body": "Not found" },
+      "expected_status": "rejected",
+      "expected_role": "menu"
+    },
+    {
+      "id": "wrong-branch-redirect",
+      "restaurant": { "name": "Gatto Nero" },
+      "location": "Oderzo TV",
+      "official_website": "https://gattonero.test/",
+      "candidate": { "url": "https://gattonero.test/menu", "role": "menu", "label": "Menu" },
+      "response": { "ok": true, "status": 200, "final_url": "https://gattonero.test/milano/menu", "content_type": "text/html", "body": "Gatto Nero, ristorante a Milano — menu" },
+      "expected_status": "rejected",
+      "expected_role": "menu"
+    },
+    {
+      "id": "cross-domain-canonical",
+      "restaurant": { "name": "Al Bivio" },
+      "location": "Oderzo TV",
+      "official_website": "https://albivio.test/",
+      "candidate": { "url": "https://albivio.test/menu", "role": "menu", "label": "Menu" },
+      "response": { "ok": true, "status": 200, "final_url": "https://albivio.test/menu", "content_type": "text/html", "body": "<link rel=\"canonical\" href=\"https://unrelated.test/menu\"><main>Al Bivio Oderzo menu</main>" },
+      "expected_status": "rejected",
+      "expected_role": "menu"
+    },
+    {
+      "id": "boilerplate-login",
+      "restaurant": { "name": "Al Bivio" },
+      "location": "Oderzo TV",
+      "official_website": "https://albivio.test/",
+      "candidate": { "url": "https://albivio.test/account/login", "role": "venue_page", "label": "Login" },
+      "response": { "ok": true, "status": 200, "final_url": "https://albivio.test/account/login", "content_type": "text/html", "body": "Account login" },
+      "expected_status": "rejected",
+      "expected_role": "venue_page"
+    },
+    {
+      "id": "unrelated-image",
+      "restaurant": { "name": "Pizza Oderzo" },
+      "location": "Oderzo TV",
+      "official_website": "https://pizzaoderzo.test/",
+      "candidate": { "url": "https://pizzaoderzo.test/assets/logo.jpg", "role": "menu_image", "label": "Logo" },
+      "response": { "ok": true, "status": 200, "final_url": "https://pizzaoderzo.test/assets/logo.jpg", "content_type": "image/jpeg", "body": "" },
+      "expected_status": "rejected",
+      "expected_role": "menu_image"
+    },
+    {
+      "id": "generic-directory",
+      "restaurant": { "name": "Al Bivio" },
+      "location": "Oderzo TV",
+      "official_website": "https://albivio.test/",
+      "candidate": { "url": "https://piatti.menu/restaurants/oderzo/al-bivio", "role": "secondary", "label": "Al Bivio menu" },
+      "response": { "ok": true, "status": 200, "final_url": "https://piatti.menu/restaurants/oderzo/al-bivio", "content_type": "text/html", "body": "Al Bivio Oderzo menu" },
+      "expected_status": "rejected",
+      "expected_role": "menu"
+    }
+  ]
+}

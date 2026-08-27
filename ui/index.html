@@ -112,8 +112,8 @@ header.app .spacer{flex:1}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}
 .pad{padding:16px}
 
-label.field{display:block;margin-bottom:14px}
-label.field .lbl{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px}
+.field{display:block;margin-bottom:14px}
+.field .lbl{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px}
 input[type=text]{
   width:100%;font:16px/1.4 var(--sans);color:var(--text);
   background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);
@@ -123,8 +123,24 @@ select{
   font:14px/1.4 var(--sans);color:var(--text);background:var(--surface2);
   border:1px solid var(--border);border-radius:var(--r-sm);padding:10px 34px 10px 12px;min-height:44px;
 }
-input[type=text]:focus{outline:none;border-color:var(--accent);background:var(--surface)}
+input[type=text]:focus,select:focus{outline:none;border-color:var(--accent);background:var(--surface)}
 input::placeholder{color:var(--faint)}
+.location-select{width:100%;font-size:16px;min-height:48px}
+.location-picker{position:relative}
+.location-results{
+  display:none;margin-top:6px;max-height:min(320px,42vh);overflow-y:auto;padding:5px;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);box-shadow:var(--shadow)
+}
+.location-results.open{display:block}
+.location-option{
+  appearance:none;display:block;width:100%;border:0;background:transparent;color:var(--text);
+  font:inherit;text-align:left;padding:10px;border-radius:8px;cursor:pointer
+}
+.location-option:hover,.location-option.active{background:var(--surface2)}
+.location-option .place{display:block;font-weight:600}
+.location-option .where{display:block;color:var(--muted);font-size:12.5px;margin-top:1px}
+.location-message{padding:10px;color:var(--muted);font-size:13.5px}
+.location-note{color:var(--faint);font-size:12px;margin:10px 0 0}
 
 .btn{
   appearance:none;border:1px solid var(--border);background:var(--surface2);color:var(--text);
@@ -134,6 +150,7 @@ input::placeholder{color:var(--faint)}
   transition:transform .08s ease, filter .15s ease;
 }
 .btn:active{transform:scale(.98)}
+.btn[hidden]{display:none}
 .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
 .btn.danger{color:var(--red);border-color:color-mix(in srgb,var(--red) 35%,var(--border))}
 .btn.block{width:100%}
@@ -189,6 +206,9 @@ input::placeholder{color:var(--faint)}
 .action-strip::-webkit-scrollbar{display:none}
 .action-strip .btn{flex:none;min-height:40px;padding:8px 12px;font-size:13.5px}
 .action-strip .icon-btn{width:40px;padding:8px;font-size:17px}
+.delete-confirm{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px;padding:10px 12px;border:1px solid color-mix(in srgb,var(--red) 35%,var(--border));border-radius:10px;background:color-mix(in srgb,var(--red) 8%,transparent)}
+.delete-confirm[hidden]{display:none}
+.delete-confirm span{font-size:13.5px;color:var(--red);flex:1 1 220px}
 .result-tabs{display:flex;gap:8px;flex:none}
 .result-tabs .btn{min-height:40px;padding:8px 12px}
 .result-tabs .btn.on{background:var(--accent);border-color:transparent;color:var(--accent-ink)}
@@ -486,26 +506,169 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
         <h1 class="view-title">Scan a town</h1>
         <p style="color:var(--muted);font-size:14px;margin-bottom:18px">Finds restaurants and hunts for their menus online. Takes a few minutes.</p>
         <label class="field">
-          <span class="lbl">Town</span>
-          <input type="text" id="town" placeholder="Oderzo" autocomplete="off" autocapitalize="words" enterkeyhint="go" value="${esc(prefillTown || "")}">
+          <span class="lbl">Province</span>
+          <select id="province" class="location-select" disabled>
+            <option value="">Loading provinces…</option>
+          </select>
         </label>
+        <div class="field">
+          <label class="lbl" for="town">Town</label>
+          <div class="location-picker">
+            <input type="text" id="town" role="combobox" aria-autocomplete="list" aria-controls="townResults" aria-expanded="false" placeholder="Loading towns…" autocomplete="off" autocapitalize="words" enterkeyhint="search" value="${esc(prefillTown || "")}" disabled>
+            <div id="townResults" class="location-results" role="listbox"></div>
+          </div>
+        </div>
         <label class="field">
-          <span class="lbl">Province <span style="font-weight:400;color:var(--faint)">— optional</span></span>
-          <input type="text" id="province" placeholder="TV" maxlength="2" autocomplete="off" style="text-transform:uppercase" enterkeyhint="go">
+          <span class="lbl" for="topNSelect">Venues to enrich (<span id="topNVal">20</span>)</span>
+          <input type="range" id="topNSelect" min="5" max="100" value="20" step="5" style="width:100%;accent-color:var(--accent);margin:0">
         </label>
         <button class="btn primary block" id="go" disabled>Start scan</button>
+        <p class="location-note">Municipality data: <a href="https://www.istat.it/classificazione/codici-dei-comuni-delle-province-e-delle-regioni/" target="_blank" rel="noopener">ISTAT</a> · CC BY 4.0 · adapted for this picker</p>
       </section>`;
 
     const town = $("#town"), prov = $("#province"), go = $("#go");
-    const sync = () => { go.disabled = !town.value.trim(); };
-    const submit = () => { if (town.value.trim()) startScan(town.value.trim(), prov.value.trim().toUpperCase()); };
-    town.addEventListener("input", sync);
+    const results = $("#townResults");
+    const topNSlider = $("#topNSelect");
+    const topNLabel = $("#topNVal");
+
+    topNSlider.addEventListener("input", () => {
+      topNLabel.textContent = topNSlider.value;
+    });
+    let locations = [];
+    let provinces = new Map();
+    let selectedTown = null;
+    let visible = [];
+    let activeIndex = -1;
+
+    const normalized = (value) => String(value || "").normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("it").trim();
+    const closeResults = () => {
+      results.classList.remove("open");
+      town.setAttribute("aria-expanded", "false");
+      activeIndex = -1;
+      town.removeAttribute("aria-activedescendant");
+    };
+    const sync = () => { go.disabled = !selectedTown; };
+    const chooseTown = (item) => {
+      selectedTown = item;
+      town.value = item[0];
+      prov.value = item[1];
+      closeResults();
+      sync();
+    };
+    const paintOptions = () => {
+      const query = normalized(town.value);
+      const province = prov.value;
+      const candidates = locations.filter((item) => !province || item[1] === province);
+      if (!query) {
+        visible = province ? candidates.slice(0, 50) : [];
+      } else {
+        const starts = [], contains = [];
+        for (const item of candidates) {
+          const name = normalized(item[0]);
+          if (name.startsWith(query)) starts.push(item);
+          else if (name.includes(query)) contains.push(item);
+        }
+        visible = starts.concat(contains).slice(0, 50);
+      }
+      activeIndex = -1;
+      town.removeAttribute("aria-activedescendant");
+      if (!query && !province) {
+        results.innerHTML = '<div class="location-message">Type a town name, or choose a province first.</div>';
+      } else if (!visible.length) {
+        results.innerHTML = '<div class="location-message">No towns match this search.</div>';
+      } else {
+        results.innerHTML = visible.map((item, index) => `
+          <button type="button" class="location-option" id="town-option-${index}" role="option" aria-selected="false" data-index="${index}">
+            <span class="place">${esc(item[0])}</span>
+            <span class="where">${esc(provinces.get(item[1]) || item[1])} (${esc(item[1])})</span>
+          </button>`).join("");
+      }
+      results.classList.add("open");
+      town.setAttribute("aria-expanded", "true");
+    };
+    const setActive = (next) => {
+      if (!visible.length) return;
+      activeIndex = (next + visible.length) % visible.length;
+      for (const option of results.querySelectorAll(".location-option")) {
+        const active = Number(option.dataset.index) === activeIndex;
+        option.classList.toggle("active", active);
+        option.setAttribute("aria-selected", String(active));
+        if (active) {
+          town.setAttribute("aria-activedescendant", option.id);
+          option.scrollIntoView({ block: "nearest" });
+        }
+      }
+    };
+    const submit = () => { if (selectedTown) startScan(selectedTown[0], selectedTown[1]); };
+    town.addEventListener("input", () => {
+      selectedTown = null;
+      sync();
+      paintOptions();
+    });
+    town.addEventListener("focus", paintOptions);
+    town.addEventListener("blur", () => setTimeout(closeResults, 0));
+    town.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        if (!results.classList.contains("open")) paintOptions();
+        setActive(activeIndex + (e.key === "ArrowDown" ? 1 : -1));
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        if (activeIndex >= 0) chooseTown(visible[activeIndex]);
+        else if (selectedTown) submit();
+      } else if (e.key === "Escape") {
+        closeResults();
+      }
+    });
+    results.addEventListener("pointerdown", (e) => {
+      const option = e.target.closest(".location-option");
+      if (!option) return;
+      e.preventDefault();
+      chooseTown(visible[Number(option.dataset.index)]);
+      town.focus();
+    });
+    prov.addEventListener("change", () => {
+      if (selectedTown && selectedTown[1] !== prov.value) {
+        selectedTown = null;
+        town.value = "";
+      }
+      town.placeholder = prov.value ? `Search towns in ${provinces.get(prov.value)}` : "Search all Italian towns";
+      sync();
+      if (document.activeElement === town) paintOptions();
+    });
     go.addEventListener("click", submit);
-    for (const el of [town, prov]) {
-      el.addEventListener("keydown", (e) => { if (e.key === "Enter") { el.blur(); submit(); } });
-    }
     sync();
-    if (prefillTown) town.focus();
+
+    fetch("/italian-municipalities.json")
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        if (state.view !== "input" || !document.body.contains(town)) return;
+        locations = (data.towns || []).sort((a, b) => a[0].localeCompare(b[0], "it"));
+        provinces = new Map(data.provinces || []);
+        prov.innerHTML = '<option value="">All provinces</option>'
+          + [...provinces].sort((a, b) => a[1].localeCompare(b[1], "it"))
+            .map(([code, name]) => `<option value="${esc(code)}">${esc(name)} (${esc(code)})</option>`).join("");
+        prov.disabled = false;
+        town.disabled = false;
+        town.placeholder = "Search all Italian towns";
+
+        if (prefillTown) {
+          const matches = locations.filter((item) => normalized(item[0]) === normalized(prefillTown));
+          if (matches.length === 1) chooseTown(matches[0]);
+        }
+        town.focus();
+        if (prefillTown && !selectedTown) paintOptions();
+      })
+      .catch(() => {
+        town.placeholder = "Town list could not be loaded";
+        town.value = "";
+        prov.innerHTML = '<option value="">Unavailable</option>';
+        results.innerHTML = '<div class="location-message">Could not load the municipality list. Reload the page to try again.</div>';
+      });
   }
 
   function showProgress() {
@@ -550,7 +713,7 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
     if (total > 0) {
       bar.classList.remove("indeterminate");
       bar.firstElementChild.style.width = `${Math.round((done / total) * 100)}%`;
-      note.textContent = `${done} of ${total} venues checked`;
+      note.textContent = `${done} of ${total} venues enriched`;
     } else {
       bar.classList.add("indeterminate");
       bar.firstElementChild.style.width = "";
@@ -795,18 +958,24 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
     state.onlyWithRes = false;
     state.resultMode = "list";
     state.open = new Set();
+    state.currentScan = { slug: String(data.location || "").toLowerCase(), date: data.searched_at || "" };
     setStatus();
     setTab("scan");
 
     const withRes = data.with_resources != null ? data.with_resources : (data.with_menu || 0);
     const loc = data.province ? `${data.location} (${data.province})` : data.location;
     const mapped = (data.restaurants || []).filter(hasCoordinates).length;
+    const sourceHealth = (data.source_runs || []).map((run) => {
+      const mark = run.status === "succeeded" ? "✓" : run.status === "failed" ? "⚠" : "–";
+      return `${mark} ${run.source}${run.status === "succeeded" ? ` (${run.result_count || 0})` : `: ${run.status}`}`;
+    }).join(" · ");
 
     prepareMain("results-page", loc);
     main.innerHTML = `
       <section class="result-head">
         <h1 class="view-title">${esc(loc)}</h1>
         <div class="sub">${data.total_found} venues · ${mapped} mapped · <span style="color:var(--green)">${withRes} with links</span> · ${esc(data.searched_at || "")} · Data may include <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a></div>
+        ${sourceHealth ? `<div class="sub">Sources: ${esc(sourceHealth)} · schema v${esc(data.schema_version || 1)}</div>` : ""}
         <div class="result-controls">
           <div class="tools">
             <input type="text" id="filter" aria-label="Filter by name or address" placeholder="Search restaurants" autocomplete="off" enterkeyhint="search">
@@ -822,7 +991,13 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
             <button class="btn primary" id="new" title="Start a new scan">＋ New</button>
             <button class="btn icon-btn" id="dl" title="Download results as JSON" aria-label="Download results as JSON">⇩</button>
             ${log && log.length ? '<button class="btn icon-btn" id="showLog" title="Show scan log" aria-label="Show scan log">☷</button>' : ""}
+            <button class="btn icon-btn danger" id="deleteScan" title="Delete this scan" aria-label="Delete this scan">🗑</button>
           </div>
+        </div>
+        <div id="deleteConfirm" class="delete-confirm" hidden>
+          <span>Delete this scan permanently? This can't be undone.</span>
+          <button class="btn" id="deleteCancel">Cancel</button>
+          <button class="btn danger" id="deleteConfirmBtn">Delete</button>
         </div>
       </section>
       <div class="list" id="list"></div>
@@ -830,6 +1005,32 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
 
     $("#new").addEventListener("click", () => showInput());
     $("#dl").addEventListener("click", () => download(data));
+    $("#deleteScan").addEventListener("click", () => {
+      $("#deleteConfirm").hidden = false;
+      $("#deleteScan").hidden = true;
+    });
+    $("#deleteCancel").addEventListener("click", () => {
+      $("#deleteConfirm").hidden = true;
+      $("#deleteScan").hidden = false;
+    });
+    $("#deleteConfirmBtn").addEventListener("click", async () => {
+      const btn = $("#deleteConfirmBtn");
+      const { slug, date } = state.currentScan || {};
+      if (!slug || !date) return;
+      btn.disabled = true;
+      btn.textContent = "Deleting…";
+      try {
+        await api("DELETE", `/api/scan/${encodeURIComponent(slug)}/${encodeURIComponent(date)}`);
+        state.pastScans = null;
+        showInput();
+        setTab("history");
+        loadHistory();
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = "Delete";
+        $("#deleteConfirm span").textContent = `Delete failed: ${err.message}`;
+      }
+    });
     const logBtn = $("#showLog");
     if (logBtn) logBtn.addEventListener("click", () => {
       const existing = $("#logPanel");
@@ -1028,7 +1229,7 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
 
   function createBaseMap(element) {
     const map = L.map(element, { zoomControl: true, preferCanvas: true });
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
@@ -1108,6 +1309,7 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
     state.results = null;
     state.log = [];
     state.progress = { phase: "Starting…", done: 0, total: 0, sources: {} };
+    const topN = parseInt($("#topNSelect")?.value, 10) || 20;
     showProgress();
 
     let res;
@@ -1115,7 +1317,7 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
       res = await fetch("/api/scan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ town, province }),
+        body: JSON.stringify({ town, province, topN }),
       });
     } catch {
       showDisconnected();

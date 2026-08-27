@@ -1,0 +1,14 @@
+{
+  "version": "1.2.0-session-4",
+  "extends": "session-2.json",
+  "configuration": {
+    "identity_policy": "Corroborated deterministic canonical identity v1"
+  },
+  "provenance": {
+    "created_at": "2026-08-26",
+    "session_4_method": "Frozen identity output for the labelled Oderzo duplicate; no live requests"
+  },
+  "scan_overrides": {
+    "oderzo": "scans-session-4/oderzo.json"
+  }
+}

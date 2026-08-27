@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0-phase-8-diagnostic",
+  "mode": "offline-diagnostic-replay",
+  "benchmark": "benchmark.json",
+  "municipality_id": "oderzo",
+  "notes": "The same immutable August 26 scan is replayed in three isolated evaluator roles. This proves deterministic gate behavior only; it is not a substitute for two cold live scans and one warm live scan.",
+  "runs": [
+    {
+      "id": "offline-cold-diagnostic-1",
+      "cache_mode": "cold",
+      "scan": "scans/oderzo-2026-08-26.json",
+      "output_variant": "phase-8-offline-cold-1"
+    },
+    {
+      "id": "offline-cold-diagnostic-2",
+      "cache_mode": "cold",
+      "scan": "scans/oderzo-2026-08-26.json",
+      "output_variant": "phase-8-offline-cold-2"
+    },
+    {
+      "id": "offline-warm-diagnostic",
+      "cache_mode": "warm",
+      "scan": "scans/oderzo-2026-08-26.json",
+      "output_variant": "phase-8-offline-warm",
+      "cache_hits": 0
+    }
+  ],
+  "transient_outage": {
+    "passed": true,
+    "last_known_good_visible": true,
+    "evidence": "lib/evidence-store.test.mjs"
+  },
+  "manual_review": {
+    "new_acceptances_reviewed": false,
+    "lost_known_facts_reviewed": false,
+    "reason": "No new live acceptance scans were permitted in this offline execution."
+  },
+  "v1_fixture_integrity": {
+    "preserved": true,
+    "sha256": "bf953231e5ade8556efc4b9157ef01ac103885d0b43518b7c34220dc317a5f06"
+  }
+}

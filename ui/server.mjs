@@ -1,15 +1,26 @@
 import { createServer } from "node:http";
-import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, readdir, unlink, rmdir } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { resolve, dirname, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { existsSync } from "node:fs";
+import { networkInterfaces } from "node:os";
+import { normalizeScanDocument } from "../scan-schema.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const UI_DIR = __dirname;
 const OUTPUT_DIR = resolve(__dirname, "..", "output");
 const DISCOVER = resolve(__dirname, "..", "discover.mjs");
 const PORT = Number(process.env.PORT || 4188);
+const HOST = process.env.HOST || tailscaleAddress() || "127.0.0.1";
+const MAX_BODY_BYTES = 16 * 1024;
+// The app has no authentication of its own, so it only binds where every peer is
+// already authenticated: loopback, or a Tailscale address whose tailnet ACLs decide
+// who can reach it. Any wider interface stays opt-in. See PRIVACY.md, "Security".
+const WIDE_BIND = process.env.ALLOW_WIDE_BIND === "1";
+// Extra Host header values to accept, comma separated, for names that do not resolve
+// here (a reverse proxy, or a MagicDNS short name).
+const EXTRA_HOSTS = (process.env.ALLOWED_HOSTS || "").split(",").map((v) => v.trim()).filter(Boolean);
 
 const CTYPES = {
   ".html": "text/html; charset=utf-8",
@@ -26,7 +37,16 @@ let runningScan = null;
 // results and full log instead of showing an empty form.
 let lastScan = null;
 
-const server = createServer(async (req, res) => {
+const server = createServer(handle);
+// Bound in addition to a tailnet HOST so http://localhost:PORT keeps working on this
+// machine; a listener is per address, and loopback is already an allowed peer.
+const loopbackServer = isLoopback(HOST) ? null : createServer(handle);
+
+async function handle(req, res) {
+  if (!hostAllowed(req.headers.host) || !originAllowed(req)) {
+    json(res, 403, { error: "host not allowed" });
+    return;
+  }
   const url = new URL(req.url, `http://${req.headers.host || "localhost"}`);
 
   try {
@@ -44,6 +64,8 @@ const server = createServer(async (req, res) => {
       await handleScans(req, res);
     } else if (url.pathname === "/api/map" && req.method === "GET") {
       await handleMap(req, res);
+    } else if (url.pathname.startsWith("/api/scan/") && req.method === "DELETE") {
+      await handleScanDelete(req, res, url);
     } else if (url.pathname.startsWith("/api/scan/")) {
       await handleScanGet(req, res, url);
     } else {
@@ -51,10 +73,10 @@ const server = createServer(async (req, res) => {
     }
   } catch (err) {
     if (!res.headersSent) {
-      json(res, 500, { error: err.message || "internal error" });
+      json(res, err.statusCode || 500, { error: err.message || "internal error" });
     }
   }
-});
+}
 
 async function serveStatic(_req, res, url) {
   let filePath = url.pathname === "/" ? "/index.html" : url.pathname;
@@ -102,6 +124,7 @@ async function handleScan(req, res) {
   }
 
   const province = String(parsed.province || "").trim();
+  const topN = parseInt(parsed.topN, 10) || 20;
   const args = [DISCOVER, town];
   if (province) args.push(province);
 
@@ -115,11 +138,12 @@ async function handleScan(req, res) {
   const proc = spawn("node", args, {
     cwd: resolve(__dirname, ".."),
     stdio: ["ignore", "pipe", "pipe"],
+    env: { ...process.env, TOP_N: String(topN) },
   });
 
   lastScan = null;
   runningScan = {
-    proc, town, province, startedAt: Date.now(),
+    proc, town, province, topN, startedAt: Date.now(),
     clients: new Set([res]),
     cancelled: false,
     resultPath: "",
@@ -220,7 +244,7 @@ async function handleScan(req, res) {
     if (runningScan.scanComplete && runningScan.resultPath) {
       try {
         const data = await readFile(runningScan.resultPath, "utf-8");
-        result = JSON.parse(data);
+        result = normalizeScanDocument(JSON.parse(data));
         broadcast("result", result);
       } catch (err) {
         runningScan.error = `Failed to read result: ${err.message}`;
@@ -354,7 +378,7 @@ async function handleScans(_req, res) {
 
     try {
       const latest = jsonFiles[0];
-      const data = JSON.parse(await readFile(resolve(dirPath, latest), "utf-8"));
+      const data = normalizeScanDocument(JSON.parse(await readFile(resolve(dirPath, latest), "utf-8")));
       totalFound = data.total_found || 0;
       withResources = data.with_resources || data.with_menu || 0;
     } catch {}
@@ -392,7 +416,7 @@ async function handleMap(_req, res) {
 
     let data;
     try {
-      data = JSON.parse(await readFile(resolve(dirPath, files[0]), "utf-8"));
+      data = normalizeScanDocument(JSON.parse(await readFile(resolve(dirPath, files[0]), "utf-8")));
     } catch {
       continue;
     }
@@ -477,11 +501,64 @@ async function handleScanGet(_req, res, url) {
 
   try {
     const data = await readFile(resolve(dirPath, filename), "utf-8");
+    if (!wantLog) {
+      const normalized = normalizeScanDocument(JSON.parse(data));
+      return json(res, 200, normalized);
+    }
     res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
     res.end(data);
-  } catch {
+  } catch (error) {
+    if (error.code === "UNSUPPORTED_SCAN_SCHEMA") {
+      return json(res, 422, { error: error.message });
+    }
     json(res, 404, { error: "scan not found" });
   }
+}
+
+// Deletes a single scan's result and log files. Refuses while that same scan
+// is still running so a delete can't race the writer that produces it.
+async function handleScanDelete(_req, res, url) {
+  const parts = decodeURIComponent(url.pathname).replace(/^\/api\/scan\//, "").split("/");
+  const townSlug = (parts[0] || "").toLowerCase();
+  const date = parts[1] || "";
+
+  if (!townSlug || !date || date.includes("/") || date.includes("..")) {
+    return json(res, 400, { error: "town and date are required" });
+  }
+
+  if (runningScan && !runningScan.scanComplete && runningScan.town.toLowerCase() === townSlug) {
+    return json(res, 409, { error: "scan is still running" });
+  }
+
+  const dirPath = resolve(OUTPUT_DIR, townSlug);
+  if (!existsSync(dirPath)) {
+    return json(res, 404, { error: "town not found" });
+  }
+
+  const jsonPath = resolve(dirPath, `${date}.json`);
+  const logPath = resolve(dirPath, `${date}.log.json`);
+  if (!jsonPath.startsWith(dirPath) || !logPath.startsWith(dirPath)) {
+    return json(res, 400, { error: "invalid path" });
+  }
+
+  try {
+    await unlink(jsonPath);
+  } catch {
+    return json(res, 404, { error: "scan not found" });
+  }
+  try { await unlink(logPath); } catch {}
+
+  try {
+    const remaining = await readdir(dirPath);
+    if (remaining.length === 0) await rmdir(dirPath);
+  } catch {}
+
+  if (lastScan && lastScan.town.toLowerCase() === townSlug && lastScan.result
+      && lastScan.result.searched_at === date) {
+    lastScan = null;
+  }
+
+  json(res, 200, { deleted: true });
 }
 
 // Every progress event is appended to runningScan.log so that a client which
@@ -506,10 +583,28 @@ function json(res, status, data) {
 }
 
 function readBody(req) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     let body = "";
-    req.on("data", (c) => (body += c));
-    req.on("end", () => resolve(body));
+    let size = 0;
+    let rejected = false;
+    req.on("data", (chunk) => {
+      if (rejected) return;
+      size += chunk.length;
+      if (size > MAX_BODY_BYTES) {
+        rejected = true;
+        const error = new Error("request body too large");
+        error.statusCode = 413;
+        reject(error);
+        return;
+      }
+      body += chunk;
+    });
+    req.on("end", () => {
+      if (!rejected) resolve(body);
+    });
+    req.on("error", (error) => {
+      if (!rejected) reject(error);
+    });
   });
 }
 
@@ -528,9 +623,71 @@ function shutdown() {
     try { runningScan.proc.kill("SIGKILL"); } catch {}
     runningScan = null;
   }
-  server.close(() => process.exit(0));
+  let open = loopbackServer ? 2 : 1;
+  const done = () => { if (--open === 0) process.exit(0); };
+  server.close(done);
+  loopbackServer?.close(done);
 }
 
-server.listen(PORT, () => {
-  console.log(`restaurant-finder UI — http://localhost:${PORT}`);
+function isLoopback(host) {
+  return host === "127.0.0.1" || host === "localhost" || host === "::1";
+}
+
+// Tailscale hands out CGNAT addresses from 100.64.0.0/10 and MagicDNS names under
+// *.ts.net; both are reachable only from an authenticated device on the tailnet.
+function isTailnet(host) {
+  const octets = /^(\d{1,3})\.(\d{1,3})\.\d{1,3}\.\d{1,3}$/.exec(host);
+  if (octets) return Number(octets[1]) === 100 && Number(octets[2]) >= 64 && Number(octets[2]) <= 127;
+  return host.endsWith(".ts.net");
+}
+
+// With no HOST given, prefer this machine's own Tailscale address over loopback: the
+// tailnet is an authenticated network, so binding it is within the policy above, and
+// it means a caller that cannot pass HOST still gets a link that works from the phone.
+function tailscaleAddress() {
+  for (const addresses of Object.values(networkInterfaces())) {
+    for (const address of addresses || []) {
+      if (address.family === "IPv4" && isTailnet(address.address)) return address.address;
+    }
+  }
+  return "";
+}
+
+// A Host header the browser was not sent to means DNS rebinding: some other name now
+// points at this address. Compare the name only; the port is fixed by the listener.
+function hostAllowed(header) {
+  if (!header) return false;
+  const name = header.replace(/:\d+$/, "").replace(/^\[|\]$/g, "").toLowerCase();
+  if (isLoopback(name) || name === HOST.toLowerCase()) return true;
+  if (EXTRA_HOSTS.includes(name)) return true;
+  return isTailnet(HOST) && isTailnet(name);
+}
+
+function originAllowed(req) {
+  if (req.method === "GET" || req.method === "HEAD") return true;
+  const origin = req.headers.origin;
+  if (!origin) return true;
+  try { return hostAllowed(new URL(origin).host); } catch { return false; }
+}
+
+if (!isLoopback(HOST) && !isTailnet(HOST) && !WIDE_BIND) {
+  console.error(
+    `refusing to bind ${HOST}: it has no authenticated network in front of it. Use a loopback or `
+    + "Tailscale (100.64.0.0/10) address, or set ALLOW_WIDE_BIND=1 once your own access controls are in place.",
+  );
+  process.exit(1);
+}
+
+loopbackServer?.listen(PORT, "127.0.0.1", () => {
+  console.log(`restaurant-finder UI — http://127.0.0.1:${PORT}`);
+});
+
+server.listen(PORT, HOST, () => {
+  console.log(`restaurant-finder UI — http://${HOST}:${PORT}`);
+  if (WIDE_BIND && !isLoopback(HOST) && !isTailnet(HOST)) {
+    console.warn(
+      `warning: ${HOST} is reachable beyond the tailnet and this app has no authentication of its own. `
+      + "List the names it is served under in ALLOWED_HOSTS; other Host headers are rejected.",
+    );
+  }
 });

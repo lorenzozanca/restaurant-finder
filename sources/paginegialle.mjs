@@ -1,4 +1,6 @@
-import { search } from "../lib/search.mjs";
+import { searchDetailed } from "../lib/search.mjs";
+import { sourceResult } from "../source-run.mjs";
+import { normalizeLocationContext } from "../lib/location-context.mjs";
 
 const TOWN_SLUG_REGIONS = [
   "abruzzo", "basilicata", "calabria", "campania", "emilia-romagna",
@@ -8,10 +10,13 @@ const TOWN_SLUG_REGIONS = [
   "friuli-venezia giulia",
 ];
 
-export async function discover(town) {
-  const normalized = town.toLowerCase().replace(/\s+/g, "-");
+export async function discover(locationValue, options = {}) {
+  const location = normalizeLocationContext(locationValue);
+  const town = location.municipality;
+  const searchFn = options.searchDetailedFn || searchDetailed;
   const seen = new Set();
   const restaurants = [];
+  const responses = [];
 
   const queries = [
     `site:paginegialle.it ${town} ristorante`,
@@ -20,7 +25,12 @@ export async function discover(town) {
   ];
 
   for (const q of queries) {
-    const results = await search(q, 20);
+    const response = await searchFn({
+      query: q, limit: 20, purpose: "domain_constrained",
+      required_domain: "paginegialle.it", location,
+    });
+    responses.push(response);
+    const results = response.outcome === "relevant" ? response.results : [];
     if (results.length === 0) continue;
 
     for (const r of results) {
@@ -42,12 +52,21 @@ export async function discover(town) {
         type,
         address,
         website: r.url,
+        provider_record_url: r.url,
         source: "paginegialle",
       });
     }
   }
 
-  return restaurants;
+  const outcomes = responses.map((response) => response.outcome);
+  const degraded = restaurants.length === 0 || outcomes.some((outcome) => outcome !== "relevant");
+  return sourceResult(restaurants, {
+    status: degraded ? "degraded" : "succeeded",
+    useful_result_count: restaurants.length,
+    reason: degraded ? "zero_matching_domain_or_unhealthy_search" : undefined,
+    search_outcomes: outcomes,
+    search_attempts: responses,
+  });
 }
 
 function isCategoryPage(url) {

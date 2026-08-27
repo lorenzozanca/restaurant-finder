@@ -46,7 +46,7 @@ is not automatically outside GDPR.
 | Search input and run metadata | Town, province, search date, progress events | User/operator and application | Result JSON and log |
 | Venue identity/location | Name, type, address, coordinates, cuisine, OSM ID | OSM/Nominatim, search results, public websites | Result JSON |
 | Contact/link data | Phone number, website, directory URL, menu/resource URL | OSM/Nominatim and public websites | Result JSON |
-| Discovery evidence | Search title, snippet, fetched HTML, request URL | Search provider and public websites | Result JSON may contain a snippet; full responses may be in transient cache |
+| Discovery evidence | Search title, snippet, fetched HTML, request URL | Search provider and public websites | Transient cache only; snippets are removed from result JSON |
 
 The application itself has no user accounts, cookies, analytics, or persistent
 IP-address log. Hosting platforms, reverse proxies, DNS providers, and the
@@ -119,8 +119,16 @@ a suppression list without assessing the legal basis for that list.
 
 ## Security and incidents
 
-- Bind the UI to a trusted network or put authenticated access in front of it;
-  the current server has no authentication or authorisation.
+- The built-in server binds to `127.0.0.1` by default. The application itself has
+  no authentication or authorisation, so `HOST` only accepts a loopback address or
+  a Tailscale address in `100.64.0.0/10`, where tailnet membership and ACLs
+  authenticate every peer. Any other interface — including `0.0.0.0` — is refused
+  unless the operator sets `ALLOW_WIDE_BIND=1`, which asserts that they have put
+  their own authenticated access in front of it.
+- The server rejects requests whose `Host` header is not the bound address, a
+  loopback name, a tailnet name, or an entry in `ALLOWED_HOSTS`, and rejects
+  cross-origin writes on the same rule. This blocks DNS rebinding from a browser
+  that can reach the bound address.
 - Restrict filesystem and backup access, use encryption in transit and at rest,
   patch dependencies/runtime, keep secrets out of output, and do not commit
   `output/` (it is git-ignored).

@@ -1,0 +1,71 @@
+{
+  "fixture_version": "2.0.0",
+  "captured_at": "2026-08-26",
+  "network_required": false,
+  "cases": [
+    {
+      "id": "brave-good-barhacca",
+      "request": { "query": "\"Barhacca\" \"Oderzo\" ristorante", "limit": 8, "purpose": "official_site", "location": { "municipality": "Oderzo", "province_code": "TV", "postcodes": ["31046"] }, "identity": { "aliases": ["Barhacca"] } },
+      "attempt": { "provider": "brave", "http_status": 200, "transport_ok": true, "parse_ok": true, "duration_ms": 0, "rate_headers": {}, "results": [
+        { "title": "BARHACCA, Oderzo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g1061182-d4555164-Reviews-Barhacca-Oderzo_Province_of_Treviso_Veneto.html", "snippet": "", "search_engine": "brave" },
+        { "title": "Barhacca, Oderzo - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/BARHACCA-Oderzo", "snippet": "", "search_engine": "brave" },
+        { "title": "Barhacca, Oderzo - Menu del ristorante, prezzi e recensioni", "url": "https://www.sluurpy.it/oderzo/ristorante/29525/barhacca", "snippet": "", "search_engine": "brave" },
+        { "title": "(no title)", "url": "https://www.paginegialle.it/oderzo-tv/locali-e-ritrovi/barhacca", "snippet": "", "search_engine": "brave" },
+        { "title": "Barhacca da ODERZO Menù", "url": "https://piatti.menu/restaurants/oderzo/barhacca", "snippet": "", "search_engine": "brave" },
+        { "title": "Barhacca - Oderzo", "url": "https://www.paginegialle.it/oderzo-tv/locali-e-ritrovi/barhacca", "snippet": "", "search_engine": "brave" },
+        { "title": "Home - barhacca", "url": "https://www.barhacca.it/", "snippet": "", "search_engine": "brave" },
+        { "title": "Menu da Barhacca, Oderzo - Restaurant Guru", "url": "https://restaurantguru.it/BARHACCA-Oderzo/menu", "snippet": "", "search_engine": "brave" }
+      ] },
+      "expected_outcome": "relevant"
+    },
+    {
+      "id": "bing-irrelevant-giardinetto",
+      "request": { "query": "\"Giardinetto\" \"Oderzo\" ristorante", "limit": 8, "purpose": "official_site", "location": { "municipality": "Oderzo", "province_code": "TV", "postcodes": ["31046"] }, "identity": { "aliases": ["Giardinetto", "Al Giardinetto"] } },
+      "attempt": { "provider": "bing", "http_status": 200, "transport_ok": true, "parse_ok": true, "duration_ms": 0, "rate_headers": {}, "results": [
+        { "title": "Hotel Giardinetto | **** Hotel on the Lake Orta", "url": "https://www.giardinettohotel.com/en/", "snippet": "The four star Hotel Ristorante Giardinetto lies on Lake Orta.", "search_engine": "bing" },
+        { "title": "Giardinetto - Significato ed etimologia - Vocabolario", "url": "https://www.treccani.it/vocabolario/giardinetto/", "snippet": "Vocabolario Treccani.", "search_engine": "bing" },
+        { "title": "Hotel Giardinetto", "url": "https://www.giardinettohotel.com/", "snippet": "Hotel Ristorante Giardinetto sul lago d'Orta", "search_engine": "bing" },
+        { "title": "Giardinetto - Wikipedia", "url": "https://it.m.wikipedia.org/wiki/Giardinetto", "snippet": "Parte di una imbarcazione.", "search_engine": "bing" },
+        { "title": "Albergo Ristorante Al Giardinetto - Conegliano", "url": "https://hotelalgiardinetto.com/", "snippet": "Hotel a Conegliano Treviso.", "search_engine": "bing" },
+        { "title": "Hotel Ristorante Giardinetto dal 1932", "url": "https://www.facebook.com/giardinettohotel/", "snippet": "Sponde del lago d'Orta.", "search_engine": "bing" },
+        { "title": "Ristorante Il Giardinetto", "url": "https://ilgiardinetto.eu/", "snippet": "Vacanze e relax.", "search_engine": "bing" },
+        { "title": "Ristorante Il Giardinetto", "url": "https://www.ristoranteilgiardinetto.it/index.php/it/", "snippet": "Vista sul lago di Como.", "search_engine": "bing" }
+      ] },
+      "expected_outcome": "irrelevant"
+    },
+    {
+      "id": "bing-irrelevant-broad-oderzo",
+      "request": { "query": "ristoranti Oderzo sito web", "limit": 12, "purpose": "broad_discovery", "location": { "municipality": "Oderzo", "province_code": "TV", "postcodes": ["31046"] } },
+      "attempt": { "provider": "bing", "http_status": 200, "transport_ok": true, "parse_ok": true, "duration_ms": 0, "rate_headers": {}, "results": [
+        { "title": "Ristoranti e recensioni - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurants", "snippet": "Scegli tra 5 milioni di ristoranti.", "search_engine": "bing" },
+        { "title": "I migliori Ristoranti aperti Vicino a Me", "url": "https://www.thefork.it/near-me", "snippet": "Trova un ristorante vicino.", "search_engine": "bing" },
+        { "title": "10 MIGLIORI ristoranti Roma", "url": "https://www.tripadvisor.it/Restaurants-g187791-Rome_Lazio.html", "snippet": "Ristoranti a Roma.", "search_engine": "bing" },
+        { "title": "TheFork - Prenota nei migliori ristoranti d'Italia", "url": "https://www.thefork.it/", "snippet": "Ristoranti in Italia.", "search_engine": "bing" },
+        { "title": "I migliori ristoranti d'Italia", "url": "https://ristoranti.giallozafferano.it/", "snippet": "Guide gastronomiche.", "search_engine": "bing" },
+        { "title": "Ristoranti aperti vicino a me", "url": "https://www.opentable.it/open", "snippet": "Ristoranti vicino a te.", "search_engine": "bing" },
+        { "title": "Ristoranti MICHELIN", "url": "https://guide.michelin.com/it/it/ristoranti", "snippet": "Guida MICHELIN.", "search_engine": "bing" },
+        { "title": "Prenota i migliori ristoranti nella tua zona", "url": "https://www.opentable.it/nearby", "snippet": "Ristoranti vicino.", "search_engine": "bing" },
+        { "title": "Cerca ristoranti in tutta Italia", "url": "https://13ristoranti.it/", "snippet": "Ristoranti d'Italia.", "search_engine": "bing" },
+        { "title": "Ristoranti di Roma", "url": "https://ristoranti.giallozafferano.it/classifiche/roma", "snippet": "I migliori ristoranti di Roma.", "search_engine": "bing" }
+      ] },
+      "expected_outcome": "irrelevant"
+    },
+    {
+      "id": "bing-domain-mismatch-paginegialle",
+      "request": { "query": "site:paginegialle.it Oderzo ristorante", "limit": 20, "purpose": "domain_constrained", "required_domain": "paginegialle.it", "location": { "municipality": "Oderzo", "province_code": "TV" } },
+      "attempt": { "provider": "bing", "http_status": 200, "transport_ok": true, "parse_ok": true, "duration_ms": 0, "rate_headers": {}, "results": [
+        { "title": "Google Translate Help", "url": "https://support.google.com/translate/?hl=en", "snippet": "Google Translate help.", "search_engine": "bing" },
+        { "title": "Microsoft Rewards - Reddit", "url": "https://www.reddit.com/r/MicrosoftRewards/", "snippet": "Community discussion.", "search_engine": "bing" },
+        { "title": "Change Google Translate dropdown programmatically", "url": "https://stackoverflow.com/questions/5569927/change-google-translate-dropdown-programmatically", "snippet": "Programming question.", "search_engine": "bing" },
+        { "title": "outlier_ai - Reddit", "url": "https://www.reddit.com/r/outlier_ai/", "snippet": "Community discussion.", "search_engine": "bing" },
+        { "title": "translate a PHP string", "url": "https://stackoverflow.com/questions/4640378/translate-a-php-string-using-google-translator-api", "snippet": "Programming question.", "search_engine": "bing" },
+        { "title": "Translate by speech", "url": "https://support.google.com/translate/answer/6142468", "snippet": "Google help.", "search_engine": "bing" },
+        { "title": "r/funny", "url": "https://www.reddit.com/r/funny/", "snippet": "Reddit.", "search_engine": "bing" },
+        { "title": "Get text and translate it", "url": "https://stackoverflow.com/questions/5388127/javascript-jquery-get-text-and-translate-it", "snippet": "Programming question.", "search_engine": "bing" },
+        { "title": "Google Translate download", "url": "https://support.google.com/translate/answer/6350850", "snippet": "Google help.", "search_engine": "bing" },
+        { "title": "Translate Gmail messages", "url": "https://support.google.com/mail/answer/13846620", "snippet": "Gmail help.", "search_engine": "bing" }
+      ] },
+      "expected_outcome": "irrelevant"
+    }
+  ]
+}

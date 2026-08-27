@@ -1,0 +1,41 @@
+{
+  "version": "2.1.0-phase-8-live",
+  "mode": "live-isolated",
+  "benchmark": "benchmark.json",
+  "municipality_id": "oderzo",
+  "notes": "Two independent cold scans and one warm scan against the reviewed current Overture extract. Earlier degraded attempts remain preserved as transient-outage evidence and are not counted as acceptance runs.",
+  "runs": [
+    {
+      "id": "cold-final-1",
+      "cache_mode": "cold",
+      "scan": "scans/live/oderzo-2026-08-27.phase-8-cold-final-1.json",
+      "output_variant": "phase-8-cold-final-1"
+    },
+    {
+      "id": "cold-final-2",
+      "cache_mode": "cold",
+      "scan": "scans/live/oderzo-2026-08-27.phase-8-cold-final-2.json",
+      "output_variant": "phase-8-cold-final-2"
+    },
+    {
+      "id": "warm-final",
+      "cache_mode": "warm",
+      "scan": "scans/live/oderzo-2026-08-27.phase-8-warm-final.json",
+      "output_variant": "phase-8-warm-final"
+    }
+  ],
+  "transient_outage": {
+    "passed": true,
+    "last_known_good_visible": true,
+    "evidence": "The SQLite last-known-good outage behavior passes lib/evidence-store.test.mjs. Live Overpass 504 attempts are preserved in phase-8-cold-1e and phase-8-cold-1f, report failed source health honestly, and were replaced only after a bounded query fix."
+  },
+  "manual_review": {
+    "new_acceptances_reviewed": true,
+    "lost_known_facts_reviewed": true,
+    "reason": "All 30 new current Overture venues, all newly accepted sites/resources, all missing known facts, threshold-near decisions, hard negatives, search attempts, and provider health were reviewed under benchmark/LABELLING.md."
+  },
+  "v1_fixture_integrity": {
+    "preserved": true,
+    "sha256": "bf953231e5ade8556efc4b9157ef01ac103885d0b43518b7c34220dc317a5f06"
+  }
+}

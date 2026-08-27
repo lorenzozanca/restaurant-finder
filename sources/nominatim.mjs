@@ -1,4 +1,8 @@
 import { get } from "../lib/lib.mjs";
+import { readFile } from "node:fs/promises";
+import {
+  createLocationContext, normalizeLocationContext, resolveMunicipalityMetadata,
+} from "../lib/location-context.mjs";
 
 const DEFAULT_NOMINATIM_URL = "https://nominatim.openstreetmap.org";
 const DEFAULT_OVERPASS_URL = "https://overpass-api.de/api/interpreter";
@@ -17,10 +21,12 @@ const VALID_TYPES = new Set([
 // Overpass then performs the job it was designed for: selecting OSM objects
 // inside that location. This avoids systematic POI searches on public
 // Nominatim while retaining OpenStreetMap venue discovery.
-export async function discover(town, province = "") {
-  const location = await locateTown(town, province);
+export async function discover(locationValue, province = "") {
+  const location = typeof locationValue === "object"
+    ? normalizeLocationContext(locationValue)
+    : await resolveLocationContext(locationValue, province);
   if (!location) {
-    console.error(`[openstreetmap] could not resolve town "${town}"`);
+    console.error(`[openstreetmap] could not resolve town "${String(locationValue)}"`);
     return [];
   }
 
@@ -32,18 +38,30 @@ export async function discover(town, province = "") {
   });
 
   if (!res.ok) {
-    console.error(`[overpass] HTTP ${res.status} while looking up venues in "${town}"`);
-    return [];
+    throw new Error(`Overpass HTTP ${res.status} while looking up venues in "${location.municipality}"`);
   }
 
   try {
     const data = JSON.parse(res.body);
     if (!Array.isArray(data.elements)) return [];
-    return data.elements.map(formatElement).filter(Boolean);
-  } catch {
-    console.error(`[overpass] JSON parse failed while looking up venues in "${town}"`);
-    return [];
+    return data.elements.map((element) => formatElement(element, location)).filter(Boolean);
+  } catch (error) {
+    if (error instanceof SyntaxError) {
+      throw new Error(`Overpass JSON parse failed while looking up venues in "${location.municipality}"`);
+    }
+    throw error;
   }
+}
+
+export async function resolveLocationContext(town, province = "", options = {}) {
+  const requested = normalizeLocationContext(town, province);
+  const catalog = options.catalog || JSON.parse(await readFile(
+    new URL("../ui/italian-municipalities.json", import.meta.url), "utf8"
+  ));
+  const metadata = resolveMunicipalityMetadata(requested, catalog);
+  const place = await locateTown(metadata.municipality, metadata.province_code, options.queryFn);
+  if (!place) return null;
+  return createLocationContext({ ...requested, ...metadata }, place);
 }
 
 // Automated address-by-address geocoding is not sent to the public Nominatim
@@ -73,7 +91,7 @@ export async function geocode(address, town, province = "") {
   return { latitude, longitude };
 }
 
-async function locateTown(town, province) {
+async function locateTown(town, province, queryFn = queryNominatim) {
   const params = new URLSearchParams({
     q: [town, province, "Italy"].filter(Boolean).join(", "),
     format: "jsonv2",
@@ -82,7 +100,7 @@ async function locateTown(town, province) {
     countrycodes: "it",
     "accept-language": "it",
   });
-  const results = await queryNominatim(params);
+  const results = await queryFn(params);
   return chooseTownResult(results);
 }
 
@@ -93,16 +111,15 @@ async function queryNominatim(params) {
   });
 
   if (!res.ok) {
-    console.error(`[nominatim] HTTP ${res.status} for location lookup`);
-    return [];
+    throw new Error(`Nominatim HTTP ${res.status} for location lookup`);
   }
 
   try {
     const data = JSON.parse(res.body);
     return Array.isArray(data) ? data : [];
-  } catch {
-    console.error("[nominatim] JSON parse failed for location lookup");
-    return [];
+  } catch (error) {
+    if (error instanceof SyntaxError) throw new Error("Nominatim JSON parse failed for location lookup");
+    throw error;
   }
 }
 
@@ -114,28 +131,33 @@ export function chooseTownResult(results) {
 
 export function buildOverpassQuery(location) {
   const selector = overpassAreaSelector(location);
+  // Food-service ice-cream venues use amenity=ice_cream. A broad
+  // shop=ice_cream area selector repeatedly exhausts the public Overpass
+  // execution budget, so it is intentionally not part of this request.
   return `[out:json][timeout:45];
 ${selector.setup}
 (
   nwr["amenity"~"^(restaurant|cafe|bar|pub|fast_food|food_court|biergarten|ice_cream)$"]${selector.filter};
-  nwr["shop"="ice_cream"]${selector.filter};
 );
 out center tags;`;
 }
 
 function overpassAreaSelector(location) {
-  const osmId = Number(location.osm_id);
-  if (location.osm_type === "relation" && Number.isSafeInteger(osmId) && osmId > 0) {
+  const osmId = Number(location.osm_relation_id ?? location.osm_id);
+  if ((location.osm_relation_id || location.osm_type === "relation")
+      && Number.isSafeInteger(osmId) && osmId > 0) {
     const areaId = 3_600_000_000 + osmId;
     return { setup: `area(${areaId})->.searchArea;`, filter: "(area.searchArea)" };
   }
 
-  const bounds = parseBoundingBox(location.boundingbox);
+  const bounds = location.bbox
+    ? [location.bbox[1], location.bbox[0], location.bbox[3], location.bbox[2]]
+    : parseBoundingBox(location.boundingbox);
   if (!bounds) throw new Error("Location has no usable OpenStreetMap boundary");
   return { setup: "", filter: `(${bounds.join(",")})` };
 }
 
-export function formatElement(element) {
+export function formatElement(element, location = {}) {
   const tags = element?.tags || {};
   const type = String(tags.amenity || tags.shop || "").toLowerCase();
   if (!VALID_TYPES.has(type)) return null;
@@ -159,6 +181,15 @@ export function formatElement(element) {
     name: normalizeName(name),
     type: type.replace("_", " "),
     address,
+    address_components: compact({
+      street: street || undefined,
+      house_number: housenumber || undefined,
+      locality: city || location.municipality || undefined,
+      postcode: postcode || undefined,
+      province_code: location.province_code || undefined,
+      country_code: location.country_code || "IT",
+    }),
+    postcode: postcode || undefined,
     latitude,
     longitude,
     coordinates_source: "osm",
@@ -169,7 +200,13 @@ export function formatElement(element) {
     // remain compatible. It is displayed to users as "OpenStreetMap".
     source: "nominatim",
     osm_id: `${element.type}/${element.id}`,
+    provider_place_id: `osm:${element.type}/${element.id}`,
+    provider_record_url: `https://www.openstreetmap.org/${element.type}/${element.id}`,
   };
+}
+
+function compact(value) {
+  return Object.fromEntries(Object.entries(value).filter(([, item]) => item !== undefined && item !== ""));
 }
 
 function parseBoundingBox(value) {

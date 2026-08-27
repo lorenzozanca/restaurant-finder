@@ -14,6 +14,14 @@ Output lands in `restaurant-finder/output/<town>/<date>.json`.
 
 Operational and compliance documentation:
 
+- [`NEXT-SCALING-SESSION.md`](NEXT-SCALING-SESSION.md) — current verified
+  handoff, local Veneto input, provider budget, and next bounded objective.
+- [`ITALY-WEB-ENRICHMENT-PLAN.md`](ITALY-WEB-ENRICHMENT-PLAN.md) — correctness-first
+  architecture and session-by-session roadmap for national web enrichment.
+- [`benchmark/README.md`](benchmark/README.md) — deterministic offline quality
+  evaluator, versioned fixtures, and current baseline metrics.
+- [`ODERZO-SCAN-REPORT.md`](ODERZO-SCAN-REPORT.md) — scan comparison and the
+  evidence behind the national roadmap.
 - [`DATA-LICENSING.md`](DATA-LICENSING.md) — source provenance, licences,
   attribution, and redistribution checks.
 - [`PRIVACY.md`](PRIVACY.md) — GDPR roles, lawful-basis gate, data-subject
@@ -48,19 +56,40 @@ Three sources queried simultaneously:
 
 Results are merged and deduplicated by normalized name.
 
-### Phase 2 — Menu hunting (sequential, top N only)
-For each restaurant (up to 15, to stay within budget):
-1. If it has a website → crawl it for links containing `menu`, `menù`, `carta`, `listino`, `.pdf`
-2. If no menu found on site → web search `"<name> menu ristorante"`
-3. If still nothing → web search `"<name> menu pdf"`
+### Phase 2 — Menu hunting (bounded, concurrent workers)
+For each selected restaurant (up to 20 by default, configurable with `TOP_N`):
+1. If it has a known official website, crawl it for menu, order, specialty,
+   PDF, and context-supported menu-image links.
+2. Search for venue identity only when that site is missing, unreachable, or
+   contains no useful resource.
+3. Run the focused menu and loose-identity searches only when earlier search
+   results fail the evidence scorer.
+
+Known official websites are crawled before search. Canonical homepage aliases
+share crawl work, branch paths remain isolated, and each search fallback records
+its reason and request count in the venue and scan enrichment manifests.
+Official-site candidates receive separate identity, geography, and officialness
+scores. Only accepted decisions are published; uncertain matches remain in
+review and geographic or canonical contradictions are rejected.
 
 ### Phase 3 — Output
 Single JSON file per location, per run. Schema:
 ```json
 {
+  "schema_version": 2,
   "location": "Oderzo",
   "searched_at": "2026-08-23",
-  "sources_used": ["nominatim", "web_search", "paginegialle"],
+  "sources_used": ["nominatim", "web_search"],
+  "source_runs": [
+    {
+      "source": "nominatim",
+      "status": "succeeded",
+      "attempted_at": "2026-08-26T12:00:00.000Z",
+      "duration_ms": 1234,
+      "result_count": 42
+    },
+    { "source": "paginegialle", "status": "disabled", "result_count": 0 }
+  ],
   "attribution": [
     {
       "source": "OpenStreetMap",
@@ -77,17 +106,56 @@ Single JSON file per location, per run. Schema:
       "type": "trattoria",
       "address": "Via Roma 12, 31046 Oderzo TV",
       "website": "https://trattoriadamario.it",
+      "website_decision": {
+        "status": "accepted",
+        "scores": { "identity": 100, "geography": 70, "officialness": 90 },
+        "confidence": "high",
+        "evidence": ["exact_name", "municipality_match", "structured_business_data"]
+      },
       "phone": "+39 0422 123456",
       "cuisine": "italian",
       "sources": ["nominatim", "web_search"],
-      "menu_sources": [
-        { "type": "pdf", "url": "https://...menu.pdf", "found_via": "website_links" }
+      "provenance": {
+        "name": [{ "source": "nominatim", "origin": "osm_object" }],
+        "website": [{ "source": "nominatim", "origin": "osm_tag", "evidence": ["known_website", "classified_official"] }]
+      },
+      "resources": [
+        {
+          "type": "pdf",
+          "role": "menu",
+          "url": "https://...menu.pdf",
+          "found_via": "official_website",
+          "source_url": "https://example.it/",
+          "evidence": ["same_official_domain", "pdf_url", "reachable_status", "menu_evidence"],
+          "http_status": 200,
+          "content_type": "application/pdf",
+          "resource_confidence": "high",
+          "venue_confidence": "high",
+          "checked_at": "2026-08-26T12:00:00.000Z"
+        }
       ],
-      "no_menu_found": false
+      "resource_decisions": [
+        {
+          "status": "accepted",
+          "role": "menu",
+          "requested_url": "https://...menu.pdf",
+          "final_url": "https://...menu.pdf",
+          "http_status": 200,
+          "content_type": "application/pdf",
+          "checked_at": "2026-08-26T12:00:00.000Z",
+          "evidence": ["same_official_domain", "reachable_status", "menu_evidence"]
+        }
+      ],
+      "no_resources_found": false
     }
   ]
 }
 ```
+
+Schema v2 records source health separately from `sources_used` and attaches
+field-level provenance to accepted restaurant facts. The UI API normalizes
+unversioned legacy scans (schema v1) and returns an explicit error for a future
+schema it does not understand.
 
 ## Design decisions
 

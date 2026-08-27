@@ -1,0 +1,10 @@
+{
+  "location": "Oderzo",
+  "province": "TV",
+  "restaurants": [
+    { "name": "Barhacca", "sources": ["web_search"], "website": "https://www.barhacca.it/", "website_kind": "official", "resources": [{ "url": "https://www.barhacca.it/ordina/", "role": "order" }] },
+    { "name": "Pub Gatto Nero", "sources": ["web_search"], "website": "http://www.gattoneropub.it/", "website_kind": "official", "resources": [{ "url": "http://www.gattoneropub.it/le-birre/", "role": "menu" }, { "url": "http://www.gattoneropub.it/download/Pieghevole.pdf", "role": "menu" }, { "url": "http://www.gattoneropub.it/menu-take-away/", "role": "order" }, { "url": "http://www.gattoneropub.it/wp-content/uploads/2013/06/menu1.png", "role": "menu_image" }] },
+    { "name": "Ca' Lozzio", "osm_id": "way/178807553", "sources": ["nominatim"], "website": "http://www.calozzio.com", "website_kind": "official", "resources": [] },
+    { "name": "Ca'Lozzio", "osm_id": "node/2538162437", "sources": ["nominatim"], "website": "https://www.calozzio.com/", "website_kind": "official", "resources": [] }
+  ]
+}

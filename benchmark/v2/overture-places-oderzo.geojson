@@ -1,0 +1,62 @@
+{
+  "type": "FeatureCollection",
+  "bbox": [12.43, 45.72, 12.58, 45.83],
+  "metadata": {
+    "fixture_kind": "deterministic-adapter-replay",
+    "municipality": "Oderzo",
+    "province_code": "TV",
+    "country_code": "IT",
+    "postcodes": ["31046"],
+    "bbox": [12.43, 45.72, 12.58, 45.83],
+    "note": "Overture-shaped records assembled from reviewed pilot evidence; this fixture is not represented as a current Overture release snapshot."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "fixture-overture-barhacca",
+      "geometry": { "type": "Point", "coordinates": [12.491, 45.779] },
+      "properties": {
+        "id": "fixture-overture-barhacca",
+        "names": { "primary": "Barhacca" },
+        "categories": { "primary": "bar", "alternate": ["restaurant"] },
+        "confidence": 0.91,
+        "addresses": [{ "street": "Piazzale Europa", "house_number": "4", "locality": "Oderzo", "postcode": "31046", "country_code": "IT" }],
+        "websites": ["https://www.barhacca.it/"],
+        "phones": ["+393517367370"],
+        "sources": [{ "dataset": "phase-3-reviewed-evidence", "record_id": "barhacca" }]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fixture-overture-ragazzon",
+      "geometry": { "type": "Point", "coordinates": [12.471482, 45.7556491] },
+      "properties": {
+        "id": "fixture-overture-ragazzon",
+        "names": { "primary": "Ragazzon" },
+        "categories": { "primary": "restaurant" },
+        "confidence": 0.94,
+        "addresses": [{ "locality": "Oderzo", "postcode": "31046", "country_code": "IT" }],
+        "websites": ["https://www.ristoranteragazzon.it/"],
+        "phones": ["+390422853503"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fixture-non-food",
+      "geometry": { "type": "Point", "coordinates": [12.49, 45.78] },
+      "properties": { "id": "fixture-non-food", "names": { "primary": "Fixture Hotel" }, "categories": { "primary": "hotel" }, "addresses": [{ "locality": "Oderzo", "postcode": "31046", "country_code": "IT" }] }
+    },
+    {
+      "type": "Feature",
+      "id": "fixture-outside-bbox",
+      "geometry": { "type": "Point", "coordinates": [12.7, 45.9] },
+      "properties": { "id": "fixture-outside-bbox", "names": { "primary": "Wrong Branch" }, "categories": { "primary": "restaurant" }, "addresses": [{ "locality": "Oderzo", "postcode": "31046", "country_code": "IT" }] }
+    },
+    {
+      "type": "Feature",
+      "id": "fixture-wrong-locality",
+      "geometry": { "type": "Point", "coordinates": [12.50, 45.78] },
+      "properties": { "id": "fixture-wrong-locality", "names": { "primary": "Contradictory Venue" }, "categories": { "primary": "restaurant" }, "addresses": [{ "locality": "Treviso", "postcode": "31100", "country_code": "IT" }] }
+    }
+  ]
+}

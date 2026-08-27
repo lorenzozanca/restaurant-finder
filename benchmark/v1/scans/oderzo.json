@@ -1,0 +1,20 @@
+{
+  "location": "Oderzo",
+  "province": "TV",
+  "searched_at": "2026-08-25",
+  "enrichment_version": 8,
+  "restaurants": [
+    { "name": "Barhacca", "sources": ["web_search"], "website": "https://www.barhacca.it/", "website_kind": "official", "resources": [{ "url": "https://www.barhacca.it/ordina/", "role": "order" }] },
+    { "name": "Pub Gatto Nero", "sources": ["web_search"], "website": "http://www.gattoneropub.it/", "website_kind": "official", "resources": [{ "url": "http://www.gattoneropub.it/le-birre/", "role": "menu" }, { "url": "http://www.gattoneropub.it/download/Pieghevole.pdf", "role": "menu" }, { "url": "http://www.gattoneropub.it/menu-take-away/", "role": "order" }, { "url": "http://www.gattoneropub.it/wp-content/uploads/2013/06/menu1.png", "role": "menu_image" }] },
+    { "name": "Ca' Lozzio", "osm_id": "way/178807553", "sources": ["nominatim"], "website": "http://www.calozzio.com", "website_kind": "official", "resources": [] },
+    { "name": "Ca'Lozzio", "osm_id": "node/2538162437", "sources": ["nominatim"], "website": "https://www.calozzio.com/", "website_kind": "official", "resources": [] },
+    { "name": "BdueB", "sources": ["web_search"], "website": "https://trattoriamilano.com/", "website_kind": "official", "resources": [{ "url": "https://trattoriamilano.com/wp-content/uploads/2026/07/MENU-FERRAGOSTO.pdf", "role": "menu" }] },
+    { "name": "Cercare Vicino A Me", "sources": ["web_search"], "website": "https://cercarevicinoame.it/trattorie-e-osterie-vicino-a-me/", "website_kind": "official", "resources": [{ "url": "https://cercarevicinoame.it/trattoria-con-menu-fisso-vicino-a-me/", "role": "menu" }] },
+    { "name": "Contributori Ai Progetti Wikimedia", "sources": ["web_search"], "resources": [] },
+    { "name": "Milano Pocket", "sources": ["web_search"], "website": "https://www.milanopocket.it/migliori-trattorie-milano/", "website_kind": "official", "resources": [] },
+    { "name": "Roma Pop", "sources": ["web_search"], "website": "https://www.romapop.it/trattorie-roma/", "website_kind": "official", "resources": [] },
+    { "name": "San Filippo Neri", "sources": ["web_search"], "website": "https://trattoriasanfilipponeri.it/", "website_kind": "official", "resources": [{ "url": "https://trattoriasanfilipponeri.it/consegne-a-domicilio-e-asporto/", "role": "order" }] },
+    { "name": "Scatti Di Gusto", "sources": ["web_search"], "website": "https://www.scattidigusto.it/migliori-trattorie-milano-mangi-bene-spendi-poco", "website_kind": "official", "resources": [{ "url": "https://www.scattidigusto.it/categoria/drink", "role": "menu" }] },
+    { "name": "Trattoria Contemporanea", "sources": ["web_search"], "website": "https://trattoriacontemporanea.it/", "website_kind": "official", "resources": [{ "url": "https://trattoriacontemporanea.it/menu/", "role": "menu" }] }
+  ]
+}

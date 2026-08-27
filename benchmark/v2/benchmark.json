@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "evaluator_version": 2,
+  "configuration": {
+    "mode": "offline-frozen-snapshots",
+    "admission_rule": "Every restaurant row in a scan is treated as published",
+    "url_normalization": "Ignore www, fragment, and trailing slash",
+    "unlabeled_record_policy": "fail",
+    "truth_statuses": ["current", "closed", "unknown"]
+  },
+  "provenance": {
+    "created_at": "2026-08-27",
+    "oderzo_sources": ["output/oderzo/2026-08-25.json", "output/oderzo/2026-08-26.json", "benchmark/ODERZO-LIVE-SEARCH-REGRESSION-REPORT.md"],
+    "live_requests_required": false
+  },
+  "municipalities": [
+    { "id": "oderzo", "stratum": "full-reviewed-pilot", "truth_set": "oderzo-truth.json", "scan": "scans/oderzo-2026-08-26.json" }
+  ]
+}

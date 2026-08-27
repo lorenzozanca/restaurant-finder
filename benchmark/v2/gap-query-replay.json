@@ -1,0 +1,31 @@
+{
+  "fixture_kind": "deterministic-query-yield-replay",
+  "location": { "municipality": "Oderzo", "province_code": "TV", "postcodes": ["31046"] },
+  "already_found_truth_ids": ["barhacca", "ragazzon"],
+  "templates": [
+    {
+      "id": "postcode_restaurant_menu",
+      "query": "\"31046\" ristorante menu",
+      "results": [
+        { "url": "https://www.gellius.it/", "truth_id": "gellius", "aligned": true },
+        { "url": "https://www.ristoranteragazzon.it/menu-ristorante/", "truth_id": "ragazzon", "aligned": true },
+        { "url": "https://example.invalid/rome", "aligned": false }
+      ]
+    },
+    {
+      "id": "postcode_pizzeria_menu",
+      "query": "\"31046\" pizzeria menu",
+      "results": [
+        { "url": "https://example.invalid/directory", "aligned": false },
+        { "url": "https://www.ristoranteragazzon.it/", "truth_id": "ragazzon", "aligned": true }
+      ]
+    },
+    {
+      "id": "municipality_province_restaurant_menu",
+      "query": "\"Oderzo\" \"TV\" ristorante menu",
+      "results": [
+        { "url": "https://www.gellius.it/", "truth_id": "gellius", "aligned": true }
+      ]
+    }
+  ]
+}

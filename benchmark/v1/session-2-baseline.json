@@ -1,0 +1,11 @@
+{
+  "benchmark_version": "1.1.0-session-2",
+  "evaluator_version": 1,
+  "metrics": {
+    "venue_admission": { "precision": 1, "recall": 0.75, "false_positives": 0, "false_negatives": 3 },
+    "official_website": { "precision": 0.8889, "recall": 0.8889 },
+    "resource_role": { "precision": 1, "recall": 1 },
+    "duplicates": { "groups": 1, "resolved": 0, "unresolved": 1 },
+    "unlabeled_records": 0
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "version": "1.4.0-session-6",
+  "provenance": {
+    "created_at": "2026-08-26",
+    "method": "Synthetic offline website metadata and transient crawl facts derived from labelled benchmark classes"
+  },
+  "thresholds": {
+    "publish_outcome": "accepted",
+    "minimum_precision": 0.95,
+    "accepted_minimums": { "identity": 55, "officialness": 45, "geography_or_source_evidence": true }
+  },
+  "cases": [
+    {
+      "id": "gattonero-search-official",
+      "label": "official",
+      "expected": "accepted",
+      "location": "Oderzo TV",
+      "restaurant": { "name": "Gatto Nero", "type": "pub" },
+      "candidate": {
+        "url": "https://gattoneropub.it/",
+        "title": "Gatto Nero Pub | Birreria e Snack Bar a Oderzo",
+        "snippet": "Gatto Nero Pub, locale e ristorante a Oderzo in provincia di Treviso"
+      }
+    },
+    {
+      "id": "giardinetto-known-structured",
+      "label": "official",
+      "expected": "accepted",
+      "location": "Oderzo TV",
+      "restaurant": { "name": "Al Giardinetto" },
+      "candidate": {
+        "url": "https://algiardinetto.example/",
+        "known": true,
+        "crawl": {
+          "final_url": "https://algiardinetto.example/",
+          "resources": [{ "url": "https://algiardinetto.example/menu" }],
+          "site_facts": {
+            "text": "Al Giardinetto, ristorante e cucina italiana a Oderzo",
+            "canonical_url": "https://algiardinetto.example/",
+            "structured_types": ["Restaurant"],
+            "phones": "+39 0422 123456"
+          }
+        }
+      }
+    },
+    {
+      "id": "dussin-contact-match",
+      "label": "official",
+      "expected": "accepted",
+      "location": "Oderzo TV",
+      "restaurant": { "name": "Locanda Dussin", "phone": "+39 0422 713006" },
+      "candidate": {
+        "url": "https://locandadussin.example/",
+        "crawl": {
+          "final_url": "https://locandadussin.example/",
+          "resources": [],
+          "site_facts": {
+            "text": "Locanda Dussin, ristorante a Oderzo. Telefono 0422 713006",
+            "canonical_url": "https://locandadussin.example/",
+            "structured_types": ["Restaurant"],
+            "phones": "0422 713006"
+          }
+        }
+      }
+    },
+    {
+      "id": "roma-branch-redirect",
+      "label": "official",
+      "expected": "accepted",
+      "location": "Roma RM",
+      "restaurant": { "name": "Fixture Roma Centro" },
+      "candidate": {
+        "url": "http://old-chain.example/roma",
+        "crawl": {
+          "final_url": "https://new-chain.example/locations/roma-centro",
+          "resources": [],
+          "site_facts": {
+            "text": "Fixture Roma Centro, ristorante nel Municipio I di Roma",
+            "canonical_url": "https://new-chain.example/locations/roma-centro",
+            "structured_types": ["Restaurant"],
+            "phones": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "hotel-restaurant-branch",
+      "label": "official",
+      "expected": "accepted",
+      "location": "Taormina ME",
+      "restaurant": { "name": "Terrazza Etna" },
+      "candidate": {
+        "url": "https://grandhotel.example/ristoranti/terrazza-etna",
+        "crawl": {
+          "final_url": "https://grandhotel.example/ristoranti/terrazza-etna",
+          "resources": [],
+          "site_facts": {
+            "text": "Terrazza Etna, il ristorante del Grand Hotel a Taormina",
+            "canonical_url": "https://grandhotel.example/ristoranti/terrazza-etna",
+            "structured_types": ["Restaurant"],
+            "phones": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "dussin-insufficient-evidence",
+      "label": "uncertain",
+      "expected": "review",
+      "location": "Oderzo TV",
+      "restaurant": { "name": "Locanda Dussin" },
+      "candidate": {
+        "url": "https://locandadussin.it/",
+        "title": "Locanda Dussin — Home",
+        "snippet": "Benvenuti nel sito ufficiale"
+      }
+    },
+    {
+      "id": "gattonero-wrong-city",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Oderzo TV",
+      "restaurant": { "name": "Gatto Nero" },
+      "candidate": {
+        "url": "https://gattoneromilano.example/",
+        "title": "Gatto Nero Pub Milano",
+        "snippet": "Gatto Nero, ristorante e birreria nel centro di Milano"
+      }
+    },
+    {
+      "id": "chain-wrong-branch",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Roma RM",
+      "restaurant": { "name": "Fixture Centro" },
+      "candidate": {
+        "url": "https://fixture.example/locations/milano-centro",
+        "title": "Fixture Centro Milano",
+        "snippet": "Ristorante della catena nel centro di Milano"
+      }
+    },
+    {
+      "id": "sansovino-school",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Oderzo TV",
+      "restaurant": { "name": "Al Sansovino" },
+      "candidate": {
+        "url": "https://www.sansovino.edu.it/la-scuola/",
+        "title": "La Scuola - Sansovino.edu.it",
+        "snippet": "Istituto tecnico J. Sansovino di Oderzo"
+      }
+    },
+    {
+      "id": "cross-domain-canonical",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Oderzo TV",
+      "restaurant": { "name": "Locanda Dussin" },
+      "candidate": {
+        "url": "https://locandadussin.example/oderzo",
+        "crawl": {
+          "final_url": "https://locandadussin.example/oderzo",
+          "resources": [{ "url": "https://locandadussin.example/menu" }],
+          "site_facts": {
+            "text": "Locanda Dussin, ristorante a Oderzo",
+            "canonical_url": "https://unrelated-hotel.example/restaurant",
+            "structured_types": ["Restaurant"],
+            "phones": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "directory-result",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Oderzo TV",
+      "restaurant": { "name": "Al Bivio" },
+      "candidate": {
+        "url": "https://www.paginebianche.it/scheda/albivio-oderzo",
+        "title": "Al Bivio a Oderzo - Pizzeria",
+        "snippet": "Al Bivio, ristorante e pizzeria a Oderzo"
+      }
+    }
+  ]
+}

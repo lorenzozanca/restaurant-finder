@@ -1,0 +1,58 @@
+{
+  "location": "Oderzo",
+  "province": "TV",
+  "restaurants": [
+    {
+      "name": "Barhacca",
+      "canonical_venue_id": "venue:oderzo:barhacca",
+      "aliases": ["Barhacca"],
+      "sources": ["web_search"],
+      "website": "https://www.barhacca.it/",
+      "website_kind": "official",
+      "resources": [{ "url": "https://www.barhacca.it/ordina/", "role": "order" }],
+      "source_records": [{ "source_record_id": "web_search:barhacca.it/", "source": "web_search", "name": "Barhacca", "website": "https://www.barhacca.it/" }],
+      "merge_audit": []
+    },
+    {
+      "name": "Pub Gatto Nero",
+      "canonical_venue_id": "venue:oderzo:gatto-nero",
+      "aliases": ["Pub Gatto Nero"],
+      "sources": ["web_search"],
+      "website": "http://www.gattoneropub.it/",
+      "website_kind": "official",
+      "resources": [
+        { "url": "http://www.gattoneropub.it/le-birre/", "role": "menu" },
+        { "url": "http://www.gattoneropub.it/download/Pieghevole.pdf", "role": "menu" },
+        { "url": "http://www.gattoneropub.it/menu-take-away/", "role": "order" },
+        { "url": "http://www.gattoneropub.it/wp-content/uploads/2013/06/menu1.png", "role": "menu_image" }
+      ],
+      "source_records": [{ "source_record_id": "web_search:gattoneropub.it/", "source": "web_search", "name": "Pub Gatto Nero", "website": "http://www.gattoneropub.it/" }],
+      "merge_audit": []
+    },
+    {
+      "name": "Ca' Lozzio",
+      "canonical_venue_id": "venue:oderzo:ca-lozzio",
+      "aliases": ["Ca' Lozzio", "Ca'Lozzio"],
+      "osm_id": "way/178807553",
+      "sources": ["nominatim"],
+      "website": "https://www.calozzio.com/",
+      "website_kind": "official",
+      "resources": [],
+      "source_records": [
+        { "source_record_id": "nominatim:node/2538162437", "source": "nominatim", "source_id": "node/2538162437", "name": "Ca'Lozzio", "website": "https://www.calozzio.com/" },
+        { "source_record_id": "nominatim:way/178807553", "source": "nominatim", "source_id": "way/178807553", "name": "Ca' Lozzio", "website": "http://www.calozzio.com" }
+      ],
+      "merge_audit": [{
+        "status": "merged",
+        "left_source_record_id": "nominatim:way/178807553",
+        "right_source_record_id": "nominatim:node/2538162437",
+        "score": 130,
+        "evidence": [
+          { "type": "name_exact", "weight": 50, "value": "ca lozzio" },
+          { "type": "website_exact", "weight": 45, "value": "calozzio.com/" },
+          { "type": "distance", "weight": 35, "metres": 11.1 }
+        ]
+      }]
+    }
+  ]
+}
