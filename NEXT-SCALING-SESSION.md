@@ -42,11 +42,11 @@ the failure, so the warm replay should have been cancelled. Future procedures
 must place an adjudication gate immediately after cold execution; warm execution
 must never be automatic.
 
-The bounded offline correction is complete. It blocks all 14 observed
+The earlier bounded offline correction is complete but superseded by the
+fail-closed architectural correction. It blocks all 14 observed
 official-site false positives, requires first-party publication evidence, and
 fixes the observed ordering-platform role mismatch. No live requests were
-used, and the live decision remains NO-GO pending independent resource
-adjudication and a fresh authorized pilot. See
+used. It is historical context, not the next objective. See
 `benchmark/SESSION-10-OFFLINE-CORRECTION-REPORT.md`.
 
 Read this file first, then `ITALY-WEB-ENRICHMENT-PLAN.md` and
@@ -56,8 +56,9 @@ Read this file first, then `ITALY-WEB-ENRICHMENT-PLAN.md` and
 
 - The live Oderzo acceptance manifest passed 75/75 gates across two isolated
   cold runs and one warm run. The three publication sets were identical.
-- The final deterministic suite passed 31/31 test files before this handoff. Run it
-  again at the start of the next session.
+- The final deterministic suite passed 35/35 test files after the architectural
+  correction. Start the next session with the focused ownership/store tests
+  listed below; run the full suite once at final verification.
 - Session 8 is complete. Evidence schema v2 and the durable queue provide
   leases, crash recovery, bounded retries, dead letters, cancellation,
   idempotent result application, persistent budgets/circuits, run manifests,
@@ -160,85 +161,61 @@ records, is 3,676,409,954 bytes, and has SHA-256
 Its tracked manifest records the v1.0.2 client checksum, explicit release
 selector, state file, bounding box, schema, and acquisition command.
 
-## Next bounded objective
+## Completed safeguards
 
-Quota exhaustion is now implemented as a resumable pause. Brave quota
-exhaustion, whether detected by the configured local request budget or a
-provider response such as HTTP 429, now:
+Quota and provider unavailability now pause the durable queue, preserve the
+current job without consuming an attempt, and prevent successful empty results.
+Completed historical pilot allowances are non-runnable. Warm execution requires
+an explicit passing cold-output adjudication instead of following cold execution
+automatically.
 
-- stop new Brave-dependent claims and stop the worker cleanly rather than churn
-  through queued jobs;
-- preserve the current job and all unstarted jobs for later resumption without
-  consuming retry attempts or sending them to `dead_letter`;
-- persist an explicit provider-quota reason and, when known, the reset or
-  `retry_after` time;
-- avoid recording a successful no-result, `no_resources_found`, rejection, or
-  manual-review outcome solely because Brave was unavailable; and
-- resume idempotently from the same durable queue after Brave becomes
-  available, either automatically after the recorded reset or through
-  `node queue-ops.mjs resume-quota --db PATH --provider brave_web_api`.
+The official-site architectural correction is also complete. Publication now
+requires a trusted, venue-scoped, timestamped publisher-ownership attestation.
+Name, phone, address, municipality, schema, canonical metadata, menus, source
+URLs, and branded-looking domains establish relevance only; crawled page content
+cannot create ownership. Offline replay rejected all 23 false publications and
+retained all 15 true publications across the two pilots. See
+`benchmark/SESSION-10-ARCHITECTURAL-CORRECTION-REPORT.md`.
 
-Deterministic tests cover local-budget exhaustion and Brave HTTP 429, including
-clean worker stop, durable restart, unchanged attempt count, and successful
-manual or automatic resume. Implementation and tests spent zero live requests.
+## Next session objective — durable ownership review workflow, offline only
 
-The operator authorized and supplied credentials for the bounded live pilot on
-2026-09-01. The review was redone and the cold run completed, but the quality
-decision is NO-GO. The required offline correction now hard-rejects the 14
-observed directory/editorial official-site candidates, versions them as
-regression fixtures, requires first-party evidence, and reconciles the observed
-ordering-platform role mismatch.
+The remaining problem is operational: pilot selection JSON currently supplies
+trusted ownership attestations at runtime. Make those attestations durable and
+reviewable without weakening the fail-closed invariant.
 
-The fresh provider allowance was executed. Its bounded plan completed, and its
-decision is NO-GO. Before any future live request:
+1. Add a versioned SQLite publisher-attestation model scoped to one canonical
+   venue and one publisher domain. Store status, method, attested website,
+   evidence URLs, reviewer, review time, lifecycle state, and audit events.
+2. Validate every write. Reject missing evidence, unsupported methods, invalid
+   domains/timestamps, venue mismatches, and attempts to infer an attestation
+   from crawled or search-result content.
+3. Add idempotent offline import of accepted ownership reviews from the two
+   pinned Session 10 selection files. Preserve their original reviewer, time,
+   notes, evidence URLs, and selection fingerprint.
+4. Change enrichment to load trusted attestations from the evidence store. The
+   production path must no longer depend on injecting review JSON into the
+   in-memory restaurant object, while direct callers may still supply an
+   explicitly trusted attestation dependency for deterministic tests.
+5. Add bounded operator commands or a small local review interface to list
+   unattested candidates, inspect evidence, approve/reject ownership, revoke an
+   attestation, and view its audit history. No command may publish a website as
+   a side effect of review.
+6. Gate every export on an active matching attestation. Add tests proving that
+   revoked, expired, malformed, cross-venue, wrong-domain, and absent
+   attestations cannot publish, including generated unseen directory hosts.
+7. Backfill and replay only the two isolated Session 10 pilot databases on
+   copies. The result must still reject 23/23 adjudicated false publications and
+   retain 15/15 true publications. Report removals and retention separately;
+   these remain offline replay counts, not live quality estimates.
+8. Run focused tests while developing, then one full deterministic suite and
+   `git diff --check` at the end. Write a concise offline workflow report and
+   stop.
 
-1. Keep Sessions 11–12, Veneto execution, and national execution blocked.
-2. Extend regression coverage for the fresh directory/menu-mirror failures and
-   the booking-versus-order role defect.
-3. Reassess the official-site policy architecture; host-by-host exclusions have
-   now failed to generalize across two independent samples.
-4. Obtain a new explicit provider allowance before any further live validation.
-
-## Next session objective — offline architectural correction only
-
-Do not add another finite list of directory domains and call the problem fixed.
-Replace the publication rule with a fail-closed ownership model:
-
-1. Separate **venue relevance** from **publisher ownership** in the scoring and
-   evidence model. Phone, address, municipality, name, restaurant schema, and
-   menus may contribute only to relevance.
-2. Require affirmative, independently auditable ownership evidence before an
-   official website can be published. A branded domain alone, a source-provided
-   URL alone, same-domain canonical metadata, or business schema alone must not
-   satisfy this gate.
-3. Treat unknown multi-business publishers, directories, review sites, menu
-   mirrors, tourism/editorial sites, and hosted listing pages as non-official by
-   default without relying on their hostname being pre-enumerated.
-4. Define the narrow evidence combinations that can prove ownership, document
-   their limitations, and make every unproven case `review` or `rejected`.
-5. Add adversarial tests whose directory hostnames are randomly generated or
-   otherwise absent from every blocklist. Tests must demonstrate that content,
-   schema, matching phone/address, canonical metadata, and a menu link still
-   cannot manufacture first-party ownership.
-6. Replay both completed pilot databases entirely offline. The correction must
-   reject every independently adjudicated false official-site publication while
-   retaining the true positives. Report false-positive and retention counts
-   separately; do not describe an overfitted fixture result as live precision.
-7. Audit the pipeline for unavailable-provider behavior. The sandboxed
-   diagnostic marked 36 jobs succeeded after transport failures and an open
-   circuit, producing no facts. Provider unavailability must pause/fail closed,
-   never become a successful no-result run.
-8. Preserve the new booking-versus-food-order distinction and add regressions
-   for the Ranch Roberta and La Bastiglia role errors.
-9. Write an offline correction report and stop. Do not select a third sample,
-   estimate a new live budget, or run Brave.
-
-The next session should explicitly tell the operator what invariant now prevents
-an unseen directory from being published. If that answer is another hostname
-list, the work is not complete.
-
-See `benchmark/SESSION-10-LIVE-PILOT-REPORT.md` and
-`benchmark/SESSION-10-FRESH-PILOT-REPORT.md`.
+Use **zero Brave calls**. Do not select another pilot, request an allowance, run
+a canary, resume an old warm run, or execute Veneto/national enrichment. A future
+live step may be considered only after the operator reviews the completed
+durable workflow; it must begin cold with a new explicit hard cap and must stop
+for adjudication before any warm run.
 
 Do not start either the 13,073-job Veneto queue or the 156,057-job national
 queue wholesale. No national publication is authorized by the offline import.
@@ -247,7 +224,7 @@ queue wholesale. No national publication is authorized by the offline import.
 
 ```bash
 git status --short
-node --test
+node --test lib/publisher-ownership.test.mjs lib/evidence-store.test.mjs run-pilot.test.mjs benchmark/publisher-replay.test.mjs
 jq empty data/overture/2026-07-22.0/veneto-places-bbox.manifest.json
 jq empty data/overture/2026-07-22.0/italy-places-bbox.manifest.json
 sha256sum data/overture/2026-07-22.0/veneto-places-bbox.geojsonseq
