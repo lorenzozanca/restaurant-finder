@@ -2,6 +2,7 @@ import { get, getRendered } from "./lib/lib.mjs";
 import { searchDetailed } from "./lib/search.mjs";
 import { normalizeLocationContext } from "./lib/location-context.mjs";
 import { resolveOfficialSite } from "./lib/official-site-resolver.mjs";
+import { evaluatePublisherOwnership } from "./lib/publisher-ownership.mjs";
 
 const DIRECTORY_DOMAINS = [
   "paginegialle.it", "paginebianche.it",
@@ -489,6 +490,7 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
   const canonicalConflict = Boolean(canonicalDomain && canonicalDomain !== domain);
   const requestedDomain = extractDomain(requestedUrl);
   const redirectDomainChanged = Boolean(requestedDomain && requestedDomain !== domain);
+  const publisherOwnership = evaluatePublisherOwnership(url, restaurant);
 
   let identity = 0;
   if (exactName) identity += 55;
@@ -538,20 +540,18 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
   if (canonicalConflict) reasons.push("cross_domain_canonical");
   if (nonRestaurantContext) reasons.push("non_restaurant_context");
   if (geographyContradiction) reasons.push("geography_contradiction", ...foreignPlaces.map((place) => `mentions_${place}`));
+  reasons.push(publisherOwnership.status === "verified"
+    ? "publisher_ownership_verified" : "publisher_ownership_unverified");
 
   const structuredKnownIdentity = candidate.known && exactName && brandedDomain
     && hasTargetPlace && usefulResources;
-  // Search-result text and a matching phone/address can prove that a page is
-  // about the venue, but not that its publisher is the venue. Publication
-  // requires an independent first-party signal.
-  const firstPartyEvidence = brandedDomain || structuredSourceWebsite
-    || (canonicalSameDomain && structuredBusiness && !structuredEditorial);
   const hasOfficialContext = hasFood || structuredBusiness || phoneMatch || addressMatch
     || structuredKnownIdentity || structuredSourceWebsite;
   let outcome = "rejected";
   if (!canonicalConflict && !geographyContradiction && !nonRestaurantContext && !structuredEditorial
       && identity >= 55 && officialness >= 45
-      && firstPartyEvidence && hasOfficialContext && (geography >= 50 || candidate.known)) {
+      && publisherOwnership.status === "verified"
+      && hasOfficialContext && (geography >= 50 || candidate.known)) {
     outcome = "accepted";
   } else if (!canonicalConflict && !geographyContradiction && !nonRestaurantContext && !structuredEditorial
       && identity >= 35 && officialness >= 30) {
@@ -559,10 +559,12 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
   }
   if (redirectDomainChanged && outcome === "accepted" && !(exactName && hasTargetPlace)) outcome = "review";
 
-  return officialDecision(requestedUrl, url, outcome, identity, geography, officialness, reasons);
+  return officialDecision(requestedUrl, url, outcome, identity, geography, officialness, reasons,
+    publisherOwnership);
 }
 
-function officialDecision(requestedUrl, finalUrl, outcome, identity, geography, officialness, reasons) {
+function officialDecision(requestedUrl, finalUrl, outcome, identity, geography, officialness, reasons,
+  publisherOwnership = { status: "unverified", method: null, reason: "not_evaluated" }) {
   const score = Math.round(identity * 0.4 + geography * 0.25 + officialness * 0.35);
   const confidence = outcome === "accepted" && score >= 78 ? "high"
     : outcome === "accepted" ? "medium" : "low";
@@ -577,6 +579,7 @@ function officialDecision(requestedUrl, finalUrl, outcome, identity, geography, 
     confidence,
     scores: { identity, geography, officialness },
     reasons: [...new Set(reasons)],
+    publisher_ownership: publisherOwnership,
   };
 }
 
@@ -588,6 +591,7 @@ function publicWebsiteDecision(candidate) {
     requested_url: candidate.requested_url,
     final_url: candidate.final_url,
     evidence: candidate.reasons || [],
+    publisher_ownership: candidate.publisher_ownership,
   };
 }
 

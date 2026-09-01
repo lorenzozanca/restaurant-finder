@@ -71,6 +71,51 @@ test("accepts only the pinned fresh 120-request allowance", async () => {
   assert.equal(result.stopped, "completed");
 });
 
+test("historical completed allowances are rejected before provider creation", async () => {
+  const fixture = pilotFixture();
+  delete fixture.config.authorization.status;
+  let providerCreated = false;
+  await assert.rejects(() => runPilot({
+    dbPath: fixture.dbPath, config: fixture.config, apiKey: "test-key",
+  }, {
+    createProvider: () => { providerCreated = true; return {}; },
+  }), /allowance is not active/);
+  assert.equal(providerCreated, false);
+});
+
+test("provider unavailability requeues the job and stops without recording success", async () => {
+  const fixture = pilotFixture();
+  const result = await runPilot({
+    dbPath: fixture.dbPath, config: fixture.config, apiKey: "test-key",
+  }, {
+    createProvider: () => ({ name: "brave_web_api", version: "test", async search() {
+      throw new Error("provider should not be called by this fixture");
+    } }),
+    enrich: async () => ({ resources: [], enrichment_run: { search_attempts: [{
+      outcome: "provider_failed", provider: "brave_web_api", attempts: [{
+        provider: "brave_web_api", transport_ok: false, parse_ok: false,
+        reason: "transport_error",
+      }],
+    }] } }),
+  });
+  assert.equal(result.stopped, "quota_paused");
+  const queue = new EnrichmentQueue(fixture.dbPath);
+  assert.equal(queue.status().counts.queued, 1);
+  assert.equal(queue.status().counts.succeeded ?? 0, 0);
+  assert.equal(queue.db.prepare("SELECT COUNT(*) AS count FROM enrichment_attempts").get().count, 0);
+  assert.equal(queue.status().quota_pauses[0].reason, "provider_unavailable");
+  queue.close();
+});
+
+test("warm execution is blocked until cold output is explicitly adjudicated as passing", async () => {
+  const fixture = pilotFixture();
+  fixture.config.scenario = "warm_incremental";
+  fixture.config.prior_run_id = "cold-run";
+  await assert.rejects(() => runPilot({
+    dbPath: fixture.dbPath, config: fixture.config, apiKey: "test-key",
+  }), /cold-output adjudication gate/);
+});
+
 test("warm pilot replays completed jobs while preserving the shared request budget", async () => {
   const fixture = pilotFixture();
   let calls = 0;
@@ -93,6 +138,8 @@ test("warm pilot replays completed jobs while preserving the shared request budg
   warm.run_id = "test-live-pilot-warm";
   warm.scenario = "warm_incremental";
   warm.prior_run_id = fixture.config.run_id;
+  warm.authorization.cold_output_adjudicated = true;
+  warm.authorization.cold_quality_decision = "pass";
   warm.inputs.pilot_database.sha256 = sha256(fixture.dbPath);
   const result = await runPilot({ dbPath: fixture.dbPath, config: warm, apiKey: "test-key" }, dependencies);
   assert.equal(result.stopped, "completed");
@@ -129,7 +176,7 @@ function pilotFixture() {
     worker: { concurrency: 2, per_domain_concurrency: 1 },
     provider: { name: "brave_web_api", concurrency: 1, requests_per_second: 1, max_retries: 1 },
     cache: { search_directory: join(directory, "cache"), http_directory: join(directory, "http-cache") },
-    authorization: { live_pilot: true, national_queue: false, publication: false },
+    authorization: { live_pilot: true, status: "active", national_queue: false, publication: false },
   };
   return { directory, selectionPath, dbPath, config };
 }

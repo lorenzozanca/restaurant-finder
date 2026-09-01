@@ -30,7 +30,18 @@ export async function evaluateEnrichment(fixturePath = DEFAULT_FIXTURE) {
           }
           : { ok: false, status: 404, body: "", final_url: url };
     };
-    const result = await findMenuSources(item.restaurant, item.location, {
+    const restaurant = {
+      ...item.restaurant,
+      publisher_ownership: [{
+        status: "verified",
+        method: "manual_first_party_review",
+        website_url: item.restaurant.website,
+        evidence_urls: [item.restaurant.website],
+        reviewed_at: fixture.provenance.created_at,
+        reviewer: "Session 5 deterministic benchmark fixture",
+      }],
+    };
+    const result = await findMenuSources(restaurant, item.location, {
       search,
       get,
       getRendered: async () => ({ ok: false, body: "" }),

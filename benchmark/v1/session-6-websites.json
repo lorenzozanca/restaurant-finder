@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0-session-10-regressions",
+  "version": "1.6.0-fail-closed-publisher-ownership",
   "provenance": {
     "created_at": "2026-08-26",
     "method": "Synthetic offline website metadata and transient crawl facts derived from labelled benchmark classes"
@@ -7,7 +7,7 @@
   "thresholds": {
     "publish_outcome": "accepted",
     "minimum_precision": 0.95,
-    "accepted_minimums": { "identity": 55, "officialness": 45, "geography_or_source_evidence": true }
+    "accepted_minimums": { "identity": 55, "officialness": 45, "geography_or_source_evidence": true, "publisher_ownership": "verified" }
   },
   "cases": [
     {
@@ -15,7 +15,18 @@
       "label": "official",
       "expected": "accepted",
       "location": "Oderzo TV",
-      "restaurant": { "name": "Gatto Nero", "type": "pub" },
+      "restaurant": {
+        "name": "Gatto Nero",
+        "type": "pub",
+        "publisher_ownership": [{
+          "status": "verified",
+          "method": "manual_first_party_review",
+          "website_url": "https://gattoneropub.it/",
+          "evidence_urls": ["https://gattoneropub.it/contatti"],
+          "reviewed_at": "2026-08-26T00:00:00Z",
+          "reviewer": "Session 6 benchmark review"
+        }]
+      },
       "candidate": {
         "url": "https://gattoneropub.it/",
         "title": "Gatto Nero Pub | Birreria e Snack Bar a Oderzo",
@@ -27,7 +38,17 @@
       "label": "official",
       "expected": "accepted",
       "location": "Oderzo TV",
-      "restaurant": { "name": "Al Giardinetto" },
+      "restaurant": {
+        "name": "Al Giardinetto",
+        "publisher_ownership": [{
+          "status": "verified",
+          "method": "manual_first_party_review",
+          "website_url": "https://algiardinetto.example/",
+          "evidence_urls": ["https://algiardinetto.example/contatti"],
+          "reviewed_at": "2026-08-26T00:00:00Z",
+          "reviewer": "Session 6 benchmark review"
+        }]
+      },
       "candidate": {
         "url": "https://algiardinetto.example/",
         "known": true,
@@ -48,7 +69,18 @@
       "label": "official",
       "expected": "accepted",
       "location": "Oderzo TV",
-      "restaurant": { "name": "Locanda Dussin", "phone": "+39 0422 713006" },
+      "restaurant": {
+        "name": "Locanda Dussin",
+        "phone": "+39 0422 713006",
+        "publisher_ownership": [{
+          "status": "verified",
+          "method": "manual_first_party_review",
+          "website_url": "https://locandadussin.example/",
+          "evidence_urls": ["https://locandadussin.example/contatti"],
+          "reviewed_at": "2026-08-26T00:00:00Z",
+          "reviewer": "Session 6 benchmark review"
+        }]
+      },
       "candidate": {
         "url": "https://locandadussin.example/",
         "crawl": {
@@ -68,7 +100,17 @@
       "label": "official",
       "expected": "accepted",
       "location": "Roma RM",
-      "restaurant": { "name": "Fixture Roma Centro" },
+      "restaurant": {
+        "name": "Fixture Roma Centro",
+        "publisher_ownership": [{
+          "status": "verified",
+          "method": "manual_first_party_review",
+          "website_url": "https://new-chain.example/locations/roma-centro",
+          "evidence_urls": ["https://new-chain.example/locations/roma-centro"],
+          "reviewed_at": "2026-08-26T00:00:00Z",
+          "reviewer": "Session 6 benchmark review"
+        }]
+      },
       "candidate": {
         "url": "http://old-chain.example/roma",
         "crawl": {
@@ -88,7 +130,17 @@
       "label": "official",
       "expected": "accepted",
       "location": "Taormina ME",
-      "restaurant": { "name": "Terrazza Etna" },
+      "restaurant": {
+        "name": "Terrazza Etna",
+        "publisher_ownership": [{
+          "status": "verified",
+          "method": "manual_first_party_review",
+          "website_url": "https://grandhotel.example/ristoranti/terrazza-etna",
+          "evidence_urls": ["https://grandhotel.example/ristoranti/terrazza-etna"],
+          "reviewed_at": "2026-08-26T00:00:00Z",
+          "reviewer": "Session 6 benchmark review"
+        }]
+      },
       "candidate": {
         "url": "https://grandhotel.example/ristoranti/terrazza-etna",
         "crawl": {
@@ -294,6 +346,51 @@
       "location": "Erice TP",
       "restaurant": { "name": "Pizzeria La Rustica" },
       "candidate": { "url": "https://www.hotel-trapani.com/ristorante/trapani/176-Pizzeria-La-Rustica", "title": "Pizzeria La Rustica", "snippet": "Restaurant listing near Trapani hotels" }
+    },
+    {
+      "id": "adversarial-unseen-directory-complete-venue-schema",
+      "label": "not_official",
+      "expected": "review",
+      "location": "Oderzo TV",
+      "restaurant": { "name": "Al Giardinetto", "phone": "+39 0422 123456", "address": "Via Roma 12, Oderzo" },
+      "candidate": {
+        "url": "https://al-giardinetto.publisher-k7q9.invalid/menu",
+        "known": true,
+        "title": "Al Giardinetto | Sito ufficiale",
+        "snippet": "Ristorante Al Giardinetto a Oderzo, menu e prenotazioni",
+        "crawl": {
+          "final_url": "https://al-giardinetto.publisher-k7q9.invalid/menu",
+          "resources": [{ "url": "https://al-giardinetto.publisher-k7q9.invalid/menu.pdf" }],
+          "site_facts": {
+            "text": "Al Giardinetto ristorante a Oderzo, Via Roma 12, telefono 0422 123456",
+            "canonical_url": "https://al-giardinetto.publisher-k7q9.invalid/menu",
+            "structured_types": ["Restaurant"],
+            "phones": "0422 123456"
+          }
+        }
+      }
+    },
+    {
+      "id": "adversarial-unseen-branded-menu-mirror",
+      "label": "not_official",
+      "expected": "review",
+      "location": "Oderzo TV",
+      "restaurant": { "name": "Locanda Dussin", "phone": "+39 0422 713006" },
+      "candidate": {
+        "url": "https://locanda-dussin-menu-x4p2.invalid/",
+        "title": "Locanda Dussin menu Oderzo",
+        "snippet": "Ristorante Locanda Dussin, telefono 0422 713006",
+        "crawl": {
+          "final_url": "https://locanda-dussin-menu-x4p2.invalid/",
+          "resources": [{ "url": "https://locanda-dussin-menu-x4p2.invalid/menu" }],
+          "site_facts": {
+            "text": "Locanda Dussin ristorante a Oderzo telefono 0422 713006",
+            "canonical_url": "https://locanda-dussin-menu-x4p2.invalid/",
+            "structured_types": ["Restaurant"],
+            "phones": "0422 713006"
+          }
+        }
+      }
     }
   ]
 }

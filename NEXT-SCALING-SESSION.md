@@ -8,6 +8,14 @@ was only 5/14 (35.7%) and independently adjudicated resource precision was only
 3/7 (42.9%). No further live run is authorized. The 156,057 national candidates
 remain queued and untouched.
 
+The offline architectural correction requested after those failures is now
+complete. Official-site publication requires a trusted venue-scoped ownership
+attestation; page content cannot create that attestation. Offline replay removed
+all 23 false publications across both pilots while retaining all 15 true
+publications, and provider failure plus cold-to-warm gating now fail closed.
+No Brave requests were used. See
+`benchmark/SESSION-10-ARCHITECTURAL-CORRECTION-REPORT.md`.
+
 ## Operator directive after the second failed pilot
 
 The operator is justifiably dissatisfied that two pilots consumed 169 actual

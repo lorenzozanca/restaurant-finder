@@ -1,5 +1,5 @@
 {
-  "version": "1.1-session-10-role-reconciliation",
+  "version": "1.2-session-10-booking-role-reconciliation",
   "thresholds": { "published_resource_precision": 0.95 },
   "cases": [
     {
@@ -121,6 +121,26 @@
       "response": { "ok": true, "status": 200, "final_url": "https://pizza-smile.order.dish.co/menus/dolci", "content_type": "text/html", "body": "<title>Pizza Smile - Dolci</title><h1>Pizza Smile</h1>" },
       "expected_status": "accepted",
       "expected_role": "order"
+    },
+    {
+      "id": "session-10-ranch-roberta-table-booking",
+      "restaurant": { "name": "Ristorante Ranch Roberta" },
+      "location": "Milano MI",
+      "official_website": "https://www.ristoranteranchroberta.com/",
+      "candidate": { "url": "https://www.ristoranteranchroberta.com/prenota-ora", "role": "order", "label": "Prenota ora" },
+      "response": { "ok": true, "status": 200, "final_url": "https://www.ristoranteranchroberta.com/prenota-ora", "content_type": "text/html", "body": "<title>Ristorante Ranch Roberta - Prenota il tuo tavolo</title><h1>Ristorante Ranch Roberta</h1>" },
+      "expected_status": "accepted",
+      "expected_role": "booking"
+    },
+    {
+      "id": "session-10-la-bastiglia-hotel-booking",
+      "restaurant": { "name": "La Bastiglia" },
+      "location": "Spello PG",
+      "official_website": "https://labastiglia.com/",
+      "candidate": { "url": "https://booking.slope.it/c5a4caaf-c902-42f0-a72d-ff0d22c8b498", "role": "order", "label": "Prenota ora", "evidence": ["linked_from_official_site"] },
+      "response": { "ok": true, "status": 200, "final_url": "https://booking.slope.it/c5a4caaf-c902-42f0-a72d-ff0d22c8b498", "content_type": "text/html", "body": "<title>Prenota La Bastiglia Hotel SPA Ristorante</title><h1>La Bastiglia</h1><p>Spello</p>" },
+      "expected_status": "accepted",
+      "expected_role": "booking"
     }
   ]
 }

@@ -11,6 +11,20 @@ import {
 
 const oderzo = { name: "Al Giardinetto", type: "ristorante" };
 
+function owned(restaurant, websiteUrl = restaurant.website) {
+  return {
+    ...restaurant,
+    publisher_ownership: [{
+      status: "verified",
+      method: "manual_first_party_review",
+      website_url: websiteUrl,
+      evidence_urls: [websiteUrl],
+      reviewed_at: "2026-08-26T00:00:00Z",
+      reviewer: "Deterministic test fixture",
+    }],
+  };
+}
+
 test("rejects a search result with no venue identity evidence", () => {
   const scored = scoreSearchCandidate({
     title: "Cheapest Time to Visit the Maldives",
@@ -65,7 +79,7 @@ test("accepts a strongly identified official venue website", () => {
     title: "Gatto Nero Pub | Birreria e Snack Bar a Oderzo",
     snippet: "Gatto Nero Pub, locale a Oderzo in provincia di Treviso",
     url: "https://gattoneropub.it/",
-  }, { name: "Gatto Nero", type: "pub" }, "Oderzo TV");
+  }, owned({ name: "Gatto Nero", type: "pub" }, "https://gattoneropub.it/"), "Oderzo TV");
   assert.equal(scored.accepted, true);
   assert.equal(scored.officialCandidate, true);
   assert.equal(scored.confidence, "high");
@@ -78,10 +92,11 @@ test("accepts an Overture-provided fully branded domain from strong local struct
     url: "https://ristorantegrancasa.test/",
     known: true,
     crawl: { final_url: "https://ristorantegrancasa.test/", resources: [], site_facts: { text: "" } },
-  }, {
+  }, owned({
     name: "Gran Casa", sources: ["nominatim", "overture_places"],
     address: "Piazza C. Stefanel 2, 31046 Oderzo", phone: "+390422814571",
-  }, { municipality: "Oderzo", province_code: "TV", postcodes: ["31046"] });
+  }, "https://ristorantegrancasa.test/"),
+  { municipality: "Oderzo", province_code: "TV", postcodes: ["31046"] });
   assert.equal(decision.outcome, "accepted");
   assert.ok(decision.reasons.includes("source_provided_website"));
 });
@@ -129,7 +144,7 @@ test("accepts a changed redirect domain only with exact venue and branch geograp
         phones: "",
       },
     },
-  }, { name: "Fixture Roma Centro" }, "Roma RM");
+  }, owned({ name: "Fixture Roma Centro" }, "https://new.example/locations/roma-centro"), "Roma RM");
   assert.equal(scored.outcome, "accepted");
   assert.equal(scored.url, "https://new.example/locations/roma-centro");
   assert.ok(scored.reasons.includes("redirect_domain_changed"));
@@ -251,10 +266,10 @@ test("retains an uncertain external resource for review instead of publishing it
 
 test("deduplicates tracking variants before resource validation", async () => {
   let resourceChecks = 0;
-  const result = await findMenuSources({
+  const result = await findMenuSources(owned({
     name: "Al Bivio",
     website: "https://albivio.test/",
-  }, "Oderzo TV", {
+  }), "Oderzo TV", {
     crawlCache: new Map(),
     get: async (url) => {
       if (url.includes("/menu")) resourceChecks++;
@@ -278,11 +293,11 @@ test("deduplicates tracking variants before resource validation", async () => {
 
 test("crawls a useful known website without issuing a search", async () => {
   let searchCalls = 0;
-  const result = await findMenuSources({
+  const result = await findMenuSources(owned({
     name: "Al Giardinetto",
     website: "https://giardinetto.test/",
     provenance: { website: [{ source: "nominatim", origin: "osm_tag" }] },
-  }, "Oderzo TV", {
+  }), "Oderzo TV", {
     crawlCache: new Map(),
     get: async () => ({
       ok: true,
@@ -309,10 +324,10 @@ test("crawls a useful known website without issuing a search", async () => {
 
 test("keeps an accepted known website with no resources without an identity search", async () => {
   const searchQueries = [];
-  const result = await findMenuSources({
+  const result = await findMenuSources(owned({
     name: "Locanda Dussin",
     website: "https://dussin.test/",
-  }, "Oderzo TV", {
+  }), "Oderzo TV", {
     crawlCache: new Map(),
     get: async (url) => ({
       ok: true,
@@ -336,7 +351,7 @@ test("pre-caps validation with role diversity and reports per-stage drops", asyn
   const checked = [];
   const links = Array.from({ length: 10 }, (_, index) => `<a href="/menu-${index}">Menu ${index}</a>`).join("")
     + '<a href="/carta-vini">Carta vini</a><a href="/ordina">Ordina</a><a href="/specialita">Specialità</a>';
-  const result = await findMenuSources({ name: "Fixture", website: "https://fixture.test/" }, "Oderzo TV", {
+  const result = await findMenuSources(owned({ name: "Fixture", website: "https://fixture.test/" }), "Oderzo TV", {
     referenceDate: "2026-08-27T00:00:00Z",
     crawlCache: new Map(),
     get: async (url, options) => {
@@ -364,7 +379,7 @@ test("pre-caps validation with role diversity and reports per-stage drops", asyn
 
 test("tries a declared sitemap first and stops after it yields a resource", async () => {
   const requests = [];
-  const result = await findMenuSources({ name: "Fixture", website: "https://fixture.test/" }, "Oderzo TV", {
+  const result = await findMenuSources(owned({ name: "Fixture", website: "https://fixture.test/" }), "Oderzo TV", {
     crawlCache: new Map(),
     get: async (url, options) => {
       requests.push({ url, maxBytes: options.maxBytes });
@@ -388,7 +403,7 @@ test("tries a declared sitemap first and stops after it yields a resource", asyn
 
 test("uses one domain-restricted fallback after empty sequential sitemaps", async () => {
   const searches = [];
-  const result = await findMenuSources({ name: "Fixture", website: "https://fixture.test/" }, "Oderzo TV", {
+  const result = await findMenuSources(owned({ name: "Fixture", website: "https://fixture.test/" }), "Oderzo TV", {
     crawlCache: new Map(),
     get: async (url) => {
       if (url.endsWith(".xml")) return { ok: true, status: 200, body: "<urlset></urlset>" };
@@ -555,7 +570,8 @@ test("rejects sibling resources outside an official branch path", () => {
 test("accepts an exact branded website supplied with structured OSM contact facts", () => {
   const decision = scoreOfficialWebsite({ url: "https://ginsushi.test/", known: true,
     crawl: { final_url: "https://ginsushi.test/", site_facts: { text: "Gin Sushi" } } },
-  { name: "Gin Sushi", phone: "+390422207511", sources: ["nominatim"] }, "Oderzo TV");
+  owned({ name: "Gin Sushi", phone: "+390422207511", sources: ["nominatim"] },
+    "https://ginsushi.test/"), "Oderzo TV");
   assert.equal(decision.outcome, "accepted");
 });
 
@@ -598,7 +614,8 @@ test("does not publish resources from a source-provided website that resolves to
 });
 
 test("selects Barhacca's official site from a later search rank", async () => {
-  const result = await findMenuSources({ name: "Barhacca", postcode: "31046" }, {
+  const result = await findMenuSources(owned({ name: "Barhacca", postcode: "31046" },
+    "https://www.barhacca.test/"), {
     municipality: "Oderzo", province_code: "TV", country_code: "IT", postcodes: ["31046"],
   }, {
     crawlCache: new Map(),
@@ -644,10 +661,10 @@ test("reuses a canonical homepage crawl across aliases but keeps branch pages se
     search: async () => { throw new Error("search should not run"); },
   };
 
-  const first = await findMenuSources({ name: "Ca' Lozzio", website: "http://www.example.test/" }, "Oderzo", options);
-  const alias = await findMenuSources({ name: "Ca'Lozzio", website: "https://example.test/" }, "Oderzo", options);
-  await findMenuSources({ name: "Example Treviso", website: "https://example.test/treviso" }, "Treviso", options);
-  await findMenuSources({ name: "Example Oderzo", website: "https://example.test/oderzo" }, "Oderzo", options);
+  const first = await findMenuSources(owned({ name: "Ca' Lozzio", website: "http://www.example.test/" }), "Oderzo", options);
+  const alias = await findMenuSources(owned({ name: "Ca'Lozzio", website: "https://example.test/" }), "Oderzo", options);
+  await findMenuSources(owned({ name: "Example Treviso", website: "https://example.test/treviso" }), "Treviso", options);
+  await findMenuSources(owned({ name: "Example Oderzo", website: "https://example.test/oderzo" }), "Oderzo", options);
 
   assert.equal(first.enrichment_run.crawl_cache_hits, 0);
   assert.equal(alias.enrichment_run.crawl_cache_hits, 1);
