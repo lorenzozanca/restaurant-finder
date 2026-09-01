@@ -8,6 +8,32 @@ was only 5/14 (35.7%) and independently adjudicated resource precision was only
 3/7 (42.9%). No further live run is authorized. The 156,057 national candidates
 remain queued and untouched.
 
+## Operator directive after the second failed pilot
+
+The operator is justifiably dissatisfied that two pilots consumed 169 actual
+Brave requests (72 in the first pilot and 97 in the fresh pilot) while
+reproducing the same systemic directory-publication failure. **Do not run
+another live pilot, warm replay, canary, or individual Brave query.** Do not ask
+for another provider allowance. The next session is offline-only unless the
+operator later gives a new, explicit authorization after reviewing a completed
+architectural correction.
+
+The prior correction was overfitted. It blocked the 14 hosts already observed
+and passed a fixture containing those same hosts, but it did not establish a
+general proof that a publisher is controlled by the venue. On the fresh sample,
+previously unseen directories and menu mirrors passed through the same gap:
+GialloZafferano, Grubbio, OpenDi, res-menu.net, MyCIA, and Mapstr. Contact,
+address, municipality, restaurant schema, canonical links, and menu-like
+resources proved that pages were *about* a venue; they did not prove that the
+publisher was the venue. The code still treated a branded-looking domain as
+first-party evidence by itself, which is not a valid ownership proof.
+
+There was also an avoidable process error: the 25-request warm replay ran before
+the 72-request cold output was adjudicated. The cold run had already reproduced
+the failure, so the warm replay should have been cancelled. Future procedures
+must place an adjudication gate immediately after cold execution; warm execution
+must never be automatic.
+
 The bounded offline correction is complete. It blocks all 14 observed
 official-site false positives, requires first-party publication evidence, and
 fixes the observed ordering-platform role mismatch. No live requests were
@@ -164,6 +190,44 @@ decision is NO-GO. Before any future live request:
 3. Reassess the official-site policy architecture; host-by-host exclusions have
    now failed to generalize across two independent samples.
 4. Obtain a new explicit provider allowance before any further live validation.
+
+## Next session objective — offline architectural correction only
+
+Do not add another finite list of directory domains and call the problem fixed.
+Replace the publication rule with a fail-closed ownership model:
+
+1. Separate **venue relevance** from **publisher ownership** in the scoring and
+   evidence model. Phone, address, municipality, name, restaurant schema, and
+   menus may contribute only to relevance.
+2. Require affirmative, independently auditable ownership evidence before an
+   official website can be published. A branded domain alone, a source-provided
+   URL alone, same-domain canonical metadata, or business schema alone must not
+   satisfy this gate.
+3. Treat unknown multi-business publishers, directories, review sites, menu
+   mirrors, tourism/editorial sites, and hosted listing pages as non-official by
+   default without relying on their hostname being pre-enumerated.
+4. Define the narrow evidence combinations that can prove ownership, document
+   their limitations, and make every unproven case `review` or `rejected`.
+5. Add adversarial tests whose directory hostnames are randomly generated or
+   otherwise absent from every blocklist. Tests must demonstrate that content,
+   schema, matching phone/address, canonical metadata, and a menu link still
+   cannot manufacture first-party ownership.
+6. Replay both completed pilot databases entirely offline. The correction must
+   reject every independently adjudicated false official-site publication while
+   retaining the true positives. Report false-positive and retention counts
+   separately; do not describe an overfitted fixture result as live precision.
+7. Audit the pipeline for unavailable-provider behavior. The sandboxed
+   diagnostic marked 36 jobs succeeded after transport failures and an open
+   circuit, producing no facts. Provider unavailability must pause/fail closed,
+   never become a successful no-result run.
+8. Preserve the new booking-versus-food-order distinction and add regressions
+   for the Ranch Roberta and La Bastiglia role errors.
+9. Write an offline correction report and stop. Do not select a third sample,
+   estimate a new live budget, or run Brave.
+
+The next session should explicitly tell the operator what invariant now prevents
+an unseen directory from being published. If that answer is another hostname
+list, the work is not complete.
 
 See `benchmark/SESSION-10-LIVE-PILOT-REPORT.md` and
 `benchmark/SESSION-10-FRESH-PILOT-REPORT.md`.
