@@ -17,6 +17,13 @@ const DIRECTORY_DOMAINS = [
   "tuttoindirizzi.it", "distanzechilometriche.net", "gustoegusti.it",
   "places2.com", "guidotommasi.it", "oggitreviso.it", "telefono-societa.it",
   "cronachedigusto.it", "touringclub.it", "lacaseranevegal.it", "enrosadira.it",
+  // Session 10 live-pilot regressions: third-party directories, review sites,
+  // tourism/editorial publishers, and business-listing hosts are evidence
+  // sources, never the venue's official website.
+  "corriere.it", "mindtrip.ai", "trivago.it", "informazione-aziende.it",
+  "wanderme.net", "telefono.click", "rivieraconero.com", "prontoatutto.it",
+  "roma03.net", "nuovaopinione.it", "iltaccodibacco.it", "top10posti.it",
+  "happycow.net", "hotel-trapani.com",
 ];
 const DIRECTORY_DOMAIN_MARKERS = ["tripadvisor.", "restaurantguru."];
 const SOCIAL_DOMAINS = ["facebook.com", "instagram.com", "youtube.com", "tiktok.com"];
@@ -59,6 +66,7 @@ const IMAGE_JUNK_TERMS = [
 const EDITORIAL_RESOURCE_PATHS = ["/blog/", "/news/", "/taccuino/", "/viaggi-di-vino/"];
 const LODGING_TERMS = ["room", "rooms", "camera", "camere", "suite", "bedroom", "alloggio"];
 const BUSINESS_SCHEMA_TERMS = ["restaurant", "foodestablishment", "barorpub", "cafeorcoffeeshop", "localbusiness"];
+const EDITORIAL_SCHEMA_TERMS = ["article", "newsarticle", "blogposting", "review", "itemlist"];
 const NON_RESTAURANT_TERMS = [
   "istituto", "scuola", "universita", "comune", "municipio", "museo", "parrocchia",
   "immobiliare", "automobili", "officina", "farmacia",
@@ -283,7 +291,7 @@ export function extractRelevantSiteResources(html, website) {
     const isImage = /\.(?:png|jpe?g|gif|webp|avif)(?:$|[?#])/i.test(resolved);
     const hasMenu = hasAnyTerm(descriptor, MENU_TERMS);
     const hasDrinks = hasAnyTerm(descriptor, DRINK_TERMS);
-    const hasOrder = hasAnyTerm(descriptor, ORDER_TERMS);
+    const hasOrder = isOrderingUrl(resolved) || hasAnyTerm(descriptor, ORDER_TERMS);
     const hasSpecialty = hasAnyTerm(descriptor, SPECIALTY_TERMS);
     const sameDomain = extractDomain(resolved) === domain;
     const externalOrderPage = !sameDomain && hasOrder && classifyWebsite(resolved) === "official";
@@ -466,6 +474,7 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
   const geographyContradiction = !hasTargetPlace && foreignPlaces.length > 0;
   const schemaTypes = (facts.structured_types || []).map(normalizeText);
   const structuredBusiness = schemaTypes.some((type) => BUSINESS_SCHEMA_TERMS.includes(type));
+  const structuredEditorial = schemaTypes.some((type) => EDITORIAL_SCHEMA_TERMS.includes(type));
   const hasFood = hasAnyTerm(haystack, FOOD_TERMS);
   const nonRestaurantContext = hasAnyTerm(haystack, NON_RESTAURANT_TERMS) && !hasFood && !structuredBusiness;
   const usefulResources = Number(crawl.resources?.length || 0) > 0;
@@ -516,6 +525,7 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
   if (addressMatch) reasons.push("address_match");
   if (hasFood) reasons.push("restaurant_context");
   if (structuredBusiness) reasons.push("structured_business_data");
+  if (structuredEditorial) reasons.push("structured_editorial_data");
   if (canonicalSameDomain) reasons.push("same_domain_canonical");
   if (usefulResources) reasons.push("useful_first_party_resource");
   if (redirectDomainChanged) reasons.push("redirect_domain_changed");
@@ -525,14 +535,19 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
 
   const structuredKnownIdentity = candidate.known && exactName && brandedDomain
     && hasTargetPlace && usefulResources;
+  // Search-result text and a matching phone/address can prove that a page is
+  // about the venue, but not that its publisher is the venue. Publication
+  // requires an independent first-party signal.
+  const firstPartyEvidence = brandedDomain || structuredSourceWebsite
+    || (canonicalSameDomain && structuredBusiness && !structuredEditorial);
   const hasOfficialContext = hasFood || structuredBusiness || phoneMatch || addressMatch
     || structuredKnownIdentity || structuredSourceWebsite;
   let outcome = "rejected";
-  if (!canonicalConflict && !geographyContradiction && !nonRestaurantContext
+  if (!canonicalConflict && !geographyContradiction && !nonRestaurantContext && !structuredEditorial
       && identity >= 55 && officialness >= 45
-      && hasOfficialContext && (geography >= 50 || candidate.known)) {
+      && firstPartyEvidence && hasOfficialContext && (geography >= 50 || candidate.known)) {
     outcome = "accepted";
-  } else if (!canonicalConflict && !geographyContradiction && !nonRestaurantContext
+  } else if (!canonicalConflict && !geographyContradiction && !nonRestaurantContext && !structuredEditorial
       && identity >= 35 && officialness >= 30) {
     outcome = "review";
   }
@@ -637,7 +652,9 @@ export function validateResourceCandidate(candidate, restaurant, location, offic
   const isPdf = contentType.includes("application/pdf") || /\.pdf(?:$|[?#])/i.test(finalUrl);
   const isImage = contentType.startsWith("image/") || /\.(?:png|jpe?g|webp|avif)(?:$|[?#])/i.test(finalUrl);
   const htmlLike = !contentType || contentType.includes("html") || contentType.includes("xhtml");
-  const roleDecision = classifyResourceRole(anchorUrlDescriptor, pageDescriptor, candidate.role, { isPdf, isImage });
+  const roleDecision = classifyResourceRole(anchorUrlDescriptor, pageDescriptor, candidate.role, {
+    isPdf, isImage, isOrderingSurface: isOrderingUrl(finalUrl),
+  });
   const role = roleDecision.role;
   const requestedPlaces = requestedPlaceTokens(location);
   const targetPlace = requestedPlaces[0] || "";
@@ -653,7 +670,8 @@ export function validateResourceCandidate(candidate, restaurant, location, offic
   const tokenMatches = nameTokens.filter((token) => identityText.includes(token));
   const venueIdentity = exactName || (nameTokens.length > 0 && tokenMatches.length / nameTokens.length >= 0.5);
   const roleDescriptor = roleDecision.source === "page" ? pageDescriptor : anchorUrlDescriptor;
-  const roleEvidence = role === "menu_image" ? isImage
+  const roleEvidence = roleDecision.source === "ordering_surface" ? true
+    : role === "menu_image" ? isImage
     : role === "order" ? hasAnyTerm(roleDescriptor, ORDER_TERMS)
     : role === "drinks" ? hasAnyTerm(roleDescriptor, DRINK_TERMS)
     : role === "specialty" ? hasAnyTerm(roleDescriptor, SPECIALTY_TERMS)
@@ -751,8 +769,13 @@ function publicResourceDecision(decision) {
   };
 }
 
-function classifyResourceRole(anchorUrlDescriptor, pageDescriptor, fallback, { isPdf, isImage }) {
+function classifyResourceRole(anchorUrlDescriptor, pageDescriptor, fallback, {
+  isPdf, isImage, isOrderingSurface,
+}) {
   if (isImage) return { role: "menu_image", source: "anchor_url" };
+  // A menu route on a merchant-controlled ordering host is still an ordering
+  // interface. This keeps content menus distinct from transaction surfaces.
+  if (isOrderingSurface) return { role: "order", source: "ordering_surface" };
   const strong = roleFromTerms(anchorUrlDescriptor, isPdf);
   if (strong) return { role: strong, source: "anchor_url" };
   if (fallback && PUBLISHABLE_RESOURCE_ROLES.has(fallback)) return { role: fallback, source: "candidate" };
@@ -903,6 +926,17 @@ function roleFromTerms(descriptor, isPdf = false) {
   if (hasAnyTerm(descriptor, SPECIALTY_TERMS)) return "specialty";
   if (isPdf) return "menu";
   return null;
+}
+
+function isOrderingUrl(value) {
+  try {
+    const hostname = new URL(value).hostname.toLowerCase();
+    return hostname.startsWith("order.") || hostname.startsWith("orders.")
+      || hostname.startsWith("delivery.") || hostname.includes(".order.")
+      || hostname.includes(".orders.") || hostname.includes(".delivery.")
+      || hostname === "dish.co" || hostname.endsWith(".dish.co")
+      || hostname === "ipratico.com" || hostname.endsWith(".ipratico.com");
+  } catch { return false; }
 }
 
 function extractResourcePageDescriptor(html, url) {

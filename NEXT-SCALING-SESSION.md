@@ -6,6 +6,13 @@ NO-GO: the cold pilot completed, while its warm replay is durably paused at the
 shared request ceiling. The 25-request reserve is intact; 156,057 national
 candidates remain queued and untouched.
 
+The bounded offline correction is complete. It blocks all 14 observed
+official-site false positives, requires first-party publication evidence, and
+fixes the observed ordering-platform role mismatch. No live requests were
+used, and the live decision remains NO-GO pending independent resource
+adjudication and a fresh authorized pilot. See
+`benchmark/SESSION-10-OFFLINE-CORRECTION-REPORT.md`.
+
 Read this file first, then `ITALY-WEB-ENRICHMENT-PLAN.md` and
 `benchmark/PHASE-8-LIVE-ACCEPTANCE-REPORT.md`.
 
@@ -134,11 +141,14 @@ manual or automatic resume. Implementation and tests spent zero live requests.
 
 The operator authorized and supplied credentials for the bounded live pilot on
 2026-09-01. The review was redone and the cold run completed, but the quality
-decision is NO-GO. Before any new live run, hard-reject directory/editorial
-official-site candidates, add the 14 observed false positives as regression
-fixtures, reconcile resource roles, and obtain a new explicit provider
-allowance. Do not resume the warm checkpoint merely to consume the reserve.
-See `benchmark/SESSION-10-LIVE-PILOT-REPORT.md`.
+decision is NO-GO. The required offline correction now hard-rejects the 14
+observed directory/editorial official-site candidates, versions them as
+regression fixtures, requires first-party evidence, and reconciles the observed
+ordering-platform role mismatch. Before any new live run, independently
+adjudicate the remaining novel resource outputs and obtain a new explicit
+provider allowance. Do not resume the warm checkpoint merely to consume the
+reserve. See `benchmark/SESSION-10-LIVE-PILOT-REPORT.md` and
+`benchmark/SESSION-10-OFFLINE-CORRECTION-REPORT.md`.
 
 Do not start either the 13,073-job Veneto queue or the 156,057-job national
 queue wholesale. No national publication is authorized by the offline import.

@@ -87,3 +87,12 @@ first-party officialness evidence before accepting a website; add these 14
 false positives as regression fixtures; reconcile the resource-role taxonomy
 with the benchmark; then rerun a fresh, independently reviewed pilot under a
 new explicit provider allowance. Sessions 11 and 12 remain blocked.
+
+## Offline follow-up
+
+The directory/editorial hard rejects, all 14 regression fixtures, independent
+first-party publication gate, and the observed ordering-platform role fix were
+completed offline on 2026-09-01. See
+`SESSION-10-OFFLINE-CORRECTION-REPORT.md`. This used no live requests and does
+not change the NO-GO decision; independent resource adjudication and a fresh
+authorized pilot are still required.

@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0-session-6",
+  "version": "1.5.0-session-10-regressions",
   "provenance": {
     "created_at": "2026-08-26",
     "method": "Synthetic offline website metadata and transient crawl facts derived from labelled benchmark classes"
@@ -182,6 +182,118 @@
         "title": "Al Bivio a Oderzo - Pizzeria",
         "snippet": "Al Bivio, ristorante e pizzeria a Oderzo"
       }
+    },
+    {
+      "id": "session-10-latteneve-corriere-editorial",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Milano MI",
+      "restaurant": { "name": "LatteNeve" },
+      "candidate": { "url": "https://vivimilano.corriere.it/ristoranti/gelaterie/latteneve/", "title": "LatteNeve - ViviMilano", "snippet": "Gelateria LatteNeve a Milano" }
+    },
+    {
+      "id": "session-10-san-giorgio-mindtrip-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Portofino GE",
+      "restaurant": { "name": "Gelateria Bar San Giorgio" },
+      "candidate": { "url": "https://mindtrip.ai/restaurant/portofino-liguria/gelateria-bar-san-giorgio/re-Qt53Sbsd", "title": "Gelateria Bar San Giorgio", "snippet": "Restaurant in Portofino" }
+    },
+    {
+      "id": "session-10-malcantone-trivago-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Bologna BO",
+      "restaurant": { "name": "Bar Il Malcantone" },
+      "candidate": { "url": "https://www.trivago.it/it/oar/aparthotel-studio-barca-bologna?search=100-4578474", "title": "Studio Barca Bologna", "snippet": "Hotel listing in Bologna" }
+    },
+    {
+      "id": "session-10-bar-firenze-business-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "San Gimignano SI",
+      "restaurant": { "name": "Bar Firenze" },
+      "candidate": { "url": "https://www.informazione-aziende.it/Azienda_BAR-FIRENZE-DI-BIUZZI-ELISA-C-SNC", "title": "Bar Firenze company information", "snippet": "Business listing" }
+    },
+    {
+      "id": "session-10-grottino-wanderme-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Spello PG",
+      "restaurant": { "name": "Pizzeria Il Grottino" },
+      "candidate": { "url": "https://wanderme.net/en/poi/pizzeria-il-grottino-spello-province-of-perugia-italy/21347", "title": "Pizzeria Il Grottino", "snippet": "Point of interest in Spello" }
+    },
+    {
+      "id": "session-10-cavour-phone-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Spello PG",
+      "restaurant": { "name": "Caffè Cavour" },
+      "candidate": { "url": "https://0742651426.telefono.click/0742651426-caffe-cavour-pizzeria-e-tabaccheria-perugia.html", "title": "Caffè Cavour", "snippet": "Telephone listing in Perugia" }
+    },
+    {
+      "id": "session-10-belvedere-tourism-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Sirolo AN",
+      "restaurant": { "name": "Bar Belvedere" },
+      "candidate": { "url": "https://www.rivieraconero.com/scopri/trattoria-bar-belvedere-di-barbadoro-rosanna-sirolo/", "title": "Trattoria Bar Belvedere", "snippet": "Tourism listing in Sirolo" }
+    },
+    {
+      "id": "session-10-clifton-business-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Roma RM",
+      "restaurant": { "name": "The Clifton" },
+      "candidate": { "url": "https://www.prontoatutto.it/attivita/pub-birreria-roma-portuense-the-clifton/", "title": "The Clifton pub birreria", "snippet": "Business listing in Roma" }
+    },
+    {
+      "id": "session-10-bivacco-editorial",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Roma RM",
+      "restaurant": { "name": "Il Bivacco" },
+      "candidate": { "url": "https://www.roma03.net/salviamo-la-pista-di-pattinaggio-inclusiva-per-bambini-de-il-bivacco/", "title": "Salviamo la pista di pattinaggio de Il Bivacco", "snippet": "Editorial article in Roma" }
+    },
+    {
+      "id": "session-10-crash-review-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Alberobello BA",
+      "restaurant": { "name": "Pub Crash" },
+      "candidate": { "url": "https://www.nuovaopinione.it/alberobello/pub/pub-crash-398679", "title": "Pub Crash opinioni", "snippet": "Review listing in Alberobello" }
+    },
+    {
+      "id": "session-10-bagia-event-editorial",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Alberobello BA",
+      "restaurant": { "name": "Bagia' Alberobello" },
+      "candidate": { "url": "https://iltaccodibacco.it/puglia/eventi/58956.html", "title": "Bagia' Alberobello event", "snippet": "Event listing in Puglia" }
+    },
+    {
+      "id": "session-10-pino-loricato-ranking-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Civita CS",
+      "restaurant": { "name": "Pizzeria Pino Loricato Civita" },
+      "candidate": { "url": "https://pizza.top10posti.it/041380/Pizzeria_Pino_Loricato_Civita", "title": "Pizzeria Pino Loricato Civita", "snippet": "Ranked pizza listing" }
+    },
+    {
+      "id": "session-10-liparoti-review-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Erice TP",
+      "restaurant": { "name": "Gelateria Liparoti" },
+      "candidate": { "url": "https://www.happycow.net/reviews/gelateria-liparoti-erice-429004", "title": "Gelateria Liparoti reviews", "snippet": "Review listing in Erice" }
+    },
+    {
+      "id": "session-10-rustica-hotel-directory",
+      "label": "not_official",
+      "expected": "rejected",
+      "location": "Erice TP",
+      "restaurant": { "name": "Pizzeria La Rustica" },
+      "candidate": { "url": "https://www.hotel-trapani.com/ristorante/trapani/176-Pizzeria-La-Rustica", "title": "Pizzeria La Rustica", "snippet": "Restaurant listing near Trapani hotels" }
     }
   ]
 }

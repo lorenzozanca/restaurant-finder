@@ -186,6 +186,25 @@ test("keeps focused menu, order, specialty, and context-supported image links", 
   assert.deepEqual(resources[0].evidence, ["same_official_domain", "menu_anchor"]);
 });
 
+test("treats menu routes on ordering platforms as order resources", () => {
+  const html = '<a href="/menus/dolci">Dolci</a>';
+  const resources = extractRelevantSiteResources(html, "https://pizza-smile.order.dish.co/");
+  assert.equal(resources.length, 1);
+  assert.equal(resources[0].role, "order");
+
+  const decision = validateResourceCandidate(resources[0], { name: "Pizza Smile" }, "Trieste TS",
+    "https://pizza-smile.order.dish.co/", {
+      ok: true,
+      status: 200,
+      final_url: "https://pizza-smile.order.dish.co/menus/dolci",
+      content_type: "text/html",
+      body: "<title>Pizza Smile - Dolci</title><h1>Pizza Smile</h1>",
+    });
+  assert.equal(decision.status, "accepted");
+  assert.equal(decision.role, "order");
+  assert.equal(decision.resource.role_evidence.source, "ordering_surface");
+});
+
 test("keeps an official PDF even when its filename is merely Listino", () => {
   const html = '<a href="/Listino.pdf"><img src="button-123.jpg" alt="Consulta prezzi"></a>';
   const resources = extractRelevantSiteResources(html, "https://pizzaoderzo.it/");
@@ -434,6 +453,64 @@ test("classifies editorial and business-list pages as directories", () => {
   }
 });
 
+test("classifies every Session 10 official-website false-positive host as a directory", () => {
+  const urls = [
+    "https://vivimilano.corriere.it/ristoranti/gelaterie/latteneve/",
+    "https://mindtrip.ai/restaurant/portofino-liguria/gelateria-bar-san-giorgio/re-Qt53Sbsd",
+    "https://www.trivago.it/it/oar/aparthotel-studio-barca-bologna",
+    "https://www.informazione-aziende.it/Azienda_BAR-FIRENZE",
+    "https://wanderme.net/en/poi/pizzeria-il-grottino/21347",
+    "https://0742651426.telefono.click/example.html",
+    "https://www.rivieraconero.com/scopri/trattoria-bar-belvedere/",
+    "https://www.prontoatutto.it/attivita/the-clifton/",
+    "https://www.roma03.net/salviamo-il-bivacco/",
+    "https://www.nuovaopinione.it/alberobello/pub/pub-crash-398679",
+    "https://iltaccodibacco.it/puglia/eventi/58956.html",
+    "https://pizza.top10posti.it/041380/Pizzeria_Pino_Loricato_Civita",
+    "https://www.happycow.net/reviews/gelateria-liparoti-erice-429004",
+    "https://www.hotel-trapani.com/ristorante/trapani/176-Pizzeria-La-Rustica",
+  ];
+  assert.equal(urls.length, 14);
+  for (const url of urls) assert.equal(classifyWebsite(url), "directory", url);
+});
+
+test("requires first-party evidence before publishing a matching venue page", () => {
+  const scored = scoreOfficialWebsite({
+    url: "https://publisher.test/guide/fixture-oderzo",
+    title: "Fixture Oderzo",
+    snippet: "Fixture ristorante a Oderzo, telefono 0422 123456",
+    crawl: {
+      final_url: "https://publisher.test/guide/fixture-oderzo",
+      resources: [],
+      site_facts: {
+        text: "Fixture ristorante a Oderzo, telefono 0422 123456",
+        canonical_url: "https://publisher.test/guide/fixture-oderzo",
+        structured_types: [],
+        phones: "0422 123456",
+      },
+    },
+  }, { name: "Fixture", phone: "+39 0422 123456" }, "Oderzo TV");
+  assert.equal(scored.outcome, "review");
+});
+
+test("rejects editorial schema even when an article repeats venue identity", () => {
+  const scored = scoreOfficialWebsite({
+    url: "https://publisher.test/news/fixture-oderzo",
+    crawl: {
+      final_url: "https://publisher.test/news/fixture-oderzo",
+      resources: [],
+      site_facts: {
+        text: "Fixture ristorante a Oderzo, telefono 0422 123456",
+        canonical_url: "https://publisher.test/news/fixture-oderzo",
+        structured_types: ["BlogPosting", "Restaurant"],
+        phones: "0422 123456",
+      },
+    },
+  }, { name: "Fixture", phone: "+39 0422 123456" }, "Oderzo TV");
+  assert.equal(scored.outcome, "rejected");
+  assert.ok(scored.reasons.includes("structured_editorial_data"));
+});
+
 test("rejects non-food card articles and editorial resource paths", () => {
   const response = (url, body) => ({ ok: true, status: 200, final_url: url,
     content_type: "text/html", body });
@@ -540,7 +617,9 @@ test("reuses a canonical homepage crawl across aliases but keeps branch pages se
         : "Ca Lozzio, ristorante a Oderzo";
       return {
         ok: true,
-        body: `<main>${`${identity}. `.repeat(10)}<a href="/menu.pdf">Menu PDF</a></main>`,
+        body: `<link rel="canonical" href="${url}">
+          <script type="application/ld+json">{"@type":"Restaurant"}</script>
+          <main>${`${identity}. `.repeat(10)}<a href="/menu.pdf">Menu PDF</a></main>`,
       };
     },
     getRendered: async () => ({ ok: false, body: "" }),

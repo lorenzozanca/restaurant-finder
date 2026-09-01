@@ -1,5 +1,5 @@
 {
-  "version": "1.0-session-7",
+  "version": "1.1-session-10-role-reconciliation",
   "thresholds": { "published_resource_precision": 0.95 },
   "cases": [
     {
@@ -111,6 +111,16 @@
       "response": { "ok": true, "status": 200, "final_url": "https://piatti.menu/restaurants/oderzo/al-bivio", "content_type": "text/html", "body": "Al Bivio Oderzo menu" },
       "expected_status": "rejected",
       "expected_role": "menu"
+    },
+    {
+      "id": "session-10-order-platform-menu-route",
+      "restaurant": { "name": "Pizza Smile" },
+      "location": "Trieste TS",
+      "official_website": "https://pizza-smile.order.dish.co/",
+      "candidate": { "url": "https://pizza-smile.order.dish.co/menus/dolci", "role": "menu", "label": "Dolci" },
+      "response": { "ok": true, "status": 200, "final_url": "https://pizza-smile.order.dish.co/menus/dolci", "content_type": "text/html", "body": "<title>Pizza Smile - Dolci</title><h1>Pizza Smile</h1>" },
+      "expected_status": "accepted",
+      "expected_role": "order"
     }
   ]
 }

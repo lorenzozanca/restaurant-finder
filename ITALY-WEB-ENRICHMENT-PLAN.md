@@ -621,6 +621,7 @@ and regression gates must pass.
 | 8. Durable store/queue | Complete | 2026-08-27 | SQLite schema v2 adds leased idempotent jobs, recovery, retries, dead letters, cancellation, persistent budgets/circuits, manifests, worker tests, operator commands, and UI-compatible export. |
 | 9. Italy candidate importer | Complete | 2026-08-28 | Pinned 3,100,760-record Overture input plus 7,895 ISTAT boundaries produced 156,740 admitted source records and 156,057 canonical queued candidates in 7,398 municipalities. SQLite integrity passes; attempts remain zero. |
 | 10. Stratified pilot | Complete — NO-GO | 2026-09-01 | Review redone; cold run completed 36/36 with 71 Brave attempts. Website precision was 10/24 (41.7%; Wilson 95% CI 24.5–61.2%), far below the 95% gate. Warm replay paused at the shared 72-request ceiling after 6/36 jobs; the 25-request reserve remains intact. Fix systemic directory/editorial false positives and rerun a fresh pilot before Sessions 11–12. |
+| 10a. Offline pilot correction | Complete — live NO-GO unchanged | 2026-09-01 | Added all 14 observed website false positives as regressions, blocked their directory/editorial hosts, required independent first-party evidence, and fixed the Dish ordering-surface role mismatch. Website and resource fixtures pass at 100% with zero live requests. Independently adjudicate novel resources and obtain a new allowance before a fresh pilot. |
 | 11. Compliance/operations | Not started | — | Required before public release. |
 | 12. Regional/national waves | Not started | — | Quality-gated rollout. |
 
