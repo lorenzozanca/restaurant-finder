@@ -224,6 +224,15 @@ test("extracts an ordering page linked by the official website on an external do
   assert.deepEqual(resources[0].evidence, ["linked_from_official_site", "order_anchor"]);
 });
 
+test("keeps table booking distinct from food ordering", () => {
+  const resources = extractRelevantSiteResources(
+    '<a href="https://booking.example.test/table/fixture">Prenota il tuo tavolo</a>',
+    "https://fixture.test/",
+  );
+  assert.equal(resources.length, 1);
+  assert.equal(resources[0].role, "booking");
+});
+
 test("retains an uncertain external resource for review instead of publishing it", () => {
   const decision = validateResourceCandidate({
     url: "https://delivery.test/order/123",
@@ -472,6 +481,15 @@ test("classifies every Session 10 official-website false-positive host as a dire
   ];
   assert.equal(urls.length, 14);
   for (const url of urls) assert.equal(classifyWebsite(url), "directory", url);
+});
+
+test("classifies every fresh-pilot directory false-positive host as a directory", () => {
+  for (const url of [
+    "https://ristoranti.giallozafferano.it/ristoranti/valle-d-aosta/example.html",
+    "https://venue.grubbio.com/", "https://regione-liguria.opendi.it/example.html",
+    "https://venue.res-menu.net/menu", "https://www.mycia.it/menu/example",
+    "https://mapstr.com/place/example",
+  ]) assert.equal(classifyWebsite(url), "directory", url);
 });
 
 test("requires first-party evidence before publishing a matching venue page", () => {

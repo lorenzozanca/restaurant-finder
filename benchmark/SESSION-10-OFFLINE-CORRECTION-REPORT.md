@@ -63,3 +63,20 @@ the reserve. Before reconsidering rollout, independently adjudicate the novel
 resource outputs, select and review a fresh pilot sample, obtain a new explicit
 Brave allowance, and run a fresh isolated cold/warm pilot against the unchanged
 95% publication gates.
+
+## Fresh-pilot authorization
+
+On 2026-09-01, the operator reported approximately 900 Brave requests available
+for the month and authorized a new, separate fresh-pilot allowance:
+
+- combined cold/warm hard ceiling: 120 Brave API requests;
+- expected use: 80–100 requests;
+- fresh sample: about 40 manually reviewed venues, excluding the prior pilot;
+- old partial warm run: do not resume;
+- Veneto and national queues: not authorized;
+- overrun or statistically inadequate sample: stop and report before seeking a
+  larger allowance.
+
+The continuation procedure was executed on 2026-09-01 and ended in a fresh
+quality NO-GO after 97 requests. This historical authorization does not permit
+another run. See `SESSION-10-FRESH-PILOT-REPORT.md`.

@@ -9,10 +9,14 @@ import { findMenuSources } from "./find-menu.mjs";
 import { searchDetailed } from "./lib/search.mjs";
 import { createScheduledSearchProvider } from "./lib/provider-scheduler.mjs";
 import { createBraveWebApiProvider } from "./sources/search/brave-web-api.mjs";
+import { get, getRendered } from "./lib/lib.mjs";
 
 export async function runPilot(input, dependencies = {}) {
   const config = validateConfig(input.config);
   const dbPath = resolve(input.dbPath);
+  if (resolve(config.inputs.evidence_store?.path || input.dbPath) !== dbPath) {
+    throw new Error("pilot evidence store must be the isolated pilot database");
+  }
   verifySha256(resolve(config.inputs.reviewed_selection.path), config.inputs.reviewed_selection.sha256,
     "reviewed selection");
   const actualDatabaseSha256 = sha256(dbPath);
@@ -99,7 +103,10 @@ export async function runPilot(input, dependencies = {}) {
         identity: { aliases: [venue.name, ...(venue.aliases || [])].filter(Boolean) },
       }, { providers: [provider], cacheDir: resolve(config.cache.search_directory) }));
       return (dependencies.enrich || findMenuSources)(venue, location, {
-        search, resolverBudget: { searches: config.resolver.searches_per_venue,
+        search,
+        get: (url, options) => get(url, { ...options, cacheDir: resolve(config.cache.http_directory) }),
+        getRendered,
+        resolverBudget: { searches: config.resolver.searches_per_venue,
           crawls: config.resolver.crawls_per_venue,
           budget_escalation_reason: config.resolver.budget_escalation_reason },
       });
@@ -179,10 +186,18 @@ function validateConfig(config) {
   if (config.authorization?.national_queue !== false || config.authorization?.publication !== false) {
     throw new Error("pilot authorization must not authorize the national queue or publication");
   }
-  if (config.request_budget?.combined_ceiling !== 72 || config.request_budget?.reserve !== 25) {
-    throw new Error("pilot manifest must preserve the 72-request ceiling and 25-request reserve");
+  const legacyAllowance = config.request_budget?.combined_ceiling === 72
+    && config.request_budget?.reserve === 25 && !config.authorization?.allowance_id;
+  const freshAllowance = config.authorization?.allowance_id === "session-10-fresh-pilot-2026-09-01"
+    && config.request_budget?.combined_ceiling === 120
+    && config.request_budget?.reserve === 780;
+  if (!legacyAllowance && !freshAllowance) {
+    throw new Error("pilot manifest does not match an authorized request allowance");
   }
   if (!config.request_budget.period) throw new Error("pilot budget period is required");
+  if (!config.cache?.search_directory || !config.cache?.http_directory) {
+    throw new Error("pilot requires isolated search and HTTP cache directories");
+  }
   if (config.worker?.concurrency !== 2 || config.provider?.concurrency !== 1
     || config.worker?.per_domain_concurrency !== 1 || config.provider?.requests_per_second !== 1) {
     throw new Error("pilot concurrency or pacing differs from the approved limits");

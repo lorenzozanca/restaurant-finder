@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "run_id": "session-10-fresh-cold-v2",
+  "scenario": "cold",
+  "code_version": "working-tree-2026-09-01-fresh-pilot",
+  "scoring_version": "website-first-resource-validation-v1",
+  "inputs": {
+    "reviewed_selection": {
+      "path": "benchmark/SESSION-10-FRESH-PILOT-SELECTION.json",
+      "sha256": "b6cb9777eeee6b3bef531cfd1c5663cf22b2d4f225c493e76d0dd2bfec882efd"
+    },
+    "pilot_database": {
+      "path": "data/session-10-fresh/session-10-fresh-pilot-live.sqlite",
+      "sha256": "e694ddddffd7875029da66ccf6462cb674791107b406355073c23393a1e1876d",
+      "expected_jobs": 36
+    },
+    "evidence_store": {
+      "path": "data/session-10-fresh/session-10-fresh-pilot-live.sqlite"
+    }
+  },
+  "request_budget": {
+    "provider_reported_allowance": 900,
+    "combined_ceiling": 120,
+    "reserve": 780,
+    "period": "session-10-fresh-pilot-v2"
+  },
+  "provider": {
+    "name": "brave_web_api",
+    "concurrency": 1,
+    "requests_per_second": 1,
+    "max_retries": 1
+  },
+  "worker": {
+    "concurrency": 2,
+    "per_domain_concurrency": 1,
+    "maximum_job_attempts": 2
+  },
+  "resolver": {
+    "searches_per_venue": 3,
+    "crawls_per_venue": 3,
+    "budget_escalation_reason": "fresh_stratified_pilot_manual_reviewed_candidates"
+  },
+  "cache": {
+    "search_directory": "data/session-10-fresh/cache/search-v2",
+    "http_directory": "data/session-10-fresh/cache/http-v2"
+  },
+  "authorization": {
+    "live_pilot": true,
+    "allowance_id": "session-10-fresh-pilot-2026-09-01",
+    "authorized_at": "2026-09-01",
+    "authorization_source": "operator reported approximately 900 monthly requests and authorized a fresh combined 120-request cold/warm ceiling",
+    "national_queue": false,
+    "publication": false
+  }
+}

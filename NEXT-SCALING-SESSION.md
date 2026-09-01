@@ -1,10 +1,12 @@
 # Next scaling session handoff
 
 Updated: 2026-09-01
-State: Sessions 8 and 9 are complete. Session 10 ran and ended in a quality
-NO-GO: the cold pilot completed, while its warm replay is durably paused at the
-shared request ceiling. The 25-request reserve is intact; 156,057 national
-candidates remain queued and untouched.
+State: Sessions 8 and 9 are complete. Both Session 10 pilots ended in quality
+NO-GO decisions. The fresh isolated cold and warm runs completed 36/36 jobs
+using 97 of their combined 120-request ceiling, but official-website precision
+was only 5/14 (35.7%) and independently adjudicated resource precision was only
+3/7 (42.9%). No further live run is authorized. The 156,057 national candidates
+remain queued and untouched.
 
 The bounded offline correction is complete. It blocks all 14 observed
 official-site false positives, requires first-party publication evidence, and
@@ -93,10 +95,17 @@ source records and 13,073 canonical candidates. Importing used no Brave calls.
 
 ## Brave budget
 
-The operator reported 97 Brave requests available. The Session 10 cold and
-partial warm runs consumed the configured 72-request ceiling. The remaining 25
-requests are an operational reserve and must not be spent without a new explicit
-allowance and a fresh run authorization.
+The earlier Session 10 allowance was 97 Brave requests. Its cold and partial
+warm runs consumed the configured 72-request ceiling and left the old
+25-request reserve untouched.
+
+On 2026-09-01, the operator reported approximately 900 Brave requests available
+for the month and authorized the fresh validation plan. The completed cold and
+warm runs used 97 of their combined **120 Brave API request** ceiling, leaving
+23 unspent inside that ceiling and approximately 803 of the reported monthly
+allowance. That authorization is exhausted by completion of the scoped plan; it
+does not authorize another pilot, resuming the old warm checkpoint, or running
+the Veneto or national queues.
 
 The Brave API key is deliberately not stored in this repository. The key that
 was shared in chat should be rotated; configure its replacement only through
@@ -144,11 +153,20 @@ The operator authorized and supplied credentials for the bounded live pilot on
 decision is NO-GO. The required offline correction now hard-rejects the 14
 observed directory/editorial official-site candidates, versions them as
 regression fixtures, requires first-party evidence, and reconciles the observed
-ordering-platform role mismatch. Before any new live run, independently
-adjudicate the remaining novel resource outputs and obtain a new explicit
-provider allowance. Do not resume the warm checkpoint merely to consume the
-reserve. See `benchmark/SESSION-10-LIVE-PILOT-REPORT.md` and
-`benchmark/SESSION-10-OFFLINE-CORRECTION-REPORT.md`.
+ordering-platform role mismatch.
+
+The fresh provider allowance was executed. Its bounded plan completed, and its
+decision is NO-GO. Before any future live request:
+
+1. Keep Sessions 11–12, Veneto execution, and national execution blocked.
+2. Extend regression coverage for the fresh directory/menu-mirror failures and
+   the booking-versus-order role defect.
+3. Reassess the official-site policy architecture; host-by-host exclusions have
+   now failed to generalize across two independent samples.
+4. Obtain a new explicit provider allowance before any further live validation.
+
+See `benchmark/SESSION-10-LIVE-PILOT-REPORT.md` and
+`benchmark/SESSION-10-FRESH-PILOT-REPORT.md`.
 
 Do not start either the 13,073-job Veneto queue or the 156,057-job national
 queue wholesale. No national publication is authorized by the offline import.

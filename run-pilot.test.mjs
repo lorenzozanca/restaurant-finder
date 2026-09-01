@@ -57,6 +57,20 @@ test("live pilot rejects a reviewed-selection fingerprint mismatch before networ
   assert.equal(providerCreated, false);
 });
 
+test("accepts only the pinned fresh 120-request allowance", async () => {
+  const fixture = pilotFixture();
+  fixture.config.authorization.allowance_id = "session-10-fresh-pilot-2026-09-01";
+  fixture.config.request_budget = { combined_ceiling: 120, reserve: 780, period: "fresh-test" };
+  const result = await runPilot({ dbPath: fixture.dbPath, config: fixture.config, apiKey: "test" }, {
+    createProvider: () => ({ name: "brave_web_api", version: "test", async search() {
+      return { provider: "brave_web_api", http_status: 200, transport_ok: true, parse_ok: true,
+        raw_count: 0, rate_headers: {}, results: [] };
+    } }),
+    enrich: async () => ({ website: null, resources: [] }),
+  });
+  assert.equal(result.stopped, "completed");
+});
+
 test("warm pilot replays completed jobs while preserving the shared request budget", async () => {
   const fixture = pilotFixture();
   let calls = 0;
@@ -107,13 +121,14 @@ function pilotFixture() {
     schema_version: 1, run_id: "test-live-pilot", scenario: "cold",
     code_version: "test", scoring_version: "test",
     inputs: { reviewed_selection: { path: selectionPath, sha256: sha256(selectionPath) },
-      pilot_database: { path: dbPath, sha256: sha256(dbPath), expected_jobs: 1 } },
+      pilot_database: { path: dbPath, sha256: sha256(dbPath), expected_jobs: 1 },
+      evidence_store: { path: dbPath } },
     request_budget: { combined_ceiling: 72, reserve: 25, period: "test-live-pilot" },
     resolver: { searches_per_venue: 3, crawls_per_venue: 3,
       budget_escalation_reason: "labelled_high_confidence_venue" },
     worker: { concurrency: 2, per_domain_concurrency: 1 },
     provider: { name: "brave_web_api", concurrency: 1, requests_per_second: 1, max_retries: 1 },
-    cache: { search_directory: join(directory, "cache") },
+    cache: { search_directory: join(directory, "cache"), http_directory: join(directory, "http-cache") },
     authorization: { live_pilot: true, national_queue: false, publication: false },
   };
   return { directory, selectionPath, dbPath, config };

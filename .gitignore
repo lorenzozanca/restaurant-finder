@@ -9,6 +9,7 @@ data/overture/
 data/istat/**/source/
 data/istat/**/derived/
 data/session-10/
+data/session-10-fresh/
 
 # Local compliance decisions may contain operator, contract, and hosting details.
 .compliance/

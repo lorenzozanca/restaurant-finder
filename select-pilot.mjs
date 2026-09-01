@@ -4,7 +4,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { DatabaseSync } from "node:sqlite";
-import { PILOT_MUNICIPALITIES, pilotDocument, selectPilot } from "./lib/pilot-selector.mjs";
+import { FRESH_PILOT_MUNICIPALITIES, PILOT_MUNICIPALITIES, pilotDocument, selectPilot } from "./lib/pilot-selector.mjs";
 
 const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 
@@ -13,12 +13,21 @@ export async function runPilotSelection(args) {
   const inventoryPath = resolve(required(args.inventory, "inventory"));
   const outputPath = resolve(required(args.output, "output"));
   const inventoryDocument = JSON.parse(await readFile(inventoryPath, "utf8"));
+  const excludedVenueIds = args.excludeManifest
+    ? JSON.parse(await readFile(resolve(args.excludeManifest), "utf8")).candidates.map((item) => item.venue_id)
+    : [];
+  const municipalities = args.fresh === "true" ? FRESH_PILOT_MUNICIPALITIES : PILOT_MUNICIPALITIES;
   const database = new DatabaseSync(dbPath, { readOnly: true });
   let candidates;
-  try { candidates = loadCandidates(database, PILOT_MUNICIPALITIES.map((item) => item.istat_code)); }
+  try { candidates = loadCandidates(database, municipalities); }
   finally { database.close(); }
-  const selected = selectPilot(candidates, inventoryDocument.inventory.by_municipality);
+  const seed = args.seed || undefined;
+  const selected = selectPilot(candidates, inventoryDocument.inventory.by_municipality,
+    { seed, excludedVenueIds, municipalities });
   const document = pilotDocument(selected, {
+    selectionId: args.selectionId,
+    seed,
+    excludedVenueIds,
     source: {
       inventory_path: args.inventory,
       inventory_fingerprint: inventoryDocument.manifest.inventory_fingerprint,
@@ -35,7 +44,8 @@ export async function runPilotSelection(args) {
     strata_summary: document.strata_summary };
 }
 
-function loadCandidates(database, municipalityCodes) {
+function loadCandidates(database, municipalities) {
+  const municipalityCodes = municipalities.map((item) => item.istat_code);
   const placeholders = municipalityCodes.map(() => "?").join(", ");
   const queueRows = database.prepare(`
     SELECT j.job_id, j.venue_id, v.display_name AS name, j.payload_json
@@ -47,7 +57,7 @@ function loadCandidates(database, municipalityCodes) {
   // fast even for Roma and Milano, where the source_records table deliberately
   // has no venue_id index.
   const shortlist = [];
-  for (const stratum of PILOT_MUNICIPALITIES) {
+  for (const stratum of municipalities) {
     for (const coverage of ["known", "missing"]) {
       const cell = queueRows.filter((row) => {
         const payload = JSON.parse(row.payload_json);
@@ -112,7 +122,7 @@ function parseArgs(argv) {
 }
 function required(value, name) { if (!value) throw new TypeError(`--${name} is required`); return value; }
 function usage() {
-  return "Usage: node select-pilot.mjs --db PATH --inventory PATH --output PATH\n\n" +
+  return "Usage: node select-pilot.mjs --db PATH --inventory PATH --output PATH [--exclude-manifest PATH] [--seed VALUE] [--selection-id VALUE] [--fresh true]\n\n" +
     "Reads the national queue without mutation and writes a deterministic Session 10 selection with blank review labels.";
 }
 

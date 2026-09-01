@@ -24,6 +24,9 @@ const DIRECTORY_DOMAINS = [
   "wanderme.net", "telefono.click", "rivieraconero.com", "prontoatutto.it",
   "roma03.net", "nuovaopinione.it", "iltaccodibacco.it", "top10posti.it",
   "happycow.net", "hotel-trapani.com",
+  // Fresh Session 10 regressions: menu mirrors and business directories.
+  "giallozafferano.it", "grubbio.com", "opendi.it", "res-menu.net",
+  "mycia.it", "mapstr.com",
 ];
 const DIRECTORY_DOMAIN_MARKERS = ["tripadvisor.", "restaurantguru."];
 const SOCIAL_DOMAINS = ["facebook.com", "instagram.com", "youtube.com", "tiktok.com"];
@@ -49,8 +52,9 @@ const MENU_TERMS = [
 const DRINK_TERMS = ["drink", "vino", "vini", "wine", "bevande", "birre", "cocktail", "bar list"];
 const ORDER_TERMS = [
   "ordina", "ordine", "ordering", "asporto", "consegna", "domicilio",
-  "delivery", "takeaway", "take-away", "prenota", "booking",
+  "delivery", "takeaway", "take-away",
 ];
+const BOOKING_TERMS = ["prenota", "prenotazione", "booking", "reservation", "riserva tavolo"];
 const SPECIALTY_TERMS = [
   "carne", "pesce", "brace", "griglia", "specialita", "degustazione", "cantina",
 ];
@@ -93,7 +97,7 @@ const MAX_HTML_BODY_BYTES = 512_000;
 const MAX_SITEMAP_BODY_BYTES = 256_000;
 const MAX_BINARY_BODY_BYTES = 64_000;
 const SEASONAL_TERMS = ["estate", "inverno", "primavera", "autunno", "natale", "pasqua", "stagionale", "seasonal"];
-const PUBLISHABLE_RESOURCE_ROLES = new Set(["menu", "drinks", "order", "specialty", "menu_image"]);
+const PUBLISHABLE_RESOURCE_ROLES = new Set(["menu", "drinks", "order", "booking", "specialty", "menu_image"]);
 const websiteCrawlCache = new Map();
 
 export async function findMenuSources(restaurant, location, options = {}) {
@@ -292,15 +296,17 @@ export function extractRelevantSiteResources(html, website) {
     const hasMenu = hasAnyTerm(descriptor, MENU_TERMS);
     const hasDrinks = hasAnyTerm(descriptor, DRINK_TERMS);
     const hasOrder = isOrderingUrl(resolved) || hasAnyTerm(descriptor, ORDER_TERMS);
+    const hasBooking = hasAnyTerm(descriptor, BOOKING_TERMS);
     const hasSpecialty = hasAnyTerm(descriptor, SPECIALTY_TERMS);
     const sameDomain = extractDomain(resolved) === domain;
-    const externalOrderPage = !sameDomain && hasOrder && classifyWebsite(resolved) === "official";
-    if (!sameDomain && !externalOrderPage) continue;
-    if (!isPdf && !hasMenu && !hasDrinks && !hasOrder && !hasSpecialty) continue;
+    const externalTransactionalPage = !sameDomain && (hasOrder || hasBooking)
+      && classifyWebsite(resolved) === "official";
+    if (!sameDomain && !externalTransactionalPage) continue;
+    if (!isPdf && !hasMenu && !hasDrinks && !hasOrder && !hasBooking && !hasSpecialty) continue;
     if (hasOrder && hasAnyTerm(descriptor, LODGING_TERMS) && !hasMenu && !hasSpecialty) continue;
     resources.push({
       type: isPdf ? "pdf" : isImage ? "image" : "webpage",
-      role: isImage ? "menu_image" : hasOrder ? "order" : hasDrinks ? "drinks" : hasMenu || isPdf ? "menu" : "specialty",
+      role: isImage ? "menu_image" : hasOrder ? "order" : hasBooking ? "booking" : hasDrinks ? "drinks" : hasMenu || isPdf ? "menu" : "specialty",
       url: resolved,
       found_via: "official_website",
       confidence: isImage ? "low" : isPdf || hasMenu || hasOrder ? "high" : "medium",
@@ -673,6 +679,7 @@ export function validateResourceCandidate(candidate, restaurant, location, offic
   const roleEvidence = roleDecision.source === "ordering_surface" ? true
     : role === "menu_image" ? isImage
     : role === "order" ? hasAnyTerm(roleDescriptor, ORDER_TERMS)
+    : role === "booking" ? hasAnyTerm(roleDescriptor, BOOKING_TERMS)
     : role === "drinks" ? hasAnyTerm(roleDescriptor, DRINK_TERMS)
     : role === "specialty" ? hasAnyTerm(roleDescriptor, SPECIALTY_TERMS)
     : role === "menu" ? isPdf || hasAnyTerm(roleDescriptor, MENU_TERMS)
@@ -801,7 +808,7 @@ function preselectResourceCandidates(resources, limit = MAX_RESOURCE_VALIDATIONS
   const candidates = preferResourceVariants(resources).sort(compareResources);
   const selected = [];
   const selectedKeys = new Set();
-  const roles = ["menu", "drinks", "order", "specialty", "menu_image"];
+  const roles = ["menu", "drinks", "order", "booking", "specialty", "menu_image"];
   for (const role of roles) {
     const candidate = candidates.find((item) => item.role === role && !selectedKeys.has(canonicalResourceUrl(item.url)));
     if (!candidate || selected.length >= limit) continue;
@@ -827,7 +834,7 @@ function rankAndLimitResources(resources) {
   const eligible = sorted.filter((resource) =>
     !(resource.role === "secondary" && hasFirstPartyResource));
   const chosen = new Set();
-  for (const role of ["menu", "drinks", "order", "specialty", "menu_image", "secondary"]) {
+  for (const role of ["menu", "drinks", "order", "booking", "specialty", "menu_image", "secondary"]) {
     const candidate = eligible.find((item) => item.role === role);
     if (candidate && chosen.size < MAX_RESOURCES) chosen.add(candidate);
   }
@@ -863,10 +870,11 @@ async function trySitemaps(baseUrl, getFn, declared = [], maxRequests = MAX_SITE
       const url = decodeEntities(match[1]).trim();
       if (extractDomain(url) !== extractDomain(origin)) continue;
       const descriptor = normalizeText(url);
-      if (!hasAnyTerm(descriptor, [...MENU_TERMS, ...DRINK_TERMS, ...ORDER_TERMS, ...SPECIALTY_TERMS])) continue;
+      if (!hasAnyTerm(descriptor, [...MENU_TERMS, ...DRINK_TERMS, ...ORDER_TERMS, ...BOOKING_TERMS, ...SPECIALTY_TERMS])) continue;
       resources.push({
         type: /\.pdf(?:$|[?#])/i.test(url) ? "pdf" : "webpage",
         role: hasAnyTerm(descriptor, ORDER_TERMS) ? "order"
+          : hasAnyTerm(descriptor, BOOKING_TERMS) ? "booking"
           : hasAnyTerm(descriptor, DRINK_TERMS) ? "drinks"
           : hasAnyTerm(descriptor, SPECIALTY_TERMS) ? "specialty" : "menu",
         url, found_via: "official_sitemap", confidence: "medium",
@@ -911,7 +919,7 @@ async function searchOfficialResources(baseUrl, searchFn) {
 }
 
 function compareResources(a, b) {
-  const roleRank = { menu: 6, drinks: 5, order: 4, specialty: 3, menu_image: 2, venue_page: 1, secondary: 0 };
+  const roleRank = { menu: 7, drinks: 6, order: 5, booking: 4, specialty: 3, menu_image: 2, venue_page: 1, secondary: 0 };
   const confidenceRank = { high: 3, medium: 2, low: 1 };
   return (roleRank[b.role] || 0) - (roleRank[a.role] || 0)
     || (confidenceRank[b.confidence] || 0) - (confidenceRank[a.confidence] || 0)
@@ -921,6 +929,7 @@ function compareResources(a, b) {
 
 function roleFromTerms(descriptor, isPdf = false) {
   if (hasAnyTerm(descriptor, ORDER_TERMS)) return "order";
+  if (hasAnyTerm(descriptor, BOOKING_TERMS)) return "booking";
   if (hasAnyTerm(descriptor, DRINK_TERMS)) return "drinks";
   if (hasAnyTerm(descriptor, MENU_TERMS)) return "menu";
   if (hasAnyTerm(descriptor, SPECIALTY_TERMS)) return "specialty";
