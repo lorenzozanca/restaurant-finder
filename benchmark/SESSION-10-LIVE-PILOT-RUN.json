@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "run_id": "session-10-live-pilot-warm-v1",
+  "scenario": "warm_incremental",
+  "prior_run_id": "session-10-live-pilot-v2",
+  "code_version": "working-tree-2026-09-01",
+  "scoring_version": "website-first-resource-validation-v1",
+  "inputs": {
+    "reviewed_selection": {
+      "path": "benchmark/SESSION-10-PILOT-SELECTION.json",
+      "sha256": "9546da07c0a84e0f1dfee17a0c0faeae114176e62f672d3dc0aa4457b6dd573d"
+    },
+    "pilot_database": {
+      "path": "data/session-10/session-10-pilot-live.sqlite",
+      "sha256": "d3646d88ca3b6a6e059b1ed446f39ebc519ec1c34aa6414eca46b2ca33def5ea",
+      "expected_jobs": 36
+    }
+  },
+  "request_budget": {
+    "provider_reported_allowance": 97,
+    "combined_ceiling": 72,
+    "reserve": 25,
+    "period": "session-10-live-pilot-v2"
+  },
+  "resolver": {
+    "searches_per_venue": 3,
+    "crawls_per_venue": 3,
+    "budget_escalation_reason": "stratified_pilot_manual_reviewed_candidates"
+  },
+  "worker": {
+    "concurrency": 2,
+    "per_domain_concurrency": 1,
+    "maximum_job_attempts": 2
+  },
+  "provider": {
+    "name": "brave_web_api",
+    "concurrency": 1,
+    "requests_per_second": 1,
+    "max_retries": 1
+  },
+  "cache": {
+    "search_directory": "data/session-10/cache/search-v2"
+  },
+  "authorization": {
+    "live_pilot": true,
+    "authorized_at": "2026-09-01",
+    "authorization_source": "operator messages: Brave key supplied; redo review and continue",
+    "national_queue": false,
+    "publication": false
+  }
+}

@@ -1,0 +1,76 @@
+#!/usr/bin/env node
+import { readFileSync, writeFileSync } from "node:fs";
+import { resolve } from "node:path";
+
+const manifestPath = resolve(process.argv[2] || "benchmark/SESSION-10-PILOT-SELECTION.json");
+const reviewedAt = "2026-09-01T06:59:35Z";
+const reviewer = "Codex manual web review";
+
+const rows = new Map([
+  [1, ["McDonald's", "valid", "accepted", "http://www.mcdonalds.it/", ["https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"], "Current first-party restaurant list corroborates the Torino branch and municipality; the chain site is official."]],
+  [2, ["Dieci.15", "valid", "no_official_site", null, ["https://www.cartogiraffe.com/italia/piemonte/torino/torino/circoscrizione%2B4/via%2Bsalbertrand/"], "Current street-level directory corroborates Dieci.15 as a cafe on Via Salbertrand; no first-party site was found."]],
+  [3, ["Ristorante Baita Ermitage", "valid", "accepted", "https://www.baitaermitage.com/", ["https://www.baitaermitage.com/", "https://balteus.lovevda.it/it/banca-dati/16/ristoranti/courmayeur/baita-ermitage/2042"], "First-party site and Valle d'Aosta tourism listing corroborate name, locality, address, and phone."]],
+  [4, ["Bar Carlo", "valid", "no_official_site", null, ["https://piatti.menu/restaurants/courmayeur/carlo-3", "https://www.overplace.com/valle-d-aosta/ao/courmayeur/bar-e-caffe/bar-carlo-di-culasso-elisa-c-snc.html"], "Independent listings agree on Bar Carlo, Via Regionale 36, Courmayeur; no first-party site was found."]],
+  [5, ["Rossopomodoro", "valid", "accepted", "https://ristoranti.rossopomodoro.it/molinodellearmi-e3ea3902893f", ["https://concorsi.rossopomodoro.it/_common/pdf/regolamento.pdf", "https://www.thefork.it/ristorante/rossopomodoro-molino-delle-armi-r288809"], "Brand material and a current booking listing corroborate the Molino delle Armi branch; tracking parameters were removed from the official URL."]],
+  [6, ["LatteNeve", "valid", "no_official_site", null, ["https://www.italia.it/it/lombardia/milano/gelateria-latteneve", "https://www.gamberorosso.it/luoghi/locali/gelateria/latteneve/"], "Current national-tourism and Gambero Rosso listings corroborate the venue and address; the search surfaced no trustworthy first-party domain."]],
+  [7, ["Labëtula Brew Pub", "valid", "accepted", "https://www.monpier-gherdeina.it/it/la-betula.php", ["https://www.monpier-gherdeina.it/it/la-betula.php"], "The brewery's first-party page identifies LaBetula brew pub at Via J.B. Purger 181 in Ortisei."]],
+  [8, ["Stua Da Carlo", "valid", "no_official_site", null, ["https://www.valgardena.it/it/alloggio/base/hotel/ortisei-val-gardena/apartments-stua-da-carlo/2D38AB0693206DF57CADEDFCEC704D06/"], "The official Val Gardena listing explicitly confirms Bar Stua da Carlo in the same building; no separate first-party bar site was found."]],
+  [9, ["1224 Restaurant Cortina", "valid", "accepted", "https://www.1224restaurantcortina.it/", ["https://www.1224restaurantcortina.it/", "https://cortina.dolomiti.org/wp-content/uploads/2026/01/Cortina_accessibile_guidaufficiale2026.pdf"], "First-party and official Cortina tourism sources corroborate the restaurant at Via Roma 62.", [{ url: "https://www.1224restaurantcortina.it/media/attachments/2026/01/16/website-menu---1224-restaurant-cortina-english.pdf", role: "menu", status: "accepted" }]]],
+  [10, ["Amorino Italia", "uncertain", "uncertain", null, ["https://www.amorino.com/it/storelocator", "https://www.happycow.net/reviews/amorino-cortina-d-ampezzo-175817"], "A historical listing places Amorino at Corso Italia 44, but the current first-party locator search did not corroborate the Cortina branch; exclude pending confirmation."]],
+  [11, ["Pizza Smile", "valid", "accepted", "https://pizza-smile.order.dish.co/", ["https://pizza-smile.order.dish.co/local/info", "https://pizzasmile3.eatbu.com/?lang=it"], "Merchant-controlled ordering and business pages corroborate Pizza Smile at Via Baiamonti 19/B.", [{ url: "https://pizza-smile.order.dish.co/menus", role: "order", status: "accepted" }]]],
+  [12, ["Galleria Tergesteo", "uncertain", "uncertain", null, ["https://tergesteocitybar.eatbu.com/?lang=it", "https://www.immobiliare.it/annunci/124705617/"], "A current bar exists in Galleria Tergesteo, but evidence names it Tergesteo Citybar and the business was advertised for sale in 2026; exact continuity with the selected identity is uncertain."]],
+  [13, ["Ristorante Strainer", "valid", "accepted", "http://www.strainerportofino.com/", ["https://www.viamichelin.it/mappe-piantine/ristoranti/poi/portofino-16034-7ba21333", "https://traghettiportofino.it/en/useful-info/where-to-eat/ristorante-strainer"], "Multiple current sources corroborate Strainer at Molo Umberto I 19; its claimed listing identifies the supplied website."]],
+  [14, ["Gelateria Bar San Giorgio", "valid", "no_official_site", null, ["https://www.tripadvisor.it/Restaurants-g187825-zfd9899-Portofino_Italian_Riviera_Liguria-Ice_Cream.html"], "Current Portofino gelateria results corroborate the operating venue; no first-party site was found."]],
+  [15, ["Piadineria Savòr piadina & cucina", "valid", "accepted", "http://www.piadinaecucina.it/", ["https://www.comune.bologna.it/media/files/spesa_a_domicilioo___ristorazione.pdf", "https://www.comune.bologna.it/media/files/01_sandonatosanvitalenews_apr20.pdf"], "Municipal Bologna material corroborates Savòr at Via Schiassi 2/E and its contact details; the supplied name-matched domain is retained as first-party."]],
+  [16, ["Bar Il Malcantone", "valid", "no_official_site", null, ["https://restaurantguru.it/Bar-il-malcantone-20-Bologna-2"], "Current evidence corroborates Bar Il Malcantone 2.0 in Via Emilia Ponente; civic numbering differs as 18/B versus the source's 19/B and should be normalized later."]],
+  [17, ["Deja Vu", "uncertain", "uncertain", "https://dejavusangimignano.wixsite.com/piadinerieria", ["https://www.paginebianche.it/san-gimignano/deja-vu.14465302", "https://it.tripadvisor.ch/Restaurant_Review-g187901-d23399596-Reviews-or15-Deja_Vu-San_Gimignano_Tuscany.html"], "Recent sources conflict: active hours/menu evidence remains available while the claimed Tripadvisor profile says closed. Exclude until operating status is confirmed."]],
+  [18, ["Bar Firenze", "valid", "no_official_site", null, ["https://www.reginaribelle.it/info-utili/dove-mangiare/", "https://www.ufficiocamerale.it/6738/bar-firenze-di-biuzzi-elisa-c-snc"], "Current event and business evidence corroborate Bar Firenze at Via San Giovanni 54; no first-party site was found."]],
+  [19, ["Pizzeria Il Grottino", "valid", "accepted", "https://pizzeriailgrottino.it/", ["https://pizzeriailgrottino.it/", "https://www.localshop24.com/it/spello-pg-it/attivita/pizzeria/pizzeria-il-grottino/"], "The pizzeria's first-party site confirms Via Consolare 35. The supplied residenceilgrottino.com claim belongs to different accommodation and is rejected."]],
+  [20, ["Caffè Cavour", "valid", "no_official_site", null, ["https://www.fsbusitalia.it/it/umbria/dove-acquistare-biglietti-umbria/punti-vendita-servizi-bus.html", "https://www.impresaitalia.info/kk03741060/caffe-cavour/spello.aspx"], "Current transport-retailer and business listings corroborate Caffè Cavour at Via Cavour 61; no first-party site was found."]],
+  [21, ["Bar Belvedere", "valid", "no_official_site", null, ["https://www.rivieraconero.com/scopri/trattoria-bar-belvedere-di-barbadoro-rosanna-sirolo/"], "Local tourism evidence corroborates the trattoria/bar at Via Monte Conero 18. The supplied Facebook profile is evidence, not an official website claim."]],
+  [22, ["Pizzeria El Varolo", "valid", "accepted", "https://pizzeria-el-varolo.eatbu.com/?lang=en", ["https://pizzeria-el-varolo.eatbu.com/?lang=en", "https://restaurantguru.com/Pizzeria-El-Varolo-Sirolo"], "The merchant-controlled page and recent reviews corroborate El Varolo at Via A. Giulietti 6."]],
+  [23, ["The Clifton", "valid", "accepted", "https://www.thecliftonpub.com/", ["https://www.thecliftonpub.com/", "https://maps.apple.com/place?place-id=I72BEDAD54A6D009E"], "The current first-party domain corroborates the pub at Via del Casaletto 255. The supplied theclifton.it domain is stale and replaced.", [{ url: "https://www.thecliftonpub.com/menu", role: "menu", status: "accepted" }]]],
+  [24, ["Il Bivacco", "valid", "no_official_site", null, ["https://www.tripadvisor.it/Restaurant_Review-g187791-d3243747-Reviews-Il_Bivacco-Rome_Lazio.html", "https://www.justeat.it/restaurants-ristorante---il-bivacco1-roma/menu"], "Current claimed and ordering listings corroborate Il Bivacco at Via Radicofani 75; no independent first-party site was found.", [{ url: "https://www.justeat.it/restaurants-ristorante---il-bivacco1-roma/menu", role: "order", status: "accepted" }]]],
+  [25, ["Trattoria Lo Sgabello", "valid", "accepted", "https://losgabelloscanno.it/", ["https://losgabelloscanno.it/Locale/", "https://www.tripadvisor.it/Restaurant_Review-g194910-d1881613-Reviews-Trattoria_Lo_Sgabello-Scanno_Province_of_L_Aquila_Abruzzo.html"], "First-party and current claimed evidence corroborate the restaurant; current sources use Via dei Pescatori 45 rather than source number 44.", [{ url: "https://losgabelloscanno.it/Menu/", role: "menu", status: "accepted" }]]],
+  [26, ["YogArt", "valid", "no_official_site", null, ["https://atoka.io/public/it/azienda/yogart-di-mastrogiovanni-angela-societa-in-accomandita-semplice/da6028ea1b41", "https://www.ufficiocamerale.it/4998/yogart-di-mastrogiovanni-angela-societa-in-accomandita-semplice"], "Business evidence corroborates YogArt at Via Roma 24 in Scanno; no first-party site was found."]],
+  [27, ["Calice Rosso", "valid", "accepted", "https://www.calicerosso.it/", ["https://www.calicerosso.it/", "https://www.visitmolise.eu/ristorazione/-/d/dms/1484437/calice-rosso"], "First-party and official regional-tourism sources corroborate Calice Rosso in Bagnoli del Trigno."]],
+  [28, ["La Boutique Del Caffe", "valid", "no_official_site", null, ["https://restaurantguru.it/La-Boutique-del-Caffe-Bagnoli-del-Trigno"], "Recent venue evidence corroborates La Boutique del Caffè at Via Trignina 39; no first-party site was found."]],
+  [29, ["McDonald's", "valid", "accepted", "http://www.mcdonalds.it/", ["https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"], "McDonald's current first-party restaurant list corroborates the Napoli Miano branch at the La Birreria centre."]],
+  [30, ["L'Angolo Del Caffe", "uncertain", "no_official_site", null, ["https://www.oraridiapertura24.it/filiale/Napoli-L%2527Angolo%2520Del%2520Caff%25E8-4415084U.html"], "The address is corroborated, but current evidence describes coffee beans, capsules, and machine retail rather than a clearly admissible cafe venue. Exclude pending manual confirmation."]],
+  [31, ["Pub Crash", "valid", "no_official_site", null, ["https://www.waze.com/live-map/directions/it/puglia/alberobello/pub-crash?to=place.ChIJW4zacWGyRxMRINlTLmdAa5Y", "https://www.localshop24.com/it/alberobello-ba-it/attivita/pub/pub-crash/"], "Current map and directory evidence corroborate Pub Crash at Via Bligny 27. The supplied mensilemovida.it page is editorial and rejected as an official site."]],
+  [32, ["Bagia' Alberobello", "valid", "no_official_site", null, ["https://restaurantguru.it/Bagia-Caffe-Alberobello", "https://www.tripadvisor.com/Restaurant_Review-g580227-d10476812-Reviews-Bagia-Alberobello_Province_of_Bari_Puglia.html"], "Recent evidence corroborates Bagià at Largo Martellotta 64; only social profiles were found, not a first-party website."]],
+  [33, ["Al Becco della Civetta", "valid", "accepted", "https://www.beccodellacivetta.it/", ["https://www.beccodellacivetta.it/contatti", "https://www.comune.castelmezzano.pz.it/schedaluogo/49"], "First-party and municipal sources corroborate the restaurant at Vico I Maglietta 7."]],
+  [34, ["Bar Food", "valid", "no_official_site", null, ["https://wanderlog.com/place/details/4468610/bar-food", "https://restaurantguru.com/Castelmezzano"], "Current discovery sources corroborate Bar Food on Via Regina Margherita in Castelmezzano; no first-party site was found."]],
+  [35, ["Pizzeria Pino Loricato Civita", "valid", "accepted", "https://www.ristorantepizzeriapinoloricato.com/", ["https://www.ristorantepizzeriapinoloricato.com/", "https://www.ristorantepizzeriapinoloricato.com/contatti"], "The current first-party site corroborates the restaurant in Civita at Contrada Scariano Acqua Chiara. The supplied one-minute-site URL is stale and replaced."]],
+  [36, ["Eurobar 2000", "valid", "no_official_site", null, ["https://www.tuttiaffari.com/eurobar_83B-0981-73027", "https://restaurantguru.it/Eurobar-2000-Civita"], "Recent evidence corroborates Eurobar 2000 in Piazza Municipio, Civita; no first-party site was found."]],
+  [37, ["Gelateria Liparoti", "valid", "no_official_site", null, ["https://gelatomaps.com/it/gelateria/gelateria-liparoti-erice-erice/"], "Current gelateria evidence corroborates the Erice branch at Via Vittorio Emanuele 86. The supplied Google search URL is rejected as an official website."]],
+  [38, ["Pizzeria La Rustica", "valid", "no_official_site", null, ["https://www.tripadvisor.it/Restaurant_Review-g3374512-d33111900-Reviews-Pizzeria_La_Rustica-Casa_Santa_Erice_Province_of_Trapani_Sicily.html"], "Current evidence corroborates Pizzeria La Rustica in Via Lido di Venere, Casa Santa within Erice municipality; no first-party site was found."]],
+  [39, ["Su Lizu Pizzeria", "valid", "accepted", "https://www.sulizupizzeria.it/", ["https://www.sulizupizzeria.it/", "https://www.sulizupizzeria.it/en/"], "The first-party site corroborates Su Lizu at Via Nuoro 20 and publishes current hours and menu.", [{ url: "https://www.sulizupizzeria.it/", role: "menu", status: "accepted" }]]],
+  [40, ["Bar Ziu Mesina", "valid", "no_official_site", null, ["https://www.cylex-italia.it/orgosolo/bar-ziu-mesina-14875128.html", "https://aziende.virgilio.it/bar/orgosolo-nu/fossati-costantino"], "Recent evidence corroborates Bar Ziu Mesina and the source address at Corso Repubblica 88; some maps use number 82. No first-party site was found."]],
+]);
+
+const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+if (manifest.candidates.length !== rows.size) throw new Error(`expected ${rows.size} candidates`);
+for (const candidate of manifest.candidates) {
+  const row = rows.get(candidate.selection_index);
+  if (!row || row[0] !== candidate.name) {
+    throw new Error(`selection drift at index ${candidate.selection_index}: ${candidate.name}`);
+  }
+  const [, venueStatus, websiteStatus, websiteUrl, evidenceUrls, notes, resources = []] = row;
+  candidate.review = {
+    reviewer,
+    reviewed_at: reviewedAt,
+    venue_status: venueStatus,
+    municipality_assignment: "correct",
+    duplicate_of_venue_id: null,
+    official_website_status: websiteStatus,
+    official_website_url: websiteUrl,
+    resources,
+    evidence_urls: evidenceUrls,
+    notes,
+  };
+}
+manifest.status = "manual_review_complete_live_run_not_started";
+manifest.authorization.live_pilot = true;
+manifest.authorization.next_gate = "rebuild and fingerprint isolated pilot before any live request";
+writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);

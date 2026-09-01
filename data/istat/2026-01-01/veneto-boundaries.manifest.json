@@ -1,0 +1,30 @@
+{
+  "dataset": "ISTAT administrative boundaries for statistical purposes",
+  "geometry_reference_date": "2026-01-01",
+  "reference_date": "2026-02-21",
+  "retrieved_at": "2026-08-27",
+  "source_page": "https://www.istat.it/notizia/confini-delle-unita-amministrative-a-fini-statistici-al-1-gennaio-2018-2/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Istituto nazionale di statistica (Istat)",
+  "region": { "name": "Veneto", "code": "05" },
+  "source": {
+    "url": "https://www.istat.it/storage/cartografia/confini_amministrativi/non_generalizzati/2026/Limiti01012026.zip",
+    "file": "source/Limiti01012026.zip",
+    "bytes": 98536297,
+    "sha256": "a9075f8d839dcb2b409099703da7bdd37cc214f8967fa7372b32305875ad046f",
+    "format": "ESRI Shapefile ZIP",
+    "detail": "non_generalized",
+    "crs": "EPSG:32632"
+  },
+  "derived": {
+    "file": "derived/veneto-municipalities.geojson",
+    "bytes": 11913278,
+    "sha256": "355285130a22498786a1613ae76b93e1ccdbf12edd87be477f8271e33258e109",
+    "format": "GeoJSON",
+    "crs": "EPSG:4326",
+    "municipality_count": 559,
+    "created_with": "node prepare-istat-boundaries.mjs --changes-path data/istat/2026-01-01/administrative-changes-through-2026-02-21.json",
+    "adaptation": "Filtered to ISTAT region 05, joined province/region labels, reprojected to EPSG:4326, rounded coordinates to 9 decimal places, and combined the 2026-01-01 Castegnero/Nanto polygons under current municipality 024129 Castegnero Nanto effective 2026-02-21."
+  }
+}

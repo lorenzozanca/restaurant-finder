@@ -1,0 +1,14 @@
+{
+  "reference_date": "2026-02-21",
+  "source": "ISTAT codes of territorial administrative units",
+  "source_url": "https://www.istat.it/classificazione/codici-dei-comuni-delle-province-e-delle-regioni/",
+  "changes": [
+    {
+      "type": "municipality_merger",
+      "effective_date": "2026-02-21",
+      "predecessor_codes": ["024027", "024071"],
+      "successor": { "istat_code": "024129", "municipality": "Castegnero Nanto" },
+      "source_url": "https://www.istat.it/classificazione/codici-dei-comuni-delle-province-e-delle-regioni/"
+    }
+  ]
+}

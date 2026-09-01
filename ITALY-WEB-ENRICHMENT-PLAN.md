@@ -1,6 +1,6 @@
 # Italy-wide web enrichment: architecture note and session plan
 
-Status: active — Sessions 1–7 complete; live acceptance GO; scaling not started
+Status: active — Sessions 1–9 complete; Session 10 pilot planning next; enrichment not started
 Created: 2026-08-26
 Evidence base: `ODERZO-SCAN-REPORT.md`
 
@@ -12,7 +12,10 @@ The long-term product is not merely a national list of restaurants. The useful
 part is a trustworthy, refreshable index of each venue's official website and
 its menu, ordering, drinks, specialty, PDF, and menu-image links.
 
-OpenStreetMap should provide a cheap national candidate and identity backbone.
+The pinned Overture Places release should provide the initial national
+candidate and identity backbone, with exact ISTAT municipality assignment.
+OpenStreetMap remains an independent structured source for interactive scans
+and later corroboration.
 Web crawling and search should provide the valuable enrichment. OSM is not
 expected to contain the menu links: in the latest Oderzo scan it supplied
 website tags for six OSM objects representing five unique businesses, but none
@@ -70,7 +73,7 @@ must not be mixed into publishable results.
 ## Proposed national architecture
 
 ```text
-Italy OSM extract + municipality boundaries
+Italy Overture Places extract + municipality boundaries
                  |
                  v
        canonical venue registry
@@ -97,7 +100,8 @@ Italy OSM extract + municipality boundaries
 
 ### 1. National candidate backbone
 
-Import the Italy OSM PBF once and filter the supported food-related tags.
+Import one pinned Italy Overture Places extract and filter the supported
+food-primary categories and confidence.
 Assign each object to an ISTAT municipality using administrative boundaries.
 This replaces thousands of town-by-town Nominatim and Overpass requests for
 the national job. Interactive single-town scans may keep the current online
@@ -478,7 +482,8 @@ Goal: create the national venue backbone without town-by-town public API use.
 
 Work:
 
-- Document and automate acquisition/checksum/versioning of the Italy OSM PBF
+- Document and automate acquisition/checksum/versioning of the pinned Italy
+  Overture Places extract
   and municipality boundary source.
 - Filter supported food venue tags and retain necessary attribution/provenance.
 - Spatially assign venues to ISTAT municipalities.
@@ -613,9 +618,9 @@ and regression gates must pass.
 | 5. Website-first enrichment | Complete | 2026-08-26 | Known-site fixture preserves 4/4 links while reducing search calls from 4 to 0; fallback reasons and request telemetry added. |
 | 6. Official website selection | Complete | 2026-08-26 | Explainable three-axis scorer passes 5 official, 1 review, and 5 hard-negative cases at 100% fixture precision/recall. |
 | 7. Resource validation | Complete | 2026-08-27 | Role-specific validator and hard negatives pass at 100% fixture precision/recall; live acceptance preserved 37 reviewed resources. |
-| 8. Durable store/queue | Not started | — | SQLite evidence persistence exists, but the resumable leased job queue and operational controls remain the next scaling objective. |
-| 9. Italy OSM importer | Not started | — | Begin only after identity model stabilizes. |
-| 10. Stratified pilot | Not started | — | Produce go/no-go evidence. |
+| 8. Durable store/queue | Complete | 2026-08-27 | SQLite schema v2 adds leased idempotent jobs, recovery, retries, dead letters, cancellation, persistent budgets/circuits, manifests, worker tests, operator commands, and UI-compatible export. |
+| 9. Italy candidate importer | Complete | 2026-08-28 | Pinned 3,100,760-record Overture input plus 7,895 ISTAT boundaries produced 156,740 admitted source records and 156,057 canonical queued candidates in 7,398 municipalities. SQLite integrity passes; attempts remain zero. |
+| 10. Stratified pilot | Complete — NO-GO | 2026-09-01 | Review redone; cold run completed 36/36 with 71 Brave attempts. Website precision was 10/24 (41.7%; Wilson 95% CI 24.5–61.2%), far below the 95% gate. Warm replay paused at the shared 72-request ceiling after 6/36 jobs; the 25-request reserve remains intact. Fix systemic directory/editorial false positives and rerun a fresh pilot before Sessions 11–12. |
 | 11. Compliance/operations | Not started | — | Required before public release. |
 | 12. Regional/national waves | Not started | — | Quality-gated rollout. |
 

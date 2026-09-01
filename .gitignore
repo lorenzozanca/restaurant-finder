@@ -1,9 +1,14 @@
 # Generated scan results may contain business contact details or personal data.
 # The cache also contains copies of third-party web pages.
 output/
+node_modules/
+.env
 
 # Large local source extracts are reproducible inputs, not repository assets.
 data/overture/
+data/istat/**/source/
+data/istat/**/derived/
+data/session-10/
 
 # Local compliance decisions may contain operator, contract, and hosting details.
 .compliance/

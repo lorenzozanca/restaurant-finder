@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source": "ISTAT fixture",
+    "reference_date": "2026-01-01",
+    "crs": "EPSG:4326",
+    "region": "Veneto"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "istat_code": "026051", "municipality": "Oderzo", "province_code": "TV", "province": "Treviso", "region_code": "05", "region": "Veneto" },
+      "geometry": { "type": "Polygon", "coordinates": [[[12.4,45.7],[12.6,45.7],[12.6,45.9],[12.4,45.9],[12.4,45.7]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "istat_code": "026086", "municipality": "Treviso", "province_code": "TV", "province": "Treviso", "region_code": "05", "region": "Veneto" },
+      "geometry": { "type": "Polygon", "coordinates": [[[12.2,45.7],[12.4,45.7],[12.4,45.9],[12.2,45.9],[12.2,45.7]]] }
+    }
+  ]
+}

@@ -140,8 +140,13 @@ export function mapOverturePlace(value, location) {
     provider_place_id: id,
     provider_record_url: sourceUrl,
     source: "overture_places",
+    municipality: location.municipality || undefined,
+    istat_municipality_code: location.spatial_assignment?.istat_code || undefined,
+    province_code: location.province_code || undefined,
+    region_code: location.spatial_assignment?.region_code || undefined,
     aliases: localNameAliases(name, location.municipality),
-    provenance: overtureProvenance(id, sourceUrl, category[0], localEvidence.evidence),
+    provenance: overtureProvenance(id, sourceUrl, category[0], localEvidence.evidence,
+      location.spatial_assignment),
   };
   return { item: compact(item) };
 }
@@ -263,8 +268,12 @@ function extractAddress(addresses) {
 function localAddressEvidence(address, location) {
   const evidence = ["geometry_inside_bbox"];
   let contradiction = false;
+  if (location.spatial_assignment?.istat_code) {
+    evidence.push(`geometry_inside_istat_municipality:${location.spatial_assignment.istat_code}`);
+  }
   if (address.locality) {
     if (normalize(address.locality) === normalize(location.municipality)) evidence.push("municipality_exact");
+    else if (location.spatial_assignment) evidence.push("source_locality_differs_from_spatial_assignment");
     else contradiction = true;
   }
   if (address.postcode) {
@@ -289,10 +298,10 @@ function providerRecordUrl(record, id) {
   return clean(source?.record_id || source?.dataset) || `overture:${id}`;
 }
 
-function overtureProvenance(id, sourceUrl, category, localEvidence) {
+function overtureProvenance(id, sourceUrl, category, localEvidence, spatialAssignment) {
   const fact = (origin) => [{ source: "overture_places", origin, provider_place_id: id,
     provider_record_url: sourceUrl }];
-  return {
+  const provenance = {
     name: fact("overture_names"), type: fact(`overture_category:${category}`),
     address: fact("overture_address"), postcode: fact("overture_address"),
     latitude: fact("overture_geometry"), longitude: fact("overture_geometry"),
@@ -301,6 +310,17 @@ function overtureProvenance(id, sourceUrl, category, localEvidence) {
     provider_record_url: fact("overture_source_reference"),
     local_evidence: fact(localEvidence.join("+")),
   };
+  if (spatialAssignment?.istat_code) {
+    const boundaryFact = [{ source: "istat_boundaries", origin: "point_in_polygon",
+      istat_municipality_code: spatialAssignment.istat_code,
+      boundary_reference_date: spatialAssignment.reference_date,
+      boundary_sha256: spatialAssignment.boundary_sha256 }];
+    provenance.municipality = boundaryFact;
+    provenance.istat_municipality_code = boundaryFact;
+    provenance.province_code = boundaryFact;
+    provenance.region_code = boundaryFact;
+  }
+  return provenance;
 }
 
 function firstString(value) {

@@ -1,0 +1,33 @@
+{
+  "dataset": "ISTAT administrative boundaries for statistical purposes",
+  "geometry_reference_date": "2026-01-01",
+  "reference_date": "2026-02-21",
+  "retrieved_at": "2026-08-27",
+  "source_page": "https://www.istat.it/notizia/confini-delle-unita-amministrative-a-fini-statistici-al-1-gennaio-2018-2/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Istituto nazionale di statistica (Istat)",
+  "scope": "national",
+  "country": { "name": "Italy", "code": "IT" },
+  "source": {
+    "url": "https://www.istat.it/storage/cartografia/confini_amministrativi/non_generalizzati/2026/Limiti01012026.zip",
+    "file": "source/Limiti01012026.zip",
+    "bytes": 98536297,
+    "sha256": "a9075f8d839dcb2b409099703da7bdd37cc214f8967fa7372b32305875ad046f",
+    "format": "ESRI Shapefile ZIP",
+    "detail": "non_generalized",
+    "crs": "EPSG:32632"
+  },
+  "derived": {
+    "file": "derived/italy-municipalities.geojson",
+    "bytes": 193433758,
+    "sha256": "b6514449818f13c3252492c1b85f35701523b269fd9d4e192ea7d06f568f0783",
+    "format": "GeoJSON",
+    "crs": "EPSG:4326",
+    "municipality_count": 7895,
+    "region_count": 20,
+    "bbox_west_south_east_north": [6.626621418, 35.492852585, 18.520381593, 47.091783741],
+    "created_with": "node prepare-istat-boundaries.mjs --region-code all --changes-path data/istat/2026-01-01/administrative-changes-through-2026-02-21.json",
+    "adaptation": "Retained all ISTAT regions, joined province and region labels, reprojected to EPSG:4326, rounded coordinates to 9 decimal places, and combined the 2026-01-01 Castegnero/Nanto polygons under current municipality 024129 Castegnero Nanto effective 2026-02-21."
+  }
+}
