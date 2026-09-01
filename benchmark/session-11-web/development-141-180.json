@@ -1,0 +1,1362 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-development-141-180",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:064054:monteforte-irpino:malvizza",
+      "name": "Malvizza",
+      "municipality": "Monteforte Irpino",
+      "region": "Campania",
+      "address": "Via Wenceslao Loffredo, 37, 83024 Monteforte Irpino",
+      "known_website": "http://www.malvizza.it/",
+      "partition": "development",
+      "query": "\"Malvizza\" \"Monteforte Irpino\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:33.473Z",
+      "candidates": [
+        {
+          "title": "MALVIZZA, Monteforte Irpino - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2552181-d27270709-Reviews-Malvizza-Monteforte_Irpino_Province_of_Avellino_Campania.html"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti Monteforte Irpino - Elenco di 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g2552181-Monteforte_Irpino_Province_of_Avellino_Campania.html"
+        },
+        {
+          "title": "THE 10 BEST Restaurants in Monteforte Irpino (Updated July 2026)",
+          "url": "https://www.tripadvisor.com/Restaurants-g2552181-Monteforte_Irpino_Province_of_Avellino_Campania.html"
+        },
+        {
+          "title": "Richiedi il menù e scopri i piatti di Malvizza Monteforte Irpino",
+          "url": "https://www.sluurpy.it/malvizza-monteforte-irpino-9094258"
+        },
+        {
+          "title": "LOS 10 MEJORES restaurantes en Monteforte Irpino (2026) - Tripadvisor",
+          "url": "https://www.tripadvisor.es/Restaurants-g2552181-Monteforte_Irpino_Province_of_Avellino_Campania.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:063072:sant-anastasia:mcdonald-s",
+      "name": "McDonald's",
+      "municipality": "Sant'Anastasia",
+      "region": "Campania",
+      "address": "Via Pomigliano, 80048 Sant'Anastasia",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"McDonald's\" \"Sant'Anastasia\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:35.474Z",
+      "candidates": [
+        {
+          "title": "Ristoranti aderenti | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+        },
+        {
+          "title": "ristoranti-aderenti--gran-crispy-days",
+          "url": "https://www.mcdonalds.it/sites/default/files/legal/ristoranti-aderenti--gran-crispy-days_0.pdf"
+        },
+        {
+          "title": "LISTA RISTORANTI McDonald's ADERENTI AGGIORNATA AL 1/07",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/lista-ristoranti-aderenti__28-giugno2024.pdf"
+        },
+        {
+          "title": "<table id=\"e1\">",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/ristoranti_aderenti-3luglio2024.pdf"
+        },
+        {
+          "title": "McDonald's - Apple Maps",
+          "url": "https://maps.apple.com/place?place-id=I1421A2D6D37BBCE"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:064008:avellino:ultrabeat-cafe",
+      "name": "UltraBeat Cafè",
+      "municipality": "Avellino",
+      "region": "Campania",
+      "address": "Via Vincenzo Cannaviello, 25, 83100 Avellino",
+      "known_website": "https://it-it.facebook.com/ultrabeatcafe",
+      "partition": "development",
+      "query": "\"UltraBeat Cafè\" \"Avellino\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:37.457Z",
+      "candidates": [
+        {
+          "title": "Ultrabeat Cafè, Avellino - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Ultrabeat-Cafe-Avellino"
+        },
+        {
+          "title": "Abyss Cafè, Avellino - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Ultra-Beat-Cafe-Avellino"
+        },
+        {
+          "title": "Drinkingood Locale Ultrabeat Cafè Cocktail Bar Avellino",
+          "url": "https://www.drinkingood.com/locale-migliore-UltrabeatCafe-Avellino-109.html"
+        },
+        {
+          "title": "Ultrabeat Cafè (Avellino) | wecake.it",
+          "url": "https://wecake.it/pasticcerie/avellino/Ultrabeat-Cafe-6677"
+        },
+        {
+          "title": "Colazione senza lattosio ad Avellino - Lo stile di Artemide",
+          "url": "https://www.lostilediartemide.it/2018/02/14/colazione-senza-lattosio-avellino/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:064083:san-martino-valle-caudina:aramartis-cafe",
+      "name": "Aramartis Cafe",
+      "municipality": "San Martino Valle Caudina",
+      "region": "Campania",
+      "address": "Corso Vittorio Emanuele, 138, 83018 San Martino Valle Caudina",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Aramartis Cafe\" \"San Martino Valle Caudina\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:39.078Z",
+      "candidates": [
+        {
+          "title": "ARAMARTIS CAFÉ, San Martino Valle Caudina - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g8767711-d27203009-Reviews-Aramartis_Cafe-San_Martino_Valle_Caudina_Province_of_Avellino_Campania.html"
+        },
+        {
+          "title": "5 MIGLIORI ristoranti San Martino Valle Caudina",
+          "url": "https://www.tripadvisor.it/Restaurants-g8767711-San_Martino_Valle_Caudina_Province_of_Avellino_Campania.html"
+        },
+        {
+          "title": "5 MIGLIORI ristoranti San Martino Valle Caudina",
+          "url": "https://it.tripadvisor.ch/Restaurants-g8767711-San_Martino_Valle_Caudina_Province_of_Avellino_Campania.html"
+        },
+        {
+          "title": "LOS 5 MEJORES restaurantes en San Martino Valle Caudina (2026) - Tripadvisor",
+          "url": "https://www.tripadvisor.es/Restaurants-g8767711-San_Martino_Valle_Caudina_Province_of_Avellino_Campania.html"
+        },
+        {
+          "title": "THE 5 BEST San Martino Valle Caudina Restaurants & Places to Eat",
+          "url": "https://www.tripadvisor.co.uk/Restaurants-g8767711-San_Martino_Valle_Caudina_Province_of_Avellino_Campania.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:063003:agerola:addu-zi-matteo",
+      "name": "Addu' Zi Matteo",
+      "municipality": "Agerola",
+      "region": "Campania",
+      "address": "Via Antonio Coppola, 99, 80051 Agerola",
+      "known_website": "https://instagram.com/adduzimatteo",
+      "partition": "development",
+      "query": "\"Addu' Zi Matteo\" \"Agerola\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:40.830Z",
+      "candidates": [
+        {
+          "title": "ADDU' ZI MATTEO, Agerola - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g580201-d21133741-Reviews-Addu_Zi_Matteo-Agerola_Province_of_Naples_Campania.html"
+        },
+        {
+          "title": "ADDU' ZI MATTEO, Agerola - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g580201-d21133741-Reviews-Addu_Zi_Matteo-Agerola_Province_of_Naples_Campania.html"
+        },
+        {
+          "title": "Addu' Zi Matteo | 338 503 6298 | Agerola",
+          "url": "https://www.tuttiaffari.com/addu-zi-matteo-338-503-6298"
+        },
+        {
+          "title": "ADDU' ZI MATTEO - Pizzeria a Agerola | LocalShop24",
+          "url": "https://www.localshop24.com/it/agerola-na-it/attivita/pizzeria/addu-zi-matteo/"
+        },
+        {
+          "title": "ADDU' ZI MATTEO, Agerola - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g580201-d21133741-Reviews-Addu_Zi_Matteo-Agerola_Province_of_Naples_Campania.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:061022:caserta:liberty-bar",
+      "name": "Liberty Bar",
+      "municipality": "Caserta",
+      "region": "Campania",
+      "address": "Via Maestri del Lavoro, 33, 81100 Caserta",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Liberty Bar\" \"Caserta\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:42.513Z",
+      "candidates": [
+        {
+          "title": "Liberty Bar, Caserta - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Liberty-Bar-Caserta"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Liberty Bar“ | Via Maestri del Lavoro",
+          "url": "https://www.oraridiapertura24.it/filiale/Caserta-Liberty%2520Bar-1833683W.html"
+        },
+        {
+          "title": "Laboratorio Scarpati",
+          "url": "https://laboratorioscarpati.wordpress.com/"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Liberty Bar Di Orgiani Gerardo“ | Via Maestri Del Lavoro",
+          "url": "https://www.oraridiapertura24.it/filiale/Caserta-Liberty%2520Bar%2520Di%2520Orgiani%2520Gerardo-3097658G.html"
+        },
+        {
+          "title": "Orari di apertura Déjà-vu Caffè ▷ Caserta Largo San Giuseppe 7, 81100, Caserta | Trova Aperto",
+          "url": "https://trova-aperto.it/caserta/d%C3%A9j%C3%A0-vu-caff%C3%A8-2710146"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:064026:cesinali:gelateria-la-gondola",
+      "name": "Gelateria La Gondola",
+      "municipality": "Cesinali",
+      "region": "Campania",
+      "address": "Viale Sabino Cocchia, 21, 83020 Cesinali",
+      "known_website": "http://www.la-gondola.ory.it",
+      "partition": "development",
+      "query": "\"Gelateria La Gondola\" \"Cesinali\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:44.295Z",
+      "candidates": [
+        {
+          "title": "Gelateria La Gondola, Cesinali - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Gelateria-la-gondola-Avellino"
+        },
+        {
+          "title": "Gelateria La Gondola, Cesinali - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Gelateria-la-gondola-Avellino"
+        },
+        {
+          "title": "Gelateria La Gondola | 0825 666140 | Cesinali",
+          "url": "https://www.tuttiaffari.com/gelateria-la-gondola-0825-666140"
+        },
+        {
+          "title": "Driving directions to Gelateria La Gondola, 21 Viale Sabino Cocchia, Cesinali - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/campania/cesinali/gelateria-la-gondola?to=place.ChIJR69Aj-zNOxMRA2eM4_s7Nq8"
+        },
+        {
+          "title": "Gelateria La Gondola, Avellino, Italia - Recensioni, Valutazioni, Consigli e Perché Dovresti Andare – Wanderlog",
+          "url": "https://wanderlog.com/it/place/details/3319441/gelateria-la-gondola"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:061019:casal-di-principe:veliero",
+      "name": "Il Veliero",
+      "municipality": "Casal di Principe",
+      "region": "Campania",
+      "address": "Corso Umberto I, 859, 81033 Casal di Principe",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Il Veliero\" \"Casal di Principe\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:45.990Z",
+      "candidates": [
+        {
+          "title": "IL VELIERO, Casal di Principe - Corso Umberto I 859 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g3783974-d27754742-Reviews-Il_Veliero-Casal_di_Principe_Province_of_Caserta_Campania.html"
+        },
+        {
+          "title": "Il Veliero, Casal di Principe - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/il-veliero-Casal-di-Principe"
+        },
+        {
+          "title": "IL VELIERO DI CAVALIERE GIUSEPPE, Partita IVA: 03011190612, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1585/il-veliero-di-cavaliere-giuseppe"
+        },
+        {
+          "title": "IL VELIERO, Casal di Principe - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g3783974-d27754742-Reviews-Il_Veliero-Casal_di_Principe_Province_of_Caserta_Campania.html"
+        },
+        {
+          "title": "II Veliero",
+          "url": "https://ilveliero.onrender.com/Menu.pdf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:063060:pozzuoli:acqua-farina-pizzeria-ristorante",
+      "name": "Acqua&Farina Pizzeria Ristorante",
+      "municipality": "Pozzuoli",
+      "region": "Campania",
+      "address": "Via Gerolomini, 33, 80078 Pozzuoli",
+      "known_website": "http://www.acquaefarinapizzeria.com/",
+      "partition": "development",
+      "query": "\"Acqua&Farina Pizzeria Ristorante\" \"Pozzuoli\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:47.893Z",
+      "candidates": [
+        {
+          "title": "ACQUA E FARINA, Pozzuoli - Via Gerolomini 5/7 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194864-d2236284-Reviews-Acqua_E_Farina-Pozzuoli_Province_of_Naples_Campania.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Acqua&Farina Pizzeria Ristorante“ | Via Gerolomini",
+          "url": "https://www.oraridiapertura24.it/filiale/Pozzuoli-Acqua%2526Farina%2520Pizzeria%2520Ristorante-337601S.html"
+        },
+        {
+          "title": "▷ Acqua & Farina | Pizzeria, Pozzuoli",
+          "url": "https://www.cylex-italia.it/pozzuoli/acqua---farina-12948658.html"
+        },
+        {
+          "title": "I 7 migliori ristoranti con gelato a Pozzuoli, agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/gelato-Pozzuoli-m93"
+        },
+        {
+          "title": "I 7 migliori ristoranti con ottima posizione a Pozzuoli, agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/great-location-Pozzuoli-m9642"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:061017:carinola:planet-cafe",
+      "name": "Planet Cafe",
+      "municipality": "Carinola",
+      "region": "Campania",
+      "address": "Corso 4 Novembre, 139, 81030 Carinola",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Planet Cafe\" \"Carinola\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:49.515Z",
+      "candidates": [
+        {
+          "title": "I migliori 5 caffè di Carinola, luglio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/cafe-Carinola-t6"
+        },
+        {
+          "title": "Planet Cafè, Nocelleto - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Planet-Cafe-Punto-Snai-Nocelleto"
+        },
+        {
+          "title": "I migliori 5 pub e bar di Carinola, aprile 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/pub-and-bar-Carinola-t2"
+        },
+        {
+          "title": "Le top 5 pubs et bars à Carinola, août 2026 - Restaurant Guru",
+          "url": "https://fr.restaurantguru.com/pub-and-bar-Carinola-t2"
+        },
+        {
+          "title": "BAR Centrale di Andolfi / Anna, Carinola - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/BAR-Centrale-di-Andolfi-Anna-Carinola"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:075013:caprarica-di-lecce:oltregusto",
+      "name": "Oltregusto",
+      "municipality": "Caprarica di Lecce",
+      "region": "Puglia",
+      "address": "Via 4 Novembre, 66, 73010 Caprarica di Lecce",
+      "known_website": "http://www.oltregusto.it/",
+      "partition": "development",
+      "query": "\"Oltregusto\" \"Caprarica di Lecce\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:51.357Z",
+      "candidates": [
+        {
+          "title": "Pagina 1",
+          "url": "https://www.oltregusto.it/"
+        },
+        {
+          "title": "OLTREGUSTO, Caprarica di Lecce - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2199605-d7712833-Reviews-Oltregusto-Caprarica_di_Lecce_Province_of_Lecce_Puglia.html"
+        },
+        {
+          "title": "Ristorante Oltregusto a Caprarica di Lecce | Caprarica di Lecce",
+          "url": "https://www.caprarica.eu/s/oltregusto.htm"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti Caprarica di Lecce - Elenco di 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g2199605-Caprarica_di_Lecce_Province_of_Lecce_Puglia.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Oltregusto, Caprarica di Lecce",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g2199605-d7712833-Oltregusto-Caprarica_di_Lecce_Province_of_Lecce_Puglia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:074007:fasano:mcdonald-s",
+      "name": "McDonald's",
+      "municipality": "Fasano",
+      "region": "Puglia",
+      "address": "Via Roma, 72015 Fasano",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"McDonald's\" \"Fasano\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:53.516Z",
+      "candidates": [
+        {
+          "title": "Ristoranti aderenti | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+        },
+        {
+          "title": "McDonald’s, il colosso del fast food apre oggi ufficialmente le porte ai fasanesi",
+          "url": "https://gofasano.com/attualita/mcdonalds-il-colosso-del-fast-food-apre-oggi-ufficialmente-le-porte-ai-fasanesi/"
+        },
+        {
+          "title": "LISTA RISTORANTI McDonald's ADERENTI AGGIORNATA AL 1/07",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/lista-ristoranti-aderenti__28-giugno2024.pdf"
+        },
+        {
+          "title": "MCDONALD'S, Stazione di Fasano - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g19079216-d27393701-Reviews-Mcdonald_s-Stazione_di_Fasano_Fasano_Province_of_Brindisi_Puglia.html"
+        },
+        {
+          "title": "<table id=\"e1\">",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/ristoranti_aderenti-3luglio2024.pdf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:072030:monopoli:rotolo-forcaff13-srls",
+      "name": "Caffè Rotolo - Forcaff13 Srls",
+      "municipality": "Monopoli",
+      "region": "Puglia",
+      "address": "Via Roma, 127, 70043 Monopoli",
+      "known_website": "http://www.rotolotorrefazione.com/",
+      "partition": "development",
+      "query": "\"Caffè Rotolo - Forcaff13 Srls\" \"Monopoli\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:55.254Z",
+      "candidates": [
+        {
+          "title": "Albo Imprese di Monopoli - Monopoli Tre Rose",
+          "url": "https://www.monopolitrerose.it/imprese"
+        },
+        {
+          "title": "Caffè Rotolo Forcaff13s Monopoli Produzione/Lavorazione Caffè Scheda Torrefattore",
+          "url": "https://www.beverfood.com/torrefazione/forcaff13-srls"
+        },
+        {
+          "title": "Ristorante Yuk",
+          "url": "https://ristoranteyukimarconi.it/publications/"
+        },
+        {
+          "title": "Mapstr - Shopping Caffè Rotolo - Forcaff13 Srls Monopoli -",
+          "url": "https://mapstr.com/place/q94r0R5CZJg"
+        },
+        {
+          "title": "Coffitalia 2023 | PDF",
+          "url": "https://it.scribd.com/document/690475126/Coffitalia-2023"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:073006:fragagnano:notorious",
+      "name": "Bar Notorious",
+      "municipality": "Fragagnano",
+      "region": "Puglia",
+      "address": "Via Guglielmo Oberdan, 2B, 74022 Fragagnano",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Notorious\" \"Fragagnano\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:56.881Z",
+      "candidates": [
+        {
+          "title": "Bar Notorious, Fragagnano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Notorious-Bar-Fragagnano"
+        },
+        {
+          "title": "Bar Notorious, Fragagnano - Menú del restaurante, precios y reseñas",
+          "url": "https://es.restaurantguru.com/Notorious-Bar-Fragagnano"
+        },
+        {
+          "title": "I migliori 5 ristoranti di Fragagnano , agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/Fragagnano"
+        },
+        {
+          "title": "I migliori 5 pub e bar di Fragagnano, maggio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/pub-and-bar-Fragagnano-t2"
+        },
+        {
+          "title": "Bar Notorious - Bar in Fragagnano, Fragagnano | Reviews, Photos & Information on Postcard",
+          "url": "https://www.postcard.inc/places/bar-notorious-fragagnano-oT1TRfnKu7N"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:075085:taviano:bubba-bar",
+      "name": "Bubba Bar",
+      "municipality": "Taviano",
+      "region": "Puglia",
+      "address": "SP215, 73057 Taviano",
+      "known_website": "http://digitavolo.com/bubba",
+      "partition": "development",
+      "query": "\"Bubba Bar\" \"Taviano\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:58.530Z",
+      "candidates": [
+        {
+          "title": "BUBBA, Taviano - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g652008-d8482078-Reviews-Bubba-Taviano_Province_of_Lecce_Puglia.html"
+        },
+        {
+          "title": "Bubba Bar | 347 437 1851 | Taviano",
+          "url": "https://www.tuttiaffari.com/bubba-bar_1A-347-437-1851"
+        },
+        {
+          "title": "BUBBA BAR Taviano - Menù, recensioni, prezzi - 3BonMenu",
+          "url": "https://www.3bonmenu.com/752_Bubba-Bar-Taviano.html"
+        },
+        {
+          "title": "Ristorante Bubba Bar TAVIANO ristorante cucina Regionale Italiana recensioni ristorante TAVIANO per cellulari",
+          "url": "https://www.iristorante.it/mobile/ristorante_bubba_bar_prenotazione_ristorante_r247842.html?showMap=true"
+        },
+        {
+          "title": "Ristoranti TAVIANO pizzerie o tratorie prenotazione ristoranti etnici in città TAVIANO per cellulari",
+          "url": "https://www.iristorante.it/mobile/prenotazione_ristoranti_cucina_regionale_italiana_taviano_ristorante_boffers_ddesc_t13k2c6391.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:071024:foggia:gelateria-d-apice",
+      "name": "Gelateria D'apice",
+      "municipality": "Foggia",
+      "region": "Puglia",
+      "address": "Viale Ignazio D'Addedda, 12A, 71122 Foggia",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Gelateria D'apice\" \"Foggia\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:00.289Z",
+      "candidates": [
+        {
+          "title": "Gelateria D'Apice, Foggia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Gelateria-DApice-Foggia"
+        },
+        {
+          "title": "Gelateria D'Apice, Foggia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Gelateria-DApice-Foggia"
+        },
+        {
+          "title": "Gelateria D'apice consegna in zona Foggia - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/foggia/foggia/pasticceria-bijoux"
+        },
+        {
+          "title": "Gelateria D'apice delivery from Foggia - Order with Deliveroo",
+          "url": "https://deliveroo.it/en/menu/Foggia/foggia/pasticceria-bijoux"
+        },
+        {
+          "title": "Gelateria D'Apice, Foggia",
+          "url": "https://www.nuovaopinione.it/foggia/gelaterie/gelateria-d-apice-13818"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:075023:corigliano-d-otranto:1000",
+      "name": "1000",
+      "municipality": "Corigliano d'Otranto",
+      "region": "Puglia",
+      "address": "Viale Cutrofiano, 6, 73022 Corigliano d'Otranto",
+      "known_website": "https://plus.google.com/117669023954846567946/about",
+      "partition": "development",
+      "query": "\"1000\" \"Corigliano d'Otranto\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:02.687Z",
+      "candidates": [
+        {
+          "title": "1000 (dei mille), Corigliano D'otranto - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Dei-Mille-Corigliano-Dotranto"
+        },
+        {
+          "title": "5 MIGLIORI ristoranti per festeggiare Corigliano d'Otranto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurants-g1161101-zfp40-Corigliano_d_Otranto_Province_of_Lecce_Puglia.html"
+        },
+        {
+          "title": "1000 (DEI MILLE), Corigliano d'Otranto - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1161101-d27253512-Reviews-1000_Dei_Mille-Corigliano_d_Otranto_Province_of_Lecce_Puglia.html"
+        },
+        {
+          "title": "Menu da 1000 (dei mille) ristorante, Corigliano D'otranto",
+          "url": "https://restaurantguru.it/Dei-Mille-Corigliano-Dotranto/menu"
+        },
+        {
+          "title": "1000(DEI MILLE), Corigliano d'Otranto - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1161101-d2373789-Reviews-Dei_Mille-Corigliano_d_Otranto_Province_of_Lecce_Puglia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:071036:orta-nova:napoletana-orta-nova",
+      "name": "Pizzeria Napoletana Orta Nova",
+      "municipality": "Orta Nova",
+      "region": "Puglia",
+      "address": "Corso Aldo Moro, 34, 71045 Orta Nova",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Pizzeria Napoletana Orta Nova\" \"Orta Nova\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:04.371Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA NAPOLETANA ORTA NOVA - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2398507-d27385166-Reviews-Pizzeria_Napoletana_Orta_Nova-Orta_Nova_Province_of_Foggia_Puglia.html"
+        },
+        {
+          "title": "PIZZERIA NAPOLETANA ORTA NOVA - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2398507-d27385166-Reviews-Pizzeria_Napoletana_Orta_Nova-Orta_Nova_Province_of_Foggia_Puglia.html"
+        },
+        {
+          "title": "MIGLIORI 10 pizzerie: Orta Nova (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g2398507-c31-Orta_Nova_Province_of_Foggia_Puglia.html"
+        },
+        {
+          "title": "THE 10 BEST Pizza Places in Orta Nova (Updated 2026) - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurants-g2398507-c31-Orta_Nova_Province_of_Foggia_Puglia.html"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti da asporto a Orta Nova - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurants-g2398507-zfp10601-Orta_Nova_Province_of_Foggia_Puglia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:110009:trani:ai-portici",
+      "name": "Ai Portici",
+      "municipality": "Trani",
+      "region": "Puglia",
+      "address": "Via Pozzopiano, 33, 76125 Trani",
+      "known_website": "http://baraiportici.it/",
+      "partition": "development",
+      "query": "\"Ai Portici\" \"Trani\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:06.678Z",
+      "candidates": [
+        {
+          "title": "CAFFE AI PORTICI, Trani - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g608901-d4540712-Reviews-Caffe_Ai_Portici-Trani_Province_of_Barletta_Andria_Trani_Puglia.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Caffe Ai Portici, Trani - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g608901-d4540712-Caffe_Ai_Portici-Trani_Province_of_Barletta_Andria_Trani_Puglia.html"
+        },
+        {
+          "title": "Ai Portici, Trani - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Ai-Portici-Trani"
+        },
+        {
+          "title": "CAFFE AI PORTICI, Trani - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g608901-d4540712-Reviews-Caffe_Ai_Portici-Trani_Province_of_Barletta_Andria_Trani_Puglia.html"
+        },
+        {
+          "title": "BAR AI PORTICI: Tutto quello che c'è da sapere (AGGIORNATO 2026)",
+          "url": "https://www.tripadvisor.it/Attraction_Review-g608901-d4931572-Reviews-Bar_Ai_Portici-Trani_Province_of_Barletta_Andria_Trani_Puglia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:075014:carmiano:corte-celestini",
+      "name": "Corte Celestini",
+      "municipality": "Carmiano",
+      "region": "Puglia",
+      "address": "Via Lecce, 10, 73041 Carmiano",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Corte Celestini\" \"Carmiano\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:08.560Z",
+      "candidates": [
+        {
+          "title": "Ristorante Corte Celestini - Carmiano | Ristorante nelle mie vicinanze | Prenoti subito",
+          "url": "https://ristorantecortecelestini.metro.rest/?lang=it"
+        },
+        {
+          "title": "CORTE CELESTINI, Carmiano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2356044-d3457759-Reviews-Corte_Celestini-Carmiano_Province_of_Lecce_Puglia.html"
+        },
+        {
+          "title": "CORTE CELESTINI, Carmiano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g2356044-d3457759-Reviews-Corte_Celestini-Carmiano_Province_of_Lecce_Puglia.html"
+        },
+        {
+          "title": "CORTE CELESTINI, Carmiano - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2356044-d3457759-Reviews-Corte_Celestini-Carmiano_Province_of_Lecce_Puglia.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Corte Celestini, Carmiano - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g2356044-d3457759-Corte_Celestini-Carmiano_Province_of_Lecce_Puglia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:076024:castelmezzano:dolomiti",
+      "name": "Ristorante Dolomiti",
+      "municipality": "Castelmezzano",
+      "region": "Basilicata",
+      "address": "Via Michele Volini, 19, 85010 Castelmezzano",
+      "known_website": "https://hoteldolomiticastelmezzano.com/ristorante-dolomiti/",
+      "partition": "development",
+      "query": "\"Ristorante Dolomiti\" \"Castelmezzano\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:10.237Z",
+      "candidates": [
+        {
+          "title": "Dolomiti ⋆ Ristorante Dolomiti",
+          "url": "https://hoteldolomiticastelmezzano.com/ristorante-dolomiti/"
+        },
+        {
+          "title": "RISTORANTE DOLOMITI, Castelmezzano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1005972-d25002188-Reviews-Ristorante_Dolomiti-Castelmezzano_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "Hotel Ristorante Bar Spa Dolomi",
+          "url": "https://hoteldolomiticastelmezzano.com/"
+        },
+        {
+          "title": "RISTORANTE DOLOMITI, Castelmezzano - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1005972-d25002188-Reviews-Ristorante_Dolomiti-Castelmezzano_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "RISTORANTE DOLOMITI, Castelmezzano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1005972-d25002188-Reviews-or15-Ristorante_Dolomiti-Castelmezzano_Province_of_Potenza_Basilicata.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:076007:avigliano:doria",
+      "name": "Caffe Doria",
+      "municipality": "Avigliano",
+      "region": "Basilicata",
+      "address": "Vico Umberto I, 22, 85021 Avigliano",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Caffe Doria\" \"Avigliano\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:12.448Z",
+      "candidates": [
+        {
+          "title": "BED & BREAKFAST PORTACASTELLO : Prezzi e Recensioni (2026)",
+          "url": "https://www.tripadvisor.it/Hotel_Review-g2552165-d12885865-Reviews-AffittaCamere_Portacastello-Lagopesole_Avigliano_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "A Lagopesole ritorna il Corteo Storico “Alla corte di Federico” - Ufficio Stampa Basilicata",
+          "url": "https://ufficiostampabasilicata.it/2017/08/07/lagopesole-ritorna-corteo-storico-alla-corte-federico/"
+        },
+        {
+          "title": "Breaking Bed: cozy retreat in the heart of Basilicata - Avigliano | Vrbo",
+          "url": "https://www.vrbo.com/es-mx/propiedad/p11983565"
+        },
+        {
+          "title": "comitato, Avigliano Mappa",
+          "url": "https://www.cartogiraffe.com/italia/basilicata/potenza/avigliano/comitato/"
+        },
+        {
+          "title": "Via San Michele Fuori le Mura, Avigliano Mappa",
+          "url": "https://www.cartogiraffe.com/italia/basilicata/potenza/avigliano/via%2Bsan%2Bmichele%2Bfuori%2Ble%2Bmura/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:077014:matera:diplo-coffee-more-matera",
+      "name": "Diplò Coffee & More Matera",
+      "municipality": "Matera",
+      "region": "Basilicata",
+      "address": "Piazzetta Tre Torri, 75100 Matera",
+      "known_website": "https://diplocoffemore.qromo.it/",
+      "partition": "development",
+      "query": "\"Diplò Coffee & More Matera\" \"Matera\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:13.949Z",
+      "candidates": [
+        {
+          "title": "Top 7 coffeehouses in Matera, july 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/coffeehouse-Matera-t5"
+        },
+        {
+          "title": "I migliori 7 caffetterias di Matera, agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/coffeehouse-Matera-t5"
+        },
+        {
+          "title": "Bar e Caffetterie nella zona Zona Industriale La Martella di Matera | Reteimprese",
+          "url": "https://www.reteimprese.it/bar-caffetterie/matera/zona/zona-industriale-la-martella"
+        },
+        {
+          "title": "Bar e Caffetterie nella zona La Martella di Matera | Reteimprese",
+          "url": "https://www.reteimprese.it/bar-caffetterie/matera/zona/la-martella"
+        },
+        {
+          "title": "I migliori 10 pub e bar di Matera, maggio 2026 - Restaurant Guru pagina 3",
+          "url": "https://restaurantguru.it/pub-and-bar-Matera-t2/3"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:076092:trecchina:l-incontro-pub-paninoteca-pizzicheria",
+      "name": "L'incontro Pub Paninoteca Pizzicheria",
+      "municipality": "Trecchina",
+      "region": "Basilicata",
+      "address": "Villaggio Parrutta, 53, 85049 Trecchina",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"L'incontro Pub Paninoteca Pizzicheria\" \"Trecchina\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:15.518Z",
+      "candidates": [
+        {
+          "title": "Ristoranti e pizzerie a Trecchina (PZ) | Il borghista",
+          "url": "https://www.ilborghista.it/mangiare-a-trecchina-pz-6716"
+        },
+        {
+          "title": "L'incontro Ristopub, Camerota, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3585907/lincontro-ristopub"
+        },
+        {
+          "title": "L'incontro pub paninoteca pizzicheria",
+          "url": "https://theguide.tab.travel/fcskq/lincontro-pub-paninoteca-pizzicheria/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:077021:policoro:braceria-pizzeria-ragno-verde",
+      "name": "Ristorante Braceria Pizzeria Ragno Verde",
+      "municipality": "Policoro",
+      "region": "Basilicata",
+      "address": "via Agrigento snc, 75025 Policoro",
+      "known_website": "https://www.tripadvisor.it/Restaurant_Review-g1020248-d12090392-Reviews-Ristorante_Pizzeria_Braceria_Ragno_Verde-Policoro_Province_of_Matera_Basilicata.html",
+      "partition": "development",
+      "query": "\"Ristorante Braceria Pizzeria Ragno Verde\" \"Policoro\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:17.435Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE BRACERIA PIZZERIA RAGNO VERDE, Policoro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1020248-d12090392-Reviews-Ristorante_Braceria_Pizzeria_Ragno_Verde-Policoro_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "RISTORANTE BRACERIA PIZZERIA RAGNO VERDE, Policoro - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1020248-d12090392-Reviews-Ristorante_Braceria_Pizzeria_Ragno_Verde-Policoro_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "RISTORANTE BRACERIA PIZZERIA RAGNO VERDE, Policoro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1020248-d12090392-Reviews-or30-Ristorante_Braceria_Pizzeria_Ragno_Verde-Policoro_Province_of_Matera_Basil.html"
+        },
+        {
+          "title": "RISTORANTE BRACERIA PIZZERIA RAGNO VERDE, Policoro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1020248-d12090392-Reviews-or45-Ristorante_Braceria_Pizzeria_Ragno_Verde-Policoro_Province_of_Matera_Basil.html"
+        },
+        {
+          "title": "Recensioni Ristorante Braceria Pizzeria Ragno Verde (17) - Policoro | Sluurpy",
+          "url": "https://www.sluurpy.it/policoro/ristorante/231112/ristorante-braceria-pizzeria-ragno-verde/recensioni"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:077014:matera:coop",
+      "name": "Coop",
+      "municipality": "Matera",
+      "region": "Basilicata",
+      "address": "SS99 ALTAMURA/MATERA KM 12.700, 75100 Matera",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Coop\" \"Matera\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:19.380Z",
+      "candidates": [
+        {
+          "title": "PANIFICO CASA DEL PANE, Matera - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187772-d7679081-Reviews-Casa_del_Pane-Matera_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "________________________________________________________________________________________________________________________________________________________________________",
+          "url": "https://www.itetcapitini.edu.it/public/cartelle/circolari/8291/campi_scuola_vela_aquarius_2024_da_allegare_a_circolare.pdf"
+        },
+        {
+          "title": "AVVISO PUBBLICO",
+          "url": "https://www.regione.basilicata.it/wp-content/uploads/giunta/docs/DOCUMENT_FILE_3059525.pdf"
+        },
+        {
+          "title": "Driving directions to Coop, 9 Via Enrico Mattei, Matera - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/basilicata/matera/coop?to=place.ChIJq9evBqp_RxMRB-US1xQHmrQ"
+        },
+        {
+          "title": "Oltre L’Arte – oltrelartematera.it",
+          "url": "https://www.oltrelartematera.it/oltre-larte/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:076057:palazzo-san-gervasio:coffee-time",
+      "name": "Coffee Time",
+      "municipality": "Palazzo San Gervasio",
+      "region": "Basilicata",
+      "address": "Piazzale Vincenzo d'Errico, 3, 85026 Palazzo San Gervasio",
+      "known_website": "http://www.complessolatorraca.it/",
+      "partition": "development",
+      "query": "\"Coffee Time\" \"Palazzo San Gervasio\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:21.052Z",
+      "candidates": [
+        {
+          "title": "Coffee Time, Potenza, Italia - Recensioni, Valutazioni, Consigli e Perché Dovresti Andare – Wanderlog",
+          "url": "https://wanderlog.com/it/place/details/12419551/coffee-time"
+        },
+        {
+          "title": "Coffee Time, Potenza, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/12419551"
+        },
+        {
+          "title": "I migliori 5 ristoranti di Palazzo San Gervasio , agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/Palazzo-San-Gervasio"
+        },
+        {
+          "title": "Le top 5 des restaurants à Palazzo San Gervasio, juillet 2026 - Restaurant Guru",
+          "url": "https://fr.restaurantguru.com/Palazzo-San-Gervasio"
+        },
+        {
+          "title": "COFFEE TIME DI FRANCESCA GRIECO, Partita IVA: 02181730769, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/9746/francesca-grieco"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:076048:melfi:officina-della-pizza",
+      "name": "Officina della Pizza",
+      "municipality": "Melfi",
+      "region": "Basilicata",
+      "address": "Via Rocco Scotellaro, 18, 85025 Melfi",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Officina della Pizza\" \"Melfi\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:22.796Z",
+      "candidates": [
+        {
+          "title": "OFFICINA DELLA PIZZA, Melfi - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2027115-d16742161-Reviews-Officina_della_Pizza-Melfi_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "Officina della PIZZA | 0972 196 0001 | Melfi",
+          "url": "https://www.tuttiaffari.com/officina-della-pizza_31L-0972-196-0001"
+        },
+        {
+          "title": "Officina della Pizza, Zona 167 - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Officina-della-Pizza-Zona-167"
+        },
+        {
+          "title": "5 MIGLIORI ristoranti economici: Melfi - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurants-g2027115-zfp16-Melfi_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "Pizzeria a Melfi: Numeri di Telefono ed indirizzi",
+          "url": "https://www.virgilio.it/italia/melfi/ricerca-aziende/pizzeria"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:076063:potenza:follie-dello-chef",
+      "name": "Le Follie dello Chef",
+      "municipality": "Potenza",
+      "region": "Basilicata",
+      "address": "Via Ponte Nove Luci, 44, 85100 Potenza",
+      "known_website": "http://www.lefolliedellochef.com/",
+      "partition": "development",
+      "query": "\"Le Follie dello Chef\" \"Potenza\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:24.984Z",
+      "candidates": [
+        {
+          "title": "Le Follie dello Chef – Lasciati trasportare dal sapore del cibo autentico",
+          "url": "https://www.lefolliedellochef.com/"
+        },
+        {
+          "title": "LE FOLLIE DELLO CHEF, Potenza - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187773-d19268973-Reviews-Le_Follie_dello_Chef-Potenza_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "LE FOLLIE DELLO CHEF, Potenza - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g187773-d19268973-Reviews-Le_Follie_dello_Chef-Potenza_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "LE FOLLIE DELLO CHEF, Potenza - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187773-d19268973-Reviews-Le_Follie_dello_Chef-Potenza_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "Le Follie dello Chef Ristorante Pizzeria | 0971 156 3581 | Potenza (Italia)",
+          "url": "https://www.tuttiaffari.com/le-follie-dello-chef_3c-0971-156-3581"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:076042:lauria:maruca",
+      "name": "Maruca",
+      "municipality": "Lauria",
+      "region": "Basilicata",
+      "address": "Piazza del Popolo, 19, 85044 Lauria",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Maruca\" \"Lauria\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:28.422Z",
+      "candidates": [
+        {
+          "title": "Maruca, Lauria - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Maruca-Lauria"
+        },
+        {
+          "title": "Maruca | 339 463 6932 | Lauria",
+          "url": "https://www.tuttiaffari.com/maruca-339-463-6932"
+        },
+        {
+          "title": "Carta del café Maruca, Lauria",
+          "url": "https://es.restaurantguru.com/Maruca-Lauria/menu"
+        },
+        {
+          "title": "I 5 migliori ristoranti con stuzzichini a Lauria, agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/amuse-bouches-Lauria-m6888"
+        },
+        {
+          "title": "BAR BERMUDA 2.0, Lauria - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bermuda-Bar-Lauria"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:078041:civita:agora",
+      "name": "Ristorante- Pizzeria AGORA",
+      "municipality": "Civita",
+      "region": "Calabria",
+      "address": "Civita",
+      "known_website": "http://www.agoraristorazione.it/",
+      "partition": "development",
+      "query": "\"Ristorante- Pizzeria AGORA\" \"Civita\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:30.063Z",
+      "candidates": [
+        {
+          "title": "La Pizzeria – Agorà Ristorante, Pizzeria, B&B, La Bottega Prodotti Tipici.",
+          "url": "https://www.agoraristorazione.it/la-pizzeria/"
+        },
+        {
+          "title": "L'ospitalità calabrese e i sapori della Valle del #Raganello",
+          "url": "https://nonsoloturisti.it/lospitalita-calabrese-e-i-sapori-della-valle-del-raganello/"
+        },
+        {
+          "title": "Località – Old Calabria",
+          "url": "https://www.oldcalabria.org/parco/localita/"
+        },
+        {
+          "title": "Ristorante Pizzeria Agorà | Smartway",
+          "url": "https://www.smartwaywork.com/food-drink/ristorante-pizzeria-agora"
+        },
+        {
+          "title": "Un borgo in uno scatto: Giorgio Mastrota per \"FotografiAmo Civita\" [VIDEO] • Meraviglie di Calabria",
+          "url": "https://www.meravigliedicalabria.it/il-concorso-per-raccontare-un-borgo-giorgio-mastrota-per-fotografiamo-civita-video/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:102047:vibo-valentia:mcdonald-s",
+      "name": "McDonald's",
+      "municipality": "Vibo Valentia",
+      "region": "Calabria",
+      "address": "viale Affaccio snc, 89900 Vibo Valentia",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"McDonald's\" \"Vibo Valentia\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:31.812Z",
+      "candidates": [
+        {
+          "title": "Vibo Valentia | McDonaldʹs Italia",
+          "url": "https://www.mcdonalds.it/ristorante/calabria/vibo-valentia/vibo-valentia"
+        },
+        {
+          "title": "LISTA RISTORANTI McDonald's ADERENTI AGGIORNATA AL 1/07",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/lista-ristoranti-aderenti__28-giugno2024.pdf"
+        },
+        {
+          "title": "<table id=\"e1\">",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/ristoranti_aderenti-3luglio2024.pdf"
+        },
+        {
+          "title": "McDonald's — Ristoranti aderenti",
+          "url": "https://www.mcdonalds.it/sites/default/files/legal/ristoranti_aderenti---myselection_days.pdf"
+        },
+        {
+          "title": "Ristoranti aderenti | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:080063:reggio-di-calabria:putorti",
+      "name": "Caffè Putortí",
+      "municipality": "Reggio di Calabria",
+      "region": "Calabria",
+      "address": "Via Santa Caterina d'Alessandria, 143, 89122 Reggio di Calabria",
+      "known_website": "http://caffe-putorti.jany.io",
+      "partition": "development",
+      "query": "\"Caffè Putortí\" \"Reggio di Calabria\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:33.633Z",
+      "candidates": [
+        {
+          "title": "»Caffè Putortì a Reggio Di Calabria (RC): Orari Apertura e Mappa",
+          "url": "https://www.paginegialle.it/reggio-di-calabria-rc/confetteria/caffe-putorti"
+        },
+        {
+          "title": "Bares y pubs Restaurantes de Regio de Calabria: Leé opiniones sobre restaurantes de Regio de Calabria, Italia",
+          "url": "https://www.tripadvisor.co/Restaurants-g187777-zfg11776-Reggio_Calabria_Province_of_Reggio_Calabria_Calabria.html"
+        },
+        {
+          "title": "Putortí Dal 1960 da Reggio Calabria",
+          "url": "https://piatti.menu/restaurants/reggio-calabria/putorti-dal-1960"
+        },
+        {
+          "title": "I migliori 10 ristoranti di Reggio Calabria , agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/Reggio-Calabria/19"
+        },
+        {
+          "title": "Migliori Cocktail bar e pub Reggio Calabria: Leggi recensioni sui Cocktail bar e pub a Reggio Calabria",
+          "url": "https://it.tripadvisor.ch/Restaurants-g187777-zfg11776-Reggio_Calabria_Province_of_Reggio_Calabria_Calabria.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:080056:palizzi:zorba",
+      "name": "Pizzeria Zorba",
+      "municipality": "Palizzi",
+      "region": "Calabria",
+      "address": "Via Ariella, 7, 89038 Palizzi",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Pizzeria Zorba\" \"Palizzi\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:35.526Z",
+      "candidates": [
+        {
+          "title": "ZORBA, Palizzi - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g3384364-d4735997-Reviews-Zorba-Palizzi_Province_of_Reggio_Calabria_Calabria.html"
+        },
+        {
+          "title": "Pizzeria Zorba, Palizzi Marina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Trattoria-Zorba-Di-Polimeno-Egidio-Palizzi-Marina"
+        },
+        {
+          "title": "ZORBA, Palizzi - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g3384364-d4735997-Reviews-Zorba-Palizzi_Province_of_Reggio_Calabria_Calabria.html"
+        },
+        {
+          "title": "Pizzeria Zorba | 0965 763153 | Palizzi Marina",
+          "url": "https://www.tuttiaffari.com/pizzeria-zorba-0965-763153"
+        },
+        {
+          "title": "ZORBA, Palizzi - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g3384364-d4735997-Reviews-Zorba-Palizzi_Province_of_Reggio_Calabria_Calabria.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:079160:lamezia-terme:fiorentino",
+      "name": "Bar Fiorentino",
+      "municipality": "Lamezia Terme",
+      "region": "Calabria",
+      "address": "Piazza Fiorentino, 16, 88046 Lamezia Terme",
+      "known_website": "http://www.sisal.com",
+      "partition": "development",
+      "query": "\"Bar Fiorentino\" \"Lamezia Terme\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:37.365Z",
+      "candidates": [
+        {
+          "title": "BAR FIORENTINO, Lamezia Terme - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g651981-d12664333-Reviews-Bar_Fiorentino-Lamezia_Terme_Province_of_Catanzaro_Calabria.html"
+        },
+        {
+          "title": "Bar Fiorentino S.N.C. Di Nicolino E Nicola Bernardi & C. | 0968 432307 | Lamezia Terme",
+          "url": "https://www.tuttiaffari.com/bar-fiorentino-s-n-c-di-nicolino-e-0968-432307"
+        },
+        {
+          "title": "Bar Fiorentino S.N.C. Di Nicolino E Nicola Bernardi & C., Lamezia Terme - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Piazza-Fiorentino-Lamezia-Terme-Lamezia-Terme"
+        },
+        {
+          "title": "BAR FIORENTINO, Lamezia Terme - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g651981-d12664333-Reviews-Bar_Fiorentino-Lamezia_Terme_Province_of_Catanzaro_Calabria.html"
+        },
+        {
+          "title": "BAR FIORENTINO, Lamezia Terme - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g651981-d12664333-Reviews-Bar_Fiorentino-Lamezia_Terme_Province_of_Catanzaro_Calabria.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:078045:cosenza:manhattan",
+      "name": "Bar Manhattan",
+      "municipality": "Cosenza",
+      "region": "Calabria",
+      "address": "Via Riccardo Misasi, 161, 87100 Cosenza",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Manhattan\" \"Cosenza\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:39.069Z",
+      "candidates": [
+        {
+          "title": "ᐅ Orari di apertura „Bar Manhattan“ | Via Riccardo Misasi",
+          "url": "https://www.oraridiapertura24.it/filiale/Cosenza-Bar%2520Manhattan-1830896P.html"
+        },
+        {
+          "title": "\"Bar Atto\" - A Torano Castello una serata di musica e cultura, in ricordo della cara Nuccia - Cosenza 2.0",
+          "url": "https://www.cosenzaduepuntozero.it/bar-atto-a-torano-castello-una-serata-di-musica-e-cultura-in-ricordo-della-cara-nuccia/"
+        },
+        {
+          "title": "Best Bar in Cosenza - Where to Eat, Reviews & Photos",
+          "url": "https://www.sluurpy.com/en/cosenza/restaurants/Bar"
+        },
+        {
+          "title": "Tutto pronto per la Notte Bianca a Cassano All'Ionio | Approdo Calabria",
+          "url": "https://www.approdocalabria.it/8-settembre-la-notte-bianca-a-cassano-delljonio-dedicata-alla-legalita/"
+        },
+        {
+          "title": "Menu au Halal Kebab, Cosenza",
+          "url": "https://fr.restaurantguru.com/Halal-Kebab-Cosenza/menu"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:080027:cinquefrondi:my-dream",
+      "name": "MY DREAM",
+      "municipality": "Cinquefrondi",
+      "region": "Calabria",
+      "address": "Viale Sandro Pertini, 63, 89021 Cinquefrondi",
+      "known_website": "https://barpasticceriamydream.it/",
+      "partition": "development",
+      "query": "\"MY DREAM\" \"Cinquefrondi\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:41.801Z",
+      "candidates": [
+        {
+          "title": "NEW MY DREAM SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA, Partita IVA: 03314130802, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/9162/new-my-dream-societa-a-responsabilita-limitata-semplificata"
+        },
+        {
+          "title": "My Dream S.a.s. Di Calcopietro Claudia & C. | Attività di gelaterie e pasticcerie a Cinquefrondi | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/my-dream-sas-di-calcopietro-claudia-c/3e4443e007c8"
+        },
+        {
+          "title": "36 CV trovati per il ruolo di bar in Italia",
+          "url": "https://it.ucv.online/profili-candidati/bar-italia-con-esperienza-di-persona-it"
+        },
+        {
+          "title": "New My Dream Srl Semplificata | Attività di pasticcerie senza servizio al tavolo o da asporto a Cinquefrondi | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/new-my-dream-societa-a-responsabilita-limitata-semplificata/22a386de92b0"
+        },
+        {
+          "title": "296 CV trovati in Italia",
+          "url": "https://it.ucv.online/profili-candidati/italia-di-persona-full-time-it-0e08f253-92c2-4d40-ae1f-bdae09eba591?page=4"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:078081:montalto-uffugo:coffee-cake-house",
+      "name": "I Coffee & Cake House",
+      "municipality": "Montalto Uffugo",
+      "region": "Calabria",
+      "address": "Via Alessandro Manzoni, 45, 87040 Montalto Uffugo",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"I Coffee & Cake House\" \"Montalto Uffugo\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:43.379Z",
+      "candidates": [
+        {
+          "title": "Dolci fatti in casa a Calabria | 327 annunci e recensioni",
+          "url": "https://localitybiz.it/calabria/dolci-fatti-in-casa-a-calabria"
+        },
+        {
+          "title": "Macchine Caffe Espresso Commercio e Riparazione in Calabria",
+          "url": "https://aziende.virgilio.it/ita/calabria/cat/MACCHINE_CAFFE_ESPRESSO_COMMERCIO_E_RIPARAZIONE.html"
+        },
+        {
+          "title": "Macchine Caffe Espresso Commercio e Riparazione a Calabria e dintorni",
+          "url": "https://www.virgilio.it/italia/calabria/cat/MACCHINE_CAFFE_ESPRESSO_COMMERCIO_E_RIPARAZIONE.html"
+        },
+        {
+          "title": "Confetture e Marmellate a Rotondella",
+          "url": "https://www.reteimprese.it/confetture-marmellate/rotondella"
+        },
+        {
+          "title": "Confetture e Marmellate a Montalto Uffugo",
+          "url": "https://www.reteimprese.it/confetture-marmellate/montalto-uffugo"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:078157:corigliano-rossano:sombrero",
+      "name": "Pizzeria Il Sombrero",
+      "municipality": "Corigliano-Rossano",
+      "region": "Calabria",
+      "address": "Via Paola, 7, 87064 Corigliano-Rossano",
+      "known_website": "www.pizzeriailsombrero.it",
+      "partition": "development",
+      "query": "\"Pizzeria Il Sombrero\" \"Corigliano-Rossano\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:44.935Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA IL SOMBRERO, Corigliano Calabro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1169489-d7927793-Reviews-Pizzeria_Il_Sombrero-Corigliano_Calabro_Corigliano_Rossano_Province_of_Cosenza_C.html"
+        },
+        {
+          "title": "PIZZERIA IL SOMBRERO, Corigliano Calabro - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1169489-d7927793-Reviews-Pizzeria_Il_Sombrero-Corigliano_Calabro_Corigliano_Rossano_Province_of_Cosenza_C.html"
+        },
+        {
+          "title": "PIZZERIA IL SOMBRERO, Corigliano Calabro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1169489-d7927793-Reviews-or40-Pizzeria_Il_Sombrero-Corigliano_Calabro_Corigliano_Rossano_Province_of_Cos.html"
+        },
+        {
+          "title": "PIZZERIA IL SOMBRERO, Corigliano Calabro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g1169489-d7927793-Reviews-Pizzeria_Il_Sombrero-Corigliano_Calabro_Corigliano_Rossano_Province_of_Cosenza_C.html"
+        },
+        {
+          "title": "PIZZERIA IL SOMBRERO, Corigliano Calabro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1169489-d7927793-Reviews-or30-Pizzeria_Il_Sombrero-Corigliano_Calabro_Corigliano_Rossano_Province_of_Cose.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:080046:maropati:tipico",
+      "name": "Agriturismo Il Tipico",
+      "municipality": "Maropati",
+      "region": "Calabria",
+      "address": "Contrada Condello, 89020 Maropati",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Agriturismo Il Tipico\" \"Maropati\" ristorante",
+      "retrieved_at": "2026-09-01T17:43:46.579Z",
+      "candidates": [
+        {
+          "title": "Agriturismo \" Il Tipico\" - Google Hotel",
+          "url": "https://www.google.it/travel/hotels/entity/ChgIq8vWxcbfj_PXARoLL2cvMXRjeDN5ZHkQAQ"
+        },
+        {
+          "title": "AGRITURISMO IL TIPICO A MAROPATI, ENTRATA LATERALE. - Foto di Ristorante dell'Agriturismo Il Tipico, Maropati - Tripadvisor",
+          "url": "https://www.tripadvisor.it/LocationPhotoDirectLink-g3793643-d3785534-i186878474-Ristorante_dell_Agriturismo_Il_Tipico-Maropati_Province_of_Reggio_Calab.html"
+        },
+        {
+          "title": "Agriturismo \" Il Tipico\" - Google Hotel",
+          "url": "https://www.google.it/travel/hotels/entity/ChgIq8vWxcbfj_PXARoLL2cvMXRjeDN5ZHkQAQ?rp=OAHCAhwiGg0AALpCEhMIk7f3gZPmlQMVsxUMAh0-9x2_&ts=CAEaBAoCGgAqBAoAGgA"
+        },
+        {
+          "title": "Agriturismo \" Il Tipico\" | 339 263 4369 | Maropati",
+          "url": "https://www.tuttiaffari.com/agriturismo-%22-il-tipico%22-339-263-4369"
+        },
+        {
+          "title": "TORTA MIMOSA MANGIATA ALL'AGRITURISMO IL TIPICO L'8/03/2013 - Foto di Ristorante dell'Agriturismo Il Tipico, Maropati - Tripadvisor",
+          "url": "https://www.tripadvisor.it/LocationPhotoDirectLink-g3793643-d3785534-i183767058-Ristorante_dell_Agriturismo_Il_Tipico-Maropati_Province_of_Reggio_Calab.html"
+        }
+      ],
+      "adjudication": null
+    }
+  ]
+}

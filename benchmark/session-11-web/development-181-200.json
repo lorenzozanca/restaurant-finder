@@ -1,0 +1,670 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-development-181-200",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:085012:mussomeli:chichibio-ristorante-pizzeria",
+      "name": "Chichibio Ristorante Pizzeria",
+      "municipality": "Mussomeli",
+      "region": "Sicilia",
+      "address": "Strada Provinciale 16 cda monticelli, 93014 Mussomeli",
+      "known_website": "http://prolocomussomeli.com/?page_id=2527",
+      "partition": "development",
+      "query": "\"Chichibio Ristorante Pizzeria\" \"Mussomeli\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:00.542Z",
+      "candidates": [
+        {
+          "title": "CHICHIBIO RISTORANTE PIZZERIA, Mussomeli - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1511587-d4570214-Reviews-Chichibio_Ristorante_Pizzeria_Pub-Mussomeli_Province_of_Caltanissetta_Sicily.html"
+        },
+        {
+          "title": "Comune di Mussomeli",
+          "url": "https://www.comunedimussomeli.it/zf/index.php/locali-pubblici"
+        },
+        {
+          "title": "MIGLIORI 5 pizzerie: Mussomeli (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g1511587-c31-Mussomeli_Province_of_Caltanissetta_Sicily.html"
+        },
+        {
+          "title": "Ristoranti e luoghi di ristoro",
+          "url": "https://lnx.comunedimussomeli.it/attivita/1-ristoranti-e-luoghi-di-ristoro.html"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti Mussomeli - Elenco di agosto 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g1511587-Mussomeli_Province_of_Caltanissetta_Sicily.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:087011:caltagirone:mcdonalds",
+      "name": "McDonalds",
+      "municipality": "Caltagirone",
+      "region": "Sicilia",
+      "address": "Via Andrea Ferrari, 6, 95041 Caltagirone",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"McDonalds\" \"Caltagirone\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:02.283Z",
+      "candidates": [
+        {
+          "title": "MCDONALD'S, Vimercate - Via Torri Bianche 16 - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1080101-d7716616-Reviews-McDonald_s-Vimercate_Province_of_Monza_and_Brianza_Lombardy.html"
+        },
+        {
+          "title": "Mcdonalds a Caltagirone: Numeri di Telefono ed indirizzi",
+          "url": "https://www.virgilio.it/italia/caltagirone/ricerca-aziende/mcdonalds"
+        },
+        {
+          "title": "MCDONALD'S, Vimercate - Via Torri Bianche 16 - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g1080101-d7716616-Reviews-McDonald_s-Vimercate_Province_of_Monza_and_Brianza_Lombardy.html"
+        },
+        {
+          "title": "Indicazioni stradali per Gigacer, Via Caltagirone, 72, Faenza - Waze.",
+          "url": "https://www.waze.com/it/live-map/directions/gigacer-via-caltagirone-72-faenza?to=place.w.7799227.77992270.6886115"
+        },
+        {
+          "title": "14 | April | 2025 | Text Me, Love Mom",
+          "url": "https://textmelovemom.ca/2025/04/14/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:082053:palermo:latino",
+      "name": "Café Latino",
+      "municipality": "Palermo",
+      "region": "Sicilia",
+      "address": "Via Vittorio Emanuele, 276, 90133 Palermo",
+      "known_website": "http://trovalocali.it/",
+      "partition": "development",
+      "query": "\"Café Latino\" \"Palermo\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:04.266Z",
+      "candidates": [
+        {
+          "title": "CAFÈ LATINO, Palermo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187890-d3576585-Reviews-Cafe_Latino-Palermo_Province_of_Palermo_Sicily.html"
+        },
+        {
+          "title": "CAFÈ LATINO, Palermo - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187890-d3576585-Reviews-Cafe_Latino-Palermo_Province_of_Palermo_Sicily.html"
+        },
+        {
+          "title": "CAFÈ LATINO, Palermo - Restaurante Opiniones, Menú y Fotos",
+          "url": "https://www.tripadvisor.co/Restaurant_Review-g187890-d3576585-Reviews-Cafe_Latino-Palermo_Province_of_Palermo_Sicily.html"
+        },
+        {
+          "title": "CAFÈ LATINO, Palermo - Carta, fotos y opiniones del restaurante",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g187890-d3576585-Reviews-Cafe_Latino-Palermo_Province_of_Palermo_Sicily.html"
+        },
+        {
+          "title": "CAFÈ LATINO, Palermo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187890-d3576585-Reviews-or15-Cafe_Latino-Palermo_Province_of_Palermo_Sicily.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:087027:mineo:civico22-lounge-academy-cafe",
+      "name": "Civico22 Lounge Academy Cafe'",
+      "municipality": "Mineo",
+      "region": "Sicilia",
+      "address": "Piazza Ludovico Buglio, 22, 95044 Mineo",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Civico22 Lounge Academy Cafe'\" \"Mineo\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:05.889Z",
+      "candidates": [
+        {
+          "title": "32 places in Mineo on the map - WorldPlaces",
+          "url": "https://italy.worldplaces.me/cities/158064-mineo.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:087029:misterbianco:trinacria",
+      "name": "Pizzeria Trinacria",
+      "municipality": "Misterbianco",
+      "region": "Sicilia",
+      "address": "Strada per San Giovanni Galermo, 60C, 95045 Misterbianco",
+      "known_website": "https://instagram.com/pizzeriatrinacriaa",
+      "partition": "development",
+      "query": "\"Pizzeria Trinacria\" \"Misterbianco\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:07.624Z",
+      "candidates": [
+        {
+          "title": "TRINACRIA PIZZERIA - MISTERBIANCO | Ristorante nelle mie vicinanze",
+          "url": "https://trinacriapizzeria.eatbu.com/?lang=it"
+        },
+        {
+          "title": "PIZZERIA TRINACRIA, Misterbianco - Strada Per San Giovanni Galermo 60c - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g652021-d27410501-Reviews-Pizzeria_Trinacria-Misterbianco_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "Pizzeria Trinacria, Misterbianco - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Trinacria-Misterbianco"
+        },
+        {
+          "title": "PIZZERIA TRINACRIA DI SAGLIMBENE MATTIA PIO, Partita IVA: 06072190876, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1988/pizzeria-trinacria-di-saglimbene-mattia-pio"
+        },
+        {
+          "title": "Pizzeria Trinacria Misterbianco, Misterbianco - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Trinacria-Misterbianco-2"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:088009:ragusa:don-peppinu",
+      "name": "Don Peppinu",
+      "municipality": "Ragusa",
+      "region": "Sicilia",
+      "address": "Centro Commerciale Ibleo, Viale delle Americhe, 32, 97100 Ragusa",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Don Peppinu\" \"Ragusa\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:09.532Z",
+      "candidates": [
+        {
+          "title": "DON PEPPINU RAGUSA - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194872-d19228679-Reviews-Don_Peppinu_Ragusa-Ragusa_Province_of_Ragusa_Sicily.html"
+        },
+        {
+          "title": "Assistenza clienti - Don Peppinu",
+          "url": "https://donpeppinu.it/assistenza-clienti/"
+        },
+        {
+          "title": "DON PEPPINU MARINA DI RAGUSA - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1097285-d4218394-Reviews-Don_Peppinu-Marina_di_Ragusa_Ragusa_Province_of_Ragusa_Sicily.html"
+        },
+        {
+          "title": "DON PEPPINU RAGUSA - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194872-d19228679-Reviews-Don_Peppinu_Ragusa-Ragusa_Province_of_Ragusa_Sicily.html"
+        },
+        {
+          "title": "Il gelato originale siciliano e la storia di Don Peppinu - Chi siamo",
+          "url": "https://donpeppinu.it/chi-siamo/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:083029:gaggi:shaker-pub-dei-f-lli-sciglio",
+      "name": "Shaker Pub dei f.lli Sciglio",
+      "municipality": "Gaggi",
+      "region": "Sicilia",
+      "address": "Via Regina Margherita, 121B, 98030 Gaggi",
+      "known_website": "https://www.leggimenu.it/menu/75s4feah75r1",
+      "partition": "development",
+      "query": "\"Shaker Pub dei f.lli Sciglio\" \"Gaggi\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:11.121Z",
+      "candidates": [
+        {
+          "title": "Shaker Pub dei f.lli Sciglio | 338 102 1815 | Gaggi",
+          "url": "https://www.tuttiaffari.com/shaker-pub-dei-f-lli-sciglio-338-102-1815"
+        },
+        {
+          "title": "Shaker Pub dei F.lli Sciglio - Locali e ritrovi - birrerie e pubs - Gaggi (Messina) | Guida Sicilia",
+          "url": "https://www.guidasicilia.it/azienda/messina/gaggi/locali-e-ritrovi-birrerie-e-pubs/shaker-pub-dei-f-lli-sciglio/1157238"
+        },
+        {
+          "title": "I migliori 5 pub e bar di Gaggi, maggio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/pub-and-bar-Gaggi-t2"
+        },
+        {
+          "title": "Locali e ritrovi a gaggi messina | Guida Sicilia",
+          "url": "https://www.guidasicilia.it/settori/messina/gaggi/locali-e-ritrovi/203"
+        },
+        {
+          "title": "Shaker Pub dei f.lli Sciglio, Taormina, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3444878/shaker-pub-dei-flli-sciglio"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:084021:licata:perez",
+      "name": "Perez",
+      "municipality": "Licata",
+      "region": "Sicilia",
+      "address": "Via Gela, 59, 92027 Licata",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Perez\" \"Licata\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:12.698Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA PEREZ, Licata - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g657501-d5854338-Reviews-Pizzeria_Perez-Licata_Province_of_Agrigento_Sicily.html"
+        },
+        {
+          "title": "Perez, Licata - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Perez-Licata"
+        },
+        {
+          "title": "THE 10 BEST Restaurants Near Pizzeria Perez (Updated 2026)",
+          "url": "https://www.tripadvisor.com/RestaurantsNear-g657501-d5854338-Pizzeria_Perez-Licata_Province_of_Agrigento_Sicily.html"
+        },
+        {
+          "title": "PIZZERIA PEREZ, Licata - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g657501-d5854338-Reviews-or15-Pizzeria_Perez-Licata_Province_of_Agrigento_Sicily.html"
+        },
+        {
+          "title": "Menu di Perez Pizzeria a domicilio a Licata | Ordina su Just Eat",
+          "url": "https://www.justeat.it/restaurants-perez-pizzeria-licata/menu"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:081011:marsala:bingo-casablanca",
+      "name": "Bingo Casablanca",
+      "municipality": "Marsala",
+      "region": "Sicilia",
+      "address": "Via Mazara, 1, 91025 Marsala",
+      "known_website": "https://quigiocobingo.it/bingo-casablanca-marsala/",
+      "partition": "development",
+      "query": "\"Bingo Casablanca\" \"Marsala\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:14.387Z",
+      "candidates": [
+        {
+          "title": "Sala Admiral BINGO CASABLANCA - SLOT & VLT, Marsala - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bingo-Casablanca-Marsala"
+        },
+        {
+          "title": "Bingo Casablanca - Sala Bingo Marsala",
+          "url": "https://quigiocobingo.it/bingo-casablanca-marsala/"
+        },
+        {
+          "title": "Driving directions to Sala Admiral BINGO CASABLANCA - SLOT & VLT, 172 Via Mazara, Marsala - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/sicilia/marsala/bingo-casablanca?to=place.ChIJrUE9O4nCGxMRJuuNsBnJrwM"
+        },
+        {
+          "title": "ᐅ Orari di apertura „HBG Gaming“ | Via Mazara",
+          "url": "https://www.oraridiapertura24.it/filiale/Marsala-HBG%2520Gaming-1936207D.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Bingo Casablanca“ | Via Mazara",
+          "url": "https://www.oraridiapertura24.it/filiale/Marsala-Bingo%2520Casablanca-2100869C.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:083043:malfa:irish-caffe-granite-gelateria",
+      "name": "Irish Caffe Granite Gelateria",
+      "municipality": "Malfa",
+      "region": "Sicilia",
+      "address": "Via Umberto I, 8, 98050 Malfa",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Irish Caffe Granite Gelateria\" \"Malfa\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:16.778Z",
+      "candidates": [
+        {
+          "title": "Irish Caffè Granite Gelateria, Malfa - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Irish-Caffe-Granite-Gelateria-Malfa"
+        },
+        {
+          "title": "I 5 migliori ristoranti con granita a Malfa, agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/granita-Malfa-m12128"
+        },
+        {
+          "title": "Melhor 5 restaurante per cena em Malfa, luglio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/dinner-Malfa-m9623"
+        },
+        {
+          "title": "Top 5 restaurants in Malfa, july 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/Malfa"
+        },
+        {
+          "title": "I 5 migliori ristoranti con brioches a Malfa, aprile 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/brioches-Malfa-m9334"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:114035:orgosolo:ai-monti-del-gennargentu",
+      "name": "Ristorante Ai Monti del Gennargentu",
+      "municipality": "Orgosolo",
+      "region": "Sardegna",
+      "address": "Edile Orgosolo, Via Santa Caterina, 1, 08027 Orgosolo",
+      "known_website": "http://www.aimontidelgennargentu.it/",
+      "partition": "development",
+      "query": "\"Ristorante Ai Monti del Gennargentu\" \"Orgosolo\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:18.549Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE AI MONTI DEL GENNARGENTU, Orgosolo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1065336-d1842067-Reviews-Ristorante_Ai_Monti_Del_Gennargentu-Orgosolo_Province_of_Nuoro_Sardinia.html"
+        },
+        {
+          "title": "Ristorante Ai monti del Gennargentu - Consulta la disponibilità e i prezzi",
+          "url": "https://www.matrimonio.com/ristoranti-ricevimenti/ristorante-ai-monti-del-gennargentu--e107283"
+        },
+        {
+          "title": "RISTORANTE AI MONTI DEL GENNARGENTU, Orgosolo - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1065336-d1842067-Reviews-Ristorante_Ai_Monti_Del_Gennargentu-Orgosolo_Province_of_Nuoro_Sardinia.html"
+        },
+        {
+          "title": "461 recensioni di Ristorante Ai Monti del Gennargentu a Orgosolo",
+          "url": "https://altraopinione.org/ristorante/orgosolo/ristorante-ai-monti-del-gennar/"
+        },
+        {
+          "title": "Orgosolo - Gal Barbagia",
+          "url": "https://www.galbarbagia.it/gal/orgosolo/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:118053:sestu:burger-king-sestu",
+      "name": "Burger King Sestu",
+      "municipality": "Sestu",
+      "region": "Sardegna",
+      "address": "Località Scala Sa Perda, 1080, 09028 Sestu",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Burger King Sestu\" \"Sestu\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:20.236Z",
+      "candidates": [
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=21553"
+        },
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=32087"
+        },
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=25736"
+        },
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=22472"
+        },
+        {
+          "title": "BURGER KING SESTU - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1967898-d26457046-Reviews-Burger_King_Sestu-Sestu_Province_of_Cagliari_Sardinia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:118006:cagliari:zeronove-caffe",
+      "name": "ZeroNove Caffè",
+      "municipality": "Cagliari",
+      "region": "Sardegna",
+      "address": "Via Is Mirrionis, 152A, 09122 Cagliari",
+      "known_website": "http://www.zeronovecaffe.it/",
+      "partition": "development",
+      "query": "\"ZeroNove Caffè\" \"Cagliari\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:22.040Z",
+      "candidates": [
+        {
+          "title": "ZERONOVE CAFFÉ - BAR TABACCHI, Cagliari - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/ZeroNove-Caffe-Cagliari"
+        },
+        {
+          "title": "ZERONOVE CAFFÉ - BAR TABACCHI, Cagliari - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/ZeroNove-Caffe-Cagliari"
+        },
+        {
+          "title": "Bar Colombia, Cagliari - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Colombia-Cagliari"
+        },
+        {
+          "title": "Il Bar, Cagliari - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Il-Bar-Cagliari"
+        },
+        {
+          "title": "La Terrazza Apartment a Cagliari – Prezzi aggiornati 2026 e prenotazione sicura | Hotels in Cagliari",
+          "url": "https://hotelscagliari.com/la-terrazza-apartment"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:114045:seulo:da-andrea-ligas",
+      "name": "Bar Caffe da Andrea Ligas",
+      "municipality": "Seulo",
+      "region": "Sardegna",
+      "address": "Via Torino, 8, 09065 Seulo",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Caffe da Andrea Ligas\" \"Seulo\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:23.707Z",
+      "candidates": [
+        {
+          "title": "Strutture Ricettive | Andalas",
+          "url": "https://www.andalasseulo.com/strutture-ricettive"
+        },
+        {
+          "title": "Bar Caffè da Andrea Ligas | 329 110 8529 | Seulo",
+          "url": "https://www.tuttiaffari.com/bar-caff%C3%A8-da-andrea-ligas-329-110-8529"
+        },
+        {
+          "title": "Bar Caffè da Andrea Ligas, Seulo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Caffe-da-Andrea-Ligas-Seulo"
+        },
+        {
+          "title": "Da Seulo a Nova Gorica, vince torneo di poker e 20mila euro - Notizie - Ansa.it",
+          "url": "https://www.ansa.it/sardegna/notizie/2023/01/17/da-seulo-a-nova-gorica-vince-torneo-di-poker-e-20mila-euro_7957df12-e41f-4a90-bfb4-3875959f8bc3.html"
+        },
+        {
+          "title": "2A Categoria, appello del Seulo al paese per l'iscrizione della squadra al campionato - Diretta Sport Sardegna",
+          "url": "https://www.direttasportsardegna.it/2a-categoria-appello-del-seulo-al-paese-per-liscrizione-della-squadra-al-campionato/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:118038:quartu-sant-elena:tweet-di-carboni-luigi",
+      "name": "Pizzeria Tweet di Carboni Luigi",
+      "municipality": "Quartu Sant'Elena",
+      "region": "Sardegna",
+      "address": "Via Portogallo, 54, 09045 Quartu Sant'Elena",
+      "known_website": "https://wa.me/c/393408090910",
+      "partition": "development",
+      "query": "\"Pizzeria Tweet di Carboni Luigi\" \"Quartu Sant'Elena\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:25.338Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA TWEET DI CARBONI LUIGI, Quartu Sant'Elena - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g227889-d8559656-Reviews-Pizzeria_Tweet_di_Carboni_Luigi-Quartu_Sant_Elena_Province_of_Cagliari_Sardinia.html"
+        },
+        {
+          "title": "Pizzeria Tweet di Carboni Luigi, Quartu Sant'Elena - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/PIZZERIA-TWEET-Quartu-SantElena"
+        },
+        {
+          "title": "Pizzeria Tweet di Carboni Luigi - Quartu Sant'Elena - Menu Digitale",
+          "url": "https://www.leggimenu.it/menu/pizzeriatweet"
+        },
+        {
+          "title": "Pizzeria Tweet di Carboni Luigi, Quartu Sant'Elena - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/PIZZERIA-TWEET-Quartu-SantElena"
+        },
+        {
+          "title": "PIZZERIA TWEET DI CARBONI LUIGI, Quartu Sant'Elena - Menu, Prices & Restaurant Reviews - Order Online Food Delivery - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g227889-d8559656-Reviews-Pizzeria_Tweet_di_Carboni_Luigi-Quartu_Sant_Elena_Province_of_Cagliari_Sardinia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:112050:sassari:asd-spazio-libero",
+      "name": "ASD Spazio Libero",
+      "municipality": "Sassari",
+      "region": "Sardegna",
+      "address": "Via Duca degli Abruzzi, 25, 07100 Sassari",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"ASD Spazio Libero\" \"Sassari\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:27.007Z",
+      "candidates": [
+        {
+          "title": "ᐅ Orari di apertura „ASD Spazio Libero“ | Via Duca degli Abruzzi",
+          "url": "https://www.oraridiapertura24.it/filiale/Sassari-ASD%2520Spazio%2520Libero-4855713S.html"
+        },
+        {
+          "title": "Bando Sport per il sociale 2026",
+          "url": "https://www.fondazionedisardegna.it/media/54/04477225351469/sport_per_il_sociale_2026.pdf"
+        },
+        {
+          "title": "CONI Sassari, cento premi per lo sport 2021/2022 - TuttoMotorieNews • News ed Eventi Automobilistici in Sardegna",
+          "url": "https://www.tuttomotorienews.it/coni-sassari-cento-premi-per-lo-sport-2021-2022/"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Spazio Enel Partner“ | Via Mastino",
+          "url": "https://www.oraridiapertura24.it/filiale/Sassari-Spazio%2520Enel%2520Partner-1297648T.html"
+        },
+        {
+          "title": "Elenco iscritti",
+          "url": "https://www.tkdtechnology.it/welcome/elenco_iscritti?id=264"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:118014:elmas:colazione-da-aby",
+      "name": "Colazione da Aby",
+      "municipality": "Elmas",
+      "region": "Sardegna",
+      "address": "Via del Pino Solitario, 17B, 09067 Elmas",
+      "known_website": "http://www.cremaecioccolato.com",
+      "partition": "development",
+      "query": "\"Colazione da Aby\" \"Elmas\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:28.848Z",
+      "candidates": [
+        {
+          "title": "Menu da Colazione da Aby ristorante, Elmas",
+          "url": "https://restaurantguru.it/Colazione-da-Aby-Elmas/menu"
+        },
+        {
+          "title": "Colazione da Aby, Elmas - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Colazione-da-Aby-Elmas"
+        },
+        {
+          "title": "Driving directions to Colazione da Aby, 17B Via del Pino Solitario, Elmas - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/sardegna/elmas/colazione-da-aby?to=place.ChIJMS8vLbA35xIRzOH4GQFDPh0"
+        },
+        {
+          "title": "COLAZIONE DA ABY - Gelateria a Elmas | LocalShop24",
+          "url": "https://www.localshop24.com/it/elmas-ca-it/attivita/gelateria/colazione-da-aby/"
+        },
+        {
+          "title": "Colazione da Aby - Consulta la disponibilità e i prezzi",
+          "url": "https://www.matrimonio.com/torte-nuziali/colazione-da-aby--e361248"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:115075:terralba:vesuvio-terralba",
+      "name": "Vesuvio Terralba",
+      "municipality": "Terralba",
+      "region": "Sardegna",
+      "address": "Via Concordia, 45, 09098 Terralba",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Vesuvio Terralba\" \"Terralba\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:30.676Z",
+      "candidates": [
+        {
+          "title": "Terralba – Monumenti Aperti",
+          "url": "https://monumentiaperti.com/it/edizioni/2026/comuni/terralba/"
+        },
+        {
+          "title": "Vesuvio Terralba, Terralba - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Vesuvio-Terralba"
+        },
+        {
+          "title": "Informazioni utili",
+          "url": "https://www.prolocoterralba.it/wp-content/uploads/2021/09/Terralba-Supplemento-al-n.-70.pdf"
+        },
+        {
+          "title": "PIZZERIA RISTORANTE IL VESUVIO, Terralba - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1932199-d2321934-Reviews-Pizzeria_Ristorante_Il_Vesuvio-Terralba_Province_of_Oristano_Sardinia.html"
+        },
+        {
+          "title": "PIZZERIA RISTORANTE IL VESUVIO, Terralba - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1932199-d2321934-Reviews-Pizzeria_Ristorante_Il_Vesuvio-Terralba_Province_of_Oristano_Sardinia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:113017:olbia:tempi-moderni",
+      "name": "Cafe Tempi Moderni",
+      "municipality": "Olbia",
+      "region": "Sardegna",
+      "address": "Viale Aldo Moro, 88, 07026 Olbia",
+      "known_website": "http://www.cafetempimoderni.it",
+      "partition": "development",
+      "query": "\"Cafe Tempi Moderni\" \"Olbia\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:32.718Z",
+      "candidates": [
+        {
+          "title": "CAFE TEMPI MODERNI, Olbia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187883-d8144526-Reviews-Cafe_Tempi_Moderni-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "CAFE TEMPI MODERNI, Olbia - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187883-d8144526-Reviews-Cafe_Tempi_Moderni-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "Cafe Tempi Moderni - Olbia, Provincia di Sassari - Ristorante Vicari",
+          "url": "https://it.ristorantevicari.it/cafe-tempi-moderni/"
+        },
+        {
+          "title": "Cafe Tempi Moderni, Olbia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Tempi-Moderni-Olbia"
+        },
+        {
+          "title": "CAFE TEMPI MODERNI, Olbia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g187883-d8144526-Reviews-or15-Cafe_Tempi_Moderni-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:117019:serrenti:tourist-market-bar-tavola-calda",
+      "name": "Tourist Market / bar - tavola calda",
+      "municipality": "Serrenti",
+      "region": "Sardegna",
+      "address": "SS 131 km 40,200, 09027 Serrenti",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Tourist Market / bar - tavola calda\" \"Serrenti\" ristorante",
+      "retrieved_at": "2026-09-01T17:44:34.918Z",
+      "candidates": [
+        {
+          "title": "Tourist Market / bar - tavola calda | 070 937 3039 | Serrenti",
+          "url": "https://www.tuttiaffari.com/tourist-market-bar-tavola-calda-070-937-3039"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Tourist Market / bar - tavola calda“ | Strada Statale",
+          "url": "https://www.oraridiapertura24.it/filiale/Serrenti-Tourist%2520Market%2520%252F%2520bar%2520-%2520tavola%2520calda-760268M.html"
+        },
+        {
+          "title": "Bar, pub e taverne a Serrenti, Sardegna",
+          "url": "https://guida-delle-societa.cybo.com/IT/serrenti/bar%2C-pub-e-taverne/"
+        },
+        {
+          "title": "ᐅ Orari di apertura „M.c. Market Srl“ | Via Piemonte",
+          "url": "https://www.oraridiapertura24.it/filiale/Senorbi%2527-M.c.%2520Market%2520Srl-1362462X.html"
+        }
+      ],
+      "adjudication": null
+    }
+  ]
+}

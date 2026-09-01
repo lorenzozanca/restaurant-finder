@@ -1,0 +1,1370 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-development-021-060",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:016086:costa-volpino:ai-ciar",
+      "name": "Locanda Ai Ciar",
+      "municipality": "Costa Volpino",
+      "region": "Lombardia",
+      "address": "Località Ceratello, Costa Volpino",
+      "known_website": "http://www.aiciar.it",
+      "partition": "development",
+      "query": "\"Locanda Ai Ciar\" \"Costa Volpino\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:03.251Z",
+      "candidates": [
+        {
+          "title": "LOCANDA AI CIAR, Costa Volpino - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2370897-d2350149-Reviews-Locanda_Ai_Ciar-Costa_Volpino_Province_of_Bergamo_Lombardy.html"
+        },
+        {
+          "title": "LOCANDA AI CIAR, Costa Volpino - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2370897-d2350149-Reviews-Locanda_Ai_Ciar-Costa_Volpino_Province_of_Bergamo_Lombardy.html"
+        },
+        {
+          "title": "LOCANDA AI CIAR, Costa Volpino - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2370897-d2350149-Reviews-or45-Locanda_Ai_Ciar-Costa_Volpino_Province_of_Bergamo_Lombardy.html"
+        },
+        {
+          "title": "LOCANDA AI CIAR, Costa Volpino - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2370897-d2350149-Reviews-or30-Locanda_Ai_Ciar-Costa_Volpino_Province_of_Bergamo_Lombardy.html"
+        },
+        {
+          "title": "LOCANDA AI CIAR, Costa Volpino - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2370897-d2350149-Reviews-or15-Locanda_Ai_Ciar-Costa_Volpino_Province_of_Bergamo_Lombardy.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:015168:parabiago:piadineria-del-genio",
+      "name": "La Piadineria del Genio",
+      "municipality": "Parabiago",
+      "region": "Lombardia",
+      "address": "Via Goffredo Mameli, 22, 20015 Parabiago",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"La Piadineria del Genio\" \"Parabiago\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:04.799Z",
+      "candidates": [
+        {
+          "title": "LA PIADINERIA DEL GENIO, Parabiago - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1079033-d19631279-Reviews-La_Piadineria_del_Genio-Parabiago_Province_of_Milan_Lombardy.html"
+        },
+        {
+          "title": "LA PIADINERIA DEL GENIO, Parabiago - Menu, Prices, Restaurant Reviews & Reservations - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1079033-d19631279-Reviews-La_Piadineria_del_Genio-Parabiago_Province_of_Milan_Lombardy.html"
+        },
+        {
+          "title": "LA PIADINERIA DEL GENIO, Parabiago - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g1079033-d19631279-Reviews-La_Piadineria_del_Genio-Parabiago_Province_of_Milan_Lombardy.html"
+        },
+        {
+          "title": "LA PIADINERIA DEL GENIO, Parabiago - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1079033-d19631279-Reviews-or30-La_Piadineria_del_Genio-Parabiago_Province_of_Milan_Lombardy.html"
+        },
+        {
+          "title": "LA PIADINERIA DEL GENIO, Parabiago - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1079033-d19631279-Reviews-or45-La_Piadineria_del_Genio-Parabiago_Province_of_Milan_Lombardy.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:016024:bergamo:del-colleoni",
+      "name": "Caffè del Colleoni",
+      "municipality": "Bergamo",
+      "region": "Lombardia",
+      "address": "Piazza Giacomo Matteotti, 34, 24122 Bergamo",
+      "known_website": "https://www.caffedelcolleoni.eu/",
+      "partition": "development",
+      "query": "\"Caffè del Colleoni\" \"Bergamo\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:06.518Z",
+      "candidates": [
+        {
+          "title": "Ristorante, Business lunch a Bergamo - Aperitivo Caffè del Colleoni Bergamo",
+          "url": "https://www.caffedelcolleoni.it/food.asp"
+        },
+        {
+          "title": "Caffè del Colleoni Restaurant è, colazione, aperitivo e ristorante a Bergamo",
+          "url": "https://www.caffedelcolleoni.it/caffecolleoni.asp"
+        },
+        {
+          "title": "CAFFE DEL COLLEONI, Bergamo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187830-d3860419-Reviews-Caffe_del_Colleoni-Bergamo_Province_of_Bergamo_Lombardy.html"
+        },
+        {
+          "title": "Locali Bergamo - Caffetteria Bar Caffè del Colleoni",
+          "url": "https://www.caffedelcolleoni.it/dove_siamo.asp"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Caffe del Colleoni, Bergamo",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g187830-d3860419-Caffe_del_Colleoni-Bergamo_Province_of_Bergamo_Lombardy.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:020064:sustinente:piper-di-paganella-martina",
+      "name": "Bar Piper di Paganella Martina",
+      "municipality": "Sustinente",
+      "region": "Lombardia",
+      "address": "Via Guglielmo Marconi, 43, 46030 Sustinente",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Piper di Paganella Martina\" \"Sustinente\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:08.044Z",
+      "candidates": [
+        {
+          "title": "Bar \"Piper\" di Paganella Martina, Sustinente - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Piper-Sustinente-2"
+        },
+        {
+          "title": "BAR PIPER DI LEGGI E SCRIVI DI PAGANELLA MARTINA, Partita IVA: 01982450205, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/2319/bar-piper-di-leggi-e-scrivi-di-paganella-martina"
+        },
+        {
+          "title": "DECRETO N.  6502",
+          "url": "https://www.regione.lombardia.it/wps/wcm/connect/f3b1ba80-2ac0-4c91-8dbe-0b7b48d71e7f/6502.pdf?CACHEID=ROOTWORKSPACE-f3b1ba80-2ac0-4c91-8dbe-0b7b48d71e7f-o-wukz6&MOD=AJPERES"
+        },
+        {
+          "title": "Angel Bar &, Sustinente - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Angels-Pizza-Sustinente"
+        },
+        {
+          "title": "DECRETO N.  6502",
+          "url": "https://www.regione.lombardia.it/wps/wcm/connect/f3b1ba80-2ac0-4c91-8dbe-0b7b48d71e7f/6502.pdf?CACHEID=ROOTWORKSPACE-f3b1ba80-2ac0-4c91-8dbe-0b7b48d71e7f-naT7p1.&MOD=AJPERES"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:014045:morbegno:ventuno",
+      "name": "Pizzeria Ventuno",
+      "municipality": "Morbegno",
+      "region": "Lombardia",
+      "address": "Via Senatore Ezio Vanoni, 59G, 23017 Morbegno",
+      "known_website": "http://pizzeriaventuno.it/",
+      "partition": "development",
+      "query": "\"Pizzeria Ventuno\" \"Morbegno\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:09.901Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Ventuno: Gusto Autentico a Morbegno Qualità & Passione",
+          "url": "https://pizzeriaventuno.it/"
+        },
+        {
+          "title": "PIZZERIA VENTUNO, Morbegno - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1930015-d23866500-Reviews-Pizzeria_Ventuno-Morbegno_Province_of_Sondrio_Lombardy.html"
+        },
+        {
+          "title": "PIZZERIA VENTUNO, Morbegno - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1930015-d23866500-Reviews-Pizzeria_Ventuno-Morbegno_Province_of_Sondrio_Lombardy.html"
+        },
+        {
+          "title": "PIZZERIA VENTUNO, Morbegno - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g1930015-d23866500-Reviews-Pizzeria_Ventuno-Morbegno_Province_of_Sondrio_Lombardy.html"
+        },
+        {
+          "title": "MIGLIORI 10 pizzerie: Morbegno (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g1930015-c31-Morbegno_Province_of_Sondrio_Lombardy.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:015146:milano:terzo-tempo",
+      "name": "Terzo Tempo",
+      "municipality": "Milano",
+      "region": "Lombardia",
+      "address": "Via San Giuseppe Cottolengo, 12, 20143 Milano",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Terzo Tempo\" \"Milano\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:11.623Z",
+      "candidates": [
+        {
+          "title": "TERZO TEMPO, Milano - Via Giorgio Washington 82, Zona 6 - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187849-d12207252-Reviews-Terzo_Tempo-Milan_Lombardy.html"
+        },
+        {
+          "title": "Terzo Tempo, Milano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Terzo-Tempo-Milan"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Terzo Tempo su Via Giorgio Washington 82",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g187849-d12207252-Terzo_Tempo-Milan_Lombardy.html"
+        },
+        {
+          "title": "TERZO TEMPO, Milano - Via Giorgio Washington 82, Zona 6 - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g187849-d12207252-Reviews-Terzo_Tempo-Milan_Lombardy.html"
+        },
+        {
+          "title": "Terzo Tempo, Milano",
+          "url": "https://www.tuttamilano.it/terzo-tempo-milano-802"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:016222:urgnano:delizie-pasticceria-gelateria",
+      "name": "Delizie pasticceria gelateria",
+      "municipality": "Urgnano",
+      "region": "Lombardia",
+      "address": "Via Piemonte, 105, 24059 Urgnano",
+      "known_website": "http://www.bardelizie.it",
+      "partition": "development",
+      "query": "\"Delizie pasticceria gelateria\" \"Urgnano\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:13.429Z",
+      "candidates": [
+        {
+          "title": "Delizie pasticceria gelateria | 035 481 9859 | Urgnano",
+          "url": "https://www.tuttiaffari.com/delizie-pasticceria-gelateria-035-481-9859"
+        },
+        {
+          "title": "programma 2016 22x17 ridotto.cdr",
+          "url": "https://www.associazionepromourgnano.it/wp-content/uploads/2024/02/Programma-Festa-in-Rocca-2016.pdf"
+        },
+        {
+          "title": "Due anni di «Delizie» Buon compleanno!",
+          "url": "https://www.ecodibergamo.it/stories/eppen/cibo/il-gustavo-consiglia/due-anni-delizie-buon-compleanno-o_2203531_11/"
+        },
+        {
+          "title": "Illimitato e ricco buffet da «Delizie»",
+          "url": "https://www.ecodibergamo.it/stories/eppen/cibo/il-gustavo-consiglia/illimitato-ricco-buffet-delizie-o_2316734_11/"
+        },
+        {
+          "title": "Dolci artigianali, aperitivi e tanto altro da «Delizie»",
+          "url": "https://www.ecodibergamo.it/stories/eppen/cibo/il-gustavo-consiglia/dolci-artigianali-aperitivi-tanto-altro-delizie-o_2505963_11/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:015085:corbetta:santo-stefano-2",
+      "name": "Ristorante Pizzeria Santo Stefano 2",
+      "municipality": "Corbetta",
+      "region": "Lombardia",
+      "address": "Via Eugenio Villoresi, 29, 20011 Corbetta",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Ristorante Pizzeria Santo Stefano 2\" \"Corbetta\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:15.266Z",
+      "candidates": [
+        {
+          "title": "Ristorante Pizzeria Santo Stefano 2 - Ristorante Corbetta | Cucina Italiana nelle mie vicinanze",
+          "url": "https://ristorantepizzeriasantostefano2.eatbu.com/?lang=it"
+        },
+        {
+          "title": "Ristorante Pizzeria Santo Stefano 2 - corbetta | Cucina Italiana nelle mie vicinanze",
+          "url": "https://ristorantepizzeriasantostefano-2.eatbu.com/?lang=it"
+        },
+        {
+          "title": "SANTO STEFANO 2, Corbetta - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1221352-d7691212-Reviews-Santo_Stefano_2-Corbetta_Province_of_Milan_Lombardy.html"
+        },
+        {
+          "title": "Ristorante Pizzeria Santo Stefano 2 - corbetta | Italian cuisine near me",
+          "url": "https://ristorantepizzeriasantostefano-2.eatbu.com/?lang=en"
+        },
+        {
+          "title": "Ristorante Pizzeria Santo Stefano 2, Corbetta - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Santo-Stefano-2-Corbetta"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:013075:como:da-benito-pizzeria",
+      "name": "Da Benito Pizzeria",
+      "municipality": "Como",
+      "region": "Lombardia",
+      "address": "Via Briantea, 29, 22100 Como",
+      "known_website": "http://www.pizzeriadabenito.it/",
+      "partition": "development",
+      "query": "\"Da Benito Pizzeria\" \"Como\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:16.946Z",
+      "candidates": [
+        {
+          "title": "Da Benito - Pizzeria Trattoria Como - contatti",
+          "url": "https://www.pizzeriadabenito.it/contatti.php"
+        },
+        {
+          "title": "Da Benito - Pizzeria Trattoria Como",
+          "url": "https://www.pizzeriadabenito.it/"
+        },
+        {
+          "title": "Da Benito - Pizzeria Trattoria Como - virtual tour",
+          "url": "https://www.pizzeriadabenito.it/virtual-tour.php"
+        },
+        {
+          "title": "PIZZERIA DA BENITO DAL 1986, Como - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187835-d1114272-Reviews-Pizzeria_Trattoria_Da_Benito-Como_Lake_Como_Lombardy.html"
+        },
+        {
+          "title": "Da Benito Pizzeria establecimiento, Como — carta, precios y opiniones",
+          "url": "https://es.restaurantguru.com/Pizzeria-Da-Benito-Como"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:108032:misinto:l-incontro",
+      "name": "Bar L'Incontro",
+      "municipality": "Misinto",
+      "region": "Lombardia",
+      "address": "Via Rovellasca, 156, 20826 Misinto",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar L'Incontro\" \"Misinto\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:18.971Z",
+      "candidates": [
+        {
+          "title": "Bar L'incontro, Misinto - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/LIncontro-Di-Colombo-Gianfranco-Misinto"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Bar L'Incontro“ | Via Rovellasca",
+          "url": "https://www.oraridiapertura24.it/filiale/Misinto-Bar%2520L%2527Incontro-4619114N.html"
+        },
+        {
+          "title": "I migliori 5 pub e bar di Misinto, luglio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/pub-and-bar-Misinto-t2"
+        },
+        {
+          "title": "L'Incontro Di Colombo Gianfranco - Misinto | Bar near me",
+          "url": "https://lincontrodicolombogianfranco.eatbu.com/"
+        },
+        {
+          "title": "L'Incontro Di Colombo Gianfranco - Misinto | Bar nelle mie vicinanze",
+          "url": "https://lincontrodicolombogianfranco.eatbu.com/?lang=it"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:022052:cavedago:picchio-rosso",
+      "name": "Al Picchio Rosso",
+      "municipality": "Cavedago",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "address": "Località Priori, 3, 38010 Cavedago",
+      "known_website": "http://www.alpicchiorosso.com/",
+      "partition": "development",
+      "query": "\"Al Picchio Rosso\" \"Cavedago\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:20.745Z",
+      "candidates": [
+        {
+          "title": "Ristorante | Al Picchio Rosso | Trentino-alto Adige",
+          "url": "https://www.alpicchiorosso.com/"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA AL PICCHIO ROSSO, Cavedago - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1053406-d15694317-Reviews-Al_Picchio_Rosso-Cavedago_Province_of_Trento_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "AL PICCHIO ROSSO, Cavedago - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1053406-d15694317-Reviews-Al_Picchio_Rosso-Cavedago_Province_of_Trento_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA AL PICCHIO ROSSO, Cavedago - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1053406-d15694317-Reviews-or60-Al_Picchio_Rosso-Cavedago_Province_of_Trento_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "Ristorante Pizzeria al Picchio Rosso",
+          "url": "https://www.cavedagovacanze.it/index.php/ristoranti/item/ristorante-al-picchio-rosso"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:022153:riva-del-garda:piadineria",
+      "name": "La Piadineria",
+      "municipality": "Riva del Garda",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "address": "Riva Del Garda (TN), Viale Roma, 3, Riva Del Garda (TN)",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"La Piadineria\" \"Riva del Garda\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:22.514Z",
+      "candidates": [
+        {
+          "title": "LA PIADINERIA, Riva Del Garda - Viale Roma 3 - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194883-d13091508-Reviews-La_Piadineria-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "La Piadineria - L'Italia in un morso -",
+          "url": "https://lapiadineria.com/i-nostri-ristoranti/riva-del-garda"
+        },
+        {
+          "title": "La Piadineria, Riva del Garda - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Piadineria-Riva-del-Garda-Riva-del-Garda"
+        },
+        {
+          "title": "LA PIADINERIA, Riva Del Garda - Viale Roma 3 - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194883-d13091508-Reviews-La_Piadineria-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "LA PIADINERIA, Riva Del Garda - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g194883-d13091508-Reviews-La_Piadineria-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:casa-al-torchio",
+      "name": "Ristorante Pizzeria Casa al Torchio",
+      "municipality": "Bolzano/Bozen",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "address": "Via Museo, 2A, 39100 Bolzano",
+      "known_website": "https://www.casaaltorchio.com/",
+      "partition": "development",
+      "query": "\"Ristorante Pizzeria Casa al Torchio\" \"Bolzano/Bozen\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:24.466Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE PIZZERIA CASA AL TORCHIO, Bolzano - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187857-d1055409-Reviews-or675-Ristorante_Pizzeria_Casa_Al_Torchio-Bolzano_Province_of_South_Tyrol_Trentin.html"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA CASA AL TORCHIO, Bolzano (Bozen) - Menü, Preise & Restaurant Bewertungen - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g187857-d1055409-Reviews-Ristorante_Pizzeria_Casa_Al_Torchio-Bolzano_Province_of_South_Tyrol_Trentino_Alto.html"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA CASA AL TORCHIO, Bolzano (Bozen) - Menü, Preise & Restaurant Bewertungen - Tripadvisor",
+          "url": "https://www.tripadvisor.at/Restaurant_Review-g187857-d1055409-Reviews-Ristorante_Pizzeria_Casa_Al_Torchio-Bolzano_Province_of_South_Tyrol_Trentino_Alto.html"
+        },
+        {
+          "title": "Restaurant Torgglhaus / Ristorante Pizzeria Casa al Torchio in Bolzano / Bozen · HolidayCheck",
+          "url": "https://www.holidaycheck.de/pi/restaurant-torgglhaus-ristorante-pizzeria-casa-al-torchio/38e57114-8ad5-3b57-86c0-a2097031707a"
+        },
+        {
+          "title": "Restaurant Torgglhaus / Ristorante Pizzeria Casa al Torchio in Bolzano / Bozen · HolidayCheck",
+          "url": "https://www.holidaycheck.ch/pi/restaurant-torgglhaus-ristorante-pizzeria-casa-al-torchio/38e57114-8ad5-3b57-86c0-a2097031707a"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:022025:brentonico:brillo-parlante",
+      "name": "Il Brillo Parlante",
+      "municipality": "Brentonico",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "address": "Via San Rocco, 11, 38060 Brentonico",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Il Brillo Parlante\" \"Brentonico\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:26.148Z",
+      "candidates": [
+        {
+          "title": "Il Brillo Parlante | 348 335 8136 | Brentonico",
+          "url": "https://www.tuttiaffari.com/il-brillo-parlante_30a-348-335-8136"
+        },
+        {
+          "title": "Il Brillo Parlante, Brentonico - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Il-Brillo-Parlante-Brentonico"
+        },
+        {
+          "title": "Il Brillo Parlante",
+          "url": "https://www.fermopoint.it/punto-di-ritiro-e-di-spedizione-pacchi/Il-Brillo-Parlante-19425"
+        },
+        {
+          "title": "Il Brillo Parlante",
+          "url": "https://www.fermopoint.it/punto-di-ritiro-e-di-spedizione-pacchi/il-brillo-parlante-19425"
+        },
+        {
+          "title": "IL BRILLO PARLANTE DI GIOVANAZZI DANIELE E C. S.A.S., Partita IVA: 01391380225, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/9308/il-brillo-parlante-di-giovanazzi-daniele-e-c-sas"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:021051:merano-meran:lauben",
+      "name": "Cafe Lauben",
+      "municipality": "Merano/Meran",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "address": "Via Portici, 120, 39012 Merano",
+      "known_website": "https://www.instagram.com/cafelaubenmeran",
+      "partition": "development",
+      "query": "\"Cafe Lauben\" \"Merano/Meran\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:27.780Z",
+      "candidates": [
+        {
+          "title": "CAFE LAUBEN, Merano (Meran) - Restaurant Bewertungen, Telefonnummer & Fotos - Tripadvisor",
+          "url": "https://www.tripadvisor.ch/Restaurant_Review-g187860-d2720085-Reviews-Cafe_Lauben-Merano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "CAFE LAUBEN, Merano (Meran) - Restaurant Bewertungen, Telefonnummer & Fotos - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g187860-d2720085-Reviews-Cafe_Lauben-Merano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "Die 10 besten Restaurants nahe Cafe Lauben, Merano (Meran)",
+          "url": "https://www.tripadvisor.de/RestaurantsNear-g187860-d2720085-Cafe_Lauben-Merano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "Die 10 besten Restaurants nahe Cafe Lauben, Merano (Meran)",
+          "url": "https://www.tripadvisor.ch/RestaurantsNear-g187860-d2720085-Cafe_Lauben-Merano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "Cafe Lauben in Merano / Meran · HolidayCheck",
+          "url": "https://www.holidaycheck.de/pi/cafe-lauben/994e89d7-6138-3de5-aa5c-b838b96f32bc"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:022205:trento:maly-bar",
+      "name": "Maly Bar",
+      "municipality": "Trento",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "address": "Via Vittorio Veneto, 98, 38122 Trento",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Maly Bar\" \"Trento\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:31.380Z",
+      "candidates": [
+        {
+          "title": "Maly Bar, Trento - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Malybar-Trento"
+        },
+        {
+          "title": "Bar - Pasticceria Filippi&Gardumi",
+          "url": "https://www.filippiegardumi.it/bar/"
+        },
+        {
+          "title": "ELENCO LOCALI CONVENZIONATI DAY RISTOSERVICE AGGIORNATO AL 19/12/2023",
+          "url": "https://www.mercurio.provincia.tn.it/areaenti/doc/Elenco_locali_convenzionati_bpe_aggiornato.pdf"
+        },
+        {
+          "title": "Maly Bar | 0461 096651 | Trento",
+          "url": "https://www.tuttiaffari.com/malybar-0461-096651"
+        },
+        {
+          "title": "Chiudono due bar storici: a Villa Lagarina il Bar Roma aperto da 107 anni; a Trento il Maly Bar di via Vittorio Veneto dopo 55 anni di attività | La voce del Trentino",
+          "url": "https://lavocedeltrentino.it/dalle-valli/chiudono-due-bar-storici-a-villa-lagarina-il-bar-roma-aperto-da-107-anni-a-trento-il-maly-bar-di-via-vittorio-veneto-dopo-55-anni-di-attivita/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:021098:termeno-sulla-strada-del-vino-tramin-an-der-weinstra-e:obermaier",
+      "name": "Cafe Obermaier",
+      "municipality": "Termeno sulla strada del vino/Tramin an der Weinstraße",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "address": "Via Hans Feur, 28, 39040 Termeno sulla Strada del Vino",
+      "known_website": "http://www.suedtirol.info/it/esperienze/enogastronomia/ristoranti-e-trattorie/ristoranti?page=177&seed=1474372914&tag[]=233&tag[]=180&tag[]=227&tag[]=258&tag[]=162&tag[]=207&tag[]",
+      "partition": "development",
+      "query": "\"Cafe Obermaier\" \"Termeno sulla strada del vino/Tramin an der Weinstraße\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:33.368Z",
+      "candidates": [
+        {
+          "title": "Cafe Obermaier in Termeno sulla Strada del Vino / Tramin an der Weinstraße · HolidayCheck",
+          "url": "https://www.holidaycheck.de/pi/cafe-obermaier/92e69d13-d2b3-3811-a056-1c4cebbbcccf"
+        },
+        {
+          "title": "Experiences in Tramin/Termeno - Plan your holiday on suedtirol.info",
+          "url": "https://www.suedtirol.info/en/en/experiences-and-events/plp-experiences/tvs/tramin-termeno/restaurants.page0"
+        },
+        {
+          "title": "Experiences in Tramin/Termeno - Plan your holiday on suedtirol.info",
+          "url": "https://www.suedtirol.info/en/en/experiences-and-events/plp-experiences/tvs/tramin-termeno/restaurants"
+        },
+        {
+          "title": "Restauracje w Termeno",
+          "url": "https://www.suedtirol.info/pl/pl/atrakcje-i-wydarzenia/plp-atrakcje/tvs/tramin-an-der-weinstrasse/restauracje-termeno"
+        },
+        {
+          "title": "Bewertungen Cafe Obermaier in Termeno sulla Strada del Vino / Tramin an der Weinstraße · HolidayCheck",
+          "url": "https://www.holidaycheck.de/pr/bewertungen-cafe-obermaier/92e69d13-d2b3-3811-a056-1c4cebbbcccf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:022104:levico-terme:rociondola-sunset-bar",
+      "name": "La Rociondola - Sunset bar",
+      "municipality": "Levico Terme",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "address": "Parco Segantini, 38056 Levico Terme",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"La Rociondola - Sunset bar\" \"Levico Terme\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:35.077Z",
+      "candidates": [
+        {
+          "title": "LA ROCIONDOLA SUNSET -BAR - Levico Terme TN - Lombardia Shopping",
+          "url": "https://lombardiashopping.it/attivita/la-rociondola-sunset-bar-levico-terme-tn/"
+        },
+        {
+          "title": "LA ROCIONDOLA SUNSET -BAR - Levico Terme TN - Veneto Shopping",
+          "url": "https://ilvenetoshopping.it/attivita/la-rociondola-sunset-bar-levico-terme-tn/"
+        },
+        {
+          "title": "LA ROCIONDOLA - SUNSET BAR - Levico Terme TN - Trentino Shopping",
+          "url": "https://iltrentinoshopping.it/attivita/la-rociondola-sunset-bar-levico-terme/"
+        },
+        {
+          "title": "La Rociondola Sunset Bar",
+          "url": "https://www.papido.it/trento/cocktail-bar/la-rociondola.htm"
+        },
+        {
+          "title": "Rociondola Sunset Bar, Levico Terme, locali aperitivo Levico Terme TN, Bar, Cocktail Bar, locali aperitivo vicino a me Levico Terme",
+          "url": "https://www.apetime.com/locali/levico-terme-tn/rociondola-sunset-bar"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:theiner",
+      "name": "Theiner",
+      "municipality": "Bolzano/Bozen",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "address": "Via Museo, 62, 39100 Bolzano",
+      "known_website": "https://www.bar-theiner.it/",
+      "partition": "development",
+      "query": "\"Theiner\" \"Bolzano/Bozen\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:36.909Z",
+      "candidates": [
+        {
+          "title": "CAFFÈ THEINER, Bolzano (Bozen) - Bewertungen & Telefonnummer",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g187857-d10620103-Reviews-Caffe_Theiner-Bolzano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "*** Hotel Ristorante Pichler a Scena presso Merano - Alto Adige - Italia",
+          "url": "https://www.hotelpichler.com/it/service/colofone"
+        },
+        {
+          "title": "Comune di / Gemeinde MALLES VENOSTA / MALS Provincia di / Provinz Pop. cens. 2021 / Bevölkerung laut Volkszählung 2021 Sez. elettorali n. / Wahlsprengel Consiglieri da eleggere / Zu wählende Gemeinder",
+          "url": "https://www.regione.taa.it/content/download/48761/3660764/file/MALLES_VENOSTA2025.pdf"
+        },
+        {
+          "title": "Dati della società Mountain Bistro Snc Di Lechner Diana E Di Theiner Fabian Mountain Bistro Ohg Der Lechner Diana Und Des Theiner Fabian (03321380218), Trentino-Alto Adige/Südtirol, Bolzano/Bozen, RIO",
+          "url": "https://registroaziende.it/azienda/mountain-bistro-snc-di-lechner-diana-e-di-theiner-fabian-mountain-bistro-ohg-der-lechner-diana-und-d-rio-di-pusteria"
+        },
+        {
+          "title": "organis valutazione verifica - 1 -",
+          "url": "https://albocamerale.camcom.it/bz/sites/bz/files/lwa/111260/atto_48_2025_54_12_2025000012/GDOC3_D_12024509_3_Gettoni%20presenza%202_2024_calcolo.xlsx.pdf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:021018:castelbello-ciardes-kastelbell-tschars:etzthaler",
+      "name": "Bar Cafe Etzthaler",
+      "municipality": "Castelbello-Ciardes/Kastelbell-Tschars",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "address": "Stilfserjoch Staatsstraße, 60, 39020 Kastelbell-Tschars",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Cafe Etzthaler\" \"Castelbello-Ciardes/Kastelbell-Tschars\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:39.012Z",
+      "candidates": [
+        {
+          "title": "BAR CAFE ETZTHALER, Castelbello-Ciardes (Kastelbell-Tschars) - Restaurant Bewertungen, Telefonnummer & Fotos - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g1419865-d3844335-Reviews-Bar_Cafe_Etzthaler-Castelbello_Ciardes_Province_of_South_Tyrol_Trentino_Alto_Adi.html"
+        },
+        {
+          "title": "THE 10 BEST Restaurants Near Kastelbell Tschars (Updated 2026)",
+          "url": "https://www.tripadvisor.com/RestaurantsNear-g1419865-d18957883-Kastelbell_Tschars-Castelbello_Ciardes_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti Castelbello-Ciardes - Elenco di 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g1419865-Castelbello_Ciardes_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "DIE 10 BESTEN Restaurants in Castelbello-Ciardes (Kastelbell-Tschars)",
+          "url": "https://www.tripadvisor.ch/Restaurants-g1419865-Castelbello_Ciardes_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "Die besten Restaurants zum Mittagessen in Castelbello-Ciardes (Kastelbell-Tschars)",
+          "url": "https://www.tripadvisor.de/Restaurants-g1419865-zfp30-Castelbello_Ciardes_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:024121:zovencedo:villa-bonin",
+      "name": "Villa Bonin",
+      "municipality": "Zovencedo",
+      "region": "Veneto",
+      "address": "Zovencedo",
+      "known_website": "http://ristorantealloggiovillabonin.it/",
+      "partition": "development",
+      "query": "\"Villa Bonin\" \"Zovencedo\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:41.016Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE ALLOGGIO VILLA BONIN, San Gottardo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g8333163-d4908847-Reviews-Ristorante_Alloggio_Villa_Bonin-San_Gottardo_Zovencedo_Province_of_Vicenza_Venet.html"
+        },
+        {
+          "title": "Villa Bonin, Zovencedo (prezzi aggiornati per il 2026)",
+          "url": "https://www.booking.com/hotel/it/villa-bonin.it.html"
+        },
+        {
+          "title": "RISTORANTE ALLOGGIO VILLA BONIN, San Gottardo - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g8333163-d4908847-Reviews-Ristorante_Alloggio_Villa_Bonin-San_Gottardo_Zovencedo_Province_of_Vicenza_Venet.html"
+        },
+        {
+          "title": "VILLA BONIN Hotel (San Gottardo): Prezzi e Recensioni (2026)",
+          "url": "https://www.tripadvisor.it/Hotel_Review-g8333163-d8329401-Reviews-Villa_Bonin-San_Gottardo_Zovencedo_Province_of_Vicenza_Veneto.html"
+        },
+        {
+          "title": "RISTORANTE ALLOGGIO VILLA BONIN, San Gottardo - Opiniones, Menú y Fotos",
+          "url": "https://www.tripadvisor.co/Restaurant_Review-g8333163-d4908847-Reviews-Ristorante_Alloggio_Villa_Bonin-San_Gottardo_Zovencedo_Province_of_Vicenza_Venet.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:026093:volpago-del-montello:mcdonald-s",
+      "name": "McDonald's",
+      "municipality": "Volpago del Montello",
+      "region": "Veneto",
+      "address": "Via Feltrina Sud, 10, 31040 Volpago del Montello",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"McDonald's\" \"Volpago del Montello\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:42.632Z",
+      "candidates": [
+        {
+          "title": "Volpago del Montello | McDonaldʹs Italia",
+          "url": "https://www.mcdonalds.it/ristorante/veneto/treviso/volpago-del-montello"
+        },
+        {
+          "title": "Ristoranti aderenti | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+        },
+        {
+          "title": "LISTA RISTORANTI McDonald's ADERENTI AGGIORNATA AL 1/07",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/lista-ristoranti-aderenti__28-giugno2024.pdf"
+        },
+        {
+          "title": "<table id=\"e1\">",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/lista-ristoranti-aderenti_28-giugno2024.pdf"
+        },
+        {
+          "title": "McDonald's - Apple Maps",
+          "url": "https://maps.apple.com/place?place-id=IE8E4D1F87DB325BD"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:023091:verona:barbarani",
+      "name": "Caffè Barbarani",
+      "municipality": "Verona",
+      "region": "Veneto",
+      "address": "Piazza delle Erbe, 14A, 37121 Verona",
+      "known_website": "http://www.caffe-barbarani.it/",
+      "partition": "development",
+      "query": "\"Caffè Barbarani\" \"Verona\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:44.262Z",
+      "candidates": [
+        {
+          "title": "Caffè Barbarani - Verona | Bar nelle mie vicinanze | Prenoti subito",
+          "url": "https://www.caffe-barbarani.it/?lang=it"
+        },
+        {
+          "title": "Caffè Barbarani a Verona - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork",
+          "url": "https://www.thefork.it/ristorante/caffe-barbarani-r496603"
+        },
+        {
+          "title": "CAFFE BARBARANI, Verona - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187871-d2664951-Reviews-Caffe_Barbarani-Verona_Province_of_Verona_Veneto.html"
+        },
+        {
+          "title": "Menù completo e carta 2026 - Caffè Barbarani a Verona | TheFork",
+          "url": "https://www.thefork.it/ristorante/caffe-barbarani-r496603/menu"
+        },
+        {
+          "title": "CAFFE BARBARANI, Verona - Menu, Prices, Restaurant Reviews & Reservations - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187871-d2664951-Reviews-Caffe_Barbarani-Verona_Province_of_Verona_Veneto.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:024091:sandrigo:aiva",
+      "name": "Aiva",
+      "municipality": "Sandrigo",
+      "region": "Veneto",
+      "address": "Piazza Vittorio Emanuele, 23, 36066 Sandrigo",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Aiva\" \"Sandrigo\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:45.832Z",
+      "candidates": [
+        {
+          "title": "AIVA, Sandrigo - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1081274-d27397424-Reviews-Aiva-Sandrigo_Province_of_Vicenza_Veneto.html"
+        },
+        {
+          "title": "Aiva, Sandrigo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/AIVA-Sandrigo"
+        },
+        {
+          "title": "Aiva | 0444 043013 | Sandrigo",
+          "url": "https://www.tuttiaffari.com/aiva-0444-043013"
+        },
+        {
+          "title": "Aiva, Sandrigo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/AIVA-Sandrigo"
+        },
+        {
+          "title": "Aiva da SANDRIGO",
+          "url": "https://piatti.menu/restaurants/sandrigo/aiva"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:028057:montegrotto-terme:principe-pizzeria-cicchetteria",
+      "name": "Principe Pizzeria Cicchetteria",
+      "municipality": "Montegrotto Terme",
+      "region": "Veneto",
+      "address": "Viale Stazione, 107, 35036 Montegrotto Terme",
+      "known_website": "https://www.instagram.com/principe_pizzeriacicchetteria",
+      "partition": "development",
+      "query": "\"Principe Pizzeria Cicchetteria\" \"Montegrotto Terme\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:47.566Z",
+      "candidates": [
+        {
+          "title": "PRINCIPE PIZZERIA CICCHETTERIA, Montegrotto Terme - Ristorante Recensioni & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194832-d33761610-Reviews-Principe_Pizzeria_Cicchetteria-Montegrotto_Terme_Province_of_Padua_Veneto.html"
+        },
+        {
+          "title": "MIGLIORI 10 pizzerie: Montegrotto Terme (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g194832-c31-Montegrotto_Terme_Province_of_Padua_Veneto.html"
+        },
+        {
+          "title": "PRINCIPE PIZZERIA CICCHETTERIA, Montegrotto Terme - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Bar-Principe-Montegrotto-Terme"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti Montegrotto Terme - Elenco di 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g194832-Montegrotto_Terme_Province_of_Padua_Veneto.html"
+        },
+        {
+          "title": "MIGLIORI 10 ristoranti italiani: Montegrotto Terme (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g194832-c26-Montegrotto_Terme_Province_of_Padua_Veneto.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:028060:padova:berlino-beer-food-music",
+      "name": "Berlino Beer Food & Music",
+      "municipality": "Padova",
+      "region": "Veneto",
+      "address": "Via Ognissanti, 83, 35131 Padova",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Berlino Beer Food & Music\" \"Padova\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:49.273Z",
+      "candidates": [
+        {
+          "title": "BERLINO - BEER, FOOD & MUSIC, Padova - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187867-d8630857-Reviews-Berlino_Beer_Food_Music-Padua_Province_of_Padua_Veneto.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Berlino - Beer, Food & Music, Padova",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g187867-d8630857-Berlino_Beer_Food_Music-Padua_Province_of_Padua_Veneto.html"
+        },
+        {
+          "title": "BERLINO - BEER, FOOD & MUSIC, Padua - Photos & Restaurant Reviews - Order Online Food Delivery - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187867-d8630857-Reviews-Berlino_Beer_Food_Music-Padua_Province_of_Padua_Veneto.html"
+        },
+        {
+          "title": "Menu da Berlino Beer Food & Music pub & bar, Padova",
+          "url": "https://restaurantguru.it/Berlino-Beer-Music-and-Friends-Padua/menu"
+        },
+        {
+          "title": "Menu di Berlino - Beer Food & Music a domicilio a Padova | Ordina su Just Eat",
+          "url": "https://www.justeat.it/restaurants-berlino---beer-food-and-music-padova/menu"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:023021:castel-d-azzano:gelateria-millevoglie",
+      "name": "Gelateria Millevoglie",
+      "municipality": "Castel d'Azzano",
+      "region": "Veneto",
+      "address": "Via Camillo Benso di Cavour, 14B, 37060 Castel d'Azzano",
+      "known_website": "https://sites.google.com/view/millevoglie-cda/",
+      "partition": "development",
+      "query": "\"Gelateria Millevoglie\" \"Castel d'Azzano\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:50.955Z",
+      "candidates": [
+        {
+          "title": "Mille Voglie Gelateria Restaurant - Visit to Find Food Options & See Mille Voglie Gelateria Social Media & Official Accounts | Linktree",
+          "url": "https://linktr.ee/millevoglie"
+        },
+        {
+          "title": "Mapstr - Gelateria Millevoglie Castel d'Azzano -",
+          "url": "https://mapstr.com/place/qCqcxRw8AM"
+        },
+        {
+          "title": "Gelaterie del Veneto: guida alle migliori artigianali",
+          "url": "https://www.appgelato.it/gelaterie/veneto/"
+        },
+        {
+          "title": "Gelaterie of Veneto: A Guide to the Best Artisanal Shops",
+          "url": "https://www.appgelato.it/en/gelaterie/veneto/"
+        },
+        {
+          "title": "Pasticcerie - Produzione e Ingrosso a Castel d'Azzano",
+          "url": "https://www.reteimprese.it/pasticcerie-produzione-ingrosso/castel-d-azzano"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:023052:negrar-di-valpolicella:paradise-caffe",
+      "name": "Paradise Caffe",
+      "municipality": "Negrar di Valpolicella",
+      "region": "Veneto",
+      "address": "Viale Luigi Rizzardi, 37024 Negrar di Valpolicella",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Paradise Caffe\" \"Negrar di Valpolicella\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:54.144Z",
+      "candidates": [
+        {
+          "title": "PARADISE CAFFÈ, Negrar di Valpolicella - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g661295-d15276547-Reviews-Paradise_CAFFE-Negrar_di_Valpolicella_Province_of_Verona_Veneto.html"
+        },
+        {
+          "title": "MIGLIORI 5 caffè: Negrar di Valpolicella (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g661295-c8-Negrar_di_Valpolicella_Province_of_Verona_Veneto.html"
+        },
+        {
+          "title": "PARADISE CAFFÈ, Negrar di Valpolicella - Restaurant Reviews & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g661295-d15276547-Reviews-Paradise_CAFFE-Negrar_di_Valpolicella_Province_of_Verona_Veneto.html"
+        },
+        {
+          "title": "Migliori Bar Negrar di Valpolicella: Leggi recensioni sui Bar a Negrar di Valpolicella",
+          "url": "https://www.tripadvisor.it/Restaurants-g661295-zfg9900-Negrar_di_Valpolicella_Province_of_Verona_Veneto.html"
+        },
+        {
+          "title": "MIGLIORI 5 caffè: Negrar di Valpolicella (Aggiornamento al 2026)",
+          "url": "https://it.tripadvisor.ch/Restaurants-g661295-c8-Negrar_di_Valpolicella_Province_of_Verona_Veneto.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:027019:jesolo:seven",
+      "name": "Bar Seven",
+      "municipality": "Jesolo",
+      "region": "Veneto",
+      "address": "Via Andrea Bafile, 564, 30016 Jesolo",
+      "known_website": "http://www.barsevenjesolo.it/",
+      "partition": "development",
+      "query": "\"Bar Seven\" \"Jesolo\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:56.012Z",
+      "candidates": [
+        {
+          "title": "Bar Seven Jesolo.",
+          "url": "https://www.discotechejesolo.it/locale/bar-seven-jesolo"
+        },
+        {
+          "title": "Day & Night",
+          "url": "https://www.jesolojournal.com/wp-content/uploads/2022/09/JJ14-web.pdf"
+        },
+        {
+          "title": "BAR SEVEN, Lido di Jesolo - Restaurant Reviews & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g11962484-d27335359-Reviews-Bar_Seven-Lido_di_Jesolo_Jesolo_Veneto.html"
+        },
+        {
+          "title": "Locali Jesolo: i migliori locali a Jesolo e provincia",
+          "url": "https://www.discotechejesolo.it/locali/locali-jesolo"
+        },
+        {
+          "title": "Jesolo Restaurants: Pizzerias, Bars and Where to Eat | Jesolo Beach",
+          "url": "https://www.jesolobeach.com/en/directory/food-beverage"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:025055:seren-del-grappa:forcelletto",
+      "name": "BAR Ristorante Forcelletto",
+      "municipality": "Seren del Grappa",
+      "region": "Veneto",
+      "address": "Via Feltre, 46, 32030 Seren del Grappa",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"BAR Ristorante Forcelletto\" \"Seren del Grappa\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:57.810Z",
+      "candidates": [
+        {
+          "title": "I migliori 5 ristoranti di Seren del Grappa , giugno 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/Seren-del-Grappa"
+        },
+        {
+          "title": "Top 5 restaurants in Rasai, june 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/Rasai"
+        },
+        {
+          "title": "Top 5 places to eat in Seren del Grappa, april 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/restaurant-Seren-del-Grappa-t1"
+        },
+        {
+          "title": "Top 5 Restaurants in Seren del Grappa, Juni 2026 - Restaurant Guru",
+          "url": "https://de.restaurantguru.com/Seren-del-Grappa"
+        },
+        {
+          "title": "I migliori 5 ristoranti di Rasai , maggio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/Rasai"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:031006:fogliano-redipuglia:ai-trosi",
+      "name": "Agriturismo Ai Trosi",
+      "municipality": "Fogliano Redipuglia",
+      "region": "Friuli-Venezia Giulia",
+      "address": "Via Sant'Elia, 58, 34070 Fogliano Redipuglia",
+      "known_website": "http://agriturismoaitrosi.placeweb.site",
+      "partition": "development",
+      "query": "\"Agriturismo Ai Trosi\" \"Fogliano Redipuglia\" ristorante",
+      "retrieved_at": "2026-09-01T17:38:59.398Z",
+      "candidates": [
+        {
+          "title": "DOVE MANGIARE - Pro Loco Fogliano Redipuglia",
+          "url": "https://www.prolocofoglianoredipuglia.it/dove-mangiare/"
+        },
+        {
+          "title": "Agriturismo Ai Trosi, Fogliano Redipuglia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Ai-Trosi-Polazzo"
+        },
+        {
+          "title": "Menu da Agriturismo Ai Trosi ristorante, Fogliano Redipuglia",
+          "url": "https://restaurantguru.it/Ai-Trosi-Polazzo/menu"
+        },
+        {
+          "title": "Menu at Agriturismo Ai Trosi restaurant, Fogliano Redipuglia",
+          "url": "https://restaurantguru.com/Ai-Trosi-Polazzo/menu"
+        },
+        {
+          "title": "VIA TERZA ARMATA, 37/    34070",
+          "url": "https://www.prolocofoglianoredipuglia.it/wp-content/uploads/2016/08/Dove-mangiare.pdf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:093041:san-vito-al-tagliamento:canton",
+      "name": "Bar Canton",
+      "municipality": "San Vito al Tagliamento",
+      "region": "Friuli-Venezia Giulia",
+      "address": "Via Morsano, 2, 33078 San Vito al Tagliamento",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Canton\" \"San Vito al Tagliamento\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:01.396Z",
+      "candidates": [
+        {
+          "title": "Bar Canton, San Vito al Tagliamento - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Al-Canton-San-Vito-al-Tagliamento"
+        },
+        {
+          "title": "I migliori 7 ristoranti di San Vito al Tagliamento , agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/San-Vito-al-Tagliamento"
+        },
+        {
+          "title": "I migliori 7 pub e bar di San Vito al Tagliamento, agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/pub-and-bar-San-Vito-al-Tagliamento-t2"
+        },
+        {
+          "title": "Top 5 restaurants in San Vito al Tagliamento, july 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/San-Vito-al-Tagliamento"
+        },
+        {
+          "title": "I 5 migliori ristoranti con panini a San Vito al Tagliamento, luglio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/sandwiches-San-Vito-al-Tagliamento-m6520"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:032006:trieste:calo",
+      "name": "Pizzeria Calo",
+      "municipality": "Trieste",
+      "region": "Friuli-Venezia Giulia",
+      "address": "Riva Nazario Sauro, 22, 34123 Trieste",
+      "known_website": "https://calopizzaepezzidisicilia.it",
+      "partition": "development",
+      "query": "\"Pizzeria Calo\" \"Trieste\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:03.114Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA CALO', Trieste - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187813-d19614722-Reviews-Pizzeria_Calo-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Pizzeria Calò - Trieste | Cucina Italiana nelle mie vicinanze | Prenoti subito",
+          "url": "https://pizzeriacalo.eatbu.com/?lang=it"
+        },
+        {
+          "title": "Pizzeria Calò - Trieste | Italian cuisine near me | Book now",
+          "url": "https://pizzeriacalo.eatbu.com/?lang=en"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Pizzeria Calo', Trieste - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g187813-d19614722-Pizzeria_Calo-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "PIZZERIA CALO', Trieste - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187813-d19614722-Reviews-Pizzeria_Calo-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:030108:savogna:crisnaro",
+      "name": "Bar Crisnaro",
+      "municipality": "Savogna",
+      "region": "Friuli-Venezia Giulia",
+      "address": "Via John Fitzgerald Kennedy, 21, 33040 Savogna",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Crisnaro\" \"Savogna\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:04.981Z",
+      "candidates": [
+        {
+          "title": "BAR CRISNARO, Savogna - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g11740704-d14022015-Reviews-Bar_Crisnaro-Savogna_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Bar Crisnaro | 0432 714000 | Savogna",
+          "url": "https://www.tuttiaffari.com/bar-crisnaro-0432-714000"
+        },
+        {
+          "title": "BAR CRISNARO, Savogna - Restaurant Reviews & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g11740704-d14022015-Reviews-Bar_Crisnaro-Savogna_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "MIGLIORI ristoranti Savogna - Elenco di giugno 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g11740704-Savogna_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Driving directions to Bar Crisnaro, 21 Via Kennedy, Savogna - Waze",
+          "url": "https://www.waze.com/live-map/directions/bar-crisnaro-via-kennedy-21-savogna?to=place.w.8847822.88674824.20970953"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:031012:monfalcone:novo",
+      "name": "Bar Novo",
+      "municipality": "Monfalcone",
+      "region": "Friuli-Venezia Giulia",
+      "address": "Via Terenziana, 81, 34074 Monfalcone",
+      "known_website": "https://negozi.sisal.com/punto-vendita/monfalcone-via-terenziana-81-bar-novo",
+      "partition": "development",
+      "query": "\"Bar Novo\" \"Monfalcone\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:06.605Z",
+      "candidates": [
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Bar Novo, Monfalcone - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g194829-d27194839-Bar_Novo-Monfalcone_Province_of_Gorizia_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "BAR NOVO, Monfalcone - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194829-d27194839-Reviews-Bar_Novo-Monfalcone_Province_of_Gorizia_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Bar Novo, Monfalcone - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/BAR-NOVO-Monfalcone"
+        },
+        {
+          "title": "BAR NOVO - Bar a Monfalcone | LocalShop24",
+          "url": "https://www.localshop24.com/it/monfalcone-go-it/attivita/bar/bar-novo/"
+        },
+        {
+          "title": "Estate 2025_Servizio urbano Monfalcone dal 09-06-2025 w.pdf",
+          "url": "https://www.aptgorizia.it/wp-content/uploads/2025/06/Diretta-stazione-cantieri_Estate-2025_servizio-urbano-Monfalcone.pdf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:030129:udine:fattori-di-bonta",
+      "name": "Fattori di Bonta",
+      "municipality": "Udine",
+      "region": "Friuli-Venezia Giulia",
+      "address": "Piazza Medaglie d'Oro, 4, 33100 Udine",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Fattori di Bonta\" \"Udine\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:08.882Z",
+      "candidates": [
+        {
+          "title": "Fattori di Bontà - Udine | Panetteria/ pasticceria nelle mie vicinanze",
+          "url": "https://fattori-di-bonta.eatbu.com/?lang=it"
+        },
+        {
+          "title": "Gelateria Fattori Di Bontà | Udine, Udine - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Fattori-di-Bonta-Udine"
+        },
+        {
+          "title": "Fattori di Bontà | 348 836 3202 | Udine",
+          "url": "https://www.tuttiaffari.com/fattori-di-bont%C3%A0-348-836-3202"
+        },
+        {
+          "title": "Gelateria Fattori di Bontà consegna in zona Udine Centro - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/udine/udine-centro/gelateria-fattori-di-bonta"
+        },
+        {
+          "title": "Menu da Gelateria Fattori Di Bontà | Udine, Udine",
+          "url": "https://restaurantguru.it/Fattori-di-Bonta-Udine/menu"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:030008:bagnaria-arsa:foody",
+      "name": "Foody",
+      "municipality": "Bagnaria Arsa",
+      "region": "Friuli-Venezia Giulia",
+      "address": "Via dei Banduzzi, 77, 33050 Bagnaria Arsa",
+      "known_website": "http://foodyrestaurant.altervista.org/",
+      "partition": "development",
+      "query": "\"Foody\" \"Bagnaria Arsa\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:11.120Z",
+      "candidates": [
+        {
+          "title": "FOODY, Bagnaria Arsa - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1454010-d13879862-Reviews-Foody-Bagnaria_Arsa_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Foody - Delicious Takeaway & Dine-In Restaurant in Bagnaria Arsa",
+          "url": "https://foody.menustic.com/"
+        },
+        {
+          "title": "FOODY - Ristorante a Bagnaria Arsa | LocalShop24",
+          "url": "https://www.localshop24.com/it/bagnaria-arsa-ud-it/attivita/ristorante/foody/"
+        },
+        {
+          "title": "FOODY, Bagnaria Arsa - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1454010-d13879862-Reviews-Foody-Bagnaria_Arsa_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti Bagnaria Arsa - Elenco di luglio 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g1454010-Bagnaria_Arsa_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:030116:tarcento:tana-dei-folletti",
+      "name": "Pizzeria La Tana dei Folletti",
+      "municipality": "Tarcento",
+      "region": "Friuli-Venezia Giulia",
+      "address": "Piazza Roma, 18, 33017 Tarcento",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Pizzeria La Tana dei Folletti\" \"Tarcento\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:12.739Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA LA TANA DEI FOLLETTI, Loneriacco di Tarcento - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1514874-d27196053-Reviews-Pizzeria_Dal_Lep_Tarcento-Loneriacco_di_Tarcento_Province_of_Udine_Friuli_Venez.html"
+        },
+        {
+          "title": "Pizzeria La Tana dei Folletti, Tarcento - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-DalLep-Tarcento"
+        },
+        {
+          "title": "Pizzeria La Tana dei Folletti | 351 551 2630 | Tarcento",
+          "url": "https://www.tuttiaffari.com/dal-lep-351-551-2630"
+        },
+        {
+          "title": "Pizzeria La Tana dei Folletti, Tarcento - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Pizzeria-DalLep-Tarcento"
+        },
+        {
+          "title": "117 recensioni di Pizzeria La Tana dei Folletti a Tarcento",
+          "url": "https://altraopinione.org/pizzeria/tarcento/dal-lep/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:030129:udine:assaje",
+      "name": "Assaje",
+      "municipality": "Udine",
+      "region": "Friuli-Venezia Giulia",
+      "address": "Piazza Giacomo Matteotti, 11, 33100 Udine",
+      "known_website": "https://www.assaje.it/contattaci",
+      "partition": "development",
+      "query": "\"Assaje\" \"Udine\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:14.468Z",
+      "candidates": [
+        {
+          "title": "Udine – Assaje",
+          "url": "https://www.assaje.it/locations/udine/"
+        },
+        {
+          "title": "ASSAJE, Udine - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187814-d17593064-Reviews-Assaje-Udine_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "ASSAJE, Udine - Photos & Restaurant Reviews - Order Online Food Delivery - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187814-d17593064-Reviews-Assaje-Udine_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Assaje, Udine - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g187814-d17593064-Assaje-Udine_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Assaje, Udine - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Assaje-Udine"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:093018:cordovado:borgo",
+      "name": "Caffe Al Borgo",
+      "municipality": "Cordovado",
+      "region": "Friuli-Venezia Giulia",
+      "address": "Via Battaglione Gemona, 33, 33075 Cordovado",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Caffe Al Borgo\" \"Cordovado\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:17.297Z",
+      "candidates": [
+        {
+          "title": "Caffè Al Borgo, Cordovado - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-Al-Borgo-Cordovado"
+        },
+        {
+          "title": "CAFFÈ AL BORGO, Cordovado - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1986666-d27378111-Reviews-Caffe_Al_Borgo-Cordovado_Province_of_Pordenone_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Dove mangiare e dove dormire - Turismo Cordovado",
+          "url": "https://turismocordovado.it/dove-mangiare-e-dove-dormire/"
+        },
+        {
+          "title": "Caffe Al Borgo, Cordovado - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Caffe-Al-Borgo-Cordovado"
+        },
+        {
+          "title": "CAFFÈ AL BORGO, Cordovado - Restaurant Bewertungen, Telefonnummer & Fotos - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g1986666-d27378111-Reviews-Caffe_Al_Borgo-Cordovado_Province_of_Pordenone_Friuli_Venezia_Giulia.html"
+        }
+      ],
+      "adjudication": null
+    }
+  ]
+}

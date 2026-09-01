@@ -10,7 +10,6 @@ import { searchDetailed } from "./lib/search.mjs";
 import { createScheduledSearchProvider } from "./lib/provider-scheduler.mjs";
 import { createBraveWebApiProvider } from "./sources/search/brave-web-api.mjs";
 import { get, getRendered } from "./lib/lib.mjs";
-import { publisherOwnershipFromReview } from "./lib/publisher-ownership.mjs";
 
 export async function runPilot(input, dependencies = {}) {
   const config = validateConfig(input.config);
@@ -21,7 +20,6 @@ export async function runPilot(input, dependencies = {}) {
   verifySha256(resolve(config.inputs.reviewed_selection.path), config.inputs.reviewed_selection.sha256,
     "reviewed selection");
   const reviewedSelection = JSON.parse(readFileSync(resolve(config.inputs.reviewed_selection.path), "utf8"));
-  const ownershipByVenue = reviewedOwnershipByVenue(reviewedSelection);
   const actualDatabaseSha256 = sha256(dbPath);
   const pristineDatabase = actualDatabaseSha256 === config.inputs.pilot_database.sha256;
   const apiKey = input.apiKey || process.env.BRAVE_SEARCH_API_KEY;
@@ -37,6 +35,9 @@ export async function runPilot(input, dependencies = {}) {
     if (!pristineDatabase && !isAuthorizedResume(run, config)) {
       throw new Error(`pilot database SHA-256 mismatch: expected ${config.inputs.pilot_database.sha256}, got ${actualDatabaseSha256}`);
     }
+    queue.store.importPublisherReviews(reviewedSelection, {
+      selectionFingerprint: config.inputs.reviewed_selection.sha256,
+    });
     if (!run) {
       if (config.scenario === "warm_incremental") assertWarmPrecondition(queue, config);
       run = queue.createRun({ runId: config.run_id, codeVersion: config.code_version,
@@ -98,7 +99,7 @@ export async function runPilot(input, dependencies = {}) {
 
     const handler = async (job, context) => {
       const venue = loadVenue(queue, job);
-      venue.publisher_ownership = ownershipByVenue.get(venue.canonical_venue_id) || [];
+      venue.publisher_ownership = queue.store.publisherOwnershipForVenue(venue);
       const location = { municipality: venue.municipality,
         province_code: venue.province_code || "", postcodes: venue.postcode ? [venue.postcode] : [] };
       const search = (query, limit, options = {}) => providerContext.run(context, () => searchDetailed({
@@ -219,15 +220,6 @@ function validateConfig(config) {
     throw new Error("warm pilot requires an explicit passing cold-output adjudication gate");
   }
   return config;
-}
-
-function reviewedOwnershipByVenue(selection) {
-  const result = new Map();
-  for (const row of Array.isArray(selection?.candidates) ? selection.candidates : []) {
-    const attestations = publisherOwnershipFromReview(row.review, row.venue_id);
-    if (attestations.length) result.set(row.venue_id, attestations);
-  }
-  return result;
 }
 
 function isAuthorizedResume(run, config) {

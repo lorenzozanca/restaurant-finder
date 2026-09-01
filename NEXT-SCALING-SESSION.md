@@ -16,6 +16,14 @@ publications, and provider failure plus cold-to-warm gating now fail closed.
 No Brave requests were used. See
 `benchmark/SESSION-10-ARCHITECTURAL-CORRECTION-REPORT.md`.
 
+Session 11 is in progress. The 300-venue unseen selection is frozen, the
+durable SQLite ownership workflow is implemented, copy-only pilot replay still
+rejects 23/23 false publications and retains 15/15 true publications, and all
+200 development web fixtures are captured with zero Brave calls. Independent
+development adjudication remains incomplete, so the 100-venue locked holdout
+has deliberately not been queried. See
+`benchmark/SESSION-11-DURABLE-WORKFLOW-CHECKPOINT.md`.
+
 ## Operator directive after the second failed pilot
 
 The operator is justifiably dissatisfied that two pilots consumed 169 actual
@@ -177,11 +185,38 @@ cannot create ownership. Offline replay rejected all 23 false publications and
 retained all 15 true publications across the two pilots. See
 `benchmark/SESSION-10-ARCHITECTURAL-CORRECTION-REPORT.md`.
 
-## Next session objective — durable ownership review workflow, offline only
+## Next session objective — durable ownership workflow and broad unseen validation
 
-The remaining problem is operational: pilot selection JSON currently supplies
-trusted ownership attestations at runtime. Make those attestations durable and
-reviewable without weakening the fail-closed invariant.
+The remaining problems are operational and evidential. Pilot selection JSON
+currently supplies trusted ownership attestations at runtime, and the correction
+has only been replayed against cases already seen during the two failed pilots.
+Make attestations durable and reviewable, then test the system against a broad,
+preselected set of previously unseen venues before considering another Brave
+request.
+
+### Stage 1 — freeze the unseen evaluation design before changing more rules
+
+1. Deterministically select at least **300 unique, previously unseen venues**
+   from the pinned national inventory. Exclude both Session 10 pilot sets and
+   every venue already present in a website or resource benchmark.
+2. Cover all 20 regions, with at least 15 venues per region. Stratify across
+   source-website present/missing, municipality size, rural and tourism-heavy
+   areas, chains and independents, venue types, and Italian/language variants.
+   Record the selection algorithm, seed, inputs, exclusions, and fingerprint.
+3. Before inspecting search outcomes, deterministically split the sample into a
+   development set of at least 200 venues and a locked holdout set of at least
+   100. Do not tune rules against holdout outcomes. If a failed holdout causes a
+   code or policy change, retire that holdout and create a new unseen holdout
+   before claiming validation.
+4. Pre-register the evaluation rules and denominators. Measure official-site
+   precision and recall, search discovery recall, resource-role precision and
+   recall where resources are present, abstention/coverage, and false
+   publication by third-party publisher class. A system that publishes nothing
+   cannot pass. Retain the existing 95% publication-quality target and report
+   two-sided 95% Wilson intervals; if the reviewed denominator cannot
+   demonstrate the target, expand the offline sample rather than use Brave.
+
+### Stage 2 — build the durable ownership review workflow, offline only
 
 1. Add a versioned SQLite publisher-attestation model scoped to one canonical
    venue and one publisher domain. Store status, method, attested website,
@@ -208,14 +243,38 @@ reviewable without weakening the fail-closed invariant.
    retain 15/15 true publications. Report removals and retention separately;
    these remain offline replay counts, not live quality estimates.
 8. Run focused tests while developing, then one full deterministic suite and
-   `git diff --check` at the end. Write a concise offline workflow report and
-   stop.
+   `git diff --check` at the end.
+
+### Stage 3 — broad web stress test without Brave
+
+1. Use Codex/OpenAI integrated web search to investigate the frozen 300+ venue
+   sample. This consumes **zero Brave API requests**. It is a research and test
+   source, not a claim that OpenAI and Brave return identical rankings or
+   results and not a new production-provider decision.
+2. For each venue, preserve a bounded, reproducible fixture containing the
+   query, normalized candidate URLs, retrieval time, and only the minimum
+   result metadata allowed by `DATA-LICENSING.md`. Do not save credentials,
+   personal data, full result pages, or an uncontrolled provider cache.
+3. Adjudicate candidate publishers as official, directory, menu mirror,
+   booking/order platform, editorial/review, social, unrelated, or uncertain.
+   Record reviewer, review time, evidence URLs, notes, and the venue/domain
+   ownership decision separately from page relevance.
+4. Develop only against the development partition. Include unseen and generated
+   directory hosts, but do not solve the benchmark with a host blocklist.
+5. Freeze the implementation, then evaluate the locked holdout once. Publish
+   all denominators, errors, abstentions, confidence intervals, and per-class
+   failures. Passing the 38 familiar pilot publications remains a regression
+   requirement, not evidence of generalization.
+6. Write one concise report covering the durable workflow and the 300+ venue
+   stress test, then stop for operator review.
 
 Use **zero Brave calls**. Do not select another pilot, request an allowance, run
 a canary, resume an old warm run, or execute Veneto/national enrichment. A future
-live step may be considered only after the operator reviews the completed
-durable workflow; it must begin cold with a new explicit hard cap and must stop
-for adjudication before any warm run.
+live step may be considered only after the operator reviews both the completed
+durable workflow and a passing, adequately powered unseen holdout. It must begin
+cold with a new explicit hard cap and must stop for human adjudication before
+any warm request. Failure or an inconclusive denominator means more offline
+work, not another patch-and-rerun cycle against the same sample.
 
 Do not start either the 13,073-job Veneto queue or the 156,057-job national
 queue wholesale. No national publication is authorized by the offline import.

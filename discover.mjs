@@ -193,8 +193,12 @@ async function worker() {
     const i = nextIndex++;
     if (i >= toProcess.length) return;
     const { restaurant: r, index } = toProcess[i];
+    const restaurantWithOwnership = {
+      ...r,
+      publisher_ownership: evidenceStore.publisherOwnershipForVenue(r),
+    };
 
-    const online = await findMenuSources(r, locationContext);
+    const online = await findMenuSources(restaurantWithOwnership, locationContext);
     const durable = evidenceStore.recordEnrichment(r, online, { location: locationContext });
     const current = {
       ...r,

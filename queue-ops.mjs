@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import { mkdir, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { EnrichmentQueue } from "./lib/enrichment-queue.mjs";
@@ -39,6 +40,48 @@ export async function runQueueCommand(argv = process.argv.slice(2), env = proces
       const resumed = queue.resumeQuota(scope, key);
       if (!resumed) throw new Error(`no quota pause found for ${scope}:${key}`);
       return resumed;
+    }
+    if (command === "ownership-list") {
+      return queue.store.listPublisherAttestations({ venueId: args.venue, limit: args.limit });
+    }
+    if (command === "ownership-unattested") {
+      return queue.store.listUnattestedCandidates({ limit: args.limit });
+    }
+    if (command === "ownership-import") {
+      if (!args.selection) throw new Error("ownership-import requires --selection PATH");
+      const selectionBytes = await readFile(resolve(String(args.selection)));
+      const selection = JSON.parse(selectionBytes);
+      return queue.store.importPublisherReviews(selection, {
+        selectionFingerprint: args.fingerprint
+          || createHash("sha256").update(selectionBytes).digest("hex"),
+        expiresAt: args.expiresAt,
+      });
+    }
+    if (["ownership-approve", "ownership-reject"].includes(command)) {
+      for (const required of ["venue", "website", "evidence", "reviewer", "reviewedAt", "expiresAt"]) {
+        if (!args[required]) throw new Error(`${command} requires --${required.replace(/[A-Z]/g, (c) => `-${c.toLowerCase()}`)}`);
+      }
+      return queue.store.recordPublisherAttestation(String(args.venue), {
+        status: command === "ownership-approve" ? "verified" : "rejected",
+        method: args.method || "manual_first_party_review",
+        venue_id: String(args.venue), website_url: String(args.website),
+        evidence_urls: String(args.evidence).split(",").map((item) => item.trim()).filter(Boolean),
+        reviewer: String(args.reviewer), reviewed_at: String(args.reviewedAt),
+        expires_at: String(args.expiresAt), notes: args.notes,
+        source_kind: "human_review", source_fingerprint: args.fingerprint,
+      }, { reason: args.reason || "operator_publisher_review" });
+    }
+    if (command === "ownership-revoke") {
+      for (const required of ["venue", "domain", "reviewer", "reason"]) {
+        if (!args[required]) throw new Error(`ownership-revoke requires --${required}`);
+      }
+      return queue.store.revokePublisherAttestation(String(args.venue), String(args.domain), {
+        reviewer: String(args.reviewer), reason: String(args.reason), occurredAt: args.occurredAt,
+      });
+    }
+    if (command === "ownership-history") {
+      if (!args.venue) throw new Error("ownership-history requires --venue VENUE_ID");
+      return queue.store.publisherAttestationHistory(String(args.venue), String(args.domain || ""));
     }
     if (command === "export") {
       if (!args.output) throw new Error("export requires --output PATH");
@@ -87,6 +130,13 @@ Commands:
   retry JOB_ID                   Requeue a cancelled or dead-letter job
   resume-quota --provider NAME   Resume jobs after confirming provider quota
                [--scope SCOPE] [--key KEY]
+  ownership-list [--venue ID]    List durable publisher attestations
+  ownership-unattested           List venues without an active attestation
+  ownership-import --selection   Import accepted reviews idempotently
+  ownership-approve              Record a verified ownership decision
+  ownership-reject               Record a rejected ownership decision
+  ownership-revoke               Revoke an attestation with an audit reason
+  ownership-history --venue ID   Show publisher-attestation audit history
   export --output PATH           Export active accepted evidence for the existing UI
          [--municipality NAME]
 

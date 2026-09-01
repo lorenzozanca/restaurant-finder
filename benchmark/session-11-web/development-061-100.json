@@ -1,0 +1,1370 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-development-061-100",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:008054:san-lorenzo-al-mare:cascina-rio-rocca",
+      "name": "Cascina Rio Rocca",
+      "municipality": "San Lorenzo al Mare",
+      "region": "Liguria",
+      "address": "Piazza Giuseppe Mazzini, 1, 18017 San Lorenzo al Mare",
+      "known_website": "http://www.cascinariorocca.com/",
+      "partition": "development",
+      "query": "\"Cascina Rio Rocca\" \"San Lorenzo al Mare\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:31.465Z",
+      "candidates": [
+        {
+          "title": "Cascina Rio Rocca - San Lorenzo al Mare | Italian cuisine near me",
+          "url": "https://cascinariorocca.eatbu.com/?lang=en"
+        },
+        {
+          "title": "AGRITURISMO CASCINA RIO ROCCA, San Lorenzo al Mare - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1973854-d3656700-Reviews-Agriturismo_Cascina_Rio_Rocca-San_Lorenzo_al_Mare_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Menu da Cascina Rio Rocca ristorante, San Lorenzo al Mare",
+          "url": "https://restaurantguru.it/Agriturismo-Rio-Rocca-San-Lorenzo-al-Mare/menu"
+        },
+        {
+          "title": "AGRITURISMO CASCINA RIO ROCCA, San Lorenzo al Mare - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1973854-d3656700-Reviews-Agriturismo_Cascina_Rio_Rocca-San_Lorenzo_al_Mare_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Cascina Rio Rocca, San Lorenzo al Mare - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Agriturismo-Rio-Rocca-San-Lorenzo-al-Mare"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:009002:albenga:mcdonald-s",
+      "name": "McDonald's",
+      "municipality": "Albenga",
+      "region": "Liguria",
+      "address": "Regione Cavallo, 2, 17031 Albenga",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"McDonald's\" \"Albenga\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:33.824Z",
+      "candidates": [
+        {
+          "title": "Albenga | McDonaldʹs Italia",
+          "url": "https://www.mcdonalds.it/ristorante/liguria/savona/albenga"
+        },
+        {
+          "title": "Ristoranti aderenti | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+        },
+        {
+          "title": "MCDONALD'S, Albenga - Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194666-d34391006-Reviews-McDonald_s-Albenga_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "MCDONALD'S, Albenga - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194666-d27841261-Reviews-Mcdonald_s-Albenga_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "LISTA RISTORANTI McDonald's ADERENTI AGGIORNATA AL 1/07",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/lista-ristoranti-aderenti__28-giugno2024.pdf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:010025:genova:boasi",
+      "name": "Caffè Boasi",
+      "municipality": "Genova",
+      "region": "Liguria",
+      "address": "Via Benedetto Cairoli, 15, 16124 Genova",
+      "known_website": "http://www.bargenova.it/",
+      "partition": "development",
+      "query": "\"Caffè Boasi\" \"Genova\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:35.420Z",
+      "candidates": [
+        {
+          "title": "CAFFÈ BOASI, Genova - Piccapietra - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187823-d6225256-Reviews-Caffe_Boasi_Al_Boasi_di_via_XX-Genoa_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Caffè Boasi, Genova, De Ferrari (metropolitana di Genova) - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-Boasi-Genoa"
+        },
+        {
+          "title": "CAFFÈ BOASI, Genova - Piccapietra - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g187823-d6225256-Reviews-Caffe_Boasi_Al_Boasi_di_via_XX-Genoa_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Caffè Boasi, Genova - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-Boasi-Genoa-2"
+        },
+        {
+          "title": "Caffè Boasi Bar & Cucina, Genova - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-Boasi-Bar-and-Cucina-Genoa"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:010037:moneglia:ciocco",
+      "name": "Pizzeria Il Ciocco",
+      "municipality": "Moneglia",
+      "region": "Liguria",
+      "address": "Piazza Tarchioni, 15, 16030 Moneglia",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Pizzeria Il Ciocco\" \"Moneglia\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:37.301Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA IL CIOCCO, Moneglia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g616174-d2282599-Reviews-Pizzeria_Il_Ciocco-Moneglia_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "PIZZERIA IL CIOCCO, Moneglia - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g616174-d2282599-Reviews-Pizzeria_Il_Ciocco-Moneglia_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "PIZZERIA IL CIOCCO, Moneglia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g616174-d2282599-Reviews-Pizzeria_Il_Ciocco-Moneglia_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "PIZZERIA IL CIOCCO, Moneglia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g616174-d2282599-Reviews-or15-Pizzeria_Il_Ciocco-Moneglia_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "PIZZERIA IL CIOCCO, Moneglia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g616174-d2282599-Reviews-or75-Pizzeria_Il_Ciocco-Moneglia_Italian_Riviera_Liguria.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:011017:levanto:salty-dog",
+      "name": "Salty Dog",
+      "municipality": "Levanto",
+      "region": "Liguria",
+      "address": "Via Jacopo da Levanto, 33, 19015 Levanto",
+      "known_website": "http://www.saltydog.it",
+      "partition": "development",
+      "query": "\"Salty Dog\" \"Levanto\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:39.212Z",
+      "candidates": [
+        {
+          "title": "THE SALTY DOG CAFE, Levanto - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g580223-d2693670-Reviews-The_Salty_Dog_Cafe-Levanto_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Salty Dog, Levanto - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Salty-Dog-Levanto"
+        },
+        {
+          "title": "THE SALTY DOG CAFE, Levanto - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g580223-d2693670-Reviews-The_Salty_Dog_Cafe-Levanto_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Salty Dog Via Jacopo Da Levanto ★4.6 | Recensioni e Menu",
+          "url": "https://pos.do/it/via-jacopo-da-levanto/ristorante/salty-dog-1"
+        },
+        {
+          "title": "Salty Dog Café | 0187 814298 | Levanto",
+          "url": "https://www.tuttiaffari.com/salty-dog-caf%C3%A9-0187-814298"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:011015:la-spezia:costa",
+      "name": "Bar Costa",
+      "municipality": "La Spezia",
+      "region": "Liguria",
+      "address": "Viale Italia, 16, 19124 La Spezia SP, Italia, 19124 La Spezia",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Costa\" \"La Spezia\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:40.912Z",
+      "candidates": [
+        {
+          "title": "BAR COSTA, La Spezia - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187824-d23905522-Reviews-Bar_Costa-La_Spezia_Province_of_La_Spezia_Liguria.html"
+        },
+        {
+          "title": "Bar Costa, La Spezia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Costa-Italy-2"
+        },
+        {
+          "title": "Bar Costa - La Spezia | Café near me",
+          "url": "https://barcostalaspezia.eatbu.com/?lang=en"
+        },
+        {
+          "title": "Regione Liguria – Giunta RegionaleAtto N° 503-2021  -   Seduta N° 3676  -  del 11/06/2021 - Numero d’Ordine 23",
+          "url": "https://www.ge.camcom.gov.it/it/elementi-homepage/notizie/copy2_of_bonus-ristori/delibera-ristori-del-11-giugno-2021.pdf"
+        },
+        {
+          "title": "Bar Costa | 0187 735265 | La Spezia",
+          "url": "https://www.tuttiaffari.com/bar-costa_5l-0187-735265"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:008043:pigna:desir-de-roy",
+      "name": "Desir de Roy",
+      "municipality": "Pigna",
+      "region": "Liguria",
+      "address": "Via San Rocco, 38, 18037 Pigna",
+      "known_website": "http://desirderoy.it/",
+      "partition": "development",
+      "query": "\"Desir de Roy\" \"Pigna\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:42.514Z",
+      "candidates": [
+        {
+          "title": "DESIR DE ROY, Pigna - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1923748-d6972636-Reviews-Desir_de_Roy-Pigna_Province_of_Imperia_Liguria.html"
+        },
+        {
+          "title": "DESIR DE ROY, Pigna - Menu, Prix & Restaurant Avis - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g1923748-d6972636-Reviews-Desir_de_Roy-Pigna_Province_of_Imperia_Liguria.html"
+        },
+        {
+          "title": "I MIGLIORI 5 ristoranti vicino a Desir de Roy, Pigna - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g1923748-d6972636-Desir_de_Roy-Pigna_Province_of_Imperia_Liguria.html"
+        },
+        {
+          "title": "I MIGLIORI 5 ristoranti vicino a Desir de Roy, Pigna - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g1923748-d5931947-Desir_de_Roy-Pigna_Province_of_Imperia_Liguria.html"
+        },
+        {
+          "title": "DESIR DE ROY, Pigna - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1923748-d6972636-Reviews-Desir_de_Roy-Pigna_Province_of_Imperia_Liguria.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:010015:chiavari:giorgione-cafe",
+      "name": "Giorgione Cafe",
+      "municipality": "Chiavari",
+      "region": "Liguria",
+      "address": "Via Rivarola, 50, 16043 Chiavari",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Giorgione Cafe\" \"Chiavari\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:44.143Z",
+      "candidates": [
+        {
+          "title": "GIORGIONE CAFE, Chiavari - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194735-d18817239-Reviews-Giorgione_Cafe-Chiavari_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "GIORGIONE CAFE, Chiavari - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g194735-d18817239-Reviews-Giorgione_Cafe-Chiavari_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Giorgione Cafè, Chiavari - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Giorgione-Cafe-Chiavari"
+        },
+        {
+          "title": "Giorgione Cafè | 0185 177 0124 | Chiavari",
+          "url": "https://www.tuttiaffari.com/giorgione-caf%C3%A8-0185-177-0124"
+        },
+        {
+          "title": "Migliori Bar e pub Chiavari: Leggi recensioni sui Bar e pub a Chiavari",
+          "url": "https://www.tripadvisor.it/Restaurants-g194735-zfg11776-Chiavari_Italian_Riviera_Liguria.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:008055:sanremo:vesca",
+      "name": "La Vesca",
+      "municipality": "Sanremo",
+      "region": "Liguria",
+      "address": "Corso Giuseppe Mazzini, 80, 18038 Sanremo",
+      "known_website": "http://www.camping.it/it/liguria/?pag=11",
+      "partition": "development",
+      "query": "\"La Vesca\" \"Sanremo\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:45.718Z",
+      "candidates": [
+        {
+          "title": "LA VESCA, Sanremo - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194900-d6215524-Reviews-La_Vesca-Sanremo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "LA VESCA, Sanremo - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194900-d6215524-Reviews-La_Vesca-Sanremo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "LA VESCA, Sanremo - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194900-d6215524-Reviews-or15-La_Vesca-Sanremo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "LA VESCA, Sanremo - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g194900-d6215524-Reviews-La_Vesca-Sanremo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "LA VESCA, Sanremo - Menu, Prix & Restaurant Avis - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g194900-d6215524-Reviews-La_Vesca-Sanremo_Italian_Riviera_Liguria.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:008058:soldano:sacred-and-profane-pub",
+      "name": "Sacred And Profane Pub",
+      "municipality": "Soldano",
+      "region": "Liguria",
+      "address": "Vicolo della Scala, 14, 18036 Soldano",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Sacred And Profane Pub\" \"Soldano\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:47.713Z",
+      "candidates": [
+        {
+          "title": "Sacred And Profane Pub, Soldano - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Sacro-E-Profano-Soldano"
+        },
+        {
+          "title": "Sacred And Profane Pub, Soldano - Menú del restaurante, precios y reseñas",
+          "url": "https://es.restaurantguru.com/Sacro-E-Profano-Soldano"
+        },
+        {
+          "title": "Driving directions to Sacred And Profane Pub, 14 Vicolo della Scala, Soldano - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/liguria/soldano/sacred-and-profane-pub?to=place.ChIJQS77d9jyzRIR4oNNAq66iBI"
+        },
+        {
+          "title": "Sacred And Profane Pub, Sanremo, Italia - Reseñas, Calificaciones, Consejos y Por Qué Deberías Ir – Wanderlog",
+          "url": "https://wanderlog.com/es/place/details/3044250/sacred-and-profane-pub"
+        },
+        {
+          "title": "Sacred And Profane Pub, Sanremo, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3044250/sacred-and-profane-pub"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:036032:polinago:antica-corte-casa-marini",
+      "name": "Antica Corte Casa Marini",
+      "municipality": "Polinago",
+      "region": "Emilia-Romagna",
+      "address": "Via Roncacciolo, 8, 41040 Polinago",
+      "known_website": "http://www.anticacortecasamarini.com/",
+      "partition": "development",
+      "query": "\"Antica Corte Casa Marini\" \"Polinago\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:51.802Z",
+      "candidates": [
+        {
+          "title": "Contatti – Antica Corte Casa Marini – CASA MARINI di Casolari Chiara & C. S.a.s. Sede legale: 41040 Polinago – Via Roncacciolo 8 – P.iva 03486120367 – PEC: casamarini@legalmail.it",
+          "url": "https://www.anticacortecasamarini.com/wp/contatti/"
+        },
+        {
+          "title": "Ristorante – Antica Corte Casa Marini – CASA MARINI di Casolari Chiara & C. S.a.s. Sede legale: 41040 Polinago – Via Roncacciolo 8 – P.iva 03486120367 – PEC: casamarini@legalmail.it",
+          "url": "https://www.anticacortecasamarini.com/wp/ristorante/"
+        },
+        {
+          "title": "ANTICA CORTE CASA MARINI, Polinago - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g3665660-d10033556-Reviews-Antica_Corte_Casa_Marini-Polinago_Province_of_Modena_Emilia_Romagna.html"
+        },
+        {
+          "title": "ANTICA CORTE CASA MARINI, Polinago - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g3665660-d10033556-Reviews-Antica_Corte_Casa_Marini-Polinago_Province_of_Modena_Emilia_Romagna.html"
+        },
+        {
+          "title": "Antica Corte Casa Marini, Polinago - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Antica-Corte-Casa-Marini-Polinago"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:035020:correggio:mcdonald-s",
+      "name": "McDonald's",
+      "municipality": "Correggio",
+      "region": "Emilia-Romagna",
+      "address": "Viale Vecchia Ferrovia, 28, 42015 Correggio",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"McDonald's\" \"Correggio\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:53.443Z",
+      "candidates": [
+        {
+          "title": "Correggio Viale Vecchia Ferrovia | McDonaldʹs Italia",
+          "url": "https://www.mcdonalds.it/ristorante/emilia-romagna/reggio-emilia/correggio-viale-vecchia-ferrovia"
+        },
+        {
+          "title": "Ristoranti aderenti | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+        },
+        {
+          "title": "LISTA RISTORANTI McDonald's ADERENTI AGGIORNATA AL 1/07",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/lista-ristoranti-aderenti__28-giugno2024.pdf"
+        },
+        {
+          "title": "MCDONALD'S, Correggio - Viale Vecchia Ferrovia. Snc - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g230069-d27411306-Reviews-Mcdonald_s-Correggio_Province_of_Reggio_Emilia_Emilia_Romagna.html"
+        },
+        {
+          "title": "<table id=\"e1\">",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/ristoranti_aderenti_per_regolamento_agg15luglio.pdf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:036005:carpi:centrale-carpi",
+      "name": "Caffè centrale carpi",
+      "municipality": "Carpi",
+      "region": "Emilia-Romagna",
+      "address": "Via Francesco Petrarca, 3, 41012 Carpi",
+      "known_website": "http://www.sisal.com",
+      "partition": "development",
+      "query": "\"Caffè centrale carpi\" \"Carpi\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:55.199Z",
+      "candidates": [
+        {
+          "title": "CAFFE CENTRALE CARPI - Impresa Italia",
+          "url": "https://www.impresaitalia.info/kk03738616/caffe-centrale/carpi.aspx"
+        },
+        {
+          "title": "Bar A Carpi - Elenco Delle Attività A Carpi - Prontoimprese.it",
+          "url": "https://www.prontoimprese.it/region/carpi/bar"
+        },
+        {
+          "title": "SiVinceTutto SuperEnalotto: dove riscuotere i premi | AGIMEG",
+          "url": "https://www.agimeg.it/sivincetutto-superenalotto-come-riscuotere-i-premi/amp/"
+        },
+        {
+          "title": "Imprese Storiche - Ricerca | Unioncamere",
+          "url": "https://www.unioncamere.gov.it/imprese-storiche?field_is_camera_di_commercio_value=All&field_is_data_dich_avvio_attiv_value=All&field_is_macrosettore_value=All&field_is_provincia_sede_legale_value=All&order=title&page=43&sort=desc&title="
+        },
+        {
+          "title": "La Cantina Hotel Residence à Medolla | Hotels.com",
+          "url": "https://ca.hotels.com/fr/ho1067258752/la-cantina-hotel-residence-medolla-italie/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:036001:bastiglia:roma",
+      "name": "Bar Roma",
+      "municipality": "Bastiglia",
+      "region": "Emilia-Romagna",
+      "address": "Piazza Repubblica, 2T, 41030 Bastiglia",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Roma\" \"Bastiglia\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:57.012Z",
+      "candidates": [
+        {
+          "title": "Bar Roma | 059 904605 | Bastiglia",
+          "url": "https://www.tuttiaffari.com/bar-roma_206-059-904605"
+        },
+        {
+          "title": "Driving directions to Bar Roma, 2/T Piazza Repubblica, Bastiglia - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/emilia-romagna/bastiglia/bar-roma?to=place.ChIJlc1yd5zrf0cR5Bg__IvQYDA"
+        },
+        {
+          "title": "BAR ROMA, Bastiglia - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g1950270-d27411432-Reviews-Bar_Roma-Bastiglia_Province_of_Modena_Emilia_Romagna.html"
+        },
+        {
+          "title": "NUOVO ZFU - EMILIA ROMAGNA - 06 DATI.xlsx",
+          "url": "https://www.mimit.gov.it/images/stories/normativa/Allegato_decreto_direttoriale_12_aprile_2016.PDF"
+        },
+        {
+          "title": "5 MIGLIORI ristoranti Bastiglia - Elenco di giugno 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g1950270-Bastiglia_Province_of_Modena_Emilia_Romagna.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:099001:bellaria-igea-marina:magic-pizza",
+      "name": "Magic Pizza",
+      "municipality": "Bellaria-Igea Marina",
+      "region": "Emilia-Romagna",
+      "address": "Via Ravenna, 86, 47814 Bellaria-Igea Marina",
+      "known_website": "https://itamaps.me/magic-pizza-812129-it",
+      "partition": "development",
+      "query": "\"Magic Pizza\" \"Bellaria-Igea Marina\" ristorante",
+      "retrieved_at": "2026-09-01T17:39:59.286Z",
+      "candidates": [
+        {
+          "title": "MAGIC PIZZA PIZZERIA, Bellaria-Igea Marina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194688-d10275841-Reviews-Magic_Pizza_Pizzeria-Bellaria_Igea_Marina_Province_of_Rimini_Emilia_Romagna.html"
+        },
+        {
+          "title": "MAGIC PIZZA PIZZERIA, Bellaria-Igea Marina - Photos & Restaurant Reviews - Order Online Food Delivery - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194688-d10275841-Reviews-Magic_Pizza_Pizzeria-Bellaria_Igea_Marina_Province_of_Rimini_Emilia_Romagna.html"
+        },
+        {
+          "title": "Pizzeria Magic Pizza - Pizzerie - Bellaria Igea Marina",
+          "url": "https://www.rimini.com/dove-mangiare/pizzeria-magic-pizza"
+        },
+        {
+          "title": "Magic Pizza | 0541 332429 | Bellaria-Igea Marina",
+          "url": "https://www.tuttiaffari.com/magic-pizza_16M-0541-332429"
+        },
+        {
+          "title": "MAGIC PIZZA PIZZERIA, Bellaria-Igea Marina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g194688-d10275841-Reviews-or20-Magic_Pizza_Pizzeria-Bellaria_Igea_Marina_Province_of_Rimini_Emilia_Romagn.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:037006:bologna:genova-5-ice-cream-and-more",
+      "name": "Genova 5 Ice Cream and More",
+      "municipality": "Bologna",
+      "region": "Emilia-Romagna",
+      "address": "Via Genova, 5, 40139 Bologna",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Genova 5 Ice Cream and More\" \"Bologna\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:01.396Z",
+      "candidates": [
+        {
+          "title": "GENOVA 5 ICE-CREAM AND MORE, Bologna - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187801-d23701210-Reviews-Genova_5_Ice_cream_And_More-Bologna_Province_of_Bologna_Emilia_Romagna.html"
+        },
+        {
+          "title": "Driving directions to Genova 5 Ice-cream and more, 5 Via Genova, Bologna - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/emilia-romagna/bologna/genova-5-ice-cream-and-more?to=place.ChIJ0cebSVsrfkcRLodL_ehZ42E"
+        },
+        {
+          "title": "GENOVA 5 ICE-CREAM AND MORE - Gelateria a Bologna | LocalShop24",
+          "url": "https://www.localshop24.com/it/bologna-bo-it/attivita/gelateria/genova-5-ice-cream-and-more/"
+        },
+        {
+          "title": "Genova 5 Ice-cream and more, Bologna - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Genova-5-Ice-cream-And-More-Bologna"
+        },
+        {
+          "title": "Driving directions to Genova 5 Ice-cream and more, Via Genova, 5, Bologna - Waze",
+          "url": "https://www.waze.com/af/live-map/directions/it/emilia-romagna/bologna/genova-5-ice-cream-and-more?to=place.ChIJ0cebSVsrfkcRLodL_ehZ42E"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:039006:castel-bolognese:chalet-nel-parco",
+      "name": "lo chalet nel parco",
+      "municipality": "Castel Bolognese",
+      "region": "Emilia-Romagna",
+      "address": "Via Ghinotta, 45, 48014 Castel Bolognese",
+      "known_website": "https://www.segafredo.it",
+      "partition": "development",
+      "query": "\"lo chalet nel parco\" \"Castel Bolognese\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:03.145Z",
+      "candidates": [
+        {
+          "title": "LO CHALET NEL PARCO, Castel Bolognese - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2193137-d23773982-Reviews-Lo_Chalet_Nel_Parco-Castel_Bolognese_Province_of_Ravenna_Emilia_Romagna.html"
+        },
+        {
+          "title": "Lo Chalet nel Parco, Castel Bolognese - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/lo-chalet-nel-parco-Castel-Bolognese"
+        },
+        {
+          "title": "Lo Chalet nel Parco - Castel Bolognese - Bar, Enoteche e Pub, Chioschi e pi",
+          "url": "https://www.aroundfaenza.it/it/ristoranti/castel-bolognese/lo-chalet-nel-parco"
+        },
+        {
+          "title": "Lo Chalet Nel Parco | 393 864 2849 | Castel Bolognese",
+          "url": "https://www.tuttiaffari.com/lo-chalet-nel-parco-393-864-2849"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti Castel Bolognese - Elenco di 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g2193137-Castel_Bolognese_Province_of_Ravenna_Emilia_Romagna.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:037062:alto-reno-terme:da-mimmo",
+      "name": "Bar Pizzeria da Mimmo",
+      "municipality": "Alto Reno Terme",
+      "region": "Emilia-Romagna",
+      "address": "Piazza Augusto Smeraldi, 5, 40046 Alto Reno Terme",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Pizzeria da Mimmo\" \"Alto Reno Terme\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:04.790Z",
+      "candidates": [
+        {
+          "title": "BAR PIZZERIA DA MIMMO DI FERRARI MAURIZIO, Partita IVA: 01889171201, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/3663/bar-pizzeria-da-mimmo-di-ferrari-maurizio"
+        },
+        {
+          "title": "ID  | PROTOCOLLO  | DENOMINAZIONE",
+          "url": "https://imprese.regione.emilia-romagna.it/Finanziamenti/industria-artigianato-cooperazione-servizi/irap/graduatoria/elenco.pdf/%40%40download/file/Elenco.pdf"
+        },
+        {
+          "title": "Office 2005 XLSX Test Document",
+          "url": "https://imprese.regione.emilia-romagna.it/Finanziamenti/industria-artigianato-cooperazione-servizi/irap/graduatoria/elenco.pdf/%40%40download/file/Elenco%205884.pdf"
+        },
+        {
+          "title": "ID 11810 | PROTOCOLLO PG/2019/759450 | DENOMINAZIONE MANDATARIO MAZZONI STEFANO | CODICE FISCALE MZZSFN60L28F205R | COMUNE SEDE LOCALIZZATA IN MONTAGNA Alto Reno Terme | PROV. BO | CONTRIBUTO TOTALE 5",
+          "url": "https://imprese.regione.emilia-romagna.it/Finanziamenti/industria-artigianato-cooperazione-servizi/irap/graduatoria/elenco-4000.pdf/%40%40download/file/publicazione%204000.pdf"
+        },
+        {
+          "title": "BAR PIZZERIA DA MIMMO DI FERRARI MAURIZIO Partita IVA:01889171201 | Report aziendale Gratuito",
+          "url": "https://www.visura.pro/imprese/3944257489-bar-pizzeria-da-mimmo-di-ferrari-maurizio.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:040007:cesena:collina-dei-magari",
+      "name": "La Collina dei Magari",
+      "municipality": "Cesena",
+      "region": "Emilia-Romagna",
+      "address": "Via Rio Marano, 2775, 47521 Cesena",
+      "known_website": "https://bit.ly/3vJEGYJ",
+      "partition": "development",
+      "query": "\"La Collina dei Magari\" \"Cesena\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:06.463Z",
+      "candidates": [
+        {
+          "title": "Menù completo e carta 2026 - La Collina Dei Magari a Cesena | TheFork",
+          "url": "https://www.thefork.it/ristorante/la-collina-dei-magari-r821787/menu"
+        },
+        {
+          "title": "La Collina Dei Magari a Cesena - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork",
+          "url": "https://www.thefork.it/ristorante/la-collina-dei-magari-r821787"
+        },
+        {
+          "title": "La Collina dei Magari, Cesena - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/La-Collina-dei-Magari-Cesena"
+        },
+        {
+          "title": "La Collina Dei Magari a Cesena - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork",
+          "url": "https://www.thefork.it/ristorante/la-collina-dei-magari-r821787?cc=24751-923"
+        },
+        {
+          "title": "La Collina dei Magari | 353 405 8976 | Cesena",
+          "url": "https://www.tuttiaffari.com/la-collina-dei-magari-353-405-8976"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:099011:morciano-di-romagna:garattoni-coffee",
+      "name": "Garattoni Coffee",
+      "municipality": "Morciano di Romagna",
+      "region": "Emilia-Romagna",
+      "address": "Via Venezia, 5, 47833 Morciano di Romagna",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Garattoni Coffee\" \"Morciano di Romagna\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:08.095Z",
+      "candidates": [
+        {
+          "title": "The angle of the Garattoni Coffee Maria Catia | 0541 857340 | Morciano di Romagna",
+          "url": "https://www.tuttiaffari.com/the-angle-of-the-garattoni-coffee-maria_1R-0541-857340"
+        },
+        {
+          "title": "Top 5 Restaurants mit freundliches Personal in Morciano di Romagna, Mai 2026 - Restaurant Guru",
+          "url": "https://de.restaurantguru.com/friendly-staff-Morciano-di-Romagna-m9644"
+        },
+        {
+          "title": "Top 5 des restaurants avec service exceptionnel à Morciano di Romagna, juillet 2026 - Restaurant Guru",
+          "url": "https://fr.restaurantguru.com/great-service-Morciano-di-Romagna-m9643"
+        },
+        {
+          "title": "Tabaccherie a San Giovanni in Marignano, Emilia",
+          "url": "https://guida-delle-societa.cybo.com/IT/san-giovanni-in-marignano/tabaccherie/"
+        },
+        {
+          "title": "Magnani Bruno Distribuzione, Morciano di Romagna - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Magnani-BRUNO-distribuzione-bevande-Morciano-di-Romagna"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:046035:villa-collemandina:rifugio-isera-orecchiella",
+      "name": "Rifugio Isera Orecchiella",
+      "municipality": "Villa Collemandina",
+      "region": "Toscana",
+      "address": "Località Isera, 55030 San Romano in Garfagnana",
+      "known_website": "http://www.rifugioisera.com/",
+      "partition": "development",
+      "query": "\"Rifugio Isera Orecchiella\" \"Villa Collemandina\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:10.862Z",
+      "candidates": [
+        {
+          "title": "RIFUGIO ISERA ORECCHIELLA, Villa Collemandina - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1918701-d7035492-Reviews-Rifugio_Isera_Orecchiella-Villa_Collemandina_Province_of_Lucca_Tuscany.html"
+        },
+        {
+          "title": "Rifugio Isera Orecchiella | Parco Nazionale dell'Appennino Tosco-Emiliano",
+          "url": "https://www.parcoappennino.it/operatore.php?id=12491"
+        },
+        {
+          "title": "RIFUGIO ISERA ORECCHIELLA, Villa Collemandina - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g1918701-d7035492-Reviews-Rifugio_Isera_Orecchiella-Villa_Collemandina_Province_of_Lucca_Tuscany.html"
+        },
+        {
+          "title": "Rifugio Isera Orecchiella - Villa Collemandina LU - PN Appennino Tosco-Emiliano, Riserva MAB Appennino Tosco-Emiliano",
+          "url": "https://www.parks.it/rif/isera/"
+        },
+        {
+          "title": "5 MIGLIORI ristoranti Villa Collemandina - Elenco di 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g1918701-Villa_Collemandina_Province_of_Lucca_Tuscany.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:052022:poggibonsi:mcdonald-s",
+      "name": "McDonald's",
+      "municipality": "Poggibonsi",
+      "region": "Toscana",
+      "address": "Via Lame di Sotto, 22, 50028 Barberino Tavarnelle",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"McDonald's\" \"Poggibonsi\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:12.564Z",
+      "candidates": [
+        {
+          "title": "Ristoranti aderenti | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+        },
+        {
+          "title": "Donazione Banco Alimentare | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/il-nostro-impegno/vicinanza-alle-comunita/sempre-aperti-a-donare/2024"
+        },
+        {
+          "title": "Donazione Banco Alimentare | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/il-nostro-impegno/vicinanza-alle-comunita/sempre-aperti-a-donare/2023"
+        },
+        {
+          "title": "ristoranti-aderenti--teli-mare",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/ristoranti-aderenti--teli-mare.pdf"
+        },
+        {
+          "title": "Ristoranti a Poggibonsi - Consegna a domicilio | Glovo",
+          "url": "https://glovoapp.com/it/it/poggibonsi/categories/ristoranti_1"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:050026:pisa:deviribe",
+      "name": "Deviribè",
+      "municipality": "Pisa",
+      "region": "Toscana",
+      "address": "Piazza delle Vettovaglie, 6, 56126 Pisa",
+      "known_website": "https://it-it.facebook.com/deviribe.pisa",
+      "partition": "development",
+      "query": "\"Deviribè\" \"Pisa\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:14.920Z",
+      "candidates": [
+        {
+          "title": "Deviribè, Pisa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Deviribe-Pisa"
+        },
+        {
+          "title": "Deviribè | 320 674 9885 | Pisa",
+          "url": "https://www.tuttiaffari.com/devirib%C3%A8-pisa-392-967-6640"
+        },
+        {
+          "title": "Deviribè, Pisa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Deviribe-Pisa"
+        },
+        {
+          "title": "Deviribè Estivo, Marina di Pisa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Deviribe-Estivo-Marina-di-Pisa"
+        },
+        {
+          "title": "DEVIRIBÈ: Tutto quello che c'è da sapere (AGGIORNATO 2026)",
+          "url": "https://www.tripadvisor.it/Attraction_Review-g187899-d12081108-Reviews-Deviribe-Pisa_Province_of_Pisa_Tuscany.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:053023:scansano:dell-arco",
+      "name": "Caffe Dell'Arco",
+      "municipality": "Scansano",
+      "region": "Toscana",
+      "address": "Piazza Giuseppe Garibaldi, 15, 58054 Scansano",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Caffe Dell'Arco\" \"Scansano\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:16.696Z",
+      "candidates": [
+        {
+          "title": "Caffè Dell'Arco, Scansano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-DellArco-Scansano"
+        },
+        {
+          "title": "Top 5 restaurants in Scansano, july 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/Scansano"
+        },
+        {
+          "title": "Caffè Dell'Arco (2026) - All You SHOULD Know Before You Go (with Reviews)",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g642191-d5932789-Reviews-Caffe_Dell_Arco-Scansano_Province_of_Grosseto_Tuscany.html"
+        },
+        {
+          "title": "Prenota Villa Borgiano in Scansano a Scansano - Hotels.com",
+          "url": "https://it.hotels.com/ho3412702528/villa-borgiano-in-scansano/"
+        },
+        {
+          "title": "Caffè Dell'Arco, Scopri questo amato Bar e Caffè a Scansano",
+          "url": "https://www.tenutalemandorlaie.it/it/caffe-dellarco-scopri-questo-amato-bar-e-caffetteria-a-scansano/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:049014:portoferraio:maga",
+      "name": "pizzeria MAGA",
+      "municipality": "Portoferraio",
+      "region": "Toscana",
+      "address": "Via Giosuè Carducci, 168, 57037 Portoferraio",
+      "known_website": "http://pizzeriamaga.business.site/",
+      "partition": "development",
+      "query": "\"pizzeria MAGA\" \"Portoferraio\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:18.305Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Maga | 0565 919170 | Portoferraio",
+          "url": "https://www.tuttiaffari.com/pizzeria-maga-0565-919170"
+        },
+        {
+          "title": "pizzeria MAGA, Portoferraio - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/MAGA-Portoferraio"
+        },
+        {
+          "title": "PIZZERIA MAGA - Pizzeria a Portoferraio | LocalShop24",
+          "url": "https://www.localshop24.com/it/portoferraio-li-it/attivita/pizzeria/pizzeria-maga/"
+        },
+        {
+          "title": "pizzeria MAGA, Portoferraio - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/MAGA-Portoferraio"
+        },
+        {
+          "title": "Menu at pizzeria MAGA, Portoferraio",
+          "url": "https://restaurantguru.com/MAGA-Portoferraio/menu"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:049009:livorno:soft-caffe",
+      "name": "Soft Caffe",
+      "municipality": "Livorno",
+      "region": "Toscana",
+      "address": "Via Ginori, 20A, 57125 Livorno",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Soft Caffe\" \"Livorno\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:20.035Z",
+      "candidates": [
+        {
+          "title": "Soft Caffè Livorno | 327 704 4791 | Livorno",
+          "url": "https://www.tuttiaffari.com/soft-caff%C3%A8-livorno-327-704-4791"
+        },
+        {
+          "title": "Ufficio Prevezione Generale e soccorso pubblico: servizi straordinari di controllo ; 1 arrestato e tre denunciati - Questura di Livorno | Polizia di Stato",
+          "url": "https://questure.poliziadistato.it/it/Livorno/articolo/11765bc6fc1219a81199306900"
+        },
+        {
+          "title": "Bar Metropoli, Livorno - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Metropoli-Livorno"
+        },
+        {
+          "title": "Bar e Caffetterie a Livorno",
+          "url": "https://www.reteimprese.it/bar-caffetterie/livorno/zona/"
+        },
+        {
+          "title": "Mail: alessan",
+          "url": "https://www.viaggibellissimi.it/wp-content/uploads/2025/10/2%C2%B0-gruppo-Kenya-26-febbraio.pdf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:052035:torrita-di-siena:gelateria-crystal",
+      "name": "Bar Gelateria Crystal",
+      "municipality": "Torrita di Siena",
+      "region": "Toscana",
+      "address": "Via Mazzini, 53049 Torrita di Siena",
+      "known_website": "https://bargelateriacrystal.it/",
+      "partition": "development",
+      "query": "\"Bar Gelateria Crystal\" \"Torrita di Siena\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:21.710Z",
+      "candidates": [
+        {
+          "title": "ᐅ Orari di apertura „Bar Gelateria Crystal“ | Via Mazzini",
+          "url": "https://www.oraridiapertura24.it/filiale/Torrita%2520di%2520Siena-Bar%2520Gelateria%2520Crystal-2780238C.html"
+        },
+        {
+          "title": "Pedale Fermano",
+          "url": "https://www.pedalefermano.com/php/index.php?Itemid=41&id=139&option=com_content&task=view"
+        },
+        {
+          "title": "<table id=\"e1\">",
+          "url": "https://www.confesercenti.ar.it/wp-content/uploads/2021/02/A_ELENCO-AMMESSE-FINANZIATE.pdf"
+        },
+        {
+          "title": "domandeapprovate08102020_2",
+          "url": "https://www.regione.toscana.it/documents/10180/24953224/beneficiari_SI.pdf/6ef781ab-8bc0-0f6e-ec57-79939f599f06?t=1589550867647"
+        },
+        {
+          "title": "GELATO WORLD TOUR, si decidono i migliori 8 che vanno al mondiale - Luca Bonacini",
+          "url": "https://www.lucabonacini.it/2017/03/gelato-world-tour-si-decidono-i-migliori-8-che-vanno-al-mondiale/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:052012:colle-di-val-d-elsa:play-game",
+      "name": "Play Game",
+      "municipality": "Colle di Val d'Elsa",
+      "region": "Toscana",
+      "address": "Viale dei Mille, 95, 53034 Colle di Val d'Elsa",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Play Game\" \"Colle di Val d'Elsa\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:23.831Z",
+      "candidates": [
+        {
+          "title": "PLAY GAME PUB & BAR, Colle di Val d'Elsa - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g668223-d25208402-Reviews-Play_Game_Pub_Bar-Colle_di_Val_d_Elsa_Tuscany.html"
+        },
+        {
+          "title": "Play Game, Colle di Val d'Elsa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Play-Game-Colle-Di-Val-DElsa-Colle-di-Val-dElsa"
+        },
+        {
+          "title": "Play Game, Colle di Val d'Elsa - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Bar-Totalgame-Srl-Colle-di-Val-dElsa"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti Colle di Val d'Elsa - Elenco di 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g668223-c20075-Colle_di_Val_d_Elsa_Tuscany.html"
+        },
+        {
+          "title": "Menu at Play Game pub & bar, Colle di Val d'Elsa",
+          "url": "https://restaurantguru.com/Bar-Totalgame-Srl-Colle-di-Val-dElsa/menu"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:046017:lucca:vecchia-posta",
+      "name": "La Vecchia Posta",
+      "municipality": "Lucca",
+      "region": "Toscana",
+      "address": "Via Sarzanese, 1725, 55100 Lucca",
+      "known_website": "http://www.ristorantelavecchiaposta.it/",
+      "partition": "development",
+      "query": "\"La Vecchia Posta\" \"Lucca\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:25.582Z",
+      "candidates": [
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a La Vecchia Posta, Lucca - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g187898-d4056357-La_Vecchia_Posta-Lucca_Province_of_Lucca_Tuscany.html"
+        },
+        {
+          "title": "LA VECCHIA POSTA, Lucca - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g187898-d4056357-Reviews-La_Vecchia_Posta-Lucca_Province_of_Lucca_Tuscany.html"
+        },
+        {
+          "title": "LA VECCHIA POSTA, Lucca - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187898-d4056357-Reviews-La_Vecchia_Posta-Lucca_Province_of_Lucca_Tuscany.html"
+        },
+        {
+          "title": "La Vecchia Posta, Lucca - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Vecchia-Posta-Lucca"
+        },
+        {
+          "title": "LA VECCHIA POSTA, Lucca - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g187898-d4056357-Reviews-La_Vecchia_Posta-Lucca_Province_of_Lucca_Tuscany.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:046011:coreglia-antelminelli:sapori-di-vania-donati",
+      "name": "Sapori di Vania Donati",
+      "municipality": "Coreglia Antelminelli",
+      "region": "Toscana",
+      "address": "Viale Nazionale, 40, 55025 Coreglia Antelminelli",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Sapori di Vania Donati\" \"Coreglia Antelminelli\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:27.313Z",
+      "candidates": [
+        {
+          "title": "Coreglia Antelminelli - Garfagnana e Mediavalle del Serchio",
+          "url": "https://garfagnanavalledelserchio.it/the-19-municipalites/coreglia-antelminelli-2/"
+        },
+        {
+          "title": "Mangiare e Bere a Coreglia Antelminelli | Il Borghista",
+          "url": "https://www.ilborghista.it/municipality/coreglia-antelminelli/eat"
+        },
+        {
+          "title": "Migliori negozi a Coreglia Antelminelli | LocalShop24",
+          "url": "https://www.localshop24.com/it/coreglia-antelminelli-lu-it/attivita/"
+        },
+        {
+          "title": "Pasticceria Bonelli Dei F.lli Bonelli Ec. Snc, Lucca - Menu, foto e recensioni bar vicino a me - Bestogoo",
+          "url": "https://www.bestogoo.com/en-au/detail.php?activity=ChIJS3jr3HV71RIRKuhSg_6hToA&lang=eng&local=en-au"
+        },
+        {
+          "title": "Provincia di Lucca",
+          "url": "https://casadelformaggio.eu/provincia-di-lucca/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:054007:cascia:corte-cascia",
+      "name": "Ristorante La Corte Cascia",
+      "municipality": "Cascia",
+      "region": "Umbria",
+      "address": "Via Pier Paolo Prosperi, 1, 06043 Cascia",
+      "known_website": "https://www.magrelli.com/hotel-la-corte/",
+      "partition": "development",
+      "query": "\"Ristorante La Corte Cascia\" \"Cascia\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:28.979Z",
+      "candidates": [
+        {
+          "title": "Dove Mangiare | Discover Cascia",
+          "url": "https://www.discovercascia.com/dove-mangiare/"
+        },
+        {
+          "title": "LA CORTE, Cascia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g664986-d10270612-Reviews-Hotel_La_Corte-Cascia_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "Hotel La Corte | Discover Cascia",
+          "url": "https://www.discovercascia.com/project/hotel-la-corte/"
+        },
+        {
+          "title": "Magrelli Hotels & Restaurants Cascia Umbria - Hotel a Cascia",
+          "url": "https://www.magrelli.com/"
+        },
+        {
+          "title": "Ristoranti a Cascia - Magrelli Hotel Cascia",
+          "url": "https://www.magrelli.com/ristoranti-a-cascia/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:054015:corciano:piadineria",
+      "name": "La Piadineria",
+      "municipality": "Corciano",
+      "region": "Umbria",
+      "address": "Corciano (PG), Via Aldo Capitini, 8, Corciano (PG)",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"La Piadineria\" \"Corciano\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:30.639Z",
+      "candidates": [
+        {
+          "title": "La Piadineria - L'Italia in un morso -",
+          "url": "https://lapiadineria.com/i-nostri-ristoranti/corciano-quasar-village"
+        },
+        {
+          "title": "Punti Vendita | LA PIADINERIA",
+          "url": "https://piadineria.website.strooka.com/it/contacts/"
+        },
+        {
+          "title": "La Piadineria consegna in zona Corciano - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/perugia/corciano/la-piadineria-corciano"
+        },
+        {
+          "title": "La Piadineria, Corciano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Piadina-4-U-Corciano-2"
+        },
+        {
+          "title": "Ministero delle Imprese e del Made in I",
+          "url": "https://www.mimit.gov.it/images/stories/documenti/province/tavola/Umbria_-_PG_-_Perugia.pdf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:055032:terni:origini",
+      "name": "Caffè Le Origini",
+      "municipality": "Terni",
+      "region": "Umbria",
+      "address": "Via Giuseppe Di Vittorio, 29, 05100 Terni",
+      "known_website": "https://caffe-le-origini.business.site/?m=true#details",
+      "partition": "development",
+      "query": "\"Caffè Le Origini\" \"Terni\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:32.447Z",
+      "candidates": [
+        {
+          "title": "Caffè Le Origini, Terni - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-Le-Origini-Terni"
+        },
+        {
+          "title": "Caffè Le Origini delivery in Terni | Glovo",
+          "url": "https://glovoapp.com/en/it/terni/stores/caffe-le-origini-trn"
+        },
+        {
+          "title": "Restaurant a Terni - Consegna a domicilio | Glovo",
+          "url": "https://glovoapp.com/it/it/terni/categories/restaurant_1"
+        },
+        {
+          "title": "Restorani a Terni - Consegna a domicilio | Glovo",
+          "url": "https://glovoapp.com/it/it/terni/categories/restorani_1"
+        },
+        {
+          "title": "Restaurants a Terni - Consegna a domicilio | Glovo",
+          "url": "https://glovoapp.com/it/it/terni/categories/restaurants_1"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:055016:lugnano-in-teverina:pantarei-caffe",
+      "name": "Pantarei Caffe",
+      "municipality": "Lugnano in Teverina",
+      "region": "Umbria",
+      "address": "Via Umberto I, 30, 05020 Lugnano in Teverina",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Pantarei Caffe\" \"Lugnano in Teverina\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:35.872Z",
+      "candidates": [
+        {
+          "title": "PANTAREI CAFFÈ, Lugnano in Teverina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1830838-d15234235-Reviews-Pantarei_Caffe-Lugnano_in_Teverina_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "PANTAREI CAFFÈ, Lugnano in Teverina - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1830838-d15234235-Reviews-Pantarei_Caffe-Lugnano_in_Teverina_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "5 MIGLIORI ristoranti aperti a pranzo: Lugnano in Teverina - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurants-g1830838-zfp30-Lugnano_in_Teverina_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "MIGLIORI ristoranti con tavoli all'aperto: Lugnano in Teverina",
+          "url": "https://www.tripadvisor.it/Restaurants-g1830838-zfp6-Lugnano_in_Teverina_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "Migliori Bar Lugnano in Teverina: Leggi recensioni sui Bar a Lugnano in Teverina",
+          "url": "https://www.tripadvisor.it/Restaurants-g1830838-zfg9900-Lugnano_in_Teverina_Province_of_Terni_Umbria.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:054013:citta-di-castello:tankard-pizza-and-food",
+      "name": "Tankard Pizza and Food",
+      "municipality": "Città di Castello",
+      "region": "Umbria",
+      "address": "Via Luca della Robbia, 21, 06012 Città di Castello",
+      "known_website": "http://www.tankard.it/",
+      "partition": "development",
+      "query": "\"Tankard Pizza and Food\" \"Città di Castello\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:38.026Z",
+      "candidates": [
+        {
+          "title": "Where to eat: the 50 best restaurants in Citta di Castello",
+          "url": "https://wanderlog.com/list/geoCategory/199798/where-to-eat-the-best-restaurants-in-citta-di-castello"
+        },
+        {
+          "title": "Where to eat: the 50 best restaurants in Citta di Castello",
+          "url": "https://wanderlog.com/list/geoCategory/199798/where-to-eat-best-restaurants-in-citta-di-castello"
+        },
+        {
+          "title": "Elenco dei ristoranti e negozi senza glutine - Gluto",
+          "url": "https://www.gluto.it/locale/14573/delight-restaurant"
+        },
+        {
+          "title": "The 50 best restaurants to have dinner in Citta di Castello",
+          "url": "https://wanderlog.com/list/geoCategory/368830/best-restaurants-to-have-dinner-in-citta-di-castello"
+        },
+        {
+          "title": "The 15 best cheap eats in Citta di Castello",
+          "url": "https://wanderlog.com/list/geoCategory/185712/les-meilleurs-repas-pas-chers-%C3%A0-citta-di-castello"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:054039:perugia:quei-bravi-ragazzi",
+      "name": "Quei Bravi Ragazzi",
+      "municipality": "Perugia",
+      "region": "Umbria",
+      "address": "Corso Camillo Benso di Cavour, 62, 06121 Perugia",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Quei Bravi Ragazzi\" \"Perugia\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:39.919Z",
+      "candidates": [
+        {
+          "title": "Quei Bravi Ragazzi, Perugia - Italia.it",
+          "url": "https://www.italia.it/it/umbria/perugia/dove-mangiare/quei-bravi-ragazzi"
+        },
+        {
+          "title": "QUEI BRAVI RAGAZZI, Perugia - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187907-d15324727-Reviews-Quei_Bravi_Ragazzi-Perugia_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "QUEI BRAVI RAGAZZI, Perugia - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187907-d15324727-Reviews-Quei_Bravi_Ragazzi-Perugia_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "Quei Bravi Ragazzi, Perugia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Quei-Bravi-Ragazzi-Perugia"
+        },
+        {
+          "title": "Pub / Birreria Quei Bravi Ragazzi - Perugia - Menu Digitale",
+          "url": "https://www.leggimenu.it/menu/81p4bd2k76"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:055028:porano:da-claudio",
+      "name": "Trattoria Pizzeria da Claudio",
+      "municipality": "Porano",
+      "region": "Umbria",
+      "address": "Via Guglielmo Marconi, 33, 05010 Porano",
+      "known_website": "https://img.italiaonline.it/0WO5p000002sIeFGAU/IOL4YOU_LOGO_1606839286201.gif",
+      "partition": "development",
+      "query": "\"Trattoria Pizzeria da Claudio\" \"Porano\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:41.564Z",
+      "candidates": [
+        {
+          "title": "TRATTORIA PIZZERIA DA CLAUDIO, Porano - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2049777-d6555628-Reviews-Trattoria_Pizzeria_Da_Claudio-Porano_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "TRATTORIA PIZZERIA DA CLAUDIO, Porano - Menu, Prices, Restaurant Reviews & Reservations - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2049777-d6555628-Reviews-Trattoria_Pizzeria_Da_Claudio-Porano_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "TRATTORIA PIZZERIA DA CLAUDIO, Porano - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2049777-d6555628-Reviews-or75-Trattoria_Pizzeria_Da_Claudio-Porano_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "TRATTORIA PIZZERIA DA CLAUDIO, Porano - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2049777-d6555628-Reviews-or45-Trattoria_Pizzeria_Da_Claudio-Porano_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "Trattoria Pizzeria da Claudio, Porano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Da-Claudio-Porano"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:054002:bastia-umbra:gelateria-novecento",
+      "name": "Bar Gelateria Novecento",
+      "municipality": "Bastia Umbra",
+      "region": "Umbria",
+      "address": "Via Ignazio Silone S.N.C., 06083 Bastia Umbra",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Gelateria Novecento\" \"Bastia Umbra\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:43.533Z",
+      "candidates": [
+        {
+          "title": "Bar Gelateria Novecento, Bastia Umbra - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Gelateria-Novecento-Bastia-Umbra"
+        },
+        {
+          "title": "I migliori 5 pasticcerie di Bastia Umbra, luglio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/desserts-Bastia-Umbra-t12"
+        },
+        {
+          "title": "Apre Bar Gelateria Novecento, al centro commerciale di Bastia Umbra: nuova attività per la famiglia Ortolani - Assisi News",
+          "url": "https://www.assisinews.it/varie/apre-bar-gelateria-novecento-al-centro-commerciale-di-bastia-umbra-al-via-alla-nuova-attivita-della-famiglia-ortolani/"
+        },
+        {
+          "title": "Orari di apertura di Bar in Italia",
+          "url": "https://www.oraridiapertura.net/bar/"
+        },
+        {
+          "title": "I 5 migliori ristoranti con gelato a Bastia Umbra, luglio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/ice-cream-Bastia-Umbra-m13"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:054001:assisi:penny-lane-tavern",
+      "name": "Penny Lane Tavern",
+      "municipality": "Assisi",
+      "region": "Umbria",
+      "address": "Via Giovanni Becchetti, 61B, 06081 Assisi",
+      "known_website": "http://www.pennylanetavern.com/",
+      "partition": "development",
+      "query": "\"Penny Lane Tavern\" \"Assisi\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:45.304Z",
+      "candidates": [
+        {
+          "title": "Prenota un tavolo – Penny Lane Tavern – Pizzeria Pub Assisi, Santa Maria degli Angeli",
+          "url": "https://www.pennylanetavern.com/prenota-un-tavolo/"
+        },
+        {
+          "title": "Penny Lane Tavern - Assisi - Pizza",
+          "url": "https://penny-lane-tavern.it/"
+        },
+        {
+          "title": "Dove mangiare - Visit Assisi",
+          "url": "https://www.visit-assisi.it/dove-mangiare/"
+        },
+        {
+          "title": "PENNY LANE TAVERN, Assisi - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187905-d7737211-Reviews-Penny_Lane_Tavern-Assisi_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "Penny Lane Tavern – Pizzeria Pub Assisi, Santa Maria degli Angeli",
+          "url": "https://www.pennylanetavern.com/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:055001:acquasparta:casina-di-furapane",
+      "name": "La Casina di Furapane",
+      "municipality": "Acquasparta",
+      "region": "Umbria",
+      "address": "Via Tiberina, 158, 05021 Acquasparta",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"La Casina di Furapane\" \"Acquasparta\" ristorante",
+      "retrieved_at": "2026-09-01T17:40:47.445Z",
+      "candidates": [
+        {
+          "title": "La Casina Di Furapane, Acquasparta - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Casina-Di-Furapane-Acquasparta"
+        },
+        {
+          "title": "Ristoranti e Alloggi – Flowin Acquasparta – Il sito di Acquasparta",
+          "url": "https://flowinacquasparta.com/ristoranti-e-alloggi/"
+        },
+        {
+          "title": "La Casina Di Furapane | 0744 930805 | Acquasparta",
+          "url": "https://www.tuttiaffari.com/la-casina-di-furapane-0744-930805"
+        },
+        {
+          "title": "La Casina Di Furapane, Acquasparta - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/acquasparta/ristorante/78380/la-casina-di-furapane"
+        },
+        {
+          "title": "Acquasparta: 'La casina di Furapane' torna a vivere - UmbriaON",
+          "url": "https://www.umbriaon.it/acquasparta-la-casina-di-furapane-torna-a-vivere/"
+        }
+      ],
+      "adjudication": null
+    }
+  ]
+}

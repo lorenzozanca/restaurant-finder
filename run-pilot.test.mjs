@@ -154,7 +154,7 @@ function pilotFixture() {
   const directory = mkdtempSync(join(tmpdir(), "restaurant-finder-live-pilot-"));
   const selectionPath = join(directory, "selection.json");
   const dbPath = join(directory, "pilot.sqlite");
-  writeFileSync(selectionPath, JSON.stringify({ reviewed: true }));
+  writeFileSync(selectionPath, JSON.stringify({ reviewed: true, candidates: [] }));
   const queue = new EnrichmentQueue(dbPath);
   queue.enqueue({
     venue: { canonical_venue_id: "venue:test", name: "Test Venue", website: null,

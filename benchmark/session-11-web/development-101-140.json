@@ -1,0 +1,1346 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-development-101-140",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:044011:castel-di-lama:casa-delle-api-osteria",
+      "name": "La Casa delle Api osteria",
+      "municipality": "Castel di Lama",
+      "region": "Marche",
+      "address": "Via Leonardo da Vinci, 43, 63082 Castel di Lama",
+      "known_website": "https://www.osterialacasadelleapi.com/",
+      "partition": "development",
+      "query": "\"La Casa delle Api osteria\" \"Castel di Lama\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:02.953Z",
+      "candidates": [
+        {
+          "title": "LA CASA DELLE API OSTERIA, Castel di Lama - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1025199-d10627331-Reviews-La_Casa_delle_Api_Osteria-Castel_di_Lama_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "Chi Siamo - La Casa delle Api Osteria",
+          "url": "https://www.osterialacasadelleapi.com/chi-siamo/"
+        },
+        {
+          "title": "LA CASA DELLE API OSTERIA, Castel di Lama - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1025199-d10627331-Reviews-La_Casa_delle_Api_Osteria-Castel_di_Lama_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "LA CASA DELLE API OSTERIA, Castel di Lama - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1025199-d10627331-Reviews-or30-La_Casa_delle_Api_Osteria-Castel_di_Lama_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "LA CASA DELLE API OSTERIA, Castel di Lama - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1025199-d10627331-Reviews-or45-La_Casa_delle_Api_Osteria-Castel_di_Lama_Province_of_Ascoli_Piceno_Marche.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:042032:numana:numana-blu-ristorante-pizzeria",
+      "name": "Numana Blu Ristorante Pizzeria",
+      "municipality": "Numana",
+      "region": "Marche",
+      "address": "Via Costaverde, 37, 60026 Numana",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Numana Blu Ristorante Pizzeria\" \"Numana\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:04.775Z",
+      "candidates": [
+        {
+          "title": "BLU RESTAURANT, Marcelli di Numana - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1187204-d10596787-Reviews-or75-Blupot_Restaurant_Sushi_Bar-Marcelli_di_Numana_Province_of_Ancona_Marche.html"
+        },
+        {
+          "title": "Ristoranti Ancona, guida ristoranti Ancona, schede ristoranti Ancona",
+          "url": "https://www.italianodoc.com/ristoranti/marche.ancona.htm"
+        },
+        {
+          "title": "BLU RESTAURANT, Marcelli di Numana - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1187204-d10596787-Reviews-or60-Blupot_Restaurant_Sushi_Bar-Marcelli_di_Numana_Province_of_Ancona_Marche.html"
+        },
+        {
+          "title": "BLU RESTAURANT, Marcelli di Numana - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1187204-d10596787-Reviews-or30-Blupot_Restaurant_Sushi_Bar-Marcelli_di_Numana_Province_of_Ancona_Marche.html"
+        },
+        {
+          "title": "I migliori 5 pizzerie di Marcelli, giugno 2026 - Restaurant Guru pagina 2",
+          "url": "https://restaurantguru.it/pizza-Marcelli-c97/2"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:044066:san-benedetto-del-tronto:massetti",
+      "name": "Caffè Massetti",
+      "municipality": "San Benedetto del Tronto",
+      "region": "Marche",
+      "address": "Via Calatafimi, 114, 63074 San Benedetto del Tronto",
+      "known_website": "http://caffemassetti.altervista.org",
+      "partition": "development",
+      "query": "\"Caffè Massetti\" \"San Benedetto del Tronto\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:08.022Z",
+      "candidates": [
+        {
+          "title": "CAFFE MASSETTI, San Benedetto del Tronto - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194895-d5821901-Reviews-Caffe_Massetti-San_Benedetto_del_Tronto_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "CAFFE MASSETTI, San Benedetto del Tronto - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194895-d5821901-Reviews-Caffe_Massetti-San_Benedetto_Del_Tronto_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "CAFFE MASSETTI, San Benedetto del Tronto - 2026 Reviews & Info",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g194895-d5821901-Reviews-Caffe_Massetti-San_Benedetto_del_Tronto_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "CAFFE' MASSETTI DI MASSETTI MARIA RITA E AURELI ADUA S.N.C., Partita IVA: 01836620441, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/8692/caffe-massetti-di-massetti-maria-rita-e-aureli-adua-snc"
+        },
+        {
+          "title": "CAFFE MASSETTI, San Benedetto del Tronto - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com.au/Restaurant_Review-g194895-d5821901-Reviews-Caffe_Massetti-San_Benedetto_Del_Tronto_Province_of_Ascoli_Piceno_Marche.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:041043:pergola:da-samanta",
+      "name": "All'osteria da Samanta",
+      "municipality": "Pergola",
+      "region": "Marche",
+      "address": "Via Osteria del Piano, 87, 61045 Pergola",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"All'osteria da Samanta\" \"Pergola\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:09.741Z",
+      "candidates": [
+        {
+          "title": "Dove mangiare: i 50 migliori ristoranti a Bellagio",
+          "url": "https://wanderlog.com/it/list/geoCategory/199292"
+        },
+        {
+          "title": "Var man kan äta: de 50 bästa restaurangerna i San Miniato",
+          "url": "https://wanderlog.com/sv/list/geoCategory/199650/var-man-kan-%C3%A4ta-de-b%C3%A4sta-restaurangerna-i-san-miniato"
+        },
+        {
+          "title": "Unde să mănânci: cele mai bune 50 restaurante din the Province of Cremona",
+          "url": "https://wanderlog.com/ro/list/geoCategory/207624/unde-s%C4%83-m%C4%83n%C3%A2nci-cele-mai-bune-restaurante-din-provincia-cremona"
+        },
+        {
+          "title": "Die 50 besten Familienrestaurants in the Province of Piacenza",
+          "url": "https://wanderlog.com/de/list/geoCategory/559620"
+        },
+        {
+          "title": "Nerede yenir: Veneto'deki en iyi 50 restoran",
+          "url": "https://wanderlog.com/tr/list/geoCategory/207109/nerede-yenir-venetodeki-en-iyi-restoran"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:041014:fermignano:chicchi-di-zucchero",
+      "name": "Chicchi di Zucchero",
+      "municipality": "Fermignano",
+      "region": "Marche",
+      "address": "Via Falasconi sn, 61033 Fermignano",
+      "known_website": "http://chicchidizucchero.it/",
+      "partition": "development",
+      "query": "\"Chicchi di Zucchero\" \"Fermignano\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:11.401Z",
+      "candidates": [
+        {
+          "title": "CHICCI DI ZUCCHERO PASTICCERIA, GELATERIA, CAFFETTERIA, Fermignano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1531840-d15009503-Reviews-Chicchi_Di_Zucchero-Fermignano_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "Chicchi di Zucchero pasticceria, gelateria, caffetteria, Fermignano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Grains-of-Sugar-confectionery-ice-cream-coffee-Fermignano"
+        },
+        {
+          "title": "CHICCI DI ZUCCHERO PASTICCERIA, GELATERIA, CAFFETTERIA, Fermignano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1531840-d15009503-Reviews-or15-Chicchi_Di_Zucchero-Fermignano_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "Chicci di Zucchero Pasticceria, Gelateria, Caffetteria - Fermignano - Nextdoor",
+          "url": "https://it.nextdoor.com/pages/chicci-di-zucchero-pasticceria-gelateria-caffetteria/"
+        },
+        {
+          "title": "CHICCI DI ZUCCHERO PASTICCERIA, GELATERIA, CAFFETTERIA, Fermignano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1531840-d15009503-Reviews-Chicci_Di_Zucchero_Pasticceria_Gelateria_Caffetteria-Fermignano_Province_of_Pes.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:041013:fano:buddha-pub",
+      "name": "Buddha Pub",
+      "municipality": "Fano",
+      "region": "Marche",
+      "address": "Via San Paterniano, 20, 61032 Fano",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Buddha Pub\" \"Fano\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:13.123Z",
+      "candidates": [
+        {
+          "title": "BUDDHA PUB, Fano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194759-d20129005-Reviews-Buddha_Pub-Fano_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "Buddha Pub - Fano, Fano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Buddha-Pub-Fano"
+        },
+        {
+          "title": "Monsieur Delacroix",
+          "url": "https://www.monsieurdelacroix.com/"
+        },
+        {
+          "title": "Buddha Pub - Fano, Fano - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Buddha-Pub-Fano"
+        },
+        {
+          "title": "Pub / Birreria Buddha Pub - Fano - Menu Digitale",
+          "url": "https://www.leggimenu.it/menu/buddhapubfano/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:041071:sassocorvaro-auditore:diga-lounge-bistrot",
+      "name": "Diga Lounge Bistrot",
+      "municipality": "Sassocorvaro Auditore",
+      "region": "Marche",
+      "address": "Via Villa del Lago sn, 61028 Sassocorvaro",
+      "known_website": "http://www.digabistrot.it/",
+      "partition": "development",
+      "query": "\"Diga Lounge Bistrot\" \"Sassocorvaro Auditore\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:16.071Z",
+      "candidates": [
+        {
+          "title": "Comune di Sassocorvaro - soppresso il 31/12/2018",
+          "url": "https://www.comune.sassocorvaro.pu.it/c041059/zf/index.php/locali-pubblici"
+        },
+        {
+          "title": "Ristorante ristoranti a Sassocorvaro Auditore - Pagine Gialle",
+          "url": "https://www.paginegialle.it/marche/sassocorvaro_auditore/ristorante_ristoranti_ristoranti.html"
+        },
+        {
+          "title": "Diga Lounge Bistrot - Sassocorvaro Auditore, Via Villa del Lago",
+          "url": "https://aziende.virgilio.it/ristoranti/sassocorvaro-auditore-pu/diga-lounge-bistrot"
+        },
+        {
+          "title": "Ristoranti e pizzerie a Sassocorvaro Auditore (PU) | Il borghista",
+          "url": "https://www.ilborghista.it/mangiare-a-sassocorvaro-auditore-pu-4822"
+        },
+        {
+          "title": "Mapstr - Diga Lounge Bistrot Sassocorvaro Auditore -",
+          "url": "https://mapstr.com/place/sbkwPfwRli"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:041068:vallefoglia:parioli",
+      "name": "Bar Parioli",
+      "municipality": "Vallefoglia",
+      "region": "Marche",
+      "address": "Via Roma, 79, 61020 Petriano",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Parioli\" \"Vallefoglia\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:17.844Z",
+      "candidates": [
+        {
+          "title": "IQOS PREMIUM PARTNER - Bar Parioli, Vallefoglia, Montecchio - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Parioli-Gallo-Marche"
+        },
+        {
+          "title": "Bar Parioli | Via Roma 79, Vallefoglia",
+          "url": "https://negozi.sisal.com/my-sisal/vallefoglia-via-roma-79"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Bar Parioli“ | Via Roma",
+          "url": "https://www.oraridiapertura24.it/filiale/Vallefoglia%2520%2528PU%2529-Bar%2520Parioli-219870V.html"
+        },
+        {
+          "title": "BAR PARIOLI DI LONDEI GIANFRANCO, Partita IVA: 02104130410, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/4401/bar-parioli-di-londei-gianfranco"
+        },
+        {
+          "title": "Bar Parioli | 0721 497420 | Tavoleto",
+          "url": "https://www.tuttiaffari.com/bar-parioli_2x-0721-497420"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:043013:civitanova-marche:donoma",
+      "name": "Donoma",
+      "municipality": "Civitanova Marche",
+      "region": "Marche",
+      "address": "Via Giuseppe Mazzini, 43, 62012 Civitanova Marche",
+      "known_website": "http://www.donoma.it",
+      "partition": "development",
+      "query": "\"Donoma\" \"Civitanova Marche\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:19.818Z",
+      "candidates": [
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Donoma Sound Theatre and Food",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g194742-d5813180-Donoma_Sound_Theatre_and_Food-Civitanova_Marche_Province_of_Macerata_Marche.html"
+        },
+        {
+          "title": "Donoma, Civitanova Marche - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Donoma-Sound-Theater-and-Food-Civitanova-Marche"
+        },
+        {
+          "title": "Donoma, Civitanova Marche - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Donoma-Sound-Theater-and-Food-Civitanova-Marche"
+        },
+        {
+          "title": "Civitanova Marche - Wikivoyage, guida turistica di viaggio",
+          "url": "https://it.wikivoyage.org/wiki/Civitanova_Marche"
+        },
+        {
+          "title": "Driving directions to Donoma, 43 Via Giuseppe Mazzini, Civitanova Marche - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/marche/civitanova-marche/donoma?to=place.ChIJEbw9P4BtMhMRFzz_mTUNW-0"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:109008:grottazzolina:stella-alpina",
+      "name": "Pizzeria Stella Alpina",
+      "municipality": "Grottazzolina",
+      "region": "Marche",
+      "address": "Viale Trieste, 83, 63845 Ponzano di Fermo",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Pizzeria Stella Alpina\" \"Grottazzolina\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:21.623Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Stella Alpina, Capparuccia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Stella-Alpina-Grottazzolina"
+        },
+        {
+          "title": "PIZZERIA STELLA ALPINA, Ponzano di Fermo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1025203-d27248033-Reviews-Pizzeria_Stella_Alpina-Ponzano_di_Fermo_Province_of_Fermo_Marche.html"
+        },
+        {
+          "title": "Menu da Pizzeria Stella Alpina, Capparuccia",
+          "url": "https://restaurantguru.it/Pizzeria-Stella-Alpina-Grottazzolina/menu"
+        },
+        {
+          "title": "I MIGLIORI 5 ristoranti vicino a Pizzazzolina, Grottazzolina - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g2136957-d2414433-Pizzazzolina-Grottazzolina_Province_of_Fermo_Marche.html"
+        },
+        {
+          "title": "I MIGLIORI 5 ristoranti vicino a Pizzeria Claudio e Paola, Grottazzolina",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g2136957-d17787863-Pizzeria_Claudio_E_Paola-Grottazzolina_Province_of_Fermo_Marche.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:060023:castro-dei-volsci:hotel-ristorante-santina",
+      "name": "Hotel Ristorante Santina",
+      "municipality": "Castro dei Volsci",
+      "region": "Lazio",
+      "address": "Contrada Fosso, 19, 03020 Castro dei Volsci",
+      "known_website": "https://dasantina.it/",
+      "partition": "development",
+      "query": "\"Hotel Ristorante Santina\" \"Castro dei Volsci\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:23.329Z",
+      "candidates": [
+        {
+          "title": "Accoglienze – Cammino della Regina Camilla",
+          "url": "https://www.camminoreginacamilla.it/accoglienze/"
+        },
+        {
+          "title": "HOTEL SANTINA (Castro dei Volsci): Prezzi e Recensioni (2026)",
+          "url": "https://www.tripadvisor.it/Hotel_Review-g1566581-d7689319-Reviews-Hotel_Ristorante_Santina-Castro_dei_Volsci_Province_of_Frosinone_Lazio.html"
+        },
+        {
+          "title": "Hotel Ristorante Santina | 0775 686175 | Castro dei Volsci",
+          "url": "https://www.tuttiaffari.com/hotel-ristorante-santina-0775-686175"
+        },
+        {
+          "title": "Top 5 restaurants in Castro dei Volsci, june 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/Castro-dei-Volsci"
+        },
+        {
+          "title": "Accoglienza Castro dei Volsci – EcoMuseo Argil – Uomo e Ambiente nella Valle Latina",
+          "url": "https://www.ecomuseoargil.it/accoglienza-castro-dei-volsci/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:058029:cerveteri:burger-king",
+      "name": "Burger King",
+      "municipality": "Cerveteri",
+      "region": "Lazio",
+      "address": "VIA SETTEVENE PALO 1/G, 1, 00052 Cerveteri",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Burger King\" \"Cerveteri\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:26.268Z",
+      "candidates": [
+        {
+          "title": "<table id=\"e1\">",
+          "url": "https://www.burgerking.it/assets/documents/79_document_it.pdf"
+        },
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=32087"
+        },
+        {
+          "title": "Burger King, Cerveteri - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Burger-King-Cerveteri"
+        },
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=21553"
+        },
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=25736"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:058091:roma:paddock-ristocaffe",
+      "name": "Paddock Ristocaffè",
+      "municipality": "Roma",
+      "region": "Lazio",
+      "address": "Via Portuense, 1585a, 00148 Roma",
+      "known_website": "https://plus.google.com/106631409898753754341",
+      "partition": "development",
+      "query": "\"Paddock Ristocaffè\" \"Roma\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:28.011Z",
+      "candidates": [
+        {
+          "title": "PADDOCK RISTOCAFFE, Roma - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187791-d12154338-Reviews-Paddock_Ristocaffe-Rome_Lazio.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Paddock Ristocaffe, Roma",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g187791-d12154338-Paddock_Ristocaffe-Rome_Lazio.html"
+        },
+        {
+          "title": "Paddock Ristocaffe, Roma - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Paddock-Ristocaffe-Rome"
+        },
+        {
+          "title": "PADDOCK RISTOCAFFE, Roma - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187791-d12154338-Reviews-or15-Paddock_Ristocaffe-Rome_Lazio.html"
+        },
+        {
+          "title": "Paddock Ristocaffe, Roma - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/roma/ristorante/254770/paddock-ristocaffe"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:058015:campagnano-di-roma:paniozze",
+      "name": "Paniozze",
+      "municipality": "Campagnano di Roma",
+      "region": "Lazio",
+      "address": "Via Sandro Penna, 3, 00063 Campagnano di Roma",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Paniozze\" \"Campagnano di Roma\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:29.684Z",
+      "candidates": [
+        {
+          "title": "Paniozze, Campagnano di Roma - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Panuozzeria-Salernitana-Campagnano-di-Roma"
+        },
+        {
+          "title": "Top 5 restaurants with spaghetti carbonara in Campagnano di Roma, july 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/spaghetti-carbonara-Campagnano-di-Roma-m6454"
+        },
+        {
+          "title": "Delicious food delivery in Campagnano di Roma",
+          "url": "https://restaurantguru.com/delivery-Campagnano-di-Roma-m9631"
+        },
+        {
+          "title": "Top 5 restaurants with soup in Campagnano di Roma, august 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/soup-Campagnano-di-Roma-m12"
+        },
+        {
+          "title": "Los 5 mejores restaurantes en Campagnano di Roma, julio 2026 - Restaurant Guru",
+          "url": "https://es.restaurantguru.com/Campagnano-di-Roma"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:057059:rieti:betti-cafe-apericena",
+      "name": "Betti Cafe Apericena",
+      "municipality": "Rieti",
+      "region": "Lazio",
+      "address": "Viale Lionello Matteucci, 28, 02100 Rieti",
+      "known_website": "https://www.betticaferieti.com/",
+      "partition": "development",
+      "query": "\"Betti Cafe Apericena\" \"Rieti\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:31.370Z",
+      "candidates": [
+        {
+          "title": "Betti Cafè consegna in zona Rieti - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/rieti/rieti/betti-cafe-apericena"
+        },
+        {
+          "title": "Bar e Caffetterie a Rieti",
+          "url": "https://www.reteimprese.it/bar-caffetterie/rieti"
+        },
+        {
+          "title": "Betti Café Apericena | Pasticceria a Rieti | Dove Pasticcio",
+          "url": "https://www.dovepasticcio.it/pasticcerie/dettaglio/4909/betti-cafe-apericena-a-rieti"
+        },
+        {
+          "title": "Betti Café Apericena | 0746 481720 | Rieti",
+          "url": "https://www.tuttiaffari.com/betti-caf%C3%A9-apericena-0746-481720"
+        },
+        {
+          "title": "Aperitivo Rieti locale apericena bar aperitivo Rieti",
+          "url": "https://www.apetime.com/aperitivo/rieti"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:059032:terracina:icescream-terracina",
+      "name": "IceScream Terracina",
+      "municipality": "Terracina",
+      "region": "Lazio",
+      "address": "Via Roma, 129, 04019 Terracina",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"IceScream Terracina\" \"Terracina\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:33.140Z",
+      "candidates": [
+        {
+          "title": "ICE SCREAM GELATERIA ARTIGIANALE, Terracina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194931-d10229080-Reviews-or45-Ice_Scream_Gelateria_Artigianale-Terracina_Province_of_Latina_Lazio.html"
+        },
+        {
+          "title": "ICE SCREAM GELATERIA ARTIGIANALE, Terracina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194931-d10229080-Reviews-or30-Ice_Scream_Gelateria_Artigianale-Terracina_Province_of_Latina_Lazio.html"
+        },
+        {
+          "title": "Recensioni Ice Scream Gelateria Artigianale (24) - Terracina | Sluurpy",
+          "url": "https://www.sluurpy.it/terracina/ristorante/141138/ice-scream-gelateria-artigianale/recensioni"
+        },
+        {
+          "title": "ICE SCREAM GELATERIA ARTIGIANALE, Terracina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194931-d10229080-Reviews-or60-Ice_Scream_Gelateria_Artigianale-Terracina_Province_of_Latina_Lazio.html"
+        },
+        {
+          "title": "Recensioni - Nohi Gelateria Artianale TERRACINA",
+          "url": "https://piatti.menu/restaurants/terracina/ice-scream-gelateria-artigianale/reviews"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:058096:san-polo-dei-cavalieri:centrale-di-mozzetta-miriam",
+      "name": "Bar Centrale di Mozzetta Miriam",
+      "municipality": "San Polo dei Cavalieri",
+      "region": "Lazio",
+      "address": "Piazza Guglielmo Marconi, 5, 00010 San Polo dei Cavalieri",
+      "known_website": "https://website-3497733222139577667193-bar.business.site",
+      "partition": "development",
+      "query": "\"Bar Centrale di Mozzetta Miriam\" \"San Polo dei Cavalieri\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:34.699Z",
+      "candidates": [
+        {
+          "title": "Bar Centrale di Mozzetta Miriam, San Polo dei Cavalieri - Italia.it",
+          "url": "https://www.italia.it/it/lazio/san-polo-dei-cavalieri/dove-mangiare/bar-centrale-di-mozzetta-miriam"
+        },
+        {
+          "title": "Bar Centrale di Mozzetta Miriam, San Polo dei Cavalieri - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Inaugurazione-Nuova-Gestione-Bar-Centrale-Di-Mozzetta-Miriam-San-Polo-dei-Cavalieri"
+        },
+        {
+          "title": "Bar Centrale di Mozzetta Miriam, San Polo dei Cavalieri - Italia.it",
+          "url": "https://www.italia.it/en/lazio/san-polo-dei-cavalieri/where-to-eat/bar-centrale-di-mozzetta-miriam"
+        },
+        {
+          "title": "I migliori 5 ristoranti di San Polo dei Cavalieri , agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/San-Polo-dei-Cavalieri"
+        },
+        {
+          "title": "5 MIGLIORI ristoranti San Polo dei Cavalieri - Elenco di 2026",
+          "url": "https://it.tripadvisor.ch/Restaurants-g2372877-San_Polo_dei_Cavalieri_Province_of_Rome_Lazio.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:059009:gaeta:ristoro-da-guido",
+      "name": "Ristoro Da Guido",
+      "municipality": "Gaeta",
+      "region": "Lazio",
+      "address": "via flacca km 20,900, 04024 Gaeta",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Ristoro Da Guido\" \"Gaeta\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:36.391Z",
+      "candidates": [
+        {
+          "title": "RISTORO DA GUIDO, Gaeta - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187790-d2397677-Reviews-Ristoro_Da_Guido-Gaeta_Province_of_Latina_Lazio.html"
+        },
+        {
+          "title": "Ristoro Da Guido - Google Maps",
+          "url": "https://www.google.com/maps/search/Ristoro%2BDa%2BGuido%2BGaeta%2BItaly"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Ristoro Da Guido, Gaeta - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g187790-d2397677-Ristoro_Da_Guido-Gaeta_Province_of_Latina_Lazio.html"
+        },
+        {
+          "title": "Ristoro Da Guido | 0771 741020 | Gaeta",
+          "url": "https://www.tuttiaffari.com/ristoro-da-guido_2D-0771-741020"
+        },
+        {
+          "title": "RISTORO DA GUIDO, Gaeta - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g187790-d2397677-Reviews-Ristoro_Da_Guido-Gaeta_Province_of_Latina_Lazio.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:058032:civitavecchia:marchigiano",
+      "name": "Ristorante Pizzeria Il Marchigiano",
+      "municipality": "Civitavecchia",
+      "region": "Lazio",
+      "address": "Via Aurelia Nord, 144, 00053 Civitavecchia",
+      "known_website": "http://www.ristoranteilmarchigiano.it/",
+      "partition": "development",
+      "query": "\"Ristorante Pizzeria Il Marchigiano\" \"Civitavecchia\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:38.236Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE PIZZERIA IL MARCHIGIANO, Civitavecchia - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194743-d2429205-Reviews-Il_Marchigiano-Civitavecchia_Province_of_Rome_Lazio.html"
+        },
+        {
+          "title": "Ristorante - Pizzeria \"Il Marchigiano\", Civitavecchia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Il-Marchigiano-Civitavecchia"
+        },
+        {
+          "title": "Ristorante Pizzeria Il Marchigiano | 0766 560103 | Civitavecchia",
+          "url": "https://www.tuttiaffari.com/ristorante-pizzeria-il-marchigiano_1z-0766-560103"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA IL MARCHIGIANO, Civitavecchia - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194743-d2429205-Reviews-or60-Il_Marchigiano-Civitavecchia_Province_of_Rome_Lazio.html"
+        },
+        {
+          "title": "Ristorazione | Port of Rome – Civitavecchia",
+          "url": "https://www.portofrome.it/ristorazione/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:059020:prossedi:vapoforno-di-cipolla-armandina",
+      "name": "Vapoforno di Cipolla Armandina",
+      "municipality": "Prossedi",
+      "region": "Lazio",
+      "address": "Via Principessa Augusta Gabrielli, 49, 04010 Prossedi",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Vapoforno di Cipolla Armandina\" \"Prossedi\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:40.000Z",
+      "candidates": [
+        {
+          "title": "Vapoforno di Cipolla Armandina, Prossedi - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Vapoforno-di-Cipolla-Armandina-Prossedi"
+        },
+        {
+          "title": "I migliori 5 ristoranti di Prossedi , agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/Prossedi"
+        },
+        {
+          "title": "Vapoforno di Cipolla Armandina - 04010 Prossedi -",
+          "url": "https://www.reteimprese.it/panifici-industriali-artigianali/prossedi/azienda/584865"
+        },
+        {
+          "title": "I 5 migliori ristoranti con pizza a Prossedi, maggio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/pizza-Prossedi-m2"
+        },
+        {
+          "title": "Panifici Industriali ed Artigianali a Terracina",
+          "url": "https://www.reteimprese.it/panifici-industriali-artigianali/terracina"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:066093:scanno:baita",
+      "name": "La Baita",
+      "municipality": "Scanno",
+      "region": "Abruzzo",
+      "address": "via Pescara, 67038 Scanno",
+      "known_website": "http://www.labaitadiscanno.it/",
+      "partition": "development",
+      "query": "\"La Baita\" \"Scanno\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:41.992Z",
+      "candidates": [
+        {
+          "title": "LA BAITA, Scanno - Via Pescara - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194910-d2470459-Reviews-La_Baita-Scanno_Province_of_L_Aquila_Abruzzo.html"
+        },
+        {
+          "title": "LA BAITA, Scanno - Via Pescara - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g194910-d2470459-Reviews-La_Baita-Scanno_Province_of_L_Aquila_Abruzzo.html"
+        },
+        {
+          "title": "LA BAITA, Scanno - Via Pescara - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194910-d2470459-Reviews-La_Baita-Scanno_Province_of_L_Aquila_Abruzzo.html"
+        },
+        {
+          "title": "La Baita, Scanno - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Baita-Scanno"
+        },
+        {
+          "title": "LA BAITA, Scanno - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g194910-d2470459-Reviews-La_Baita-Scanno_Province_of_L_Aquila_Abruzzo.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:067041:teramo:piadineria",
+      "name": "La Piadineria",
+      "municipality": "Teramo",
+      "region": "Abruzzo",
+      "address": "Teramo (TE), Località Piano D'Accio Teramo, Teramo (TE)",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"La Piadineria\" \"Teramo\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:43.779Z",
+      "candidates": [
+        {
+          "title": "LA PIADINERIA, Nepezzano - Località Piano D'Accio - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g13119332-d27411105-Reviews-La_Piadineria-Nepezzano_Teramo_Province_of_Teramo_Abruzzo.html"
+        },
+        {
+          "title": "La Piadineria - L'Italia in un morso -",
+          "url": "https://lapiadineria.com/i-nostri-ristoranti/teramo-centro-commerciale-gran-sasso"
+        },
+        {
+          "title": "La Piadineria, Teramo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Piadineria-Teramo"
+        },
+        {
+          "title": "La Piadineria - L'Italia in un morso -",
+          "url": "https://lapiadineria.com/regolamento-concorso"
+        },
+        {
+          "title": "LA PIADINERIA, Colonnella - Strada Provinciale 3 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g635870-d14128760-Reviews-La_Piadineria-Colonnella_Province_of_Teramo_Abruzzo.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:068028:pescara:les-paillotes",
+      "name": "Café Les Paillotes",
+      "municipality": "Pescara",
+      "region": "Abruzzo",
+      "address": "Piazza Le Laudi, 2, 65129 Pescara",
+      "known_website": "http://www.lespaillotes.it/",
+      "partition": "development",
+      "query": "\"Café Les Paillotes\" \"Pescara\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:46.271Z",
+      "candidates": [
+        {
+          "title": "Home - Ristorante Café Les Paillotes",
+          "url": "https://www.lespaillotes.it/"
+        },
+        {
+          "title": "CONTATTI - Ristorante Café Les Paillotes",
+          "url": "https://www.lespaillotes.it/contatti-cafe-les-paillotes/"
+        },
+        {
+          "title": "IL RISTORANTE - Ristorante Café Les Paillotes",
+          "url": "https://www.lespaillotes.it/il-ristorante-cafe-les-paillotes/"
+        },
+        {
+          "title": "MENU Alla Carta - Ristorante Café Les Paillotes",
+          "url": "https://www.lespaillotes.it/menu-alla-carta-cafe-les-paillotes-pescara/"
+        },
+        {
+          "title": "LO CHEF - Ristorante Café Les Paillotes",
+          "url": "https://www.lespaillotes.it/chef/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:067007:bisenti:pino-verde",
+      "name": "Pizzeria Pino Verde",
+      "municipality": "Bisenti",
+      "region": "Abruzzo",
+      "address": "Via Roma, 53, 64033 Bisenti",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Pizzeria Pino Verde\" \"Bisenti\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:48.017Z",
+      "candidates": [
+        {
+          "title": "Dove siamo - Bar Pizzeria Pino Verde Bisenti",
+          "url": "https://www.pinoverdebisenti.it/dove-siamo/"
+        },
+        {
+          "title": "BAR PIZZERIA PINO VERDE, Bisenti - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2026189-d12001487-Reviews-Bar_Pizzeria_Pino_Verde-Bisenti_Province_of_Teramo_Abruzzo.html"
+        },
+        {
+          "title": "Gli spazi - Bar Pizzeria Pino Verde Bisenti",
+          "url": "https://www.pinoverdebisenti.it/il-locale/gli-spazi/"
+        },
+        {
+          "title": "Pranzo di lavoro - Bar Pizzeria Pino Verde Bisenti",
+          "url": "https://www.pinoverdebisenti.it/cucina-menu/pranzo-di-lavoro/"
+        },
+        {
+          "title": "5 MIGLIORI ristoranti economici: Bisenti - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurants-g2026189-zfp16-Bisenti_Province_of_Teramo_Abruzzo.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:068024:montesilvano:dei-sogni",
+      "name": "Pizzeria Dei Sogni",
+      "municipality": "Montesilvano",
+      "region": "Abruzzo",
+      "address": "Via Vestina, 148, 65015 Montesilvano",
+      "known_website": "https://www.canva.com/design/DAF2R5i5EOA/0KHtuuCO4SDzoIfGMx73Rg/view?utm_content=DAF2R5i5EOA&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+      "partition": "development",
+      "query": "\"Pizzeria Dei Sogni\" \"Montesilvano\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:49.576Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA DEI SOGNI, Montesilvano - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194834-d27381233-Reviews-Pizzeria_Dei_Sogni-Montesilvano_Province_of_Pescara_Abruzzo.html"
+        },
+        {
+          "title": "Pizzeria Dei Sogni | 085 445 5532 | Montesilvano Marina",
+          "url": "https://www.tuttiaffari.com/pizzeria-dei-sogni-085-445-5532"
+        },
+        {
+          "title": "Pizzeria Dei Sogni consegna in zona Montesilvano - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/pescara/montesilvano/pizzeria-dei-sogni"
+        },
+        {
+          "title": "GIANNI PIZZA, Montesilvano - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194834-d26554166-Reviews-Gianni_Pizza-Montesilvano_Province_of_Pescara_Abruzzo.html"
+        },
+        {
+          "title": "MIGLIORI ristoranti Montesilvano - Elenco di maggio 2026",
+          "url": "https://www.tripadvisor.it/Restaurants-g194834-zfg16556-Montesilvano_Province_of_Pescara_Abruzzo.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:066049:l-aquila:civico-ventuno",
+      "name": "Civico Ventuno",
+      "municipality": "L'Aquila",
+      "region": "Abruzzo",
+      "address": "Strada Statale Diciassette Ovest, 21, 67100 L'Aquila",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Civico Ventuno\" \"L'Aquila\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:51.418Z",
+      "candidates": [
+        {
+          "title": "Ristorante Civico Ventuno, L'Aquila - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Civico-Ventuno-LAquila"
+        },
+        {
+          "title": "CIVICO VENTUNO, L'Aquila - Restaurant Reviews & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194790-d23634157-Reviews-Civico_Ventuno-L_Aquila_Province_of_L_Aquila_Abruzzo.html"
+        },
+        {
+          "title": "Ristorante Elodia | Casual Dining in LAquila, Italy",
+          "url": "https://ristorante-elodia.restaurants-world.net/"
+        },
+        {
+          "title": "Civico Ventuno - FAQ - L'Aquila | Domande e Risposte",
+          "url": "https://www.sluurpy.it/faq-ristorante/8596464/civico-ventuno"
+        },
+        {
+          "title": "I 5 migliori ristoranti con brioches a L'Aquila, luglio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/brioches-LAquila-m9334"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:067005:basciano:portico-alloggio-e-ristorazione",
+      "name": "Agriturismo Il Portico - Alloggio e Ristorazione",
+      "municipality": "Basciano",
+      "region": "Abruzzo",
+      "address": "Via salara, 21, 64030 Basciano",
+      "known_website": "https://m.facebook.com/Agriturismo-Il-Portico-Alloggio-e-Ristorazione-264632963667829",
+      "partition": "development",
+      "query": "\"Agriturismo Il Portico - Alloggio e Ristorazione\" \"Basciano\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:53.031Z",
+      "candidates": [
+        {
+          "title": "Agriturismo Il Portico - Alloggio e Ristorazione, Basciano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Agriturismo-Il-Portico-Alloggio-e-Ristorazione-Basciano"
+        },
+        {
+          "title": "Top 5 restaurants in Basciano, june 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/Basciano"
+        },
+        {
+          "title": "I migliori 5 ristoranti di Basciano , luglio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/Basciano"
+        },
+        {
+          "title": "I 5 migliori ristoranti con carne a Basciano, settembre 2025 - Restaurant Guru",
+          "url": "https://restaurantguru.it/meat-Basciano-m6"
+        },
+        {
+          "title": "0 places in Basciano on the map - WorldPlaces",
+          "url": "https://italy.worldplaces.me/cities/203215-basciano.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:066099:tagliacozzo:tony-bar",
+      "name": "Tony Bar",
+      "municipality": "Tagliacozzo",
+      "region": "Abruzzo",
+      "address": "Piazza Duca degli Abruzzi, 11, 67069 Tagliacozzo",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Tony Bar\" \"Tagliacozzo\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:54.906Z",
+      "candidates": [
+        {
+          "title": "TONY BAR, Tagliacozzo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1307929-d10744567-Reviews-Tony_Bar-Tagliacozzo_Province_of_L_Aquila_Abruzzo.html"
+        },
+        {
+          "title": "Migliori Bar e pub Tagliacozzo: Leggi recensioni sui Bar e pub a Tagliacozzo",
+          "url": "https://www.tripadvisor.it/Restaurants-g1307929-zfg11776-Tagliacozzo_Province_of_L_Aquila_Abruzzo.html"
+        },
+        {
+          "title": "Migliori Bar Tagliacozzo: Leggi recensioni sui Bar a Tagliacozzo",
+          "url": "https://www.tripadvisor.it/Restaurants-g1307929-zfg9900-Tagliacozzo_Province_of_L_Aquila_Abruzzo.html"
+        },
+        {
+          "title": "TONY BAR, Tagliacozzo - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1307929-d10744567-Reviews-Tony_Bar-Tagliacozzo_Province_of_L_Aquila_Abruzzo.html"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti economici: Tagliacozzo - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurants-g1307929-zfp16-Tagliacozzo_Province_of_L_Aquila_Abruzzo.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:069022:chieti:alice-pizza",
+      "name": "Alice Pizza",
+      "municipality": "Chieti",
+      "region": "Abruzzo",
+      "address": "Località Santa Filomena, 66100 Chieti",
+      "known_website": "http://www.alicepizza.it/",
+      "partition": "development",
+      "query": "\"Alice Pizza\" \"Chieti\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:56.662Z",
+      "candidates": [
+        {
+          "title": "Alice Chieti | Alice Pizza",
+          "url": "https://www.alicepizza.it/store/alice-chieti/"
+        },
+        {
+          "title": "Pizzeria Chieti: scopri Alice Pizza | Alice Pizza",
+          "url": "https://www.alicepizza.it/pizzeria-chieti/"
+        },
+        {
+          "title": "ALICE PIZZA, Chieti - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194737-d7827865-Reviews-Alice_Pizza-Chieti_Province_of_Chieti_Abruzzo.html"
+        },
+        {
+          "title": "Alice Pizza | Centro Commerciale Megalò",
+          "url": "https://www.megaloweb.it/ristorazione/alice-pizza/"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Alice Pizza, Chieti - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g194737-d7827865-Alice_Pizza-Chieti_Province_of_Chieti_Abruzzo.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:069059:paglieta:bim-bum-bar",
+      "name": "Bim Bum Bar",
+      "municipality": "Paglieta",
+      "region": "Abruzzo",
+      "address": "Piazza Roma, 3, 66020 Paglieta",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bim Bum Bar\" \"Paglieta\" ristorante",
+      "retrieved_at": "2026-09-01T17:41:59.280Z",
+      "candidates": [
+        {
+          "title": "Menu da BIM BUM BAR, Paglieta",
+          "url": "https://restaurantguru.it/Bim-Bum-Bar-Paglieta/menu"
+        },
+        {
+          "title": "BIM BUM BAR, Paglieta - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Bim-Bum-Bar-Paglieta"
+        },
+        {
+          "title": "I migliori 5 ristoranti di Paglieta , agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/Paglieta"
+        },
+        {
+          "title": "I migliori 5 pub e bar di Paglieta, aprile 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/pub-and-bar-Paglieta-t2"
+        },
+        {
+          "title": "Le top 5 pubs et bars à Paglieta, août 2026 - Restaurant Guru",
+          "url": "https://fr.restaurantguru.com/pub-and-bar-Paglieta-t2"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:070072:santa-croce-di-magliano:settimo-specchio",
+      "name": "Pizzeria Ristorante Settimo Specchio",
+      "municipality": "Santa Croce di Magliano",
+      "region": "Molise",
+      "address": "Via Principe di Piemonte, 145, 86047 Santa Croce di Magliano",
+      "known_website": "http://pizzeriaristorantesettimospecchiodibrennac.placeweb.site",
+      "partition": "development",
+      "query": "\"Pizzeria Ristorante Settimo Specchio\" \"Santa Croce di Magliano\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:01.016Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA RISTORANTE SETTIMO SPECCHIO DI BRENNA C, Santa Croce di Magliano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g9595282-d12446977-Reviews-Pizzeria_Ristorante_Settimo_Specchio_di_Brenna_C-Santa_Croce_di_Magliano_Provin.html"
+        },
+        {
+          "title": "Pizzeria Ristorante Settimo Specchio Di Brenna C. | 0874 728721 | Santa Croce di Magliano",
+          "url": "https://www.tuttiaffari.com/pizzeria-ristorante-settimo-specchio-di-0874-728721"
+        },
+        {
+          "title": "10 MIGLIORI ristoranti Santa Croce di Magliano",
+          "url": "https://www.tripadvisor.it/Restaurants-g9595282-Santa_Croce_di_Magliano_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "LE MIGLIORI pizzerie: Santa Croce di Magliano (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g9595282-c31-Santa_Croce_di_Magliano_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "Pizzeria Ristorante Settimo Specchio Di Brenna C., Santa Croce di Magliano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Settimo-Specchio-Santa-Croce-di-Magliano"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:070078:termoli:about-coffee-garden",
+      "name": "ABOUT Coffee Garden",
+      "municipality": "Termoli",
+      "region": "Molise",
+      "address": "Corso Fratelli Brigida, 48, 86039 Termoli",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"ABOUT Coffee Garden\" \"Termoli\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:02.911Z",
+      "candidates": [
+        {
+          "title": "ABOUT COFFEE GARDEN, Termoli - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194930-d27822818-Reviews-About_Coffee_Garden-Termoli_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "ABOUT COFFEE GARDEN, Termoli - Restaurant Reviews & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194930-d27822818-Reviews-About_Coffee_Garden-Termoli_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "ABOUT Coffee Garden, Termoli - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/ABOUT-Coffee-Garden-Termoli"
+        },
+        {
+          "title": "ABOUT Coffee Garden, Termoli - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/ABOUT-Coffee-Garden-Termoli"
+        },
+        {
+          "title": "ABOUT COFFEE GARDEN - Bar a Termoli | LocalShop24",
+          "url": "https://www.localshop24.com/it/termoli-cb-it/attivita/bar/about-coffee-garden/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:094026:macchiagodena:garibaldi-cafe",
+      "name": "Garibaldi Cafè",
+      "municipality": "Macchiagodena",
+      "region": "Molise",
+      "address": "Via Giuseppe Garibaldi Ovest, 17, 86096 Macchiagodena",
+      "known_website": "http://www.confettiedifetti.it",
+      "partition": "development",
+      "query": "\"Garibaldi Cafè\" \"Macchiagodena\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:04.829Z",
+      "candidates": [
+        {
+          "title": "GARIBALDI CAFE', Macchiagodena - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1235455-d9803745-Reviews-Garibaldi_Cafe-Macchiagodena_Province_of_Isernia_Molise.html"
+        },
+        {
+          "title": "5 MIGLIORI ristoranti aperti a cena: Macchiagodena - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurants-g1235455-zfp58-Macchiagodena_Province_of_Isernia_Molise.html"
+        },
+        {
+          "title": "GARIBALDI CAFE', Macchiagodena - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Garibaldi-Cafe-Macchiagodena"
+        },
+        {
+          "title": "I 5 MIGLIORI ristoranti per gruppi: Macchiagodena - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurants-g1235455-zfp9-Macchiagodena_Province_of_Isernia_Molise.html"
+        },
+        {
+          "title": "Garibaldi Cafe | 344 100 7063 | Macchiagodena",
+          "url": "https://www.tuttiaffari.com/garibaldi-cafe_31-344-100-7063"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:070067:san-giuliano-del-sannio:raggio-d-oro",
+      "name": "Ristorante Pizzeria Raggio d'Oro",
+      "municipality": "San Giuliano del Sannio",
+      "region": "Molise",
+      "address": "via Terrapiana, 2, 86010 San Giuliano del Sannio",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Ristorante Pizzeria Raggio d'Oro\" \"San Giuliano del Sannio\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:06.760Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE PIZZERIA RAGGIO D'ORO, San Giuliano del Sannio - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g5599124-d2436377-Reviews-Raggio_D_Oro-San_Giuliano_del_Sannio_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "Ristorante Pizzeria Raggio d'Oro - molise-visitmolise",
+          "url": "https://www.visitmolise.eu/ristorazione/-/d/dms/5003918/scheda-ristorazione"
+        },
+        {
+          "title": "MIGLIORI pizzerie: San Giuliano del Sannio (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g5599124-c31-San_Giuliano_del_Sannio_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "I MIGLIORI ristoranti italiani: San Giuliano del Sannio (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g5599124-c26-San_Giuliano_del_Sannio_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "Ristorante Pizzeria Raggio d'Oro | 339 447 2578 | San Giuliano del Sannio",
+          "url": "https://www.tuttiaffari.com/ristorante-pizzeria-raggio-doro_2M-339-447-2578"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:070003:bojano:hosteria-lu-vic-p-dent",
+      "name": "Hosteria Lu Vic P' Dent",
+      "municipality": "Bojano",
+      "region": "Molise",
+      "address": "Corso Umberto I, 18, 86021 Bojano",
+      "known_website": "https://pro.pns.sm/6ewg48l",
+      "partition": "development",
+      "query": "\"Hosteria Lu Vic P' Dent\" \"Bojano\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:08.811Z",
+      "candidates": [
+        {
+          "title": "Home - Hosteria lu vic' p' dent",
+          "url": "https://www.hosterialuvicpdent.it/"
+        },
+        {
+          "title": "HOSTERIA LU VIC P' DENT, Bojano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2213327-d19630216-Reviews-Hosteria_Lu_Vic_P_Dent-Bojano_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "Contattaci - Hosteria lu vic' p' dent",
+          "url": "https://www.hosterialuvicpdent.it/contattaci/"
+        },
+        {
+          "title": "Hosteria - Boutique Hotel Palazzo Corso Umberto",
+          "url": "https://www.palazzocorsoumberto.it/hosteria/"
+        },
+        {
+          "title": "Chi siamo - Hosteria lu vic' p' dent",
+          "url": "https://www.hosterialuvicpdent.it/chi-siamo/"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:094009:castel-del-giudice:joker",
+      "name": "Bar Joker",
+      "municipality": "Castel del Giudice",
+      "region": "Molise",
+      "address": "Via Roma, 22, 86080 Castel del Giudice",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Bar Joker\" \"Castel del Giudice\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:10.459Z",
+      "candidates": [
+        {
+          "title": "Bar Joker, Castel del Giudice - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/BAR-JOKER-Castel-del-Giudice"
+        },
+        {
+          "title": "CASTEL DE",
+          "url": "https://comune.casteldelgiudice.is.it/uploads/elenco_4/166-25-Prog_Compresso.pdf"
+        },
+        {
+          "title": "castel-del-giudice – Milan Club Castel Del Giudice",
+          "url": "https://www.aimc.eu/castel-del-giudice/author/castel-del-giudice/"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://www.aimc.eu/castel-del-giudice/wp-content/uploads/sites/1062/2025/10/ComunicatoStampa_Luca-Serafini_Milan-Club-Castel-del-Giudice.pdf"
+        },
+        {
+          "title": "XX EDIZIONE",
+          "url": "https://www.pressmoliselazio.it/wp-content/uploads/2019/07/LUCIGNOLO-2019_WEB.pdf"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:070069:san-martino-in-pensilis:de-santis",
+      "name": "Bar De Santis",
+      "municipality": "San Martino in Pensilis",
+      "region": "Molise",
+      "address": "Via Marina, 6, 86046 San Martino in Pensilis",
+      "known_website": "https://tinasweetsandcake.weebly.com/#",
+      "partition": "development",
+      "query": "\"Bar De Santis\" \"San Martino in Pensilis\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:12.142Z",
+      "candidates": [
+        {
+          "title": "Caffè De Santis | 0875 605340 | San Martino in Pensilis",
+          "url": "https://www.tuttiaffari.com/caff%C3%A8-de-santis-0875-605340"
+        },
+        {
+          "title": "Le top 5 des restaurants à San Martino in Pensilis, août 2025 - Restaurant Guru",
+          "url": "https://fr.restaurantguru.com/San-Martino-in-Pensilis"
+        },
+        {
+          "title": "arhivio eventi 2006",
+          "url": "https://www.alfonsotoscano.it/eventi%202007.htm"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:094052:venafro:di-nardo",
+      "name": "Caffe Di Nardo",
+      "municipality": "Venafro",
+      "region": "Molise",
+      "address": "Via Colonia Giulia, 164, 86079 Venafro",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Caffe Di Nardo\" \"Venafro\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:14.114Z",
+      "candidates": [
+        {
+          "title": "CAFFE DI NARDO, Venafro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1201170-d15064809-Reviews-Caffe_Di_Nardo-Venafro_Province_of_Isernia_Molise.html"
+        },
+        {
+          "title": "CAFFE DI NARDO, Venafro - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1201170-d15064809-Reviews-Caffe_Di_Nardo-Venafro_Province_of_Isernia_Molise.html"
+        },
+        {
+          "title": "Caffe' Di Nardo, Venafro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-Di-Nardo-Venafro"
+        },
+        {
+          "title": "Caffe' Di Nardo, Venafro - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Caffe-Di-Nardo-Venafro"
+        },
+        {
+          "title": "Menu at Caffe' Di Nardo pub & bar, Venafro",
+          "url": "https://restaurantguru.com/Caffe-Di-Nardo-Venafro/menu"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:070006:campobasso:sei-torri",
+      "name": "Sei Torri",
+      "municipality": "Campobasso",
+      "region": "Molise",
+      "address": "Via Enzo Ferrari, 82, 86100 Campobasso",
+      "known_website": "https://www.instagram.com/seitorri/",
+      "partition": "development",
+      "query": "\"Sei Torri\" \"Campobasso\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:15.920Z",
+      "candidates": [
+        {
+          "title": "SEI TORRI, Campobasso - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187799-d4450598-Reviews-Sei_Torri-Campobasso_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "SEI TORRI, Campobasso - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187799-d4450598-Reviews-Sei_Torri-Campobasso_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "Sei Torri, Campobasso - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Sei-Torri-Campobasso"
+        },
+        {
+          "title": "Sei Torri | 340 713 2421 | Campobasso",
+          "url": "https://www.tuttiaffari.com/sei-torri-340-713-2421"
+        },
+        {
+          "title": "SEI TORRI, Campobasso - Carta, fotos y opiniones del restaurante",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g187799-d4450598-Reviews-Sei_Torri-Campobasso_Province_of_Campobasso_Molise.html"
+        }
+      ],
+      "adjudication": null
+    },
+    {
+      "venue_id": "venue:094028:montaquila:forte-s-bar-di-forte-pasquale-c",
+      "name": "Forte,s Bar di Forte Pasquale & C. snc",
+      "municipality": "Montaquila",
+      "region": "Molise",
+      "address": "Via Taverna, 2, 86030 Castelbottaccio",
+      "known_website": null,
+      "partition": "development",
+      "query": "\"Forte,s Bar di Forte Pasquale & C. snc\" \"Montaquila\" ristorante",
+      "retrieved_at": "2026-09-01T17:42:17.497Z",
+      "candidates": [
+        {
+          "title": "9 places in Taverna Ravindola on the map - WorldPlaces",
+          "url": "https://italy.worldplaces.me/cities/210902-taverna-ravindola.html"
+        }
+      ],
+      "adjudication": null
+    }
+  ]
+}
