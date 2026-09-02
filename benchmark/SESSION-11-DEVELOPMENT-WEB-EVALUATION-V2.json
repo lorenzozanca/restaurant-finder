@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "partition": "development",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "prediction_policy": "publish only a candidate domain with independently verified venue ownership",
+  "evaluation_scope": "official-site publication gate and bounded-search discovery",
+  "resource_role_metrics": {
+    "status": "not_evaluated",
+    "reason": "minimal URL/title fixtures contain no captured resource-role predictions or adjudications"
+  },
+  "corpus": {
+    "venues": 200,
+    "publisher_domains": 715,
+    "publisher_classes": {
+      "official": 75,
+      "directory": 758,
+      "menu_mirror": 10,
+      "booking_or_order_platform": 36,
+      "editorial_or_review": 58,
+      "social": 1,
+      "unrelated": 38,
+      "uncertain": 11
+    },
+    "ownership_statuses": {
+      "verified": 30,
+      "rejected": 679,
+      "uncertain": 6
+    }
+  },
+  "metrics": {
+    "reviewed": 200,
+    "publications": 29,
+    "conclusive_publications": 29,
+    "unresolved_publications": 0,
+    "true_publications": 29,
+    "false_publications": 0,
+    "false_publication_by_publisher_class": {
+      "official": 0,
+      "directory": 0,
+      "menu_mirror": 0,
+      "booking_or_order_platform": 0,
+      "editorial_or_review": 0,
+      "social": 0,
+      "unrelated": 0,
+      "uncertain": 0
+    },
+    "official_sites": 29,
+    "official_site_precision": 1,
+    "official_site_precision_wilson_95": {
+      "lower": 0.8830302015002593,
+      "upper": 1
+    },
+    "official_site_recall": 1,
+    "official_site_recall_wilson_95": {
+      "lower": 0.8830302015002593,
+      "upper": 1
+    },
+    "search_discovery_recall": 1,
+    "search_discovery_recall_wilson_95": {
+      "lower": 0.8830302015002593,
+      "upper": 1
+    },
+    "abstentions": 171,
+    "coverage": 0.145,
+    "passes_non_vacuity": true,
+    "passes_precision_target": false
+  },
+  "artifact_sha256": {
+    "development-001-020.json": "d4d7c4d19abc2a4c6b88fe19cce9b8e04a3e2c9e095116e3e98d396000058767",
+    "development-021-060.json": "2fb08932a1bcb34c08156f11d458d35400d31b526031961aa49503577097d117",
+    "development-061-100.json": "acb6338a9dc6503fddf4f9b98facc6310f3170fa463ad5e6363a33b957153288",
+    "development-101-140.json": "a7e8986f2fb6930878bc2898fddc4f0a6e2f599c51af05ff3b338122925e44ba",
+    "development-141-180.json": "e8cc520a4b58586832b48bf53df4980cbc4a9a7acadf258e71cdf980c9bb9b40",
+    "development-181-200.json": "2fe5d1abc9a621c2cdabe47b70e8626a697b16dbcd7735db2d295c94262e57c2",
+    "development-adjudication-001-020.json": "1c3b6eb7ad8c8c49d6724ec99851781dfba3acb745566839d5e2c237e21b64ee",
+    "development-adjudication-021-040.json": "3ea32667d5663d8b309117c433a18bdfd5b672d1d98b080225a9322441f4e8b5",
+    "development-adjudication-041-060.json": "0e48ab898caeb27d853419212ec523ec5e33e3362937e7c9202970ef256abfc9",
+    "development-adjudication-061-080.json": "155371464382942a5a9deff51acc1005a4f2e3148c81257e1421545185056004",
+    "development-adjudication-081-100.json": "5c6f317ed5cf6e4c1bc0483ae73e6983c9a932b555a23bb3b9eb9ad9eb8d5a3b",
+    "development-adjudication-101-120.json": "0b888235b89cc5778ab642ce8bd9c0ecd482588f0b0f36d8227797935cceb35c",
+    "development-adjudication-121-140.json": "4407625931753d51e1d3faf36834ca7633bafabd87e9ebf13c31affc49e3fcec",
+    "development-adjudication-141-160.json": "81af6c1c1547b19e4215644d60b411e53831dc941a4278669ed1423a39b517ec",
+    "development-adjudication-161-180.json": "495843e012e88b2d82d23b2e2b6ff89d5daca387f375250440ab8597b0c35a20",
+    "development-adjudication-181-200.json": "62c42da2b5f74c88ed422a94eff071c5fa8ab19761d20b23ceeb5c973ad63dbe"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "freeze_id": "session-11-web-official-site-v2",
+  "frozen_at": "2026-09-02T12:00:00Z",
+  "status": "frozen_before_replacement_locked_holdout_capture",
+  "base_commit": "86dfd38b88bb537e7990cc0d72c156f27979f1c2",
+  "replacement_selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "prediction_policy": "publish only a candidate domain with independently verified venue ownership",
+  "frozen_files": {
+    "lib/web-stress-fixture.mjs": "7666076807f6abe938c609b82359e3c0e2058658d632fbb12ed7ce957bf7ac1a",
+    "lib/publisher-ownership.mjs": "ebc028cadae67062c707688fae9b2211534761caf717bcaf8f50fd3294fbfb1b",
+    "benchmark/evaluate-session-11-web.mjs": "5c07cf13e8370ec731e98650fa3e3fa48a5de6a69ab933c05457dd2c97650dad"
+  },
+  "development_regression": {
+    "path": "benchmark/SESSION-11-DEVELOPMENT-WEB-EVALUATION-V2.json",
+    "sha256": "5fd323071525aaea5a0152ecb4d2f924614e4eb9c9a002a4e8c3df12e8187c5b",
+    "result_changed_from_v1": false,
+    "venues_reviewed": 200,
+    "publications": 29,
+    "true_publications": 29,
+    "false_publications": 0
+  },
+  "retired_holdout": {
+    "path": "benchmark/SESSION-11-LOCKED-HOLDOUT-RETIREMENT.json",
+    "adjudicated": false,
+    "evaluated": false
+  },
+  "replacement_holdout": {
+    "selection_path": "benchmark/SESSION-11-REPLACEMENT-UNSEEN-SELECTION.json",
+    "selection_file_sha256": "ef54d3322e78d386bf68e025afecfba6c1b58d2d642280d91f2b66ae0863b8fd",
+    "venues": 100,
+    "overlap_with_retired_selection": 0,
+    "captured": false,
+    "evaluated": false,
+    "retirement_rule": "Any policy or frozen-code change caused by replacement locked-holdout results retires this holdout."
+  },
+  "limitations": [
+    "The minimal URL/title fixtures do not evaluate resource-role metrics.",
+    "The retired holdout has no reported quality metrics.",
+    "This freeze authorizes no publication and no Brave requests."
+  ]
+}

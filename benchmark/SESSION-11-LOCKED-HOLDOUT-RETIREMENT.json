@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "holdout": "session-11-national-unseen-v1:locked_holdout",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "retired_at": "2026-09-02T12:00:00Z",
+  "status": "retired_before_adjudication_or_evaluation",
+  "reason": "Ten valid zero-result fixtures cannot be represented by frozen adjudication schema v1 because it requires at least one candidate evidence URL for every venue.",
+  "affected_venues": 10,
+  "captured_venues": 100,
+  "captured_candidates": 268,
+  "adjudicated": false,
+  "evaluated": false,
+  "metrics_reported": false,
+  "policy_change": false,
+  "implementation_change": "Permit an empty venue-level evidence_urls array only when the immutable fixture has zero candidates; exact venue coverage and all per-domain evidence requirements remain unchanged.",
+  "retirement_rule": "Any policy or frozen-code change caused by locked-holdout results retires this holdout.",
+  "replacement_selection": "benchmark/SESSION-11-REPLACEMENT-UNSEEN-SELECTION.json"
+}
