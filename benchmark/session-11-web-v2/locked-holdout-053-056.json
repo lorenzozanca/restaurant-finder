@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-053-056",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:043026:montecassiano:ponte-pi-pizzeria-ristorante",
+      "query": "\"PONTE PÌ Pizzeria Ristorante\" \"Montecassiano\"",
+      "retrieved_at": "2026-09-02T12:23:00Z",
+      "candidates": [
+        {
+          "title": "Ponte Pi Pizzeria Ristorante a Montecassiano",
+          "url": "https://altraopinione.org/ristorante/montecassiano/ponte-pi-pizzeria-ristorante/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:109018:montegranaro:hop-n-roll",
+      "query": "\"Hop 'n' Roll\" \"Montegranaro\"",
+      "retrieved_at": "2026-09-02T12:23:00Z",
+      "candidates": [
+        {
+          "title": "Dove mangiare - Montegranaro Tourism",
+          "url": "https://www.montegranarotourism.it/wp-content/uploads/2025/06/Guida-Montegranaro-1.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043013:civitanova-marche:gabbiano",
+      "query": "\"Ristorante Gabbiano\" \"Civitanova Marche\"",
+      "retrieved_at": "2026-09-02T12:23:00Z",
+      "candidates": [
+        {
+          "title": "Ristorante Gabbiano - Civitanova Marche",
+          "url": "https://www.gabbiano.info/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059008:formia:gatto-e-la-volpe",
+      "query": "\"Il Gatto e La Volpe\" \"Formia\"",
+      "retrieved_at": "2026-09-02T12:23:00Z",
+      "candidates": [
+        {
+          "title": "Ristorante Il Gatto e la Volpe, Formia",
+          "url": "https://www.ilgattoelavolpeformia.it/"
+        }
+      ]
+    }
+  ]
+}

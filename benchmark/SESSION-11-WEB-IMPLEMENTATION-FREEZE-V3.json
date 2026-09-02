@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "freeze_id": "session-11-web-official-site-v3",
+  "frozen_at": "2026-09-02T13:00:00Z",
+  "status": "frozen_before_final_locked_holdout_capture",
+  "base_commit": "a93653c5155519a83775e049c377b0d2b5bd8d7c",
+  "final_selection_fingerprint_sha256": "4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079",
+  "prediction_policy": "publish only a candidate domain with independently verified venue ownership",
+  "frozen_files": {
+    "lib/web-stress-fixture.mjs": "eb6f9053c481c1775e810d6461b8a475181f5979a1e2de960b24b5457d2a0183",
+    "lib/publisher-ownership.mjs": "ebc028cadae67062c707688fae9b2211534761caf717bcaf8f50fd3294fbfb1b",
+    "benchmark/evaluate-session-11-web.mjs": "5c07cf13e8370ec731e98650fa3e3fa48a5de6a69ab933c05457dd2c97650dad"
+  },
+  "development_regression": {
+    "path": "benchmark/SESSION-11-DEVELOPMENT-WEB-EVALUATION-V3.json",
+    "sha256": "5fd323071525aaea5a0152ecb4d2f924614e4eb9c9a002a4e8c3df12e8187c5b",
+    "result_changed_from_v1": false,
+    "zero_result_regression": "validated no-site decisions with zero candidates count as reviewed abstentions"
+  },
+  "retired_holdouts": [
+    "benchmark/SESSION-11-LOCKED-HOLDOUT-RETIREMENT.json",
+    "benchmark/SESSION-11-REPLACEMENT-HOLDOUT-V2-RETIREMENT.json"
+  ],
+  "final_holdout": {
+    "selection_path": "benchmark/SESSION-11-FINAL-UNSEEN-SELECTION.json",
+    "selection_file_sha256": "862763ae7d3aedb9cbeb5914b0ca944828ed064928110953575b41d5cb900920",
+    "venues": 100,
+    "prior_benchmark_venue_ids_excluded": 756,
+    "captured": false,
+    "adjudicated": false,
+    "evaluated": false,
+    "retirement_rule": "Any policy or frozen-code change caused by final locked-holdout results retires this holdout."
+  },
+  "limitations": [
+    "The minimal URL/title fixtures do not evaluate resource-role metrics.",
+    "Neither retired holdout has reported quality metrics.",
+    "This freeze authorizes no publication and no Brave requests."
+  ]
+}

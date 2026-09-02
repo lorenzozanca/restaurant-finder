@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-077-080",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:072006:bari:subway-cafe",
+      "query": "\"Subway Cafe\" \"Bari\"",
+      "retrieved_at": "2026-09-02T12:29:00Z",
+      "candidates": [
+        {
+          "title": "Subway cafe' - Bari",
+          "url": "https://subwaycafe.metro.bar/?lang=en"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:075059:parabita:radice-cafe-bistrot",
+      "query": "\"Radice | Cafè & Bistrot\" \"Parabita\"",
+      "retrieved_at": "2026-09-02T12:29:00Z",
+      "candidates": [
+        {
+          "title": "Radice Cafè & Bistrot, Parabita",
+          "url": "https://restaurantguru.it/Radice-Cafe-and-Bistrot-Parabita"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:071036:orta-nova:bounty-killer",
+      "query": "\"Pub Bounty killer\" \"Orta Nova\"",
+      "retrieved_at": "2026-09-02T12:29:00Z",
+      "candidates": [
+        {
+          "title": "Pub Bounty killer, Orta Nova",
+          "url": "https://restaurantguru.com/Bounty-Killer-Pub-Orta-Nova"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:074012:ostuni:piazzetta",
+      "query": "\"La Piazzetta\" \"Ostuni\"",
+      "retrieved_at": "2026-09-02T12:29:00Z",
+      "candidates": []
+    }
+  ]
+}

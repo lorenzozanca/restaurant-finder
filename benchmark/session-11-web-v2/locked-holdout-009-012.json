@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-009-012",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:007041:la-thuile:prive-lth",
+      "query": "\"Le Prive LTH\" \"La Thuile\"",
+      "retrieved_at": "2026-09-02T12:12:00Z",
+      "candidates": [
+        {
+          "title": "Le Privé LTH",
+          "url": "https://www.lovevda.it/en/database/9/discotheque-night-clubs/la-thuile/le-prive-lth/1349"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007045:nus:barma-saint-barthelemy",
+      "query": "\"La Barma - Saint-Barthélemy\" \"Nus\"",
+      "retrieved_at": "2026-09-02T12:12:00Z",
+      "candidates": [
+        {
+          "title": "Accoglienza a Saint-Barthélemy",
+          "url": "https://www.oavda.it/accoglienza-a-saint-barthelemy"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:017148:ponte-di-legno:jolly",
+      "query": "\"Ristorante Pizzeria Jolly\" \"Ponte di Legno\"",
+      "retrieved_at": "2026-09-02T12:12:00Z",
+      "candidates": [
+        {
+          "title": "Dove mangiare | Where to eat",
+          "url": "https://www.comune.monno.bs.it/media/mediafields/Allegato/4ev922e6c0cr2th981cmsry0np/fcfaf166e0c268fc077deb9a36c771ce.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:015146:milano:kfc-1e680384",
+      "query": "\"KFC\" \"Milano\"",
+      "retrieved_at": "2026-09-02T12:12:00Z",
+      "candidates": [
+        {
+          "title": "Merlata Bloom in Milano Italia - Apple Maps",
+          "url": "https://maps.apple.com/place?auid=5315783323593748569"
+        }
+      ]
+    }
+  ]
+}

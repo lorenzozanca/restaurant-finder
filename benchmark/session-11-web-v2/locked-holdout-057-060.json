@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-057-060",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:058091:roma:kfc",
+      "query": "\"KFC\" \"Roma\"",
+      "retrieved_at": "2026-09-02T12:24:00Z",
+      "candidates": [
+        {
+          "title": "KFC - Ristorante a Roma",
+          "url": "https://www.localshop24.com/it/roma-rm-it/attivita/ristorante/kfc/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058026:cave:pausa-caffe-cave-roma",
+      "query": "\"Pausa Caffè Cave Roma\" \"Cave\"",
+      "retrieved_at": "2026-09-02T12:24:00Z",
+      "candidates": [
+        {
+          "title": "Pausa caffè Cave roma",
+          "url": "https://restaurantguru.it/Pausa-caffe-Cave-roma-Cave"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056050:tarquinia:dilas-grau-pub",
+      "query": "\"Dilas Grau Pub\" \"Tarquinia\"",
+      "retrieved_at": "2026-09-02T12:24:00Z",
+      "candidates": [
+        {
+          "title": "Dilas Grau Pub Pizzeria a Tarquinia",
+          "url": "https://www.paginegialle.it/tarquinia-vt/ristoranti/dilas-grau-pub-pizzeria_9758903"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056059:viterbo:gelateria-gelart",
+      "query": "\"Gelateria Gelart\" \"Viterbo\"",
+      "retrieved_at": "2026-09-02T12:24:00Z",
+      "candidates": [
+        {
+          "title": "Viterbo Città del Gusto - Gelart",
+          "url": "https://www.viterbocittadelgusto.com/it/produttori-prodotti-ristoranti/ristoranti/115-gelart.html"
+        }
+      ]
+    }
+  ]
+}

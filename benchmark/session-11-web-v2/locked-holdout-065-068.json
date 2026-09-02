@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-065-068",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:068028:pescara:vento-in-poppa",
+      "query": "\"Ristorante Il Vento in Poppa\" \"Pescara\"",
+      "retrieved_at": "2026-09-02T12:26:00Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE IL VENTO IN POPPA, Pescara - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187770-d12058380-Reviews-Il_vento_in_poppa-Pescara_Province_of_Pescara_Abruzzo.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070003:bojano:iqos-partner-caffe-dei-pentri",
+      "query": "\"IQOS Partner - Caffe Dei Pentri\" \"Bojano\"",
+      "retrieved_at": "2026-09-02T12:26:00Z",
+      "candidates": [
+        {
+          "title": "CAFFE DEI PENTRI DI BERNARDO LUCIO",
+          "url": "https://www.ufficiocamerale.it/8470/caffe-dei-pentri-di-bernardo-lucio"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070010:campomarino:colitti",
+      "query": "\"Bar Colitti\" \"Campomarino\"",
+      "retrieved_at": "2026-09-02T12:26:00Z",
+      "candidates": [
+        {
+          "title": "Dove mangiare a Campomarino",
+          "url": "https://comune.campomarino.cb.it/novita/dove-mangiare-a-campomarino/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070059:ripalimosani:monforte-italia",
+      "query": "\"Caffè Monforte Italia\" \"Ripalimosani\"",
+      "retrieved_at": "2026-09-02T12:26:00Z",
+      "candidates": [
+        {
+          "title": "Soci sostenitori e fornitori",
+          "url": "https://www.gitc.it/wp-content/uploads/2023/09/Soci-SOSTENITORI-10-2023.pdf"
+        }
+      ]
+    }
+  ]
+}

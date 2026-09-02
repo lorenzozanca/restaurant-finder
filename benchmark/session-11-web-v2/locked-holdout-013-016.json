@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-013-016",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:012136:venegono-inferiore:tande",
+      "query": "\"TANDÈ\" \"Venegono Inferiore\"",
+      "retrieved_at": "2026-09-02T12:13:00Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:015077:cinisello-balsamo:orto-gelato",
+      "query": "\"Orto Gelato\" \"Cinisello Balsamo\"",
+      "retrieved_at": "2026-09-02T12:13:00Z",
+      "candidates": [
+        {
+          "title": "Cinisello Balsamo | Orto Gelato",
+          "url": "https://www.ortogelato.it/cinisello"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:012133:varese:quattro-stagioni",
+      "query": "\"Quattro Stagioni\" \"Varese\"",
+      "retrieved_at": "2026-09-02T12:13:00Z",
+      "candidates": [
+        {
+          "title": "Trattoria Pizzeria Picchetto - San Pietro Vara, Varese Ligure",
+          "url": "https://dapicchetto.it/en/index.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021061:ortisei-st-ulrich:corso",
+      "query": "\"Caffè Corso\" \"Ortisei/St. Ulrich\"",
+      "retrieved_at": "2026-09-02T12:13:00Z",
+      "candidates": [
+        {
+          "title": "CAFÉ CORSO, Ortisei - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194841-d3167152-Reviews-Cafe_Corso-Ortisei_Val_Gardena_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        }
+      ]
+    }
+  ]
+}

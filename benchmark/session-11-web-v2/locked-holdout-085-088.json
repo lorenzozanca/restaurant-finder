@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-085-088",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:077014:matera:da-nord-a-food",
+      "query": "\"Da Nord a Food\" \"Matera\"",
+      "retrieved_at": "2026-09-02T12:31:00Z",
+      "candidates": [
+        {
+          "title": "Chi siamo – Da Nord a Food",
+          "url": "https://www.danordafood.eu/chi-siamo/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080038:gioia-tauro:super-pizza-rustica",
+      "query": "\"Super Pizza Rustica\" \"Gioia Tauro\"",
+      "retrieved_at": "2026-09-02T12:31:00Z",
+      "candidates": [
+        {
+          "title": "Super Pizza Rustica, Gioia Tauro",
+          "url": "https://restaurantguru.com/Super-Pizza-Rustica-Gioia-Tauro/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080063:reggio-di-calabria:dolce-ritrovo",
+      "query": "\"Il Dolce Ritrovo\" \"Reggio di Calabria\"",
+      "retrieved_at": "2026-09-02T12:31:00Z",
+      "candidates": [
+        {
+          "title": "Il Dolce Ritrovo - Reggio di Calabria",
+          "url": "https://www.oraridiapertura24.it/filiale/Reggio%2520di%2520Calabria-Il%2520Dolce%2520Ritrovo-4261954H.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078002:acquappesa:o-por-do-sol-beach-food",
+      "query": "\"O Pôr Do Sol - Beach & Food\" \"Acquappesa\"",
+      "retrieved_at": "2026-09-02T12:31:00Z",
+      "candidates": []
+    }
+  ]
+}

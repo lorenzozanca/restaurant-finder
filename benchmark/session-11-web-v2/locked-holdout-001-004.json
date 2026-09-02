@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-001-004",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:006001:acqui-terme:santero-lounge-cafe",
+      "query": "\"Santero Lounge Cafe\" \"Acqui Terme\"",
+      "retrieved_at": "2026-09-02T12:10:00Z",
+      "candidates": [
+        {
+          "title": "958 SANTERO LOUNGE CAFE, Acqui Terme - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194661-d17600192-Reviews-958_SANTERO_Lounge_Cafe-Acqui_Terme_Province_of_Alessandria_Piedmont.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:006003:alessandria:piadineria",
+      "query": "\"La Piadineria\" \"Alessandria\"",
+      "retrieved_at": "2026-09-02T12:10:00Z",
+      "candidates": [
+        {
+          "title": "Punti Vendita | LA PIADINERIA",
+          "url": "https://piadineria.website.strooka.com/it/contacts/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001316:mappano:memory-cafe",
+      "query": "\"Memory Café\" \"Mappano\"",
+      "retrieved_at": "2026-09-02T12:10:00Z",
+      "candidates": [
+        {
+          "title": "Memory Café",
+          "url": "https://viviamomappano.it/memory-cafe/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001125:ivrea:luka-s-bar",
+      "query": "\"Luka's Bar\" \"Ivrea\"",
+      "retrieved_at": "2026-09-02T12:10:00Z",
+      "candidates": [
+        {
+          "title": "Tennis Tavolo Ivrea - Dove siamo",
+          "url": "https://www.ttivrea.it/dovesiamo.php"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-029-032",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:030116:tarcento:blu-istanbul",
+      "query": "\"Blu Istanbul\" \"Tarcento\"",
+      "retrieved_at": "2026-09-02T12:17:00Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:030129:udine:volte",
+      "query": "\"Osteria Alle Volte\" \"Udine\"",
+      "retrieved_at": "2026-09-02T12:17:00Z",
+      "candidates": [
+        {
+          "title": "OSTERIA ALLE VOLTE, Udine - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187814-d2187477-Reviews-Osteria_Alle_Volte-Udine_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010044:portofino:da-nicola",
+      "query": "\"Ristorante pizzeria da Nicola\" \"Portofino\"",
+      "retrieved_at": "2026-09-02T12:17:00Z",
+      "candidates": [
+        {
+          "title": "Restaurant | Hotel Nazionale Portofino",
+          "url": "https://nazionaleportofino.com/en/ristorante/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010025:genova:mcdonald-s-5874f755",
+      "query": "\"McDonald's\" \"Genova\"",
+      "retrieved_at": "2026-09-02T12:17:00Z",
+      "candidates": [
+        {
+          "title": "Genova Piazza Principe Stazione | McDonald’s Italia",
+          "url": "https://www.mcdonalds.it/ristorante/liguria/genova/genova-piazza-principe-stazione"
+        }
+      ]
+    }
+  ]
+}

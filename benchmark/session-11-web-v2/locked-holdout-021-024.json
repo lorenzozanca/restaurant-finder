@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-021-024",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:025016:cortina-d-ampezzo:ampezzo-pizza",
+      "query": "\"Ampezzo pizza\" \"Cortina d'Ampezzo\"",
+      "retrieved_at": "2026-09-02T12:15:00Z",
+      "candidates": [
+        {
+          "title": "AMPEZZO PIZZA | Dolomiti Superski",
+          "url": "https://www.dolomitisuperski.com/en/experiences/services/dolomites-a-z/Cortina-d-Ampezzo/AMPEZZO-PIZZA"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:028060:padova:mcdonald-s-9fdbd42f",
+      "query": "\"McDonald's\" \"Padova\"",
+      "retrieved_at": "2026-09-02T12:15:00Z",
+      "candidates": [
+        {
+          "title": "McDonald's - Padova Via Fra' Paolo Sarpi",
+          "url": "https://www.paginebianche.it/veneto/masera-di-padova/mc-donald%27s.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:029029:lendinara:51b-caffe-grande",
+      "query": "\"51B Caffè Grande\" \"Lendinara\"",
+      "retrieved_at": "2026-09-02T12:15:00Z",
+      "candidates": [
+        {
+          "title": "Caffè Grande, così il locale storico rivive",
+          "url": "https://www.polesine24.it/badia-lendinara/2021/08/31/news/caffe-grande-cosi-il-locale-storico-rivive-124623/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:026082:spresiano:cremagelato",
+      "query": "\"Cremagelato\" \"Spresiano\"",
+      "retrieved_at": "2026-09-02T12:15:00Z",
+      "candidates": [
+        {
+          "title": "Le catalogue",
+          "url": "https://www.universduglacier.com/UniversDuGlacier_Catalogue2025.pdf"
+        }
+      ]
+    }
+  ]
+}

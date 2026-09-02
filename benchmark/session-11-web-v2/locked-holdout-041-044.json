@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-041-044",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:052028:san-gimignano:ricca-pizza",
+      "query": "\"Ricca Pizza\" \"San Gimignano\"",
+      "retrieved_at": "2026-09-02T12:20:00Z",
+      "candidates": [
+        {
+          "title": "RiccaPizza - San Giovanni",
+          "url": "https://riccapizza-san-giovanni.localoria.com/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046017:lucca:gelateria-della-papessa",
+      "query": "\"Gelateria Della Papessa\" \"Lucca\"",
+      "retrieved_at": "2026-09-02T12:20:00Z",
+      "candidates": [
+        {
+          "title": "GELATERIA DELLA PAPESSA - Gelateria a Lucca",
+          "url": "https://www.localshop24.com/it/lucca-lu-it/attivita/gelateria/gelateria-della-papessa/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:050014:fauglia:moka",
+      "query": "\"Caffè Moka\" \"Fauglia\"",
+      "retrieved_at": "2026-09-02T12:20:00Z",
+      "candidates": [
+        {
+          "title": "CAFFE' MOKA DI ORLANDINI MARGHERITA",
+          "url": "https://www.ufficiocamerale.it/9773/caffe-moka-di-orlandini-margherita"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:053006:castiglione-della-pescaia:merenderia-la-scusa",
+      "query": "\"Merenderia La Scusa\" \"Castiglione della Pescaia\"",
+      "retrieved_at": "2026-09-02T12:20:00Z",
+      "candidates": [
+        {
+          "title": "Merenderia La Scusa | Castiglione della Pescaia",
+          "url": "https://www.tuttiaffari.com/merenderia-la-scusa-389-991-6273"
+        }
+      ]
+    }
+  ]
+}

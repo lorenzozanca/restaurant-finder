@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-025-028",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:026086:treviso:perbacco-treviso",
+      "query": "\"Osteria Perbacco Treviso\" \"Treviso\"",
+      "retrieved_at": "2026-09-02T12:16:00Z",
+      "candidates": [
+        {
+          "title": "Osteria Perbacco Treviso",
+          "url": "https://osteriaperbaccotreviso.eatbu.com/?lang=it"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093033:pordenone:posta-pordenone",
+      "query": "\"Bar Posta Pordenone\" \"Pordenone\"",
+      "retrieved_at": "2026-09-02T12:16:00Z",
+      "candidates": [
+        {
+          "title": "Pordenone Design Week 2026",
+          "url": "https://www.comune.pordenone.it/it/novita/pordenone-design-week-2026/lezioni-in-vetrina-pdw-2026.pdf/%40%40download/file"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:mr-crowley-pub",
+      "query": "\"Mr.Crowley pub\" \"Trieste\"",
+      "retrieved_at": "2026-09-02T12:16:00Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:031015:romans-d-isonzo:ai-longobardi-romans",
+      "query": "\"Ai Longobardi Romans\" \"Romans d'Isonzo\"",
+      "retrieved_at": "2026-09-02T12:16:00Z",
+      "candidates": [
+        {
+          "title": "Comune di Romans d’Isonzo - Fiera di Santa Elisabetta",
+          "url": "https://www.comune.romans.go.it/media/files/031015/attachment/Fiera_di_Santa_Elisabetta_opuscolo_2025_low_7Dj8UBt.pdf"
+        }
+      ]
+    }
+  ]
+}

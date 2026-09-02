@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-069-072",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:070078:termoli:eattico-pesce-di-strada",
+      "query": "\"Eattico - Pesce di Strada\" \"Termoli\"",
+      "retrieved_at": "2026-09-02T12:27:00Z",
+      "candidates": [
+        {
+          "title": "EATTICO - PESCE DI STRADA, Termoli - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194930-d14072387-Reviews-Eattico_Pesce_di_Strada-Termoli_Province_of_Campobasso_Molise.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:094052:venafro:gelateria-la-dolce-vita",
+      "query": "\"Gelateria La Dolce Vita\" \"Venafro\"",
+      "retrieved_at": "2026-09-02T12:27:00Z",
+      "candidates": [
+        {
+          "title": "Gelateria La Dolce Vita - Venafro",
+          "url": "https://www.tuttiaffari.com/gelateria-la-dolce-vita-venafro-340-145-8145"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:061048:maddaloni:ritrovo-degli-amici",
+      "query": "\"Al Ritrovo degli Amici\" \"Maddaloni\"",
+      "retrieved_at": "2026-09-02T12:27:00Z",
+      "candidates": [
+        {
+          "title": "Menu di Al Ritrovo degli Amici",
+          "url": "https://www.justeat.it/restaurants-al-ritrovo-degli-amici-maddaloni/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:061022:caserta:mcdonald-s-caserta",
+      "query": "\"McDonald's Caserta\" \"Caserta\"",
+      "retrieved_at": "2026-09-02T12:27:00Z",
+      "candidates": [
+        {
+          "title": "McDonald's Caserta Via Sant'Augusto",
+          "url": "https://www.waze.com/live-map/directions/it/campania/caserta/mcdonalds-caserta-via-santaugusto?to=place.ChIJF_OldbtVOhMRO95PTR5WQRI"
+        }
+      ]
+    }
+  ]
+}

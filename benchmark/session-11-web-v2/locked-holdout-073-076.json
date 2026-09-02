@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-073-076",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:063069:san-paolo-bel-sito:ghe-kale",
+      "query": "\"Ghe Kalè\" \"San Paolo Bel Sito\"",
+      "retrieved_at": "2026-09-02T12:28:00Z",
+      "candidates": [
+        {
+          "title": "Ghe Kalè a San Paolo Bel Sito",
+          "url": "https://www.thefork.it/ristorante/ghe-kale-r75947"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:062070:sant-agata-de-goti:parkside-bar-and-pub",
+      "query": "\"Parkside bar and pub\" \"Sant'Agata de' Goti\"",
+      "retrieved_at": "2026-09-02T12:28:00Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:063080:sorrento:raki",
+      "query": "\"Raki\" \"Sorrento\"",
+      "retrieved_at": "2026-09-02T12:28:00Z",
+      "candidates": [
+        {
+          "title": "RAKI, Sorrento - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187782-d4084434-Reviews-Raki-Sorrento_Province_of_Naples_Campania.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:072003:alberobello:basilico-rosso",
+      "query": "\"Basilico Rosso\" \"Alberobello\"",
+      "retrieved_at": "2026-09-02T12:28:00Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Basilico rosso",
+          "url": "https://www.alberobello.com/en/where-to-eat-in-alberobello/pizzeria-basilico-rosso-alberobello"
+        }
+      ]
+    }
+  ]
+}

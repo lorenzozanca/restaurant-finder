@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-005-008",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:003106:novara:28100-wine-and-food",
+      "query": "\"28100 Wine and Food\" \"Novara\"",
+      "retrieved_at": "2026-09-02T12:11:00Z",
+      "candidates": [
+        {
+          "title": "28100 WINE AND FOOD, Novara - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194836-d15510720-Reviews-28100_Wine_and_Food-Novara_Province_of_Novara_Piedmont.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007022:courmayeur:ristopub-mont-frety",
+      "query": "\"RistoPub Mont Frety\" \"Courmayeur\"",
+      "retrieved_at": "2026-09-02T12:11:00Z",
+      "candidates": [
+        {
+          "title": "Ristorante Mont Frety - Pizzeria - Courmayeur",
+          "url": "https://ristorantemontfrety.myadj.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007071:valtournenche:mon-amour",
+      "query": "\"Mon Amour\" \"Valtournenche\"",
+      "retrieved_at": "2026-09-02T12:11:00Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:007017:champdepraz:silou-retreat",
+      "query": "\"Silou Retreat\" \"Champdepraz\"",
+      "retrieved_at": "2026-09-02T12:11:00Z",
+      "candidates": [
+        {
+          "title": "Silou Retreat",
+          "url": "https://offers.silou.it/en"
+        }
+      ]
+    }
+  ]
+}

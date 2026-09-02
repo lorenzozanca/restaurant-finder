@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "holdout": "session-11-national-unseen-replacement-v2:locked_holdout",
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "status": "retired_before_adjudication_or_evaluation",
+  "reason": "The v2 validator represents zero-result fixtures, but the frozen reviewed-adjudication predicate still excludes their evidence-free no-site decisions from evaluation denominators.",
+  "captured_venues": 100,
+  "captured_candidates": 87,
+  "zero_result_venues": 13,
+  "adjudicated": false,
+  "evaluated": false,
+  "metrics_reported": false,
+  "policy_change": false,
+  "implementation_change": "Count a validated no_official_site decision with zero domain reviews and no candidate evidence as reviewed and abstained.",
+  "retirement_rule": "Any policy or frozen-code change caused by replacement locked-holdout results retires this holdout."
+}

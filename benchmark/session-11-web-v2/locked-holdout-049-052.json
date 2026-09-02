@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-049-052",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:054013:citta-di-castello:jonni-s-pub",
+      "query": "\"Jonni's Pub\" \"Città di Castello\"",
+      "retrieved_at": "2026-09-02T12:22:00Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:055032:terni:strange",
+      "query": "\"Strange\" \"Terni\"",
+      "retrieved_at": "2026-09-02T12:22:00Z",
+      "candidates": [
+        {
+          "title": "Strange, Terni",
+          "url": "https://www.nuovaopinione.it/terni/ristoranti/strange-111888"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042048:sirolo:tory",
+      "query": "\"Pizzeria Tory\" \"Sirolo\"",
+      "retrieved_at": "2026-09-02T12:22:00Z",
+      "candidates": [
+        {
+          "title": "Where to eat in Sirolo",
+          "url": "https://www.turismosirolo.it/en/where-to-eat-in-sirolo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044066:san-benedetto-del-tronto:max",
+      "query": "\"Caffe Max\" \"San Benedetto del Tronto\"",
+      "retrieved_at": "2026-09-02T12:22:00Z",
+      "candidates": [
+        {
+          "title": "CAFFE MAX, San Benedetto del Tronto - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194895-d7243000-Reviews-Caffe_Max-San_Benedetto_del_Tronto_Province_of_Ascoli_Piceno_Marche.html"
+        }
+      ]
+    }
+  ]
+}

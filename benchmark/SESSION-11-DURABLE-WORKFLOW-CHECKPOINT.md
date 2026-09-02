@@ -1,7 +1,7 @@
 # Session 11 durable ownership and unseen-validation checkpoint
 
 Date: 2026-09-01
-Decision: **durable workflow and development adjudication pass offline; locked-holdout evaluation is not yet complete**
+Decision: **durable workflow and development adjudication pass offline; two invalid holdouts retired before evaluation; final replacement selected but not captured**
 Brave requests used: **0**
 Publication authorized: **no**
 
@@ -174,6 +174,23 @@ that every preregistered metric is complete; it is not silently counted as a
 pass. The freeze authorizes neither publication nor Brave requests.
 
 ## Integrity checks
+
+### Holdout retirement and final replacement
+
+The original locked holdout was retired before adjudication or evaluation
+because ten zero-result fixtures could not be represented by the frozen v1
+adjudication validator. Evaluator v2 fixed validation, but its scoring predicate
+still excluded evidence-free zero-result decisions from the reviewed and
+abstention denominators. The v2 replacement was therefore also retired before
+adjudication or evaluation. Neither retired holdout has quality metrics.
+
+The end-to-end regression now proves that a zero-result fixture validates and
+counts as one reviewed abstention. A final deterministic replacement selection
+contains 300 new venues, including a 100-venue locked holdout, excludes 756
+previous benchmark venue IDs, and has zero overlap with either retired
+selection. Its candidate fingerprint is
+`4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079`.
+It has not been queried, adjudicated, or evaluated.
 
 - Veneto queue: 13,073 queued, zero attempts, zero terminal jobs.
 - National queue: 156,057 queued, zero attempts, zero terminal jobs.

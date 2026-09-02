@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-037-040",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:035033:reggio-nell-emilia:kfc",
+      "query": "\"KFC\" \"Reggio nell'Emilia\"",
+      "retrieved_at": "2026-09-02T12:19:00Z",
+      "candidates": [
+        {
+          "title": "KFC in Reggio Emilia, Italy - Apple Maps",
+          "url": "https://maps.apple.com/place?auid=8444378920982185113&lsp=9902"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:040009:civitella-di-romagna:silvia-caffe",
+      "query": "\"Silvia Caffè\" \"Civitella di Romagna\"",
+      "retrieved_at": "2026-09-02T12:19:00Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:039002:bagnacavallo:gelateria-arcobaleno",
+      "query": "\"Gelateria Arcobaleno\" \"Bagnacavallo\"",
+      "retrieved_at": "2026-09-02T12:19:00Z",
+      "candidates": [
+        {
+          "title": "Gelateria Arcobaleno Mirandola",
+          "url": "https://www.gelateriaarcobaleno.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:037006:bologna:ciccio",
+      "query": "\"Bar Osteria Ciccio\" \"Bologna\"",
+      "retrieved_at": "2026-09-02T12:19:00Z",
+      "candidates": [
+        {
+          "title": "Bar Osteria Ciccio | Bologna",
+          "url": "https://www.tuttiaffari.com/bar-osteria-ciccio-051-584506"
+        }
+      ]
+    }
+  ]
+}

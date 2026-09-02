@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-081-084",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:076066:rionero-in-vulture:eurobar",
+      "query": "\"Eurobar\" \"Rionero in Vulture\"",
+      "retrieved_at": "2026-09-02T12:30:00Z",
+      "candidates": [
+        {
+          "title": "Eurobar Di Mauro Rivarosa & C. S.a.s.",
+          "url": "https://atoka.io/public/it/azienda/eurobar-di-mauro-rivarosa-c-sas/ce1ded8fd91b"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:the-wild-cat-pub",
+      "query": "\"The Wild Cat Pub\" \"Potenza\"",
+      "retrieved_at": "2026-09-02T12:30:00Z",
+      "candidates": [
+        {
+          "title": "THE WILD CAT PUB BIRRERIA PANINOTECA, Potenza",
+          "url": "https://restaurantguru.it/THE-WILD-CAT-PUB-BIRRERIA-PANINOTECA-Potenza"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076034:francavilla-in-sinni:l-agrifoglio",
+      "query": "\"Agriturismo L’Agrifoglio\" \"Francavilla in Sinni\"",
+      "retrieved_at": "2026-09-02T12:30:00Z",
+      "candidates": [
+        {
+          "title": "Agriturismo L'Agrifoglio Francavilla in Sinni",
+          "url": "https://lagrifoglio.gobasilicata.com/it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076007:avigliano:antica-caffetteria",
+      "query": "\"Antica Caffetteria\" \"Avigliano\"",
+      "retrieved_at": "2026-09-02T12:30:00Z",
+      "candidates": [
+        {
+          "title": "Antica Caffetteria - Osteria Gagliardi",
+          "url": "https://www.osteriagagliardi.it/contenuti/contenuto.jsf?contenutoId=3"
+        }
+      ]
+    }
+  ]
+}

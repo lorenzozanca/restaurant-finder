@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-017-020",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:021008:bolzano-bozen:pic-nic",
+      "query": "\"Pic Nic\" \"Bolzano/Bozen\"",
+      "retrieved_at": "2026-09-02T12:14:00Z",
+      "candidates": [
+        {
+          "title": "Elenco degli esercizi convenzionati",
+          "url": "https://noidiposte.poste.it/wp-content/uploads/2015/09/Esercizi-convenzionati-nord-Italia-buono-pasto-elettronico-QUIGroup.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021074:rio-di-pusteria-muhlbach:imbiss-mini-snack",
+      "query": "\"Imbiss Mini Snack\" \"Rio di Pusteria/Mühlbach\"",
+      "retrieved_at": "2026-09-02T12:14:00Z",
+      "candidates": [
+        {
+          "title": "Imbiss Mini Snack, Rio di Pusteria",
+          "url": "https://de.restaurantguru.com/Imbiss-Mini-Snack-Rio-di-Pusteria"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021040:laives-leifers:gelateria-bar-alla-stazione",
+      "query": "\"Gelateria Bar alla Stazione\" \"Laives/Leifers\"",
+      "retrieved_at": "2026-09-02T12:14:00Z",
+      "candidates": [
+        {
+          "title": "Gelateria Bar alla Stazione, Laives",
+          "url": "https://restaurantguru.it/Gelateria-Bar-Stazione-Laives"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022205:trento:capriccio",
+      "query": "\"Bar Caffè Capriccio\" \"Trento\"",
+      "retrieved_at": "2026-09-02T12:14:00Z",
+      "candidates": [
+        {
+          "title": "Bar Caffe' Capriccio | Trento",
+          "url": "https://www.tuttiaffari.com/bar-caffe-capriccio-0461-961400"
+        }
+      ]
+    }
+  ]
+}

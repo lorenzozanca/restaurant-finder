@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-093-096",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:083003:ali-terme:maikano",
+      "query": "\"Caffé Maikano srl\" \"Alì Terme\"",
+      "retrieved_at": "2026-09-02T12:33:00Z",
+      "candidates": [
+        {
+          "title": "Caffe' Maikano S.r.l. - Alì Terme",
+          "url": "https://ali-terme.guidasicilia.it/azienda/messina/ali-terme/caffe-crudo-e-torrefatto/caffe-maikano-s-r-l/1215210"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:082021:carini:mago-del-gelato",
+      "query": "\"Il Mago del Gelato\" \"Carini\"",
+      "retrieved_at": "2026-09-02T12:33:00Z",
+      "candidates": [
+        {
+          "title": "IL MAGO DEL GELATO, Carini - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1052354-d5870940-Reviews-Il_Mago_del_Gelato-Carini_Province_of_Palermo_Sicily.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087015:catania:buatta",
+      "query": "\"Buatta\" \"Catania\"",
+      "retrieved_at": "2026-09-02T12:33:00Z",
+      "candidates": [
+        {
+          "title": "Buatta Catania | Bistro siciliano",
+          "url": "https://www.buatta.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118058:sinnai:ny-london-caffe",
+      "query": "\"Ny London caffe\" \"Sinnai\"",
+      "retrieved_at": "2026-09-02T12:33:00Z",
+      "candidates": [
+        {
+          "title": "Ny London caffe, Sinnai",
+          "url": "https://restaurantguru.com/Ny-London-caffe-Sinnai"
+        }
+      ]
+    }
+  ]
+}

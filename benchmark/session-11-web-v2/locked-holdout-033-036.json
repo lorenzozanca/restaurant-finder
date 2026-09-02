@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-033-036",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:010035:mignanego:ca-de-toe",
+      "query": "\"Ca' de Töe\" \"Mignanego\"",
+      "retrieved_at": "2026-09-02T12:18:00Z",
+      "candidates": [
+        {
+          "title": "Enosteria Ca' de Töe - Ristorante Mignanego",
+          "url": "https://enosteria-ca-de-toe.eatbu.com/?lang=it"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010046:rapallo:nota-bene-live-pub",
+      "query": "\"NOTA BENE - Live Pub\" \"Rapallo\"",
+      "retrieved_at": "2026-09-02T12:18:00Z",
+      "candidates": [
+        {
+          "title": "Nota Bene - Live Pub | Rapallo",
+          "url": "https://www.tuttiaffari.com/nota-bene-live-pub"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011015:la-spezia:doc-la-spezia",
+      "query": "\"DOC La Spezia\" \"La Spezia\"",
+      "retrieved_at": "2026-09-02T12:18:00Z",
+      "candidates": [
+        {
+          "title": "DOC La Spezia, La Spezia",
+          "url": "https://restaurantguru.com/DOC-SHOW-La-Spezia-La-Spezia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:037002:argelato:della-posta",
+      "query": "\"La Locanda Della Posta\" \"Argelato\"",
+      "retrieved_at": "2026-09-02T12:18:00Z",
+      "candidates": [
+        {
+          "title": "LA LOCANDA DELLA POSTA, Argelato - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1537331-d3865305-Reviews-La_Locanda_Della_Posta-Argelato_Province_of_Bologna_Emilia_Romagna.html"
+        }
+      ]
+    }
+  ]
+}

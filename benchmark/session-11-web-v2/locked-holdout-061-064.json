@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-061-064",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:069099:vasto:aurora",
+      "query": "\"Pizzeria Aurora\" \"Vasto\"",
+      "retrieved_at": "2026-09-02T12:25:00Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Aurora | Vasto",
+          "url": "https://www.tuttiaffari.com/pizzeria-aurora_10s-0873-366332"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:066049:l-aquila:disorder-public-house",
+      "query": "\"Disorder Public House\" \"L'Aquila\"",
+      "retrieved_at": "2026-09-02T12:25:00Z",
+      "candidates": [
+        {
+          "title": "DISORDER PUBLIC HOUSE, L'Aquila - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194790-d28035025-Reviews-Disorder_Public_House-L_Aquila_Province_of_L_Aquila_Abruzzo.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:066043:fontecchio:costa-di-maggio-ristorante-e-ospitalita",
+      "query": "\"Costa di Maggio - Ristorante e Ospitalità\" \"Fontecchio\"",
+      "retrieved_at": "2026-09-02T12:25:00Z",
+      "candidates": [
+        {
+          "title": "Ristorante – Costa di Maggio",
+          "url": "https://www.costadimaggio.it/ristorante/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:069083:san-salvo:gelateria-pasion",
+      "query": "\"Gelateria Pasion\" \"San Salvo\"",
+      "retrieved_at": "2026-09-02T12:25:00Z",
+      "candidates": []
+    }
+  ]
+}

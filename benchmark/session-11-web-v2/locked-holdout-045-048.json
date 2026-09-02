@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-045-048",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:051002:arezzo:ruota",
+      "query": "\"Pizzeria La Ruota\" \"Arezzo\"",
+      "retrieved_at": "2026-09-02T12:21:00Z",
+      "candidates": [
+        {
+          "title": "Pizzeria la Ruota di Rosso Claudio",
+          "url": "https://restaurantguru.it/amp/La-Ruota-Arezzo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054050:spello:l-orlando-furioso",
+      "query": "\"L'Orlando Furioso\" \"Spello\"",
+      "retrieved_at": "2026-09-02T12:21:00Z",
+      "candidates": [
+        {
+          "title": "L'Orlando Furioso - Ristorante a Spello",
+          "url": "https://www.lorlandofurioso.com/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054039:perugia:leccornia",
+      "query": "\"La Leccornia\" \"Perugia\"",
+      "retrieved_at": "2026-09-02T12:21:00Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:054044:san-giustino:belloni",
+      "query": "\"Caffè Belloni\" \"San Giustino\"",
+      "retrieved_at": "2026-09-02T12:21:00Z",
+      "candidates": [
+        {
+          "title": "CAFFÈ BELLONI - Caffetteria a San Giustino",
+          "url": "https://www.localshop24.com/it/san-giustino-pg-it/attivita/caffetteria/caffe-belloni/"
+        }
+      ]
+    }
+  ]
+}

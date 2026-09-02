@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-replacement-locked-holdout-089-092",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "98b8bf6b7dcc2b2232a9765ba173742a3375b0e4a4956a77e6ef6693576c787d",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:078138:scalea:lido-olgarino",
+      "query": "\"Lido Olgarino\" \"Scalea\"",
+      "retrieved_at": "2026-09-02T12:32:00Z",
+      "candidates": [
+        {
+          "title": "Lido Olgarino, Scalea",
+          "url": "https://restaurantguru.com/Lido-Bar-Olgarino-Scalea"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080063:reggio-di-calabria:cotto-e-mangiato-reggio-calabria",
+      "query": "\"Cotto e mangiato Reggio calabria\" \"Reggio di Calabria\"",
+      "retrieved_at": "2026-09-02T12:32:00Z",
+      "candidates": [
+        {
+          "title": "Cotto e Mangiato Reggio Calabria",
+          "url": "https://www.cottoemangiatorc.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081008:erice:ulisse",
+      "query": "\"Ristorante Pizzeria Ulisse\" \"Erice\"",
+      "retrieved_at": "2026-09-02T12:32:00Z",
+      "candidates": [
+        {
+          "title": "ULISSE RISTORANTE PIZZERIA, Erice - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194757-d2283907-Reviews-ULISSE_RISTORANTE_PIZZERIA-Erice_Province_of_Trapani_Sicily.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083048:messina:mcdonald-s",
+      "query": "\"McDonald's\" \"Messina\"",
+      "retrieved_at": "2026-09-02T12:32:00Z",
+      "candidates": [
+        {
+          "title": "Messina Maregrosso | McDonald’s Italia",
+          "url": "https://www.mcdonalds.it/ristorante/sicilia/messina/messina-maregrosso"
+        }
+      ]
+    }
+  ]
+}
