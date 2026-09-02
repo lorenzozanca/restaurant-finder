@@ -1,0 +1,817 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-unseen-development-181-200",
+  "partition": "development",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "reviewer": "codex-session-11-independent-review",
+  "reviewed_at": "2026-09-01T18:55:00Z",
+  "review_basis": "bounded fixture URL/title metadata plus explicitly separated manual first-party ownership evidence where recorded",
+  "scope_limitations": "Recognizable third-party publishers are rejected from bounded metadata. Accepted domains require separately recorded first-party evidence identifying both the venue branch and publisher control; remaining venue-branded domains stay uncertain.",
+  "entries": [
+    {
+      "venue_id": "venue:085012:mussomeli:chichibio-ristorante-pizzeria",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1511587-d4570214-Reviews-Chichibio_Ristorante_Pizzeria_Pub-Mussomeli_Province_of_Caltanissetta_Sicily.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1511587-d4570214-Reviews-Chichibio_Ristorante_Pizzeria_Pub-Mussomeli_Province_of_Caltanissetta_Sicily.html"
+          ]
+        },
+        {
+          "registrable_domain": "comunedimussomeli.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.comunedimussomeli.it/zf/index.php/locali-pubblici"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087011:caltagirone:mcdonalds",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1080101-d7716616-Reviews-McDonald_s-Vimercate_Province_of_Monza_and_Brianza_Lombardy.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1080101-d7716616-Reviews-McDonald_s-Vimercate_Province_of_Monza_and_Brianza_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "virgilio.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.virgilio.it/italia/caltagirone/ricerca-aziende/mcdonalds"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g1080101-d7716616-Reviews-McDonald_s-Vimercate_Province_of_Monza_and_Brianza_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/it/live-map/directions/gigacer-via-caltagirone-72-faenza?to=place.w.7799227.77992270.6886115"
+          ]
+        },
+        {
+          "registrable_domain": "textmelovemom.ca",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://textmelovemom.ca/2025/04/14/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:082053:palermo:latino",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187890-d3576585-Reviews-Cafe_Latino-Palermo_Province_of_Palermo_Sicily.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187890-d3576585-Reviews-Cafe_Latino-Palermo_Province_of_Palermo_Sicily.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187890-d3576585-Reviews-Cafe_Latino-Palermo_Province_of_Palermo_Sicily.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co/Restaurant_Review-g187890-d3576585-Reviews-Cafe_Latino-Palermo_Province_of_Palermo_Sicily.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.es",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.es/Restaurant_Review-g187890-d3576585-Reviews-Cafe_Latino-Palermo_Province_of_Palermo_Sicily.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087027:mineo:civico22-lounge-academy-cafe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://italy.worldplaces.me/cities/158064-mineo.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "worldplaces.me",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://italy.worldplaces.me/cities/158064-mineo.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087029:misterbianco:trinacria",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://trinacriapizzeria.eatbu.com/?lang=it"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://trinacriapizzeria.eatbu.com/?lang=it"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g652021-d27410501-Reviews-Pizzeria_Trinacria-Misterbianco_Province_of_Catania_Sicily.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Pizzeria-Trinacria-Misterbianco"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/1988/pizzeria-trinacria-di-saglimbene-mattia-pio"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:088009:ragusa:don-peppinu",
+      "official_website_status": "accepted",
+      "official_website_url": "https://donpeppinu.it/assistenza-clienti/",
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194872-d19228679-Reviews-Don_Peppinu_Ragusa-Ragusa_Province_of_Ragusa_Sicily.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194872-d19228679-Reviews-Don_Peppinu_Ragusa-Ragusa_Province_of_Ragusa_Sicily.html"
+          ]
+        },
+        {
+          "registrable_domain": "donpeppinu.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://donpeppinu.it/assistenza-clienti/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://donpeppinu.it/assistenza-clienti/",
+            "https://donpeppinu.it/privacy-policy/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g194872-d19228679-Reviews-Don_Peppinu_Ragusa-Ragusa_Province_of_Ragusa_Sicily.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083029:gaggi:shaker-pub-dei-f-lli-sciglio",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/shaker-pub-dei-f-lli-sciglio-338-102-1815"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/shaker-pub-dei-f-lli-sciglio-338-102-1815"
+          ]
+        },
+        {
+          "registrable_domain": "guidasicilia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.guidasicilia.it/azienda/messina/gaggi/locali-e-ritrovi-birrerie-e-pubs/shaker-pub-dei-f-lli-sciglio/1157238"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/pub-and-bar-Gaggi-t2"
+          ]
+        },
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/place/details/3444878/shaker-pub-dei-flli-sciglio"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:084021:licata:perez",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g657501-d5854338-Reviews-Pizzeria_Perez-Licata_Province_of_Agrigento_Sicily.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g657501-d5854338-Reviews-Pizzeria_Perez-Licata_Province_of_Agrigento_Sicily.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Pizzeria-Perez-Licata"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/RestaurantsNear-g657501-d5854338-Pizzeria_Perez-Licata_Province_of_Agrigento_Sicily.html"
+          ]
+        },
+        {
+          "registrable_domain": "justeat.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.justeat.it/restaurants-perez-pizzeria-licata/menu"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081011:marsala:bingo-casablanca",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Bingo-Casablanca-Marsala"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bingo-Casablanca-Marsala"
+          ]
+        },
+        {
+          "registrable_domain": "quigiocobingo.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://quigiocobingo.it/bingo-casablanca-marsala/"
+          ]
+        },
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/it/sicilia/marsala/bingo-casablanca?to=place.ChIJrUE9O4nCGxMRJuuNsBnJrwM"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Marsala-HBG%2520Gaming-1936207D.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083043:malfa:irish-caffe-granite-gelateria",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.com/Irish-Caffe-Granite-Gelateria-Malfa"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Irish-Caffe-Granite-Gelateria-Malfa"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/granita-Malfa-m12128"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:114035:orgosolo:ai-monti-del-gennargentu",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1065336-d1842067-Reviews-Ristorante_Ai_Monti_Del_Gennargentu-Orgosolo_Province_of_Nuoro_Sardinia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1065336-d1842067-Reviews-Ristorante_Ai_Monti_Del_Gennargentu-Orgosolo_Province_of_Nuoro_Sardinia.html"
+          ]
+        },
+        {
+          "registrable_domain": "matrimonio.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.matrimonio.com/ristoranti-ricevimenti/ristorante-ai-monti-del-gennargentu--e107283"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1065336-d1842067-Reviews-Ristorante_Ai_Monti_Del_Gennargentu-Orgosolo_Province_of_Nuoro_Sardinia.html"
+          ]
+        },
+        {
+          "registrable_domain": "altraopinione.org",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://altraopinione.org/ristorante/orgosolo/ristorante-ai-monti-del-gennar/"
+          ]
+        },
+        {
+          "registrable_domain": "galbarbagia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.galbarbagia.it/gal/orgosolo/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118053:sestu:burger-king-sestu",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.burgerking.it/trova-un-ristorante?storeId=21553",
+      "evidence_urls": [
+        "https://www.burgerking.it/trova-un-ristorante?storeId=21553"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "burgerking.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.burgerking.it/trova-un-ristorante?storeId=21553"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.burgerking.it/trova-un-ristorante?storeId=21553",
+            "https://www.burgerking.it/privacy-policy"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1967898-d26457046-Reviews-Burger_King_Sestu-Sestu_Province_of_Cagliari_Sardinia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118006:cagliari:zeronove-caffe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/ZeroNove-Caffe-Cagliari"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/ZeroNove-Caffe-Cagliari"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/ZeroNove-Caffe-Cagliari"
+          ]
+        },
+        {
+          "registrable_domain": "hotelscagliari.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://hotelscagliari.com/la-terrazza-apartment"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:114045:seulo:da-andrea-ligas",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.andalasseulo.com/strutture-ricettive"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "andalasseulo.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.andalasseulo.com/strutture-ricettive"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/bar-caff%C3%A8-da-andrea-ligas-329-110-8529"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Caffe-da-Andrea-Ligas-Seulo"
+          ]
+        },
+        {
+          "registrable_domain": "ansa.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ansa.it/sardegna/notizie/2023/01/17/da-seulo-a-nova-gorica-vince-torneo-di-poker-e-20mila-euro_7957df12-e41f-4a90-bfb4-3875959f8bc3.html"
+          ]
+        },
+        {
+          "registrable_domain": "direttasportsardegna.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.direttasportsardegna.it/2a-categoria-appello-del-seulo-al-paese-per-liscrizione-della-squadra-al-campionato/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118038:quartu-sant-elena:tweet-di-carboni-luigi",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g227889-d8559656-Reviews-Pizzeria_Tweet_di_Carboni_Luigi-Quartu_Sant_Elena_Province_of_Cagliari_Sardinia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g227889-d8559656-Reviews-Pizzeria_Tweet_di_Carboni_Luigi-Quartu_Sant_Elena_Province_of_Cagliari_Sardinia.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/PIZZERIA-TWEET-Quartu-SantElena"
+          ]
+        },
+        {
+          "registrable_domain": "leggimenu.it",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.leggimenu.it/menu/pizzeriatweet"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/PIZZERIA-TWEET-Quartu-SantElena"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g227889-d8559656-Reviews-Pizzeria_Tweet_di_Carboni_Luigi-Quartu_Sant_Elena_Province_of_Cagliari_Sardinia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112050:sassari:asd-spazio-libero",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.oraridiapertura24.it/filiale/Sassari-ASD%2520Spazio%2520Libero-4855713S.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Sassari-ASD%2520Spazio%2520Libero-4855713S.html"
+          ]
+        },
+        {
+          "registrable_domain": "fondazionedisardegna.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.fondazionedisardegna.it/media/54/04477225351469/sport_per_il_sociale_2026.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "tuttomotorienews.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttomotorienews.it/coni-sassari-cento-premi-per-lo-sport-2021-2022/"
+          ]
+        },
+        {
+          "registrable_domain": "tkdtechnology.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tkdtechnology.it/welcome/elenco_iscritti?id=264"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118014:elmas:colazione-da-aby",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Colazione-da-Aby-Elmas/menu"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Colazione-da-Aby-Elmas/menu"
+          ]
+        },
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/it/sardegna/elmas/colazione-da-aby?to=place.ChIJMS8vLbA35xIRzOH4GQFDPh0"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/elmas-ca-it/attivita/gelateria/colazione-da-aby/"
+          ]
+        },
+        {
+          "registrable_domain": "matrimonio.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.matrimonio.com/torte-nuziali/colazione-da-aby--e361248"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:115075:terralba:vesuvio-terralba",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://monumentiaperti.com/it/edizioni/2026/comuni/terralba/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "monumentiaperti.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://monumentiaperti.com/it/edizioni/2026/comuni/terralba/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Vesuvio-Terralba"
+          ]
+        },
+        {
+          "registrable_domain": "prolocoterralba.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.prolocoterralba.it/wp-content/uploads/2021/09/Terralba-Supplemento-al-n.-70.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1932199-d2321934-Reviews-Pizzeria_Ristorante_Il_Vesuvio-Terralba_Province_of_Oristano_Sardinia.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1932199-d2321934-Reviews-Pizzeria_Ristorante_Il_Vesuvio-Terralba_Province_of_Oristano_Sardinia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:113017:olbia:tempi-moderni",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187883-d8144526-Reviews-Cafe_Tempi_Moderni-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187883-d8144526-Reviews-Cafe_Tempi_Moderni-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187883-d8144526-Reviews-Cafe_Tempi_Moderni-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+          ]
+        },
+        {
+          "registrable_domain": "ristorantevicari.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.ristorantevicari.it/cafe-tempi-moderni/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Tempi-Moderni-Olbia"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g187883-d8144526-Reviews-or15-Cafe_Tempi_Moderni-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:117019:serrenti:tourist-market-bar-tavola-calda",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/tourist-market-bar-tavola-calda-070-937-3039"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/tourist-market-bar-tavola-calda-070-937-3039"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Serrenti-Tourist%2520Market%2520%252F%2520bar%2520-%2520tavola%2520calda-760268M.html"
+          ]
+        },
+        {
+          "registrable_domain": "cybo.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://guida-delle-societa.cybo.com/IT/serrenti/bar%2C-pub-e-taverne/"
+          ]
+        }
+      ]
+    }
+  ]
+}

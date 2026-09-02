@@ -1,0 +1,806 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-unseen-development-141-160",
+  "partition": "development",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "reviewer": "codex-session-11-independent-review",
+  "reviewed_at": "2026-09-01T19:22:30Z",
+  "review_basis": "bounded fixture URL/title metadata plus explicitly separated manual first-party ownership evidence where recorded",
+  "scope_limitations": "Recognizable third-party publishers are rejected from bounded metadata. Accepted domains require separately recorded first-party evidence identifying both the venue branch and publisher control; remaining venue-branded domains stay uncertain.",
+  "entries": [
+    {
+      "venue_id": "venue:064054:monteforte-irpino:malvizza",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g2552181-d27270709-Reviews-Malvizza-Monteforte_Irpino_Province_of_Avellino_Campania.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2552181-d27270709-Reviews-Malvizza-Monteforte_Irpino_Province_of_Avellino_Campania.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurants-g2552181-Monteforte_Irpino_Province_of_Avellino_Campania.html"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/malvizza-monteforte-irpino-9094258"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.es",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.es/Restaurants-g2552181-Monteforte_Irpino_Province_of_Avellino_Campania.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:063072:sant-anastasia:mcdonald-s",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html",
+      "evidence_urls": [
+        "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "mcdonalds.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html",
+            "https://www.mcdonalds.it/avviso-variazione-titolarita-dei-dati-personali"
+          ]
+        },
+        {
+          "registrable_domain": "apple.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://maps.apple.com/place?place-id=I1421A2D6D37BBCE"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:064008:avellino:ultrabeat-cafe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Ultrabeat-Cafe-Avellino"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Ultrabeat-Cafe-Avellino"
+          ]
+        },
+        {
+          "registrable_domain": "drinkingood.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.drinkingood.com/locale-migliore-UltrabeatCafe-Avellino-109.html"
+          ]
+        },
+        {
+          "registrable_domain": "wecake.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wecake.it/pasticcerie/avellino/Ultrabeat-Cafe-6677"
+          ]
+        },
+        {
+          "registrable_domain": "lostilediartemide.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.lostilediartemide.it/2018/02/14/colazione-senza-lattosio-avellino/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:064083:san-martino-valle-caudina:aramartis-cafe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g8767711-d27203009-Reviews-Aramartis_Cafe-San_Martino_Valle_Caudina_Province_of_Avellino_Campania.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g8767711-d27203009-Reviews-Aramartis_Cafe-San_Martino_Valle_Caudina_Province_of_Avellino_Campania.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurants-g8767711-San_Martino_Valle_Caudina_Province_of_Avellino_Campania.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.es",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.es/Restaurants-g8767711-San_Martino_Valle_Caudina_Province_of_Avellino_Campania.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co.uk",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co.uk/Restaurants-g8767711-San_Martino_Valle_Caudina_Province_of_Avellino_Campania.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:063003:agerola:addu-zi-matteo",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g580201-d21133741-Reviews-Addu_Zi_Matteo-Agerola_Province_of_Naples_Campania.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g580201-d21133741-Reviews-Addu_Zi_Matteo-Agerola_Province_of_Naples_Campania.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g580201-d21133741-Reviews-Addu_Zi_Matteo-Agerola_Province_of_Naples_Campania.html"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/addu-zi-matteo-338-503-6298"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "uncertain",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/agerola-na-it/attivita/pizzeria/addu-zi-matteo/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co.uk",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co.uk/Restaurant_Review-g580201-d21133741-Reviews-Addu_Zi_Matteo-Agerola_Province_of_Naples_Campania.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:061022:caserta:liberty-bar",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Liberty-Bar-Caserta"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Liberty-Bar-Caserta"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Caserta-Liberty%2520Bar-1833683W.html"
+          ]
+        },
+        {
+          "registrable_domain": "wordpress.com",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://laboratorioscarpati.wordpress.com/"
+          ]
+        },
+        {
+          "registrable_domain": "trova-aperto.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://trova-aperto.it/caserta/d%C3%A9j%C3%A0-vu-caff%C3%A8-2710146"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:064026:cesinali:gelateria-la-gondola",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Gelateria-la-gondola-Avellino"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Gelateria-la-gondola-Avellino"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Gelateria-la-gondola-Avellino"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/gelateria-la-gondola-0825-666140"
+          ]
+        },
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/it/campania/cesinali/gelateria-la-gondola?to=place.ChIJR69Aj-zNOxMRA2eM4_s7Nq8"
+          ]
+        },
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/it/place/details/3319441/gelateria-la-gondola"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:061019:casal-di-principe:veliero",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g3783974-d27754742-Reviews-Il_Veliero-Casal_di_Principe_Province_of_Caserta_Campania.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g3783974-d27754742-Reviews-Il_Veliero-Casal_di_Principe_Province_of_Caserta_Campania.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/il-veliero-Casal-di-Principe"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/1585/il-veliero-di-cavaliere-giuseppe"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co.uk",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co.uk/Restaurant_Review-g3783974-d27754742-Reviews-Il_Veliero-Casal_di_Principe_Province_of_Caserta_Campania.html"
+          ]
+        },
+        {
+          "registrable_domain": "onrender.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://ilveliero.onrender.com/Menu.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:063060:pozzuoli:acqua-farina-pizzeria-ristorante",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194864-d2236284-Reviews-Acqua_E_Farina-Pozzuoli_Province_of_Naples_Campania.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194864-d2236284-Reviews-Acqua_E_Farina-Pozzuoli_Province_of_Naples_Campania.html"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Pozzuoli-Acqua%2526Farina%2520Pizzeria%2520Ristorante-337601S.html"
+          ]
+        },
+        {
+          "registrable_domain": "cylex-italia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.cylex-italia.it/pozzuoli/acqua---farina-12948658.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/gelato-Pozzuoli-m93"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:061017:carinola:planet-cafe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/cafe-Carinola-t6"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/cafe-Carinola-t6"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://fr.restaurantguru.com/Planet-Cafe-Punto-Snai-Nocelleto"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:075013:caprarica-di-lecce:oltregusto",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.oltregusto.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "oltregusto.it",
+          "publisher_class": "uncertain",
+          "ownership_status": "uncertain",
+          "evidence_urls": [
+            "https://www.oltregusto.it/"
+          ],
+          "uncertainty_reviewed_at": "2026-09-01T19:22:30Z",
+          "uncertainty_evidence_urls": [
+            "https://www.oltregusto.it/"
+          ],
+          "uncertainty_reason": "The page names and locates Oltregusto but contains unfinished template placeholders and no identified legal operator, so publisher control remains compromised and uncertain."
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2199605-d7712833-Reviews-Oltregusto-Caprarica_di_Lecce_Province_of_Lecce_Puglia.html"
+          ]
+        },
+        {
+          "registrable_domain": "caprarica.eu",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.caprarica.eu/s/oltregusto.htm"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:074007:fasano:mcdonald-s",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html",
+      "evidence_urls": [
+        "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "mcdonalds.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html",
+            "https://www.mcdonalds.it/avviso-variazione-titolarita-dei-dati-personali"
+          ]
+        },
+        {
+          "registrable_domain": "gofasano.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://gofasano.com/attualita/mcdonalds-il-colosso-del-fast-food-apre-oggi-ufficialmente-le-porte-ai-fasanesi/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g19079216-d27393701-Reviews-Mcdonald_s-Stazione_di_Fasano_Fasano_Province_of_Brindisi_Puglia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:072030:monopoli:rotolo-forcaff13-srls",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.monopolitrerose.it/imprese"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "monopolitrerose.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.monopolitrerose.it/imprese"
+          ]
+        },
+        {
+          "registrable_domain": "beverfood.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.beverfood.com/torrefazione/forcaff13-srls"
+          ]
+        },
+        {
+          "registrable_domain": "ristoranteyukimarconi.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://ristoranteyukimarconi.it/publications/"
+          ]
+        },
+        {
+          "registrable_domain": "mapstr.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://mapstr.com/place/q94r0R5CZJg"
+          ]
+        },
+        {
+          "registrable_domain": "scribd.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.scribd.com/document/690475126/Coffitalia-2023"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:073006:fragagnano:notorious",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Notorious-Bar-Fragagnano"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Notorious-Bar-Fragagnano"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://es.restaurantguru.com/Notorious-Bar-Fragagnano"
+          ]
+        },
+        {
+          "registrable_domain": "postcard.inc",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.postcard.inc/places/bar-notorious-fragagnano-oT1TRfnKu7N"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:075085:taviano:bubba-bar",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g652008-d8482078-Reviews-Bubba-Taviano_Province_of_Lecce_Puglia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g652008-d8482078-Reviews-Bubba-Taviano_Province_of_Lecce_Puglia.html"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/bubba-bar_1A-347-437-1851"
+          ]
+        },
+        {
+          "registrable_domain": "3bonmenu.com",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.3bonmenu.com/752_Bubba-Bar-Taviano.html"
+          ]
+        },
+        {
+          "registrable_domain": "iristorante.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.iristorante.it/mobile/ristorante_bubba_bar_prenotazione_ristorante_r247842.html?showMap=true"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:071024:foggia:gelateria-d-apice",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Gelateria-DApice-Foggia"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Gelateria-DApice-Foggia"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Gelateria-DApice-Foggia"
+          ]
+        },
+        {
+          "registrable_domain": "deliveroo.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://deliveroo.it/it/menu/foggia/foggia/pasticceria-bijoux"
+          ]
+        },
+        {
+          "registrable_domain": "nuovaopinione.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.nuovaopinione.it/foggia/gelaterie/gelateria-d-apice-13818"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:075023:corigliano-d-otranto:1000",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Dei-Mille-Corigliano-Dotranto"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Dei-Mille-Corigliano-Dotranto"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurants-g1161101-zfp40-Corigliano_d_Otranto_Province_of_Lecce_Puglia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:071036:orta-nova:napoletana-orta-nova",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g2398507-d27385166-Reviews-Pizzeria_Napoletana_Orta_Nova-Orta_Nova_Province_of_Foggia_Puglia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2398507-d27385166-Reviews-Pizzeria_Napoletana_Orta_Nova-Orta_Nova_Province_of_Foggia_Puglia.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g2398507-d27385166-Reviews-Pizzeria_Napoletana_Orta_Nova-Orta_Nova_Province_of_Foggia_Puglia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:110009:trani:ai-portici",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g608901-d4540712-Reviews-Caffe_Ai_Portici-Trani_Province_of_Barletta_Andria_Trani_Puglia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g608901-d4540712-Reviews-Caffe_Ai_Portici-Trani_Province_of_Barletta_Andria_Trani_Puglia.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Ai-Portici-Trani"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g608901-d4540712-Reviews-Caffe_Ai_Portici-Trani_Province_of_Barletta_Andria_Trani_Puglia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:075014:carmiano:corte-celestini",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://ristorantecortecelestini.metro.rest/?lang=it"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "metro.rest",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://ristorantecortecelestini.metro.rest/?lang=it"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2356044-d3457759-Reviews-Corte_Celestini-Carmiano_Province_of_Lecce_Puglia.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g2356044-d3457759-Reviews-Corte_Celestini-Carmiano_Province_of_Lecce_Puglia.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g2356044-d3457759-Reviews-Corte_Celestini-Carmiano_Province_of_Lecce_Puglia.html"
+          ]
+        }
+      ]
+    }
+  ]
+}

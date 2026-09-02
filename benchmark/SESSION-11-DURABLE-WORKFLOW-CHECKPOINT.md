@@ -1,7 +1,7 @@
 # Session 11 durable ownership and unseen-validation checkpoint
 
 Date: 2026-09-01
-Decision: **durable workflow passes offline; unseen evaluation is not yet complete**
+Decision: **durable workflow and development adjudication pass offline; locked-holdout evaluation is not yet complete**
 Brave requests used: **0**
 Publication authorized: **no**
 
@@ -80,21 +80,98 @@ development fixtures it identified 493 directory, 18 booking/order-platform,
 and 3 menu-mirror result URLs, leaving 473 for independent review. This is
 review triage, not a quality result and not a production host blocklist.
 
-## Deliberately unopened gate
+## Locked-holdout gate
 
-The 100 locked-holdout venues have not been queried or inspected. Development
-publisher adjudication is incomplete, so the implementation is not frozen and
-the holdout gate has not opened. Automated name/domain similarity is not being
-misrepresented as a trusted human ownership decision. No precision, recall,
-coverage, abstention, or pass claim is reported yet.
+The locked holdout was opened only after the implementation freeze. All 100
+bounded queries are now durably stored in the original
+`session-11-web/locked-holdout-capture-001-008.partial.json` and 23 complete
+four-query fixture batches covering queries 009–100. Capture resumed at query
+45 without repeating queries 1–44. The original partial capture remains
+excluded by the evaluator filename pattern, and the complete capture has not
+been adjudicated or evaluated.
+Independent development-fixture classification and ownership review are complete. The final
+development disposition deliberately retains six venue/domain cases as
+uncertain because the available first-party content does not prove publisher
+control. The implementation remains frozen. Automated name/domain similarity
+is not being misrepresented as a trusted human ownership decision. No holdout
+precision, recall, coverage, abstention, or pass claim is reported yet.
 
-Next work is to independently review the 200 development fixtures, record
-publisher class and venue/domain ownership separately with evidence, exercise
-the evaluation metrics, freeze the implementation, and only then capture and
-evaluate the locked holdout once. If fewer than 73 conclusive holdout
+The official-site evaluator has now been exercised on development and its
+implementation frozen in `SESSION-11-WEB-IMPLEMENTATION-FREEZE.json`. Next
+work is to adjudicate the captured locked holdout independently and evaluate it
+once. If fewer than 73 conclusive holdout
 publications are available, even a perfect result cannot put the two-sided 95%
 Wilson lower bound at 95%; expand the offline holdout before claiming the
 target rather than making any Brave request.
+
+## Development adjudication complete
+
+Independent bounded-fixture review is complete for development venues 001–200.
+Reviews are stored separately from the immutable captures in ten adjudication files
+under `session-11-web/` and are validated against the selection fingerprint,
+venue IDs, candidate URLs, and complete per-registrable-domain coverage.
+
+The ten batches cover 200/200 development venues, all 987 candidate URLs, and
+715 publisher domains. Review of the bounded URL/title metadata and separately
+recorded first-party or legal evidence classified 758 URLs as directory results,
+ten as menu mirrors, 36 as booking/order-platform, 58 as editorial/review, one
+as social, 38 as unrelated, 75 as official, and 11 as uncertain. It rejected
+venue ownership for 679 clearly third-party domains, verified 30 publisher
+domains, and retained six venue-branded domains as uncertain. The 29 accepted
+official websites cover the previously verified chain and independent venues
+plus 11 newly verified venues: Pizzeria Ventuno, Da Benito, Caffè Barbarani,
+Assaje Udine, Antica Corte Casa Marini, La Corte Cascia, La Casa delle Api
+Osteria, Café Les Paillotes, Pino Verde, Hosteria Lu Vic P' Dent, and Agorà
+Civita. Verification uses venue or branch content together with identified
+legal/operator evidence; the Hosteria case also uses reciprocal first-party
+links between its own site and Palazzo Corso Umberto. Domain resemblance and
+search-result titles alone were not treated as ownership proof. These are
+progress counts, not evaluation metrics.
+
+All captured development fixtures now have complete per-domain review coverage,
+including an independent final review of the 18 formerly unresolved ownership
+cases. Twelve were verified and six remain deliberately uncertain across Al
+Picchio Rosso, both Penny Lane Tavern domains, Oltregusto, Hotel Dolomiti, and
+Le Follie dello Chef. The uncertain records carry a review time, reviewed
+first-party URLs, and a specific reason. Oltregusto remains uncertain in part
+because its live page contains unfinished template placeholders; no compromised
+or operator-opaque site was promoted. No locked-holdout result was inspected
+during development adjudication, and neither enrichment queue has been run.
+
+Set-level validation rejects duplicate adjudication venues across batches and
+requires exact coverage of every fixture venue. Verified ownership must carry
+approved evidence, while uncertain ownership must carry an independent review
+time, evidence URLs, and a non-empty reason; verification and uncertainty
+evidence cannot be mixed. The artifact regression test pins the 200-venue,
+987-candidate, 715-domain corpus and its classification totals
+(`official=75`, `uncertain=11`) and ownership totals (`verified=30`,
+`rejected=679`, `uncertain=6`).
+
+## Development evaluation and implementation freeze
+
+`SESSION-11-DEVELOPMENT-WEB-EVALUATION.json` applies the durable publication
+policy to all 200 reviewed development venues. It publishes only independently
+verified publisher domains: 29 publications, 29 true, zero false, 171
+abstentions, and 14.5% coverage. Official-site precision, recall, and bounded
+search-discovery recall are each 100% observed, with a two-sided 95% Wilson
+interval of 88.3–100%. The non-vacuity check passes but the precision target
+does not: 29 conclusive publications are insufficient for a 95% lower bound.
+
+The evaluator now scores a publication against its per-domain ownership
+decision, retains all independently reviewed venues in the coverage and
+abstention denominators, reports unresolved publications separately, and
+groups false publications by publisher class. The freeze pins the evaluator,
+registrable-domain implementation, policy projection, development report, and
+selection fingerprint before any holdout capture. Capture resumed at query 9
+without repeating queries 1–8, and later at query 45 without repeating queries
+1–44. All 100 locked-holdout queries are now captured; no further request is
+pending.
+
+The preregistered resource-role metrics remain explicitly not evaluated. The
+minimal URL/title fixtures contain neither resource-role predictions nor
+resource-role adjudications. This is a scope limitation and prevents a claim
+that every preregistered metric is complete; it is not silently counted as a
+pass. The freeze authorizes neither publication nor Brave requests.
 
 ## Integrity checks
 

@@ -1,0 +1,746 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-unseen-development-121-140",
+  "partition": "development",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "reviewer": "codex-session-11-independent-review",
+  "reviewed_at": "2026-09-01T19:22:30Z",
+  "review_basis": "bounded fixture URL/title metadata plus explicitly separated manual first-party ownership evidence where recorded",
+  "scope_limitations": "Recognizable third-party publishers are rejected from bounded metadata. Accepted domains require separately recorded first-party evidence identifying both the venue branch and publisher control; remaining venue-branded domains stay uncertain.",
+  "entries": [
+    {
+      "venue_id": "venue:066093:scanno:baita",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194910-d2470459-Reviews-La_Baita-Scanno_Province_of_L_Aquila_Abruzzo.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194910-d2470459-Reviews-La_Baita-Scanno_Province_of_L_Aquila_Abruzzo.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g194910-d2470459-Reviews-La_Baita-Scanno_Province_of_L_Aquila_Abruzzo.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g194910-d2470459-Reviews-La_Baita-Scanno_Province_of_L_Aquila_Abruzzo.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/La-Baita-Scanno"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co.uk",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co.uk/Restaurant_Review-g194910-d2470459-Reviews-La_Baita-Scanno_Province_of_L_Aquila_Abruzzo.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:067041:teramo:piadineria",
+      "official_website_status": "accepted",
+      "official_website_url": "https://lapiadineria.com/i-nostri-ristoranti/teramo-centro-commerciale-gran-sasso",
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g13119332-d27411105-Reviews-La_Piadineria-Nepezzano_Teramo_Province_of_Teramo_Abruzzo.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g13119332-d27411105-Reviews-La_Piadineria-Nepezzano_Teramo_Province_of_Teramo_Abruzzo.html"
+          ]
+        },
+        {
+          "registrable_domain": "lapiadineria.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/teramo-centro-commerciale-gran-sasso"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/teramo-centro-commerciale-gran-sasso",
+            "https://lapiadineria.com/privacy-policy"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/La-Piadineria-Teramo"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:068028:pescara:les-paillotes",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.lespaillotes.it/",
+      "evidence_urls": [
+        "https://www.lespaillotes.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lespaillotes.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.lespaillotes.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://www.lespaillotes.it/",
+            "https://www.lespaillotes.it/contatti-cafe-les-paillotes/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:067007:bisenti:pino-verde",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.pinoverdebisenti.it/dove-siamo/",
+      "evidence_urls": [
+        "https://www.pinoverdebisenti.it/dove-siamo/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "pinoverdebisenti.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.pinoverdebisenti.it/dove-siamo/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://www.pinoverdebisenti.it/dove-siamo/",
+            "https://www.pinoverdebisenti.it/partner/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2026189-d12001487-Reviews-Bar_Pizzeria_Pino_Verde-Bisenti_Province_of_Teramo_Abruzzo.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:068024:montesilvano:dei-sogni",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194834-d27381233-Reviews-Pizzeria_Dei_Sogni-Montesilvano_Province_of_Pescara_Abruzzo.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194834-d27381233-Reviews-Pizzeria_Dei_Sogni-Montesilvano_Province_of_Pescara_Abruzzo.html"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/pizzeria-dei-sogni-085-445-5532"
+          ]
+        },
+        {
+          "registrable_domain": "deliveroo.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://deliveroo.it/it/menu/pescara/montesilvano/pizzeria-dei-sogni"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:066049:l-aquila:civico-ventuno",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Civico-Ventuno-LAquila"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Civico-Ventuno-LAquila"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g194790-d23634157-Reviews-Civico_Ventuno-L_Aquila_Province_of_L_Aquila_Abruzzo.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurants-world.net",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://ristorante-elodia.restaurants-world.net/"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/faq-ristorante/8596464/civico-ventuno"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:067005:basciano:portico-alloggio-e-ristorazione",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Agriturismo-Il-Portico-Alloggio-e-Ristorazione-Basciano"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Agriturismo-Il-Portico-Alloggio-e-Ristorazione-Basciano"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Basciano"
+          ]
+        },
+        {
+          "registrable_domain": "worldplaces.me",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://italy.worldplaces.me/cities/203215-basciano.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:066099:tagliacozzo:tony-bar",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1307929-d10744567-Reviews-Tony_Bar-Tagliacozzo_Province_of_L_Aquila_Abruzzo.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1307929-d10744567-Reviews-Tony_Bar-Tagliacozzo_Province_of_L_Aquila_Abruzzo.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1307929-d10744567-Reviews-Tony_Bar-Tagliacozzo_Province_of_L_Aquila_Abruzzo.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:069022:chieti:alice-pizza",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.alicepizza.it/store/alice-chieti/",
+      "evidence_urls": [
+        "https://www.alicepizza.it/store/alice-chieti/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "alicepizza.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.alicepizza.it/store/alice-chieti/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.alicepizza.it/store/alice-chieti/",
+            "https://www.alicepizza.it/en/privacy-policy/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194737-d7827865-Reviews-Alice_Pizza-Chieti_Province_of_Chieti_Abruzzo.html"
+          ]
+        },
+        {
+          "registrable_domain": "megaloweb.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.megaloweb.it/ristorazione/alice-pizza/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:069059:paglieta:bim-bum-bar",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Bim-Bum-Bar-Paglieta/menu"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bim-Bum-Bar-Paglieta/menu"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Bim-Bum-Bar-Paglieta"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070072:santa-croce-di-magliano:settimo-specchio",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g9595282-d12446977-Reviews-Pizzeria_Ristorante_Settimo_Specchio_di_Brenna_C-Santa_Croce_di_Magliano_Provin.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g9595282-d12446977-Reviews-Pizzeria_Ristorante_Settimo_Specchio_di_Brenna_C-Santa_Croce_di_Magliano_Provin.html"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/pizzeria-ristorante-settimo-specchio-di-0874-728721"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Settimo-Specchio-Santa-Croce-di-Magliano"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070078:termoli:about-coffee-garden",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194930-d27822818-Reviews-About_Coffee_Garden-Termoli_Province_of_Campobasso_Molise.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194930-d27822818-Reviews-About_Coffee_Garden-Termoli_Province_of_Campobasso_Molise.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g194930-d27822818-Reviews-About_Coffee_Garden-Termoli_Province_of_Campobasso_Molise.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/ABOUT-Coffee-Garden-Termoli"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/ABOUT-Coffee-Garden-Termoli"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/termoli-cb-it/attivita/bar/about-coffee-garden/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:094026:macchiagodena:garibaldi-cafe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1235455-d9803745-Reviews-Garibaldi_Cafe-Macchiagodena_Province_of_Isernia_Molise.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1235455-d9803745-Reviews-Garibaldi_Cafe-Macchiagodena_Province_of_Isernia_Molise.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Garibaldi-Cafe-Macchiagodena"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/garibaldi-cafe_31-344-100-7063"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070067:san-giuliano-del-sannio:raggio-d-oro",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g5599124-d2436377-Reviews-Raggio_D_Oro-San_Giuliano_del_Sannio_Province_of_Campobasso_Molise.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g5599124-d2436377-Reviews-Raggio_D_Oro-San_Giuliano_del_Sannio_Province_of_Campobasso_Molise.html"
+          ]
+        },
+        {
+          "registrable_domain": "visitmolise.eu",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.visitmolise.eu/ristorazione/-/d/dms/5003918/scheda-ristorazione"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/ristorante-pizzeria-raggio-doro_2M-339-447-2578"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070003:bojano:hosteria-lu-vic-p-dent",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.hosterialuvicpdent.it/",
+      "evidence_urls": [
+        "https://www.hosterialuvicpdent.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "hosterialuvicpdent.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.hosterialuvicpdent.it/"
+          ],
+          "ownership_method": "verified_reciprocal_link",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://www.hosterialuvicpdent.it/",
+            "https://www.palazzocorsoumberto.it/hosteria/",
+            "https://www.palazzocorsoumberto.it/privacy-policy/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2213327-d19630216-Reviews-Hosteria_Lu_Vic_P_Dent-Bojano_Province_of_Campobasso_Molise.html"
+          ]
+        },
+        {
+          "registrable_domain": "palazzocorsoumberto.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.palazzocorsoumberto.it/hosteria/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://www.palazzocorsoumberto.it/hosteria/",
+            "https://www.palazzocorsoumberto.it/privacy-policy/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:094009:castel-del-giudice:joker",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/BAR-JOKER-Castel-del-Giudice"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/BAR-JOKER-Castel-del-Giudice"
+          ]
+        },
+        {
+          "registrable_domain": "is.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://comune.casteldelgiudice.is.it/uploads/elenco_4/166-25-Prog_Compresso.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "aimc.eu",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.aimc.eu/castel-del-giudice/author/castel-del-giudice/"
+          ]
+        },
+        {
+          "registrable_domain": "pressmoliselazio.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.pressmoliselazio.it/wp-content/uploads/2019/07/LUCIGNOLO-2019_WEB.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070069:san-martino-in-pensilis:de-santis",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/caff%C3%A8-de-santis-0875-605340"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/caff%C3%A8-de-santis-0875-605340"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://fr.restaurantguru.com/San-Martino-in-Pensilis"
+          ]
+        },
+        {
+          "registrable_domain": "alfonsotoscano.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.alfonsotoscano.it/eventi%202007.htm"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:094052:venafro:di-nardo",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1201170-d15064809-Reviews-Caffe_Di_Nardo-Venafro_Province_of_Isernia_Molise.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1201170-d15064809-Reviews-Caffe_Di_Nardo-Venafro_Province_of_Isernia_Molise.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1201170-d15064809-Reviews-Caffe_Di_Nardo-Venafro_Province_of_Isernia_Molise.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Caffe-Di-Nardo-Venafro"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Caffe-Di-Nardo-Venafro"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070006:campobasso:sei-torri",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187799-d4450598-Reviews-Sei_Torri-Campobasso_Province_of_Campobasso_Molise.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187799-d4450598-Reviews-Sei_Torri-Campobasso_Province_of_Campobasso_Molise.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187799-d4450598-Reviews-Sei_Torri-Campobasso_Province_of_Campobasso_Molise.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Sei-Torri-Campobasso"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/sei-torri-340-713-2421"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.es",
+          "publisher_class": "uncertain",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.es/Restaurant_Review-g187799-d4450598-Reviews-Sei_Torri-Campobasso_Province_of_Campobasso_Molise.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:094028:montaquila:forte-s-bar-di-forte-pasquale-c",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://italy.worldplaces.me/cities/210902-taverna-ravindola.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "worldplaces.me",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://italy.worldplaces.me/cities/210902-taverna-ravindola.html"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-locked-holdout-013-016",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:012114:porto-valtravaglia:pasticceria-sicily-caffe",
+      "query": "\"Pasticceria Sicily Caffè\" \"Porto Valtravaglia\"",
+      "retrieved_at": "2026-09-02T07:20:00Z",
+      "candidates": [
+        { "title": "Pasticceria Sicily Caffè | pasticceria artigianale", "url": "https://www.pasticceriasicilycaffe.com/" },
+        { "title": "MIGLIORI caffè: Porto Valtravaglia (Aggiornamento al 2026)", "url": "https://www.tripadvisor.it/Restaurants-g664210-c8-Porto_Valtravaglia_Lake_Maggiore_Lombardy.html" },
+        { "title": "Pasticceria Sicily Caffè, Porto Valtravaglia - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Sicily-Caffe-Porto-Valtravaglia" },
+        { "title": "PASTICCERIA SICILY CAFFÈ, Porto Valtravaglia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g664210-d23088053-Reviews-Pasticceria_Sicily_Caffe-Porto_Valtravaglia_Lake_Maggiore_Lombardy.html" }
+      ]
+    },
+    {
+      "venue_id": "venue:019035:crema:the-duck-inn",
+      "query": "\"The Duck Inn\" \"Crema\" pub",
+      "retrieved_at": "2026-09-02T07:20:00Z",
+      "candidates": [
+        { "title": "SIDES MAINS Pumpkin & Halloumi Salad - Lemon myrtl", "url": "https://duckinn.com.au/wp-content/uploads/2022/10/DUC-MainMenu-A3.indd-6-1.pdf" },
+        { "title": "MAINS SIDES SNACKS Pumpkin & Halloumi Salad - Le", "url": "https://duckinn.com.au/wp-content/uploads/2022/12/DUC-MainMenu-A3-Updated-Wine-List-3.pdf" }
+      ]
+    },
+    {
+      "venue_id": "venue:020030:mantova:torrefazione-caffe-brasil",
+      "query": "\"Torrefazione Caffe Brasil\" \"Mantova\"",
+      "retrieved_at": "2026-09-02T07:20:00Z",
+      "candidates": [
+        { "title": "Torrefazione Caffè Brasil Mantova | Shop OnLine | Qualità Artigianale", "url": "https://www.torrefazionecaffebrasil.it/" },
+        { "title": "Torrefazione Caffè Brasil Mantova | Shop OnLine | Qualità Artigianale", "url": "https://www.torrefazionecaffebrasil.it/en" },
+        { "title": "Elenco Regionale Riconoscimenti Attività Storiche", "url": "https://www.regione.lombardia.it/wps/wcm/connect/16e3046a-05fb-499a-aaec-2fdb731261ec/elenco%2Bregionale%2B16%2Bdicembre%2B2025.pdf?CACHEID=ROOTWORKSPACE-16e3046a-05fb-499a-aaec-2fdb731261ec-pKoNaRb&MOD=AJPERES" },
+        { "title": "DECRETO N. 10287", "url": "https://www.regione.lombardia.it/wps/wcm/connect/eec5bc6a-602e-498d-a012-7f2c5e7f485e/decreto%2Bn%2B10287%2Bdel%2B14%2Blug%2B2022%2BRiconoscimenti%2Bstorici%2Ball%2BA%2BB%2BC.pdf?CACHEID=ROOTWORKSPACE-eec5bc6a-602e-498d-a012-7f2c5e7f485e-o8B6bPH&MOD=AJPERES" },
+        { "title": "Elenco Regionale Attività Storiche e di tradizione", "url": "https://www.regione.lombardia.it/content/dam/rl/canali-tematici-servizi/11-attivita-produttive-imprese/07-imprese-storiche/pro-Riconoscimento-delle-attivit%C3%A0-storiche-e-di-tradizione/allegati/ELENCO-REGIONALE-aggiornato-al-22%20aprile-2026.pdf" }
+      ]
+    },
+    {
+      "venue_id": "venue:021061:ortisei-st-ulrich:e-quattro-pizza-genuine",
+      "query": "\"E-Quattro Pizza Genuine\" \"Ortisei\"",
+      "retrieved_at": "2026-09-02T07:20:00Z",
+      "candidates": [
+        { "title": "Driving directions to E-Quattro Pizza Genuine, 233 Strada Rezia, Ortisei - Waze", "url": "https://www.waze.com/live-map/directions/it/trentino-alto-adige/ortisei/e-quattro-pizza-genuine?to=place.ChIJ3T98EDgTeEcRtq_Cb0Y0zMM" },
+        { "title": "E-quattro Pizza Genuine, Ortisei - Menu del ristorante, prezzi e recensioni", "url": "https://www.sluurpy.it/ortisei/ristorante/8606334/e-quattro-pizza-genuine" },
+        { "title": "E-Quattro Pizza Genuine, Ortisei - Restaurant menu, prices and reviews", "url": "https://restaurantguru.com/E-Quattro-Pizza-Ortisei-Ortisei" },
+        { "title": "E-Quattro Pizza Genuine - Pizzeria a Ortisei ▷ Via Rezia 233, 39046, Ortisei | Firmania", "url": "https://firmania.it/ortisei/e-quattro-pizza-genuine-4472670" },
+        { "title": "THE 10 BEST Restaurants Near E-quattro Pizza Genuine (2026)", "url": "https://www.tripadvisor.com/RestaurantsNear-g194841-d24131106-E_quattro_Pizza_Genuine-Ortisei_Val_Gardena_Province_of_South_Tyrol_Trentino_Alto_Adige.html" }
+      ]
+    }
+  ]
+}

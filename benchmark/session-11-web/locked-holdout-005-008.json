@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-locked-holdout-005-008",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:006003:alessandria:evy",
+      "query": "\"Bar Evy\" \"Alessandria\"",
+      "retrieved_at": "2026-09-02T07:13:00Z",
+      "candidates": [
+        {
+          "title": "Bar Evy 1990, Alessandria - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Evy-Alessandria"
+        },
+        {
+          "title": "Sedi | EDISU Ente Regionale per il Diritto allo Studio Universitario del Piemonte",
+          "url": "https://edisu.piemonte.it/en/locations?page=1"
+        },
+        {
+          "title": "BAR EVY DI IBERTI MASSIMILIANO, Partita IVA: 02734610062, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/3441/bar-evy-di-iberti-massimiliano"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007022:courmayeur:creme-et-chocolat",
+      "query": "\"Crème et chocolat\" \"Courmayeur\" gelateria",
+      "retrieved_at": "2026-09-02T07:13:00Z",
+      "candidates": [
+        {
+          "title": "GELATERIA CREME ET CHOCOLAT, Courmayeur - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187865-d4735289-Reviews-Gelateria_creme_et_chocolat-Courmayeur_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Crème et chocolat | Senza glutine a Courmayeur | Gluto",
+          "url": "https://www.glutoapp.com/it/locale/16567/cr-me-et-chocolat"
+        },
+        {
+          "title": "GELATERIA CREME ET CHOCOLAT, Courmayeur - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187865-d4735289-Reviews-Gelateria_creme_et_chocolat-Courmayeur_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Crème et Chocolat - ConGelato",
+          "url": "https://www.con-gelato.it/gelateria/creme-et-chocolat/"
+        },
+        {
+          "title": "Orari di apertura gelateria Crème et Chocolat",
+          "url": "https://trova-aperto.it/courmayeur/gelateria-cr%C3%A8me-et-chocolat-930345"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007058:saint-christophe:bistrot-elyle",
+      "query": "\"Cafè Bistrot Elyle\" \"Saint-Christophe\"",
+      "retrieved_at": "2026-09-02T07:13:00Z",
+      "candidates": [
+        {
+          "title": "Café Bistrot Elyle",
+          "url": "https://www.lovevda.it/it/banca-dati/16/tavole-calde-enoteche-pub/saint-christophe/cafe-bistrot-elyle/3414"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007066:sarre:pirata-pizza-grill-restaurant-valle-d-aosta",
+      "query": "\"Il Pirata Pizza & Grill\" \"Sarre\"",
+      "retrieved_at": "2026-09-02T07:13:00Z",
+      "candidates": []
+    }
+  ]
+}

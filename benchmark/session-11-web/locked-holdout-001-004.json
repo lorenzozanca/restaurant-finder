@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-locked-holdout-001-004",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:001259:sauze-d-oulx:capanna-mollino",
+      "query": "\"Capanna Mollino\" \"Sauze d'Oulx\" ristorante",
+      "retrieved_at": "2026-09-02T07:11:00Z",
+      "candidates": [
+        {
+          "title": "Ristorante CAPANNA MOLLINO - Rifugio sulle piste da sci - Municipality of Sauze d'Oulx",
+          "url": "https://www.comune.sauzedoulx.to.it/en-us/vivere-il-comune/dove-mangiare/ristorante-capanna-mollino-rifugio-sulle-piste-da-sci-43083-1-16a990e33180346b7b722cccde84935a"
+        },
+        {
+          "title": "Capanna Mollino, Sauze d'Oulx - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Capanna-Mollino-Sauze-dOulx"
+        },
+        {
+          "title": "Sauze d’Oulx – Sauze d'Oulx",
+          "url": "https://sauzedoulx.net/sauze-doulx/"
+        },
+        {
+          "title": "Capanna Mollino | Touring Club Italiano",
+          "url": "https://www.touringclub.it/destinazioni/sauze-d_oulx/fare/268984-capanna-mollino"
+        },
+        {
+          "title": "Capanna Mollino Sauze d'Oulx Menù completo | Mycia.it",
+          "url": "https://www.mycia.it/menu/sauze-d%27oulx/capanna-mollino-pGtk3G9f6"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001272:torino:mcdonald-s-fd0619d5",
+      "query": "\"McDonald's\" \"Torino\" ristorante",
+      "retrieved_at": "2026-09-02T07:11:00Z",
+      "candidates": [
+        {
+          "title": "Torino Via Pio VII | McDonaldʹs Italia",
+          "url": "https://www.mcdonalds.it/ristorante/piemonte/torino/torino-via-pio-vii"
+        },
+        {
+          "title": "LISTA RISTORANTI McDonald's ADERENTI AGGIORNATA AL 1/07",
+          "url": "https://www.mcdonalds.it/sites/default/files/regulations-restaurant/lista-ristoranti-aderenti__28-giugno2024.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:002156:varallo:nuovo-caffe-del-ponte-by-marika",
+      "query": "\"Nuovo Caffè del Ponte by Marika\" \"Varallo\" ristorante",
+      "retrieved_at": "2026-09-02T07:11:00Z",
+      "candidates": [
+        {
+          "title": "Nuovo Caffè del Ponte by Marika, Varallo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-del-Ponte-Varallo"
+        },
+        {
+          "title": "Menu da Nuovo Caffè del Ponte by Marika pub & bar, Varallo",
+          "url": "https://restaurantguru.it/Bar-del-Ponte-Varallo/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001292:venaria-reale:vecchia-camelot",
+      "query": "\"La Vecchia Camelot\" \"Venaria Reale\" ristorante",
+      "retrieved_at": "2026-09-02T07:11:00Z",
+      "candidates": []
+    }
+  ]
+}

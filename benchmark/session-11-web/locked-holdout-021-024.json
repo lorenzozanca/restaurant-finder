@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-locked-holdout-021-024",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    { "venue_id": "venue:025016:cortina-d-ampezzo:ai-due-forni", "query": "\"Ai Due Forni\" \"Cortina d'Ampezzo\"", "retrieved_at": "2026-09-02T07:24:00Z", "candidates": [
+      { "title": "Elenco domande ammesse per tipo Contratto Territoriale", "url": "https://media.directio.it/portal/altridoc/INPS_Sgravi2012_Domande_Territoriale.pdf" }
+    ] },
+    { "venue_id": "venue:023091:verona:kfc-68058a3c", "query": "\"KFC\" \"Verona\" ristorante", "retrieved_at": "2026-09-02T07:24:00Z", "candidates": [
+      { "title": "Ministero delle Imprese e del Made in Italy", "url": "https://www.mimit.gov.it/images/stories/documenti/province/tavola/Veneto_-_VR_-_Verona.pdf" },
+      { "title": "CS-KFC-Verona1_def", "url": "https://strapi-kfc-bucket.s3.eu-west-3.amazonaws.com/CS_KFC_Verona_Uno_81f50917d5.pdf" },
+      { "title": "KENTUCKY FRIED CHICKEN APRE A VENEZIA", "url": "https://strapi-kfc-bucket.s3.eu-west-3.amazonaws.com/2018_Apertura_ristorante_VENEZIA_Stazione_Santa_Lucia_b72aecdbbe.pdf" },
+      { "title": "TFEITFR", "url": "https://nanamacelleria.it/themes/galvatron/assets/pdf/tabella-spedizioni.pdf" },
+      { "title": "RIP KFC at 7501 Mineral Point Road 😢", "url": "https://www.reddit.com/r/madisonwi/comments/1om6kk1/rip_kfc_at_7501_mineral_point_road/" }
+    ] },
+    { "venue_id": "venue:024047:grumolo-delle-abbadesse:nevermind-cafe", "query": "\"Nevermind Cafè\" \"Grumolo delle Abbadesse\"", "retrieved_at": "2026-09-02T07:24:00Z", "candidates": [
+      { "title": "NEVERMIND CAFÈ - PAGINA UFFICIALE, Grumolo Delle Abbadesse - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g2356426-d5853761-Reviews-Nevermind_Cafe_Pagina_Ufficiale-Grumolo_Delle_Abbadesse_Province_of_Vicenza_Vene.html" },
+      { "title": "Nevermind Cafè | 0444 157 0096 | Grumolo delle Abbadesse", "url": "https://www.tuttiaffari.com/nevermind-caf%C3%A8-0444-157-0096" },
+      { "title": "Nevermind Cafè, Grumolo delle Abbadesse - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Nevermind-Cafe-Pagina-Ufficiale-Grumolo-delle-Abbadesse" },
+      { "title": "NEVERMIND CAFE'", "url": "https://www.ristoratoridivicenza.it/ita/food/ristoranti-e-trattorie/nevermind-cafe--19277a1-ita.html" },
+      { "title": "Menu da Nevermind Cafè pub & bar, Grumolo delle Abbadesse", "url": "https://restaurantguru.it/Nevermind-Cafe-Pagina-Ufficiale-Grumolo-delle-Abbadesse/menu" }
+    ] },
+    { "venue_id": "venue:027021:martellago:fior-di-gelato", "query": "\"Fior di Gelato\" \"Martellago\"", "retrieved_at": "2026-09-02T07:24:00Z", "candidates": [
+      { "title": "Negozi - MOM Distretto del Commercio Martellago Olmo Maerne", "url": "https://martellagomom.it/negozi/" },
+      { "title": "Fior di Gelato, Martellago - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Fior-di-Gelato-Martellago" },
+      { "title": "Migliori Dessert Martellago: Leggi recensioni sui Dessert e Dolce a Martellago", "url": "https://www.tripadvisor.it/Restaurants-g676139-zfg9909-Martellago_Veneto.html" }
+    ] }
+  ]
+}

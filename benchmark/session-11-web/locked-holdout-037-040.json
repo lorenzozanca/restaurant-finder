@@ -1,0 +1,6 @@
+{"schema_version":1,"fixture_set":"session-11-unseen-locked-holdout-037-040","partition":"locked_holdout","source":"codex_integrated_web_search","brave_requests_made":0,"selection_fingerprint_sha256":"ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64","bounded_result_limit":5,"entries":[
+{"venue_id":"venue:040012:forli:mcdonald-s-0b17ac2f","query":"\"McDonald's\" \"Forlì\" ristorante","retrieved_at":"2026-09-02T07:28:00Z","candidates":[{"title":"Forlì | McDonaldʹs Italia","url":"https://www.mcdonalds.it/ristorante/emilia-romagna/forli-cesena/forli"}]},
+{"venue_id":"venue:034023:montechiarugolo:arca-di-noe-birreria","query":"\"Arca di Noè Birreria\" \"Montechiarugolo\"","retrieved_at":"2026-09-02T07:28:00Z","candidates":[]},
+{"venue_id":"venue:037020:castel-san-pietro-terme:bruno","query":"\"Bar Bruno\" \"Castel San Pietro Terme\"","retrieved_at":"2026-09-02T07:28:00Z","candidates":[]},
+{"venue_id":"venue:036023:modena:come-una-volta","query":"\"Ristorante Come una Volta\" \"Modena\"","retrieved_at":"2026-09-02T07:28:00Z","candidates":[{"title":"Contatti Ristorante Come Una Volta | Modena","url":"https://www.ristorantecomeunavolta.it/contatti"}]}
+]}

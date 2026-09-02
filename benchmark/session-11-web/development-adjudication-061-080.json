@@ -1,0 +1,822 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-unseen-development-061-080",
+  "partition": "development",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "reviewer": "codex-session-11-independent-review",
+  "reviewed_at": "2026-09-01T19:22:30Z",
+  "review_basis": "bounded fixture URL/title metadata plus explicitly separated manual first-party ownership evidence where recorded",
+  "scope_limitations": "Recognizable third-party publishers are rejected from bounded metadata. Accepted domains require separately recorded first-party evidence identifying both the venue branch and publisher control; remaining venue-branded domains stay uncertain.",
+  "entries": [
+    {
+      "venue_id": "venue:008054:san-lorenzo-al-mare:cascina-rio-rocca",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://cascinariorocca.eatbu.com/?lang=en"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://cascinariorocca.eatbu.com/?lang=en"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1973854-d3656700-Reviews-Agriturismo_Cascina_Rio_Rocca-San_Lorenzo_al_Mare_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Agriturismo-Rio-Rocca-San-Lorenzo-al-Mare/menu"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1973854-d3656700-Reviews-Agriturismo_Cascina_Rio_Rocca-San_Lorenzo_al_Mare_Italian_Riviera_Liguria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009002:albenga:mcdonald-s",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.mcdonalds.it/ristorante/liguria/savona/albenga",
+      "evidence_urls": [
+        "https://www.mcdonalds.it/ristorante/liguria/savona/albenga"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "mcdonalds.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.mcdonalds.it/ristorante/liguria/savona/albenga"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.mcdonalds.it/ristorante/liguria/savona/albenga",
+            "https://www.mcdonalds.it/avviso-variazione-titolarita-dei-dati-personali"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194666-d34391006-Reviews-McDonald_s-Albenga_Italian_Riviera_Liguria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010025:genova:boasi",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187823-d6225256-Reviews-Caffe_Boasi_Al_Boasi_di_via_XX-Genoa_Italian_Riviera_Liguria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187823-d6225256-Reviews-Caffe_Boasi_Al_Boasi_di_via_XX-Genoa_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Caffe-Boasi-Genoa"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g187823-d6225256-Reviews-Caffe_Boasi_Al_Boasi_di_via_XX-Genoa_Italian_Riviera_Liguria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010037:moneglia:ciocco",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g616174-d2282599-Reviews-Pizzeria_Il_Ciocco-Moneglia_Italian_Riviera_Liguria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g616174-d2282599-Reviews-Pizzeria_Il_Ciocco-Moneglia_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g616174-d2282599-Reviews-Pizzeria_Il_Ciocco-Moneglia_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g616174-d2282599-Reviews-Pizzeria_Il_Ciocco-Moneglia_Italian_Riviera_Liguria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011017:levanto:salty-dog",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g580223-d2693670-Reviews-The_Salty_Dog_Cafe-Levanto_Italian_Riviera_Liguria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g580223-d2693670-Reviews-The_Salty_Dog_Cafe-Levanto_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Salty-Dog-Levanto"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g580223-d2693670-Reviews-The_Salty_Dog_Cafe-Levanto_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "pos.do",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://pos.do/it/via-jacopo-da-levanto/ristorante/salty-dog-1"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/salty-dog-caf%C3%A9-0187-814298"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011015:la-spezia:costa",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187824-d23905522-Reviews-Bar_Costa-La_Spezia_Province_of_La_Spezia_Liguria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187824-d23905522-Reviews-Bar_Costa-La_Spezia_Province_of_La_Spezia_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Costa-Italy-2"
+          ]
+        },
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://barcostalaspezia.eatbu.com/?lang=en"
+          ]
+        },
+        {
+          "registrable_domain": "gov.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ge.camcom.gov.it/it/elementi-homepage/notizie/copy2_of_bonus-ristori/delibera-ristori-del-11-giugno-2021.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/bar-costa_5l-0187-735265"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008043:pigna:desir-de-roy",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1923748-d6972636-Reviews-Desir_de_Roy-Pigna_Province_of_Imperia_Liguria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1923748-d6972636-Reviews-Desir_de_Roy-Pigna_Province_of_Imperia_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.fr",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.fr/Restaurant_Review-g1923748-d6972636-Reviews-Desir_de_Roy-Pigna_Province_of_Imperia_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1923748-d6972636-Reviews-Desir_de_Roy-Pigna_Province_of_Imperia_Liguria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010015:chiavari:giorgione-cafe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194735-d18817239-Reviews-Giorgione_Cafe-Chiavari_Italian_Riviera_Liguria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194735-d18817239-Reviews-Giorgione_Cafe-Chiavari_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co.uk",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co.uk/Restaurant_Review-g194735-d18817239-Reviews-Giorgione_Cafe-Chiavari_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Giorgione-Cafe-Chiavari"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/giorgione-caf%C3%A8-0185-177-0124"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008055:sanremo:vesca",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194900-d6215524-Reviews-La_Vesca-Sanremo_Italian_Riviera_Liguria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194900-d6215524-Reviews-La_Vesca-Sanremo_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g194900-d6215524-Reviews-La_Vesca-Sanremo_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g194900-d6215524-Reviews-La_Vesca-Sanremo_Italian_Riviera_Liguria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.fr",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.fr/Restaurant_Review-g194900-d6215524-Reviews-La_Vesca-Sanremo_Italian_Riviera_Liguria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008058:soldano:sacred-and-profane-pub",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.com/Sacro-E-Profano-Soldano"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Sacro-E-Profano-Soldano"
+          ]
+        },
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/it/liguria/soldano/sacred-and-profane-pub?to=place.ChIJQS77d9jyzRIR4oNNAq66iBI"
+          ]
+        },
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/es/place/details/3044250/sacred-and-profane-pub"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:036032:polinago:antica-corte-casa-marini",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.anticacortecasamarini.com/wp/contatti/",
+      "evidence_urls": [
+        "https://www.anticacortecasamarini.com/wp/contatti/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "anticacortecasamarini.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.anticacortecasamarini.com/wp/contatti/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://www.anticacortecasamarini.com/wp/contatti/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g3665660-d10033556-Reviews-Antica_Corte_Casa_Marini-Polinago_Province_of_Modena_Emilia_Romagna.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g3665660-d10033556-Reviews-Antica_Corte_Casa_Marini-Polinago_Province_of_Modena_Emilia_Romagna.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Antica-Corte-Casa-Marini-Polinago"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:035020:correggio:mcdonald-s",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.mcdonalds.it/ristorante/emilia-romagna/reggio-emilia/correggio-viale-vecchia-ferrovia",
+      "evidence_urls": [
+        "https://www.mcdonalds.it/ristorante/emilia-romagna/reggio-emilia/correggio-viale-vecchia-ferrovia"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "mcdonalds.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.mcdonalds.it/ristorante/emilia-romagna/reggio-emilia/correggio-viale-vecchia-ferrovia"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.mcdonalds.it/ristorante/emilia-romagna/reggio-emilia/correggio-viale-vecchia-ferrovia",
+            "https://www.mcdonalds.it/avviso-variazione-titolarita-dei-dati-personali"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g230069-d27411306-Reviews-Mcdonald_s-Correggio_Province_of_Reggio_Emilia_Emilia_Romagna.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:036005:carpi:centrale-carpi",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.impresaitalia.info/kk03738616/caffe-centrale/carpi.aspx"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "impresaitalia.info",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.impresaitalia.info/kk03738616/caffe-centrale/carpi.aspx"
+          ]
+        },
+        {
+          "registrable_domain": "prontoimprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.prontoimprese.it/region/carpi/bar"
+          ]
+        },
+        {
+          "registrable_domain": "agimeg.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.agimeg.it/sivincetutto-superenalotto-come-riscuotere-i-premi/amp/"
+          ]
+        },
+        {
+          "registrable_domain": "gov.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.unioncamere.gov.it/imprese-storiche?field_is_camera_di_commercio_value=All&field_is_data_dich_avvio_attiv_value=All&field_is_macrosettore_value=All&field_is_provincia_sede_legale_value=All&order=title&page=43&sort=desc&title="
+          ]
+        },
+        {
+          "registrable_domain": "hotels.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://ca.hotels.com/fr/ho1067258752/la-cantina-hotel-residence-medolla-italie/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:036001:bastiglia:roma",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/bar-roma_206-059-904605"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/bar-roma_206-059-904605"
+          ]
+        },
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/it/emilia-romagna/bastiglia/bar-roma?to=place.ChIJlc1yd5zrf0cR5Bg__IvQYDA"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g1950270-d27411432-Reviews-Bar_Roma-Bastiglia_Province_of_Modena_Emilia_Romagna.html"
+          ]
+        },
+        {
+          "registrable_domain": "gov.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.mimit.gov.it/images/stories/normativa/Allegato_decreto_direttoriale_12_aprile_2016.PDF"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurants-g1950270-Bastiglia_Province_of_Modena_Emilia_Romagna.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:099001:bellaria-igea-marina:magic-pizza",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194688-d10275841-Reviews-Magic_Pizza_Pizzeria-Bellaria_Igea_Marina_Province_of_Rimini_Emilia_Romagna.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194688-d10275841-Reviews-Magic_Pizza_Pizzeria-Bellaria_Igea_Marina_Province_of_Rimini_Emilia_Romagna.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g194688-d10275841-Reviews-Magic_Pizza_Pizzeria-Bellaria_Igea_Marina_Province_of_Rimini_Emilia_Romagna.html"
+          ]
+        },
+        {
+          "registrable_domain": "rimini.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.rimini.com/dove-mangiare/pizzeria-magic-pizza"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/magic-pizza_16M-0541-332429"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g194688-d10275841-Reviews-or20-Magic_Pizza_Pizzeria-Bellaria_Igea_Marina_Province_of_Rimini_Emilia_Romagn.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:037006:bologna:genova-5-ice-cream-and-more",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187801-d23701210-Reviews-Genova_5_Ice_cream_And_More-Bologna_Province_of_Bologna_Emilia_Romagna.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187801-d23701210-Reviews-Genova_5_Ice_cream_And_More-Bologna_Province_of_Bologna_Emilia_Romagna.html"
+          ]
+        },
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/it/emilia-romagna/bologna/genova-5-ice-cream-and-more?to=place.ChIJ0cebSVsrfkcRLodL_ehZ42E"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/bologna-bo-it/attivita/gelateria/genova-5-ice-cream-and-more/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Genova-5-Ice-cream-And-More-Bologna"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:039006:castel-bolognese:chalet-nel-parco",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g2193137-d23773982-Reviews-Lo_Chalet_Nel_Parco-Castel_Bolognese_Province_of_Ravenna_Emilia_Romagna.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2193137-d23773982-Reviews-Lo_Chalet_Nel_Parco-Castel_Bolognese_Province_of_Ravenna_Emilia_Romagna.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/lo-chalet-nel-parco-Castel-Bolognese"
+          ]
+        },
+        {
+          "registrable_domain": "aroundfaenza.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.aroundfaenza.it/it/ristoranti/castel-bolognese/lo-chalet-nel-parco"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/lo-chalet-nel-parco-393-864-2849"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:037062:alto-reno-terme:da-mimmo",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.ufficiocamerale.it/3663/bar-pizzeria-da-mimmo-di-ferrari-maurizio"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/3663/bar-pizzeria-da-mimmo-di-ferrari-maurizio"
+          ]
+        },
+        {
+          "registrable_domain": "emilia-romagna.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://imprese.regione.emilia-romagna.it/Finanziamenti/industria-artigianato-cooperazione-servizi/irap/graduatoria/elenco.pdf/%40%40download/file/Elenco.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "visura.pro",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.visura.pro/imprese/3944257489-bar-pizzeria-da-mimmo-di-ferrari-maurizio.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:040007:cesena:collina-dei-magari",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.thefork.it/ristorante/la-collina-dei-magari-r821787/menu"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "thefork.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.thefork.it/ristorante/la-collina-dei-magari-r821787/menu"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/La-Collina-dei-Magari-Cesena"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/la-collina-dei-magari-353-405-8976"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:099011:morciano-di-romagna:garattoni-coffee",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/the-angle-of-the-garattoni-coffee-maria_1R-0541-857340"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/the-angle-of-the-garattoni-coffee-maria_1R-0541-857340"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://de.restaurantguru.com/friendly-staff-Morciano-di-Romagna-m9644"
+          ]
+        },
+        {
+          "registrable_domain": "cybo.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://guida-delle-societa.cybo.com/IT/san-giovanni-in-marignano/tabaccherie/"
+          ]
+        }
+      ]
+    }
+  ]
+}

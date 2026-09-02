@@ -1,0 +1,769 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-unseen-development-101-120",
+  "partition": "development",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "reviewer": "codex-session-11-independent-review",
+  "reviewed_at": "2026-09-01T19:22:30Z",
+  "review_basis": "bounded fixture URL/title metadata plus explicitly separated manual first-party ownership evidence where recorded",
+  "scope_limitations": "Recognizable third-party publishers are rejected from bounded metadata. Accepted domains require separately recorded first-party evidence identifying both the venue branch and publisher control; remaining venue-branded domains stay uncertain.",
+  "entries": [
+    {
+      "venue_id": "venue:044011:castel-di-lama:casa-delle-api-osteria",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.osterialacasadelleapi.com/chi-siamo/",
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1025199-d10627331-Reviews-La_Casa_delle_Api_Osteria-Castel_di_Lama_Province_of_Ascoli_Piceno_Marche.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1025199-d10627331-Reviews-La_Casa_delle_Api_Osteria-Castel_di_Lama_Province_of_Ascoli_Piceno_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "osterialacasadelleapi.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.osterialacasadelleapi.com/chi-siamo/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://www.osterialacasadelleapi.com/chi-siamo/",
+            "https://www.osterialacasadelleapi.com/condizioni-generali/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1025199-d10627331-Reviews-La_Casa_delle_Api_Osteria-Castel_di_Lama_Province_of_Ascoli_Piceno_Marche.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042032:numana:numana-blu-ristorante-pizzeria",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1187204-d10596787-Reviews-or75-Blupot_Restaurant_Sushi_Bar-Marcelli_di_Numana_Province_of_Ancona_Marche.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1187204-d10596787-Reviews-or75-Blupot_Restaurant_Sushi_Bar-Marcelli_di_Numana_Province_of_Ancona_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "italianodoc.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.italianodoc.com/ristoranti/marche.ancona.htm"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/pizza-Marcelli-c97/2"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044066:san-benedetto-del-tronto:massetti",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194895-d5821901-Reviews-Caffe_Massetti-San_Benedetto_del_Tronto_Province_of_Ascoli_Piceno_Marche.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194895-d5821901-Reviews-Caffe_Massetti-San_Benedetto_del_Tronto_Province_of_Ascoli_Piceno_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co.uk",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co.uk/Restaurant_Review-g194895-d5821901-Reviews-Caffe_Massetti-San_Benedetto_del_Tronto_Province_of_Ascoli_Piceno_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/8692/caffe-massetti-di-massetti-maria-rita-e-aureli-adua-snc"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com.au",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com.au/Restaurant_Review-g194895-d5821901-Reviews-Caffe_Massetti-San_Benedetto_Del_Tronto_Province_of_Ascoli_Piceno_Marche.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041043:pergola:da-samanta",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://wanderlog.com/it/list/geoCategory/199292"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/it/list/geoCategory/199292"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041014:fermignano:chicchi-di-zucchero",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1531840-d15009503-Reviews-Chicchi_Di_Zucchero-Fermignano_Province_of_Pesaro_and_Urbino_Marche.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1531840-d15009503-Reviews-Chicchi_Di_Zucchero-Fermignano_Province_of_Pesaro_and_Urbino_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Grains-of-Sugar-confectionery-ice-cream-coffee-Fermignano"
+          ]
+        },
+        {
+          "registrable_domain": "nextdoor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.nextdoor.com/pages/chicci-di-zucchero-pasticceria-gelateria-caffetteria/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041013:fano:buddha-pub",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194759-d20129005-Reviews-Buddha_Pub-Fano_Province_of_Pesaro_and_Urbino_Marche.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194759-d20129005-Reviews-Buddha_Pub-Fano_Province_of_Pesaro_and_Urbino_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Buddha-Pub-Fano"
+          ]
+        },
+        {
+          "registrable_domain": "monsieurdelacroix.com",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.monsieurdelacroix.com/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Buddha-Pub-Fano"
+          ]
+        },
+        {
+          "registrable_domain": "leggimenu.it",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.leggimenu.it/menu/buddhapubfano/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041071:sassocorvaro-auditore:diga-lounge-bistrot",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.comune.sassocorvaro.pu.it/c041059/zf/index.php/locali-pubblici"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "pu.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.comune.sassocorvaro.pu.it/c041059/zf/index.php/locali-pubblici"
+          ]
+        },
+        {
+          "registrable_domain": "paginegialle.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.paginegialle.it/marche/sassocorvaro_auditore/ristorante_ristoranti_ristoranti.html"
+          ]
+        },
+        {
+          "registrable_domain": "virgilio.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://aziende.virgilio.it/ristoranti/sassocorvaro-auditore-pu/diga-lounge-bistrot"
+          ]
+        },
+        {
+          "registrable_domain": "ilborghista.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ilborghista.it/mangiare-a-sassocorvaro-auditore-pu-4822"
+          ]
+        },
+        {
+          "registrable_domain": "mapstr.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://mapstr.com/place/sbkwPfwRli"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041068:vallefoglia:parioli",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Bar-Parioli-Gallo-Marche"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Parioli-Gallo-Marche"
+          ]
+        },
+        {
+          "registrable_domain": "sisal.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://negozi.sisal.com/my-sisal/vallefoglia-via-roma-79"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Vallefoglia%2520%2528PU%2529-Bar%2520Parioli-219870V.html"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/4401/bar-parioli-di-londei-gianfranco"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/bar-parioli_2x-0721-497420"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043013:civitanova-marche:donoma",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/RestaurantsNear-g194742-d5813180-Donoma_Sound_Theatre_and_Food-Civitanova_Marche_Province_of_Macerata_Marche.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/RestaurantsNear-g194742-d5813180-Donoma_Sound_Theatre_and_Food-Civitanova_Marche_Province_of_Macerata_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Donoma-Sound-Theater-and-Food-Civitanova-Marche"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Donoma-Sound-Theater-and-Food-Civitanova-Marche"
+          ]
+        },
+        {
+          "registrable_domain": "wikivoyage.org",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.wikivoyage.org/wiki/Civitanova_Marche"
+          ]
+        },
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/it/marche/civitanova-marche/donoma?to=place.ChIJEbw9P4BtMhMRFzz_mTUNW-0"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:109008:grottazzolina:stella-alpina",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Pizzeria-Stella-Alpina-Grottazzolina"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Pizzeria-Stella-Alpina-Grottazzolina"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1025203-d27248033-Reviews-Pizzeria_Stella_Alpina-Ponzano_di_Fermo_Province_of_Fermo_Marche.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060023:castro-dei-volsci:hotel-ristorante-santina",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.camminoreginacamilla.it/accoglienze/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "camminoreginacamilla.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.camminoreginacamilla.it/accoglienze/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Hotel_Review-g1566581-d7689319-Reviews-Hotel_Ristorante_Santina-Castro_dei_Volsci_Province_of_Frosinone_Lazio.html"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/hotel-ristorante-santina-0775-686175"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Castro-dei-Volsci"
+          ]
+        },
+        {
+          "registrable_domain": "ecomuseoargil.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ecomuseoargil.it/accoglienza-castro-dei-volsci/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058029:cerveteri:burger-king",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.burgerking.it/assets/documents/79_document_it.pdf",
+      "evidence_urls": [
+        "https://www.burgerking.it/assets/documents/79_document_it.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "burgerking.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.burgerking.it/assets/documents/79_document_it.pdf"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.burgerking.it/assets/documents/79_document_it.pdf",
+            "https://www.burgerking.it/privacy-policy"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Burger-King-Cerveteri"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058091:roma:paddock-ristocaffe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187791-d12154338-Reviews-Paddock_Ristocaffe-Rome_Lazio.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187791-d12154338-Reviews-Paddock_Ristocaffe-Rome_Lazio.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Paddock-Ristocaffe-Rome"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/roma/ristorante/254770/paddock-ristocaffe"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058015:campagnano-di-roma:paniozze",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.com/Panuozzeria-Salernitana-Campagnano-di-Roma"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Panuozzeria-Salernitana-Campagnano-di-Roma"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:057059:rieti:betti-cafe-apericena",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://deliveroo.it/it/menu/rieti/rieti/betti-cafe-apericena"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "deliveroo.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://deliveroo.it/it/menu/rieti/rieti/betti-cafe-apericena"
+          ]
+        },
+        {
+          "registrable_domain": "reteimprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.reteimprese.it/bar-caffetterie/rieti"
+          ]
+        },
+        {
+          "registrable_domain": "dovepasticcio.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.dovepasticcio.it/pasticcerie/dettaglio/4909/betti-cafe-apericena-a-rieti"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/betti-caf%C3%A9-apericena-0746-481720"
+          ]
+        },
+        {
+          "registrable_domain": "apetime.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.apetime.com/aperitivo/rieti"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059032:terracina:icescream-terracina",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194931-d10229080-Reviews-or45-Ice_Scream_Gelateria_Artigianale-Terracina_Province_of_Latina_Lazio.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194931-d10229080-Reviews-or45-Ice_Scream_Gelateria_Artigianale-Terracina_Province_of_Latina_Lazio.html"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/terracina/ristorante/141138/ice-scream-gelateria-artigianale/recensioni"
+          ]
+        },
+        {
+          "registrable_domain": "piatti.menu",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://piatti.menu/restaurants/terracina/ice-scream-gelateria-artigianale/reviews"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058096:san-polo-dei-cavalieri:centrale-di-mozzetta-miriam",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.italia.it/it/lazio/san-polo-dei-cavalieri/dove-mangiare/bar-centrale-di-mozzetta-miriam"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "italia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.italia.it/it/lazio/san-polo-dei-cavalieri/dove-mangiare/bar-centrale-di-mozzetta-miriam"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Inaugurazione-Nuova-Gestione-Bar-Centrale-Di-Mozzetta-Miriam-San-Polo-dei-Cavalieri"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurants-g2372877-San_Polo_dei_Cavalieri_Province_of_Rome_Lazio.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059009:gaeta:ristoro-da-guido",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187790-d2397677-Reviews-Ristoro_Da_Guido-Gaeta_Province_of_Latina_Lazio.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187790-d2397677-Reviews-Ristoro_Da_Guido-Gaeta_Province_of_Latina_Lazio.html"
+          ]
+        },
+        {
+          "registrable_domain": "google.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.google.com/maps/search/Ristoro%2BDa%2BGuido%2BGaeta%2BItaly"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/ristoro-da-guido_2D-0771-741020"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co.uk",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co.uk/Restaurant_Review-g187790-d2397677-Reviews-Ristoro_Da_Guido-Gaeta_Province_of_Latina_Lazio.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058032:civitavecchia:marchigiano",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194743-d2429205-Reviews-Il_Marchigiano-Civitavecchia_Province_of_Rome_Lazio.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194743-d2429205-Reviews-Il_Marchigiano-Civitavecchia_Province_of_Rome_Lazio.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Il-Marchigiano-Civitavecchia"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/ristorante-pizzeria-il-marchigiano_1z-0766-560103"
+          ]
+        },
+        {
+          "registrable_domain": "portofrome.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.portofrome.it/ristorazione/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059020:prossedi:vapoforno-di-cipolla-armandina",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Vapoforno-di-Cipolla-Armandina-Prossedi"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Vapoforno-di-Cipolla-Armandina-Prossedi"
+          ]
+        },
+        {
+          "registrable_domain": "reteimprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.reteimprese.it/panifici-industriali-artigianali/prossedi/azienda/584865"
+          ]
+        }
+      ]
+    }
+  ]
+}

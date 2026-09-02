@@ -1,0 +1,798 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-unseen-development-041-060",
+  "partition": "development",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "reviewer": "codex-session-11-independent-review",
+  "reviewed_at": "2026-09-01T19:22:30Z",
+  "review_basis": "bounded fixture URL/title metadata plus explicitly separated manual first-party ownership evidence where recorded",
+  "scope_limitations": "Recognizable third-party publishers are rejected from bounded metadata. Accepted domains require separately recorded first-party evidence identifying both the venue branch and publisher control; remaining venue-branded domains stay uncertain.",
+  "entries": [
+    {
+      "venue_id": "venue:024121:zovencedo:villa-bonin",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g8333163-d4908847-Reviews-Ristorante_Alloggio_Villa_Bonin-San_Gottardo_Zovencedo_Province_of_Vicenza_Venet.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g8333163-d4908847-Reviews-Ristorante_Alloggio_Villa_Bonin-San_Gottardo_Zovencedo_Province_of_Vicenza_Venet.html"
+          ]
+        },
+        {
+          "registrable_domain": "booking.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.booking.com/hotel/it/villa-bonin.it.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g8333163-d4908847-Reviews-Ristorante_Alloggio_Villa_Bonin-San_Gottardo_Zovencedo_Province_of_Vicenza_Venet.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co/Restaurant_Review-g8333163-d4908847-Reviews-Ristorante_Alloggio_Villa_Bonin-San_Gottardo_Zovencedo_Province_of_Vicenza_Venet.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:026093:volpago-del-montello:mcdonald-s",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.mcdonalds.it/ristorante/veneto/treviso/volpago-del-montello",
+      "evidence_urls": [
+        "https://www.mcdonalds.it/ristorante/veneto/treviso/volpago-del-montello"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "mcdonalds.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.mcdonalds.it/ristorante/veneto/treviso/volpago-del-montello"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.mcdonalds.it/ristorante/veneto/treviso/volpago-del-montello",
+            "https://www.mcdonalds.it/avviso-variazione-titolarita-dei-dati-personali"
+          ]
+        },
+        {
+          "registrable_domain": "apple.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://maps.apple.com/place?place-id=IE8E4D1F87DB325BD"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023091:verona:barbarani",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.caffe-barbarani.it/?lang=it",
+      "evidence_urls": [
+        "https://www.caffe-barbarani.it/?lang=it"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "caffe-barbarani.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.caffe-barbarani.it/?lang=it"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://www.caffe-barbarani.it/?lang=it"
+          ]
+        },
+        {
+          "registrable_domain": "thefork.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.thefork.it/ristorante/caffe-barbarani-r496603"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187871-d2664951-Reviews-Caffe_Barbarani-Verona_Province_of_Verona_Veneto.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187871-d2664951-Reviews-Caffe_Barbarani-Verona_Province_of_Verona_Veneto.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:024091:sandrigo:aiva",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1081274-d27397424-Reviews-Aiva-Sandrigo_Province_of_Vicenza_Veneto.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1081274-d27397424-Reviews-Aiva-Sandrigo_Province_of_Vicenza_Veneto.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/AIVA-Sandrigo"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/aiva-0444-043013"
+          ]
+        },
+        {
+          "registrable_domain": "piatti.menu",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://piatti.menu/restaurants/sandrigo/aiva"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:028057:montegrotto-terme:principe-pizzeria-cicchetteria",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194832-d33761610-Reviews-Principe_Pizzeria_Cicchetteria-Montegrotto_Terme_Province_of_Padua_Veneto.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194832-d33761610-Reviews-Principe_Pizzeria_Cicchetteria-Montegrotto_Terme_Province_of_Padua_Veneto.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Pizzeria-Bar-Principe-Montegrotto-Terme"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:028060:padova:berlino-beer-food-music",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187867-d8630857-Reviews-Berlino_Beer_Food_Music-Padua_Province_of_Padua_Veneto.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187867-d8630857-Reviews-Berlino_Beer_Food_Music-Padua_Province_of_Padua_Veneto.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187867-d8630857-Reviews-Berlino_Beer_Food_Music-Padua_Province_of_Padua_Veneto.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Berlino-Beer-Music-and-Friends-Padua/menu"
+          ]
+        },
+        {
+          "registrable_domain": "justeat.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.justeat.it/restaurants-berlino---beer-food-and-music-padova/menu"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023021:castel-d-azzano:gelateria-millevoglie",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://linktr.ee/millevoglie"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "linktr.ee",
+          "publisher_class": "social",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://linktr.ee/millevoglie"
+          ]
+        },
+        {
+          "registrable_domain": "mapstr.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://mapstr.com/place/qCqcxRw8AM"
+          ]
+        },
+        {
+          "registrable_domain": "appgelato.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.appgelato.it/gelaterie/veneto/"
+          ]
+        },
+        {
+          "registrable_domain": "reteimprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.reteimprese.it/pasticcerie-produzione-ingrosso/castel-d-azzano"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023052:negrar-di-valpolicella:paradise-caffe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g661295-d15276547-Reviews-Paradise_CAFFE-Negrar_di_Valpolicella_Province_of_Verona_Veneto.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g661295-d15276547-Reviews-Paradise_CAFFE-Negrar_di_Valpolicella_Province_of_Verona_Veneto.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g661295-d15276547-Reviews-Paradise_CAFFE-Negrar_di_Valpolicella_Province_of_Verona_Veneto.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurants-g661295-c8-Negrar_di_Valpolicella_Province_of_Verona_Veneto.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027019:jesolo:seven",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.discotechejesolo.it/locale/bar-seven-jesolo"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "discotechejesolo.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.discotechejesolo.it/locale/bar-seven-jesolo"
+          ]
+        },
+        {
+          "registrable_domain": "jesolojournal.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.jesolojournal.com/wp-content/uploads/2022/09/JJ14-web.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g11962484-d27335359-Reviews-Bar_Seven-Lido_di_Jesolo_Jesolo_Veneto.html"
+          ]
+        },
+        {
+          "registrable_domain": "jesolobeach.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.jesolobeach.com/en/directory/food-beverage"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:025055:seren-del-grappa:forcelletto",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Seren-del-Grappa"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Seren-del-Grappa"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Rasai"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:031006:fogliano-redipuglia:ai-trosi",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.prolocofoglianoredipuglia.it/dove-mangiare/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "prolocofoglianoredipuglia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.prolocofoglianoredipuglia.it/dove-mangiare/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Ai-Trosi-Polazzo"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Ai-Trosi-Polazzo/menu"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093041:san-vito-al-tagliamento:canton",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Al-Canton-San-Vito-al-Tagliamento"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Al-Canton-San-Vito-al-Tagliamento"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/San-Vito-al-Tagliamento"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:calo",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187813-d19614722-Reviews-Pizzeria_Calo-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187813-d19614722-Reviews-Pizzeria_Calo-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html"
+          ]
+        },
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://pizzeriacalo.eatbu.com/?lang=it"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187813-d19614722-Reviews-Pizzeria_Calo-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030108:savogna:crisnaro",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g11740704-d14022015-Reviews-Bar_Crisnaro-Savogna_Province_of_Udine_Friuli_Venezia_Giulia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g11740704-d14022015-Reviews-Bar_Crisnaro-Savogna_Province_of_Udine_Friuli_Venezia_Giulia.html"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/bar-crisnaro-0432-714000"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g11740704-d14022015-Reviews-Bar_Crisnaro-Savogna_Province_of_Udine_Friuli_Venezia_Giulia.html"
+          ]
+        },
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/bar-crisnaro-via-kennedy-21-savogna?to=place.w.8847822.88674824.20970953"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:031012:monfalcone:novo",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/RestaurantsNear-g194829-d27194839-Bar_Novo-Monfalcone_Province_of_Gorizia_Friuli_Venezia_Giulia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/RestaurantsNear-g194829-d27194839-Bar_Novo-Monfalcone_Province_of_Gorizia_Friuli_Venezia_Giulia.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/BAR-NOVO-Monfalcone"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/monfalcone-go-it/attivita/bar/bar-novo/"
+          ]
+        },
+        {
+          "registrable_domain": "aptgorizia.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.aptgorizia.it/wp-content/uploads/2025/06/Diretta-stazione-cantieri_Estate-2025_servizio-urbano-Monfalcone.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030129:udine:fattori-di-bonta",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://fattori-di-bonta.eatbu.com/?lang=it"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://fattori-di-bonta.eatbu.com/?lang=it"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Fattori-di-Bonta-Udine"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/fattori-di-bont%C3%A0-348-836-3202"
+          ]
+        },
+        {
+          "registrable_domain": "deliveroo.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://deliveroo.it/it/menu/udine/udine-centro/gelateria-fattori-di-bonta"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030008:bagnaria-arsa:foody",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1454010-d13879862-Reviews-Foody-Bagnaria_Arsa_Province_of_Udine_Friuli_Venezia_Giulia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1454010-d13879862-Reviews-Foody-Bagnaria_Arsa_Province_of_Udine_Friuli_Venezia_Giulia.html"
+          ]
+        },
+        {
+          "registrable_domain": "menustic.com",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://foody.menustic.com/"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/bagnaria-arsa-ud-it/attivita/ristorante/foody/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1454010-d13879862-Reviews-Foody-Bagnaria_Arsa_Province_of_Udine_Friuli_Venezia_Giulia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030116:tarcento:tana-dei-folletti",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1514874-d27196053-Reviews-Pizzeria_Dal_Lep_Tarcento-Loneriacco_di_Tarcento_Province_of_Udine_Friuli_Venez.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1514874-d27196053-Reviews-Pizzeria_Dal_Lep_Tarcento-Loneriacco_di_Tarcento_Province_of_Udine_Friuli_Venez.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Pizzeria-DalLep-Tarcento"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/dal-lep-351-551-2630"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Pizzeria-DalLep-Tarcento"
+          ]
+        },
+        {
+          "registrable_domain": "altraopinione.org",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://altraopinione.org/pizzeria/tarcento/dal-lep/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030129:udine:assaje",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.assaje.it/locations/udine/",
+      "evidence_urls": [
+        "https://www.assaje.it/locations/udine/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "assaje.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.assaje.it/locations/udine/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://www.assaje.it/locations/udine/",
+            "https://www.assaje.it/contatti/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187814-d17593064-Reviews-Assaje-Udine_Province_of_Udine_Friuli_Venezia_Giulia.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187814-d17593064-Reviews-Assaje-Udine_Province_of_Udine_Friuli_Venezia_Giulia.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Assaje-Udine"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093018:cordovado:borgo",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Caffe-Al-Borgo-Cordovado"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Caffe-Al-Borgo-Cordovado"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1986666-d27378111-Reviews-Caffe_Al_Borgo-Cordovado_Province_of_Pordenone_Friuli_Venezia_Giulia.html"
+          ]
+        },
+        {
+          "registrable_domain": "turismocordovado.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://turismocordovado.it/dove-mangiare-e-dove-dormire/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Caffe-Al-Borgo-Cordovado"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.de",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.de/Restaurant_Review-g1986666-d27378111-Reviews-Caffe_Al_Borgo-Cordovado_Province_of_Pordenone_Friuli_Venezia_Giulia.html"
+          ]
+        }
+      ]
+    }
+  ]
+}

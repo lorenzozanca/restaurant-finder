@@ -1,0 +1,816 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-unseen-development-021-040",
+  "partition": "development",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "reviewer": "codex-session-11-independent-review",
+  "reviewed_at": "2026-09-01T19:22:30Z",
+  "review_basis": "bounded fixture URL/title metadata plus explicitly separated manual first-party ownership evidence where recorded",
+  "scope_limitations": "Recognizable third-party publishers are rejected from bounded metadata. Accepted domains require separately recorded first-party evidence identifying both the venue branch and publisher control; remaining venue-branded domains stay uncertain.",
+  "entries": [
+    {
+      "venue_id": "venue:016086:costa-volpino:ai-ciar",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g2370897-d2350149-Reviews-Locanda_Ai_Ciar-Costa_Volpino_Province_of_Bergamo_Lombardy.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2370897-d2350149-Reviews-Locanda_Ai_Ciar-Costa_Volpino_Province_of_Bergamo_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g2370897-d2350149-Reviews-Locanda_Ai_Ciar-Costa_Volpino_Province_of_Bergamo_Lombardy.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:015168:parabiago:piadineria-del-genio",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1079033-d19631279-Reviews-La_Piadineria_del_Genio-Parabiago_Province_of_Milan_Lombardy.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1079033-d19631279-Reviews-La_Piadineria_del_Genio-Parabiago_Province_of_Milan_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1079033-d19631279-Reviews-La_Piadineria_del_Genio-Parabiago_Province_of_Milan_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.es",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.es/Restaurant_Review-g1079033-d19631279-Reviews-La_Piadineria_del_Genio-Parabiago_Province_of_Milan_Lombardy.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:016024:bergamo:del-colleoni",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.caffedelcolleoni.it/food.asp",
+      "evidence_urls": [
+        "https://www.caffedelcolleoni.it/food.asp"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "caffedelcolleoni.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.caffedelcolleoni.it/food.asp"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.caffedelcolleoni.it/food.asp",
+            "https://www.caffedelcolleoni.it/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187830-d3860419-Reviews-Caffe_del_Colleoni-Bergamo_Province_of_Bergamo_Lombardy.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:020064:sustinente:piper-di-paganella-martina",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Bar-Piper-Sustinente-2"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Piper-Sustinente-2"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/2319/bar-piper-di-leggi-e-scrivi-di-paganella-martina"
+          ]
+        },
+        {
+          "registrable_domain": "lombardia.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.regione.lombardia.it/wps/wcm/connect/f3b1ba80-2ac0-4c91-8dbe-0b7b48d71e7f/6502.pdf?CACHEID=ROOTWORKSPACE-f3b1ba80-2ac0-4c91-8dbe-0b7b48d71e7f-o-wukz6&MOD=AJPERES"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:014045:morbegno:ventuno",
+      "official_website_status": "accepted",
+      "official_website_url": "https://pizzeriaventuno.it/",
+      "evidence_urls": [
+        "https://pizzeriaventuno.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "pizzeriaventuno.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://pizzeriaventuno.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://pizzeriaventuno.it/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1930015-d23866500-Reviews-Pizzeria_Ventuno-Morbegno_Province_of_Sondrio_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1930015-d23866500-Reviews-Pizzeria_Ventuno-Morbegno_Province_of_Sondrio_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g1930015-d23866500-Reviews-Pizzeria_Ventuno-Morbegno_Province_of_Sondrio_Lombardy.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:015146:milano:terzo-tempo",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187849-d12207252-Reviews-Terzo_Tempo-Milan_Lombardy.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187849-d12207252-Reviews-Terzo_Tempo-Milan_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Terzo-Tempo-Milan"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g187849-d12207252-Reviews-Terzo_Tempo-Milan_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "tuttamilano.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttamilano.it/terzo-tempo-milano-802"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:016222:urgnano:delizie-pasticceria-gelateria",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/delizie-pasticceria-gelateria-035-481-9859"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/delizie-pasticceria-gelateria-035-481-9859"
+          ]
+        },
+        {
+          "registrable_domain": "associazionepromourgnano.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.associazionepromourgnano.it/wp-content/uploads/2024/02/Programma-Festa-in-Rocca-2016.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "ecodibergamo.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ecodibergamo.it/stories/eppen/cibo/il-gustavo-consiglia/due-anni-delizie-buon-compleanno-o_2203531_11/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:015085:corbetta:santo-stefano-2",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://ristorantepizzeriasantostefano2.eatbu.com/?lang=it"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://ristorantepizzeriasantostefano2.eatbu.com/?lang=it"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1221352-d7691212-Reviews-Santo_Stefano_2-Corbetta_Province_of_Milan_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Santo-Stefano-2-Corbetta"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:013075:como:da-benito-pizzeria",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.pizzeriadabenito.it/contatti.php",
+      "evidence_urls": [
+        "https://www.pizzeriadabenito.it/contatti.php"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "pizzeriadabenito.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.pizzeriadabenito.it/contatti.php"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://www.pizzeriadabenito.it/contatti.php"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187835-d1114272-Reviews-Pizzeria_Trattoria_Da_Benito-Como_Lake_Como_Lombardy.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://es.restaurantguru.com/Pizzeria-Da-Benito-Como"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:108032:misinto:l-incontro",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/LIncontro-Di-Colombo-Gianfranco-Misinto"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/LIncontro-Di-Colombo-Gianfranco-Misinto"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Misinto-Bar%2520L%2527Incontro-4619114N.html"
+          ]
+        },
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://lincontrodicolombogianfranco.eatbu.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022052:cavedago:picchio-rosso",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.alpicchiorosso.com/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "alpicchiorosso.com",
+          "publisher_class": "uncertain",
+          "ownership_status": "uncertain",
+          "evidence_urls": [
+            "https://www.alpicchiorosso.com/"
+          ],
+          "uncertainty_reviewed_at": "2026-09-01T19:22:30Z",
+          "uncertainty_evidence_urls": [
+            "https://www.alpicchiorosso.com/"
+          ],
+          "uncertainty_reason": "The first-party venue page identifies the Cavedago restaurant and domain contact details but no legal operator or equivalent publisher-control attestation."
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1053406-d15694317-Reviews-Al_Picchio_Rosso-Cavedago_Province_of_Trento_Trentino_Alto_Adige.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1053406-d15694317-Reviews-Al_Picchio_Rosso-Cavedago_Province_of_Trento_Trentino_Alto_Adige.html"
+          ]
+        },
+        {
+          "registrable_domain": "cavedagovacanze.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.cavedagovacanze.it/index.php/ristoranti/item/ristorante-al-picchio-rosso"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022153:riva-del-garda:piadineria",
+      "official_website_status": "accepted",
+      "official_website_url": "https://lapiadineria.com/i-nostri-ristoranti/riva-del-garda",
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194883-d13091508-Reviews-La_Piadineria-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194883-d13091508-Reviews-La_Piadineria-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html"
+          ]
+        },
+        {
+          "registrable_domain": "lapiadineria.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/riva-del-garda"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/riva-del-garda",
+            "https://lapiadineria.com/privacy-policy"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/La-Piadineria-Riva-del-Garda-Riva-del-Garda"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g194883-d13091508-Reviews-La_Piadineria-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co.uk",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co.uk/Restaurant_Review-g194883-d13091508-Reviews-La_Piadineria-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:casa-al-torchio",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187857-d1055409-Reviews-or675-Ristorante_Pizzeria_Casa_Al_Torchio-Bolzano_Province_of_South_Tyrol_Trentin.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187857-d1055409-Reviews-or675-Ristorante_Pizzeria_Casa_Al_Torchio-Bolzano_Province_of_South_Tyrol_Trentin.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.de",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.de/Restaurant_Review-g187857-d1055409-Reviews-Ristorante_Pizzeria_Casa_Al_Torchio-Bolzano_Province_of_South_Tyrol_Trentino_Alto.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.at",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.at/Restaurant_Review-g187857-d1055409-Reviews-Ristorante_Pizzeria_Casa_Al_Torchio-Bolzano_Province_of_South_Tyrol_Trentino_Alto.html"
+          ]
+        },
+        {
+          "registrable_domain": "holidaycheck.de",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.holidaycheck.de/pi/restaurant-torgglhaus-ristorante-pizzeria-casa-al-torchio/38e57114-8ad5-3b57-86c0-a2097031707a"
+          ]
+        },
+        {
+          "registrable_domain": "holidaycheck.ch",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.holidaycheck.ch/pi/restaurant-torgglhaus-ristorante-pizzeria-casa-al-torchio/38e57114-8ad5-3b57-86c0-a2097031707a"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022025:brentonico:brillo-parlante",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/il-brillo-parlante_30a-348-335-8136"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/il-brillo-parlante_30a-348-335-8136"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Il-Brillo-Parlante-Brentonico"
+          ]
+        },
+        {
+          "registrable_domain": "fermopoint.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.fermopoint.it/punto-di-ritiro-e-di-spedizione-pacchi/Il-Brillo-Parlante-19425"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/9308/il-brillo-parlante-di-giovanazzi-daniele-e-c-sas"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021051:merano-meran:lauben",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.ch/Restaurant_Review-g187860-d2720085-Reviews-Cafe_Lauben-Merano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.ch/Restaurant_Review-g187860-d2720085-Reviews-Cafe_Lauben-Merano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.de",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.de/Restaurant_Review-g187860-d2720085-Reviews-Cafe_Lauben-Merano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+          ]
+        },
+        {
+          "registrable_domain": "holidaycheck.de",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.holidaycheck.de/pi/cafe-lauben/994e89d7-6138-3de5-aa5c-b838b96f32bc"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022205:trento:maly-bar",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Malybar-Trento"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Malybar-Trento"
+          ]
+        },
+        {
+          "registrable_domain": "filippiegardumi.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.filippiegardumi.it/bar/"
+          ]
+        },
+        {
+          "registrable_domain": "tn.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.mercurio.provincia.tn.it/areaenti/doc/Elenco_locali_convenzionati_bpe_aggiornato.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/malybar-0461-096651"
+          ]
+        },
+        {
+          "registrable_domain": "lavocedeltrentino.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://lavocedeltrentino.it/dalle-valli/chiudono-due-bar-storici-a-villa-lagarina-il-bar-roma-aperto-da-107-anni-a-trento-il-maly-bar-di-via-vittorio-veneto-dopo-55-anni-di-attivita/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021098:termeno-sulla-strada-del-vino-tramin-an-der-weinstra-e:obermaier",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.holidaycheck.de/pi/cafe-obermaier/92e69d13-d2b3-3811-a056-1c4cebbbcccf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "holidaycheck.de",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.holidaycheck.de/pi/cafe-obermaier/92e69d13-d2b3-3811-a056-1c4cebbbcccf"
+          ]
+        },
+        {
+          "registrable_domain": "suedtirol.info",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.suedtirol.info/en/en/experiences-and-events/plp-experiences/tvs/tramin-termeno/restaurants.page0"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022104:levico-terme:rociondola-sunset-bar",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://lombardiashopping.it/attivita/la-rociondola-sunset-bar-levico-terme-tn/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lombardiashopping.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://lombardiashopping.it/attivita/la-rociondola-sunset-bar-levico-terme-tn/"
+          ]
+        },
+        {
+          "registrable_domain": "ilvenetoshopping.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://ilvenetoshopping.it/attivita/la-rociondola-sunset-bar-levico-terme-tn/"
+          ]
+        },
+        {
+          "registrable_domain": "iltrentinoshopping.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://iltrentinoshopping.it/attivita/la-rociondola-sunset-bar-levico-terme/"
+          ]
+        },
+        {
+          "registrable_domain": "papido.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.papido.it/trento/cocktail-bar/la-rociondola.htm"
+          ]
+        },
+        {
+          "registrable_domain": "apetime.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.apetime.com/locali/levico-terme-tn/rociondola-sunset-bar"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:theiner",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.de/Restaurant_Review-g187857-d10620103-Reviews-Caffe_Theiner-Bolzano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.de",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.de/Restaurant_Review-g187857-d10620103-Reviews-Caffe_Theiner-Bolzano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+          ]
+        },
+        {
+          "registrable_domain": "hotelpichler.com",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.hotelpichler.com/it/service/colofone"
+          ]
+        },
+        {
+          "registrable_domain": "taa.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.regione.taa.it/content/download/48761/3660764/file/MALLES_VENOSTA2025.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "registroaziende.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://registroaziende.it/azienda/mountain-bistro-snc-di-lechner-diana-e-di-theiner-fabian-mountain-bistro-ohg-der-lechner-diana-und-d-rio-di-pusteria"
+          ]
+        },
+        {
+          "registrable_domain": "camcom.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://albocamerale.camcom.it/bz/sites/bz/files/lwa/111260/atto_48_2025_54_12_2025000012/GDOC3_D_12024509_3_Gettoni%20presenza%202_2024_calcolo.xlsx.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021018:castelbello-ciardes-kastelbell-tschars:etzthaler",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.de/Restaurant_Review-g1419865-d3844335-Reviews-Bar_Cafe_Etzthaler-Castelbello_Ciardes_Province_of_South_Tyrol_Trentino_Alto_Adi.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.de",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.de/Restaurant_Review-g1419865-d3844335-Reviews-Bar_Cafe_Etzthaler-Castelbello_Ciardes_Province_of_South_Tyrol_Trentino_Alto_Adi.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/RestaurantsNear-g1419865-d18957883-Kastelbell_Tschars-Castelbello_Ciardes_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurants-g1419865-Castelbello_Ciardes_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.ch/Restaurants-g1419865-Castelbello_Ciardes_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+          ]
+        }
+      ]
+    }
+  ]
+}

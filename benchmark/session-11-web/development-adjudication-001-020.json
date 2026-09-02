@@ -1,0 +1,807 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-unseen-development-001-020",
+  "partition": "development",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "reviewer": "codex-session-11-independent-review",
+  "reviewed_at": "2026-09-01T17:58:48Z",
+  "review_basis": "bounded fixture URL/title metadata plus explicitly separated manual first-party ownership evidence where recorded",
+  "scope_limitations": "Recognizable third-party publishers are rejected from bounded metadata. Accepted domains require separately recorded first-party evidence identifying both the venue branch and publisher control; remaining venue-branded domains stay uncertain.",
+  "entries": [
+    {
+      "venue_id": "venue:004144:morozzo:ciapula",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.cn.camcom.it/sites/default/files/uploads/documents/Biblioteca/Pubblicazioni/Guida%20ospitalit%C3%A0%20italiana%20Cuneo%202017.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "camcom.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.cn.camcom.it/sites/default/files/uploads/documents/Biblioteca/Pubblicazioni/Guida%20ospitalit%C3%A0%20italiana%20Cuneo%202017.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "cn.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://comune.morozzo.cn.it/mappa-servizi-economia/servizi"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001265:settimo-torinese:kfc",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1055360-d21354017-Reviews-KFC-Settimo_Torinese_Province_of_Turin_Piedmont.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1055360-d21354017-Reviews-KFC-Settimo_Torinese_Province_of_Turin_Piedmont.html"
+          ]
+        },
+        {
+          "registrable_domain": "gov.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.mimit.gov.it/images/stories/documenti/province/tavola/Piemonte_-_TO_-_Torino.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1055360-d21354017-Reviews-KFC-Settimo_Torinese_Province_of_Turin_Piedmont.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Doppio-Malto-Brew-Restaurant-Settimo-Torinese"
+          ]
+        },
+        {
+          "registrable_domain": "altraopinione.org",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://altraopinione.org/ristorante/settimo-torinese/kfc/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001272:torino:bivio-concept-cafe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187855-d6754954-Reviews-Ristorante_Bivio_Concept_Cafe-Turin_Province_of_Turin_Piedmont.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187855-d6754954-Reviews-Ristorante_Bivio_Concept_Cafe-Turin_Province_of_Turin_Piedmont.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bivio-Concept-Cafe-Turin"
+          ]
+        },
+        {
+          "registrable_domain": "apetime.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.apetime.com/locali/torino-to/bivio-concept-cafe"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/torino/ristorante/166066/ristorante-bivio-concept-cafe"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:004097:gorzegno:fa-ch-et-n-abi-di-clara-anna-e-elena",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.localshop24.com/it/gorzegno-cn-it/attivita/pizzeria/bar-pizzeria-fa-chet-nabi-di-clara-anna-elena/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/gorzegno-cn-it/attivita/pizzeria/bar-pizzeria-fa-chet-nabi-di-clara-anna-elena/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Tavola-calda-Pizzeria-Fa-chet-nabi-di-Clara-Anna-and-Elena-Gorzegno"
+          ]
+        },
+        {
+          "registrable_domain": "mymenuweb.com",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://mymenuweb.com/it/restaurants/889333/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001115:giaveno:arabesque",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.com/Restaurant_Review-g1054624-d8710705-Reviews-Caffe_Arabesque-Giaveno_Province_of_Turin_Piedmont.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1054624-d8710705-Reviews-Caffe_Arabesque-Giaveno_Province_of_Turin_Piedmont.html"
+          ]
+        },
+        {
+          "registrable_domain": "visitgiaveno.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.visitgiaveno.it/mangiare/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Caffe-Narghile-Arabesque-Giaveno"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/caff%C3%A8-arabesque-388-166-4811"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Caffe-Narghile-Arabesque-Giaveno"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:096004:biella:baretto-cocktails-aperitivi",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/baretto-cocktails-aperitivi-015-28499"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/baretto-cocktails-aperitivi-015-28499"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Baretto-Cocktailsandaperitivi-Biella"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/biella-bi-it/attivita/caffetteria/baretto-cocktails-aperitivi/"
+          ]
+        },
+        {
+          "registrable_domain": "grubbio.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://baretto-cocktails-aperitivi.grubbio.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001254:san-secondo-di-pinerolo:gelateria-caffetteria-piazza-europa",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1055366-d10330692-Reviews-Gelateria_Caffetteria_Piazza_Europa-San_Secondo_di_Pinerolo_Province_of_Turin_P.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1055366-d10330692-Reviews-Gelateria_Caffetteria_Piazza_Europa-San_Secondo_di_Pinerolo_Province_of_Turin_P.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Gelateria-Caffetteria-Piazza-Europa-Italy"
+          ]
+        },
+        {
+          "registrable_domain": "to.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.comune.sansecondodipinerolo.to.it/Guidaalpaese?IDDettaglio=49982"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.com/it/san-secondo-di-pinerolo/restaurant/164354/gelateria-caffetteria-piazza-europa/reviews"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/san-secondo-di-pinerolo/ristorante/164354/gelateria-caffetteria-piazza-europa"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:003024:borgomanero:del-ponte",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1131346-d4753896-Reviews-Gelateria_del_ponte-Borgomanero_Province_of_Novara_Piedmont.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1131346-d4753896-Reviews-Gelateria_del_ponte-Borgomanero_Province_of_Novara_Piedmont.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1131346-d4753896-Reviews-Gelateria_del_ponte-Borgomanero_Province_of_Novara_Piedmont.html"
+          ]
+        },
+        {
+          "registrable_domain": "visitborgomanero.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.visitborgomanero.it/categoria/ospitalita/mangiare/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:003106:novara:roma",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.trattoriapizzeriaroma.com/trattoria",
+      "evidence_urls": [
+        "https://www.trattoriapizzeriaroma.com/trattoria"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "trattoriapizzeriaroma.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.trattoriapizzeriaroma.com/trattoria"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.trattoriapizzeriaroma.com/trattoria",
+            "https://www.trattoriapizzeriaroma.com/trattoria"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2291776-d3345016-Reviews-Trattoria_Pizzeria_Roma-Lumellogno_Novara_Province_of_Novara_Piedmont.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g2291776-d3345016-Reviews-Trattoria_Pizzeria_Roma-Lumellogno_Novara_Province_of_Novara_Piedmont.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:002049:crescentino:vanilla-cafe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g2186333-d23689087-Reviews-Vanilla_Cafe-Crescentino_Province_of_Vercelli_Piedmont.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2186333-d23689087-Reviews-Vanilla_Cafe-Crescentino_Province_of_Vercelli_Piedmont.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Vanilla-Cafe-Crescentino"
+          ]
+        },
+        {
+          "registrable_domain": "piemonte.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://secure.regione.piemonte.it/fpl/elenco/v.htm"
+          ]
+        },
+        {
+          "registrable_domain": "vc.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.comune.crescentino.vc.it/criteri-di-adeguamento-commerciale.html?file=tl_files%2Ffile_e_immagini%2FURBANISTICA%2F03_relazione.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Vanilla-Cafe-Crescentino"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007064:saint-rhemy-en-bosses:prosciutteria-sous-le-pont-de-bosses",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.lovevda.it/it/banca-dati/16/tavole-calde-enoteche-pub/saint-rhemy-en-bosses/prosciutteria-sous-le-pont-de-bosses/2795"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lovevda.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.lovevda.it/it/banca-dati/16/tavole-calde-enoteche-pub/saint-rhemy-en-bosses/prosciutteria-sous-le-pont-de-bosses/2795"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.fr",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.fr/Restaurant_Review-g1497864-d4723473-Reviews-Prosciutteria_Sous_Le_Pont_de_Bosses-Saint_Rhemy_en_Bosses_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "touringclub.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.touringclub.it/destinazioni/saint-rhemy-en-bosses/mangiare/219012-prosciutteria-sous-le-pont-de-bosses"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1497864-d4723473-Reviews-Prosciutteria_Sous_Le_Pont_de_Bosses-Saint_Rhemy_en_Bosses_Valle_d_Aosta.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007003:aosta:anfiteatro",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Caffe-Anfiteatro-Aosta"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Caffe-Anfiteatro-Aosta"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://es.restaurantguru.com/Caffe-Anfiteatro-Aosta"
+          ]
+        },
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/place/details/7465681/bar-caff%C3%A8-anfiteatro"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007007:ayas:sayoc-pian-villy-champoluc",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.losayoc.it/cookie-policy-ue/",
+      "evidence_urls": [
+        "https://www.losayoc.it/cookie-policy-ue/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ao.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://comune.ayas.ao.it/it-it/download/brochure-437888-4-1329-24761e4be734fda41ca83385862c3cd2"
+          ]
+        },
+        {
+          "registrable_domain": "losayoc.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.losayoc.it/cookie-policy-ue/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.losayoc.it/cookie-policy-ue/",
+            "https://www.losayoc.it/cookie-policy-ue/"
+          ]
+        },
+        {
+          "registrable_domain": "lovevda.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.lovevda.it/it/ricerche/dove-mangiare-90/champoluc-ayas-antagnod/366?disableresources=1&embeddedui=1&rootPath=%2Fit%2Fricerche%2Fdove-mangiare-90%2Fchampoluc-ayas-antagnod%2F366&tipo=ricerca&url=%2FHome%2FRisultati%2F42218347A8FFF88346BA2382F6325062F6C98806A591F5731E9AD%2F6%2F10%2Fdata&visfoto=3"
+          ]
+        },
+        {
+          "registrable_domain": "vda.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.gal.vda.it/progetto/lo-sayoc-pian-villy/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007002:antey-saint-andre:copapan",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.lovevda.it/it/banca-dati/16/dove-mangiare/antey-saint-andre/copapan/2207"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g660755-d16883021-Reviews-Ristorante_Pizzeria_Copapan-Antey_Saint_Andre_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "lovevda.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.lovevda.it/it/banca-dati/16/dove-mangiare/antey-saint-andre/copapan/2207"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g660755-d16883021-Reviews-Ristorante_Pizzeria_Copapan-Antey_Saint_Andre_Valle_d_Aosta.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007071:valtournenche:ymeletrob",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187864-d3879114-Reviews-Ymeletrob-Breuil_Cervinia_Valtournenche_Valle_d_Aosta.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187864-d3879114-Reviews-Ymeletrob-Breuil_Cervinia_Valtournenche_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187864-d3879114-Reviews-Ymeletrob-Breuil_Cervinia_Valtournenche_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "apple.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://maps.apple.com/place?place-id=I1DE428BD438A7FDE"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007022:courmayeur:berthod",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187865-d10837646-Reviews-Bar_Berthod_Di_Berthod_Daniela-Courmayeur_Valle_d_Aosta.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187865-d10837646-Reviews-Bar_Berthod_Di_Berthod_Daniela-Courmayeur_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187865-d10837646-Reviews-Bar_Berthod_Di_Berthod_Daniela-Courmayeur_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/BAR-Berthod-Pomber-di-Berthod-Daniela-Courmayeur"
+          ]
+        },
+        {
+          "registrable_domain": "abillion.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.abillion.com/it/restaurants/bar-berthod-11444976"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007031:gressan:baoutson",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://wanderlog.com/place/details/2756337/ristorante-bar-lo-baoutson"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/place/details/2756337/ristorante-bar-lo-baoutson"
+          ]
+        },
+        {
+          "registrable_domain": "mycia.it",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.mycia.it/menu/aosta-valley/ristorante-bar-lo-baoutson-3hs9Wd5zf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007003:aosta:gelateria-il-pinguino",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187863-d11982643-Reviews-Gelateria_Il_Pinguino-Aosta_Valle_d_Aosta.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187863-d11982643-Reviews-Gelateria_Il_Pinguino-Aosta_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187863-d11982643-Reviews-Gelateria_Il_Pinguino-Aosta_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "gelatomaps.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://gelatomaps.com/it/gelateria/the-penguin-gelato-shop-gelateria-il-pinguino-aosta/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007073:verres:omens",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.trattoriaomens.it/",
+      "evidence_urls": [
+        "https://www.trattoriaomens.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "trattoriaomens.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.trattoriaomens.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.trattoriaomens.it/",
+            "https://www.trattoriaomens.it/"
+          ]
+        },
+        {
+          "registrable_domain": "lovevda.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.lovevda.it/it/banca-dati/16/ristoranti/verres/trattoria-omens/2215"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g736265-d2025185-Reviews-Trattoria_Omens-Verres_Valle_d_Aosta.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007044:morgex:biker-s-pub",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g736257-d12332264-Reviews-Biker_s_Pub-Morgex_Valle_d_Aosta.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g736257-d12332264-Reviews-Biker_s_Pub-Morgex_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g736257-d12332264-Reviews-Biker_s_Pub-Morgex_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g736257-d12332264-Reviews-Biker_s_Pub-Morgex_Valle_d_Aosta.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bikers-pub-di-Morgex-Morgex"
+          ]
+        }
+      ]
+    }
+  ]
+}

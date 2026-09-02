@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "freeze_id": "session-11-web-official-site-v1",
+  "frozen_at": "2026-09-02T00:00:00Z",
+  "status": "frozen_before_locked_holdout_capture",
+  "base_commit": "02de253",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "prediction_policy": "publish only a candidate domain with independently verified venue ownership",
+  "frozen_files": {
+    "lib/web-stress-fixture.mjs": "1ebcca07ce23b43353573deb2b67e3ec6c0a7bf256966fd142fdb6efeff3b825",
+    "lib/publisher-ownership.mjs": "ebc028cadae67062c707688fae9b2211534761caf717bcaf8f50fd3294fbfb1b",
+    "benchmark/evaluate-session-11-web.mjs": "5c07cf13e8370ec731e98650fa3e3fa48a5de6a69ab933c05457dd2c97650dad"
+  },
+  "development_report": {
+    "path": "benchmark/SESSION-11-DEVELOPMENT-WEB-EVALUATION.json",
+    "sha256": "5fd323071525aaea5a0152ecb4d2f924614e4eb9c9a002a4e8c3df12e8187c5b",
+    "venues_reviewed": 200,
+    "publications": 29,
+    "true_publications": 29,
+    "false_publications": 0,
+    "coverage": 0.145,
+    "precision_wilson_95_lower": 0.8830302015002593,
+    "passes_precision_target": false
+  },
+  "locked_holdout": {
+    "captured": false,
+    "evaluated": false,
+    "retirement_rule": "Any policy or frozen-code change caused by locked-holdout results retires this holdout."
+  },
+  "limitations": [
+    "The minimal URL/title fixtures do not contain resource-role predictions or adjudications, so preregistered resource-role metrics remain not evaluated.",
+    "Development publication quality is underpowered for the 95% Wilson-lower-bound target despite zero observed false publications.",
+    "This freeze authorizes no publication and no Brave requests."
+  ]
+}

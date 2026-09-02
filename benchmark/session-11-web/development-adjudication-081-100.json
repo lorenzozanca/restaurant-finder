@@ -1,0 +1,841 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-unseen-development-081-100",
+  "partition": "development",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "reviewer": "codex-session-11-independent-review",
+  "reviewed_at": "2026-09-01T19:22:30Z",
+  "review_basis": "bounded fixture URL/title metadata plus explicitly separated manual first-party ownership evidence where recorded",
+  "scope_limitations": "Recognizable third-party publishers are rejected from bounded metadata. Accepted domains require separately recorded first-party evidence identifying both the venue branch and publisher control; remaining venue-branded domains stay uncertain.",
+  "entries": [
+    {
+      "venue_id": "venue:046035:villa-collemandina:rifugio-isera-orecchiella",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1918701-d7035492-Reviews-Rifugio_Isera_Orecchiella-Villa_Collemandina_Province_of_Lucca_Tuscany.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1918701-d7035492-Reviews-Rifugio_Isera_Orecchiella-Villa_Collemandina_Province_of_Lucca_Tuscany.html"
+          ]
+        },
+        {
+          "registrable_domain": "parcoappennino.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.parcoappennino.it/operatore.php?id=12491"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g1918701-d7035492-Reviews-Rifugio_Isera_Orecchiella-Villa_Collemandina_Province_of_Lucca_Tuscany.html"
+          ]
+        },
+        {
+          "registrable_domain": "parks.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.parks.it/rif/isera/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:052022:poggibonsi:mcdonald-s",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html",
+      "evidence_urls": [
+        "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "mcdonalds.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html",
+            "https://www.mcdonalds.it/avviso-variazione-titolarita-dei-dati-personali"
+          ]
+        },
+        {
+          "registrable_domain": "glovoapp.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://glovoapp.com/it/it/poggibonsi/categories/ristoranti_1"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:050026:pisa:deviribe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Deviribe-Pisa"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Deviribe-Pisa"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/devirib%C3%A8-pisa-392-967-6640"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Attraction_Review-g187899-d12081108-Reviews-Deviribe-Pisa_Province_of_Pisa_Tuscany.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:053023:scansano:dell-arco",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Caffe-DellArco-Scansano"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Caffe-DellArco-Scansano"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Scansano"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Attraction_Review-g642191-d5932789-Reviews-Caffe_Dell_Arco-Scansano_Province_of_Grosseto_Tuscany.html"
+          ]
+        },
+        {
+          "registrable_domain": "hotels.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.hotels.com/ho3412702528/villa-borgiano-in-scansano/"
+          ]
+        },
+        {
+          "registrable_domain": "tenutalemandorlaie.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tenutalemandorlaie.it/it/caffe-dellarco-scopri-questo-amato-bar-e-caffetteria-a-scansano/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:049014:portoferraio:maga",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/pizzeria-maga-0565-919170"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/pizzeria-maga-0565-919170"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/MAGA-Portoferraio"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/portoferraio-li-it/attivita/pizzeria/pizzeria-maga/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/MAGA-Portoferraio"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:049009:livorno:soft-caffe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/soft-caff%C3%A8-livorno-327-704-4791"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/soft-caff%C3%A8-livorno-327-704-4791"
+          ]
+        },
+        {
+          "registrable_domain": "poliziadistato.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://questure.poliziadistato.it/it/Livorno/articolo/11765bc6fc1219a81199306900"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Metropoli-Livorno"
+          ]
+        },
+        {
+          "registrable_domain": "reteimprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.reteimprese.it/bar-caffetterie/livorno/zona/"
+          ]
+        },
+        {
+          "registrable_domain": "viaggibellissimi.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.viaggibellissimi.it/wp-content/uploads/2025/10/2%C2%B0-gruppo-Kenya-26-febbraio.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:052035:torrita-di-siena:gelateria-crystal",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.oraridiapertura24.it/filiale/Torrita%2520di%2520Siena-Bar%2520Gelateria%2520Crystal-2780238C.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Torrita%2520di%2520Siena-Bar%2520Gelateria%2520Crystal-2780238C.html"
+          ]
+        },
+        {
+          "registrable_domain": "pedalefermano.com",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.pedalefermano.com/php/index.php?Itemid=41&id=139&option=com_content&task=view"
+          ]
+        },
+        {
+          "registrable_domain": "ar.it",
+          "publisher_class": "uncertain",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.confesercenti.ar.it/wp-content/uploads/2021/02/A_ELENCO-AMMESSE-FINANZIATE.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "toscana.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.regione.toscana.it/documents/10180/24953224/beneficiari_SI.pdf/6ef781ab-8bc0-0f6e-ec57-79939f599f06?t=1589550867647"
+          ]
+        },
+        {
+          "registrable_domain": "lucabonacini.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.lucabonacini.it/2017/03/gelato-world-tour-si-decidono-i-migliori-8-che-vanno-al-mondiale/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:052012:colle-di-val-d-elsa:play-game",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g668223-d25208402-Reviews-Play_Game_Pub_Bar-Colle_di_Val_d_Elsa_Tuscany.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g668223-d25208402-Reviews-Play_Game_Pub_Bar-Colle_di_Val_d_Elsa_Tuscany.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Play-Game-Colle-Di-Val-DElsa-Colle-di-Val-dElsa"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Bar-Totalgame-Srl-Colle-di-Val-dElsa"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046017:lucca:vecchia-posta",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/RestaurantsNear-g187898-d4056357-La_Vecchia_Posta-Lucca_Province_of_Lucca_Tuscany.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/RestaurantsNear-g187898-d4056357-La_Vecchia_Posta-Lucca_Province_of_Lucca_Tuscany.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ch",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://it.tripadvisor.ch/Restaurant_Review-g187898-d4056357-Reviews-La_Vecchia_Posta-Lucca_Province_of_Lucca_Tuscany.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187898-d4056357-Reviews-La_Vecchia_Posta-Lucca_Province_of_Lucca_Tuscany.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/La-Vecchia-Posta-Lucca"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co.uk",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co.uk/Restaurant_Review-g187898-d4056357-Reviews-La_Vecchia_Posta-Lucca_Province_of_Lucca_Tuscany.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046011:coreglia-antelminelli:sapori-di-vania-donati",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://garfagnanavalledelserchio.it/the-19-municipalites/coreglia-antelminelli-2/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "garfagnanavalledelserchio.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://garfagnanavalledelserchio.it/the-19-municipalites/coreglia-antelminelli-2/"
+          ]
+        },
+        {
+          "registrable_domain": "ilborghista.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ilborghista.it/municipality/coreglia-antelminelli/eat"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/coreglia-antelminelli-lu-it/attivita/"
+          ]
+        },
+        {
+          "registrable_domain": "bestogoo.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.bestogoo.com/en-au/detail.php?activity=ChIJS3jr3HV71RIRKuhSg_6hToA&lang=eng&local=en-au"
+          ]
+        },
+        {
+          "registrable_domain": "casadelformaggio.eu",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://casadelformaggio.eu/provincia-di-lucca/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054007:cascia:corte-cascia",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.magrelli.com/ristoranti-a-cascia/",
+      "evidence_urls": [
+        "https://www.discovercascia.com/dove-mangiare/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "discovercascia.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.discovercascia.com/dove-mangiare/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g664986-d10270612-Reviews-Hotel_La_Corte-Cascia_Province_of_Perugia_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "magrelli.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.magrelli.com/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:22:30Z",
+          "ownership_evidence_urls": [
+            "https://www.magrelli.com/ristoranti-a-cascia/",
+            "https://www.magrelli.com/privacy-policy/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054015:corciano:piadineria",
+      "official_website_status": "accepted",
+      "official_website_url": "https://lapiadineria.com/i-nostri-ristoranti/corciano-quasar-village",
+      "evidence_urls": [
+        "https://lapiadineria.com/i-nostri-ristoranti/corciano-quasar-village"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lapiadineria.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/corciano-quasar-village"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-01T19:13:43Z",
+          "ownership_evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/corciano-quasar-village",
+            "https://lapiadineria.com/privacy-policy"
+          ]
+        },
+        {
+          "registrable_domain": "strooka.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://piadineria.website.strooka.com/it/contacts/"
+          ]
+        },
+        {
+          "registrable_domain": "deliveroo.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://deliveroo.it/it/menu/perugia/corciano/la-piadineria-corciano"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Piadina-4-U-Corciano-2"
+          ]
+        },
+        {
+          "registrable_domain": "gov.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.mimit.gov.it/images/stories/documenti/province/tavola/Umbria_-_PG_-_Perugia.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055032:terni:origini",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Caffe-Le-Origini-Terni"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Caffe-Le-Origini-Terni"
+          ]
+        },
+        {
+          "registrable_domain": "glovoapp.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://glovoapp.com/en/it/terni/stores/caffe-le-origini-trn"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055016:lugnano-in-teverina:pantarei-caffe",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1830838-d15234235-Reviews-Pantarei_Caffe-Lugnano_in_Teverina_Province_of_Terni_Umbria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1830838-d15234235-Reviews-Pantarei_Caffe-Lugnano_in_Teverina_Province_of_Terni_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1830838-d15234235-Reviews-Pantarei_Caffe-Lugnano_in_Teverina_Province_of_Terni_Umbria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054013:citta-di-castello:tankard-pizza-and-food",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://wanderlog.com/list/geoCategory/199798/where-to-eat-the-best-restaurants-in-citta-di-castello"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/list/geoCategory/199798/where-to-eat-the-best-restaurants-in-citta-di-castello"
+          ]
+        },
+        {
+          "registrable_domain": "gluto.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.gluto.it/locale/14573/delight-restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054039:perugia:quei-bravi-ragazzi",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.italia.it/it/umbria/perugia/dove-mangiare/quei-bravi-ragazzi"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "italia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.italia.it/it/umbria/perugia/dove-mangiare/quei-bravi-ragazzi"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187907-d15324727-Reviews-Quei_Bravi_Ragazzi-Perugia_Province_of_Perugia_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g187907-d15324727-Reviews-Quei_Bravi_Ragazzi-Perugia_Province_of_Perugia_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Quei-Bravi-Ragazzi-Perugia"
+          ]
+        },
+        {
+          "registrable_domain": "leggimenu.it",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.leggimenu.it/menu/81p4bd2k76"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055028:porano:da-claudio",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g2049777-d6555628-Reviews-Trattoria_Pizzeria_Da_Claudio-Porano_Province_of_Terni_Umbria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g2049777-d6555628-Reviews-Trattoria_Pizzeria_Da_Claudio-Porano_Province_of_Terni_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g2049777-d6555628-Reviews-Trattoria_Pizzeria_Da_Claudio-Porano_Province_of_Terni_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Da-Claudio-Porano"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054002:bastia-umbra:gelateria-novecento",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Bar-Gelateria-Novecento-Bastia-Umbra"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Gelateria-Novecento-Bastia-Umbra"
+          ]
+        },
+        {
+          "registrable_domain": "assisinews.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.assisinews.it/varie/apre-bar-gelateria-novecento-al-centro-commerciale-di-bastia-umbra-al-via-alla-nuova-attivita-della-famiglia-ortolani/"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura.net",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura.net/bar/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054001:assisi:penny-lane-tavern",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.pennylanetavern.com/prenota-un-tavolo/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "pennylanetavern.com",
+          "publisher_class": "uncertain",
+          "ownership_status": "uncertain",
+          "evidence_urls": [
+            "https://www.pennylanetavern.com/prenota-un-tavolo/"
+          ],
+          "uncertainty_reviewed_at": "2026-09-01T19:22:30Z",
+          "uncertainty_evidence_urls": [
+            "https://www.pennylanetavern.com/prenota-un-tavolo/"
+          ],
+          "uncertainty_reason": "The first-party reservation page identifies the Assisi venue and address but does not identify a legal operator or provide equivalent publisher-control evidence."
+        },
+        {
+          "registrable_domain": "penny-lane-tavern.it",
+          "publisher_class": "uncertain",
+          "ownership_status": "uncertain",
+          "evidence_urls": [
+            "https://penny-lane-tavern.it/"
+          ],
+          "uncertainty_reviewed_at": "2026-09-01T19:22:30Z",
+          "uncertainty_evidence_urls": [
+            "https://penny-lane-tavern.it/"
+          ],
+          "uncertainty_reason": "The ordering storefront identifies the venue and address but neither its operator nor a verified relationship to the separate pennylanetavern.com publisher."
+        },
+        {
+          "registrable_domain": "visit-assisi.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.visit-assisi.it/dove-mangiare/"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187905-d7737211-Reviews-Penny_Lane_Tavern-Assisi_Province_of_Perugia_Umbria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055001:acquasparta:casina-di-furapane",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/La-Casina-Di-Furapane-Acquasparta"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/La-Casina-Di-Furapane-Acquasparta"
+          ]
+        },
+        {
+          "registrable_domain": "flowinacquasparta.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://flowinacquasparta.com/ristoranti-e-alloggi/"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/la-casina-di-furapane-0744-930805"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/acquasparta/ristorante/78380/la-casina-di-furapane"
+          ]
+        },
+        {
+          "registrable_domain": "umbriaon.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.umbriaon.it/acquasparta-la-casina-di-furapane-torna-a-vivere/"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-locked-holdout-017-020",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:022205:trento:gelateria-dolce-mondo",
+      "query": "\"Gelateria Dolce Mondo\" \"Trento\"",
+      "retrieved_at": "2026-09-02T07:22:00Z",
+      "candidates": [
+        { "title": "Pasticceria Gelateria Dolce Mondo | 0461 830683 | Trento", "url": "https://www.tuttiaffari.com/pasticceria-gelateria-dolce-mondo" },
+        { "title": "ELENCO LOCALI CONVENZIONATI DAY RISTOSERVICE AGGIORNATO AL 19/12/2023", "url": "https://www.mercurio.provincia.tn.it/areaenti/doc/Elenco_locali_convenzionati_bpe_aggiornato.pdf" },
+        { "title": "Comune di Villa Lagarina, news", "url": "https://static.comune.villalagarina.tn.it/news/2020/04/covid-19_misure_restrittive_prorogate_almeno_fino_al_3/covid-19_misure_restrittive_prorogate_almeno_fino_al_3.pdf" }
+      ]
+    },
+    {
+      "venue_id": "venue:021111:varna-vahrn:villa-resi",
+      "query": "\"Bar Villa Resi\" \"Varna\" Vahrn",
+      "retrieved_at": "2026-09-02T07:22:00Z",
+      "candidates": [
+        { "title": "BAR VILLA RESI VARNA - Impresa Italia", "url": "https://www.impresaitalia.info/kk03571650/bar-villa-resi/varna.aspx" },
+        { "title": "Bar Villa Resi Bar e caffe Varna-vahrn 39040 by overplace", "url": "https://www.overplace.com/trentino-alto-adige/bz/varna-vahrn/bar-e-caffe/bar-villa-resi.html" },
+        { "title": "Bar Villa Resi, Bressanone, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog", "url": "https://wanderlog.com/place/details/13117006" },
+        { "title": "Si sogna pensando al neo Paperone", "url": "https://www.altoadige.it/cronaca/bolzano/si-sogna-pensando-al-neo-paperone-fch3tup9" },
+        { "title": "Bressanone, cercasi cameriera esperta: imprenditore offre 2.200 euro netti mensili e tre ore di palestra. “E 50 euro in più se smette di fumare” - la Repubblica", "url": "https://www.repubblica.it/cronaca/2024/04/24/news/varna_cameriera_esperta_stipendio_palestra_fumo-422718179/" }
+      ]
+    },
+    {
+      "venue_id": "venue:021013:brunico-bruneck:sigi",
+      "query": "\"Sigi\" \"Brunico\" fast food",
+      "retrieved_at": "2026-09-02T07:22:00Z",
+      "candidates": [
+        { "title": "NOLEGGIO & BIKE SCHOOL VERLEIH & BIKE SCHOOL RENTA", "url": "https://view.publitas.com/56528/2307395/pdfs/d33ef96a-dd7e-4d92-81f7-e57bfb1f7966.pdf?response-content-disposition=attachment%3B+filename%2A%3DUTF-8%27%27CTSV%2520-%2520BikePark_Pocket.pdf" },
+        { "title": "WICHTIGES INFO FÜR DIE AGO-MITGLIEDER", "url": "https://www.ago-bz.org/it/download/extnuMLOG.pdf" },
+        { "title": "Autonome Gewerkschaftsorganisation der örtlichen Körperschaften - Südtirol", "url": "https://www.ago-bz.org/it/download/exte43Uqo.pdf" },
+        { "title": "Autonome Gewerkschaftsorganisation der örtlichen Körperschaften - Südtirol", "url": "https://www.ago-bz.org/intranet/dyn/web/cms/it/download/extHSFpjF.pdf" }
+      ]
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:konditorei-stofner-pasticceria",
+      "query": "\"Konditorei Stofner Pasticceria\" \"Bolzano\"",
+      "retrieved_at": "2026-09-02T07:22:00Z",
+      "candidates": [
+        { "title": "Konditorei Stofner Cafè | Pasticceria a Bolzano | Dove Pasticcio", "url": "https://www.dovepasticcio.it/pasticcerie/dettaglio/1231/konditorei-stofner-cafe-a-bolzano" },
+        { "title": "Konditorei Stofner in Bozen - Falstaff", "url": "https://www.falstaff.com/it/pasticcerie/konditorei-stofner" },
+        { "title": "Konditorei Stofner Cafè - Bolzano, Corso Italia, 27", "url": "https://aziende.virgilio.it/confetteria/bolzano-bz/pasticceria-caffe-stofner-bz" },
+        { "title": "ᐅ Orari di apertura „Konditorei Stofner Pasticceria“ | Italienallee", "url": "https://www.oraridiapertura24.it/filiale/Bolzano-Konditorei%2520Stofner%2520Pasticceria-4885549O.html" },
+        { "title": "Migliori Pasticceria Bolzano: Leggi recensioni sui Pasticceria a Bolzano", "url": "https://www.tripadvisor.it/Restaurants-g187857-zfg9901-Bolzano_Province_of_South_Tyrol_Trentino_Alto_Adige.html" }
+      ]
+    }
+  ]
+}

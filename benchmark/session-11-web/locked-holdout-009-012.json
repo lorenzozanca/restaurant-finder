@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-unseen-locked-holdout-009-012",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ab0a7a22f2dcc47955db174e9fe769c79c6822bb28fcc85c7195f9566dc19b64",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:007021:cogne:valnontey",
+      "query": "\"Valnontey\" \"Cogne\" ristorante",
+      "retrieved_at": "2026-09-02T07:18:00Z",
+      "candidates": [
+        { "title": "Valnontey - VisitCogne", "url": "https://www.visitcogne.it/cucina/valnontey/" },
+        { "title": "BAR RISTORANTE VALNONTEY - COGNE | Cucina Italiana nelle mie vicinanze", "url": "https://bar-ristorante-valnontey.eatbu.com/?lang=it" },
+        { "title": "Cogne", "url": "https://www.visitcogne.it/wp-content/uploads/2026/04/aperture-cogne-primavera-2026.pdf" }
+      ]
+    },
+    {
+      "venue_id": "venue:007068:valgrisenche:rifugio-chalet-de-l-epee",
+      "query": "\"Rifugio Chalet de l'Epée\" \"Valgrisenche\"",
+      "retrieved_at": "2026-09-02T07:18:00Z",
+      "candidates": [
+        { "title": "Rifugio Chalet de l'Épée", "url": "https://it.wikipedia.org/wiki/Rifugio_Chalet_de_l%27%C3%89p%C3%A9e" },
+        { "title": "Rifugio Chalet de l'Epee | TheFlintstones.it", "url": "https://www.theflintstones.it/montagna/escursionismo/rifugi.aspx?Cod=22&RIF=rifugio-epee" },
+        { "title": "Refuge Chalet de l'Epée - 2370 m", "url": "https://www.refuges-montagne.fr/fr/refuge-epee" },
+        { "title": "RIFUGIO CHALET DE L'ÉPÉE - Cuisine régionale - Valgrisenche - Italie", "url": "https://www.petitfute.com/v75107-valgrisenche/c1165-restaurants/c1029-cuisine-regionale/1860724-rifugio-chalet-de-l-epee.html" },
+        { "title": "In racchette al Rifugio Chalet de l’Epée", "url": "https://www.lovevda.it/it/banca-dati/7/racchette-da-neve/valgrisenche/in-racchette-al-rifugio-chalet-de-l%E2%80%99epee/2761" }
+      ]
+    },
+    {
+      "venue_id": "venue:012108:olgiate-olona:omar-caffe",
+      "query": "\"Omar Caffe\" \"Olgiate Olona\"",
+      "retrieved_at": "2026-09-02T07:18:00Z",
+      "candidates": [
+        { "title": "Omar Caffe', Olgiate Olona - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Omar-Caffe-Olgiate-Olona" }
+      ]
+    },
+    {
+      "venue_id": "venue:015146:milano:kfc-bc75c3cd",
+      "query": "\"KFC\" \"Milano\" \"Viale Abruzzi 93\"",
+      "retrieved_at": "2026-09-02T07:18:00Z",
+      "candidates": []
+    }
+  ]
+}

@@ -4,7 +4,8 @@
     "select:pilot": "node select-pilot.mjs",
     "prepare:pilot": "node prepare-pilot.mjs",
     "run:pilot": "node run-pilot.mjs",
-    "evaluate:pilot": "node evaluate-session-10-pilot.mjs"
+    "evaluate:pilot": "node evaluate-session-10-pilot.mjs",
+    "evaluate:session-11-web": "node benchmark/evaluate-session-11-web.mjs"
   },
   "dependencies": {
     "proj4": "^2.21.0",
