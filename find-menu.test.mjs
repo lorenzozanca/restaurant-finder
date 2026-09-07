@@ -347,6 +347,57 @@ test("keeps an accepted known website with no resources without an identity sear
   assert.equal(result.enrichment_run.resolver_stop_reason, "official_site_accepted");
 });
 
+test("crawl-only budget spends zero search requests including the resource site search", async () => {
+  const searchQueries = [];
+  const result = await findMenuSources(owned({
+    name: "Locanda Dussin",
+    website: "https://dussin.test/",
+  }), "Oderzo TV", {
+    crawlCache: new Map(),
+    resolverBudget: { searches: 0, crawls: 3 },
+    get: async (url) => ({
+      ok: true,
+      body: url.endsWith(".xml")
+        ? "<urlset></urlset>"
+        : `<main>${"Locanda Dussin, ristorante a Oderzo. ".repeat(12)}</main>`,
+    }),
+    getRendered: async () => ({ ok: false, body: "" }),
+    search: async (query) => { searchQueries.push(query); return []; },
+  });
+
+  assert.deepEqual(searchQueries, []);
+  assert.equal(result.website, "https://dussin.test/");
+  assert.equal(result.enrichment_run.search_requests, 0);
+  assert.equal(result.enrichment_run.resource_site_search_requests, 0);
+  assert.deepEqual(result.enrichment_run.resolver_budget,
+    { searches: 0, crawls: 3, budget_escalation_reason: undefined });
+  assert.equal(result.enrichment_run.resolver_stop_reason, "official_site_accepted");
+});
+
+test("crawl-only budget still crawls a known website without any identity search", async () => {
+  let searchCalls = 0;
+  const result = await findMenuSources(owned({
+    name: "Al Giardinetto",
+    website: "https://giardinetto.test/",
+  }), "Oderzo TV", {
+    crawlCache: new Map(),
+    resolverBudget: { searches: 0, crawls: 3 },
+    resourceBudget: { siteSearch: false },
+    get: async () => ({
+      ok: true,
+      body: `<main>${"Al Giardinetto, ristorante a Oderzo. ".repeat(10)}<a href="/menu/">Menu</a></main>`,
+    }),
+    getRendered: async () => ({ ok: false, body: "" }),
+    search: async () => { searchCalls++; return []; },
+  });
+
+  assert.equal(searchCalls, 0);
+  assert.equal(result.website, "https://giardinetto.test/");
+  assert.deepEqual(result.resources.map((item) => item.url), ["https://giardinetto.test/menu/"]);
+  assert.equal(result.enrichment_run.search_requests, 0);
+  assert.equal(result.enrichment_run.resource_site_search_requests, 0);
+});
+
 test("pre-caps validation with role diversity and reports per-stage drops", async () => {
   const checked = [];
   const links = Array.from({ length: 10 }, (_, index) => `<a href="/menu-${index}">Menu ${index}</a>`).join("")

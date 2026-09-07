@@ -116,11 +116,18 @@ export async function findMenuSources(restaurant, location, options = {}) {
     get: options.get || get,
     getRendered: options.getRendered || getRendered,
   };
+  const resolverSearches = options.resolverBudget?.searches ?? 1;
   const resourcePolicy = {
     referenceDate: options.referenceDate || new Date(),
     maxValidations: options.resourceBudget?.validations ?? MAX_RESOURCE_VALIDATIONS,
     maxSitemapRequests: options.resourceBudget?.sitemaps ?? MAX_SITEMAP_REQUESTS,
-    allowSiteSearch: options.resourceBudget?.siteSearch !== false,
+    // Phase 0 crawl-only baseline ($0): resolver searches:0 must not spend a
+    // search request elsewhere. The domain-restricted resource site: search is
+    // therefore off by default when the resolver budget is zero; callers may
+    // still opt back in with an explicit resourceBudget.siteSearch:true.
+    allowSiteSearch: options.resourceBudget?.siteSearch !== undefined
+      ? options.resourceBudget.siteSearch !== false
+      : resolverSearches !== 0,
   };
   const crawlCache = options.crawlCache || websiteCrawlCache;
   const originalWebsite = restaurant.website || "";
