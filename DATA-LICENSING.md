@@ -19,6 +19,8 @@ release because service policies can change.
 | [OpenAI integrated web search](https://developers.openai.com/api/reference/cli/resources/responses/methods/create) | Result titles and URLs used only in the frozen Session 11 offline research fixtures | No open-data licence is assumed; use is governed by the applicable OpenAI terms and each linked publisher's terms. This is a research source, not a production provider decision. | Store only the query, normalized candidate URL, short result title, and retrieval time. Do not retain snippets, full pages, credentials, personal contact data, or uncontrolled response caches. Preserve links to the underlying publishers for review and citation. Do not represent these results as equivalent to Brave rankings. |
 | PagineGialle links surfaced by web search | Venue name inferred from result metadata, broad location/type, and listing URL | No open-data licence or permission to republish a PagineGialle database is asserted here. Applicable website/database rights and terms must be checked by the operator. | Disabled by default. A diagnostic operator may opt in with `ENABLE_PAGINEGIALLE=1` only after confirming a permitted route. Keep provenance and do not copy listing pages, reviews, images, or a substantial part of the directory. |
 | Restaurant and other public websites | Public business name, address, phone, structured metadata, website URL, and links to menus/resources | Facts may not themselves be copyrightable, but page text, photos, menus, branding, and database selections may be protected. Each site retains its own rights and terms. | Store links and minimal factual metadata only. Do not copy or redistribute menu files or images. A link is not a licence; downstream users must follow the destination site's terms. |
+| [INI-PEC — Indice nazionale dei domicili digitali](https://www.inipec.gov.it/) | Single PEC address per impresa/professionista, consulted one venue at a time (codice fiscale or provincia + denominazione); only the derived candidate website domain is retained | No open-data licence. Governed by CAD art. 6-bis, D.L. 179/2012, DM 19/03/2013, D.L. 185/2008 art. 16(10), the portal note legali, and Garante provv. 1/2/2018 n. 52. | Single-venue consultation is free without authentication; bulk list extraction is reserved to public administrations. No automated mass querying at national scale. Never store, publish, or redistribute PEC addresses — derived domain plus registry provenance and check date only. No marketing reuse without consent (art. 130 D.Lgs. 196/2003). Reviewed 2026-09-07: verdict single-lookup-only, no bulk. |
+| [Registro Imprese / InfoCamere](https://www.registroimprese.it/) and [Unioncamere Open Government](https://opengovernment.unioncamere.gov.it/come-fruire-dei-dati) | No bulk venue-level website/PEC field collected. Aggregate demographics only (backlog sizing); any per-enterprise record only via paid Telemaco document or contracted access | Telemaco/InfoCamere terms: registration plus pay-per-document; resale, informatics distribution, reproduction, and diffusion of extracted documents are forbidden; reuse beyond consultation only via Contratto di Accesso (value-added products, attribution, GDPR compliance). Unioncamere aggregates: generally CC-BY 4.0 — check the per-dataset licence field. | No scraping of registroimprese.it; no redistribution of visure or elenchi. Attribute Unioncamere aggregates per dataset licence. The convenzione bulk route is contractual, not zero-cost — out of scope until the operator approves. Reviewed 2026-09-07: verdict contract-only, no zero-cost bulk. |
 
 ## OpenStreetMap service use
 
@@ -63,6 +65,35 @@ organisation:
 4. Exclude cache files, scan logs, and third-party menu/image contents.
 5. Complete the privacy release gate in [`PRIVACY.md`](PRIVACY.md), including
    handling sole-trader and individual contact data.
+
+## Registry crosswalk review (2026-09-07)
+
+Question: can INI-PEC / Registro Imprese domains supply `official_registry`
+attestations at national scale for zero cost?
+
+Verdict: **no lawful zero-cost bulk track exists**. Automated national-scale
+querying of INI-PEC (156k venues) is mass extraction in effect and circumvents
+the PA-only bulk rule (D.L. 185/2008 art. 16(10)), the portal note legali, and
+the sui generis database right — the Garante banned exactly this pattern
+(provv. 1/2/2018 n. 52, 800k+ PECs scraped from INI-PEC/registroimprese.it).
+Registro Imprese bulk data is pay-per-document or contract-only (Telemaco
+terms forbid redistribution; Contratto di Accesso requires value-added use
+plus attribution). Unioncamere open datasets are genuinely open (CC-BY 4.0)
+but aggregate-only — no per-enterprise PEC/website records.
+
+Permitted narrow use: manual single-venue INI-PEC consultation by a reviewer
+as evidence inside human review (the free "consultazione dei singoli
+indirizzi" path). Store the derived domain plus registry provenance and check
+date only — never the PEC address (ditta-individuale PECs are personal data;
+see `PRIVACY.md` gate). An own-domain PEC yields a *candidate* domain, not an
+attestation by itself: email-domain registration does not prove website
+control, so the crawl plus venue-scoped ownership gate still apply, and most
+PECs sit on provider domains (legalmail, Aruba) yielding no candidate.
+Measure yield on a small manual sample before designing the review-queue
+"registry hint" field. Open evidence-URL question: the INI-PEC portal is
+JS-gated with no stable per-record URL — decide what `evidence_urls` holds
+(portal reference plus denominazione/CCIAA/date in notes) before building the
+`official_registry` importer path.
 
 ## Adding a source
 
