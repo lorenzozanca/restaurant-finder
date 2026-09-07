@@ -1,0 +1,350 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-final-locked-holdout-adjudication-081-100",
+  "partition": "locked_holdout",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079",
+  "reviewer": "Codex independent bounded-fixture review",
+  "reviewed_at": "2026-09-02T19:15:00.000Z",
+  "review_basis": "Independent review of retained bounded-query URL/title metadata and first-party branch or venue pages; publisher-domain ownership is approved only where the retained first-party page identifies the selected venue or exact chain branch.",
+  "scope_limitations": "Minimal URL/title capture only; no snippets or page bodies retained. A no_official_site disposition means no publishable official site was established within the bounded retained evidence, not that no site exists on the open web.",
+  "entries": [
+    {
+      "venue_id": "venue:076048:melfi:pasticceria-gelateria-dolce-arte",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.oraridiapertura24.it/filiale/Melfi-Pasticceria%2520Gelateria%2520Dolce%2520Arte-1111331U.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Melfi-Pasticceria%2520Gelateria%2520Dolce%2520Arte-1111331U.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077014:matera:arcobaleno",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/pizzeria-arcobaleno_75p"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/pizzeria-arcobaleno_75p"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076075:san-costantino-albanese:tri-kartuce",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.aptbasilicata.it/fileadmin/uploads/Registri/Registro_strutture_ricettive.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "aptbasilicata.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.aptbasilicata.it/fileadmin/uploads/Registri/Registro_strutture_ricettive.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076095:venosa:mushroom-pub",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/mushroom-pub-0972-31408"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/mushroom-pub-0972-31408"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:space-food",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Space-Food-Potenza"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Space-Food-Potenza"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078102:rende:talia",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.cs.camcom.gov.it/sites/default/files/contenuto_redazione/allegati/elenco_imprese.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "gov.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.cs.camcom.gov.it/sites/default/files/contenuto_redazione/allegati/elenco_imprese.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078157:corigliano-rossano:gelateria-filippelli",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.cs.camcom.gov.it/sites/default/files/contenuto_redazione/allegati/gelaterie.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "gov.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.cs.camcom.gov.it/sites/default/files/contenuto_redazione/allegati/gelaterie.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079143:staletti:guglielmo",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.caffeguglielmoshop.it/passione-e-ricerca/",
+      "evidence_urls": [
+        "https://www.caffeguglielmoshop.it/passione-e-ricerca/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "caffeguglielmoshop.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.caffeguglielmoshop.it/passione-e-ricerca/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.caffeguglielmoshop.it/passione-e-ricerca/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078150:trebisacce:dolci-sogni-bar-pasticceria-gelateria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Dolci-Sogni-Trebisacce"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Dolci-Sogni-Trebisacce"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080063:reggio-di-calabria:peterland-reggio-calabria",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.peterland.it/reggio-calabria.html",
+      "evidence_urls": [
+        "https://www.peterland.it/reggio-calabria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "peterland.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.peterland.it/reggio-calabria.html"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.peterland.it/reggio-calabria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081008:erice:ericelandia-pizzeria-braceria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.menupizza.it/ericelandia-pizzeria-braceria-erice"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "menupizza.it",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.menupizza.it/ericelandia-pizzeria-braceria-erice"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087015:catania:panineria-al-borgo",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187888-d12917978-Reviews-Panineria_Al_Borgo-Catania_Province_of_Catania_Sicily.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187888-d12917978-Reviews-Panineria_Al_Borgo-Catania_Province_of_Catania_Sicily.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:085006:delia:camurria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:082049:monreale:ice-cream-shop",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.localshop24.com/it/monreale-pa-it/attivita/gelateria/ice-cream-shop/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/monreale-pa-it/attivita/gelateria/ice-cream-shop/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:082053:palermo:officina-dell-arte-associazione-culturale",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://repository.comune.palermo.it/396-festino-santa-rosalia-palermo.php"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "palermo.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://repository.comune.palermo.it/396-festino-santa-rosalia-palermo.php"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:116017:tortoli:island-beer",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.com/ISLAND-BEER-Tortoli"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/ISLAND-BEER-Tortoli"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112050:sassari:cantoniera",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:112040:ozieri:venue",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:115045:oristano:gelateria-il-chicco",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187884-d4589262-Reviews-Gelateria_Il_Chicco-Oristano_Province_of_Oristano_Sardinia.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187884-d4589262-Reviews-Gelateria_Il_Chicco-Oristano_Province_of_Oristano_Sardinia.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118006:cagliari:otium",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.com/Otium-Cagliari"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Otium-Cagliari"
+          ]
+        }
+      ]
+    }
+  ]
+}

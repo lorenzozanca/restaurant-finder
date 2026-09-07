@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-177-192-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    { "venue_id": "venue:036015:formigine:mcdonald-s", "query": "\"McDonald's\" Formigine \"Via Giardini Nord, 531\"", "retrieved_at": "2026-09-03T00:05:00.000Z", "candidates": [{ "title": "Ristoranti aderenti | McDonald's Italia", "url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html" }] },
+    { "venue_id": "venue:040012:forli:del-ballerino", "query": "\"Caffè del Ballerino\" Forlì \"Via Due Ponti, 23\"", "retrieved_at": "2026-09-03T00:05:00.000Z", "candidates": [{ "title": "Caffè del Ballerino | 327 233 2500 | Forlì", "url": "https://www.tuttiaffari.com/caff-u-e-del-ballerino-327-233-2500" }] },
+    { "venue_id": "venue:036016:frassinoro:gustaria-pizzeria-bar", "query": "\"GUSTARIA pizzeria bar\" Frassinoro \"Via Don Mario Prandi, 24\"", "retrieved_at": "2026-09-03T00:05:00.000Z", "candidates": [] },
+    { "venue_id": "venue:099001:bellaria-igea-marina:ola-sea-cafe", "query": "\"Ola Sea Cafe\" \"Bellaria-Igea Marina\" \"Via Alfonso Pinzon, 310\"", "retrieved_at": "2026-09-03T00:05:00.000Z", "candidates": [] },
+    { "venue_id": "venue:039007:cervia:riviera-milano-marittima", "query": "\"Bar Riviera Milano Marittima\" Cervia \"Viale Giacomo Matteotti, 71\"", "retrieved_at": "2026-09-03T00:10:00.000Z", "candidates": [] },
+    { "venue_id": "venue:033002:alseno:tingel-tangel", "query": "\"Tingel Tangel\" Alseno \"Strada Salsediana, 1237\"", "retrieved_at": "2026-09-03T00:10:00.000Z", "candidates": [{ "title": "ONAF — Delegazione di Parma", "url": "https://www.onaf.it/uploads/public/6461_gennaio-2018-formaggi-a-latte-crudo-birra.pdf" }] },
+    { "venue_id": "venue:035016:castelnovo-ne-monti:tazza-d-oro", "query": "\"Bar Tazza D'Oro\" \"Castelnovo ne' Monti\" \"Via Roma, 9\"", "retrieved_at": "2026-09-03T00:10:00.000Z", "candidates": [{ "title": "Bar Tazza D'Oro | 0522 812880 | Castelnovo ne' Monti", "url": "https://www.tuttiaffari.com/bar-tazza-doro_28e-0522-812880" }] },
+    { "venue_id": "venue:099014:rimini:portolotto", "query": "\"Il Portolotto\" Rimini \"Via Lucio Lando, 22\"", "retrieved_at": "2026-09-03T00:10:00.000Z", "candidates": [{ "title": "Locanda Il Portolotto | Contatti - Ristorante pesce Rimini - Locanda Il Portolotto", "url": "https://www.ilportolotto.it/ita-contatti" }] },
+    { "venue_id": "venue:038029:riva-del-po:mickey-mouse", "query": "\"Bar Mickey Mouse\" \"Riva del Po\" \"Piazza Libertà, 48\"", "retrieved_at": "2026-09-03T00:15:00.000Z", "candidates": [{ "title": "Bar Mickey Mouse Snc Di Alessia, Rovigo, Italia - recensioni, valutazioni e consigli", "url": "https://wanderlog.com/he/place/details/16114910/bar-mickey-mouse-snc-di-alessia" }] },
+    { "venue_id": "venue:040016:gatteo:gallo-pizza", "query": "\"Gallo Pizza\" Gatteo \"Via Salvador Allende, 105B\"", "retrieved_at": "2026-09-03T00:15:00.000Z", "candidates": [{ "title": "GALLO PIZZA Sant'Angelo di Gatteo, Gatteo - Restaurant menu, prices and reviews", "url": "https://restaurantguru.com/Gallo-Pizza-SantAngelo-Emilia-Romagna" }] },
+    { "venue_id": "venue:039014:ravenna:methiu-s-cafe", "query": "\"Methiu's Cafe\" Ravenna \"Piazza Caduti per la Libertà, 34\"", "retrieved_at": "2026-09-03T00:15:00.000Z", "candidates": [{ "title": "Mapstr - Cafe Methiu's cafè Ravenna", "url": "https://mapstr.com/place/7bSCNxlHIG" }] },
+    { "venue_id": "venue:035017:cavriago:miss-krokke", "query": "\"Miss KrokkÈ\" Cavriago \"Via Fratelli Cairoli, 15\"", "retrieved_at": "2026-09-03T00:15:00.000Z", "candidates": [{ "title": "MISS KROKKÈ, Cavriago - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/MISS-KROKKE-Cavriago" }] },
+    { "venue_id": "venue:035012:casalgrande:gelateria-tropical", "query": "\"Gelateria Tropical\" Casalgrande \"Piazza Costituzione\"", "retrieved_at": "2026-09-03T00:20:00.000Z", "candidates": [{ "title": "Gelateria Tropical - Casalgrande, Provincia di Reggio Emilia Osteria Pautasso", "url": "https://casapautasso.it/gelateria-tropical/" }] },
+    { "venue_id": "venue:033032:piacenza:coffee-time", "query": "\"Bar Coffee Time\" Piacenza \"Via Camillo Benso di Cavour, 5\"", "retrieved_at": "2026-09-03T00:20:00.000Z", "candidates": [{ "title": "BAR COFFEE TIME, Piacenza - Restaurant Reviews & Phone Number - Tripadvisor", "url": "https://www.tripadvisor.com/Restaurant_Review-g187805-d23258982-Reviews-Bar_Coffee_Time-Piacenza_Province_of_Piacenza_Emilia_Romagna.html" }] },
+    { "venue_id": "venue:037010:camugnano:home-restaurant-la-spartura", "query": "\"Home restaurant La Spartura\" Camugnano \"Località Vigaia, 14\"", "retrieved_at": "2026-09-03T00:20:00.000Z", "candidates": [{ "title": "La Spartura e l’arte di fare turismo con un Home Restaurant – B&B Castellaro", "url": "https://bebcastellaro.wordpress.com/2023/06/03/la-spartura-e-larte-di-fare-turismo-con-un-home-restaurant/" }] },
+    { "venue_id": "venue:040015:gambettola:pioti", "query": "\"Bar Pioti\" Gambettola \"Via Emilia\"", "retrieved_at": "2026-09-03T00:20:00.000Z", "candidates": [{ "title": "BAR PIOTI DI URBINI WILLIAM E LUCIANO - S.N.C., Partita IVA: 01698470406, Fatturato, Dipendenti, PEC", "url": "https://www.ufficiocamerale.it/9342/bar-pioti-di-urbini-william-e-luciano-snc" }] }
+  ]
+}

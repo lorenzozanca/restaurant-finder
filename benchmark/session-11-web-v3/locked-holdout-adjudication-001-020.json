@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-final-locked-holdout-adjudication-001-020",
+  "partition": "locked_holdout",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079",
+  "reviewer": "Codex independent bounded-fixture review",
+  "reviewed_at": "2026-09-02T19:15:00.000Z",
+  "review_basis": "Independent review of retained bounded-query URL/title metadata and first-party branch or venue pages; publisher-domain ownership is approved only where the retained first-party page identifies the selected venue or exact chain branch.",
+  "scope_limitations": "Minimal URL/title capture only; no snippets or page bodies retained. A no_official_site disposition means no publishable official site was established within the bounded retained evidence, not that no site exists on the open web.",
+  "entries": [
+    {
+      "venue_id": "venue:006177:valenza:in-cafe-valenza",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.allincafe.it/",
+      "evidence_urls": [
+        "https://www.allincafe.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "allincafe.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.allincafe.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.allincafe.it/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001272:torino:piadineria",
+      "official_website_status": "accepted",
+      "official_website_url": "https://lapiadineria.com/i-nostri-ristoranti/torino-centro-commerciale-lingotto",
+      "evidence_urls": [
+        "https://lapiadineria.com/i-nostri-ristoranti/torino-centro-commerciale-lingotto"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lapiadineria.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/torino-centro-commerciale-lingotto"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/torino-centro-commerciale-lingotto"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:005050:costigliole-d-asti:siesta-cafe",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:001189:pianezza:muradora",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.italia.it/it/piemonte/pianezza/dove-mangiare/azienda-agricola-agriturismo-la-muradora"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "italia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.italia.it/it/piemonte/pianezza/dove-mangiare/azienda-agricola-agriturismo-la-muradora"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:003106:novara:grom",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:007022:courmayeur:super-g-italian-mountain-club",
+      "official_website_status": "accepted",
+      "official_website_url": "https://lovesuperg.com/",
+      "evidence_urls": [
+        "https://lovesuperg.com/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lovesuperg.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://lovesuperg.com/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://lovesuperg.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007066:sarre:bulldog-pub",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://balteus.lovevda.it/it/banca-dati/16/tavole-calde-enoteche-pub/sarre/bulldog-pub/2447"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lovevda.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://balteus.lovevda.it/it/banca-dati/16/tavole-calde-enoteche-pub/sarre/bulldog-pub/2447"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007040:la-salle:baita-la-jolie-bergere",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.lajoliebergere.com/galleria-immagini/",
+      "evidence_urls": [
+        "https://www.lajoliebergere.com/galleria-immagini/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lajoliebergere.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.lajoliebergere.com/galleria-immagini/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.lajoliebergere.com/galleria-immagini/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007007:ayas:rifugio-ostafa-champoluc",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/rifugio-ostafa-champoluc-339-818-0709"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/rifugio-ostafa-champoluc-339-818-0709"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007054:quart:parco-giochi-spassalandia-aosta",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.lovevda.it/it/risultati-di-ricerca/servizi-87/quart/413"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lovevda.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.lovevda.it/it/risultati-di-ricerca/servizi-87/quart/413"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:108024:giussano:fermes-chi",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.fermeschiosteria.it/menu/",
+      "evidence_urls": [
+        "https://www.fermeschiosteria.it/menu/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "fermeschiosteria.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.fermeschiosteria.it/menu/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.fermeschiosteria.it/menu/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:015146:milano:kfc-b6a9c5f3",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://maps.apple.com/place?place-id=I10A26BB9FA8A8A8D"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "apple.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://maps.apple.com/place?place-id=I10A26BB9FA8A8A8D"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:017001:acquafredda:agora-cafe",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.regione.lombardia.it/wps/wcm/connect/d1e3adeb-3095-4ec5-b097-cc17bb729e30/5245.pdf?CACHEID=ROOTWORKSPACE-d1e3adeb-3095-4ec5-b097-cc17bb729e30-n7qNfeY&MOD=AJPERES"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lombardia.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.regione.lombardia.it/wps/wcm/connect/d1e3adeb-3095-4ec5-b097-cc17bb729e30/5245.pdf?CACHEID=ROOTWORKSPACE-d1e3adeb-3095-4ec5-b097-cc17bb729e30-n7qNfeY&MOD=AJPERES"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:017174:sarezzo:mariello-s-pub",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:108033:monza:pasticceria-passerini-dal-1919",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttamonza.it/pasticceria-passerini-dal-1919-monza-4407"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttamonza.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttamonza.it/pasticceria-passerini-dal-1919-monza-4407"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021061:ortisei-st-ulrich:caffa-four",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://pages.resmio.com/four/en"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "resmio.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://pages.resmio.com/four/en"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:salinas",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:021067:prato-allo-stelvio-prad-am-stilfserjoch:pizza-point",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.pizza-point.it/",
+      "evidence_urls": [
+        "https://www.pizza-point.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "pizza-point.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.pizza-point.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.pizza-point.it/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021013:brunico-bruneck:holdi-s-imbiss",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:nuova-capri",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://deliveroo.it/en/menu/bolzano/bolzano/pizzeria-nuova-capri-bz"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "deliveroo.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://deliveroo.it/en/menu/bolzano/bolzano/pizzeria-nuova-capri-bz"
+          ]
+        }
+      ]
+    }
+  ]
+}

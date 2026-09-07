@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-final-locked-holdout-081-100",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:076048:melfi:pasticceria-gelateria-dolce-arte",
+      "query": "\"Pasticceria Gelateria Dolce Arte\" \"Melfi\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Dolce Arte Melfi",
+          "url": "https://www.oraridiapertura24.it/filiale/Melfi-Pasticceria%2520Gelateria%2520Dolce%2520Arte-1111331U.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077014:matera:arcobaleno",
+      "query": "\"Pizzeria Arcobaleno\" \"Matera\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Arcobaleno",
+          "url": "https://www.tuttiaffari.com/pizzeria-arcobaleno_75p"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076075:san-costantino-albanese:tri-kartuce",
+      "query": "\"Tri Kartuçe\" \"San Costantino Albanese\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Elenco strutture ricettive",
+          "url": "https://www.aptbasilicata.it/fileadmin/uploads/Registri/Registro_strutture_ricettive.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076095:venosa:mushroom-pub",
+      "query": "\"Mushroom Pub\" \"Venosa\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Mushroom Pub",
+          "url": "https://www.tuttiaffari.com/mushroom-pub-0972-31408"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:space-food",
+      "query": "\"Space Food\" \"Potenza\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Space Food",
+          "url": "https://restaurantguru.it/Space-Food-Potenza"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078102:rende:talia",
+      "query": "\"Pizzeria Talia\" \"Rende\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Elenco imprese Rende",
+          "url": "https://www.cs.camcom.gov.it/sites/default/files/contenuto_redazione/allegati/elenco_imprese.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078157:corigliano-rossano:gelateria-filippelli",
+      "query": "\"Bar Gelateria Filippelli\" \"Corigliano-Rossano\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Gelateria Filippelli",
+          "url": "https://www.cs.camcom.gov.it/sites/default/files/contenuto_redazione/allegati/gelaterie.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079143:staletti:guglielmo",
+      "query": "\"Caffè Guglielmo\" \"Stalettì\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffè Guglielmo - passione e ricerca",
+          "url": "https://www.caffeguglielmoshop.it/passione-e-ricerca/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078150:trebisacce:dolci-sogni-bar-pasticceria-gelateria",
+      "query": "\"Dolci Sogni\" Bar Pasticceria Gelateria\" \"Trebisacce\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Dolci Sogni Trebisacce",
+          "url": "https://restaurantguru.it/Dolci-Sogni-Trebisacce"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080063:reggio-di-calabria:peterland-reggio-calabria",
+      "query": "\"Peterland Reggio Calabria\" \"Reggio di Calabria\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Peterland Reggio Calabria",
+          "url": "https://www.peterland.it/reggio-calabria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081008:erice:ericelandia-pizzeria-braceria",
+      "query": "\"Ericelandia Pizzeria - Braceria\" \"Erice\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ericelandia",
+          "url": "https://www.menupizza.it/ericelandia-pizzeria-braceria-erice"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087015:catania:panineria-al-borgo",
+      "query": "\"Panineria al Borgo\" \"Catania\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Panineria al Borgo",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187888-d12917978-Reviews-Panineria_Al_Borgo-Catania_Province_of_Catania_Sicily.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:085006:delia:camurria",
+      "query": "\"Camurría\" \"Delia\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:082049:monreale:ice-cream-shop",
+      "query": "\"Ice Cream Shop\" \"Monreale\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ice Cream Shop",
+          "url": "https://www.localshop24.com/it/monreale-pa-it/attivita/gelateria/ice-cream-shop/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:082053:palermo:officina-dell-arte-associazione-culturale",
+      "query": "\"Officina dell'Arte - Associazione Culturale\" \"Palermo\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Officina dell'Arte",
+          "url": "https://repository.comune.palermo.it/396-festino-santa-rosalia-palermo.php"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:116017:tortoli:island-beer",
+      "query": "\"Island Beer\" \"Tortolì\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Island Beer",
+          "url": "https://restaurantguru.com/ISLAND-BEER-Tortoli"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112050:sassari:cantoniera",
+      "query": "\"Pizzeria La Cantoniera\" \"Sassari\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:112040:ozieri:venue",
+      "query": "\"𝗢𝗹𝗱 𝗯𝗶𝘀 𝟭𝟵𝟴𝟭 𝗱𝗮 𝗚𝗶𝗼𝘃𝗮𝗻𝗻𝗼𝗻𝗲\" \"Ozieri\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:115045:oristano:gelateria-il-chicco",
+      "query": "\"Gelateria Il Chicco\" \"Oristano\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Gelateria Il Chicco",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187884-d4589262-Reviews-Gelateria_Il_Chicco-Oristano_Province_of_Oristano_Sardinia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118006:cagliari:otium",
+      "query": "\"Otium\" \"Cagliari\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Otium",
+          "url": "https://restaurantguru.com/Otium-Cagliari"
+        }
+      ]
+    }
+  ]
+}

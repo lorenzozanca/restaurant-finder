@@ -1,0 +1,353 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-final-locked-holdout-adjudication-041-060",
+  "partition": "locked_holdout",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079",
+  "reviewer": "Codex independent bounded-fixture review",
+  "reviewed_at": "2026-09-02T19:15:00.000Z",
+  "review_basis": "Independent review of retained bounded-query URL/title metadata and first-party branch or venue pages; publisher-domain ownership is approved only where the retained first-party page identifies the selected venue or exact chain branch.",
+  "scope_limitations": "Minimal URL/title capture only; no snippets or page bodies retained. A no_official_site disposition means no publishable official site was established within the bounded retained evidence, not that no site exists on the open web.",
+  "entries": [
+    {
+      "venue_id": "venue:052028:san-gimignano:selva-delle-torri",
+      "official_website_status": "accepted",
+      "official_website_url": "https://ristoranteselvadelletorri.com/",
+      "evidence_urls": [
+        "https://ristoranteselvadelletorri.com/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ristoranteselvadelletorri.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://ristoranteselvadelletorri.com/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://ristoranteselvadelletorri.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:051002:arezzo:gelateria-cremeria-paris",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:051004:bibbiena:4-vie",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.ufficiocamerale.it/9942/caffe-4-vie-snc-di-vignali-alessandro-c"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/9942/caffe-4-vie-snc-di-vignali-alessandro-c"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046007:capannori:sapore-pizza",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194719-d12944693-Reviews-Sapore_Pizza-Capannori_Province_of_Lucca_Tuscany.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194719-d12944693-Reviews-Sapore_Pizza-Capannori_Province_of_Lucca_Tuscany.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:048017:firenze:move-on",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.italia.it/it/toscana/firenze/dove-mangiare/move-on"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "italia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.italia.it/it/toscana/firenze/dove-mangiare/move-on"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054050:spello:autogrill",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.autogrill.it/wp-content/uploads/2023/08/LOCALI-AUTOGRILL-6.pdf",
+      "evidence_urls": [
+        "https://www.autogrill.it/wp-content/uploads/2023/08/LOCALI-AUTOGRILL-6.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "autogrill.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.autogrill.it/wp-content/uploads/2023/08/LOCALI-AUTOGRILL-6.pdf"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.autogrill.it/wp-content/uploads/2023/08/LOCALI-AUTOGRILL-6.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054001:assisi:tutto-bono",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.visit-assisi.it/en/where-to-eat/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "visit-assisi.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.visit-assisi.it/en/where-to-eat/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054036:paciano:echoes-cafe",
+      "official_website_status": "accepted",
+      "official_website_url": "https://echoesgroup.it/",
+      "evidence_urls": [
+        "https://echoesgroup.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "echoesgroup.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://echoesgroup.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://echoesgroup.it/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054013:citta-di-castello:blackstone-pub",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.waze.com/live-map/directions/italy/umbria/citta-di-castello/blackstone-pub"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/italy/umbria/citta-di-castello/blackstone-pub"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055032:terni:u-street",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.umamistreet.it/contattaci/",
+      "evidence_urls": [
+        "https://www.umamistreet.it/contattaci/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "umamistreet.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.umamistreet.it/contattaci/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.umamistreet.it/contattaci/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042048:sirolo:fornace",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.italia.it/it/marche/sirolo/dove-mangiare/la-fornace"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "italia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.italia.it/it/marche/sirolo/dove-mangiare/la-fornace"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041013:fano:curcuma-cafe",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194760-d12886172-Reviews-Curcuma_Cafe-Fano_Province_of_Pesaro_and_Urbino_Marche.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194760-d12886172-Reviews-Curcuma_Cafe-Fano_Province_of_Pesaro_and_Urbino_Marche.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042027:montemarciano:saccaria",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.saccaria.it/shop/",
+      "evidence_urls": [
+        "https://www.saccaria.it/shop/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "saccaria.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.saccaria.it/shop/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.saccaria.it/shop/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:109006:fermo:lella",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Trattoria-Lella-Fermo"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Trattoria-Lella-Fermo"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043013:civitanova-marche:bynice-civitanova-marche",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:058107:trevignano-romano:porticciolo",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.ilporticciolotrevignano.it/dove-siamo.html",
+      "evidence_urls": [
+        "https://www.ilporticciolotrevignano.it/dove-siamo.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ilporticciolotrevignano.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.ilporticciolotrevignano.it/dove-siamo.html"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.ilporticciolotrevignano.it/dove-siamo.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058091:roma:kfc-a7d665f9",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:057053:poggio-mirteto:torrefazione-caffe-gentili",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.caffegentili.it/",
+      "evidence_urls": [
+        "https://www.caffegentili.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "caffegentili.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.caffegentili.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.caffegentili.it/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056045:ronciglione:castello",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:058120:fiumicino:venchi-cioccogelateria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    }
+  ]
+}

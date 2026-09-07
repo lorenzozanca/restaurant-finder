@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-097-112-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:022116:mezzocorona:teer-cafe",
+      "query": "\"Teer Cafè\" Mezzocorona \"Corso 4 Novembre, 15B\"",
+      "retrieved_at": "2026-09-02T22:20:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:021092:sesto-sexten:weinstube-zum-hans",
+      "query": "\"Weinstube Zum Hans\" Sesto Sexten \"Via Anger, 1\"",
+      "retrieved_at": "2026-09-02T22:20:00.000Z",
+      "candidates": [{ "title": "WEINSTUBE ZUM HANS, Sesto (Sexten)", "url": "https://www.tripadvisor.de/Restaurant_Review-g194915-d2229780-Reviews-or210-Weinstube_Zum_Hans-Sesto_Province_of_South_Tyrol_Trentino_Alto_Adige.html" }]
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:murphy-s",
+      "query": "\"Pub Murphy's\" Bolzano \"Via Parma, 95\"",
+      "retrieved_at": "2026-09-02T22:20:00.000Z",
+      "candidates": [{ "title": "Pub Murphy's, Bolzano", "url": "https://restaurantguru.com/Murphys-Pub-Bolzano" }]
+    },
+    {
+      "venue_id": "venue:022156:roncegno-terme:picchio",
+      "query": "\"Pizzeria Il Picchio\" \"Roncegno Terme\" \"Via Cesare Battisti, 5\"",
+      "retrieved_at": "2026-09-02T22:20:00.000Z",
+      "candidates": [{ "title": "Pizzeria Il Picchio - Roncegno terme", "url": "https://piatti.menu/restaurants/roncegno-terme/pizzeria-il-picchio" }]
+    },
+    {
+      "venue_id": "venue:024028:castelgomberto:albergo-isetta",
+      "query": "\"Trattoria Albergo Isetta\" Castelgomberto \"Via Pederiva, 96\"",
+      "retrieved_at": "2026-09-02T22:25:00.000Z",
+      "candidates": [{ "title": "Trattoria Isetta - Contattaci", "url": "https://www.trattoriaisetta.com/contattaci" }]
+    },
+    {
+      "venue_id": "venue:023045:malcesine:tabasko-bar",
+      "query": "\"Tabasko Bar\" Malcesine \"Piazza Camillo Benso di Cavour, 3\"",
+      "retrieved_at": "2026-09-02T22:25:00.000Z",
+      "candidates": [{ "title": "Tabasko Bar - Malcesine", "url": "https://www.tripadvisor.com/Attraction_Review-g194807-d6699461-Reviews-Tabasko_Bar-Malcesine_Province_of_Verona_Veneto.html" }]
+    },
+    {
+      "venue_id": "venue:024116:vicenza:magazzino-del-caffe",
+      "query": "\"Magazzino del Caffè\" Vicenza \"Corso Andrea Palladio, 152\"",
+      "retrieved_at": "2026-09-02T22:25:00.000Z",
+      "candidates": [{ "title": "Magazzino del Caffè Vicenza | MDC Group", "url": "https://www.mdc-group.it/magazzino-del-caffe-vicenza/" }]
+    },
+    {
+      "venue_id": "venue:023080:selva-di-progno:cimbra",
+      "query": "\"Pizzeria Cimbra\" \"Selva di Progno\" \"Zagaroa 25\"",
+      "retrieved_at": "2026-09-02T22:25:00.000Z",
+      "candidates": [{ "title": "Informazioni Turistiche", "url": "https://www.comune.selvadiprogno.vr.it/myportal/C_I594/api/content/download?id=5f7583961aab7b0240a6e89b" }]
+    },
+    {
+      "venue_id": "venue:023073:san-martino-buon-albergo:gelato-di-camilla",
+      "query": "\"Il Gelato di Camilla\" \"San Martino Buon Albergo\" \"Via Adamello, 2B\"",
+      "retrieved_at": "2026-09-02T22:30:00.000Z",
+      "candidates": [{ "title": "Il Gelato di Camilla | Senza glutine a San martino buon albergo", "url": "https://www.glutoapp.com/it/locale/17581/il-gelato-di-camilla" }]
+    },
+    {
+      "venue_id": "venue:028060:padova:bm-fast-food",
+      "query": "\"BM Fast Food\" Padova \"Via Jacopo d'Avanzo, 33\"",
+      "retrieved_at": "2026-09-02T22:30:00.000Z",
+      "candidates": [{ "title": "BM Fast Food, Padova", "url": "https://restaurantguru.it/BM-Fast-Food-Padua" }]
+    },
+    {
+      "venue_id": "venue:027018:gruaro:esso-gruaro",
+      "query": "\"Esso Gruaro\" \"LOCALITA BAGNARA\"",
+      "retrieved_at": "2026-09-02T22:30:00.000Z",
+      "candidates": [{ "title": "SiteFeatureReport per web 2023", "url": "https://www.eseitalia.it/stazioniesso.pdf" }]
+    },
+    {
+      "venue_id": "venue:027034:san-michele-al-tagliamento:l-angolo62",
+      "query": "\"L'Angolo62\" \"San Michele al Tagliamento\" \"Via Delfino, 62\"",
+      "retrieved_at": "2026-09-02T22:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:023091:verona:porto-alegre",
+      "query": "\"Porto Alegre\" Verona \"Corso Porta Nuova, 78\"",
+      "retrieved_at": "2026-09-02T22:35:00.000Z",
+      "candidates": [{ "title": "Porto Alegre - Ristoranti etnici", "url": "https://www.cittadiverona.it/ristoranti-etnici/porto-alegre/" }]
+    },
+    {
+      "venue_id": "venue:028102:villa-estense:da-luca",
+      "query": "\"Pizzeria da Luca\" \"Villa Estense\" \"Via Giuseppe Garibaldi, 4\"",
+      "retrieved_at": "2026-09-02T22:35:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:025016:cortina-d-ampezzo:pasticceria-embassy-cortina",
+      "query": "\"Pasticceria Embassy Cortina\" \"Corso Italia, 44\"",
+      "retrieved_at": "2026-09-02T22:35:00.000Z",
+      "candidates": [{ "title": "CORTINA DOLOMITI | GUIDA ENOGASTRONOMICA", "url": "https://www.dolomiti.org/storage/15606/4218295624ea46a320637484fc82c7ae.pdf" }]
+    },
+    {
+      "venue_id": "venue:024116:vicenza:roadhouse-restaurant-vicenza-palladio",
+      "query": "\"Roadhouse Restaurant Vicenza Palladio\" \"Str. Padana verso Padova\"",
+      "retrieved_at": "2026-09-02T22:35:00.000Z",
+      "candidates": [{ "title": "Driving directions to Roadhouse Restaurant Vicenza Palladio", "url": "https://www.waze.com/live-map/directions/it/veneto/vicenza/roadhouse-restaurant-vicenza-palladio?to=place.ChIJZaZkeQsvf0cRSW3CTWKRB7I" }]
+    }
+  ]
+}

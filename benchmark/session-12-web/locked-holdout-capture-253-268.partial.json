@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-253-268-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    { "venue_id": "venue:042045:senigallia:mali-bar", "query": "\"Malì Bar\" Senigallia \"Lungomare Goffredo Mameli, 192\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [] },
+    { "venue_id": "venue:042007:camerata-picena:calore-della-tavola", "query": "\"Il Calore Della Tavola\" \"Camerata Picena\" \"Via Luigi Galvani, 2\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [
+      { "title": "IL CALORE DELLA TAVOLA, Camerata Picena - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g5114288-d9601945-Reviews-Il_Calore_della_Tavola-Camerata_Picena_Province_of_Ancona_Marche.html" },
+      { "title": "Il Calore della Tavola | 071 946014 | Camerata Picena", "url": "https://www.tuttiaffari.com/il-calore-della-tavola_1G-071-946014" },
+      { "title": "Il Calore Della Tavola, Piane - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Il-Calore-della-Tavola-Camerata-Picena" },
+      { "title": "IL CALORE DELLA TAVOLA, Camerata Picena - Restaurant Reviews, Photos & Phone Number - Tripadvisor", "url": "https://www.tripadvisor.com/Restaurant_Review-g5114288-d9601945-Reviews-Il_Calore_della_Tavola-Camerata_Picena_Province_of_Ancona_Marche.html" },
+      { "title": "IL CALORE DELLA TAVOLA, Camerata Picena - 2026 Reviews & Info", "url": "https://www.tripadvisor.ca/Restaurant_Review-g5114288-d9601945-Reviews-Il_Calore_della_Tavola-Camerata_Picena_Province_of_Ancona_Marche.html" }
+    ] },
+    { "venue_id": "venue:042022:loreto:salerni", "query": "\"Caffe Salerni\" Loreto \"Piazza della Madonna, 46\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [] },
+    { "venue_id": "venue:042002:ancona:pasticceria-gelateria-saracinelli-1921", "query": "\"Pasticceria Gelateria Saracinelli 1921\" Ancona \"Via del Gallo, 2\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [] },
+    { "venue_id": "venue:041010:cartoceto:old-jack", "query": "\"Old Jack\" Cartoceto \"Via Flaminia, 12\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [
+      { "title": "Ristoranti | Pro Loco – Punto IAT Cartoceto", "url": "https://www.prolococartoceto.com/ristoranti" },
+      { "title": "Via del Casello, Cartoceto (61030) · Mappa, Servizi e Info", "url": "https://cercastrade.com/cartoceto/via-del-casello" }
+    ] },
+    { "venue_id": "venue:041068:vallefoglia:ciao-2000", "query": "\"Bar Ciao 2000\" Vallefoglia \"Via Giuseppe Mazzini, 44\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [] },
+    { "venue_id": "venue:041013:fano:dalla-peppa", "query": "\"Osteria dalla Peppa\" Fano \"Via Vecchia, 8\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [
+      { "title": "CONTATTI – Osteria dalla Peppa", "url": "https://www.osteriadallapeppa.it/contatti/" },
+      { "title": "Osteria dalla Peppa | Accademia Italiana della Cucina", "url": "https://www.accademia1953.it/it/ristoranti/ristorante/3153-osteria-dalla-peppa" },
+      { "title": "Osteria dalla Peppa, ristorante a Fano, a domicilio | Take2Me.it", "url": "https://take2me.it/locali/ristorante-dalla-peppa-fano.html" },
+      { "title": "Osteria dalla Peppa in Fano - Falstaff", "url": "https://www.falstaff.com/it/ristoranti/osteria-dalla-peppa-fano-1" },
+      { "title": "OSTERIA DALLA PEPPA S.R.L., Partita IVA: 02489850418, Fatturato, Dipendenti, PEC", "url": "https://www.ufficiocamerale.it/3596/osteria-dalla-peppa-srl" }
+    ] },
+    { "venue_id": "venue:043028:montecosaro:konvivia", "query": "\"Konvivia\" Montecosaro \"Via Roma, 79\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [{ "title": "Konvivia gelato per passione – Montecosaro Da Scoprire", "url": "https://www.montecosarodascoprire.it/struttura/konvivia-gelato-per-passione/" }] },
+    { "venue_id": "venue:042048:sirolo:grotta", "query": "\"Ristorante Pizzeria La Grotta\" Sirolo \"Spiaggia Urbani\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [
+      { "title": "RISTORANTE LA GROTTA, Sirolo - Menu, Prices, Restaurant Reviews & Reservations - Tripadvisor", "url": "https://www.tripadvisor.com/Restaurant_Review-g608900-d14015593-Reviews-Ristorante_La_Grotta-Sirolo_Province_of_Ancona_Marche.html" },
+      { "title": "ᐅ Orari di apertura „La Grotta Ristorante Pizzeria“ | Spiaggia Urbani", "url": "https://www.oraridiapertura24.it/filiale/Sirolo%2520%2528AN%2529-La%2520Grotta%2520Ristorante%2520Pizzeria-2212576M.html" },
+      { "title": "Spiaggia Urbani, Sirolo | Sluurpy.it", "url": "https://www.sluurpy.it/sirolo/spiaggia/21413-spiaggia-urbani-sirolo" },
+      { "title": "RISTORANTI - PIZZERIE", "url": "https://www.impegnatipersirolo.it/ristoranti-pizzerie.html" }
+    ] },
+    { "venue_id": "venue:044066:san-benedetto-del-tronto:housecafe", "query": "\"Housecafe\" \"San Benedetto del Tronto\" \"Via Romagna, 32\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [] },
+    { "venue_id": "venue:041020:gradara:gustare-alimentari-gourmet", "query": "\"GustaRé Alimentari Gourmet\" Gradara \"Via Umberto I, 12\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [
+      { "title": "GustaRè negozio di Eccellenze Alimentari, Eno-gastronomiche a Gradara", "url": "https://www.gustaregourmet.com/" },
+      { "title": "Gustarè Alimentari Gourmet, Gradara - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Gustare-Alimentari-Gourmet-Gradara" },
+      { "title": "I 24 migliori posti per il pranzo a Gradara", "url": "https://wanderlog.com/it/list/geoCategory/314410/i-migliori-posti-per-il-pranzo-a-gradara" },
+      { "title": "Ristoranti (2) a Gradara e dintorni", "url": "https://www.virgilio.it/italia/gradara/cat/RISTORANTI_%282%29.html" },
+      { "title": "Migliori Alimentari a Pesaro | Pagine Gialle", "url": "https://www.paginegialle.it/marche/pesaro/alimentari/p-2.html" }
+    ] },
+    { "venue_id": "venue:043024:matelica:moa-project", "query": "\"MoA project\" Matelica \"Viale Cesare Battisti, 8\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [] },
+    { "venue_id": "venue:043013:civitanova-marche:lulu-ristorante", "query": "\"Lulu Ristorante\" \"Civitanova Marche\" \"Lungomare Sergio Piermanni, 16\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [] },
+    { "venue_id": "venue:109001:altidona:papillon", "query": "\"Pizzeria Ristorante Le Papillon\" Altidona \"Via Cristoforo Colombo, 12\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [
+      { "title": "PIZZERIA-RISTORANTE LE PAPILLON DI ISABELLA CATALDI, Partita IVA: 03012051201, Fatturato, Dipendenti, PEC", "url": "https://www.ufficiocamerale.it/3513/pizzeria-ristorante-le-papillon-di-isabella-cataldi" },
+      { "title": "Pizzeria Ristorante Le Papillon Pizzerie Altidona 63824 by overplace", "url": "https://www.overplace.com/marche/fm/altidona/pizzerie/pizzeria-ristorante-le-papillon.html" },
+      { "title": "Pizzeria Ristorante Le Papillon di Isabella Cataldi - Pizzeria a Marina DI Altidona", "url": "https://firmania.it/altidona/pizzeria-ristorante-le-papillon-di-isabella-cataldi-2397179" },
+      { "title": "Mappa delle migliori Pizzerie a Pedaso - Tuttocittà", "url": "https://www.tuttocitta.it/pizzerie/pedaso" },
+      { "title": "Pizzeria Ristorante Le Papillon di Isabella Cataldi a Altidona", "url": "https://www.ricercare-imprese.it/altidona/pizzeria-ristorante-le-papillon-di-isabella-cataldi-aYgqkY.html" }
+    ] },
+    { "venue_id": "venue:044017:cupra-marittima:chiosco-tongatapu", "query": "\"Chiosco Tongatapu\" \"Cupra Marittima\" \"Via Raul Taffetani\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [
+      { "title": "Chiosco Tongatapù, Cupra Marittima - Speisekarte, Preise und Bewertungen", "url": "https://de.restaurantguru.com/Chiosco-Tongatapu-Cupra-Marittima" },
+      { "title": "Chiosco Tongatapù, Cupra Marittima - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/amp/Chiosco-Tongatapu-Cupra-Marittima" },
+      { "title": "Chiosco Tongatapù | 335 137 9024 | Cupra Marittima", "url": "https://www.tuttiaffari.com/chiosco-tongatap%C3%B9-335-137-9024" }
+    ] },
+    { "venue_id": "venue:044007:ascoli-piceno:duomo-caffetteria", "query": "\"Duomo Caffetteria\" \"Ascoli Piceno\" \"Piazza Arringo, 42\"", "retrieved_at": "2026-09-07T06:40:00.000Z", "candidates": [
+      { "title": "Duomo Caffetteria, Ascoli Piceno, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog", "url": "https://wanderlog.com/place/details/11714038/duomo-caffetteria" },
+      { "title": "Duomo Caffetteria, Ascoli Piceno - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/amp/Duomo-Caffetteria-Ascoli-Piceno" }
+    ] }
+  ]
+}

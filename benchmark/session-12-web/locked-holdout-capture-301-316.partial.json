@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-301-316-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    { "venue_id": "venue:066093:scanno:vecchio-mulino", "query": "\"Trattoria Pizzeria Il Vecchio Mulino\" Scanno \"Via Silla, 11\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [] },
+    { "venue_id": "venue:067035:pineto:pinetina", "query": "\"La Pinetina snc\" Pineto \"Lido N.15\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [
+      { "title": "La Pinetina SNC, Pineto - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/La-Pinetina-Pineto" },
+      { "title": "La Pinetina snc | 339 475 5783 | Scerne", "url": "https://www.tuttiaffari.com/la-pinetina-snc-339-475-5783" },
+      { "title": "▷ La Pinetina snc | Bar, Pineto", "url": "https://www.cylex-italia.it/pineto/la-pinetina-snc-15271630.html" },
+      { "title": "Bar Pineto orari di apertura | Trova Aperto", "url": "https://trova-aperto.it/pineto/bar" },
+      { "title": "Top bar in Pineto - Cylex Ricerca locale", "url": "https://www.cylex-italia.it/pineto/bar/" }
+    ] },
+    { "venue_id": "venue:066049:l-aquila:oronero-caffe-delizie", "query": "\"Oronero caffè & delizie\" \"L'Aquila\" \"Via Strinella, 18A\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [] },
+    { "venue_id": "venue:066050:lecce-nei-marsi:tasty-food", "query": "\"Tasty food\" \"Lecce nei Marsi\" \"Via Cacesare, 281\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [] },
+    { "venue_id": "venue:067041:teramo:liverpool-pub", "query": "\"Liverpool Pub\" Teramo \"Corso Porta Romana, 50\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [
+      { "title": "Liverpool Pub | 0861 240181 | Teramo", "url": "https://www.tuttiaffari.com/liverpool-pub-0861-240181" }
+    ] },
+    { "venue_id": "venue:068028:pescara:gelato-della-pineta", "query": "\"Il Gelato Della Pineta\" Pescara \"Via Francesco Paolo D'Annunzio, 3\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [] },
+    { "venue_id": "venue:066082:rocca-di-mezzo:rifugio-del-lupo", "query": "\"Il Rifugio del Lupo\" \"Rocca di Mezzo\" \"Piani di Pezza\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [
+      { "title": "Comune di Rocca di Mezzo", "url": "https://www.halleyweb.com/c066082/zf/index.php/atti-amministrativi/ordinanze/dettaglio/table-ordinanze-public-page/4/atto/GTVRReU61WT0-H" },
+      { "title": "CAI Roma » Ciclovia delle Rocche da Rocca di Mezzo ad Ovindoli passando per i piani di pezza", "url": "https://www.cairoma.it/?p=29474" },
+      { "title": "ristorante-il-rifugio-del-lupo • Majellando", "url": "https://www.majellando.it/it/ristoranti-in-abruzzo/ristorante-il-rifugio-del-lupo" },
+      { "title": "6 lug Piani di Pezza", "url": "https://www.follettidelmorrone.it/programma-attivita-2013/programma-2025/22-giu-piani-di-pezza.html" },
+      { "title": "Sentieri - Rifugio Vincenzo Sebastiani", "url": "https://www.rifugiovincenzosebastiani.it/sentieri/" }
+    ] },
+    { "venue_id": "venue:068024:montesilvano:gianni-street-food", "query": "\"Gianni Street Food\" Montesilvano \"Corso Umberto I, 16\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [
+      { "title": "ᐅ Orari di apertura „Gianni Street Food dal 1977“ | Corso Umberto I", "url": "https://www.oraridiapertura24.it/filiale/Montesilvano%2520Marina-Gianni%2520Street%2520Food%2520dal%25201977-2280529B.html" },
+      { "title": "GIANNI STREET FOOD DAL 1977, Montesilvano - Restaurant Reviews, Photos & Phone Number - Tripadvisor", "url": "https://www.tripadvisor.com/Restaurant_Review-g194834-d7351218-Reviews-Gianni_Street_Food_dal_1977-Montesilvano_Province_of_Pescara_Abruzzo.html" }
+    ] },
+    { "venue_id": "venue:069022:chieti:borgo-antico", "query": "\"Borgo Antico\" Chieti \"Via Pescara, 115\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [
+      { "title": "Borgo Antico | 340 385 4902 | Chieti", "url": "https://www.tuttiaffari.com/borgo-antico_767-340-385-4902" },
+      { "title": "ᐅ Orari di apertura „Borgo Antico 2“ | Vía Pescara", "url": "https://www.oraridiapertura24.it/filiale/Chieti-Borgo%2520Antico%25202-2274607E.html" },
+      { "title": "Brochure BIP 11.06.24", "url": "https://www.unich.it/sites/default/files/2024-09/Brochure%20BIP%2011.06.24%20.pdf" }
+    ] },
+    { "venue_id": "venue:066075:pratola-peligna:900", "query": "\"Caffe 900\" \"Pratola Peligna\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [
+      { "title": "Caffe'900, Pratola Peligna - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Caffe-900-Pratola-Peligna" },
+      { "title": "I migliori 5 caffetterias di Pratola Peligna, agosto 2026 - Restaurant Guru", "url": "https://restaurantguru.it/cafeteria-Pratola-Peligna-t7" },
+      { "title": "Caffè del Corso, Pratola Peligna - Restaurant menu, prices and reviews", "url": "https://restaurantguru.com/Caffe-del-Corso-Pratola-Peligna" },
+      { "title": "PRATOLA PELIGNA. DIVERSARTE E APERITIVO DIVERSO | Il Faro 24!", "url": "https://ilfaro24.it/pratola-peligna-diversarte-e-aperitivo-diverso/" },
+      { "title": "Bari, pubi in taverne v Pratola Peligna, Abruci", "url": "https://sl.cybo.com/IT/pratola-peligna/bari%2C-pubi-in-taverne/" }
+    ] },
+    { "venue_id": "venue:067001:alba-adriatica:follia-pratica", "query": "\"Follia Pratica\" \"Alba Adriatica\" \"Viale Giuseppe Mazzini, 70\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [
+      { "title": "FOLLIA PRATICA, Alba Adriatica - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g194665-d6458688-Reviews-Follia_Pratica-Alba_Adriatica_Province_of_Teramo_Abruzzo.html" },
+      { "title": "Recensioni Follia Pratica (14) - Alba Adriatica | Sluurpy", "url": "https://www.sluurpy.it/alba-adriatica/ristorante/91152/follia-pratica/recensioni" }
+    ] },
+    { "venue_id": "venue:066049:l-aquila:pocoloco-pubewinebar", "query": "\"Pocoloco Pubewinebar\" \"L'Aquila\" \"Via Gioacchino Volpe, 53\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [
+      { "title": "Pocoloco Pubewinebar, Paganica - Menu del ristorante, prezzi e recensioni", "url": "https://www.sluurpy.it/paganica/ristorante/88008/pocoloco-pubewinebar" },
+      { "title": "Pocoloco Pubewinebar da L'AQUILA", "url": "https://piatti.menu/restaurants/laquila/pocoloco-pubewinebar" },
+      { "title": "POCOLOCO HOUSE OF MUSIC, Paganica - Restaurant Reviews, Photos & Phone Number - Tripadvisor", "url": "https://www.tripadvisor.com/Restaurant_Review-g1392017-d7852105-Reviews-Pocoloco_House_of_Music-Paganica_Province_of_L_Aquila_Abruzzo.html" }
+    ] },
+    { "venue_id": "venue:067028:montorio-al-vomano:toto", "query": "\"Ristorante Pizzeria Totò\" \"Montorio al Vomano\" \"Via Duca degli Abruzzi, 35\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [] },
+    { "venue_id": "venue:067040:silvi:gallonero", "query": "\"Ristorante Pizzeria Gallonero\" Silvi \"Contrada Piane Maglierici, 11\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [
+      { "title": "» Ristorante Pizzeria GalloNero - visitSilvi.it Portale Turistico di Silvi", "url": "https://www.visitsilvi.it/mangiare/ristorante-pizzeria-gallonero/41-53.html" },
+      { "title": "» Ristorante Pizzeria GalloNero - visitSilvi.it Silvi Tourism Web Portal", "url": "https://www.visitsilvi.it/en/food-and-restaurants/ristorante-pizzeria-gallonero/41-53.html" },
+      { "title": "Ristorante Pizzeria Gallonero | 085 797 8908 | Silvi", "url": "https://www.tuttiaffari.com/ristorante-pizzeria-gallonero-085-797-8908" },
+      { "title": "Ristorante Pizzeria Gallonero | Senza glutine a Piane maglierici | Gluto", "url": "https://www.glutoapp.com/it/locale/9498/ristorante-pizzeria-gallonero" },
+      { "title": "Ristorante Pizzeria Gallonero, Montesilvano, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog", "url": "https://wanderlog.com/place/details/3003306/ristorante-pizzeria-gallonero" }
+    ] },
+    { "venue_id": "venue:069022:chieti:tricalle", "query": "\"Bar Tricalle\" Chieti \"Via dei Frentani, 6\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [
+      { "title": "Driving directions to Bar Tricalle, 6 Via dei Frentani, Chieti - Waze", "url": "https://www.waze.com/live-map/directions/it/abruzzo/chieti/bar-tricalle?to=place.ChIJPz2oUCKsMRMR2jLXGdnYHxA" },
+      { "title": "Bar Tricalle di Di Cintio Catia, Chieti - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Bar-Tricalle-Chieti" },
+      { "title": "Bar Tricalle | 329 757 7513 | Chieti", "url": "https://www.tuttiaffari.com/bar-tricalle_1h-329-757-7513" },
+      { "title": "BAR TRICALLE S.R.L.S, Partita IVA: 02591250697, Fatturato, Dipendenti, PEC", "url": "https://www.ufficiocamerale.it/9743/bar-tricalle-srls" },
+      { "title": "Bar Tricalle di Di Cintio Catia | Pasticceria a Chieti | Dove Pasticcio", "url": "https://www.dovepasticcio.it/pasticcerie/dettaglio/1758/bar-tricalle-di-di-cintio-catia-a-chieti" }
+    ] },
+    { "venue_id": "venue:066093:scanno:angelone", "query": "\"Pizzeria Angelone\" Scanno \"Via Vincenzo Tanturri, 32\"", "retrieved_at": "2026-09-07T07:00:00.000Z", "candidates": [] }
+  ]
+}

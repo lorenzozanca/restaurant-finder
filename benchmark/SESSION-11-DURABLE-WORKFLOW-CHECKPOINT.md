@@ -1,7 +1,7 @@
 # Session 11 durable ownership and unseen-validation checkpoint
 
-Date: 2026-09-01
-Decision: **durable workflow and development adjudication pass offline; two invalid holdouts retired before evaluation; final replacement selected but not captured**
+Date: 2026-09-02
+Decision: **final replacement captured and adjudicated; exactly-once holdout evaluation fails the preregistered precision lower-bound gate**
 Brave requests used: **0**
 Publication authorized: **no**
 
@@ -184,13 +184,30 @@ still excluded evidence-free zero-result decisions from the reviewed and
 abstention denominators. The v2 replacement was therefore also retired before
 adjudication or evaluation. Neither retired holdout has quality metrics.
 
-The end-to-end regression now proves that a zero-result fixture validates and
+The end-to-end regression proves that a zero-result fixture validates and
 counts as one reviewed abstention. A final deterministic replacement selection
 contains 300 new venues, including a 100-venue locked holdout, excludes 756
 previous benchmark venue IDs, and has zero overlap with either retired
 selection. Its candidate fingerprint is
 `4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079`.
-It has not been queried, adjudicated, or evaluated.
+
+The final holdout is now captured in five fixture batches and independently
+adjudicated in five matching review batches under `session-11-web-v3/`. The
+capture has 79 retained candidates across 79 publisher domains and 21
+zero-result venues. Review verified 22 domains and rejected 57 third-party or
+unrelated publishers. Pre-evaluation validation established exact 100/100
+selection coverage, complete domain-review coverage, passing regression tests,
+and unchanged V3 frozen hashes.
+
+The frozen evaluator was then invoked exactly once. It reviewed all 100 venues
+and produced 22 publications, all 22 true, zero false, 78 abstentions, and 22%
+coverage. Observed precision is 100%, but its two-sided 95% Wilson lower bound
+is 85.13%, so non-vacuity passes and the preregistered 95% precision target
+fails. Publication remains unauthorized. Resource-role metrics remain
+explicitly not evaluated. The durable decision record is
+`SESSION-11-FINAL-HOLDOUT-DECISION.md`; the machine-readable report is
+`SESSION-11-FINAL-LOCKED-HOLDOUT-EVALUATION.json` with SHA-256
+`5b4f9a4a81fd49b259a108f69b40416244d8a94baa01a0888d3db812f031b9a6`.
 
 - Veneto queue: 13,073 queued, zero attempts, zero terminal jobs.
 - National queue: 156,057 queued, zero attempts, zero terminal jobs.

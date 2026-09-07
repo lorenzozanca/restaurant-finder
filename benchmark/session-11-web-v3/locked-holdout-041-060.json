@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-final-locked-holdout-041-060",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:052028:san-gimignano:selva-delle-torri",
+      "query": "\"Ristorante Selva Delle Torri\" \"San Gimignano\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante Selva delle Torri",
+          "url": "https://ristoranteselvadelletorri.com/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:051002:arezzo:gelateria-cremeria-paris",
+      "query": "\"Gelateria Cremeria Paris\" \"Arezzo\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:051004:bibbiena:4-vie",
+      "query": "\"Caffè 4 Vie\" \"Bibbiena\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffè 4 Vie",
+          "url": "https://www.ufficiocamerale.it/9942/caffe-4-vie-snc-di-vignali-alessandro-c"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046007:capannori:sapore-pizza",
+      "query": "\"Sapore Pizza\" \"Capannori\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Sapore Pizza",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194719-d12944693-Reviews-Sapore_Pizza-Capannori_Province_of_Lucca_Tuscany.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:048017:firenze:move-on",
+      "query": "\"Move On\" \"Firenze\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Move On Firenze",
+          "url": "https://www.italia.it/it/toscana/firenze/dove-mangiare/move-on"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054050:spello:autogrill",
+      "query": "\"Autogrill\" \"Spello\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Locali Autogrill",
+          "url": "https://www.autogrill.it/wp-content/uploads/2023/08/LOCALI-AUTOGRILL-6.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054001:assisi:tutto-bono",
+      "query": "\"Tutto Bono\" \"Assisi\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Where to eat in Assisi",
+          "url": "https://www.visit-assisi.it/en/where-to-eat/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054036:paciano:echoes-cafe",
+      "query": "\"Echoes café\" \"Paciano\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Echoes Group",
+          "url": "https://echoesgroup.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054013:citta-di-castello:blackstone-pub",
+      "query": "\"BlackStone Pub\" \"Città di Castello\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BlackStone Pub",
+          "url": "https://www.waze.com/live-map/directions/italy/umbria/citta-di-castello/blackstone-pub"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055032:terni:u-street",
+      "query": "\"U Street\" \"Terni\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "U Street - contatti",
+          "url": "https://www.umamistreet.it/contattaci/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042048:sirolo:fornace",
+      "query": "\"La Fornace\" \"Sirolo\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "La Fornace",
+          "url": "https://www.italia.it/it/marche/sirolo/dove-mangiare/la-fornace"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041013:fano:curcuma-cafe",
+      "query": "\"Curcuma Cafe\" \"Fano\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Curcuma Cafe",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194760-d12886172-Reviews-Curcuma_Cafe-Fano_Province_of_Pesaro_and_Urbino_Marche.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042027:montemarciano:saccaria",
+      "query": "\"Caffè Saccaria\" \"Montemarciano\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffè Saccaria",
+          "url": "https://www.saccaria.it/shop/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:109006:fermo:lella",
+      "query": "\"Trattoria Lella\" \"Fermo\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Trattoria Lella",
+          "url": "https://restaurantguru.it/Trattoria-Lella-Fermo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043013:civitanova-marche:bynice-civitanova-marche",
+      "query": "\"ByNice Civitanova Marche\" \"Civitanova Marche\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:058107:trevignano-romano:porticciolo",
+      "query": "\"Il Porticciolo\" \"Trevignano Romano\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Il Porticciolo - dove siamo",
+          "url": "https://www.ilporticciolotrevignano.it/dove-siamo.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058091:roma:kfc-a7d665f9",
+      "query": "\"KFC\" \"Roma\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:057053:poggio-mirteto:torrefazione-caffe-gentili",
+      "query": "\"Torrefazione Caffè Gentili\" \"Poggio Mirteto\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Torrefazione Caffè Gentili",
+          "url": "https://www.caffegentili.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056045:ronciglione:castello",
+      "query": "\"Il Castello\" \"Ronciglione\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:058120:fiumicino:venchi-cioccogelateria",
+      "query": "\"Venchi Cioccogelateria\" \"Fiumicino\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    }
+  ]
+}

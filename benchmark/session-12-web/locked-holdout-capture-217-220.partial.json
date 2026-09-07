@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-217-220-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    { "venue_id": "venue:050029:pontedera:cicchetto-shot-drink", "query": "\"Il Cicchetto Shot&Drink\" Pontedera \"Via Ranieri Gotti, 6\"", "retrieved_at": "2026-09-03T00:55:00.000Z", "candidates": [{ "title": "IL CICCHETTO SHOT&DRINK: Tutto quello che c'è da sapere (2026)", "url": "https://www.tripadvisor.it/Attraction_Review-g635635-d25434477-Reviews-Il_Cicchetto_Shot_Drink-Pontedera_Province_of_Pisa_Tuscany.html" }] },
+    { "venue_id": "venue:100005:prato:gelateria-sottozero-via-ferrucci-196-prato", "query": "\"Gelateria Sottozero\" Prato \"Via Francesco Ferrucci, 196\"", "retrieved_at": "2026-09-03T00:55:00.000Z", "candidates": [{ "title": "Gelateria Sottozero, Prato", "url": "https://www.nuovaopinione.it/prato/gelaterie/gelateria-sottozero-16579" }] },
+    { "venue_id": "venue:051035:sestino:dai-toscani-di-grassi-mirko", "query": "\"Pizzeria Ristorante Dai Toscani Di Grassi Mirko\" Sestino \"Via Marche, 28\"", "retrieved_at": "2026-09-03T00:55:00.000Z", "candidates": [{ "title": "Pizzeria Ristorante Dai Toscani Di Grassi Mirko | 366 247 9593 | Sestino", "url": "https://www.tuttiaffari.com/pizzeria-ristorante-dai-toscani-di-366-247-9593" }] },
+    { "venue_id": "venue:053006:castiglione-della-pescaia:nel-buco-castiglione-della-pescaia", "query": "\"Ristorante Nel Buco\" \"Castiglione della Pescaia\" \"Via della Libertà, 6\"", "retrieved_at": "2026-09-03T00:55:00.000Z", "candidates": [] }
+  ]
+}

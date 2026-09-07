@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-493-500-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:113017:olbia:maryton-bar",
+      "query": "\"Maryton Bar\" \"Olbia\" \"Residenza sul Porto, 114\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Maryton Bar | 0789 183 1514 | Olbia",
+          "url": "https://www.tuttiaffari.com/maryton-bar-0789-183-1514"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:116023:seui:biondo-bar-tabacchi",
+      "query": "\"Biondo Bar Tabacchi\" \"Seui\" \"Via Roma, 221\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Biondo Bar Tabacchi Di Silvio Gaviano | 0782 54289 | Seui",
+          "url": "https://www.tuttiaffari.com/biondo-bar-tabacchi-di-silvio-gaviano-0782-54289"
+        },
+        {
+          "title": "Biondo Bar Tabacchi di Silvio Gaviano a Seui",
+          "url": "https://www.ricercare-imprese.it/seui/biondo-bar-tabacchi-di-silvio-gaviano-aYiS16.html"
+        },
+        {
+          "title": "▷ Bar Santino, Seulo",
+          "url": "https://www.cylex-italia.it/seulo/bar-santino-16090378.html"
+        },
+        {
+          "title": "Aziende a Ogliastra",
+          "url": "https://aziende.tuttosuitalia.com/sardegna/ogliastra/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:116017:tortoli:star-1-caffetteria-gelateria",
+      "query": "\"Star 1 Caffetteria Gelateria\" \"Tortolì\" \"Via Lungomare, 19\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Star 1 - Caffetteria Gelateria, Tortolì, locali aperitivo Tortolì NU, Bar, Cocktail Bar, locali aperitivo vicino a me Tortolì",
+          "url": "https://www.apetime.com/locali/tortoli-nu/star-1-caffetteria-gelateria"
+        },
+        {
+          "title": "Tortoli Calcio 1953 - Sito Ufficiale | Scheda Sponsor e partner del Tortoli Calcio",
+          "url": "https://www.tortolicalcio.it/dettaglio-sponsor.asp?idsponsor=UIH4AHYORR7Y7VP6EW9X"
+        },
+        {
+          "title": "I 13 migliori dessert e snack in Tortoli",
+          "url": "https://wanderlog.com/it/list/geoCategory/354546/i-migliori-dessert-e-snack-in-tortol%C3%AC"
+        },
+        {
+          "title": "The 13 best desserts and snacks in Tortoli",
+          "url": "https://wanderlog.com/list/geoCategory/354546/%ED%86%A0%EB%A5%B4%ED%86%A8%EB%A6%AC%EC%9D%98-%EA%B0%80%EC%A7%80-%EC%B5%9C%EA%B3%A0%EC%9D%98-%EB%94%94%EC%A0%80%ED%8A%B8%EC%99%80-%EA%B0%84%EC%8B%9D"
+        },
+        {
+          "title": "Ristorazione e Locali Pubblici in italia",
+          "url": "https://www.reteimprese.it/Ristorazione_e_Locali_Pubblici_T87P628"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:113017:olbia:peterland-olbia",
+      "query": "\"Peterland olbia\" \"Olbia\" \"Via Roma, 67\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Peterland Olbia: Different Fast Food, Hamburger, Smash Burger e Patatine Olandesi",
+          "url": "https://www.peterlandolbia.it/"
+        },
+        {
+          "title": ".::: Peterland il mondo del take away - finalmente anche in Italia, la vera patatina olandese cotta in olio alto oleico, carne di manzo, hot dog dall'inconfondibile sapore neworkese e vera carne di pollo! :::.",
+          "url": "https://www.peterland.it/olbia.html"
+        },
+        {
+          "title": "Peterland olbia, Olbia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Peterland-Olbia"
+        },
+        {
+          "title": "PETERLAND OLBIA - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187883-d27819004-Reviews-Peterland_Olbia-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "PETERLAND OLBIA - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187883-d27819004-Reviews-Peterland_Olbia-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:117013:samassi:hollywood-cafe",
+      "query": "\"Hollywood Cafe\" \"Samassi\" \"Via Roma, 68\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Hollywood Café, Samassi - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Hollywood-cafe-Samassi"
+        },
+        {
+          "title": "Bar luna | 346 301 0177 | Samassi",
+          "url": "https://www.tuttiaffari.com/bar-luna_65j-346-301-0177"
+        },
+        {
+          "title": "Berry Alessandro Barracciu - Batterista - Oristano | Kleisma.com",
+          "url": "https://www.kleisma.com/musicisti/profilo/alessandro-barracciu"
+        },
+        {
+          "title": "Monica Meli - Cantante (mezzosoprano) - Cabras (OR) | Kleisma.com",
+          "url": "https://www.kleisma.com/musicisti/profilo/monica-meli"
+        },
+        {
+          "title": "барове, клубове и механи Компании в серенти - Cybo",
+          "url": "https://directory-bg.cybo.com/IT/%D1%81%D0%B5%D1%80%D0%B5%D0%BD%D1%82%D0%B8/%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D0%B5%2C-%D0%BA%D0%BB%D1%83%D0%B1%D0%BE%D0%B2%D0%B5-%D0%B8-%D0%BC%D0%B5%D1%85%D0%B0%D0%BD%D0%B8"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:119020:sant-antioco:del-corso",
+      "query": "\"Caffè del Corso\" \"Sant'Antioco\" \"Corso Vittorio Emanuele, 32\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Caffè del Corso, 32 Corso Vittorio Emanuele, Sant'Antioco - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/sardegna/santantioco/caffe-del-corso?to=place.ChIJsc4z-kSq5xIRJo6hs9GdKtM"
+        },
+        {
+          "title": "Caffè del Corso, Sant'Antioco - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Cafe-Del-Corso-SantAntioco-2"
+        },
+        {
+          "title": "Hotel del Corso - Google Hotel",
+          "url": "https://www.google.it/travel/hotels/entity/CgoIhZqWrNDso_gdEAE"
+        },
+        {
+          "title": "Hotel del Corso - Google Hotel",
+          "url": "https://www.google.it/travel/hotels/entity/CgoIhZqWrNDso_gdEAE?ap=MAA&rp=OAFIAsICFyIVEhMItdmBsLiehwMV4EtvBB0TcALu&ts=CAEaBAoCGgAqBAoAGgA"
+        },
+        {
+          "title": "Hotel Del Corso - Google hotels",
+          "url": "https://www.google.com/travel/hotels/entity/CgoIhZqWrNDso_gdEAE"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112050:sassari:lido-sardegna",
+      "query": "\"Lido Sardegna\" \"Sassari\" \"Via della Torre, 1\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Contatti Lido Sardegna a Sassari | Informazioni e riferimenti dello stabilimento",
+          "url": "https://www.lidosardegna.it/contatti"
+        },
+        {
+          "title": "Lido Sardegna - Sassari (SS) - prenotazione online | Spiagge.it",
+          "url": "https://www.spiagge.it/stabilimenti-balneari/10484-lido-sardegna/"
+        },
+        {
+          "title": "Pizzeria Paninoteca lido Sardegna | 391 775 3046 | Sassari",
+          "url": "https://www.tuttiaffari.com/pizzeria-paninoteca-lido-sardegna-391-775-3046"
+        },
+        {
+          "title": "Pizzeria Paninoteca lido Sardegna, Sassari - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Paninoteca-lido-Sardegna-Platamona"
+        },
+        {
+          "title": "Pizzeria Paninoteca lido Sardegna, Sassari - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Pizzeria-Paninoteca-lido-Sardegna-Platamona"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:115030:marrubiu:quattro-more",
+      "query": "\"Pizzeria Le Quattro More\" \"Marrubiu\" \"Via Napoli, 203/a\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA LE QUATTRO MORE, Marrubiu - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1486821-d13199567-Reviews-Pizzeria_Le_Quattro_More-Marrubiu_Province_of_Oristano_Sardinia.html"
+        },
+        {
+          "title": "Pizzeria le quattro more di Turchiano Roberta. | 340 294 7381 | Marrubiu",
+          "url": "https://www.tuttiaffari.com/pizzeria-le-quattro-more-di-turchiano_1H-340-294-7381"
+        },
+        {
+          "title": "Pizzeria le quattro more di Turchiano Roberta. | 347 010 9233 | Marrubiu",
+          "url": "https://www.tuttiaffari.com/pizzeria-le-quattro-more-di-turchiano-347-010-9233"
+        },
+        {
+          "title": "PIZZERIA LE QUATTRO MORE, Marrubiu - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/PIZZERIA-MARRUBIU-LE-QUATTRO-MORE-Marrubiu"
+        },
+        {
+          "title": "Mangiare | Paschixedda Marrubiesa",
+          "url": "https://www.paschixeddamarrubiesa.it/ospitalit%C3%A0/mangiare/"
+        }
+      ]
+    }
+  ]
+}

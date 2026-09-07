@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-129-144-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:093007:brugnera:citron-giuseppe-e-vicenzi-antonietta",
+      "query": "\"Citron Giuseppe e Vicenzi Antonietta\" Brugnera",
+      "retrieved_at": "2026-09-02T23:05:00.000Z",
+      "candidates": [{ "title": "CITRON GIUSEPPE E VICENZI ANTONIETTA S.N.C., Partita IVA: 00422900936, Fatturato, Dipendenti, PEC", "url": "https://www.ufficiocamerale.it/6270/citron-giuseppe-e-vicenzi-antonietta-snc" }]
+    },
+    {
+      "venue_id": "venue:031007:gorizia:underground-gorizia",
+      "query": "\"Underground Gorizia\" \"Via Lunga, 27\"",
+      "retrieved_at": "2026-09-02T23:05:00.000Z",
+      "candidates": [{ "title": "Underground Gorizia, Gorizia", "url": "https://www.nuovaopinione.it/gorizia/pub/underground-gorizia-109024" }]
+    },
+    {
+      "venue_id": "venue:032006:trieste:gelateria-alla-fontana-con-amore",
+      "query": "\"Gelateria alla fontana - Con Amore\" Trieste \"Viale Miramare, 205/a\"",
+      "retrieved_at": "2026-09-02T23:05:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:030054:malborghetto-valbruna:autogrill-fella-est",
+      "query": "\"Autogrill Fella Est\" \"Malborghetto Valbruna\"",
+      "retrieved_at": "2026-09-02T23:05:00.000Z",
+      "candidates": [{ "title": "Autogrill Fella Est | 0428 41946 | Malborghetto-Valbruna", "url": "https://www.tuttiaffari.com/autogrill-fella-est_1d-0428-41946" }]
+    },
+    {
+      "venue_id": "venue:030099:san-daniele-del-friuli:prosciutteria-al-mulino",
+      "query": "\"Prosciutteria Al Mulino\" \"San Daniele del Friuli\" \"Via Giosuè Carducci, 1\"",
+      "retrieved_at": "2026-09-02T23:10:00.000Z",
+      "candidates": [{ "title": "PROSCIUTTERIA AL MULINO, San Daniele del Friuli - Restaurant Reviews, Photos & Phone Number - Tripadvisor", "url": "https://www.tripadvisor.com/Restaurant_Review-g790404-d3163066-Reviews-Prosciutteria_Al_Mulino-San_Daniele_del_Friuli_Province_of_Udine_Friuli_Venezia_G.html" }]
+    },
+    {
+      "venue_id": "venue:030129:udine:fratelli-buonocore",
+      "query": "\"Pizzeria Fratelli Buonocore\" Udine \"Viale Volontari della Libertà, 10\"",
+      "retrieved_at": "2026-09-02T23:10:00.000Z",
+      "candidates": [{ "title": "PIZZERIA FRATELLI BUONOCORE, Udine - Ristorante Recensioni & Numero di Telefono - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g187814-d27197068-Reviews-Pizzeria_Fratelli_Buonocore-Udine_Province_of_Udine_Friuli_Venezia_Giulia.html" }]
+    },
+    {
+      "venue_id": "venue:030053:majano:gelateria-al-ghiottone",
+      "query": "\"Bar Gelateria Al Ghiottone\" Majano \"Piazza Italia, 12\"",
+      "retrieved_at": "2026-09-02T23:10:00.000Z",
+      "candidates": [{ "title": "Bar Gelateria Al Ghiottone | 335 561 2849 | Majano", "url": "https://www.tuttiaffari.com/bar-gelateria-al-ghiottone-335-561-2849" }]
+    },
+    {
+      "venue_id": "venue:031009:grado:galleria-excelsior",
+      "query": "\"Galleria Excelsior\" Grado \"Viale Europa Unita, 15\"",
+      "retrieved_at": "2026-09-02T23:10:00.000Z",
+      "candidates": [{ "title": "Galleria Excelsior, Grado - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Cafe-Excelsior-Grado" }]
+    },
+    {
+      "venue_id": "venue:030129:udine:mis-s-kappa",
+      "query": "\"Mis(s)Kappa\" Udine \"Via Bertaldia, 38\"",
+      "retrieved_at": "2026-09-02T23:15:00.000Z",
+      "candidates": [{ "title": "Circolo ARCI Mis(s)Kappa, Udine - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Circolo-ARCI-MissKappa-Udine" }]
+    },
+    {
+      "venue_id": "venue:030189:sappada:gelateria-carapina",
+      "query": "\"Gelateria Carapina\" Sappada \"Via Nazionale, 1\"",
+      "retrieved_at": "2026-09-02T23:15:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:093033:pordenone:mister-pizza-pordenone",
+      "query": "\"Mister Pizza Pordenone\" \"Via Maggiore, 21\"",
+      "retrieved_at": "2026-09-02T23:15:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:032006:trieste:cappellaio-matto",
+      "query": "\"Cappellaio Matto\" Trieste \"Via 30 Ottobre, 15/b\"",
+      "retrieved_at": "2026-09-02T23:15:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:030190:fiumicello-villa-vicentina:tomasin-giuseppe",
+      "query": "\"agriturismo Tomasin Giuseppe\" \"Fiumicello Villa Vicentina\" \"Via Nazionale, 32\"",
+      "retrieved_at": "2026-09-02T23:20:00.000Z",
+      "candidates": [{ "title": "agriturismo Tomasin Giuseppe | 0431 967016 | Fiumicello", "url": "https://www.tuttiaffari.com/tomasin-0431-967016" }]
+    },
+    {
+      "venue_id": "venue:030118:tavagnacco:pizzikotto-tavagnacco",
+      "query": "\"Pizzikotto Tavagnacco\" \"Via Nazionale, 3\"",
+      "retrieved_at": "2026-09-02T23:20:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:030129:udine:tana-live-pub",
+      "query": "\"La Tana live Pub\" Udine \"Piazzale Paolo Diacono, 12\"",
+      "retrieved_at": "2026-09-02T23:20:00.000Z",
+      "candidates": [{ "title": "LA TANA LIVE PUB, Udine - Restaurant Reviews, Photos & Phone Number - Tripadvisor", "url": "https://www.tripadvisor.com/Restaurant_Review-g187814-d27206840-Reviews-La_Tana_Live_Pub-Udine_Province_of_Udine_Friuli_Venezia_Giulia.html" }]
+    },
+    {
+      "venue_id": "venue:030057:martignacco:solo-artisane",
+      "query": "\"Solo Artisane\" Martignacco \"Via Spilimbergo, 293\"",
+      "retrieved_at": "2026-09-02T23:20:00.000Z",
+      "candidates": [{ "title": "I NOSTRI PRODOTTI - Solo Artisane", "url": "https://www.soloartisane.com/i-nostri-prodotti/" }]
+    }
+  ]
+}

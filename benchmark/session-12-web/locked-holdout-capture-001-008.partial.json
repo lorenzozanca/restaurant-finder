@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-001-008-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:001302:villarbasse:spurty-by-baroloworld",
+      "query": "\"La spurty by BaroloWorld\" \"Villarbasse\"",
+      "retrieved_at": "2026-09-02T20:20:00.000Z",
+      "candidates": [
+        {
+          "title": "La spurty by BaroloWorld, Villarbasse - Italia.it",
+          "url": "https://www.italia.it/it/piemonte/villarbasse/dove-mangiare/la-spurty-by-baroloworld"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001265:settimo-torinese:piadineria",
+      "query": "\"La Piadineria\" \"Settimo Torinese\" \"Via Niccolò Paganini, 8\"",
+      "retrieved_at": "2026-09-02T20:20:00.000Z",
+      "candidates": [
+        {
+          "title": "La Piadineria - Settimo Cielo Retail Park",
+          "url": "https://lapiadineria.com/i-nostri-ristoranti/settimo-cielo-retail-park"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:006003:alessandria:gelateria-dell-arco",
+      "query": "\"Caffè Gelateria Dell'Arco\" \"Alessandria\"",
+      "retrieved_at": "2026-09-02T20:20:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffè Gelateria Dell'Arco, Alessandria",
+          "url": "https://restaurantguru.it/Caffe-Gelateria-DellArco-Alessandria"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:006101:monleale:da-samu",
+      "query": "\"Pizzeria Da Samu\" \"Monleale\"",
+      "retrieved_at": "2026-09-02T20:20:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Da Samu di Samuele Ferrarotti",
+          "url": "https://www.tuttiaffari.com/pizzeria-%22da-samu%22-di-samuele-0131-806258"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:004003:alba:teresio",
+      "query": "\"Bar Teresio\" \"Alba\"",
+      "retrieved_at": "2026-09-02T20:25:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Al Teresio Alba",
+          "url": "https://www.alteresio.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001272:torino:gelati-e-pizza-la-piramide",
+      "query": "\"Gelati e Pizza La Piramide\" \"Torino\" \"Via Po, 43\"",
+      "retrieved_at": "2026-09-02T20:25:00.000Z",
+      "candidates": [
+        {
+          "title": "Gelati e Pizza La Piramide",
+          "url": "https://emayon.com/it-view.php?seo=gelati-e-pizza-la-piramide-638243"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:006070:francavilla-bisio:1340",
+      "query": "\"Pub 1340\" \"Francavilla Bisio\"",
+      "retrieved_at": "2026-09-02T20:25:00.000Z",
+      "candidates": [
+        {
+          "title": "Progetto Servizio Civile Nazionale - Comune di Francavilla Bisio",
+          "url": "https://www.francavillabisio.com/ProgettoUNPLI/FileITA/Francavilla.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001189:pianezza:cavour",
+      "query": "\"Caffe Cavour\" \"Pianezza\"",
+      "retrieved_at": "2026-09-02T20:25:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffè Cavour, Pianezza",
+          "url": "https://restaurantguru.com/Caffetteria-Cavour-Pianezza"
+        }
+      ]
+    }
+  ]
+}

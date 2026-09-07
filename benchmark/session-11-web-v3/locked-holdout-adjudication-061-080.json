@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-final-locked-holdout-adjudication-061-080",
+  "partition": "locked_holdout",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079",
+  "reviewer": "Codex independent bounded-fixture review",
+  "reviewed_at": "2026-09-02T19:15:00.000Z",
+  "review_basis": "Independent review of retained bounded-query URL/title metadata and first-party branch or venue pages; publisher-domain ownership is approved only where the retained first-party page identifies the selected venue or exact chain branch.",
+  "scope_limitations": "Minimal URL/title capture only; no snippets or page bodies retained. A no_official_site disposition means no publishable official site was established within the bounded retained evidence, not that no site exists on the open web.",
+  "entries": [
+    {
+      "venue_id": "venue:067044:tortoreto:frida",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194936-d12963887-Reviews-Pub_Frida-Tortoreto_Province_of_Teramo_Abruzzo.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194936-d12963887-Reviews-Pub_Frida-Tortoreto_Province_of_Teramo_Abruzzo.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:068028:pescara:ele-ri-cafe",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:068002:alanno:mariani",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/caff%C3%A8-mariani"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/caff%C3%A8-mariani"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:067001:alba-adriatica:bonta",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:066049:l-aquila:joe-potato",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://deliveroo.it/it/menu/laquila/laquila/joe-potato"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "deliveroo.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://deliveroo.it/it/menu/laquila/laquila/joe-potato"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070006:campobasso:pala-pub",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Pala-Pub-Campobasso"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Pala-Pub-Campobasso"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070010:campomarino:shangrila-pasticceria-gelateria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g1077310-d12674454-Reviews-Shangrila_Pasticceria_Gelateria-Campomarino_Province_of_Campobasso_Molise.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1077310-d12674454-Reviews-Shangrila_Pasticceria_Gelateria-Campomarino_Province_of_Campobasso_Molise.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070031:larino:ladinod",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.sisal.it/punti-vendita/larino-caffe-ladinod"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "sisal.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sisal.it/punti-vendita/larino-caffe-ladinod"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070003:bojano:non-solo-pizza",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/non-solo-pizza_484"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/non-solo-pizza_484"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:094042:rocchetta-a-volturno:basilicoverde",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:065050:eboli:geminus-pub",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://comune.eboli.sa.it/vivere-il-comune/luoghi/geminus-pub/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "sa.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://comune.eboli.sa.it/vivere-il-comune/luoghi/geminus-pub/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:063049:napoli:starbucks-italia",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.starbucks.it/it/storelocator?storepath=italia%2Fcampania%2Fnapoli%2Fnapoli-galleria-umberto-i",
+      "evidence_urls": [
+        "https://www.starbucks.it/it/storelocator?storepath=italia%2Fcampania%2Fnapoli%2Fnapoli-galleria-umberto-i"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "starbucks.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.starbucks.it/it/storelocator?storepath=italia%2Fcampania%2Fnapoli%2Fnapoli-galleria-umberto-i"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.starbucks.it/it/storelocator?storepath=italia%2Fcampania%2Fnapoli%2Fnapoli-galleria-umberto-i"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:064054:monteforte-irpino:a-malafemmena-osteria-specialita-napoletane",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://weur-cdn.piatti.menu/storage/media/companies_menu_pdf/114907829/a-malafemmena-monteforte-irpino-piatti.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "piatti.menu",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://weur-cdn.piatti.menu/storage/media/companies_menu_pdf/114907829/a-malafemmena-monteforte-irpino-piatti.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:065106:roccadaspide:caffetteria-gelateria-intenso",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:063080:sorrento:queen-s-chips",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:072003:alberobello:hashtag-cafe",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.nuovaopinione.it/alberobello/bar/hashtag-cafe-15964"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "nuovaopinione.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.nuovaopinione.it/alberobello/bar/hashtag-cafe-15964"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:110002:barletta:fulgor",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.agipronews.it/docs/comunicato%20conc%20153.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "agipronews.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.agipronews.it/docs/comunicato%20conc%20153.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:071022:deliceto:ballaro",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.locandaballaro.it/",
+      "evidence_urls": [
+        "https://www.locandaballaro.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "locandaballaro.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.locandaballaro.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.locandaballaro.it/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:072001:acquaviva-delle-fonti:fry",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.borghiautenticiditalia.it/sites/default/files/GN_2017/Acquaviva%20delle%20Fonti_Giornata%20Nazionale.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "borghiautenticiditalia.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.borghiautenticiditalia.it/sites/default/files/GN_2017/Acquaviva%20delle%20Fonti_Giornata%20Nazionale.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:072030:monopoli:paoletto-gelateria-artigianale",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.localshop24.com/it/monopoli-ba-it/attivita/gelateria/paoletto-gelateria-artigianale/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/monopoli-ba-it/attivita/gelateria/paoletto-gelateria-artigianale/"
+          ]
+        }
+      ]
+    }
+  ]
+}

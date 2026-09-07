@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-049-064-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:007004:arnad:da-mao",
+      "query": "\"Il Pub da Mao\" Arnad \"Frazione Clapey 29\"",
+      "retrieved_at": "2026-09-02T21:20:00.000Z",
+      "candidates": [{ "title": "IL PUB DA MAO, Arnad", "url": "https://www.tripadvisor.it/Restaurant_Review-g1574941-d18930156-Reviews-Il_pub_da_Mao-Arnad_Valle_d_Aosta.html" }]
+    },
+    {
+      "venue_id": "venue:007065:saint-vincent:tre-archi",
+      "query": "\"I Tre Archi\" \"Saint-Vincent\" \"Via E. Chanoux 82\"",
+      "retrieved_at": "2026-09-02T21:20:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:013118:inverigo:simposio",
+      "query": "\"Simposio\" Inverigo \"Via Don Carlo Gnocchi 76\"",
+      "retrieved_at": "2026-09-02T21:20:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:019035:crema:mcdonald-s",
+      "query": "site:mcdonalds.it McDonald's Crema \"Via Milano\" \"Via Europa\"",
+      "retrieved_at": "2026-09-02T21:20:00.000Z",
+      "candidates": [{ "title": "Ristoranti aderenti", "url": "https://www.mcdonalds.it/sites/default/files/legal/ristoranti-aderenti--teli-2026.pdf" }]
+    },
+    {
+      "venue_id": "venue:015146:milano:incas",
+      "query": "\"Caffè Incas\" \"Viale Enrico Forlanini, 23\" Milano",
+      "retrieved_at": "2026-09-02T21:25:00.000Z",
+      "candidates": [{ "title": "Caffè Incas | Torrefazione e vendita caffè a Milano", "url": "https://www.caffeincas.it/" }]
+    },
+    {
+      "venue_id": "venue:016038:brembate-di-sopra:sorriso",
+      "query": "\"Pizzeria Il Sorriso\" \"Brembate di Sopra\" \"Via Sorte, 41\"",
+      "retrieved_at": "2026-09-02T21:25:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:098031:lodi:beyfin",
+      "query": "\"Beyfin\" Lodi \"Viale Milano, 109\"",
+      "retrieved_at": "2026-09-02T21:25:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:017029:brescia:theo-pub",
+      "query": "\"Theo Pub\" Brescia \"Via Guglielmo Oberdan, 21\"",
+      "retrieved_at": "2026-09-02T21:25:00.000Z",
+      "candidates": [{ "title": "Theo Pub, Brescia - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Theo-Pub-Brescia" }]
+    },
+    {
+      "venue_id": "venue:015200:santo-stefano-ticino:giardino-goloso",
+      "query": "\"Il Giardino Goloso\" \"Santo Stefano Ticino\" \"Viale della Repubblica, 7\"",
+      "retrieved_at": "2026-09-02T21:30:00.000Z",
+      "candidates": [{ "title": "Il Giardino Goloso | Santo Stefano Ticino", "url": "https://www.tuttiaffari.com/il-giardino-goloso_1w-392-468-0311" }]
+    },
+    {
+      "venue_id": "venue:012026:busto-arsizio:radici-pizza-cucina-tradizione",
+      "query": "\"RADICI pizza cucina tradizione\" \"Busto Arsizio\" \"Via Antonio Pozzi, 15b\"",
+      "retrieved_at": "2026-09-02T21:30:00.000Z",
+      "candidates": [{ "title": "RADICI PIZZA CUCINA TRADIZIONE, Busto Arsizio", "url": "https://www.tripadvisor.it/Restaurant_Review-g608898-d23536423-Reviews-Radici_Pizza_Cucina_Tradizione-Busto_Arsizio_Province_of_Varese_Lombardy.html" }]
+    },
+    {
+      "venue_id": "venue:108033:monza:victory54",
+      "query": "\"Victory54\" Monza \"Via Aliprandi Pinalla, 17\"",
+      "retrieved_at": "2026-09-02T21:30:00.000Z",
+      "candidates": [{ "title": "Ristorante elegante a Monza - Victory54", "url": "https://www.victory54.it/ristorante/" }]
+    },
+    {
+      "venue_id": "venue:017043:castenedolo:paradiso-della-brugola",
+      "query": "\"Il paradiso della brugola\" Castenedolo \"Via Giacomo Matteotti, 70\"",
+      "retrieved_at": "2026-09-02T21:30:00.000Z",
+      "candidates": [{ "title": "IL PARADISO DELLA BRUGOLA, Castenedolo", "url": "https://www.tripadvisor.it/Restaurant_Review-g1785334-d26833414-Reviews-Il_paradiso_della_brugola-Castenedolo_Province_of_Brescia_Lombardy.html" }]
+    },
+    {
+      "venue_id": "venue:014066:tirano:toldo",
+      "query": "\"Toldo\" Tirano \"Viale Italia, 24\"",
+      "retrieved_at": "2026-09-02T21:35:00.000Z",
+      "candidates": [{ "title": "Toldo - dal 1925 a Tirano", "url": "https://www.appgelato.it/gelaterie/toldo---dal-1925-19262/" }]
+    },
+    {
+      "venue_id": "venue:013075:como:piadineria-9c551ce5",
+      "query": "\"La Piadineria\" Como \"Via Asiago, 2\"",
+      "retrieved_at": "2026-09-02T21:35:00.000Z",
+      "candidates": [{ "title": "Organizzazioni/aziende con sistema di gestione certificato", "url": "https://services.accredia.it/ppsearch/accredia_companymask_remote.jsp?ID_LINK=1739&LANG=%5BDEFAULT%5D&PPSEARCH_COMPANY_SEARCH_MASK_NORMA=G47&area=310&page=1310&submit=Cerca" }]
+    },
+    {
+      "venue_id": "venue:019099:sospiro:gioiello",
+      "query": "\"Il Gioiello\" Sospiro \"Via Giuseppina, 72\"",
+      "retrieved_at": "2026-09-02T21:35:00.000Z",
+      "candidates": [{ "title": "Elenco Regionale Attività Storiche e di tradizione", "url": "https://www.regione.lombardia.it/content/dam/rl/canali-tematici-servizi/11-attivita-produttive-imprese/07-imprese-storiche/pro-Riconoscimento-delle-attivit%C3%A0-storiche-e-di-tradizione/allegati/ELENCO-REGIONALE-aggiornato-al-22%20aprile-2026.pdf" }]
+    },
+    {
+      "venue_id": "venue:015209:sesto-san-giovanni:istanbul-sesto-pizza-kebap",
+      "query": "\"Istanbul sesto Pizza & Kebap\" \"Via Giuseppe Di Vittorio, 175\"",
+      "retrieved_at": "2026-09-02T21:35:00.000Z",
+      "candidates": []
+    }
+  ]
+}

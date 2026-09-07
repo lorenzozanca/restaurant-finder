@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "partition": "locked_holdout",
+  "selection_fingerprint_sha256": "4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079",
+  "prediction_policy": "publish only a candidate domain with independently verified venue ownership",
+  "evaluation_scope": "official-site publication gate and bounded-search discovery",
+  "resource_role_metrics": {
+    "status": "not_evaluated",
+    "reason": "minimal URL/title fixtures contain no captured resource-role predictions or adjudications"
+  },
+  "corpus": {
+    "venues": 100,
+    "publisher_domains": 79,
+    "publisher_classes": {
+      "official": 22,
+      "directory": 34,
+      "menu_mirror": 2,
+      "booking_or_order_platform": 5,
+      "editorial_or_review": 7,
+      "social": 0,
+      "unrelated": 9,
+      "uncertain": 0
+    },
+    "ownership_statuses": {
+      "verified": 22,
+      "rejected": 57,
+      "uncertain": 0
+    }
+  },
+  "metrics": {
+    "reviewed": 100,
+    "publications": 22,
+    "conclusive_publications": 22,
+    "unresolved_publications": 0,
+    "true_publications": 22,
+    "false_publications": 0,
+    "false_publication_by_publisher_class": {
+      "official": 0,
+      "directory": 0,
+      "menu_mirror": 0,
+      "booking_or_order_platform": 0,
+      "editorial_or_review": 0,
+      "social": 0,
+      "unrelated": 0,
+      "uncertain": 0
+    },
+    "official_sites": 22,
+    "official_site_precision": 1,
+    "official_site_precision_wilson_95": {
+      "lower": 0.8513451253913791,
+      "upper": 1
+    },
+    "official_site_recall": 1,
+    "official_site_recall_wilson_95": {
+      "lower": 0.8513451253913791,
+      "upper": 1
+    },
+    "search_discovery_recall": 1,
+    "search_discovery_recall_wilson_95": {
+      "lower": 0.8513451253913791,
+      "upper": 1
+    },
+    "abstentions": 78,
+    "coverage": 0.22,
+    "passes_non_vacuity": true,
+    "passes_precision_target": false
+  },
+  "artifact_sha256": {
+    "locked-holdout-001-020.json": "d74b806fc133afe209f20802f9cdd02c8049b5ee4baa304bac6e0eb9b9aed293",
+    "locked-holdout-021-040.json": "edf00d3563b6624a856e09505982c259ed66c6d13e7aa671cba182a3899da330",
+    "locked-holdout-041-060.json": "f6d77a3ab52bcf1ac99319052b7e159404d676e80d49b1ea6f0a3e0c86a4c05d",
+    "locked-holdout-061-080.json": "9763485d543ae96ae41d1cc72e89f668e4dddd0e6e05e425ae926853aedae184",
+    "locked-holdout-081-100.json": "243ff63429841af13bc95c3ea6c435b0cbdf3c71e05f72c44179295a5a46ade2",
+    "locked-holdout-adjudication-001-020.json": "bc5618f3f210b4278ce1591221a13a91ae979e4b96027c2937f6edbe354a1479",
+    "locked-holdout-adjudication-021-040.json": "033821292a7fafab220efcc973240645b5cb439b660f36b1ab9478499f5b4972",
+    "locked-holdout-adjudication-041-060.json": "f74933e24555138c95caf68d76e01f063008d2af4971bbb0f15553e24f4cc6e3",
+    "locked-holdout-adjudication-061-080.json": "e6f65379641ea8a751e5a23ff43724fc8f55deea0e501b650bcc27cafea97e68",
+    "locked-holdout-adjudication-081-100.json": "e155a11fb6334c4f83176d81690e8c5ada726e872dfd33aefb18e86d81d43f37"
+  }
+}

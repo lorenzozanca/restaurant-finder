@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-461-476-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:081008:erice:pizza-go-go",
+      "query": "\"Pizza Go-Go\" \"Erice\" \"Via Guglielmo Marconi, 139\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Ordina Fritti online - Fritti a domicilio",
+          "url": "https://www.ordina-online-ristoranti.it/fritti"
+        },
+        {
+          "title": "Pizzerie in italia",
+          "url": "https://www.reteimprese.it/pizzerie?p=119"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:088009:ragusa:dolci-peccati",
+      "query": "\"Dolci Peccati\" \"Ragusa\" \"Via Bartolomeo Colleoni, 50\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "DOLCI PECCATI DI CAPPELLO FABIANO E C. S.A.S., Partita IVA: 01776020883, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1579/dolci-peccati-di-cappello-fabiano-e-c-sas"
+        },
+        {
+          "title": "Dolci Peccati di Fabiano Cappello & C, Ragusa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Dolci-Peccati-di-Fabiano-Cappello-and-C-Ragusa"
+        },
+        {
+          "title": "Dolci Peccati di Fabiano Cappello & C, Ragusa - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Dolci-Peccati-di-Fabiano-Cappello-and-C-Ragusa"
+        },
+        {
+          "title": "Dati della società Dolci Peccati Di Cappello Fabiano E C. Sas (01776020883), Sicilia, Ragusa, RAGUSA - REGISTROAZIENDE.it",
+          "url": "https://registroaziende.it/azienda/dolci-peccati-di-cappello-fabiano-e-c-sas-ragusa"
+        },
+        {
+          "title": "DOLCI PECCATI DI FABIANO CAPPELLO & COFFEE, Ragusa - Restaurant Reviews & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194872-d34392287-Reviews-Dolci_Peccati_di_Fabiano_Cappello_Coffee-Ragusa_Province_of_Ragusa_Sicily.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083015:castelmola:antico-caffe-san-giorgio",
+      "query": "\"Antico Caffè San Giorgio\" \"Castelmola\" \"Piazza Sant'Antonino Abate, 1\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Castelmola的26个必做事项和景点",
+          "url": "https://wanderlog.com/zh/list/geoCategory/1590553/top-things-to-do-and-attractions-in-castelmola"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:086014:piazza-armerina:chinu-ghiotteria",
+      "query": "\"Chinu Ghiotteria\" \"Piazza Armerina\" \"Via Intorcetta Prospero, 33\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:084001:agrigento:gelateria-ragno-d-oro",
+      "query": "\"Gelateria Ragno d'Oro\" \"Agrigento\" \"Via Nettuno, 25\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Gelateria Ragno d'oro - Gelato artigianale | 333 282 4367 | Agrigento",
+          "url": "https://www.tuttiaffari.com/gelateria-ragno-doro-gelato-artigianale-333-282-4367"
+        },
+        {
+          "title": "GELATERIA RAGNO D'ORO, San Leone - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g675638-d3225462-Reviews-Gelateria_Ragno_d_Oro-San_Leone_Agrigento_Province_of_Agrigento_Sicily.html"
+        },
+        {
+          "title": "Gelateria Ragno d'Oro San Leone | GelatoMaps",
+          "url": "https://gelatomaps.com/it/gelateria/gelateria-ragno-d-oro-san-leone/"
+        },
+        {
+          "title": "GELATERIA RAGNO D'ORO, San Leone - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g675638-d3225462-Reviews-Gelateria_Ragno_d_Oro-San_Leone_Agrigento_Province_of_Agrigento_Sicily.html"
+        },
+        {
+          "title": "GELATERIA RAGNO D'ORO, San Leone - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g675638-d3225462-Reviews-Gelateria_Ragno_d_Oro-San_Leone_Agrigento_Province_of_Agrigento_Sicily.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081004:campobello-di-mazara:art",
+      "query": "\"Pizzeria Art\" \"Campobello di Mazara\" \"Via Selinunte, 110\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Art, Campobello di Mazara - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Art-Campobello-di-Mazara"
+        },
+        {
+          "title": "PIZZERIA ART, Campobello di Mazara - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1185611-d27859468-Reviews-Pizzeria_Art-Campobello_di_Mazara_Province_of_Trapani_Sicily.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Pizza Art“ | Via Selinunte",
+          "url": "https://www.oraridiapertura24.it/filiale/Campobello%2520di%2520Mazara-Pizza%2520Art-2235314W.html"
+        },
+        {
+          "title": "92 recensioni di Pizzeria Art a Campobello di Mazara",
+          "url": "https://altraopinione.org/pizzeria/campobello-di-mazara/pizzeria-art/"
+        },
+        {
+          "title": "Pizzeria Art, Campobello di Mazara - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Pizzeria-Art-Campobello-di-Mazara"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:089002:avola:monte-criscione",
+      "query": "\"Agriturismo Monte Criscione\" \"Avola\" \"C/da Palazzetti s.n.c., 96012\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Agriturismo Monte Criscione, Avola (prezzi aggiornati per il 2026)",
+          "url": "https://www.booking.com/hotel/it/agriturismo-monte-criscione.it.html"
+        },
+        {
+          "title": "Agriturismo Monte Criscione, Avola (updated prices 2026)",
+          "url": "https://www.booking.com/hotel/it/agriturismo-monte-criscione.html"
+        },
+        {
+          "title": "Agriturismo Monte Criscione, Avola (prezzi aggiornati per il 2026)",
+          "url": "https://www.booking.com/hotel/it/agriturismo-monte-criscione.it.html?came_from_hotel_review=1&keep_landing=1"
+        },
+        {
+          "title": "Agriturismo Monte Criscione, Avola - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Agriturismo-Monte-Criscione-Italy"
+        },
+        {
+          "title": "Agriturismo Monte Criscione, Avola (precios actualizados en 2026)",
+          "url": "https://www.booking.com/hotel/it/agriturismo-monte-criscione.es.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:089017:siracusa:cucchiaino-4ec7462e",
+      "query": "\"Il Cucchiaino\" \"Siracusa\" \"Corso Umberto I, 42\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Il cucchiaino Cake & Ice cream - Gelateria a Siracusa ▷ Corso Umberto I 42, Siracusa, Siracusa, 96100 | Firmania",
+          "url": "https://firmania.it/siracusa/il-cucchiaino-cake-ice-cream-4105160"
+        },
+        {
+          "title": "Il Cucchiaino Cake & Ice Cream, Siracusa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Il-cucchiaino-Cake-and-Ice-cream-Syracuse-Sicily"
+        },
+        {
+          "title": "Il Cucchiaino Cake & Ice Cream - Siracusa, Corso Umberto I, 42",
+          "url": "https://aziende.virgilio.it/ristoranti/siracusa-sr/il-cucchiaino-cake-and-ice-cream"
+        },
+        {
+          "title": "Il Cucchiaino Cake & Ice Cream, Siracusa - Menú del restaurante, precios y reseñas",
+          "url": "https://es.restaurantguru.com/Il-cucchiaino-Cake-and-Ice-cream-Syracuse-Sicily"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Il cucchiaino Cake & Ice cream“ | Corso Umberto i",
+          "url": "https://www.oraridiapertura24.it/filiale/Siracusa-Il%2520cucchiaino%2520Cake%2520%2526%2520Ice%2520cream-5095478J.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083021:fiumedinisi:pasticceria-gugliotta",
+      "query": "\"Pasticceria Gugliotta\" \"Fiumedinisi\" \"Piazza San Pietro, 1\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "ᐅ Orari di apertura „Bar Pasticceria Gugliotta“ | Piazza san Pietro",
+          "url": "https://www.oraridiapertura24.it/filiale/Fiumedinisi-Bar%2520Pasticceria%2520Gugliotta-880023M.html"
+        },
+        {
+          "title": "Mappa dei Bar e dei Locali a Mandanici - Tuttocittà",
+          "url": "https://www.tuttocitta.it/bar/mandanici"
+        },
+        {
+          "title": "Veterinario.Html.Html.Html (1) a Fiumedinisi: Numeri di Telefono ed indirizzi",
+          "url": "https://www.virgilio.it/italia/fiumedinisi/ricerca-aziende/veterinario.html.html.html_%281%29?azi_eq_iq=e452c5ca-e9de-415b-b5d3-6316b10446c0&dove=fiumedinisi&idCity=083021"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087041:san-giovanni-la-punta:pieroburger",
+      "query": "\"Pieroburger\" \"San Giovanni la Punta\" \"Via Teano\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pieroburger, San Giovanni La Punta - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Pieroburger-San-Giovanni-La-Punta"
+        },
+        {
+          "title": "Pieroburger, San Giovanni La Punta - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pieroburger-San-Giovanni-La-Punta"
+        },
+        {
+          "title": "Carni, salumi e pesci a san giovanni la punta catania | Guida Sicilia",
+          "url": "https://www.guidasicilia.it/settori/catania/san-giovanni-la-punta/carni-salumi-e-pesci/37"
+        },
+        {
+          "title": "Gastronomie, salumerie e rosticcerie a san giovanni la punta catania | Guida Sicilia",
+          "url": "https://www.guidasicilia.it/settori/catania/san-giovanni-la-punta/gastronomie-salumerie-e-rosticcerie/385"
+        },
+        {
+          "title": "Locali e ritrovi a san giovanni la punta catania | Guida Sicilia",
+          "url": "https://www.guidasicilia.it/settori/catania/san-giovanni-la-punta/locali-e-ritrovi/203"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081021:trapani:blackout-lounge-bar",
+      "query": "\"BlackOut Lounge Bar\" \"Trapani\" \"Via Crociferi, 27\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Orari di apertura BlackOut Lounge Bar ▷ Trapani via Crociferi 27, 91100, Trapani | Trova Aperto",
+          "url": "https://trova-aperto.it/trapani/blackout-lounge-bar-2417142"
+        },
+        {
+          "title": "ᐅ Orari di apertura „BlackOut Lounge Bar“ | Via Crociferi",
+          "url": "https://www.oraridiapertura24.it/filiale/Trapani-BlackOut%2520Lounge%2520Bar-4707239Y.html"
+        },
+        {
+          "title": "Mapstr - Blackout Lounge Bar Trapani -",
+          "url": "https://mapstr.com/place/r3iDBeXwU6"
+        },
+        {
+          "title": "Top Pub in Trapani - Cylex Ricerca locale",
+          "url": "https://www.cylex-italia.it/trapani/pub/"
+        },
+        {
+          "title": "Pub Trapani orari di apertura | Trova Aperto",
+          "url": "https://trova-aperto.it/trapani/pub"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081015:partanna:roadhouse-cafe",
+      "query": "\"Roadhouse Cafe\" \"Partanna\" \"Via Trieste, 37\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Roadhouse Cafè, Partanna - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Roadhouse-Cafe-Partanna"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Roadhouse Cafè“ | Via Trieste",
+          "url": "https://www.oraridiapertura24.it/filiale/Partanna-Roadhouse%2520Caf%25E8-1172920G.html"
+        },
+        {
+          "title": "La Sicilia bella è #senzapaura Bartolo oggi e domani tra Palermo e Trapani",
+          "url": "https://www.siciliaunonews.com/2019/05/la-sicilia-bella-e-senzapaura-bartolo.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:082027:cefalu:solito-posto-bistro-e-cafe",
+      "query": "\"Al Solito Posto - Bistrò e Café\" \"Cefalù\" \"Via Giovanni Meli, 3\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Al Solito Posto - Bistrò e Café, Cefalù - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Al-Solito-Posto-Cefalu"
+        },
+        {
+          "title": "AL SOLITO POSTO - BISTRÒ E CAFÉ - Caffetteria a Cefalù | LocalShop24",
+          "url": "https://www.localshop24.com/it/cefalu-pa-it/attivita/caffetteria/al-solito-posto-bistro-e-cafe/"
+        },
+        {
+          "title": "Al Solito Posto - Bistrò e Café, Cefalù - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Al-Solito-Posto-Cefalu"
+        },
+        {
+          "title": "Al Solito Posto - Bistrò e Café, Cefalu, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/1823750/al-solito-posto-bistr%C3%B2-e-caf%C3%A9"
+        },
+        {
+          "title": "Breakfast at Pasticceria L'Angolo di Sicilia, Cefalù, Italy - Google Maps",
+          "url": "https://www.google.com/maps/search/Breakfast%20at%20Pasticceria%20L%27Angolo%20di%20Sicilia%2C%20Cefal%C3%B9%2C%20Italy"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083048:messina:punto-pane-cafe",
+      "query": "\"Punto Pane Cafe\" \"Messina\" \"viale Annunziata Contrada Conca d'Oro SN\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Punto Pane CAFÉ, Messina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Punto-Pane-Messina-3"
+        },
+        {
+          "title": "Punto Pane CafÉ - 98168 Messina -",
+          "url": "https://www.reteimprese.it/panetterie/messina/azienda/3273626"
+        },
+        {
+          "title": "Panetterie nella zona Ritiro di Messina | Reteimprese",
+          "url": "https://www.reteimprese.it/panetterie/messina/zona/ritiro"
+        },
+        {
+          "title": "Panetterie nella zona Badiazza di Messina | Reteimprese",
+          "url": "https://www.reteimprese.it/panetterie/messina/zona/badiazza"
+        },
+        {
+          "title": "Panetterie a Messina (Pagina 3)",
+          "url": "https://www.reteimprese.it/panetterie/messina?p=3"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083057:montalbano-elicona:villa-sulla",
+      "query": "\"Pizzeria Villa Sulla\" \"Montalbano Elicona\" \"Strada Comunale per Serro\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizze da asporto | Montalbano Elicona (ME) | Pizzeria Villa Sulla",
+          "url": "https://www.pizzeriavillasulla.it/contatti"
+        },
+        {
+          "title": "Location con piscina | Montalbano Elicona (ME) | Pizzeria Villa Sulla",
+          "url": "https://www.pizzeriavillasulla.it/"
+        },
+        {
+          "title": "Pizzeria Villa Sulla | Montalbano Elicona (ME)",
+          "url": "https://www.pizzeriavillasulla.it/la-pizzeria"
+        },
+        {
+          "title": "PIZZERIA VILLA SULLA, Montalbano Elicona - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1081167-d19866236-Reviews-Pizzeria_Villa_Sulla-Montalbano_Elicona_Province_of_Messina_Sicily.html"
+        },
+        {
+          "title": "Pizzeria Villa Sulla - Montalbano Elicona, Strada Comunale per Serro",
+          "url": "https://aziende.virgilio.it/ristoranti/montalbano-elicona-me/pizzeriavillasulla"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118014:elmas:dabcoffee-it",
+      "query": "\"DabCoffee.it\" \"Elmas\" \"Via Emilio Lussu, 8\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    }
+  ]
+}

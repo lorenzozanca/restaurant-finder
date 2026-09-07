@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-11-final-locked-holdout-021-040",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:025016:cortina-d-ampezzo:janbo",
+      "query": "\"Janbo\" \"Cortina d'Ampezzo\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Cortina 2026 map",
+          "url": "https://gstatic.olympics.com/s3/mc2026/documents/maps/Cortina2026-Map-Download-EN.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023091:verona:piadineria-1e3f9c09",
+      "query": "\"La piadineria\" \"Verona\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Verona - Piazza Santo Spirito",
+          "url": "https://lapiadineria.com/i-nostri-ristoranti/verona-pzza-santo-spirito-"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023055:oppeano:leone",
+      "query": "\"Caffé al Leone\" \"Oppeano\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffè al Leone",
+          "url": "https://www.bars10.com/IT/Oppeano/1462202040468298/Caff%C3%A8-al-Leone"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:024008:arzignano:gelateria-di-piazza-beltrame",
+      "query": "\"La Gelateria di Piazza Beltrame\" \"Arzignano\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "La Gelateria di Piazza Beltrame",
+          "url": "https://restaurantguru.it/La-Gelateria-di-Piazza-Beltrame-Arzignano"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027042:venezia:five-guys",
+      "query": "\"Five Guys\" \"Venezia\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Five Guys Venezia",
+          "url": "https://www.localshop24.com/it/venezia-ve-it/attivita/fast-food/five-guys/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093044:spilimbergo:strane-delizie",
+      "query": "\"Le Strane Delizie\" \"Spilimbergo\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Le Strane Delizie",
+          "url": "https://pasticcerialestranedelizie.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:evolution-trieste",
+      "query": "\"Bar Evolution Trieste\" \"Trieste\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Evolution Trieste",
+          "url": "https://restaurantguru.it/Bar-Evolution-Trieste-Trieste"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:031016:ronchi-dei-legionari:gelateria-frio-frio-ronchi",
+      "query": "\"Gelateria Frio Frio Ronchi\" \"Ronchi dei Legionari\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Gelateria Frio Frio",
+          "url": "https://friofrio.life/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093041:san-vito-al-tagliamento:friends-pizza-e-kebab-san-vito-al-tagliamento",
+      "query": "\"Friends pizza e kebab san vito al tagliamento\" \"San Vito al Tagliamento\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Friends Pizza e Kebab",
+          "url": "https://www.ordina-online.menu/restaurants/san-vito-al-tagliamento/friends-pizza-e-kebab"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:delizie",
+      "query": "\"Bar le delizie\" \"Trieste\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Le Delizie",
+          "url": "https://www.grubbio.com/ristorante/bar-le-delizie-trieste"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010044:portofino:portofino-mare",
+      "query": "\"Portofino Mare\" \"Portofino\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Portofino Mare",
+          "url": "https://www.comuneportofinomare.it/about/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008055:sanremo:san-sci",
+      "query": "\"Cafe San Sci\" \"Sanremo\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Cafe San Sci",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187822-d12969884-Reviews-Cafe_San_Sci-Sanremo_Italian_Riviera_Liguria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010032:masone:coco-pizza",
+      "query": "\"Cocò Pizza\" \"Masone\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Cocò Pizza",
+          "url": "https://www.waze.com/live-map/directions/it/liguria/masone/coco-pizza?to=place.ChIJA-2oE2Y60xIRrMF8rXdPPiU"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009004:albisola-superiore:gelato-college",
+      "query": "\"Gelato College\" \"Albisola Superiore\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:010025:genova:zena-kebab",
+      "query": "\"Zena Kebab\" \"Genova\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Zena Kebab",
+          "url": "https://zena-kebab.eatbu.com/?lang=en"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:040013:forlimpopoli:domus-a-forlimpopoli",
+      "query": "\"La Domus A Forlimpopoli\" \"Forlimpopoli\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Elenco attività Forlimpopoli",
+          "url": "https://www.forlimpopolicittartusiana.it/wp-content/uploads/2020/05/elenco-attivita_esercizi_forlimp8maggio.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:033032:piacenza:piadineria",
+      "query": "\"La Piadineria\" \"Piacenza\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Piacenza - Il Gotico",
+          "url": "https://lapiadineria.com/i-nostri-ristoranti/piacenza-il-gotico"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:033006:borgonovo-val-tidone:kelly-s-pub-birreria",
+      "query": "\"Kelly’s Pub Birreria\" \"Borgonovo Val Tidone\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:036044:soliera:gelateria-cioccolateria-settimo-gelo",
+      "query": "\"Gelateria Cioccolateria Settimo Gelo\" \"Soliera\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:034027:parma:cibiamo-station",
+      "query": "\"Cibiamo station\" \"Parma\"",
+      "retrieved_at": "2026-09-02T18:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Riapre il Cibiamo Station di Parma",
+          "url": "https://www.cibiamo.it/site/riapre-il-ciabiamo-station-di-parma/"
+        }
+      ]
+    }
+  ]
+}

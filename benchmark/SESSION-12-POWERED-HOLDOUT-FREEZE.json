@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "freeze_id": "session-12-powered-holdout-v1",
+  "frozen_at": "2026-09-02T20:10:00.000Z",
+  "status": "frozen_before_search_outcomes",
+  "publication_authorized": false,
+  "selection": {
+    "path": "benchmark/SESSION-12-POWERED-HOLDOUT-SELECTION.json",
+    "sha256": "5a867db62b5ced8b39bb56a1b784cbe7065b9dcc7ea15a0ca6b0254992a25d60",
+    "candidate_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+    "locked_holdout_venues": 500,
+    "prior_venue_ids_excluded": 1056,
+    "queries_opened_at_freeze": 0
+  },
+  "frozen_artifacts": {
+    "selection_implementation": {
+      "path": "select-powered-holdout.mjs",
+      "sha256": "af773fde2afac69241cc69e6732411b8c5c746102f910ce047bd3807d9135899"
+    },
+    "fixture_policy": {
+      "path": "lib/web-stress-fixture.mjs",
+      "sha256": "eb6f9053c481c1775e810d6461b8a475181f5979a1e2de960b24b5457d2a0183"
+    },
+    "registrable_domain_policy": {
+      "path": "lib/publisher-ownership.mjs",
+      "sha256": "ebc028cadae67062c707688fae9b2211534761caf717bcaf8f50fd3294fbfb1b"
+    },
+    "evaluator": {
+      "path": "benchmark/evaluate-session-11-web.mjs",
+      "sha256": "5c07cf13e8370ec731e98650fa3e3fa48a5de6a69ab933c05457dd2c97650dad"
+    },
+    "prior_holdout_report": {
+      "path": "benchmark/SESSION-11-FINAL-LOCKED-HOLDOUT-EVALUATION.json",
+      "sha256": "5b4f9a4a81fd49b259a108f69b40416244d8a94baa01a0888d3db812f031b9a6"
+    }
+  },
+  "power_design": {
+    "prior_publication_rate": 0.22,
+    "minimum_flawless_publications_for_wilson_lower_bound_0_95": 73,
+    "expected_publications": 110,
+    "planning_probability_of_at_least_73_publications": 0.9999886579287481,
+    "fixed_sample_size": 500
+  },
+  "evaluation_rule": "Capture all 500 queries, complete independent per-domain adjudication, validate exact coverage and frozen hashes, then invoke the frozen evaluator exactly once.",
+  "acceptance_rule": "At least one publication and a two-sided 95% Wilson lower bound for conclusive official-site precision of at least 0.95.",
+  "resource_role_metrics": {
+    "status": "not_evaluated",
+    "reason": "minimal URL/title fixtures do not capture resource-role predictions or adjudications"
+  },
+  "brave_requests_authorized": false,
+  "evaluation_runs_at_freeze": 0
+}

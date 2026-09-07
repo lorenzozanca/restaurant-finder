@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-269-284-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    { "venue_id": "venue:043041:pollenza:brian-boru-pub", "query": "\"Brian Boru' Pub\" Pollenza \"Piazza della Libertà, 1\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [
+      { "title": "Contatti – BrianBoru Pub", "url": "https://www.brianboru.it/contatti/" },
+      { "title": "ᐅ Orari di apertura „Brian Borù Pub“ | Piazza della Libertà", "url": "https://www.oraridiapertura24.it/filiale/Pollenza-Brian%2520Bor%25F9%2520Pub-1547343Q.html" }
+    ] },
+    { "venue_id": "venue:109034:porto-sant-elpidio:gelateria-guneson", "query": "\"Bar Gelateria Guneson\" \"Porto Sant'Elpidio\" \"Via Trieste, 49\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [{ "title": "Bar Gelateria Guneson, Porto Sant'Elpidio - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Gelateria-Guneson-Porto-SantElpidio" }] },
+    { "venue_id": "venue:042045:senigallia:secchiello", "query": "\"Al Secchiello\" Senigallia \"Piazza del Duca, 8\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [
+      { "title": "AL SECCHIELLO, Senigallia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g194914-d12614637-Reviews-Al_Secchiello-Senigallia_Province_of_Ancona_Marche.html" },
+      { "title": "AL SECCHIELLO DI NAZARI SABET NASIM, Partita IVA: 02869150421, Fatturato, Dipendenti, PEC", "url": "https://www.ufficiocamerale.it/8589/al-secchiello-di-nazari-sabet-nasim" },
+      { "title": "Al Secchiello, Senigallia, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog", "url": "https://wanderlog.com/place/details/13226614/al-secchiello" },
+      { "title": "Al Secchiello, Senigallia - Menu del ristorante, prezzi e recensioni", "url": "https://www.sluurpy.it/senigallia/ristorante/218458/al-secchiello" },
+      { "title": "Ristoranti vicino Piazza del Duca a Senigallia e dintorni", "url": "https://www.virgilio.it/italia/senigallia/cat/RISTORANTI/vicino_PIAZZA_DEL_DUCA.html" }
+    ] },
+    { "venue_id": "venue:042016:cupramontana:viale-19", "query": "\"Ristorante Pizzeria al Viale 19\" Cupramontana \"Viale della Vittoria, 19\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [
+      { "title": "Ristorante Pizzeria al Viale 19 | 380 344 8729 | Cupramontana", "url": "https://www.tuttiaffari.com/ristorante-pizzeria-al-viale-380-344-8729" },
+      { "title": "Ristorante Pizzeria Al Viale 19 – Authentic Restaurant in Cupramontana", "url": "https://ristorante-pizzeria-al-viale-19.hey-restaurants.com/" }
+    ] },
+    { "venue_id": "venue:043053:tolentino:elite-caffe", "query": "\"Elite Caffè\" Tolentino \"Via Luigi Cadorna, 1\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [
+      { "title": "Elite Caffè Srl (Ufficio) | 0733 961097 | Tolentino", "url": "https://www.tuttiaffari.com/elite-caff%C3%A8-srl-ufficio_1c-0733-961097" },
+      { "title": "Allegato 1", "url": "https://sisma2016.gov.it/wp-content/uploads/2020/01/Allegato1.pdf" },
+      { "title": "ELITE CAFFE' S.R.L. P.IVA 01763540430 Fatturato Tolentino Macerata", "url": "https://xrayfinance.it/elite-caffe-s-r-l" },
+      { "title": "Graduatoria per sito bando 2018.xls", "url": "https://bandi.regione.marche.it/Allegati/889/Graduatoria%20bando%202018%20come%20modificata%20da%20decreto%2095.pdf" }
+    ] },
+    { "venue_id": "venue:041044:pesaro:fridy-pesaro", "query": "\"Pizzeria Fridy Pesaro\" \"Viale Trieste, 208\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [
+      { "title": "PIZZERIA FRIDY, Pesaro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g187796-d11788840-Reviews-Pizzeria_Fridy-Pesaro_Province_of_Pesaro_and_Urbino_Marche.html" },
+      { "title": "Fridy a Pesaro - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork", "url": "https://www.thefork.it/ristorante/fridy-r717565" },
+      { "title": "Fridy Pesaro, Pesaro - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Pizzeria-Fridy-Pesaro" },
+      { "title": "Fridy Pesaro, Pesaro - Restaurant menu, prices and reviews", "url": "https://restaurantguru.com/Pizzeria-Fridy-Pesaro" },
+      { "title": "PIZZERIA FRIDY DI MARINONI GIACOMO E LAURA S.N.C.", "url": "https://static.regione.marche.it/portals/0/Attivita_Produttive/Artigianato/Varie/PESARO.pdf" }
+    ] },
+    { "venue_id": "venue:043033:morrovalle:gimaviet-bar-food", "query": "\"Gimaviet bar&food\" Morrovalle \"Via Adige, 2\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [] },
+    { "venue_id": "venue:058070:nemi:stuzzico-e-vinello-bistrot", "query": "\"Stuzzico e Vinello Bistrot\" Nemi \"Corso Vittorio Emanuele, 21\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [
+      { "title": "STUZZICO & VINELLO Bistrot | 392 639 2197 | Nemi", "url": "https://www.tuttiaffari.com/stuzzico-vinello-bistrot-392-639-2197" },
+      { "title": "STUZZICO & VINELLO Bistrot - Nemi | Bar near me", "url": "https://bistrot-stuzzico-vinello.metro.bar/?lang=en" },
+      { "title": "STUZZICO & VINELLO Bistrot, Nemi - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Stuzzico-and-Vinello-Bistrot-Nemi" },
+      { "title": "STUZZICO & VINELLO BISTROT, Nemi - 2026 Reviews & Information", "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g794657-d16827167-Reviews-Stuzzico_Vinello_Bistrot-Nemi_Province_of_Rome_Lazio.html" },
+      { "title": "Stuzzico Vinello Bistrot da NEMI", "url": "https://piatti.menu/restaurants/nemi-1/stuzzico-vinello-bistrot" }
+    ] },
+    { "venue_id": "venue:058047:guidonia-montecelio:kfc", "query": "\"KFC\" Guidonia \"Via Dei Pioppi 7\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [] },
+    { "venue_id": "venue:058091:roma:gima-caffe", "query": "\"Gima Caffè\" Roma \"Via di Tor Chiesaccia, 20\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [
+      { "title": "Condizioni di vendita - Gima caffè", "url": "https://www.gimacaffe.it/condizione-vendita/" },
+      { "title": "Gima Caffè | LinkedIn", "url": "https://www.linkedin.com/company/gima-caffe" },
+      { "title": "ANUGA 2023 — EXHIBITORS", "url": "https://www.ice.it/en/sites/default/files/inline-files/ita_anuga23_catalogue_7.pdf" },
+      { "title": "Gima Caffe - Roma, Via di Tor Chiesaccia, 20", "url": "https://aziende.virgilio.it/roma-rm/gima-caff" },
+      { "title": "STAMPA-catalogo-prodotti-Gima-180325", "url": "https://www.gimacaffe.it/download/catalogo_prodotti.pdf" }
+    ] },
+    { "venue_id": "venue:060060:roccasecca:chiosco-la-villetta", "query": "\"Chiosco La Villetta\" Roccasecca \"Via Tevere, 1\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [{ "title": "Chiosco La Villetta, Roccasecca Stazione - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Chiosco-La-villetta-Roccasecca" }] },
+    { "venue_id": "venue:058074:palestrina:pitbull-pub", "query": "\"Pitbull Pub\" Palestrina \"Via Anicia, 10\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [
+      { "title": "Ospitalità", "url": "https://www.scopripalestrina.it/ospitalit%C3%A0" },
+      { "title": "Driving directions to PITBULL PUB, 10 Via Anicia, Palestrina - Waze", "url": "https://www.waze.com/live-map/directions/italy/lazio/palestrina/pitbull-pub?to=place.ChIJKVNMKreALxMRXSWS8gIVOPM" },
+      { "title": "PITBULL-PUB, Palestrina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g635624-d7788148-Reviews-PitBull_Pub-Palestrina_Province_of_Rome_Lazio.html" },
+      { "title": "Menu di PitBull Pub - Steak House a domicilio a Palestrina | Ordina su Just Eat", "url": "https://www.justeat.it/restaurants-pitbull-pub---steak-house-palestrina/menu" },
+      { "title": "Servizio temporaneamente sospeso Pitbull Pub Palestrina | JMENU", "url": "https://www.jmenu.it/menu-pitbull-pub-palestrina-roma/" }
+    ] },
+    { "venue_id": "venue:058007:anzio:tana-del-gusto", "query": "\"Pizzeria La Tana del Gusto\" Anzio \"Piazza della Pace, 18\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [] },
+    { "venue_id": "venue:060063:san-giorgio-a-liri:gelateria-nimue", "query": "\"Gelateria Nimue\" \"San Giorgio a Liri\" \"Vicolo Santa Maria, 5\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [] },
+    { "venue_id": "venue:056057:vetralla:eden-pizzeria", "query": "\"Eden Pizzeria\" Vetralla \"Via Cassia Sutrina, 4\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [
+      { "title": "EDEN PIZZERIA TAVOLA CALDA S.A.S. DI GIARDINO GIORGIO, Partita IVA: 02371990561, Fatturato, Dipendenti, PEC", "url": "https://www.ufficiocamerale.it/5071/eden-pizzeria-tavola-calda-sas-di-giardino-giorgio" },
+      { "title": "Eden Pizzeria | 377 358 6615 | Vetralla", "url": "https://www.tuttiaffari.com/eden-pizzeria-tavola-calda-377-358-6615" },
+      { "title": "EDEN PIZZERIA TAVOLA CALDA, Vetralla - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g673503-d25215489-Reviews-Eden_Pizzeria_Tavola_Calda-Vetralla_Province_of_Viterbo_Lazio.html" },
+      { "title": "EDEN PIZZERIA TAVOLA CALDA, Vetralla - Restaurant Reviews, Photos & Phone Number - Tripadvisor", "url": "https://www.tripadvisor.com/Restaurant_Review-g673503-d25215489-Reviews-Eden_Pizzeria_Tavola_Calda-Vetralla_Province_of_Viterbo_Lazio.html" },
+      { "title": "Eden Pizzeria, Vetralla - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Eden-Pizzeria-Tavola-Calda-Vetralla" }
+    ] },
+    { "venue_id": "venue:058120:fiumicino:giardinetti-da-annibale", "query": "\"I Giardinetti Da Annibale\" Fiumicino \"Via Trincea delle Frasche, 60\"", "retrieved_at": "2026-09-07T06:50:00.000Z", "candidates": [
+      { "title": "I giardinetti da Annibale - Fiumicino | Cucina Italiana nelle mie vicinanze | Prenoti subito", "url": "https://i-giardinetti-da-annibale.eatbu.com/?lang=it" },
+      { "title": "I giardinetti da Annibale - Fiumicino | Italian cuisine near me | Book now", "url": "https://i-giardinetti-da-annibale.eatbu.com/?lang=en" },
+      { "title": "I GIARDINETTI DA ANNIBALE - Ristorante a Fiumicino | LocalShop24", "url": "https://www.localshop24.com/it/fiumicino-rm-it/attivita/ristorante/i-giardinetti-da-annibale/" },
+      { "title": "I Giardinetti Da Annibale, Fiumicino - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/I-Giardinetti-Da-Annibale-Fiumicino" },
+      { "title": "I Giardinetti Da Annibale, Fiumicino - Restaurant menu, prices and reviews", "url": "https://restaurantguru.com/I-Giardinetti-Da-Annibale-Fiumicino" }
+    ] }
+  ]
+}

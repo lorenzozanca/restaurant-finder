@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-009-024-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:096004:biella:grilli",
+      "query": "\"Ristorante Pizzeria Grilli\" \"Biella\"",
+      "retrieved_at": "2026-09-02T20:30:00.000Z",
+      "candidates": [{ "title": "Ristorante Pizzeria Grilli, Biella", "url": "https://restaurantguru.it/Grilli-Biella" }]
+    },
+    {
+      "venue_id": "venue:005014:calliano-monferrato:pizza-di-mario",
+      "query": "\"La Pizza di Mario\" \"Calliano Monferrato\"",
+      "retrieved_at": "2026-09-02T20:30:00.000Z",
+      "candidates": [{ "title": "La Pizza di Mario di Cisi Mario", "url": "https://www.icribis.com/it/scheda-azienda/AT133996_LA_PIZZA_DI_MARIO_DI_CISI_MARIO" }]
+    },
+    {
+      "venue_id": "venue:103028:domodossola:dei-cacciatori",
+      "query": "\"Bar Osteria dei Cacciatori\" \"Domodossola\"",
+      "retrieved_at": "2026-09-02T20:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:005005:asti:gelateria-il-muretto",
+      "query": "\"Gelateria Il Muretto\" \"Asti\"",
+      "retrieved_at": "2026-09-02T20:30:00.000Z",
+      "candidates": [{ "title": "Gelateria Il Muretto, Asti", "url": "https://www.tripadvisor.it/Restaurant_Review-g187852-d7693983-Reviews-Gelateria_il_Muretto-Asti_Province_of_Asti_Piedmont.html" }]
+    },
+    {
+      "venue_id": "venue:001310:virle-piemonte:ca-dij-mat",
+      "query": "\"La Cà Dij Mat\" \"Virle Piemonte\"",
+      "retrieved_at": "2026-09-02T20:35:00.000Z",
+      "candidates": [{ "title": "Ristorante Virle Piemonte - La Ca dij Mat", "url": "https://www.bartavolacaldavirlepiemonte.com/" }]
+    },
+    {
+      "venue_id": "venue:001120:grugliasco:bocciofila-usd-pro-grugliasco",
+      "query": "\"Bocciofila USD Pro Grugliasco\"",
+      "retrieved_at": "2026-09-02T20:35:00.000Z",
+      "candidates": [{ "title": "InGrugliasco - Bocciofila USD Pro Grugliasco", "url": "https://www.comune.grugliasco.to.it/s3prod/uploads/ckeditor/attachments/4/9/1/7/7/ingrugliasco_15_-_n__4_-_26_febbraio_2015.pdf" }]
+    },
+    {
+      "venue_id": "venue:003106:novara:real-dream-slot-cafe",
+      "query": "\"Real Dream Slot Cafe\" \"Novara\"",
+      "retrieved_at": "2026-09-02T20:35:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:001162:monteu-da-po:sorriso",
+      "query": "\"Bar Trattoria Il Sorriso\" \"Monteu da Po\"",
+      "retrieved_at": "2026-09-02T20:35:00.000Z",
+      "candidates": [{ "title": "Bar Trattoria Il Sorriso, Monteu da Po", "url": "https://www.tripadvisor.it/Restaurant_Review-g7947379-d19246492-Reviews-Bar_Trattoria_Il_Sorriso-Monteu_da_Po_Province_of_Turin_Piedmont.html" }]
+    },
+    {
+      "venue_id": "venue:006039:casale-monferrato:atelier-della-pizza",
+      "query": "\"Atelier della Pizza\" \"Casale Monferrato\"",
+      "retrieved_at": "2026-09-02T20:40:00.000Z",
+      "candidates": [{ "title": "Home - Atelier della Pizza", "url": "https://atelierdellapizza.it/" }]
+    },
+    {
+      "venue_id": "venue:001272:torino:airone",
+      "query": "\"Airone\" \"Piazza Domenico Cimarosa\" Torino",
+      "retrieved_at": "2026-09-02T20:40:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:001076:chianocco:taverna-tortuga",
+      "query": "\"Taverna Tortuga\" \"Chianocco\"",
+      "retrieved_at": "2026-09-02T20:40:00.000Z",
+      "candidates": [{ "title": "Taverna Tortuga", "url": "https://tavernatortuga.blogspot.com/2016/12/benvenuti-alla-taverna-toruga.html" }]
+    },
+    {
+      "venue_id": "venue:001086:cirie:piaduma",
+      "query": "\"Piaduma\" \"Ciriè\"",
+      "retrieved_at": "2026-09-02T20:40:00.000Z",
+      "candidates": [{ "title": "Piaduma - Piadineria artigianale", "url": "https://www.localshop24.com/it/cirie-to-it/attivita/fast-food/piaduma-piadineria-artigianale/" }]
+    },
+    {
+      "venue_id": "venue:096004:biella:mag-gelato-biella-mastri-artigiani-del-gelato",
+      "query": "\"Mag Gelato Biella\" \"Via Bertodano, 7\"",
+      "retrieved_at": "2026-09-02T20:45:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:003149:trecate:mcdonald-s",
+      "query": "site:mcdonalds.it \"Via Bettole, 40\" Trecate",
+      "retrieved_at": "2026-09-02T20:45:00.000Z",
+      "candidates": [{ "title": "Trecate - McDonald's Italia", "url": "https://www.mcdonalds.it/ristorante/piemonte/novara/trecate" }]
+    },
+    {
+      "venue_id": "venue:004130:mondovi:acquadolce-agritrutta-parco-eventi-acquadolce-mondovi",
+      "query": "\"Agriturismo Acquadolce\" \"Mondovì\"",
+      "retrieved_at": "2026-09-02T20:45:00.000Z",
+      "candidates": [{ "title": "Acquadolce Agriturismo a Cuneo", "url": "https://www.acquadolce.net/" }]
+    },
+    {
+      "venue_id": "venue:003106:novara:miss-cafe",
+      "query": "\"Miss Cafe\" \"Novara\" \"Via Giuseppe Argenti\"",
+      "retrieved_at": "2026-09-02T20:45:00.000Z",
+      "candidates": []
+    }
+  ]
+}

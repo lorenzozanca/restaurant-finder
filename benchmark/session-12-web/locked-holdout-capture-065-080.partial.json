@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-065-080-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:012133:varese:sala-varese",
+      "query": "\"Sala Varese\" Varese \"Via Silvestro Sanvito, 103\"",
+      "retrieved_at": "2026-09-02T21:40:00.000Z",
+      "candidates": [{ "title": "Driving directions to Pub & Billiards Sala Varese", "url": "https://www.waze.com/live-map/directions/it/lombardia/varese/pub-and-billiards-sala-varese?to=place.ChIJZ-kmkeB_hkcRL5AjTB6fnmg" }]
+    },
+    {
+      "venue_id": "venue:017050:ceto:easy-bar",
+      "query": "\"Easy Bar\" Ceto \"Via Guglielmo Marconi, 34\"",
+      "retrieved_at": "2026-09-02T21:40:00.000Z",
+      "candidates": [{ "title": "Benvenuto turista", "url": "https://www.turismovallecamonica.it/wp-content/uploads/2024/08/2024-D-Benvenuto-turista-Capo-di-Ponte-e-Media-Valle-Camonica.pdf" }]
+    },
+    {
+      "venue_id": "venue:015027:bollate:quei-bravi-ragazzi",
+      "query": "\"Pizzeria Quei Bravi Ragazzi\" Bollate \"Via Cesare Battisti, 31f\"",
+      "retrieved_at": "2026-09-02T21:40:00.000Z",
+      "candidates": [{ "title": "Pizzeria Quei Bravi Ragazzi a Bollate", "url": "https://www.ricercare-imprese.it/bollate/pizzeria-quei-bravi-ragazzi-aYj4JY.html" }]
+    },
+    {
+      "venue_id": "venue:018110:pavia:under-victory",
+      "query": "\"Under Victory\" Pavia \"Piazza della Vittoria\"",
+      "retrieved_at": "2026-09-02T21:40:00.000Z",
+      "candidates": [{ "title": "Under Victory - Pavia | Cucina Mediterranea nelle mie vicinanze", "url": "https://undervictory.eatbu.com/?lang=it" }]
+    },
+    {
+      "venue_id": "venue:017103:manerbio:bridge-pub-and-restaurant",
+      "query": "\"Bridge Pub and Restaurant\" Manerbio \"Via San Martino del Carso, 2\"",
+      "retrieved_at": "2026-09-02T21:45:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:015116:lainate:gelateria-saint-tropez",
+      "query": "\"Gelateria Saint Tropez\" Lainate \"Largo S. D'Acquisto\"",
+      "retrieved_at": "2026-09-02T21:45:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:017067:desenzano-del-garda:autogrill",
+      "query": "Autogrill Desenzano del Garda \"A4 km 272\"",
+      "retrieved_at": "2026-09-02T21:45:00.000Z",
+      "candidates": [{ "title": "Ristorante Autogrill Monte Alto Nord a Desenzano", "url": "https://www.lagodigarda.com/ristoranti/Autogrill-Monte-Alto-Nord.php" }]
+    },
+    {
+      "venue_id": "venue:015249:vanzaghello:piadineria",
+      "query": "\"La Piadineria\" Vanzaghello \"Via delle Querce, 1\"",
+      "retrieved_at": "2026-09-02T21:45:00.000Z",
+      "candidates": [{ "title": "La Piadineria - L'Italia in un morso", "url": "https://lapiadineria.com/regolamento-concorso" }]
+    },
+    {
+      "venue_id": "venue:108027:limbiate:della-terra",
+      "query": "\"Caffè della Terra\" Limbiate \"Via Giuseppe Garibaldi\"",
+      "retrieved_at": "2026-09-02T21:50:00.000Z",
+      "candidates": [{ "title": "Bar e Caffetterie a Limbiate", "url": "https://www.reteimprese.it/bar-caffetterie/limbiate" }]
+    },
+    {
+      "venue_id": "venue:020030:mantova:tavola-calda-nosari",
+      "query": "\"Tavola calda Nosari\" Mantova \"Viale Monte Grappa, 18\"",
+      "retrieved_at": "2026-09-02T21:50:00.000Z",
+      "candidates": [{ "title": "Gastronomia Nosari - Tavola Calda, Mantova", "url": "https://www.nuovaopinione.it/mantova/ristoranti/gastronomia-nosari-tavola-calda-9423" }]
+    },
+    {
+      "venue_id": "venue:015184:robecco-sul-naviglio:casa-della-pizza",
+      "query": "\"La Casa della Pizza\" \"Robecco sul Naviglio\" \"Via Dante Alighieri, 16\"",
+      "retrieved_at": "2026-09-02T21:50:00.000Z",
+      "candidates": [{ "title": "La Casa della Pizza a Robecco Sul Naviglio", "url": "https://altraopinione.org/pizzeria/robecco-sul-naviglio/la-casa-della-pizza/" }]
+    },
+    {
+      "venue_id": "venue:021111:varna-vahrn:sportwirt",
+      "query": "\"Bar Pizzeria Sportwirt\" Varna Vahrn \"Via Vecchia, 18\"",
+      "retrieved_at": "2026-09-02T21:50:00.000Z",
+      "candidates": [{ "title": "BAR PIZZERIA SPORTWIRT, Varna", "url": "https://www.tripadvisor.it/Restaurant_Review-g1419957-d26157248-Reviews-Bar_Pizzeria_Sportwirt_Vahrn-Varna_Province_of_South_Tyrol_Trentino_Alto_Adige.html" }]
+    },
+    {
+      "venue_id": "venue:021011:bressanone-brixen:eisdiele-la-piazza",
+      "query": "\"Café Eisdiele La Piazza\" Bressanone Brixen \"Piazza del Duomo, 11C\"",
+      "retrieved_at": "2026-09-02T21:55:00.000Z",
+      "candidates": [{ "title": "Agorà - Wine&Food, Bressanone", "url": "https://restaurantguru.it/Agora-WineandFood-Brixen" }]
+    },
+    {
+      "venue_id": "venue:022205:trento:j-j",
+      "query": "\"Bar Pizzeria J&J\" Trento \"Via della Villa, 26\"",
+      "retrieved_at": "2026-09-02T21:55:00.000Z",
+      "candidates": [{ "title": "Bar Pizzeria J&J", "url": "https://www.tuttiaffari.com/bar-pizzeria-j-j-0461-148-6014" }]
+    },
+    {
+      "venue_id": "venue:021108:valle-aurina-ahrntal:bauschaftalm-klausberg",
+      "query": "\"Bauschaftalm Klausberg\" \"Valle Aurina\" Riobianco",
+      "retrieved_at": "2026-09-02T21:55:00.000Z",
+      "candidates": [{ "title": "Os melhores restaurantes para jantar: Valle Aurina", "url": "https://www.tripadvisor.com.br/Restaurants-g1182966-zfp58-Valle_Aurina_Province_of_South_Tyrol_Trentino_Alto_Adige.html" }]
+    },
+    {
+      "venue_id": "venue:022161:rovereto:marco",
+      "query": "\"Pizzeria Marco\" Rovereto \"Via Niccolò Paganini, 51\"",
+      "retrieved_at": "2026-09-02T21:55:00.000Z",
+      "candidates": [{ "title": "Pizzeria Marco, Rovereto", "url": "https://restaurantguru.it/Pizzeria-Marco-Di-Pedrotti-Rovereto" }]
+    }
+  ]
+}

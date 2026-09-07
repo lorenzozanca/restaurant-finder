@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-11-final-locked-holdout-adjudication-021-040",
+  "partition": "locked_holdout",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "4a9c84710d6d7478a829c732f52adc50ca7ab12699b03b339a1535e1f6b94079",
+  "reviewer": "Codex independent bounded-fixture review",
+  "reviewed_at": "2026-09-02T19:15:00.000Z",
+  "review_basis": "Independent review of retained bounded-query URL/title metadata and first-party branch or venue pages; publisher-domain ownership is approved only where the retained first-party page identifies the selected venue or exact chain branch.",
+  "scope_limitations": "Minimal URL/title capture only; no snippets or page bodies retained. A no_official_site disposition means no publishable official site was established within the bounded retained evidence, not that no site exists on the open web.",
+  "entries": [
+    {
+      "venue_id": "venue:025016:cortina-d-ampezzo:janbo",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://gstatic.olympics.com/s3/mc2026/documents/maps/Cortina2026-Map-Download-EN.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "olympics.com",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://gstatic.olympics.com/s3/mc2026/documents/maps/Cortina2026-Map-Download-EN.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023091:verona:piadineria-1e3f9c09",
+      "official_website_status": "accepted",
+      "official_website_url": "https://lapiadineria.com/i-nostri-ristoranti/verona-pzza-santo-spirito-",
+      "evidence_urls": [
+        "https://lapiadineria.com/i-nostri-ristoranti/verona-pzza-santo-spirito-"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lapiadineria.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/verona-pzza-santo-spirito-"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/verona-pzza-santo-spirito-"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023055:oppeano:leone",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.bars10.com/IT/Oppeano/1462202040468298/Caff%C3%A8-al-Leone"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "bars10.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.bars10.com/IT/Oppeano/1462202040468298/Caff%C3%A8-al-Leone"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:024008:arzignano:gelateria-di-piazza-beltrame",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/La-Gelateria-di-Piazza-Beltrame-Arzignano"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/La-Gelateria-di-Piazza-Beltrame-Arzignano"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027042:venezia:five-guys",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.localshop24.com/it/venezia-ve-it/attivita/fast-food/five-guys/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/venezia-ve-it/attivita/fast-food/five-guys/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093044:spilimbergo:strane-delizie",
+      "official_website_status": "accepted",
+      "official_website_url": "https://pasticcerialestranedelizie.it/",
+      "evidence_urls": [
+        "https://pasticcerialestranedelizie.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "pasticcerialestranedelizie.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://pasticcerialestranedelizie.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://pasticcerialestranedelizie.it/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:evolution-trieste",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Bar-Evolution-Trieste-Trieste"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Evolution-Trieste-Trieste"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:031016:ronchi-dei-legionari:gelateria-frio-frio-ronchi",
+      "official_website_status": "accepted",
+      "official_website_url": "https://friofrio.life/",
+      "evidence_urls": [
+        "https://friofrio.life/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "friofrio.life",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://friofrio.life/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://friofrio.life/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093041:san-vito-al-tagliamento:friends-pizza-e-kebab-san-vito-al-tagliamento",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.ordina-online.menu/restaurants/san-vito-al-tagliamento/friends-pizza-e-kebab"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ordina-online.menu",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ordina-online.menu/restaurants/san-vito-al-tagliamento/friends-pizza-e-kebab"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:delizie",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.grubbio.com/ristorante/bar-le-delizie-trieste"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "grubbio.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.grubbio.com/ristorante/bar-le-delizie-trieste"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010044:portofino:portofino-mare",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.comuneportofinomare.it/about/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "comuneportofinomare.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.comuneportofinomare.it/about/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008055:sanremo:san-sci",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187822-d12969884-Reviews-Cafe_San_Sci-Sanremo_Italian_Riviera_Liguria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187822-d12969884-Reviews-Cafe_San_Sci-Sanremo_Italian_Riviera_Liguria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010032:masone:coco-pizza",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.waze.com/live-map/directions/it/liguria/masone/coco-pizza?to=place.ChIJA-2oE2Y60xIRrMF8rXdPPiU"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/it/liguria/masone/coco-pizza?to=place.ChIJA-2oE2Y60xIRrMF8rXdPPiU"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009004:albisola-superiore:gelato-college",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:010025:genova:zena-kebab",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://zena-kebab.eatbu.com/?lang=en"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://zena-kebab.eatbu.com/?lang=en"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:040013:forlimpopoli:domus-a-forlimpopoli",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.forlimpopolicittartusiana.it/wp-content/uploads/2020/05/elenco-attivita_esercizi_forlimp8maggio.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "forlimpopolicittartusiana.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.forlimpopolicittartusiana.it/wp-content/uploads/2020/05/elenco-attivita_esercizi_forlimp8maggio.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:033032:piacenza:piadineria",
+      "official_website_status": "accepted",
+      "official_website_url": "https://lapiadineria.com/i-nostri-ristoranti/piacenza-il-gotico",
+      "evidence_urls": [
+        "https://lapiadineria.com/i-nostri-ristoranti/piacenza-il-gotico"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lapiadineria.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/piacenza-il-gotico"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://lapiadineria.com/i-nostri-ristoranti/piacenza-il-gotico"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:033006:borgonovo-val-tidone:kelly-s-pub-birreria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:036044:soliera:gelateria-cioccolateria-settimo-gelo",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:034027:parma:cibiamo-station",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.cibiamo.it/site/riapre-il-ciabiamo-station-di-parma/",
+      "evidence_urls": [
+        "https://www.cibiamo.it/site/riapre-il-ciabiamo-station-di-parma/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "cibiamo.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.cibiamo.it/site/riapre-il-ciabiamo-station-di-parma/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-02T19:15:00.000Z",
+          "ownership_evidence_urls": [
+            "https://www.cibiamo.it/site/riapre-il-ciabiamo-station-di-parma/"
+          ]
+        }
+      ]
+    }
+  ]
+}

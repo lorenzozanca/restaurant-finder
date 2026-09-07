@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-429-444-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:079047:falerna:old-50-special-pub",
+      "query": "\"Old 50 Special Pub\" \"Falerna\" \"Viale Aldo Moro\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Old 50 Special pub | 0968 359459 | Falerna",
+          "url": "https://www.tuttiaffari.com/old-special-pub_16-0968-359459"
+        },
+        {
+          "title": "OLD 50 SPECIAL PUB, Falerna - Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1195836-d23601685-Reviews-Old_50_Special_Pub-Falerna_Province_of_Catanzaro_Calabria.html"
+        },
+        {
+          "title": "OLD 50 SPECIAL PUB - Pub a Falerna | LocalShop24",
+          "url": "https://www.localshop24.com/it/falerna-cz-it/attivita/pub/old-50-special-pub/"
+        },
+        {
+          "title": "Old 50 Special Pub, Falerna - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/falerna/ristorante/8595555/old-50-special-pub"
+        },
+        {
+          "title": "Old 50 Special pub, Falerna Marina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Old-50-Special-Pub-Falerna"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078081:montalto-uffugo:framboise",
+      "query": "\"Framboise\" \"Montalto Uffugo\" \"Via Giuseppe Verdi, 149\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Nuove Aperture: Ha inaugurato la \"Framboise - Pasticceria Moderna & Caffetteria\" - Cosenza 2.0",
+          "url": "https://www.cosenzaduepuntozero.it/nuove-aperture-ha-inaugurato-la-framboise-pasticceria-moderna-caffetteria/"
+        },
+        {
+          "title": "Montalto Uffugo - Vota Recensioni e valutazioni",
+          "url": "https://vota.org/it/italy/montalto-uffugo/bakery/1"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080063:reggio-di-calabria:pasticceria-gelateria-jonio",
+      "query": "\"Bar Pasticceria Gelateria Jonio\" \"Reggio di Calabria\" \"Piazza della Pace, 2\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Reggio Di Calabria - Vota Recensioni e valutazioni",
+          "url": "https://vota.org/it/italy/reggio-di-calabria/ice-cream-shop/1"
+        },
+        {
+          "title": "Commercial premises in Emilia-Romagna, Italy",
+          "url": "https://italy-streets.openalfa.com/emilia-romagna/shopping"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078103:rocca-imperiale:casetta",
+      "query": "\"La Casetta\" \"Rocca Imperiale\" \"Via Trevie, 21\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "La Casetta · Pizzeria a Rocca Imperiale",
+          "url": "https://www.lacasettapizzeria.it/"
+        },
+        {
+          "title": "La Casetta · Pizzeria in Rocca Imperiale",
+          "url": "https://www.lacasettapizzeria.it/en"
+        },
+        {
+          "title": "Menu · La Casetta Pizzeria, Rocca Imperiale",
+          "url": "https://www.lacasettapizzeria.it/menu"
+        },
+        {
+          "title": "La Casetta, Rocca Imperiale - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Casetta-Rocca-Imperiale"
+        },
+        {
+          "title": "Dettaglio gara | FCI Members",
+          "url": "https://members.federciclismo.it/race/detail/178871/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079137:soverato:lido-el-sombrero",
+      "query": "\"Lido el Sombrero\" \"Soverato\" \"Lungomare Europa, 3\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "LIDO EL SOMBRERO, Soverato - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g677476-d10274638-Reviews-Lido_El_Sombrero-Soverato_Province_of_Catanzaro_Calabria.html"
+        },
+        {
+          "title": "LIDO EL SOMBRERO, Soverato - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g677476-d10274638-Reviews-Lido_El_Sombrero-Soverato_Province_of_Catanzaro_Calabria.html"
+        },
+        {
+          "title": "Lido el Sombrero, Soverato Marina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Lido-El-Sombrero-Soverato-Marina"
+        },
+        {
+          "title": "Lido el Sombrero, Soverato Marina - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Lido-El-Sombrero-Soverato-Marina"
+        },
+        {
+          "title": "LIDO EL SOMBRERO, Soverato - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g677476-d10274638-Reviews-Lido_El_Sombrero-Soverato_Province_of_Catanzaro_Calabria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079023:catanzaro:mirusvape",
+      "query": "\"Mirusvape\" \"Catanzaro\" \"It, Catanzaro\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:078083:morano-calabro:elite-pub",
+      "query": "\"Elite Pub\" \"Morano Calabro\" \"Via Aldo Moro\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Elite Pub, Morano Calabro",
+          "url": "https://www.nuovaopinione.it/morano-calabro/bar/elite-pub-301480"
+        },
+        {
+          "title": "Elite Pub, Morano Calabro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Elite-Pub-Morano-Calabro"
+        },
+        {
+          "title": "ELITE PUB DI FERRARO PIETRO & RIMOLO CARMELA SNC, Partita IVA: 03655870784, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/5290/elite-pub-di-rosito-giovanni-schifino-francesco-snc"
+        },
+        {
+          "title": "Morano Calabro",
+          "url": "https://www.qrtour.it/morcal/"
+        },
+        {
+          "title": "Elite Pub - Morano Calabro, Provincia di Cosenza Fioriture Uniche",
+          "url": "https://kioku.it/elite-pub/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080096:villa-san-giovanni:piazzetta-lounge-bar",
+      "query": "\"La Piazzetta Lounge Bar\" \"Villa San Giovanni\" \"Piazza dei Parlamenti, 5\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "La Piazzetta Lounge Bar | 0965 795136 | Villa San Giovanni",
+          "url": "https://www.tuttiaffari.com/la-piazzetta-lounge-bar_3G-0965-795136"
+        },
+        {
+          "title": "ᐅ Orari di apertura „La Piazzetta Lounge Bar“ | Piazza Dei Parlamenti",
+          "url": "https://www.oraridiapertura24.it/filiale/Villa%2520San%2520Giovanni-La%2520Piazzetta%2520Lounge%2520Bar-1428503X.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Kalura Lounge“ | Via Spiaggia Bolano",
+          "url": "https://www.oraridiapertura24.it/filiale/Reggio%2520Calabria-Kalura%2520Lounge-813463R.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078157:corigliano-rossano:gelateria-san-francesco",
+      "query": "\"Bar gelateria San Francesco\" \"Corigliano-Rossano\" \"Viale Rimembranze\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar e Caffetterie a Corigliano Calabro",
+          "url": "https://www.reteimprese.it/bar-caffetterie/corigliano-calabro"
+        },
+        {
+          "title": "Punti Vendita Espresso DolceVita",
+          "url": "https://espressodolcevita.it/it/punti-vendita.php"
+        },
+        {
+          "title": "Memoria | notte senza dimora - treviso -",
+          "url": "https://senzafissadimoratreviso.wordpress.com/category/memoria/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080049:melicucco:ascafe",
+      "query": "\"Ascafè\" \"Melicucco\" \"Via Antonio Gramsci, 133\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "ASCAFE DI ASCONE JEAN MARC, Partita IVA: 03140470802, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/6307/ascafe-di-ascone-jean-marc"
+        },
+        {
+          "title": "Ascafè - La Cialderia, Melicucco - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Ascafe-la-cialderia-Melicucco"
+        },
+        {
+          "title": "Più relax a Calabria | 36 annunci e recensioni",
+          "url": "https://localitybiz.it/calabria/piu%CC%80-relax-a-calabria"
+        },
+        {
+          "title": "Ascafè - La Cialderia(Melicucco) - 餐厅/美食点评 - Tripadvisor",
+          "url": "https://cn.tripadvisor.com/Restaurant_Review-g3606154-d27401439-Reviews-Ascafe_La_Cialderia-Melicucco_Province_of_Reggio_Calabria_Calabria.html"
+        },
+        {
+          "title": "TOP 30 Più relax a Calabria – Trovati 49 risultati – Aggiornato 2025 - Recensioni - Telefoni - Orari - LocalityBiz.com",
+          "url": "https://localitybiz.com/calabria/piu%CC%80-relax-a-calabria"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078102:rende:mareluna-2-0",
+      "query": "\"Mareluna 2.0\" \"Rende\" \"Via Carlo Carrà, 5\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "MARELUNA 2.0, Rende - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g644242-d13478004-Reviews-Mareluna_2_0-Rende_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "Mareluna 2.0 | 320 317 9329 | Rende",
+          "url": "https://www.tuttiaffari.com/mareluna_20Z-320-317-9329"
+        },
+        {
+          "title": "MARELUNA 2.0, Rende - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g644242-d13478004-Reviews-Mareluna_2_0-Rende_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "Ristorante Mareluna 2.0 dove mangiano gli attori",
+          "url": "https://www.saleepepequantobasta.com/2020/10/ristorante-mareluna-20-dove-mangiano.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078045:cosenza:girone-dei-golosi",
+      "query": "\"Al Girone Dei Golosi\" \"Cosenza\" \"Via Pasquale Rossi, 79\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Al Girone dei Golosi – All'Inferno il Paradiso",
+          "url": "https://www.algironedeigolosi.it/"
+        },
+        {
+          "title": "Al Girone dei Golosi | Ristorante | Cosenza",
+          "url": "https://algironedeigolosi.trovacigusto.com/"
+        },
+        {
+          "title": "Il Ristorante – Al Girone dei Golosi",
+          "url": "https://www.algironedeigolosi.it/ristorante/"
+        },
+        {
+          "title": "Prenota – Al Girone dei Golosi",
+          "url": "https://www.algironedeigolosi.it/prenota/"
+        },
+        {
+          "title": "Servizi – Al Girone dei Golosi",
+          "url": "https://www.algironedeigolosi.it/servizi/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078041:civita:hami-and-pimi",
+      "query": "\"Hami and Pimi\" \"Civita\" \"Via Piave, 32\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:080045:marina-di-gioiosa-ionica:golosia",
+      "query": "\"Golosia\" \"Marina di Gioiosa Ionica\" \"Piazza Zaleuco\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "GOLOSIA, Marina di Gioiosa Ionica - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g651982-d3563381-Reviews-Golosia-Marina_di_Gioiosa_Ionica_Province_of_Reggio_Calabria_Calabria.html"
+        },
+        {
+          "title": "Orari di apertura Golosia ▷ Marina di Gioiosa Ionica Piazza Zaleuco, Snc, 89046, Marina di Gioiosa Ionica | Trova Aperto",
+          "url": "https://trova-aperto.it/marina-di-gioiosa-ionica/golosia-839868"
+        },
+        {
+          "title": "Golosia, Marina di Gioiosa Ionica - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/golosia-Marina-di-Gioiosa-Ionica"
+        },
+        {
+          "title": "Golosia Bar Gelateria Pasticceria Ristorante, Marina di Gioiosa Ionica - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/golosia-Marina-di-Gioiosa-Ionica"
+        },
+        {
+          "title": "Golosia | 0964 416463 | Marina di Gioiosa Ionica",
+          "url": "https://www.tuttiaffari.com/golosia_2d-0964-416463"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078157:corigliano-rossano:ella-minimarket",
+      "query": "\"Ella Minimarket\" \"Corigliano-Rossano\" \"Via Nazionale, 231B\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:080039:gioiosa-ionica:benvenuti-al-sud",
+      "query": "\"Benvenuti al sud\" \"Gioiosa Ionica\" \"Via Santa Maria\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "BENVENUTI AL SUD, Gioiosa Ionica - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g5308375-d6988908-Reviews-Benvenuti_al_Sud-Gioiosa_Ionica_Province_of_Reggio_Calabria_Calabria.html"
+        },
+        {
+          "title": "Ristorante Benvenuti al Sud - Gioiosa Jonica",
+          "url": "https://ristorantebenvenutialsud.it/"
+        },
+        {
+          "title": "Benvenuti al Sud, Gioiosa Ionica",
+          "url": "https://www.nuovaopinione.it/gioiosa-ionica/pizzerie/benvenuti-al-sud-345783"
+        },
+        {
+          "title": "Ristorante Benvenuti al Sud - Gioiosa Jonica",
+          "url": "https://www.ristorantebenvenutialsud.it/"
+        },
+        {
+          "title": "Benvenuti al sud | 327 443 7474 | Gioiosa Ionica",
+          "url": "https://www.tuttiaffari.com/benvenuti-al-sud_4t-327-443-7474"
+        }
+      ]
+    }
+  ]
+}

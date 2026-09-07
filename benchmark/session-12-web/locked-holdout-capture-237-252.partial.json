@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-237-252-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    { "venue_id": "venue:055032:terni:rosticceria-i-templari", "query": "\"Pizzeria Rosticceria I Templari\" Terni \"Via Tre Venezie, 52\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [{ "title": "Driving directions to Pizzeria Rosticceria I templari, 52 Via Tre Venezie, Terni - Waze", "url": "https://www.waze.com/live-map/directions/it/umbria/terni/pizzeria-rosticceria-i-templari?to=place.ChIJQ2hYusn3LhMRdyiUci-KtVs" }] },
+    { "venue_id": "venue:055010:castel-viscardo:las-vegas", "query": "\"Bar Pub Las Vegas\" \"Castel Viscardo\" \"Via Dante Alighieri, 1\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [] },
+    { "venue_id": "venue:054051:spoleto:gelateria-artigianale-del-tordelli-tordellina-spoleto", "query": "\"Gelateria artigianale Del Tordelli Tordellina\" Spoleto \"Corso Giuseppe Mazzini, 48\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [] },
+    { "venue_id": "venue:054039:perugia:spuntino-del-ghiottone", "query": "\"lo spuntino del ghiottone\" Perugia \"Via Luigi Masi, 3\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [
+      { "title": "Contatto - Lo Spuntino Del Ghiottone", "url": "https://www.lospuntinodelghiottone.net/contact" },
+      { "title": "LO SPUNTINO DEL GHIOTTONE, Perugia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g187907-d26977016-Reviews-Lo_Spuntino_Del_Ghiottone-Perugia_Province_of_Perugia_Umbria.html" },
+      { "title": "LO SPUNTINO DEL GHIOTTONE DI GIORGIO MARIA, Partita IVA: 03895200545, Fatturato, Dipendenti, PEC", "url": "https://www.ufficiocamerale.it/7744/lo-spuntino-del-ghiottone-di-giorgio-maria" },
+      { "title": "Lo Spuntino del Ghiottone, Perugia", "url": "https://www.nuovaopinione.it/perugia/pizzerie/lo-spuntino-del-ghiottone-140416" },
+      { "title": "Lo Spuntino del Ghiottone, Perugia - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Lo-Spuntino-del-Ghiottone-Perugia" }
+    ] },
+    { "venue_id": "venue:055002:allerona:l-povecchio", "query": "\"L'Povecchio\" Allerona \"Vocabolo Madonna Del Poggio, 111\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [
+      { "title": "L'Povecchio | 0763 628138 | Allerona", "url": "https://www.tuttiaffari.com/lpovecchio-0763-628138" },
+      { "title": "L'POVECCHIO, Allerona - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g1062527-d4742428-Reviews-L_Povecchio-Allerona_Province_of_Terni_Umbria.html" },
+      { "title": "PIZZERIA L POVECCHIO DI ALBANI FELICE E C SNC ALLERONA - Impresa Italia", "url": "https://www.impresaitalia.info/kk05311320/pizzeria-l-povecchio-di-albani-felice-e-c-snc/allerona.aspx" },
+      { "title": "Dati della società L'Povecchio Snc Di Albani Leonardo E Serranti Mattia (01682420557), Umbria, Terni, ALLERONA - REGISTROAZIENDE.it", "url": "https://registroaziende.it/azienda/lpovecchio-snc-di-albani-leonardo-e-serranti-mattia-allerona" },
+      { "title": "L'POVECCHIO, Allerona - Restaurant Reviews, Photos & Phone Number - Tripadvisor", "url": "https://www.tripadvisor.com/Restaurant_Review-g1062527-d4742428-Reviews-L_Povecchio-Allerona_Province_of_Terni_Umbria.html" }
+    ] },
+    { "venue_id": "venue:054009:castiglione-del-lago:gelateria-bee-bop", "query": "\"Gelateria Bee Bop\" \"Castiglione del Lago\" \"Viale Umbria, 25d\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [] },
+    { "venue_id": "venue:054001:assisi:pizza-al-taglio", "query": "\"Pizza al taglio\" Assisi \"Via Dono Doni, 2\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [
+      { "title": "Pizza al taglio, Assisi - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Pizza-al-taglio-Assisi" },
+      { "title": "133 recensioni di Pizza al taglio a Assisi", "url": "https://altraopinione.org/pizzeria/assisi/pizza-al-taglio/" },
+      { "title": "Pizza Al Taglio - 06081 Assisi -", "url": "https://www.reteimprese.it/pizzerie/assisi/azienda/3069782" },
+      { "title": "Mejor Pizza - ASSISI", "url": "https://carta.menu/list/82269099/pizza-restaurantes-assisi" },
+      { "title": "Unde să mănânci: cele mai bune 50 restaurante din Assisi", "url": "https://wanderlog.com/ro/list/geoCategory/74483/where-to-eat-best-restaurants-in-assisi" }
+    ] },
+    { "venue_id": "venue:055011:fabro:centrale", "query": "\"Caffe Centrale\" Fabro \"Piazzale della Stazione, 17\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [{ "title": "CAFFÈ CENTRALE, Fabro Scalo - Restaurant Bewertungen & Telefonnummer - Tripadvisor", "url": "https://www.tripadvisor.de/Restaurant_Review-g11964842-d25155616-Reviews-Caffe_Centrale-Fabro_Scalo_Fabro_Province_of_Terni_Umbria.html" }] },
+    { "venue_id": "venue:054013:citta-di-castello:fox-hunt", "query": "\"Fox Hunt\" \"Città di Castello\" \"Via Santa Croce, 26a\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [
+      { "title": "FOX HUNT - Pub a Città di Castello | LocalShop24", "url": "https://www.localshop24.com/it/citta-di-castello-pg-it/attivita/pub/fox-hunt/" },
+      { "title": "Fox Hunt | 075 855 2364 | Città di Castello", "url": "https://www.tuttiaffari.com/fox-hunt_4E-075-855-2364" },
+      { "title": "Fox Hunt, Città di Castello - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Fox-Hunt-Citta-di-Castello" },
+      { "title": "114 recensioni di Fox Hunt a Città di Castello", "url": "https://altraopinione.org/pub/citta-di-castello/fox-hunt/" }
+    ] },
+    { "venue_id": "venue:055032:terni:panineria-bardascio", "query": "\"Panineria Bardascio\" Terni \"Via Roma, 160\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [
+      { "title": "PANINERIA BARDASCIO, Terni - Photos & Restaurant Reviews - Order Online Food Delivery - Tripadvisor", "url": "https://www.tripadvisor.com/Restaurant_Review-g580242-d32760600-Reviews-Panineria_Bardascio-Terni_Province_of_Terni_Umbria.html" },
+      { "title": "PANINERIA BARDASCIO DI PETROLLINI ANDREA, Partita IVA: 01724480551, Fatturato, Dipendenti, PEC", "url": "https://www.ufficiocamerale.it/4733/panineria-bardascio-di-petrollini-andrea" },
+      { "title": "Panineria Bardascio, Terni - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Panineria-Bardascio-Terni" },
+      { "title": "Panineria Bardascio a Terni", "url": "https://www.ricercare-imprese.it/terni/panineria-bardascio-aYDq2c.html" },
+      { "title": "Menu di Panineria Bardascio a domicilio a Terni | Ordina su Just Eat", "url": "https://www.justeat.it/restaurants-panineria-bardascio-terni/menu?jet-source=content_page" }
+    ] },
+    { "venue_id": "venue:054017:deruta:piano-b", "query": "\"Piano B\" Deruta \"Via Giosuè Carducci, 1\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [] },
+    { "venue_id": "venue:054015:corciano:piadina-piu", "query": "\"Piadina Più\" Corciano \"Via Giuseppe Verdi, 50\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [] },
+    { "venue_id": "venue:054039:perugia:firenze", "query": "\"Bar Firenze\" Perugia \"Via Firenze, 8\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [
+      { "title": "Bar Firenze, Perugia", "url": "https://www.nuovaopinione.it/perugia/bar/bar-firenze-117281" },
+      { "title": "Bar Firenze, Perugia - Menu del ristorante, prezzi e recensioni", "url": "https://restaurantguru.it/Bar-Firenze-Perugia" },
+      { "title": "Bar e caffetterie a Perugia", "url": "https://www.nuovaopinione.it/perugia/bar" }
+    ] },
+    { "venue_id": "venue:054014:collazzone:exfor-pizzeria-e-friggitoria", "query": "\"Exfor Pizzeria e Friggitoria\" Collazzone \"Strada dell'Osteria, 82\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [
+      { "title": "Dove mangiare: i 36 migliori ristoranti a Collazzone", "url": "https://wanderlog.com/it/list/geoCategory/201667/where-to-eat-best-restaurants-in-collazzone" },
+      { "title": "Exfor Pizzeria e Friggitoria, Collepepe - Menu du restaurant, prix et avis", "url": "https://fr.restaurantguru.com/Exfor-Pizzeria-e-Friggitoria-Collepepe" },
+      { "title": "Pizzeria con forno a legna e cucina tradizionale a Umbria | 55 annunci e recensioni", "url": "https://localitybiz.it/umbria/pizzeria-con-forno-a-legna-e-cucina-tradizionale-a-umbria" }
+    ] },
+    { "venue_id": "venue:043031:monte-san-giusto:bestia", "query": "\"Pub La Bestia\" \"Monte San Giusto\" \"Piazzale Martiri delle Foibe\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [{ "title": "PUB LA BESTIA - Pub a Monte San Giusto | LocalShop24", "url": "https://www.localshop24.com/it/monte-san-giusto-mc-it/attivita/pub/pub-la-bestia/" }] },
+    { "venue_id": "venue:109033:porto-san-giorgio:pirimpilla", "query": "\"Pirimpilla\" \"Porto San Giorgio\" \"Via Giordano Bruno, 129\"", "retrieved_at": "2026-09-07T06:25:00.000Z", "candidates": [
+      { "title": "Pirimpilla, Porto San Giorgio - Menú del restaurante, precios y reseñas", "url": "https://es.restaurantguru.com/Pirimpilla-Porto-San-Giorgio" },
+      { "title": "PIRIMPILLA PIZZA ROMANA, Porto San Giorgio - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor", "url": "https://www.tripadvisor.it/Restaurant_Review-g194859-d28006994-Reviews-Pirimpilla_Pizza_Romana-Porto_San_Giorgio_Province_of_Fermo_Marche.html" },
+      { "title": "DECRETO DEL DIRIGENTE DEL SETTORE SERVIZI PER L’IMPIEGO E POLITICHE DEL", "url": "https://bandi.regione.marche.it/Allegati/6134/DDS%20309.pdf" },
+      { "title": "PIRIMPILLA PIZZA ROMANA DI VIRGILI KATJA | Scheda Azienda | iCRIBIS", "url": "https://www.icribis.com/it/scheda-azienda/FM293726_PIRIMPILLA_PIZZA_ROMANA_DI_VIRGILI_KATJA" },
+      { "title": "Pizzerie a Porto San Giorgio", "url": "https://www.reteimprese.it/pizzerie/porto-san-giorgio" }
+    ] }
+  ]
+}
