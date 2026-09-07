@@ -20,11 +20,10 @@ National/regional queues mutated: **no**
 
 ## Bounded scope for this start
 
-Offline-only. No Brave request, no live HTTP crawl, no queue claim,
-no production-database write. Production databases were opened only in
-`mode=ro` or via a `/tmp` copy. The wholesale 86k crawl is explicitly
-**not** started here; it requires a separate operator go-ahead for live
-HTTP even though it costs $0 in search spend.
+Offline-only start. No Brave request, no queue claim,
+no production-database write. The start scope performed no live HTTP crawl;
+the bounded 20-venue live sample below ran only after explicit operator
+authorization ("commit and then go").
 
 ## Code change: fail-closed crawl-only guarantee
 
@@ -95,3 +94,43 @@ plus read-only queue counts; export measured on a `/tmp` copy of
    evaluate on unseen venues before any national crawl.
 3. Wholesale queue execution stays unauthorized until that sample plus
    the attestation path are reviewed.
+
+Production databases were opened only in `mode=ro` or via a `/tmp` copy.
+The wholesale 86k crawl is explicitly **not** started; it requires a
+separate operator go-ahead for live HTTP even though it costs $0 in
+search spend.
+
+## Bounded live sample — executed 2026-09-07 (operator authorized)
+
+Scope: exactly 20 venues, every 4342nd `venue_id` carrying a known source
+website (deterministic north-to-south spread, Piemonte → Sicilia), run on an
+isolated `/tmp` copy of `italy-import.sqlite` with
+`resolverBudget { searches: 0, crawls: 3 }`, `resourceBudget
+{ siteSearch: false }`, real HTTP GET, and a throwing search stub.
+Production databases, queues, and `output/.cache` untouched
+(HTTP cache pinned to `/tmp`). Raw results:
+`benchmark/ZERO-COST-PHASE-0-SAMPLE-20.json`.
+
+- Search requests spent: **0** (stub call count 0 across all 20 runs).
+- Crawl: 18/20 fetched with 1 request each; 2 correctly skipped with
+  0 crawls (known source websites are Instagram/Facebook URLs —
+  non-official hosts fail closed before any fetch).
+- Website outcomes: **0 accepted**, 4 review, 14 rejected, 2 no-decision
+  (social). Resources accepted: **0**. Publishable websites: **0/20**.
+- The 4 review outcomes include 90–100 identity scores
+  (21.9 Flavio Costa, I Ciarli, La Fornace, Chiato'): without a venue-scoped
+  attestation, `scoreOfficialWebsite` caps at review — acceptance
+  structurally requires verified publisher ownership.
+- Even 100/100/100 and 100/100/85 identity/geography/officialness source
+  sites (Il Primo Ristorante, Tower Garden, Terravecchia) were rejected on
+  independent page signals, not published on brand match.
+- Several source websites appear dead, parked, or mismatched
+  (identity 20 / geography 0 after a successful fetch).
+
+Conclusion: the crawl path works and spends nothing, but crawl-only
+publishes nothing while attestations are absent — exactly the binding
+constraint in `ZERO-COST-ENRICHMENT-PLAN.md`. The next work is the
+attestation supply (automatic `verified_reciprocal_link` /
+`official_registry` detectors evaluated on unseen venues, plus the
+human review / owner-claim loop), not more crawling. No wholesale queue
+execution; no Brave request at any point.
