@@ -398,6 +398,32 @@ test("crawl-only budget still crawls a known website without any identity search
   assert.equal(result.enrichment_run.resource_site_search_requests, 0);
 });
 
+test("crawls the attested website when the known website is a social page", async () => {
+  const requested = [];
+  const result = await findMenuSources(owned({
+    name: "Al Giardinetto",
+    website: "https://www.facebook.com/giardinetto",
+  }, "https://giardinetto.test/"), "Oderzo TV", {
+    crawlCache: new Map(),
+    resolverBudget: { searches: 0, crawls: 3 },
+    get: async (url) => {
+      requested.push(url);
+      return { ok: true, status: 200, final_url: url, content_type: "text/html",
+        body: `<main>${"Al Giardinetto, ristorante a Oderzo. ".repeat(10)}<a href="/menu/">Menu</a></main>` };
+    },
+    getRendered: async () => ({ ok: false, body: "" }),
+    search: async () => { throw new Error("attested crawl must not search"); },
+  });
+
+  assert.equal(result.website, "https://giardinetto.test/");
+  assert.equal(result.enrichment_run.crawl_attempts[0].origin, "attested_ownership");
+  assert.equal(result.website_provenance.origin, "attested_ownership");
+  assert.ok(!requested.some((url) => url.includes("facebook.com")));
+  assert.deepEqual(result.resources.map((item) => item.url), ["https://giardinetto.test/menu/"]);
+  assert.equal(result.enrichment_run.search_requests, 0);
+  assert.equal(result.enrichment_run.resource_site_search_requests, 0);
+});
+
 test("pre-caps validation with role diversity and reports per-stage drops", async () => {
   const checked = [];
   const links = Array.from({ length: 10 }, (_, index) => `<a href="/menu-${index}">Menu ${index}</a>`).join("")
@@ -664,22 +690,13 @@ test("does not publish resources from a source-provided website that resolves to
   assert.ok(result.website_decision.evidence.includes("geography_contradiction"));
 });
 
-test("selects Barhacca's official site from a later search rank", async () => {
+test("prefers the attested website without consulting a later search rank", async () => {
   const result = await findMenuSources(owned({ name: "Barhacca", postcode: "31046" },
     "https://www.barhacca.test/"), {
     municipality: "Oderzo", province_code: "TV", country_code: "IT", postcodes: ["31046"],
   }, {
     crawlCache: new Map(),
-    search: async () => [
-      { title: "Barhacca Hotel Roma", snippet: "Hotel e camere a Roma", url: "https://wrong-barhacca.test/" },
-      { title: "Directory", snippet: "", url: "https://www.paginebianche.it/barhacca" },
-      { title: "Unrelated", snippet: "", url: "https://unrelated-one.test/" },
-      { title: "Unrelated", snippet: "", url: "https://unrelated-two.test/" },
-      { title: "Unrelated", snippet: "", url: "https://unrelated-three.test/" },
-      { title: "Unrelated", snippet: "", url: "https://unrelated-four.test/" },
-      { title: "Barhacca | Bar e paninoteca", snippet: "Barhacca a Oderzo, ristorante e paninoteca",
-        url: "https://www.barhacca.test/" },
-    ],
+    search: async () => { throw new Error("attested accept must not search"); },
     get: async (url) => url.endsWith(".xml")
       ? { ok: false, status: 404, body: "", final_url: url }
       : { ok: true, status: 200, final_url: url,
@@ -687,7 +704,8 @@ test("selects Barhacca's official site from a later search rank", async () => {
     getRendered: async () => ({ ok: false, body: "" }),
   });
   assert.equal(result.website, "https://www.barhacca.test/");
-  assert.equal(result.enrichment_run.crawl_attempts[0].search_rank, 7);
+  assert.equal(result.enrichment_run.crawl_attempts[0].origin, "attested_ownership");
+  assert.equal(result.enrichment_run.search_requests, 0);
   assert.equal(result.enrichment_run.resolver_status, "accepted");
 });
 

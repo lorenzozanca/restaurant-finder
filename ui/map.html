@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verified venues — restaurant-finder</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<style>
+  html, body { height: 100%; margin: 0; }
+  body { background: #111; color: #e0e0e0;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; }
+  #bar { display: flex; align-items: baseline; gap: 1em; padding: 0.6em 1em;
+    background: #1a1a2e; border-bottom: 1px solid #333; flex-wrap: wrap; }
+  #bar h1 { font-size: 1em; margin: 0; color: #888; font-weight: normal; }
+  #bar h1 b { color: #4ade80; }
+  #stats { color: #4ade80; font-size: 0.85em; }
+  #meta { color: #888; font-size: 0.8em; }
+  #bar a { color: #4ade80; font-size: 0.85em; }
+  #legend { margin-left: auto; font-size: 0.8em; color: #aaa; }
+  .dot { display: inline-block; width: 0.7em; height: 0.7em; border-radius: 50%; margin: 0 0.3em 0 0.8em; }
+  .dot.menu { background: #4ade80; }
+  .dot.site { background: #60a5fa; }
+  #map { height: calc(100% - 3.2em); }
+  .leaflet-popup-content-wrapper { background: #1e1e2e; color: #e0e0e0; border-radius: 6px; }
+  .leaflet-popup-content { font-family: inherit; font-size: 12px; line-height: 1.5; margin: 10px 14px; }
+  .leaflet-popup-content a { color: #4ade80; }
+  .leaflet-popup-tip { background: #1e1e2e; }
+  .vname { font-weight: bold; font-size: 13px; }
+  .vmeta { color: #aaa; }
+</style>
+</head>
+<body>
+<div id="bar">
+  <h1>restaurant-finder <b>verified map</b></h1>
+  <span id="stats">loading…</span>
+  <span id="meta"></span>
+  <a href="/">town scanner</a>
+  <span id="legend"><span class="dot menu"></span>with menu<span class="dot site"></span>website only</span>
+</div>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+(function () {
+  'use strict';
+  var map = L.map('map').setView([42.8, 12.8], 6);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; Overture Maps Foundation and data providers'
+  }).addTo(map);
+
+  function esc(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function popup(props) {
+    var lines = ['<div class="vname">' + esc(props.name) + '</div>'];
+    var place = [props.municipality, props.province].filter(Boolean).join(' ');
+    lines.push('<div class="vmeta">' + esc([place, props.venue_type].filter(Boolean).join(' · ')) + '</div>');
+    if (props.address) lines.push('<div>' + esc(props.address) + '</div>');
+    if (props.website) lines.push('<div><a href="' + esc(props.website) + '" target="_blank" rel="noopener">official website</a></div>');
+    if (props.menu_url) lines.push('<div><a href="' + esc(props.menu_url) + '" target="_blank" rel="noopener">menu (' + esc(props.resource_count) + ' resources)</a></div>');
+    return lines.join('');
+  }
+
+  fetch('verified-venues.geojson').then(function (res) {
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    return res.json();
+  }).then(function (doc) {
+    var features = doc.features || [];
+    var withMenu = features.filter(function (f) { return f.properties.menu_url; }).length;
+    document.getElementById('stats').textContent =
+      features.length + ' verified venues, ' + withMenu + ' with menus';
+    document.getElementById('meta').textContent =
+      'generated ' + String(doc.generated_at || '').slice(0, 10) +
+      ' · every pin has a reviewed ownership attestation';
+    var bounds = [];
+    features.forEach(function (f) {
+      var lng = f.geometry.coordinates[0], lat = f.geometry.coordinates[1];
+      bounds.push([lat, lng]);
+      L.circleMarker([lat, lng], {
+        radius: 6,
+        color: f.properties.menu_url ? '#4ade80' : '#60a5fa',
+        weight: 2, fillOpacity: 0.7
+      }).addTo(map).bindPopup(popup(f.properties));
+    });
+    if (bounds.length) map.fitBounds(bounds, { padding: [30, 30] });
+  }).catch(function (err) {
+    document.getElementById('stats').textContent = 'failed to load verified venues: ' + err.message;
+    document.getElementById('stats').style.color = '#f87171';
+  });
+})();
+</script>
+</body>
+</html>

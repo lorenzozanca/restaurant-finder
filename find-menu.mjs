@@ -132,6 +132,10 @@ export async function findMenuSources(restaurant, location, options = {}) {
   const crawlCache = options.crawlCache || websiteCrawlCache;
   const originalWebsite = restaurant.website || "";
   const originalKind = classifyWebsite(originalWebsite);
+  const attestedWebsites = (Array.isArray(restaurant.publisher_ownership)
+    ? restaurant.publisher_ownership : [])
+    .filter((attestation) => attestation?.status === "verified" && attestation.website_url)
+    .map((attestation) => attestation.website_url);
   const resolver = await resolveOfficialSite({
     restaurant, location,
     search: dependencies.search,
@@ -141,6 +145,7 @@ export async function findMenuSources(restaurant, location, options = {}) {
     scoreSearchCandidate,
     canonicalUrl,
     budget: options.resolverBudget,
+    attestedWebsites,
   });
   return buildResult({ restaurant, originalWebsite, originalKind, resolver, dependencies, location, resourcePolicy });
 }
