@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-025-040",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:004209:sanfront:bounty-sanfront",
+      "query": "\"Pizzeria Bounty Sanfront\"",
+      "retrieved_at": "2026-09-02T20:50:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Bounty Sanfront",
+          "url": "https://www.tuttiaffari.com/pizzeria-bounty-sanfront-342-081-5295"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007044:morgex:da-beppe",
+      "query": "\"Ristorante Trattoria Da Beppe\" \"Morgex\"",
+      "retrieved_at": "2026-09-02T20:50:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante Trattoria Da Beppe, Morgex",
+          "url": "https://restaurantguru.it/Da-Beppe-Morgex"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007003:aosta:backstage",
+      "query": "\"Backstage\" \"Via Guido Rey, 1\" Aosta",
+      "retrieved_at": "2026-09-02T20:50:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:007023:donnas:capricciosa",
+      "query": "\"La Capricciosa\" \"Via Roma, 75\" Donnas",
+      "retrieved_at": "2026-09-02T20:50:00.000Z",
+      "candidates": [
+        {
+          "title": "La Capricciosa",
+          "url": "https://balteus.lovevda.it/en/database/16/restaurant-pizzeria/donnas/la-capricciosa/3169"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007058:saint-christophe:mondrian-cafe",
+      "query": "\"Mondrian café\" \"Saint-Christophe\" Aosta",
+      "retrieved_at": "2026-09-02T20:55:00.000Z",
+      "candidates": [
+        {
+          "title": "Mondrian Café",
+          "url": "https://www.lovevda.it/en/database/16/diners-wine-bars-pubs/saint-christophe/mondrian-cafe/2742"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007003:aosta:french-tacos",
+      "query": "\"French Tacos\" \"Via Torino, 53\" Aosta",
+      "retrieved_at": "2026-09-02T20:55:00.000Z",
+      "candidates": [
+        {
+          "title": "French Tacos Aosta",
+          "url": "https://www.frenchtacos-aosta.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007022:courmayeur:zillo-s-bar-paninoteca",
+      "query": "\"Zillo's Bar Paninoteca\" Courmayeur",
+      "retrieved_at": "2026-09-02T20:55:00.000Z",
+      "candidates": [
+        {
+          "title": "Zillo's Bar Paninoteca",
+          "url": "https://www.tuttiaffari.com/zillos-bar-paninoteca-0165-846673"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007073:verres:shaki-shaki-pub",
+      "query": "\"Shaki-Shaki Pub\" Verrès",
+      "retrieved_at": "2026-09-02T20:55:00.000Z",
+      "candidates": [
+        {
+          "title": "Shaki-Shaki PUB Verrès",
+          "url": "https://mymenuweb.com/it/restaurants/1039485/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007071:valtournenche:icebar-paninoteca-breuil-cervinia",
+      "query": "\"Icebar Paninoteca Breuil Cervinia\"",
+      "retrieved_at": "2026-09-02T21:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Icebar / Bar Paninoteca, Breuil-Cervinia",
+          "url": "https://restaurantguru.it/Bar-Paninoteca-Breuil-Cervinia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007010:bionaz:des-amis-bionaz",
+      "query": "\"Des Amis Bionaz\"",
+      "retrieved_at": "2026-09-02T21:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Des Amis Bionaz",
+          "url": "https://www.tuttiaffari.com/des-amis-bionaz-0165-182-6029"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007053:pre-saint-didier:gelateriaverney",
+      "query": "\"Gelateriaverney\" \"Pré-Saint-Didier\"",
+      "retrieved_at": "2026-09-02T21:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:007022:courmayeur:roma",
+      "query": "\"Cafe Roma\" \"Via Roma, 101\" Courmayeur",
+      "retrieved_at": "2026-09-02T21:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Café Roma - Google Maps",
+          "url": "https://www.google.com/maps/search/wifi%2B%2087via%20Roma%2BCourmayeur"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007055:rhemes-notre-dame:cheminee",
+      "query": "\"Bar La Cheminee\" \"Rhêmes-Notre-Dame\"",
+      "retrieved_at": "2026-09-02T21:05:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:007015:chambave:custoza",
+      "query": "\"Ristorante Bar Custoza\" \"Chambave\"",
+      "retrieved_at": "2026-09-02T21:05:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante Bar Custoza, Chambave",
+          "url": "https://restaurantguru.com/Bar-Custoza-Chambave"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007041:la-thuile:cremerie-caffe",
+      "query": "\"La Cremerie Caffe\" \"La Thuile\"",
+      "retrieved_at": "2026-09-02T21:05:00.000Z",
+      "candidates": [
+        {
+          "title": "La Thuile - La Cremerie",
+          "url": "https://www.lathuile.it/it/punto-di-interesse/la-cremerie"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007021:cogne:brasserie-du-bon-bec",
+      "query": "\"La Brasserie du Bon Bec\" \"Cogne\"",
+      "retrieved_at": "2026-09-02T21:05:00.000Z",
+      "candidates": [
+        {
+          "title": "La Brasserie du Bon Bec - Hotel Bellevue & Spa",
+          "url": "https://www.hotelbellevue.it/fr/ristoranti/la-brasserie-du-bon-bec"
+        }
+      ]
+    }
+  ]
+}

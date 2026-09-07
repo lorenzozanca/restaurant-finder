@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-081-096",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:021008:bolzano-bozen:the-devil-s-pub",
+      "query": "\"The Devil's Pub\" Bolzano \"Via Torino, 56\"",
+      "retrieved_at": "2026-09-02T22:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:021067:prato-allo-stelvio-prad-am-stilfserjoch:fuxxfood",
+      "query": "\"Fuxxfood\" \"Prato allo Stelvio\" \"Via Pineta, 35\"",
+      "retrieved_at": "2026-09-02T22:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Fuxxfood, Prato Allo Stelvio",
+          "url": "https://restaurantguru.com/Fuxxfood-Prato-Allo-Stelvio"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021051:merano-meran:tutto-bene-presso-intersparmeran",
+      "query": "\"Bar tutto bene\" Interspar Merano \"Via Roma, 276\"",
+      "retrieved_at": "2026-09-02T22:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Tutto bene - Merano | Café near me",
+          "url": "https://bar-tutto-bene.eatbu.com/?lang=en"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:imbiss-kampill",
+      "query": "\"Imbiss Kampill\" Bolzano \"Via Hildegard Straub, 23\"",
+      "retrieved_at": "2026-09-02T22:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Imbiss Kampill",
+          "url": "https://www.imbiss-kampill.com/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022163:rumo:vecchia-segheria",
+      "query": "\"La Vecchia Segheria\" Rumo \"Località Molini, 81\"",
+      "retrieved_at": "2026-09-02T22:05:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:021061:ortisei-st-ulrich:soviso-cafe",
+      "query": "\"Soviso Cafe\" Ortisei \"Strada Rezia, 73\"",
+      "retrieved_at": "2026-09-02T22:05:00.000Z",
+      "candidates": [
+        {
+          "title": "Soviso Cafè, Ortisei",
+          "url": "https://restaurantguru.it/Cafe-SoViSo-Ortisei"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022205:trento:tony-s-pub",
+      "query": "\"Tony's Pub\" Trento \"Via del Brennero, 260\"",
+      "retrieved_at": "2026-09-02T22:05:00.000Z",
+      "candidates": [
+        {
+          "title": "TONY'S PUB - Pub a Trento",
+          "url": "https://www.localshop24.com/it/trento-tn-it/attivita/pub/tonys-pub/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022253:novella:e-gelateria-viridis",
+      "query": "\"Ristorante e Gelateria Viridis\" Novella \"Via Nazionale, 64\"",
+      "retrieved_at": "2026-09-02T22:05:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:021056:naturno-naturns:istanbul-kebap-und-pizza",
+      "query": "\"İstanbul Kebap und Pizza\" Naturno \"Hauptstraße, 24\"",
+      "retrieved_at": "2026-09-02T22:10:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:caffitaly-shop-bolzano",
+      "query": "\"Caffitaly Shop Bolzano\" \"Via Orazio, 25D\"",
+      "retrieved_at": "2026-09-02T22:10:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffitaly Shop Bolzano",
+          "url": "https://restaurantguru.it/Caffitaly-System-SHOP-Bolzano-Bolzano"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021046:malles-venosta-mals:plantapatsch",
+      "query": "\"Restaurant Plantapatsch\" Malles Venosta Mals",
+      "retrieved_at": "2026-09-02T22:10:00.000Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE PLANTAPATSCH, Malles Venosta",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1186761-d10746713-Reviews-Ristorante_Plantapatsch-Malles_Venosta_Province_of_South_Tyrol_Trentino_Alto_Ad.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021006:badia-abtei:durni-s-pub",
+      "query": "\"Durni's Pub\" Badia \"Strada Colz, 41\"",
+      "retrieved_at": "2026-09-02T22:10:00.000Z",
+      "candidates": [
+        {
+          "title": "Durni's Pub | Strada Colz",
+          "url": "https://www.oraridiapertura24.it/filiale/La%2520Villa-Durni%2527s%2520Pub-2269125J.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022205:trento:james-m-speight",
+      "query": "\"James M. Speight\" Trento \"Via San Martino, 86\"",
+      "retrieved_at": "2026-09-02T22:15:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:021029:egna-neumarkt:lauben",
+      "query": "\"Pizzeria Lauben\" Egna Neumarkt \"Via Andreas Hofer, 45\"",
+      "retrieved_at": "2026-09-02T22:15:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA LAUBEN, Egna",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1069637-d4706268-Reviews-Pizzeria_Lauben-Egna_Neumarkt_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021015:caldaro-sulla-strada-del-vino-kaltern-an-der-weinstra-e:pit-stop-imbiss-kaltern",
+      "query": "\"Pit Stop Imbiss Kaltern\" \"Kellereistraße, 12\"",
+      "retrieved_at": "2026-09-02T22:15:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:022205:trento:gelateria-peterle",
+      "query": "\"Gelateria Peterle\" Trento \"Via 4 Novembre, 101\"",
+      "retrieved_at": "2026-09-02T22:15:00.000Z",
+      "candidates": [
+        {
+          "title": "La Trentina, buona come la sua terra",
+          "url": "https://www.stradavinotrentino.info/wp-content/uploads/2021/09/Mappa2021-2.pdf"
+        }
+      ]
+    }
+  ]
+}

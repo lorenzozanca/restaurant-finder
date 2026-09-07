@@ -1,0 +1,2167 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-extension-capture-101-200-partial",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:026059:ponzano-veneto:da-miceon",
+      "query": "\"Pizzeria Ristorante da Miceon\" \"Ponzano Veneto\" \"Via Talponera\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizze, carne, pesce e altre specialità gastronomiche | Ponzano Veneto | Pizzeria Ristorante da Miceon",
+          "url": "https://www.pizzeriaristorantedamiceon.com/"
+        },
+        {
+          "title": "Contatti | Ponzano Veneto | Pizzeria Ristorante da Miceon",
+          "url": "https://www.pizzeriaristorantedamiceon.com/contatti"
+        },
+        {
+          "title": "Ristorante | Ponzano Veneto | Pizzeria Ristorante da Miceon",
+          "url": "https://www.pizzeriaristorantedamiceon.com/ristorante"
+        },
+        {
+          "title": "Dal 1923, un punto di riferimento in provincia di Treviso | Pizzeria Ristorante da Miceon",
+          "url": "https://www.pizzeriaristorantedamiceon.com/chi-siamo"
+        },
+        {
+          "title": "Pizzeria | Ponzano Veneto | Pizzeria Ristorante da Miceon",
+          "url": "https://www.pizzeriaristorantedamiceon.com/pizzeria"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:026021:conegliano:cacciatore",
+      "query": "\"Bar Al Cacciatore\" \"Conegliano\" \"Via Maggiore Giovanni Piovesana\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR AL CACCIATORE S.N.C. DI BERNARDI S. E SPESSATO R., Partita IVA: 00648750263, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/5781/bar-al-cacciatore-snc-di-bernardi-s-e-spessato-r"
+        },
+        {
+          "title": "BAR AL CACCIATORE, Scomigo - Restaurant Reviews & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g12076174-d27235665-Reviews-Bar_Al_Cacciatore-Scomigo_Conegliano_Province_of_Treviso_Veneto.html"
+        },
+        {
+          "title": "Dati della società Bar Al Cacciatore Snc Di Bernardi S. E Spessato R. (00648750263), Veneto, Treviso, CONEGLIANO - REGISTROAZIENDE.it",
+          "url": "https://registroaziende.it/azienda/bar-al-cacciatore-snc-di-bernardi-s-e-spessato-r-conegliano"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027042:venezia:tolentini-cafe",
+      "query": "\"Tolentini Cafè\" \"Venezia\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "TOLENTINI CAFÈ, Venezia - Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187870-d27985348-Reviews-Tolentini_Cafe-Venice_Veneto.html"
+        },
+        {
+          "title": "Casanova Ai Tolentini in Venice | Venezia.net",
+          "url": "https://en.venezia.net/casanova-ai-tolentini.html"
+        },
+        {
+          "title": "Hotel Ai Tolentini in Venice | Venezia.net",
+          "url": "https://en.venezia.net/hotel-ai-tolentini.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023041:isola-rizza:nek-caffe",
+      "query": "\"Nek Caffe\" \"Isola Rizza\" \"Via Luigi Ferrari\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Fernando Online: giugno 2026",
+          "url": "https://fernandozorzella.blogspot.com/2026/06/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:029040:rosolina:hotel-gran-delta",
+      "query": "\"Hotel Gran Delta\" \"Rosolina\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Hotel Gran Delta ***S | Parco del Delta del Po Veneto",
+          "url": "https://www.parcodeltapo.org/operatore.php?id=6024"
+        },
+        {
+          "title": "Hotel Gran Delta ***S | Parco del Delta del Po Veneto",
+          "url": "https://www.parcodeltapo.org/Eoperatore.php?id=6024"
+        },
+        {
+          "title": "Parco Regionale Veneto del Delta del Po: Dove dormire: Alberghi: Hotel Gran Delta",
+          "url": "https://www.parks.it/parco.delta.po.ve/operatore.php?progressivooperatore=6024"
+        },
+        {
+          "title": "Gran Delta Hotel from $88. Rosolina Hotel Deals & Reviews - KAYAK",
+          "url": "https://www.kayak.com/Rosolina-Hotels-Hotel-Gran-Delta.543857.ksp"
+        },
+        {
+          "title": "HOTEL GRAN DELTA - Prices & Reviews (Rosolina, Italy)",
+          "url": "https://www.tripadvisor.com/Hotel_Review-g949966-d2542713-Reviews-Hotel_Gran_Delta-Rosolina_Province_of_Rovigo_Veneto.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023091:verona:farmacia-dei-sani",
+      "query": "\"La farmacia dei sani\" \"Verona\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "LA FARMACIA DEI SANI - Fast food a Verona | LocalShop24",
+          "url": "https://www.localshop24.com/it/verona-vr-it/attivita/fast-food/la-farmacia-dei-sani/"
+        },
+        {
+          "title": "La farmacia dei sani, Verona - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-farmacia-dei-sani-Verona"
+        },
+        {
+          "title": "LA FARMACIA DEI SANI, San Pancrazio - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g11961243-d27709910-Reviews-La_Farmacia_Dei_Sani_Verona-San_Pancrazio_Verona_Province_of_Verona_Veneto.html"
+        },
+        {
+          "title": "La farmacia dei sani consegna in zona Verona Centro - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/verona/verona-centro/la-farmacia-dei-sani-via-del-pontiere-25-b"
+        },
+        {
+          "title": "La farmacia dei sani, Verona - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/La-farmacia-dei-sani-Verona"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:026070:salgareda:l-epoca-gelateria-bar",
+      "query": "\"L'Epoca Gelateria Bar\" \"Salgareda\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "ᐅ Orari di apertura „L'Epoca Gelateria Bar“ | Piazza Abate Michele Colombo",
+          "url": "https://www.oraridiapertura24.it/filiale/Salgareda-L%2527Epoca%2520Gelateria%2520Bar-1664900R.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:029041:rovigo:vesuvio",
+      "query": "\"Vesuvio\" \"Rovigo\" \"Via Silvestri\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Dove - scuola Palomar",
+          "url": "https://www.scuolapalomar.it/dove/"
+        },
+        {
+          "title": "PIZZERIA VESUVIO, Rovigo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g230072-d2092828-Reviews-Pizzeria_Vesuvio-Rovigo_Province_of_Rovigo_Veneto.html"
+        },
+        {
+          "title": "Pizzeria Ristorante Vesuvio a Rovigo - Rovigoinfocitta.it",
+          "url": "https://www.rovigoinfocitta.it/rovigo/ristorante/pizzeria-vesuvio/"
+        },
+        {
+          "title": "Pizzeria Vesuvio • Ristorante » outdooractive.com",
+          "url": "https://www.outdooractive.com/mobile/it/gastro/provincia-di-rovigo/pizzeria-vesuvio/63376900/"
+        },
+        {
+          "title": "Pizzeria Vesuvio, Rovigo",
+          "url": "https://www.nuovaopinione.it/rovigo/pizzerie/pizzeria-vesuvio-105378"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:028060:padova:pago-pago-pizzeria-con-ristorante",
+      "query": "\"Pago Pago Pizzeria con Ristorante\" \"Padova\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "PAGO PAGO - PIZZERIA CON RISTORANTE, Padova - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187867-d2321480-Reviews-Pizzeria_Pago_Pago-Padua_Province_of_Padua_Veneto.html"
+        },
+        {
+          "title": "Pago Pago - Pizzeria con ristorante FAQ (Padova) - Tripadvisor",
+          "url": "https://www.tripadvisor.it/FAQ-g187867-d2321480-Pizzeria_Pago_Pago.html"
+        },
+        {
+          "title": "Pago Pago - Pizzeria con ristorante, Padova - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pago-Pago-Padua"
+        },
+        {
+          "title": "Pago Pago Pizzeria con Ristorante, Padua, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3077469/pago-pago-pizzeria-con-ristorante"
+        },
+        {
+          "title": "Menu da Pago Pago Pizzeria con Ristorante, Padova",
+          "url": "https://restaurantguru.it/Pago-Pago-Padua/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:029050:villanova-del-ghebbo:falco",
+      "query": "\"Falco\" \"Villanova del Ghebbo\" \"Via Belfiore\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Falco 2.0, 93/F Via Belfiore, Villanova del Ghebbo - Waze",
+          "url": "https://www.waze.com/live-map/directions/italy/veneto/villanova-del-ghebbo/falco-2.0?to=place.ChIJYbw__h7_fkcRhln8uWpKBjY"
+        },
+        {
+          "title": "IL FALCO 2.0 S.R.L., Partita IVA: 01642290298, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/9487/il-falco-20-srl"
+        },
+        {
+          "title": "FALCO 2.0, Villanova del Ghebbo – Menu, recensioni & orari",
+          "url": "https://www.swipein.restaurant/it/restaurant/falco-20-villanova-del-ghebbo"
+        },
+        {
+          "title": "IL FALCO 2.0 S.R.L. | Scheda Azienda | iCRIBIS",
+          "url": "https://www.icribis.com/it/scheda-azienda/RO450348_IL_FALCO_2.0_S.R.L."
+        },
+        {
+          "title": "Falco 2.0, Villanova del Ghebbo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Falco-20-Villanova-del-Ghebbo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:025016:cortina-d-ampezzo:arnika-in-galleria-cortina",
+      "query": "\"Bar Arnika In Galleria Cortina\" \"Cortina d'Ampezzo\" \"Località Corso Italia\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Туры и путевки в лучшие отели Италии – Tez Tour",
+          "url": "https://tez-travel.com/countries/italy/hotels/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027019:jesolo:luna-gelateria-and-cocktail-bar",
+      "query": "\"Luna Gelateria and Cocktail Bar\" \"Jesolo\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "The 36 best desserts and snacks in Jesolo",
+          "url": "https://wanderlog.com/list/geoCategory/26483"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:026072:san-fior:doner-kebab",
+      "query": "\"Döner Kebab\" \"San Fior\" \"Via Europa\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Döner Kebab San Fior - Kebapci Aga",
+          "url": "https://www.kebabsanfior.it/"
+        },
+        {
+          "title": "Orari - Döner Kebab San Fior - Kebapci Aga",
+          "url": "https://www.kebabsanfior.it/orari/"
+        },
+        {
+          "title": "Menu - Döner Kebab San Fior - Kebapci Aga",
+          "url": "https://www.kebabsanfior.it/menu/"
+        },
+        {
+          "title": "DÖNER KEBAB - KEBAPCI AGA, San Fior di Sopra - Menü, Preise & Restaurant Bewertungen - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g1972554-d5850487-Reviews-Doner_Kebab_Kebapci_Aga-San_Fior_di_Sopra_Province_of_Treviso_Veneto.html"
+        },
+        {
+          "title": "DÖNER KEBAB - KEBAPCI AGA, San Fior di Sopra - Menu, Prices & Restaurant Reviews - Order Online Food Delivery - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1972554-d5850487-Reviews-Doner_Kebab_Kebapci_Aga-San_Fior_di_Sopra_Province_of_Treviso_Veneto.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023044:legnago:jolly-roger",
+      "query": "\"Jolly Roger\" \"Legnago\" \"Via Marzabotto\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "83 recensioni di Jolly Roger a Legnago",
+          "url": "https://altraopinione.org/pub/legnago/jolly-roger/"
+        },
+        {
+          "title": "Jolly Roger, Legnago - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Jolly-Roger-Legnago"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:026086:treviso:antica-osteria-al-botegon",
+      "query": "\"Antica Osteria Al Botegon\" \"Treviso\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Elenco Luoghi Storici del Commercio",
+          "url": "https://elezioni2020.regione.veneto.it/documents/10713/2709212/Elenco%2Bluoghi%2Bstorici_24.09.2025.pdf/513496f1-a350-4a1e-8ebc-65ddc7338bd5"
+        },
+        {
+          "title": "Antica Osteria Al Botegon - Treviso per te",
+          "url": "https://www.trevisoperte.it/attivita/antica-osteria-al-botegon-2/"
+        },
+        {
+          "title": "ANTICA OSTERIA AL BOTEGON - Ristorante a Treviso | LocalShop24",
+          "url": "https://www.localshop24.com/it/treviso-tv-it/attivita/ristorante/antica-osteria-al-botegon/"
+        },
+        {
+          "title": "Antica Osteria Al Botegon, Treviso - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Antica-Osteria-Al-Botegon-Treviso"
+        },
+        {
+          "title": "Antica Osteria Al Botegon",
+          "url": "https://www.beniculturalionline.it/location-3532_Antica-Osteria-Al-Botegon.php"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:024024:carre:diana",
+      "query": "\"Pizzeria Diana\" \"Carrè\" \"Via Val d'Assa\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "DIANA, Carre - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1972583-d2413072-Reviews-Diana-Carre_Province_of_Vicenza_Veneto.html"
+        },
+        {
+          "title": "Diana - Carrè, Via Val D'Assa, 33",
+          "url": "https://aziende.virgilio.it/pizzerie/carre-vi/pizzeria-diana"
+        },
+        {
+          "title": "Pizzeria Diana, Carrè - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Diana-Zane"
+        },
+        {
+          "title": "Pizzeria Diana, Carrè - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Diana-Zane"
+        },
+        {
+          "title": "Pizzeria Diana, Carrè - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Diana-Zane"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:028072:rubano:ottonote-caffe",
+      "query": "\"Ottonote Caffe\" \"Rubano\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "OTTONOTE CAFFÈ - Negozio di alimentari a Rubano | LocalShop24",
+          "url": "https://www.localshop24.com/it/rubano-pd-it/attivita/negozio-generi-alimentari/ottonote-caffe/"
+        },
+        {
+          "title": "Ottonote caffè | 392 066 6797 | Rubano",
+          "url": "https://www.tuttiaffari.com/ottonote-caff%C3%A8-392-066-6797"
+        },
+        {
+          "title": "▷ Ottonote caffè | Torrefazione, Rubano",
+          "url": "https://www.cylex-italia.it/rubano/ottonote-caff%C3%A8-15108384.html"
+        },
+        {
+          "title": "Ottonote caffè | Leggi le recensioni dei servizi di ottonotecaffe.com",
+          "url": "https://it.trustpilot.com/review/ottonotecaffe.com"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:024116:vicenza:classico",
+      "query": "\"Bar Classico\" \"Vicenza\" \"Via Valentino Giaretta\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR CLASSICO DI CHENG DA, Partita IVA: 03661430243, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/3917/bar-classico-di-cheng-da"
+        },
+        {
+          "title": "Bar classico: cafe in Vicenza | Pulled",
+          "url": "https://www.pulled.coffee/shop/bar-classico-vicenza"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:025019:falcade:stua",
+      "query": "\"La Stua\" \"Falcade\" \"Via del Mercato\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria La Stua | Dolomiti Superski",
+          "url": "https://www.dolomitisuperski.com/it/esperienze/servizi/dolomiti-a-z/Alpe-Lusia-San-Pellegrino/Pizzeria-La-Stua"
+        },
+        {
+          "title": "La Stua, Falcade - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/La-Stua-Falcade"
+        },
+        {
+          "title": "Pizzeria La Stua | Dolomiti Superski",
+          "url": "https://www.dolomitisuperski.com/en/experiences/services/dolomites-a-z/Alpe-Lusia-San-Pellegrino/Pizzeria-La-Stua"
+        },
+        {
+          "title": "La Stua, Falcade - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Stua-Falcade"
+        },
+        {
+          "title": "Servizi - Pizzeria La Stua - Alleghe - Falcade - Zoldo",
+          "url": "https://www.visitdolomitibellunesi.com/it/pois/pizzeria-la-stua"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027029:portogruaro:tuttigusti",
+      "query": "\"Tuttigusti\" \"Portogruaro\" \"Borgo Sant'Agnese\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Tuttigusti +1 | Senza glutine a Portogruaro | Gluto",
+          "url": "https://www.glutoapp.com/it/locale/15651/tuttigusti-1"
+        },
+        {
+          "title": "Tuttigusti +1, Portogruaro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Gelateria-Tutti-i-gusti-piu-uno-Portogruaro"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023091:verona:dorati-official",
+      "query": "\"Dorati_official\" \"Verona\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:028059:ospedaletto-euganeo:pomodoro",
+      "query": "\"Pizzeria Pomodoro\" \"Ospedaletto Euganeo\" \"Via 4 Novembre\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pítsur í Póstnúmer 35045 Saletto, Venetó",
+          "url": "https://yellowpages-is.cybo.com/IT-p%C3%B3stn%C3%BAmer/35045_saletto/p%C3%ADtsur/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027012:dolo:commercio",
+      "query": "\"Caffè Commercio\" \"Dolo\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Artusi Sementi di Alessandro Artusi & C. Snc | Unioncamere",
+          "url": "https://www.unioncamere.gov.it/imprese-storiche/artusi-sementi-di-alessandro-artusi-c-snc"
+        },
+        {
+          "title": "CAFFE COMMERCIO, Dolo - Via Giuseppe Mazzini 56 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g780652-d11977754-Reviews-Caffe_Commercio-Dolo_Veneto.html"
+        },
+        {
+          "title": "Driving directions to Caffè Commercio, 56 Via Giuseppe Mazzini, Dolo - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/veneto/dolo/caffe-commercio?to=place.ChIJ5cTHT5rIfkcRfCD0nqyBp8Q"
+        },
+        {
+          "title": "Caffè Commercio, Dolo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-Commercio-Dolo"
+        },
+        {
+          "title": "Caffè Commercio | Pasticceria Premiata | Gambero Rosso",
+          "url": "https://www.gamberorosso.it/luoghi/locali/pasticceria/caffe-commercio/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027008:chioggia:berita",
+      "query": "\"Bar Berita\" \"Chioggia\" \"Viale Cristoforo Colombo\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Berita, Chioggia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Berita-Chioggia"
+        },
+        {
+          "title": "Bar Berita, Chioggia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Berita-Chioggia"
+        },
+        {
+          "title": "Bar Berita, Chioggia - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Berita-Chioggia"
+        },
+        {
+          "title": "Bar Berita, Chioggia, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/12737056/bar-berita"
+        },
+        {
+          "title": "BAR BERITA, Sant'Anna di Chioggia - Viale Cristoforo Colombo 100 - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1973339-d27790685-Reviews-Bar_Berita-Sant_Anna_di_Chioggia_Veneto.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:025051:san-vito-di-cadore:dogana-vecchia",
+      "query": "\"Dogana Vecchia\" \"San Vito di Cadore\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Stazione di Dogana Vecchia",
+          "url": "https://it.wikipedia.org/wiki/Stazione_di_Dogana_Vecchia"
+        },
+        {
+          "title": "Dogana Vecchia Map - Locality - San Vito di Cadore, Veneto, Italy",
+          "url": "https://mapcarta.com/30310874"
+        },
+        {
+          "title": "Dogana Vecchia | Touring Club Italiano",
+          "url": "https://www.touringclub.it/destinazioni/san-vito-di-cadore/dormire/260606-dogana-vecchia"
+        },
+        {
+          "title": "Ordinanza di riapertura condizionata al traffico sulla SS51 di Alemagna nel tratto Ponte del Venco - Dogana Vecchia 24 ore su 24 - Comune di San Vito di Cadore",
+          "url": "https://comune.sanvitodicadore.bl.it/it/news/138686/ordinanza-di-chiusura-al-traffico-veicolare-sulla-ss51-di-alemagna-e-sulla-pista-ciclabile-lunga-via-delle-dolomiti-per-frana-in-localita-ponte-del-venco-dogana-vecchia-1870409"
+        },
+        {
+          "title": "» Albergo Ristorante Dogana Vecchia a San Vito Di Cadore (BL)",
+          "url": "https://www.paginegialle.it/san-vito-di-cadore-bl/ristoranti/dogana-vecchia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030189:sappada:edelweiss-stube",
+      "query": "\"Edelweiss Stube\" \"Sappada\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante Edelweiss Stube Sappada | Cucina Tipica Dolomiti",
+          "url": "https://www.visitsappada.it/ristorante-edelweiss.php"
+        },
+        {
+          "title": "EDELWEISS STUBE, Sappada - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1440400-d5958072-Reviews-Edelweiss_Stube-Sappada_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "EDELWEISS STUBE, Sappada - Menü, Preise & Restaurant Bewertungen - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g1440400-d5958072-Reviews-Edelweiss_Stube-Sappada_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "EDELWEISS STUBE, Sappada - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1440400-d5958072-Reviews-Edelweiss_Stube-Sappada_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Edelweiss Stube, Sappada - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Edelweiss-Sappada"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093025:maniago:area-verde-violis",
+      "query": "\"Area Verde Violis\" \"Maniago\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Federazione Italiana Bocce",
+          "url": "https://www.federbocce.it/friuliveneziagiulia/images/friuliveneziagiulia/Anno_2024/Sorteggi/2024-05-06_23_-_Violis_Maniago_-_Coppie_BC_a_invito_-_Sorteggio.pdf"
+        },
+        {
+          "title": "Area Verde Violis, Maniago - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Area-Verde-Violis-Maniago"
+        },
+        {
+          "title": "Area Verde Violis - Maniago, Provincia di Pordenone - Ristorante Vicari",
+          "url": "https://it.ristorantevicari.it/area-verde-violis/"
+        },
+        {
+          "title": "Area Verde Violis, Maniago - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Area-Verde-Violis-Maniago"
+        },
+        {
+          "title": "Les avis sur Area Verde Violis à Maniago 🇮🇹 | 48 AVIS",
+          "url": "https://restaurants-de-france.fr/italie/area-verde-violis-383129-avis.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:bazzara-espresso",
+      "query": "\"Bazzara Espresso\" \"Trieste\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "BrasilianaCaffè – Brasiliana Caffè is a coffee roastery that offers coffee blends crafted in the Coffee Capital of Italy, Trieste.",
+          "url": "https://brasilianacaffe.com/"
+        },
+        {
+          "title": "Bazzara Espresso | 040 767849 | Trieste",
+          "url": "https://www.tuttiaffari.com/bazzara-espresso_1P-040-767849"
+        },
+        {
+          "title": "Bazzara Espresso, Trieste - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Bazzara-Espresso-Trieste"
+        },
+        {
+          "title": "La Bazzara Espresso vicina ai frati di Montuzza di Trieste – Bazzara Eshop – Caffè Made in Italy",
+          "url": "https://shop.bazzara.it/2021/03/03/la-bazzara-espresso-vicina-ai-frati-di-montuzza-di-trieste/"
+        },
+        {
+          "title": "Bazzara Espresso — Trieste — My Coffee Guide",
+          "url": "https://mycoffee.guide/en/cafe/bazzara-espresso-trieste"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093036:roveredo-in-piano:les-cadeaux",
+      "query": "\"Les Cadeaux\" \"Roveredo in Piano\" \"Piazza Roma\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Payment Institutions Register Ireland | PDF | Brussels | Belgium",
+          "url": "https://www.scribd.com/document/740294987/Register-of-Payment-Institutions-Who-Have-Been-Granted-an-Authorisation-Pursuant-to-Regulation-18-of-the-European-Communities-Payment-Services-Regul"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030027:codroipo:gelab",
+      "query": "\"GeLab\" \"Codroipo\" \"Piazzale Gemona\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "GeLab, Codroipo - Italia.it",
+          "url": "https://www.italia.it/it/friuli-venezia-giulia/codroipo/dove-mangiare/gelab"
+        },
+        {
+          "title": "GeLab, Codroipo - Italia.it",
+          "url": "https://www.italia.it/en/friuli-venezia-giulia/codroipo/where-to-eat/gelab"
+        },
+        {
+          "title": "GELAB GELAB gelateria in Codroipo - BAR OSTERIA VILLANOVA",
+          "url": "https://www.unpostoatavola.it/GELAB/index.html"
+        },
+        {
+          "title": "Gelab, Codroipo",
+          "url": "https://www.nuovaopinione.it/codroipo/gelaterie/gelab-280485"
+        },
+        {
+          "title": "GeLab | Senza glutine a Codroipo | Gluto",
+          "url": "https://www.glutoapp.com/it/locale/15297/gelab"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030129:udine:casa-del-ron",
+      "query": "\"Casa Del Ron\" \"Udine\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Carta del pub y bar Casa Del Ron, Udine",
+          "url": "https://es.restaurantguru.com/Casa-Del-Ron-Udine/menu"
+        },
+        {
+          "title": "CASA DEL RON, Udine - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187814-d27216785-Reviews-Casa_Del_Ron-Udine_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Casa Del Ron, Udine - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Casa-Del-Ron-Udine"
+        },
+        {
+          "title": "La Casa Del Ron - Udine a Udine: 1 opinioni e 4 foto",
+          "url": "https://www.minube.it/posto-preferito/la-casa-del-ron-_-udine-a3611422"
+        },
+        {
+          "title": "Casa Del Ron, Udine - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Casa-Del-Ron-Udine"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093007:brugnera:bowman-pub",
+      "query": "\"Bowman Pub\" \"Brugnera\" \"Via Vittorio Veneto\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bowman Pub, Brugnera - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/BOWMAN-Pub-Brugnera"
+        },
+        {
+          "title": "Bowman Pub, Brugnera - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/BOWMAN-Pub-Brugnera"
+        },
+        {
+          "title": "BOWMAN PUB, Brugnera - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1201159-d7809328-Reviews-Pub_Bowman-Brugnera_Province_of_Pordenone_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "641 recensioni di Bowman Pub a Brugnera",
+          "url": "https://altraopinione.org/pub/brugnera/bowman-pub/"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Bowman Pub“ | Via Vittorio Veneto",
+          "url": "https://www.oraridiapertura24.it/filiale/Brugnera-Bowman%2520Pub-766922L.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093021:fiume-veneto:pizzalonga-away",
+      "query": "\"Pizzalonga Away\" \"Fiume Veneto\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizza al trancio a Fiume Veneto - Pagine Gialle",
+          "url": "https://www.paginegialle.it/friuli_venezia_giulia/fiume_veneto/pizza_al_trancio.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:mancini-vicino-mare",
+      "query": "\"Pizzeria Mancini Vicino Mare\" \"Trieste\" \"Riva Nazario Sauro\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Napoletana | Pizzeria Mancini Vicin o' Mare by Cacace | TS",
+          "url": "https://www.pizzeriavicinomare-trieste.com/"
+        },
+        {
+          "title": "Pizzeria Mancini Vicino 'O Mare By Cacace - Trieste - Pizza",
+          "url": "https://pizzeria-mancini-vicino-o-mare.it/"
+        },
+        {
+          "title": "Menu di Pizzeria Mancini Vicino 'O Mare By Cacace a domicilio a Trieste | Ordina su Just Eat",
+          "url": "https://www.justeat.it/restaurants-pizzeria-mancini-vicino-o-mare-by-cacace-34123/menu?c_id=019e0750-8969-7b10-ace9-295171f572f8"
+        },
+        {
+          "title": "Menù completo e carta 2026 - Pizzeria vicino mare by cacace a Trieste | TheFork",
+          "url": "https://www.thefork.it/ristorante/pizzeria-vicino-mare-by-cacace-r813557/menu"
+        },
+        {
+          "title": "Pizzeria Mancini Vicino O Mare da TRIESTE",
+          "url": "https://piatti.menu/restaurants/trieste/pizzeria-mancini-vicino-o-mare"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030188:rivignano-teor:cale",
+      "query": "\"Bar La Cale\" \"Rivignano Teor\" \"Via Umberto I\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Bar La Cale, 46 Via Umberto I', Rivignano, Rivignano Teor - Waze",
+          "url": "https://www.waze.com/live-map/directions/bar-la-cale-via-umberto-i-46-rivignano%2C-rivignano-teor?to=place.w.8520139.85463532.17214908"
+        },
+        {
+          "title": "269 recensioni di Bar La Cale a Rivignano Teor",
+          "url": "https://altraopinione.org/pub/rivignano-teor/bar-la-cale/"
+        },
+        {
+          "title": "Bar La Cale | 0432 775097 | Rivignano",
+          "url": "https://www.tuttiaffari.com/bar-la-cale-0432-775097"
+        },
+        {
+          "title": "Bar La Cale, Rivignano Teor - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/BAR-La-CALE-Rivignano-Teor"
+        },
+        {
+          "title": "▷ Bar La Cale Di Petracco Giacomo, Rivignano Teor",
+          "url": "https://www.cylex-italia.it/rivignano-teor/bar-la-cale-di-petracco-giacomo-10629176.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:031007:gorizia:pataoro-food-drinks",
+      "query": "\"Pataoro food & drinks\" \"Gorizia\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pataoro food & drinks, Gorizia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Pataoro-Gorizia"
+        },
+        {
+          "title": "Pataoro food & drinks | 353 406 8579 | Gorizia",
+          "url": "https://www.tuttiaffari.com/pataoro-food-drinks-353-406-8579"
+        },
+        {
+          "title": "Menu at Pataoro food & drinks restaurant, Gorizia",
+          "url": "https://restaurantguru.com/Pataoro-Gorizia/menu"
+        },
+        {
+          "title": "Pataoro food & drinks, Gorizia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pataoro-Gorizia"
+        },
+        {
+          "title": "Pataoro food & drinks, Gorizia, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3090839/pataoro-food--drinks"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030129:udine:kiko-cafe",
+      "query": "\"Kiko Cafe\" \"Udine\" \"Viale Ungheria\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "KIKO' CAFE' DI BURATTI VANIA & C. S.N.C., Partita IVA: 02260130303, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/4159/kiko-cafe-di-buratti-vania-c-snc"
+        },
+        {
+          "title": "Kikó Café Udine, Udine - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Kiko-Cafe-Udine"
+        },
+        {
+          "title": "KIKÓ CAFÉ UDINE - Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187814-d27756459-Reviews-Kiko_Cafe_Udine-Udine_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Kikó Café Udine, Udine - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Kiko-Cafe-Udine"
+        },
+        {
+          "title": "Kikò cafè - FVG per tutti",
+          "url": "https://friuliveneziagiuliapertutti.it/it/dove-andare/pianura/kiko-cafe/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030069:palazzolo-dello-stella:stella-palazzolo-dello-stella-ud",
+      "query": "\"Pizzeria Stella - PALAZZOLO DELLO STELLA (UD)\" \"Palazzolo dello Stella\" \"Via Nazionale\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Stella - PALAZZOLO DELLO STELLA (UD) | 0431 196 5822 | Palazzolo dello Stella",
+          "url": "https://www.tuttiaffari.com/pizzeria-stella_17f-0431-196-5822"
+        },
+        {
+          "title": "151 recensioni di Pizzeria Stella - PALAZZOLO DELLO STELLA (UD) a Palazzolo Dello Stella",
+          "url": "https://altraopinione.org/pizzeria/palazzolo-dello-stella/pizzeria-stella/"
+        },
+        {
+          "title": "Pizzeria Stella - PALAZZOLO DELLO STELLA (UD) - Pizzeria a Palazzolo Dello Stella ▷ Via Nazionale 44, 33056, Palazzolo dello Stella | Firmania",
+          "url": "https://firmania.it/palazzolo-dello-stella/pizzeria-stella-palazzolo-dello-stella-ud-3786958"
+        },
+        {
+          "title": "Pizzeria Stella - PALAZZOLO DELLO STELLA (UD), Palazzolo Dello Stella - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Stella-Palazzolo-Dello-Stella"
+        },
+        {
+          "title": "PIZZERIA STELLA DI DE RISI SARA, Partita IVA: 03014010304, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1794/pizzeria-stella-di-de-risi-sara"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:031012:monfalcone:2000",
+      "query": "\"2000\" \"Monfalcone\" \"Via Arrigo Boito\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "beeASAP - Gelateria 2000",
+          "url": "https://beeasap.com/gelateria2000"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Gelateria 2000“ | Via Arrigo Boito",
+          "url": "https://www.oraridiapertura24.it/filiale/Monfalcone-Gelateria%25202000-2534143M.html"
+        },
+        {
+          "title": "Gelateria 2000, Monfalcone - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Gelateria-2000-Italy"
+        },
+        {
+          "title": "Ferramenta 2000 - NUOVA APERTURA A MONFALCONE (GO)",
+          "url": "https://www.ferramenta2000.net/5086_nuova-apertura-a-monfalcone-go"
+        },
+        {
+          "title": "GELATERIA 2000, Monfalcone - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194829-d27353856-Reviews-Gelateria_2000-Monfalcone_Province_of_Gorizia_Friuli_Venezia_Giulia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030129:udine:da-artico",
+      "query": "\"Osteria da Artico\" \"Udine\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Osteria da Artico – dal 1643",
+          "url": "https://www.osteriadaartico.it/"
+        },
+        {
+          "title": "Contact – Osteria da Artico",
+          "url": "https://www.osteriadaartico.it/contact/"
+        },
+        {
+          "title": "Restaurante Osteria da artico en Údine - Menú 2026, opiniones, precios y reserva | TheFork",
+          "url": "https://www.thefork.es/restaurante/osteria-da-artico-r621365"
+        },
+        {
+          "title": "About – Osteria da Artico",
+          "url": "https://www.osteriadaartico.it/about/"
+        },
+        {
+          "title": "Carta y menù 2026 Actualizados - Osteria da artico en Údine | TheFork",
+          "url": "https://www.thefork.es/restaurante/osteria-da-artico-r621365/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030037:fagagna:miribar",
+      "query": "\"Miribar\" \"Fagagna\" \"Via Battaglia\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Ordinanza n. 10_15_5 A4 del 27/03",
+          "url": "https://paperzz.com/doc/5256864/ordinanza-n.-10_15_5-a4-del-27-03"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:031009:grado:ciacolada",
+      "query": "\"La Ciacolada\" \"Grado\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante Pizzeria La Ciacolada | Grado",
+          "url": "https://grado.it/it/cosa-fare/ristoranti-bar/ristoranti-pizzerie-trattorie/ristorante-pizzeria-la-ciacolada"
+        },
+        {
+          "title": "Sapori di Campania e profumo di mare: l’anima autentica de \"La Ciacolada\" a Grado - ACS Magazine",
+          "url": "https://www.acsmagazine.it/2026/06/23/sapori-di-campania-profumo-di-mare-lanima-autentica-de-la-ciacolada-a-grado/"
+        },
+        {
+          "title": "Restaurant Pizzeria La Ciacolada | Grado",
+          "url": "https://grado.it/en/what-to-do/food-and-drink/restaurants-pizzerias-trattorias/restaurant-pizzeria-la-ciacolada"
+        },
+        {
+          "title": "La Ciacolada, Grado - Menú del restaurante, precios y reseñas",
+          "url": "https://es.restaurantguru.com/La-Ciacolada-Grado"
+        },
+        {
+          "title": "LA CIACOLADA, Grado - Restaurante Opiniones, Menú y Fotos",
+          "url": "https://www.tripadvisor.com.mx/Restaurant_Review-g194776-d4339286-Reviews-La_Ciacolada-Grado_Province_of_Gorizia_Friuli_Venezia_Giulia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:the-buccaneers-pub",
+      "query": "\"The Buccaneers Pub\" \"Trieste\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "The Buccaneers Pub, Trieste - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/The-Buccaneers-Trieste"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030130:varmo:caffetaj",
+      "query": "\"CaffeTaj\" \"Varmo\" \"Via dei Castelli\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "CAFFETAJ, Varmo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g3174764-d3648403-Reviews-CaffeTaj-Varmo_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „CaffeTaj“ | Via dei Castelli",
+          "url": "https://www.oraridiapertura24.it/filiale/Varmo-CaffeTaj-2672384O.html"
+        },
+        {
+          "title": "CAFFETAJ DI D ALVISE MARINA & C. S.N.C., Partita IVA: 02665050304, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/8228/caffetaj-di-dalvise-marina-c-snc"
+        },
+        {
+          "title": "Caffetaj Di D'alvise Marina & C. S.n.c. | Bar e altri esercizi simili senza cucina a Varmo | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/caffetaj-di-dalvise-marina-c-snc/dba555be97bb"
+        },
+        {
+          "title": "CAFFETAJ, Varmo - Restaurant Avis, Numéro de Téléphone & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g3174764-d3648403-Reviews-CaffeTaj-Varmo_Province_of_Udine_Friuli_Venezia_Giulia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093022:fontanafredda:dolcefreddo",
+      "query": "\"Il Dolcefreddo\" \"Fontanafredda\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "LR_13_22_rincari_energetici_prima e seconda tranche",
+          "url": "https://www.regione.fvg.it/rafvg/export/sites/default/RAFVG/economia-imprese/industria/FOGLIA1/allegati/Elenco_domande_ammesse_a_contributo.pdf"
+        },
+        {
+          "title": "Il Dolcefreddo - Fontanafredda",
+          "url": "https://sites.google.com/view/ildolcefreddo-fontanafredda/-"
+        },
+        {
+          "title": "Il Dolcefreddo di Fontanafredda- PN - Gelateria a Fontanafredda ▷ Pontebbana, 1, Fontanafredda, Pordenone, 33074 | Firmania",
+          "url": "https://firmania.it/fontanafredda-fontanafredda/il-dolcefreddo-di-fontanafredda-pn-2869965"
+        },
+        {
+          "title": "Driving directions to Il Dolcefreddo, 1 Via Pontebbana, Fontanafredda - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/friuli-venezia-giulia/fontanafredda/il-dolcefreddo?to=place.ChIJG1Iqe_xveUcR3iobJqx3YfA"
+        },
+        {
+          "title": "IL DOLCEFREDDO, Fontanafredda - Via Pontebbana 1 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2399066-d3487366-Reviews-Il_Dolcefreddo-Fontanafredda_Province_of_Pordenone_Friuli_Venezia_Giulia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:crispy",
+      "query": "\"Crispy\" \"Trieste\" \"Via Luigi Cadorna\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "CRISPY, Province of Trieste - Via Luigi Cadorna 6 - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2339870-d27995976-Reviews-Crispy-Province_of_Trieste_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "CRISPY FRIED CHICKEN, Provincia di Trieste - Via Luigi Cadorna 6 - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2339870-d27995976-Reviews-Crispy-Province_of_Trieste_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "CRISPY, Province of Trieste - Via Luigi Cadorna 6 - Cardápio, Preços & Comentários de Restaurantes",
+          "url": "https://www.tripadvisor.com.br/Restaurant_Review-g2339870-d27995976-Reviews-Crispy-Province_of_Trieste_Friuli_Venezia_Giulia.html"
+        },
+        {
+          "title": "Menu at Crispy mensa restaurant, Trieste, Via Luigi Cadorna",
+          "url": "https://restaurantguru.com/Crispy-Trieste/menu"
+        },
+        {
+          "title": "Crispy mensa, Trieste - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Crispy-Trieste"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:093010:casarsa-della-delizia:pasticceria-la-dolce-vita",
+      "query": "\"Bar Pasticceria La Dolce Vita\" \"Casarsa della Delizia\" \"Piazza della Vittoria\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Bar Pasticceria La Dolce Vita, 1 Piazza della Vittoria, San Giovanni, Casarsa della Delizia - Waze",
+          "url": "https://www.waze.com/live-map/directions/bar-pasticceria-la-dolce-vita-piazza-della-vittoria-1-san-giovanni%2C-casarsa-della-delizia?to=place.w.8389067.84152818.36256914"
+        },
+        {
+          "title": "BAR PASTICCERIA LA DOLCE VITA, Casarsa della Delizia - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g608889-d27848294-Reviews-Bar_Pasticceria_La_Dolce_Vita-Casarsa_della_Delizia_Province_of_Pordenone_Friuli.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030023:cervignano-del-friuli:san-gallo",
+      "query": "\"Agriturismo San Gallo\" \"Cervignano del Friuli\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "AGRITURISMO SAN GALLO - Google Hotel",
+          "url": "https://www.google.it/travel/hotels/entity/CgsIksCT9fnigbSmARAB"
+        },
+        {
+          "title": "Agriturismo San Gallo | Agriturismi.it",
+          "url": "https://www.agriturismi.it/it/friuli-venezia-giulia/cervignano_del_friuli/agriturismo_san_gallo.html"
+        },
+        {
+          "title": "AGRITURISMO SAN GALLO - Google Hotel",
+          "url": "https://www.google.it/travel/hotels/entity/ChoIksCT9fnigbSmARoNL2cvMTFmNWx5NjY2ZxAB?rp=OAHCAhwiGg0AALRCEhMI5fb0kM7SlQMV3Qy4Bx0dKDyQ&ts=CAEaBAoCGgAqBAoAGgA"
+        },
+        {
+          "title": "AGRITURISMO SAN GALLO, Strassoldo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1940755-d13237289-Reviews-Agriturismo_San_Gallo-Strassoldo_Cervignano_del_Friuli_Province_of_Udine_Friuli.html"
+        },
+        {
+          "title": "PRODOTTI TIPICI - Agriturismo San Gallo",
+          "url": "https://www.sangalloagriturismo.com/prodotti-tipici/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030129:udine:terzotempo",
+      "query": "\"Terzotempo\" \"Udine\" \"Via Daniele Manin\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Terzotempo, Udine - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Terzo-Tempo-Udine"
+        },
+        {
+          "title": "Terzotempo, Udine - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Terzo-Tempo-Udine"
+        },
+        {
+          "title": "Terzotempo Reviews - Bar in Udine, Italy | Top-Rated.Online Travel",
+          "url": "https://www.top-rated.online/cities/Udine/place/p/15320404/Terzotempo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:031008:gradisca-d-isonzo:centrale",
+      "query": "\"Caffe Centrale\" \"Gradisca d'Isonzo\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "2025_Locali_Storici_Elenco",
+          "url": "https://www.regione.fvg.it/rafvg/export/sites/default/RAFVG/economia-imprese/commercio-terziario/FOGLIA9/allegati/Locali_Storici_Elenco_novembre_2025.pdf"
+        },
+        {
+          "title": "Caffè Centrale | 0481 960080 | Gradisca d'Isonzo",
+          "url": "https://www.tuttiaffari.com/caffe-centrale_51e-0481-960080"
+        },
+        {
+          "title": "Caffè Centrale | Touring Club Italiano",
+          "url": "https://www.touringclub.it/destinazioni/gradisca-d_isonzo/fare/272667-caffe-centrale"
+        },
+        {
+          "title": "Caffè Centrale, Gradisca d'Isonzo - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Caffe-Centrale-Gradisca-dIsonzo"
+        },
+        {
+          "title": "Caffè Centrale, Gradisca d'Isonzo - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Caffe-Centrale-Gradisca-dIsonzo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010014:ceranesi:o-strixeu",
+      "query": "\"O Strixeu\" \"Ceranesi\" \"Piazza Santuario Guardia\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "AREA1",
+          "url": "https://www.ge.infn.it/~bersani/panda/img/RISTORANTI2004.pdf"
+        },
+        {
+          "title": "ANTICO RISTORANTE DA O STRIXEU, Ceranesi - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2396909-d2531011-Reviews-or105-Antico_Ristorante_Da_o_Strixeu-Ceranesi_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Antico Ristorante Da o Strixeu",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g2396909-d2531011-Antico_Ristorante_Da_o_Strixeu-Ceranesi_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "ANTICO RISTORANTE DA O STRIXEU, Ceranesi - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2396909-d2531011-Reviews-or60-Antico_Ristorante_Da_o_Strixeu-Ceranesi_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "ANTICO RISTORANTE DA O STRIXEU, Ceranesi - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2396909-d2531011-Reviews-or90-Antico_Ristorante_Da_o_Strixeu-Ceranesi_Italian_Riviera_Liguria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009024:ceriale:noemi",
+      "query": "\"Bar noemi\" \"Ceriale\" \"Lungomare Armando Diaz\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Noemi | 334 103 5541 | Ceriale",
+          "url": "https://www.tuttiaffari.com/bar-noemi_1I-334-103-5541"
+        },
+        {
+          "title": "Bar Noemi, Ceriale - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/BarvNoemi-Ceriale"
+        },
+        {
+          "title": "Bar noemi | Senza glutine a Ceriale | Gluto",
+          "url": "https://www.glutoapp.com/it/locale/10659/bar-noemi"
+        },
+        {
+          "title": "BAR NOEMI, Peagna - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g12139465-d27305486-Reviews-Bar_Noemi-Peagna_Ceriale_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Bar Noemi - Gluten-Free Restaurant in Ceriale",
+          "url": "https://www.atly.com/gluten-free/location/BarNoemi"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009056:savona:101-caffe",
+      "query": "\"101 Caffè\" \"Savona\" \"Via Pietro Paleocapa\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "101 caffè, Savona - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/101Caffe-Savona-Savona"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008028:diano-san-pietro:the-water-wheel",
+      "query": "\"The Water Wheel\" \"Diano San Pietro\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "THE WATER WHEEL, Diano San Pietro - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2005998-d1051501-Reviews-The_Water_Wheel-Diano_San_Pietro_Province_of_Imperia_Liguria.html"
+        },
+        {
+          "title": "The Water Wheel | 366 984 8008 | Diano San Pietro",
+          "url": "https://www.tuttiaffari.com/the-water-wheel-366-984-8008"
+        },
+        {
+          "title": "THE WATER WHEEL, Diano San Pietro - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g2005998-d1051501-Reviews-The_Water_Wheel-Diano_San_Pietro_Province_of_Imperia_Liguria.html"
+        },
+        {
+          "title": "THE WATER WHEEL, Diano San Pietro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2005998-d1051501-Reviews-The_Water_Wheel-Diano_San_Pietro_Province_of_Imperia_Liguria.html"
+        },
+        {
+          "title": "The Water Wheel FAQ (Diano San Pietro) - Tripadvisor",
+          "url": "https://www.tripadvisor.it/FAQ-g2005998-d1051501-The_Water_Wheel.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010059:sestri-levante:due-forni-pizzeria",
+      "query": "\"I Due Forni Pizzeria\" \"Sestri Levante\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA I DUE FORNI, Sestri Levante - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194917-d2276384-Reviews-Pizzeria_I_Due_Forni-Sestri_Levante_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "I Due Forni Pizzeria, Sestri Levante, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/2706365/i-due-forni-pizzeria"
+        },
+        {
+          "title": "Menu at I Due Forni Pizzeria, Sestri Levante",
+          "url": "https://restaurantguru.com/Pizzeria-I-Due-Forni-Sestri-Levante/menu"
+        },
+        {
+          "title": "I Due Forni Pizzeria, Sestri Levante - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Pizzeria-I-Due-Forni-Sestri-Levante"
+        },
+        {
+          "title": "PIZZERIA I DUE FORNI, Sestri Levante - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g194917-d2276384-Reviews-Pizzeria_I_Due_Forni-Sestri_Levante_Italian_Riviera_Liguria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010025:genova:cinque-sapori",
+      "query": "\"I Cinque Sapori\" \"Genova\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "I cinque sapori a Genova: menù e prezzi | Mycia.it",
+          "url": "https://www.mycia.it/menu/genova/i-cinque-sapori-hw6OwAlIN"
+        },
+        {
+          "title": "Menu di I Cinque Sapori - Gastronomia Naturale a domicilio a Genova | Ordina su Just Eat",
+          "url": "https://www.justeat.it/restaurants-i-cinque-sapori---gastronomia-naturale-16129/reviews"
+        },
+        {
+          "title": "Driving directions to I Cinque Sapori Gastronomia, 9 Piazza Tommaseo, Genova - Waze",
+          "url": "https://www.waze.com/live-map/directions/italy/liguria/genoa/i-cinque-sapori-gastronomia-naturale?to=place.ChIJg9qwZbxD0xIRwCoZtAaOGas"
+        },
+        {
+          "title": "I Cinque Sapori S.a.s. Di Casati Sonia Franca E C. | Ristorazione senza somministrazione con preparazione di cibi da asporto a Genova | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/i-cinque-sapori-sas-di-casati-sonia-franca-e-c/649585631664"
+        },
+        {
+          "title": "I Cinque Sapori Gastronomia Naturale - Genova, Città Metropolitana di Genova - Vita Verde Lupo",
+          "url": "https://life-greenwoolf.eu/i-cinque-sapori-gastronomia-naturale/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009025:cisano-sul-neva:torrefazione-caffe-pasqualini",
+      "query": "\"Torrefazione Caffe Pasqualini\" \"Cisano sul Neva\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Contatti diretti di Pasqualini il caffè",
+          "url": "https://pasqualiniilcaffe.it/contatti/"
+        },
+        {
+          "title": "Driving directions to Torrefazione Caffè Pasqualini, 7 Via Benessea, Cisano sul Neva - Waze",
+          "url": "https://www.waze.com/live-map/directions/torrefazione-caffe-pasqualini-via-benessea-7-cisano-sul-neva?to=place.w.5374393.53547319.19238166"
+        },
+        {
+          "title": "Pasqualini il Caffè | Torrefazione Premiato | Gambero Rosso",
+          "url": "https://www.gamberorosso.it/luoghi/aziende/torrefazione/pasqualini-il-caffe/"
+        },
+        {
+          "title": "TORREFAZIONE CAFFE' PASQUALINI, Cisano sul Neva - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1925750-d20984688-Reviews-Torrefazione_Caffe_Pasqualini-Cisano_sul_Neva_Province_of_Savona_Liguria.html"
+        },
+        {
+          "title": "Torrefazione Caffe' Pasqualini, Cisano Sul Neva - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pasqualini-Caffe-Cisano-Sul-Neva"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008059:taggia:sicilia-e-i-suoi-sapori",
+      "query": "\"Sicilia e i suoi Sapori\" \"Taggia\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "SICILIA E I SUOI SAPORI, Arma di Taggia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1400557-d4579706-Reviews-Sicilia_e_i_suoi_sapori-Arma_di_Taggia_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Ristorante Sicilia e i suoi sapori en Imperia",
+          "url": "https://gustoegusti.it/ristoranti/imperia/taggia/sicilia-e-i-suoi-sapori"
+        },
+        {
+          "title": "SICILIA E I SUOI SAPORI, Arma di Taggia - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1400557-d4579706-Reviews-Sicilia_e_i_suoi_sapori-Arma_di_Taggia_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Sicilia E I Suoi Sapori, Arma di Taggia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/arma-di-taggia/ristorante/145612/sicilia-e-i-suoi-sapori"
+        },
+        {
+          "title": "Sicilia e I Suoi Sapori - Taggia, Via Queirolo, 70",
+          "url": "https://aziende.virgilio.it/gelaterie/arma-di-taggia-im/sicilia-sapori"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008055:sanremo:maison-di-nat",
+      "query": "\"La Maison di Nat\" \"Sanremo\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "LA MAISON DI NAT, Sanremo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194900-d4242811-Reviews-La_Maison_di_Nat-Sanremo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "LA MAISON DI NAT, Sanremo - Restaurant Avis, Numéro de Téléphone & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g194900-d4242811-Reviews-La_Maison_di_Nat-Sanremo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "LA MAISON DI NAT, Sanremo - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194900-d4242811-Reviews-La_Maison_di_Nat-Sanremo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "LA MAISON DI NAT (Sanremo, Europa): Prezzi e Recensioni (2026)",
+          "url": "https://www.tripadvisor.it/Hotel_Review-g194900-d1808829-Reviews-La_Maison_di_Nat-Sanremo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "La Maison di Nat | 0184 577179 | Sanremo",
+          "url": "https://www.tuttiaffari.com/la-maison-di-nat_1J-0184-577179"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011002:arcola:totalerg-pontremoli",
+      "query": "\"Bar TotalErg Pontremoli\" \"Arcola\" \"Via Nazionale\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Posizione dei distributori Total Erg [3 pompe attive censite] in Italia",
+          "url": "https://www.fabiodisconzi.com/open-carburanti/bandiere/total-erg/index.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010044:portofino:el-portico",
+      "query": "\"Pizzeria El Portico\" \"Portofino\" \"Via Roma\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA EL PORTICO, Portofino - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187825-d1180617-Reviews-Pizzeria_El_Portico-Portofino_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Pizzeria El Portico, Portofino - Menú del restaurante, precios y reseñas",
+          "url": "https://es.restaurantguru.com/El-Portico-Portofino"
+        },
+        {
+          "title": "Pizzeria El Portico, Portofino - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/El-Portico-Portofino"
+        },
+        {
+          "title": "PIZZERIA EL PORTICO, Portofino - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187825-d1180617-Reviews-Pizzeria_El_Portico-Portofino_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Pizzeria El Portico | 0185 269239 | Portofino",
+          "url": "https://www.tuttiaffari.com/pizzeria-el-portico-0185-269239"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011015:la-spezia:sempre-pizza-da-toto",
+      "query": "\"Sempre Pizza Da Toto\" \"La Spezia\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "SEMPRE PIZZA DA TOTO, La Spezia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187824-d11841851-Reviews-Sempre_Pizza_da_Toto-La_Spezia_Province_of_La_Spezia_Liguria.html"
+        },
+        {
+          "title": "Sempre Pizza Da Totò | 0187 713105 | La Spezia",
+          "url": "https://www.tuttiaffari.com/sempre-pizza-da-tot%C3%B2-0187-713105"
+        },
+        {
+          "title": "SEMPRE PIZZA DA TOTO, La Spezia - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187824-d11841851-Reviews-Sempre_Pizza_da_Toto-La_Spezia_Province_of_La_Spezia_Liguria.html"
+        },
+        {
+          "title": "Sempre Pizza Da Totò, La Spezia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Sempre-Pizza-Da-Toto-La-Spezia"
+        },
+        {
+          "title": "SEMPRE PIZZA DA TOTO' DI SAIELLO GUIDO E C. - S.A.S., Partita IVA: 01334150115, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/8626/sempre-pizza-da-toto-di-saiello-guido-e-c-sas"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011004:bolano:baldi-caffe",
+      "query": "\"Baldi Caffè\" \"Bolano\" \"Via Europa\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "CITY COFFEE DI BALDI GABRIELE, Partita IVA: 01464020112, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/9149/city-coffee-di-baldi-gabriele"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010046:rapallo:pubbino",
+      "query": "\"Il Pubbino\" \"Rapallo\" \"Via Marsala\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "IL PUBBINO, Rapallo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187826-d17804277-Reviews-Il_pubbino-Rapallo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Il pubbino, Rapallo - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g187826-d17804277-Il_pubbino-Rapallo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "IL PUBBINO, Rapallo - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187826-d17804277-Reviews-Il_pubbino-Rapallo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "419 recensioni di Il Pubbino a Rapallo",
+          "url": "https://altraopinione.org/pub/rapallo/pub-il-pubbino/"
+        },
+        {
+          "title": "Il Pubbino, Rapallo - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Il-pubbino-Rapallo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010025:genova:vercesi-gelateria-pasticceria-artigianale",
+      "query": "\"Vercesi - Gelateria Pasticceria Artigianale\" \"Genova\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Vercesi - Gelateria Pasticceria Artigianale a Genova: menù e prezzi | Mycia.it",
+          "url": "https://www.mycia.it/menu/genova/vercesi-gelateria-pasticceria-artigianale-eG2NfS4La"
+        },
+        {
+          "title": "Vercesi Gelateria Pasticceria Artigianale (Genova) | wecake.it",
+          "url": "https://wecake.it/pasticcerie/genova/Vercesi-Gelateria-Pasticceria-Artigianale-10029"
+        },
+        {
+          "title": "VERCESI Gelateria Pasticceria Artigianale Senza Glutine - 100% sem glúten em Gênova | Nutrixe",
+          "url": "https://nutrixe.app/pt/restaurants/italy/genova/vercesi-gelateria-pasticceria-artigianale-senza-glutine/"
+        },
+        {
+          "title": "Vercesi - Gelateria Pasticceria Artigianale a Genova: menù e prezzi | Mycia.it",
+          "url": "https://www.mycia.it/menu/Genova/vercesi-gelateria-pasticceria-artigianale-eG2NfS4La"
+        },
+        {
+          "title": "Vercesi - Gelateria Pasticceria Artigianale Genova Menù completo | Mycia.it",
+          "url": "https://www.mycia.it/menu/genova/vercesi-gelateria-pasticceria-artigianale-eG2NfS4La//"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008010:borgomaro:da-linda",
+      "query": "\"Trattoria Da Linda\" \"Borgomaro\" \"Via Don Paolo Thomatis\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Trattoria Da Linda | 0183 54021 | Borgomaro",
+          "url": "https://www.tuttiaffari.com/trattoria-da-linda-0183-54021"
+        },
+        {
+          "title": "Trattoria Da Linda, Borgomaro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Trattoria-Da-Linda-Caravonica"
+        },
+        {
+          "title": "Trattoria Da Linda, Borgomaro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Trattoria-Da-Linda-Caravonica"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011027:sarzana:novepunto80-express",
+      "query": "\"Novepunto80 Express\" \"Sarzana\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "NOVEPUNTO80 Ristorante Smartfood a Sarzana - La Spezia | Contatti",
+          "url": "https://www.novepunto80.com/contatti"
+        },
+        {
+          "title": "NOVEPUNTO80 Food Delivery a Sarzana - Consegna a domicilio",
+          "url": "https://www.novepunto80.com/express"
+        },
+        {
+          "title": "NOVEPUNTO80 Ristorante Smartfood a Sarzana - La Spezia",
+          "url": "https://www.novepunto80.com/"
+        },
+        {
+          "title": "NOVEPUNTO80 Ristorante Smartfood a Sarzana - La Spezia | Chi Siamo",
+          "url": "https://www.novepunto80.com/chi-siamo"
+        },
+        {
+          "title": "NOVEPUNTO80 Ristorante Smartfood a Sarzana - La Spezia | Menù",
+          "url": "https://www.novepunto80.com/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008031:imperia:seven-imperia",
+      "query": "\"Bar Seven Imperia\" \"Imperia\" \"Lungomare Cristoforo Colombo\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Bar Seven, 146 Lungomare Cristoforo Colombo, Imperia - Waze",
+          "url": "https://www.waze.com/live-map/directions/bar-seven-lungomare-cristoforo-colombo-146-imperia?to=place.w.5243319.52433187.3755635"
+        },
+        {
+          "title": "BAR SEVEN IMPERIA - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194781-d27861512-Reviews-Bar_Seven_Imperia-Imperia_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "BAR SEVEN IMPERIA - Restaurant Reviews & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194781-d27861512-Reviews-Bar_Seven_Imperia-Imperia_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Bar Seven Imperia 🇮🇹 - WorldPlaces",
+          "url": "https://italy.worldplaces.me/review/228051337-bar-seven.html"
+        },
+        {
+          "title": "Places to visit in Imperia – Wanderlog",
+          "url": "https://wanderlog.com/placePageGeos/10544/imperia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008001:airole:happy-days",
+      "query": "\"Bar Happy Days\" \"Airole\" \"Via Repubblica\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR HAPPY DAYS - Bar Airole | Italian cuisine near me | Book now",
+          "url": "https://bar-happy-days-airole.eatbu.com/?lang=en"
+        },
+        {
+          "title": "Happy Days Bar, Airole - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Happy-Days-Bar-Airole"
+        },
+        {
+          "title": "BAR HAPPY DAYS - Bar Airole | Cucina Italiana nelle mie vicinanze | Prenoti subito",
+          "url": "https://bar-happy-days-airole.eatbu.com/?lang=it"
+        },
+        {
+          "title": "Bar Happy Days | 0184 200040 | Airole",
+          "url": "https://www.tuttiaffari.com/bar-happy-days_1Q-0184-200040"
+        },
+        {
+          "title": "Happy Days Bar, Airole - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Happy-Days-Bar-Airole"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008065:ventimiglia:nuova-olivia",
+      "query": "\"Nuova Olivia\" \"Ventimiglia\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffetteria Nuova Olivia a Ventimiglia | MapTap.it",
+          "url": "https://maptap.it/attivita/caffetteria-nuova-olivia"
+        },
+        {
+          "title": "Menu da Nuova Olivia caffè bar, Ventimiglia",
+          "url": "https://restaurantguru.it/Olivia-Ventimiglia/menu"
+        },
+        {
+          "title": "Nuova Olivia - Ventimiglia, IM",
+          "url": "https://thebestbynaturmed.it/nuova-olivia/"
+        },
+        {
+          "title": "Nuova Olivia - Ventimiglia, IM - Ristorante Vicari",
+          "url": "https://it.ristorantevicari.it/nuova-olivia/"
+        },
+        {
+          "title": "Orari di apertura Caffetteria Nuova Olivia ▷ Ventimiglia Passeggiata Guglielmo Marconi, 5 (Cala del Forte), Ventimiglia, Imperia, 18039 | Trova Aperto",
+          "url": "https://trova-aperto.it/ventimiglia/caffetteria-nuova-olivia-2577593"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008055:sanremo:kebabis-grill",
+      "query": "\"Kebabis Grill\" \"Sanremo\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "KEBABIS GRILL, Sanremo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194900-d15036918-Reviews-Kebabis_Grill-Sanremo_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Kebabis Grill - Eroi Sanremesi delivery from Sanremo - Order with Deliveroo",
+          "url": "https://deliveroo.it/en/menu/sanremo/sanremo/kebabis-grill-sanremo"
+        },
+        {
+          "title": "Kebabis Grill - Eroi Sanremesi consegna in zona Sanremo - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/sanremo/sanremo/kebabis-grill-sanremo"
+        },
+        {
+          "title": "Kebabis Grill - Eroi Sanremesi delivery from Sanremo - Order with Deliveroo",
+          "url": "https://deliveroo.it/en/menu/Sanremo/sanremo/kebabis-grill-sanremo"
+        },
+        {
+          "title": "Kebabis Grill - Piazza Colombo delivery from Sanremo - Order with Deliveroo",
+          "url": "https://deliveroo.it/en/menu/sanremo/sanremo/kebabis-grill-colombo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009047:pallare:san-lazzaro",
+      "query": "\"Osteria San Lazzaro\" \"Pallare\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "OSTERIA SAN LAZZARO NICHOLAS NEL CUORE DI MARENCO PATRIZIA, Partita IVA: 01744570092, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/2892/osteria-san-lazzaro-nicholas-nel-cuore-di-marenco-patrizia"
+        },
+        {
+          "title": "Osteria San Lazzaro \"Nicholas nel cuore\", Pallare - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Osteria-San-Lazzaro-Italy"
+        },
+        {
+          "title": "Osteria San Lazzaro \"Nicholas nel cuore\", Pallare - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Osteria-San-Lazzaro-Italy"
+        },
+        {
+          "title": "OSTERIA SAN LAZZARO DI FRANCAVILLA MARIA PALLARE - Impresa Italia",
+          "url": "https://www.impresaitalia.info/ik02252438/osteria-san-lazzaro-di-francavilla-maria/pallare.aspx"
+        },
+        {
+          "title": "Osteria San Lazzaro \"Nicholas nel cuore\" | 349 845 2784 | Pallare",
+          "url": "https://www.tuttiaffari.com/osteria-san-lazzaro-%22nicholas-nel-349-845-2784"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009064:vado-ligure:u-cafe-de-vue",
+      "query": "\"U Cafè de Vue\" \"Vado Ligure\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "U CAFÈ DE VUÈ, Vado Ligure - Restaurant Avis, Numéro de Téléphone & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g1973857-d4501240-Reviews-U_Cafe_de_Vue-Vado_Ligure_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "Ristorante u cafe de vue - Vado Ligure - Menu Digitale",
+          "url": "https://menu.cafedevue.com/"
+        },
+        {
+          "title": "U CAFÈ DE VUÈ, Vado Ligure - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1973857-d4501240-Reviews-U_Cafe_de_Vue-Vado_Ligure_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "U CAFÈ DE VUÈ, Vado Ligure - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1973857-d4501240-Reviews-U_Cafe_de_Vue-Vado_Ligure_Italian_Riviera_Liguria.html"
+        },
+        {
+          "title": "U CAFÈ DE VUÈ, Vado Ligure - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1973857-d4501240-Reviews-U_Cafe_de_Vue-Vado_Ligure_Italian_Riviera_Liguria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011015:la-spezia:tommy-bar",
+      "query": "\"Tommy Bar\" \"La Spezia\" \"Via Paverano\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "TOMMY BAR & TABACCHI PIZZERIA, La Spezia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187824-d12685740-Reviews-Tommy_Bar_Tabacchi_PIZZERIA-La_Spezia_Province_of_La_Spezia_Liguria.html"
+        },
+        {
+          "title": "Tommy Bar & Tabacchi PIZZERIA | 0187 732457 | La Spezia",
+          "url": "https://www.tuttiaffari.com/tommy-bar-tabacchi-pizzeria-0187-732457"
+        },
+        {
+          "title": "TOMMY BAR&TABACCHI PIZZERIA, La Spezia - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187824-d12685740-Reviews-Tommy_Bar_Tabacchi_PIZZERIA-La_Spezia_Province_of_La_Spezia_Liguria.html"
+        },
+        {
+          "title": "Tommy Bar & Tabacchi PIZZERIA, La Spezia - Menú del restaurante, precios y reseñas",
+          "url": "https://es.restaurantguru.com/Tommy-Bar-and-Tabacchi-La-Spezia"
+        },
+        {
+          "title": "Tommy Bar & Tabacchi PIZZERIA, La Spezia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Tommy-Bar-and-Tabacchi-La-Spezia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009013:borgio-verezzi:feno-s",
+      "query": "\"Feno's\" \"Borgio Verezzi\" \"Via Giacomo Matteotti\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Feno's | 345 931 5046 | Borgio Verezzi",
+          "url": "https://www.tuttiaffari.com/fenos-345-931-5046"
+        },
+        {
+          "title": "Feno's, Borgio Verezzi: map & nearby coffee | Pulled",
+          "url": "https://www.pulled.coffee/shop/feno-s-borgio-verezzi"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:036010:concordia-sulla-secchia:luciana",
+      "query": "\"Bar Luciana\" \"Concordia sulla Secchia\" \"Via per Mirandola\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Luciana | 345 548 2453 | Concordia sulla Secchia",
+          "url": "https://www.tuttiaffari.com/bar-luciana_7C-0535-40536"
+        },
+        {
+          "title": "Bar Luciana, Concordia Sulla Secchia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/bar-Luciana-Concordia-Sulla-Secchia"
+        },
+        {
+          "title": "BAR LUCIANA, Concordia sulla Secchia - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1967900-d27348139-Reviews-Bar_Luciana-Concordia_sulla_Secchia_Province_of_Modena_Emilia_Romagna.html"
+        },
+        {
+          "title": "Bar Luciana, Concordia Sulla Secchia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/bar-Luciana-Concordia-Sulla-Secchia"
+        },
+        {
+          "title": "Microsoft Word - BAR LUCIANA CR-11643-2015 SALDO BS E DELOC",
+          "url": "https://www.regione.emilia-romagna.it/commissario/terremoto/2016/1000-1499/Decreto%20n.%201334%20del%209%20Maggio%202016%20D33.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:099018:santarcangelo-di-romagna:piadineria-alla-scalinata",
+      "query": "site:lapiadineria.com \"Via Aurelio Saffi\" \"Santarcangelo di Romagna\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:099014:rimini:piu39-di-luca-di-massa",
+      "query": "\"Più39 di Luca Di Massa\" \"Rimini\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:038014:mesola:del-pirata",
+      "query": "\"Pub del pirata\" \"Mesola\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR E CAFFE MESOLA - Impresa Italia",
+          "url": "https://www.impresaitalia.info/554/1/bar-e-caffe/mesola.aspx"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:035014:castellarano:della-posta",
+      "query": "\"Locanda della Posta\" \"Castellarano\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Locanda della Posta - Viva Castellarano",
+          "url": "https://www.vivacastellarano.it/negozi/locandadellaposta/"
+        },
+        {
+          "title": "LOCANDA DELLA POSTA, Roteglia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g3457523-d8487692-Reviews-Locanda_Della_Posta-Roteglia_Castellarano_Province_of_Reggio_Emilia_Emilia_Romag.html"
+        },
+        {
+          "title": "LOCANDA DELLA POSTA - Ristorante a Castellarano | LocalShop24",
+          "url": "https://www.localshop24.com/it/castellarano-re-it/attivita/ristorante/locanda-della-posta/"
+        },
+        {
+          "title": "LOCANDA DELLA POSTA, Roteglia - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g3457523-d8487692-Reviews-Locanda_Della_Posta-Roteglia_Castellarano_Province_of_Reggio_Emilia_Emilia_Romag.html"
+        },
+        {
+          "title": "I MIGLIORI ristoranti vicino a Locanda Della Posta, Roteglia",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g3457523-d8487692-Locanda_Della_Posta-Roteglia_Castellarano_Province_of_Reggio_Emilia_Emilia_Romagna.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:037006:bologna:gelateria-la-siberiana",
+      "query": "\"Bar Gelateria La Siberiana\" \"Bologna\" \"Via Ferrarese\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR GELATERIA LA SIBERIANA - Gelateria a Bologna | LocalShop24",
+          "url": "https://www.localshop24.com/it/bologna-bo-it/attivita/gelateria/bar-gelateria-la-siberiana/"
+        },
+        {
+          "title": "Bar Gelateria La Siberiana, Bologna - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Gelateria-Bar-La-Siberiana-Bologna"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:037048:pieve-di-cento:pizzi-nicola",
+      "query": "\"Pizzi Nicola\" \"Pieve di Cento\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "DATAPREST  | GARADESC  | PRESTAZ  | O  | RNO  | COGN/NOME  | GATEGO  | CAT.AT  | TDATANAS  | SOC  | SOCIETA  | MANIFESTAZ  | COMUNE  | S/C/",
+          "url": "https://www.fidal.it/upload/EmiliaRomagna/risultatiIO.301023%286%29concrosscrononoeso.pdf"
+        },
+        {
+          "title": "PIEVE SERVICE DI PIZZI NICOLA, Partita IVA: 01961181201, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/5466/pieve-service-di-pizzi-nicola"
+        },
+        {
+          "title": "Pizzi Nicola Ristoranti self service e fast food Pieve-di-cento 40066 by overplace",
+          "url": "https://www.overplace.com/emilia-romagna/bo/pieve-di-cento/ristoranti-self-service-e-fast-food/pizzi-nicola.html"
+        },
+        {
+          "title": "▷ Pieve Service Pieve Service Di Pizzi Nicola a Pieve di Cento (40066) - Ristoranti - fast food, self service",
+          "url": "https://www.misterimprese.it/emilia-romagna/bologna/pieve-di-cento/ristoranti-fast-food-e-self-service/1090275.html"
+        },
+        {
+          "title": "Pieve Service Di Pizzi Nicola Ristoranti self service e fast food Pieve-di-cento 40066 by overplace",
+          "url": "https://www.overplace.com/emilia-romagna/bo/pieve-di-cento/ristoranti-self-service-e-fast-food/pieve-service-di-pizzi-nicola.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:099001:bellaria-igea-marina:sunny-da-darione",
+      "query": "\"Bar Sunny Da Darione\" \"Bellaria-Igea Marina\" \"Via Alfonso Pinzon\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:040008:cesenatico:bagno-clipper-100",
+      "query": "\"Bagno Clipper 100\" \"Cesenatico\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bagno Clipper 100",
+          "url": "https://visitcesenatico.it/attivita/bagno-clipper-100"
+        },
+        {
+          "title": "Bagno Clipper 100, Cesenatico - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Clipper-Beach-n-100-Cesenatico"
+        },
+        {
+          "title": "Bagno Clipper 100 Cesenatico: servizi, prezzi, contatti e recensioni | Vita Romagna",
+          "url": "https://vitaromagna.it/spiagge/bagno-clipper-cesenatico-zadina"
+        },
+        {
+          "title": "Bagno Clipper 100 - Cesenatico (FC) - prenotazione online | Spiagge.it",
+          "url": "https://www.spiagge.it/stabilimenti-balneari/10750-bagno-clipper-100/"
+        },
+        {
+          "title": "HOTEL CLIPPER 3 stelle - Zadina di Cesenatico - Riviera Adriatica - Italia",
+          "url": "https://www.sacchinihotels.com/servizi-clipper_it.php"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:039009:cotignola:parco-ristorante",
+      "query": "\"Al Parco Ristorante\" \"Cotignola\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "ᐅ Orari di apertura „Al Parco Ristorante“ | Via Sandro Pertini",
+          "url": "https://www.oraridiapertura24.it/filiale/Cotignola%2520%2528RA%2529-Al%2520Parco%2520Ristorante-3985820I.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:038001:argenta:fiordipanna-cremeria",
+      "query": "\"Fiordipanna Cremeria\" \"Argenta\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "ᐅ Orari di apertura „Fiordipanna Cremeria“ | Piazza Garibaldi",
+          "url": "https://www.oraridiapertura24.it/filiale/Argenta-Fiordipanna%2520Cremeria-1302188B.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:099013:riccione:time-riccione",
+      "query": "\"Pub Time Riccione\" \"Riccione\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "PUB TIME, Riccione - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194878-d2572404-Reviews-Pub_Time-Riccione_Province_of_Rimini_Emilia_Romagna.html"
+        },
+        {
+          "title": "Pub Time Riccione, Riccione - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pub-Time-Riccione"
+        },
+        {
+          "title": "PUB TIME, Riccione - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194878-d2572404-Reviews-Pub_Time-Riccione_Province_of_Rimini_Emilia_Romagna.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Pub Time, Riccione - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g194878-d2572404-Pub_Time-Riccione_Province_of_Rimini_Emilia_Romagna.html"
+        },
+        {
+          "title": "PUB TIME, Riccione - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g194878-d2572404-Reviews-Pub_Time-Riccione_Province_of_Rimini_Emilia_Romagna.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:034023:montechiarugolo:armeno-caffe",
+      "query": "\"Armeno Caffè\" \"Montechiarugolo\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Contatti - Caffè Armeno | Armeno Caffè",
+          "url": "https://armenocaffe.it/contatti/"
+        },
+        {
+          "title": "Armeno Caffè",
+          "url": "https://armenocaffe.it/"
+        },
+        {
+          "title": "ARMENO CAFFE - S.R.L., Partita IVA: 01682080344, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/3157/armeno-caffe-srl"
+        },
+        {
+          "title": "Contact - Phone/Mail - Where to find us -Caffè Armeno",
+          "url": "https://armenocaffe.it/en/contact-us/"
+        },
+        {
+          "title": "Chi siamo | Armeno Caffè",
+          "url": "https://armenocaffe.it/chi-siamo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:034020:medesano:ramiola-city",
+      "query": "\"Ramiola City\" \"Medesano\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "SEARCH FOR COMPANIES - ICMQ",
+          "url": "https://www.icmq.it/en/companies.php?pag=84"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:036023:modena:bella-italia-srl-uninominale",
+      "query": "\"Pizzeria La Bella Italia srl uninominale\" \"Modena\" \"Via Ippolito Nievo\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "▷ La Bella Italia srl uninominale a Modena (41123) - Pizzeria",
+          "url": "https://www.misterimprese.it/emilia-romagna/modena/modena/pizzerie/2605448.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:035004:bibbiano:ida",
+      "query": "\"BAR IDA\" \"Bibbiano\" \"Via Vladimir Ilic Ulianov Lenin\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Home",
+          "url": "https://emiliogiuliana.com/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:039001:alfonsine:tradizioni-di-nick",
+      "query": "\"Le Tradizioni di Nick\" \"Alfonsine\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Le Tradizioni di Nick - Pizza e Cucina | Le Tradizioni di Nick Ristorante ad Alfonsine: Pizza & Cucina Romagnola - Tel. 0544-84138",
+          "url": "https://www.letradizionidinick.it/le-tradizioni-nick/"
+        },
+        {
+          "title": "Un'Oasi Gastronomica Romagnola: Le Tradizioni di Nick ad Alfonsine - Romagna a Tavola",
+          "url": "https://www.romagnaatavola.it/appunti-di-degustazione-le-tradizioni-di-nick-alfonsine/"
+        },
+        {
+          "title": "Le Tradizioni di Nick di Alfonsine | Romagna a Tavola",
+          "url": "https://www.romagnaatavola.net/it/ristoranti/le-tradizioni-di-nick-alfonsine/"
+        },
+        {
+          "title": "le tradizioni di nick-menu hamburger | Le Tradizioni di Nick Ristorante ad Alfonsine: Pizza & Cucina Romagnola - Tel. 0544-84138",
+          "url": "https://www.letradizionidinick.it/hamburger-fuori-menu/le-tradizioni-di-nick-menu-hamburger/"
+        },
+        {
+          "title": "Le Tradizioni di Nick | 0544 84138 | Alfonsine",
+          "url": "https://www.tuttiaffari.com/le-tradizioni-di-nick-0544-84138"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:038006:comacchio:beeriamo-caffetteria-beer-shop",
+      "query": "\"Beeriamo Caffetteria & Beer Shop\" \"Comacchio\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Beeriamo Caffetteria & Beer Shop – Porto Garibaldi - Lidi Comacchio.net",
+          "url": "https://www.lidicomacchio.net/attivita/beeriamo-caffetteria-beer-shop-porto-garibaldi/"
+        },
+        {
+          "title": "Beeriamo Caffetteria & Beer Shop, Viale Nino Bonnet, 61 Località Porto Garibaldi, Comacchio (2026)",
+          "url": "https://www.findglocal.com/IT/Comacchio/311894982533068/Beeriamo-Caffetteria-%26-Beer-Shop"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:040050:verghereto:autogrill",
+      "query": "\"Autogrill\" \"Verghereto\" \"km. 164 E45\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Dove è stato girato Vesna va veloce - Film (1996) | il Davinotti",
+          "url": "https://www.davinotti.com/forum/location-verificate/vesna-va-veloce/50003467"
+        },
+        {
+          "title": "Bar Autogrill Area di servizio - Piantrebbio - fast-food, paninoteche",
+          "url": "https://www.fumaioloturismo.it/fast-food-paninoteche/-/asset_publisher/U3G0fVjxJGaQ/content/bar-autogrill-area-di-servizio-verghereto-fast_food/pop_up?_101_INSTANCE_U3G0fVjxJGaQ_languageId=it_IT&_101_INSTANCE_U3G0fVjxJGaQ_viewMode=print"
+        },
+        {
+          "title": "Bar Autogrill Area di servizio - Piantrebbio - Fast Food, Sandwich Bars - Sito di Informazione Turistica Valle del Savio",
+          "url": "https://www.fumaioloturismo.it/-/bar-autogrill-area-di-servizio-verghereto-fast_food?inheritRedirect=true"
+        },
+        {
+          "title": "Bar Autogrill Area di servizio Piantrebbio - Romagna Toscana Turismo",
+          "url": "https://www.romagnatoscanaturismo.it/dove-mangiare/bar-autogrill-area-di-servizio-piantrebbio/"
+        },
+        {
+          "title": "Bar Autogrill Area di servizio - Piantrebbio - Fast food, paninoteche - Sito di Informazione Turistica Valle del Savio",
+          "url": "https://www.fumaioloturismo.it/de/fast-food-paninoteche/-/asset_publisher/U3G0fVjxJGaQ/content/bar-autogrill-area-di-servizio-verghereto-fast_food?inheritRedirect=false"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:099020:verucchio:olivia-pizza-e-dintorni",
+      "query": "\"Olivia Pizza e Dintorni\" \"Verucchio\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Olivia Pizza e Dintorni - Verucchio, Via Casale, 340",
+          "url": "https://aziende.virgilio.it/pizzerie/verucchio-rn/olivia-pizza-e-dintorni"
+        },
+        {
+          "title": "Pizzerie a Verucchio e dintorni",
+          "url": "https://www.virgilio.it/italia/verucchio/cat/PIZZERIE.html"
+        },
+        {
+          "title": "▷ Olivia Pizza e Dintorni a Verucchio (47826) - Ristoranti",
+          "url": "https://www.misterimprese.it/emilia-romagna/rimini/verucchio/ristoranti/2228364.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Olivia Pizza e Dintorni“ | Via Casale",
+          "url": "https://www.oraridiapertura24.it/filiale/Verucchio-Olivia%2520Pizza%2520e%2520Dintorni-1147338N.html"
+        },
+        {
+          "title": "Pizzerie a Verucchio e dintorni",
+          "url": "https://www.virgilio.it/italia/verucchio/cat/PIZZERIE.html?azi_eq_iq=89f861d7-62ee-4f5c-b051-428220d639b2&dove=verucchio&idCity=099020"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:039007:cervia:moio-lab",
+      "query": "\"Moio Lab\" \"Cervia\" \"Viale Dante Alighieri\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Moio Lab | LinkedIn",
+          "url": "https://www.linkedin.com/company/moio-lab"
+        },
+        {
+          "title": "MOIO LAB, Milano Marittima - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194823-d4840516-Reviews-Moio_Lab-Milano_Marittima_Cervia_Province_of_Ravenna_Emilia_Romagna.html"
+        },
+        {
+          "title": "MOIO LAB, Milano Marittima - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194823-d4840516-Reviews-Moio_Lab-Milano_Marittima_Cervia_Province_of_Ravenna_Emilia_Romagna.html"
+        },
+        {
+          "title": "Moio Lab - Gelato & crepes - Gelateria artigianale, Milano Marittima - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/LOasi-del-gelato-Cervia"
+        },
+        {
+          "title": "Moio Lab - Gelato & Crepes - Gelateria artigianale | VIALE DANTE ALIGHIERI 60, 48015 - Cervia",
+          "url": "https://f.italy724.info/it/moio-lab-gelato-crepes-gelateria-artigianale-39-339-7485645.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:099028:poggio-torriana:piadineria-di-angela",
+      "query": "site:lapiadineria.com \"Via Santarcangiolese\" \"Poggio Torriana\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:039010:faenza:casa-mokador-caffe-faenza",
+      "query": "\"Casa Mokador & Caffè Faenza\" \"Faenza\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "CASA MOKADOR E CAFFÈ, Faenza - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194758-d17817658-Reviews-Casa_Mokador_e_caffe-Faenza_Province_of_Ravenna_Emilia_Romagna.html"
+        },
+        {
+          "title": "Contatti | Pasticceria Cenni Faenza",
+          "url": "https://www.pasticceriacenni.it/contatti/"
+        },
+        {
+          "title": "Mokador, Casa e Caffè | Torrefazione Caffè, Macchine per Bar, Ristorante e Ufficio",
+          "url": "https://www.mokadorcasaecaffe.it/"
+        },
+        {
+          "title": "CASA MOKADOR E CAFFE, Faenza - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194758-d17817658-Reviews-Casa_Mokador_e_caffe-Faenza_Province_of_Ravenna_Emilia_Romagna.html"
+        },
+        {
+          "title": "CASA MOKADOR E CAFFE, Faenza - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g194758-d17817658-Reviews-Casa_Mokador_e_caffe-Faenza_Province_of_Ravenna_Emilia_Romagna.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:038008:ferrara:piadineria-pandini",
+      "query": "\"Bar Pizzeria Piadineria Pandini\" \"Ferrara\" \"Viale Po\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "▷ Bar Pizzeria Piadineria Pandini a Ferrara (44122) - Pizzeria",
+          "url": "https://www.misterimprese.it/emilia-romagna/ferrara/ferrara/pizzerie/2606254.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:037026:fontanelice:cacciatori",
+      "query": "\"Bar Cacciatori\" \"Fontanelice\" \"Via 8 Dicembre 1944\"",
+      "retrieved_at": "2026-09-07T13:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Cacciatori Di Patania Carolina Codice fiscale e Indirizzo | Empresite",
+          "url": "https://www.empresite.it/BAR-CACCIATORI-DI-PATANIA-CAROLINA.html"
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-333-348",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:070078:termoli:sbirra",
+      "query": "\"La Sbirra\" Termoli \"Via Adriatica, 30\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "LA SBIRRA, Termoli - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194930-d10947937-Reviews-La_Sbirra-Termoli_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "La Sbirra - Termoli, Via Adriatica, 30",
+          "url": "https://aziende.virgilio.it/ristoranti/termoli-cb/sbirra"
+        },
+        {
+          "title": "La Sbirra, dove la tradizione napoletana sa di casa! - TermoliOnLine.it",
+          "url": "https://termolionline.it/2026/08/pubbliredazionale/la-sbirra-dove-la-tradizione-napoletana-sa-di-casa/"
+        },
+        {
+          "title": "La sbirra cucina tipica Napoletana | 389 178 9505 | Termoli",
+          "url": "https://www.tuttiaffari.com/la-sbirra-cucina-tipica-napoletana-389-178-9505"
+        },
+        {
+          "title": "La Sbirra - Cucina Tipica Napoletana, Termoli - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/La-sbirra-cucina-tipica-Napoletana-Termoli"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070006:campobasso:movieat",
+      "query": "\"MOVIEat\" Campobasso \"Contrada Colle delle Api, 1\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:070051:petacciato:friggitoria-mirova",
+      "query": "\"Pizzeria Friggitoria Mirova\" Petacciato \"Corso Italia, 2\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:070078:termoli:birrofficina",
+      "query": "\"Birrofficina\" Termoli \"Via dei Lecci, 24\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "BIRROFFICINA - Ristorante a Termoli | LocalShop24",
+          "url": "https://www.localshop24.com/it/termoli-cb-it/attivita/ristorante/birrofficina/"
+        },
+        {
+          "title": "Birrofficina, Termoli",
+          "url": "https://www.nuovaopinione.it/termoli/pub/birrofficina-373667"
+        },
+        {
+          "title": "Birrofficina, Termoli - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Birrofficina-Termoli"
+        },
+        {
+          "title": "742 recensioni di Birrofficina a Termoli",
+          "url": "https://altraopinione.org/pub/termoli/birrofficina/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070084:vinchiaturo:bottega-del-gusto",
+      "query": "\"La Bottega del Gusto\" Vinchiaturo \"Corso Umberto, 50\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:094038:pozzilli:netto",
+      "query": "\"Caffè Al Netto\" Montaquila \"strada statale 85\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "AL NETTO CAFFE RESTAURANT, Montaquila - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g3710611-d10302486-Reviews-or15-Al_Netto_Caffe_Restaurant-Montaquila_Province_of_Isernia_Molise.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:094052:venafro:red-rose",
+      "query": "\"Bar Red Rose\" Venafro \"Via Amico da Venafro, 51\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:070065:san-giacomo-degli-schiavoni:colle",
+      "query": "\"Al Colle\" \"San Giacomo degli Schiavoni\" \"Via Roma, 45/a\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Al Colle, San Giacomo degli Schiavoni - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Al-Colle-San-Giacomo-degli-Schiavoni"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070072:santa-croce-di-magliano:new-age",
+      "query": "\"Pub New Age\" \"Santa Croce di Magliano\" \"Via delle Rose, 3\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "PUB NEW AGE DI ZICCARDI EMILIO CB, 01814330708– Dati Azienda",
+          "url": "https://reportazienda.it/aziende/CB/pub-new-age-di-ziccardi-emilio-207050"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070046:montenero-di-bisaccia:max",
+      "query": "\"Ristorante Pizzeria Max\" \"Montenero di Bisaccia\" SS16",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:094012:castel-san-vincenzo:jolly",
+      "query": "\"Bar Jolly\" \"Castel San Vincenzo\" \"Via Colle, 2\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:094005:cantalupo-nel-sannio:lombardi",
+      "query": "\"BAR Lombardi\" \"Cantalupo nel Sannio\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:070003:bojano:every-day",
+      "query": "\"Every Day\" Bojano \"Piazza Roma, 121\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "EVERY DAY, Bojano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2213327-d23662960-Reviews-Every_Day-Bojano_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "Every day - molise-visitmolise",
+          "url": "https://www.visitmolise.eu/ristorazione/-/d/dms/1484773/every-day"
+        },
+        {
+          "title": "EVERY DAY, Bojano - Menu, Prices, Restaurant Reviews & Reservations - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2213327-d23662960-Reviews-Every_Day-Bojano_Province_of_Campobasso_Molise.html"
+        },
+        {
+          "title": "EVERY DAY SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA, Partita IVA: 01791580705, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/2700/every-day-societa-a-responsabilita-limitata-semplificata"
+        },
+        {
+          "title": "EVERY DAY, Bojano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g2213327-d23662960-Reviews-Every_Day-Bojano_Province_of_Campobasso_Molise.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:070083:ururi:zotti-s-pub",
+      "query": "\"Zotti's Pub\" Ururi \"Via Vincenzo Tanassi, 66\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:070057:riccia:dolce-vita",
+      "query": "\"Trattoria La Dolce Vita\" Riccia \"Piazza Umberto I, 19\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Trattoria La Dolce Vita, Riccia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Trattoria-La-Dolce-Vita-Riccia"
+        },
+        {
+          "title": "Trattoria La Dolce Vita, Riccia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Trattoria-La-Dolce-Vita-Riccia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:094023:isernia:in-piazza",
+      "query": "\"Caffè In Piazza\" Isernia \"Via Corpo Italiano di Liberazione, 189\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    }
+  ]
+}

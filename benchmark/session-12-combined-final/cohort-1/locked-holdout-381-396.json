@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-381-396",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:073027:taranto:cremeria-vienna-talsano",
+      "query": "\"Cremeria Vienna Talsano\" \"Taranto\" \"Via Carlo Cacace, 300\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:071049:san-nicandro-garganico:asp-dr-vincenzo-zaccagnino",
+      "query": "\"Asp Dr. Vincenzo Zaccagnino\" \"San Nicandro Garganico\" \"Contrada San Nazario\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:072035:polignano-a-mare:infermento",
+      "query": "\"Infermento\" \"Polignano a Mare\" \"Via Penna della Galera, 20\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Infermento in Polignano a Mare - Falstaff",
+          "url": "https://www.falstaff.com/it/winebar/infermento"
+        },
+        {
+          "title": "Infermento | 080 424 9840 | Polignano a Mare",
+          "url": "https://www.tuttiaffari.com/infermento_1M-080-424-9840"
+        },
+        {
+          "title": "Infermento, Polignano A Mare - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Infermento-Polignano-A-Mare"
+        },
+        {
+          "title": "Infermento in Polignano a Mare - Falstaff",
+          "url": "https://www.falstaff.com/en/winebars/infermento"
+        },
+        {
+          "title": "Infermento, Polignano a Mare - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/polignano-a-mare/ristorante/167212/infermento"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:071024:foggia:glamour-lounge-bar",
+      "query": "\"Glamour Lounge Bar\" \"Foggia\" \"Corso del Mezzogiorno, 6\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "GLAMOUR LOUNGE BAR, Foggia - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187876-d8057689-Reviews-Glamour_Lounge_Bar-Foggia_Province_of_Foggia_Puglia.html"
+        },
+        {
+          "title": "GLAMOUR LOUNGE BAR, Foggia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g187876-d8057689-Reviews-Glamour_Lounge_Bar-Foggia_Province_of_Foggia_Puglia.html"
+        },
+        {
+          "title": "GLAMOUR LOUNGE BAR, Foggia - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g187876-d8057689-Reviews-Glamour_Lounge_Bar-Foggia_Province_of_Foggia_Puglia.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Glamour Lounge Bar“ | Corso del Mezzogiorno",
+          "url": "https://www.oraridiapertura24.it/filiale/Foggia-Glamour%2520Lounge%2520Bar-946783T.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:075077:specchia:laniena",
+      "query": "\"Laniena\" \"Specchia\" \"Despar Specchia, Via Fiume, 100\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:072003:alberobello:88-gradi-caffe-e-gusto",
+      "query": "\"88 GRADI Caffe e Gusto\" \"Alberobello\" \"Via Piave, 12\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "De 50 beste koffiebars en beste cafés in the Province of Bari",
+          "url": "https://wanderlog.com/nl/list/geoCategory/291801/de-beste-koffiebars-en-beste-caf%C3%A9s-in-province-of-bari"
+        },
+        {
+          "title": "Cele mai bune 50 cafenele și cele mai bune cafenele din the Province of Bari",
+          "url": "https://wanderlog.com/ro/list/geoCategory/291801/cele-mai-bune-cafenele-%C8%99i-cele-mai-bune-cafenele-din-provincia-bari"
+        },
+        {
+          "title": "As 50 melhores cafeterias e cafés em the Province of Bari",
+          "url": "https://wanderlog.com/pt/list/geoCategory/291801"
+        },
+        {
+          "title": "Bar e caffetterie a Alberobello",
+          "url": "https://www.nuovaopinione.it/alberobello/bar"
+        },
+        {
+          "title": "I 50 migliori caffè e caffetterie in the Province of Bari",
+          "url": "https://wanderlog.com/it/list/geoCategory/291801"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:110002:barletta:tettoia",
+      "query": "\"Pizzeria La Tettoia\" \"Barletta\" \"Piazza Federico di Svevia, 31\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA LA TETTOIA, Barletta - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g670813-d27407905-Reviews-Pizzeria_La_Tettoia-Barletta_Province_of_Barletta_Andria_Trani_Puglia.html"
+        },
+        {
+          "title": "Pizzeria La Tettoia, Barletta - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-La-Tettoia-Barletta"
+        },
+        {
+          "title": "Pizzeria La Tettoia di Lasala Damiana, Barletta",
+          "url": "https://www.nuovaopinione.it/barletta/pizzerie/pizzeria-la-tettoia-di-lasala-damiana-72655"
+        },
+        {
+          "title": "🕗 orari di apertura Pizzeria La Tettoia Di Lasala Damiana , Piazza Federico di Svevia, 31, Barletta, contatti",
+          "url": "https://it.near-place.com/pizzeria-la-tettoia-di-lasala-damiana-piazza-federico-di-svevia-31-barletta"
+        },
+        {
+          "title": "🕗 Pizzeria La Tettoia Di Lasala Damiana opening times, Piazza Federico di Svevia, 31, Barletta, contacts",
+          "url": "https://it.near-place.com/pizzeria-la-tettoia-di-lasala-damiana-piazza-federico-di-svevia-31-barletta/en"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:075006:aradeo:don-ciro-pizza-napoletana",
+      "query": "\"Don Ciro • Pizza Napoletana\" \"Aradeo\" \"Via Palmiro Togliatti, 72\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "DON CIRO - PIZZA NAPOLETANA, Aradeo - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1179335-d23183126-Reviews-Don_Ciro_Pizza_Napoletana-Aradeo_Province_of_Lecce_Puglia.html"
+        },
+        {
+          "title": "DON CIRO - PIZZA NAPOLETANA, Aradeo - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1179335-d23183126-Reviews-Don_Ciro_Pizza_Napoletana-Aradeo_Province_of_Lecce_Puglia.html"
+        },
+        {
+          "title": "Don Ciro • Pizza Napoletana, Aradeo - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Don-Ciro-Di-Drazza-Luca-Aradeo"
+        },
+        {
+          "title": "Don Ciro Pizza Napoletana, Aradeo",
+          "url": "https://www.nuovaopinione.it/aradeo/pizzerie/don-ciro-pizza-napoletana-214315"
+        },
+        {
+          "title": "Don Ciro Pizza Napoletana, Aradeo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Don-Ciro-Di-Drazza-Luca-Aradeo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:072020:corato:dolce-momento",
+      "query": "\"Il Dolce Momento\" \"Corato\" \"Viale Vittorio Veneto, 153\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "IL DOLCE MOMENTO, Corato - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1028701-d25184092-Reviews-Il_Dolce_Momento-Corato_Province_of_Bari_Puglia.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Il Dolce Momento“ | Viale Vittorio Veneto",
+          "url": "https://www.oraridiapertura24.it/filiale/Corato-Il%2520Dolce%2520Momento-1991116T.html"
+        },
+        {
+          "title": "IL DOLCE MOMENTO, Corato - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1028701-d25184092-Reviews-Il_Dolce_Momento-Corato_Province_of_Bari_Puglia.html"
+        },
+        {
+          "title": "Dati della società Il Dolce Momento Di Rigoletto Anastasia & C. Snc (07765340729), Puglia, Bari, CORATO - REGISTROAZIENDE.it",
+          "url": "https://registroaziende.it/azienda/il-dolce-momento-di-rigoletto-anastasia-c-snc-corato"
+        },
+        {
+          "title": "Gelaterie a Corato e dintorni",
+          "url": "https://www.virgilio.it/italia/corato/cat/GELATERIE.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:072030:monopoli:cibbell",
+      "query": "\"CibBell\" \"Monopoli\" \"Via Muzio Sforza, 3\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "CIBBELL, Monopoli - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g652003-d24051834-Reviews-Cibbell-Monopoli_Province_of_Bari_Puglia.html"
+        },
+        {
+          "title": "CIBBELL, Monopoli - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g652003-d24051834-Reviews-Cibbell-Monopoli_Province_of_Bari_Puglia.html"
+        },
+        {
+          "title": "CIBBELL, Monopoli - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g652003-d24051834-Reviews-Cibbell-Monopoli_Province_of_Bari_Puglia.html"
+        },
+        {
+          "title": "Attività e negozi — Monopolix",
+          "url": "https://monopolix.it/attivita"
+        },
+        {
+          "title": "Affissione Transenna 69x69 a Monopoli – Via Sforza Muzio | Spotmap",
+          "url": "https://app.spotmap.it/affissione/221200/via-sforza-muzio/transenna/69-x-69/monopoli/puglia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:073006:fragagnano:fashion-cafe",
+      "query": "\"Fashion Cafe\" \"Fragagnano\" \"Via Silvio Pellico, 4\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Fashion Cafè | 099 956 1105 | Fragagnano",
+          "url": "https://www.tuttiaffari.com/fashion-caf%C3%A8_85H-099-956-1105"
+        },
+        {
+          "title": "FASHION CAFÈ, Fragagnano - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2102059-d27289151-Reviews-Fashion_Cafe-Fragagnano_Province_of_Taranto_Puglia.html"
+        },
+        {
+          "title": "Fashion Cafe' Di Capuzzimati Angela | C.F, telefono e altro",
+          "url": "https://www.informazione-aziende.it/Azienda_FASHION-CAFE-DI-CAPUZZIMATI-ANGELA"
+        },
+        {
+          "title": "Posta Kodu 74022 Fragagnano, Puglia konumundaki Barlar, birahaneler ve tavernalar",
+          "url": "https://tr.cybo.com/IT-posta-kodu/74022_fragagnano/barlar%2C-birahaneler-ve-tavernalar/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:072023:gravina-in-puglia:rosita",
+      "query": "\"Pizzeria Rosita\" \"Gravina in Puglia\" \"Via Federico Meninni, 259\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Rosita | 335 560 5935 | Gravina in Puglia",
+          "url": "https://www.tuttiaffari.com/pizzeria-rosita-080-645-6598"
+        },
+        {
+          "title": "Pizzeria Rosita, Gravina in Puglia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Rosita-Gravina-in-Puglia"
+        },
+        {
+          "title": "PIZZERIA ROSITA DI GARGANO FRANCESCO, Partita IVA: 08782150729, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/8409/pizzeria-rosita-di-gargano-francesco"
+        },
+        {
+          "title": "Pizzeria Rosita, Gravina in Puglia, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/13107374/pizzeria-rosita"
+        },
+        {
+          "title": "Pizzeria Rosita, Gravina in Puglia | Menu, Photos, Reviews & Booking",
+          "url": "https://corestaurant.ch/en/Italy/restaurant/pizzeria-rosita-gravina-in-puglia-5456"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:075035:lecce:degli-amici",
+      "query": "\"Bar degli Amici\" \"Lecce\" \"Via Antonio dell'Abate, 33\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Lista Bar e Caffè – PortaMici",
+          "url": "https://www.portamici.it/lista-bar-e-caffe/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:073002:carosino:gebena",
+      "query": "\"Gebena\" \"Carosino\" \"Via Giuseppe Garibaldi, 33\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Raduno 28 e 29 Settembre 2024 – Maggiolino dei due Mari",
+          "url": "https://www.registro-italiano-vw.it/wedit/fileman/Uploads/programma%20-%20Copy%201.pdf"
+        },
+        {
+          "title": "Taranto - Vota Recensioni e valutazioni",
+          "url": "https://vota.org/it/italy/taranto/pub/1"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:071027:lesina:pasticceria-gelateria-elite",
+      "query": "\"Pasticceria Gelateria Elite\" \"Lesina\" \"Viale dei Platani, 73\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar - Pasticceria - Gelateria Elite - Lesina Marina, Provincia di…",
+          "url": "https://ristoranteyukimarconi.it/bar-pasticceria-gelateria-elite/"
+        },
+        {
+          "title": "30 Best Stops Between Vasto and Termoli",
+          "url": "https://wanderlog.com/drive/between/10035/10511/vasto-to-termoli-drive"
+        },
+        {
+          "title": "Lazio Agg 15 10 2008 | PDF",
+          "url": "https://it.scribd.com/doc/8241837/Lazio-agg-15-10-2008"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:074001:brindisi:arabella-fish-restaurant",
+      "query": "\"Arabella- Fish Restaurant\" \"Brindisi\" \"Corso Roma, 32\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "ARABELLA FISH RESTAURANT, Brindisi - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187875-d23379160-Reviews-Arabella_Fish_Restaurant-Brindisi_Province_of_Brindisi_Puglia.html"
+        },
+        {
+          "title": "ARABELLA FISH RESTAURANT, Brindisi - 2026 Reviews & Info",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g187875-d23379160-Reviews-Arabella_Fish_Restaurant-Brindisi_Province_of_Brindisi_Puglia.html"
+        },
+        {
+          "title": "ARABELLA FISH RESTAURANT, Brindisi - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187875-d23379160-Reviews-Arabella_Fish_Restaurant-Brindisi_Province_of_Brindisi_Puglia.html"
+        },
+        {
+          "title": "ARABELLA FISH RESTAURANT, Brindisi - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187875-d23379160-Reviews-or15-Arabella_Fish_Restaurant-Brindisi_Province_of_Brindisi_Puglia.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Arabella- Fish Restaurant“ | Corso Roma",
+          "url": "https://www.oraridiapertura24.it/filiale/Brindisi-Arabella-%2520Fish%2520Restaurant-4756974C.html"
+        }
+      ]
+    }
+  ]
+}

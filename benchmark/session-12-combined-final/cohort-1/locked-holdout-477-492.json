@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-477-492",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:114027:nuoro:bottega-della-pizza",
+      "query": "\"La Bottega della Pizza\" \"Nuoro\" \"Via Leonardo Alagon, 1A\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "La Bottega Della Pizza from NUORO",
+          "url": "https://menuweb.menu/restaurants/nuoro/la-bottega-della-pizza-8"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:113017:olbia:fare-garden",
+      "query": "\"Il Farè Garden\" \"Olbia\" \"Strada Provinciale, 66\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Aziende vicino Strada provinciale 66, 07020 Olbia SS, Italia",
+          "url": "https://local.reteimprese.it/strada-provinciale-66-07020-olbia-ss-italia"
+        },
+        {
+          "title": "Aziende vicino Strada provinciale 66, 07020 Palau SS, Italia",
+          "url": "https://local.reteimprese.it/strada-provinciale-66-07020-palau-ss-italia"
+        },
+        {
+          "title": "Pani | PDF",
+          "url": "https://it.scribd.com/document/186512796/Pani"
+        },
+        {
+          "title": "Corriere Della Settimana | PDF",
+          "url": "https://it.scribd.com/document/852362617/Corriere-Della-Settimana"
+        },
+        {
+          "title": "Etnografia e Cultura Materiale - Pani Tradizione e Prospettive Della Panificazione in Sardegna | PDF",
+          "url": "https://it.scribd.com/document/545122482/Etnografia-e-Cultura-Materiale-Pani-Tradizione-e-Prospettive-Della-Panificazione-in-Sardegna"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112013:bulzi:cicco-bar",
+      "query": "\"Cicco Bar\" \"Bulzi\" \"Via Vittorio Veneto, 9\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "CICCO-BAR S.N.C. DI ANDREA PIANA E ANGELA FRESI, Partita IVA: 02124370905, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1483/cicco-bar-snc-di-andrea-piana-e-angela-fresi"
+        },
+        {
+          "title": "CICCO BAR, Bulzi - Restaurant Bewertungen & Telefonnummer - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g13484206-d27254155-Reviews-Cicco_Bar-Bulzi_Province_of_Sassari_Sardinia.html"
+        },
+        {
+          "title": "Mappa dei Bar e dei Locali a Sedini - Tuttocittà",
+          "url": "https://www.tuttocitta.it/bar/sedini"
+        },
+        {
+          "title": "Bar e Caffe a Martis e dintorni",
+          "url": "https://www.virgilio.it/italia/martis/cat/BAR_E_CAFFE.html"
+        },
+        {
+          "title": "Mappa dei Bar e dei Locali a Laerru - Tuttocittà",
+          "url": "https://www.tuttocitta.it/bar/laerru"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:113025:tempio-pausania:sporting-pub",
+      "query": "\"Sporting Pub\" \"Tempio Pausania\" \"Piazza Don Giovanni Minzoni, 12\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "SPORTING PUB, Tempio Pausania - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g776125-d12228249-Reviews-Sporting_Pub-Tempio_Pausania_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "SPORTING PUB, Tempio Pausania - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g776125-d12228249-Reviews-Sporting_Pub-Tempio_Pausania_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "SPORTING PUB, Tempio Pausania - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com.au/Restaurant_Review-g776125-d12228249-Reviews-Sporting_Pub-Tempio_Pausania_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "SPORTING PUB, Tempio Pausania - Restaurant Reviews, Phone Number & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.in/Restaurant_Review-g776125-d12228249-Reviews-Sporting_Pub-Tempio_Pausania_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "Sporting Pub, Tempio Pausania - Restoran Yorumları, Fotoğraflar ve Telefon Numarası",
+          "url": "https://www.tripadvisor.com.tr/Restaurant_Review-g776125-d12228249-Reviews-Sporting_Pub-Tempio_Pausania_Province_of_Olbia_Tempio_Sardinia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118006:cagliari:uichid",
+      "query": "\"UichiD\" \"Cagliari\" \"Piazza Giuseppe Garibaldi, 33\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "UichiD, Cagliari, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/1476504/uichid"
+        },
+        {
+          "title": "UichiD، ‪Cagliari‬, إيطاليا - مراجعات وتقييمات ونصائح للزيارة – Wanderlog",
+          "url": "https://wanderlog.com/ar/place/details/1476504/uichid"
+        },
+        {
+          "title": "Mapstr - Shopping UichiD Cagliari -",
+          "url": "https://mapstr.com/place/djGNE2iRBVg"
+        },
+        {
+          "title": "Daddi Rooms & Apartment | Hotel centro en Cagliari | Desde 101€/noche",
+          "url": "https://daddiroomsapartment.hotelcentro.net/"
+        },
+        {
+          "title": "Miky M House B&B, Cagliari ** Sonderangebote 2025 **, Das beste Hotel in Cagliari ┆ Tophotels.com",
+          "url": "https://tophotels.com/hotel/italy/miky-m-house-bed-breakfast-cagliari.de"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118008:castiadas:lido-tamatete",
+      "query": "\"Lido Tamatete\" \"Castiadas\" \"Località Cala Sinzias\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Lido Tamatete, Castidias - Italia.it",
+          "url": "https://www.italia.it/it/sardegna/castiadas/dove-mangiare/lido-tamatete"
+        },
+        {
+          "title": "Contatti - Lido Tamatete",
+          "url": "https://www.lidotamatete.it/contatti-e-prenotazioni-lido-tamatete-cala-sinzias/"
+        },
+        {
+          "title": "Home - Lido Tamatete",
+          "url": "https://www.lidotamatete.it/"
+        },
+        {
+          "title": "Il mondo tamatete - Lido Tamatete",
+          "url": "https://www.lidotamatete.it/il-mondo-tamatete-esperienze-a-cala-sinzias/"
+        },
+        {
+          "title": "Gusto - Lido Tamatete",
+          "url": "https://www.lidotamatete.it/ristorante-e-bar-a-cala-sinzias-gusto-tamatete/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118002:assemini:paninetto",
+      "query": "\"Il Paninetto\" \"Assemini\" \"SP1, Traversa Seconda Str. Est, snc\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "▷ IL PANINETTO - Macchiareddu-Grogastu, Assemini",
+          "url": "https://www.cylex-italia.it/p?f=il-paninetto---macchiareddu-grogastu&id=16448916"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112050:sassari:red-pepper",
+      "query": "\"Pizzeria Red Pepper\" \"Sassari\" \"Via Giovanni Bruno, 6A\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Red Pepper | 079 994 8023 | Sassari",
+          "url": "https://www.tuttiaffari.com/pizzeria-red-pepper-079-994-8023"
+        },
+        {
+          "title": "Pizzeria Red Pepper, Sassari, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3647075/pizzeria-red-pepper"
+        },
+        {
+          "title": "153 recensioni di Pizzeria Red Pepper a Sesto San Giovanni",
+          "url": "https://altraopinione.org/pizzeria/sesto-san-giovanni/pizzeria-red-pepper/"
+        },
+        {
+          "title": "Pizzeria Red Pepper, Sassari, Italia - Reseñas, Calificaciones, Consejos y Por Qué Deberías Ir – Wanderlog",
+          "url": "https://wanderlog.com/es/place/details/3647075/pizzeria-red-pepper"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Pizzeria Red Pepper Li Punti“ | Via Giovanni Bruno",
+          "url": "https://www.oraridiapertura24.it/filiale/Sassari-Pizzeria%2520Red%2520Pepper%2520Li%2520Punti-1878664X.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:114016:gavoi:kiodo",
+      "query": "\"Bar Kiodo\" \"Gavoi\" \"Via Sassari, 97\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Kiodo | 342 166 3955 | Gavoi",
+          "url": "https://www.tuttiaffari.com/bar-kiodo-342-166-3955"
+        },
+        {
+          "title": "Autunno in Barbagia a Gavoi",
+          "url": "https://www.touringclub.it/eventi/autunno-in-barbagia-a-gavoi"
+        },
+        {
+          "title": "The Best Restaurants in Gavoi",
+          "url": "https://autoreserve.com/en/it/sardinia/gavoi"
+        },
+        {
+          "title": "Porcu Daniele - Gelateria a Orani ▷ Corso Garibaldi, 73, 08026, Orani | Firmania",
+          "url": "https://firmania.it/orani/porcu-daniele-445760"
+        },
+        {
+          "title": "▷ Da Ceccio | Bar caffè, Tonara",
+          "url": "https://www.cylex-italia.it/tonara/da-ceccio-15819336.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:113004:arzachena:beach-club-restaurant-bar",
+      "query": "\"Beach Club Restaurant & Bar\" \"Arzachena\" \"Spiaggia Cala Granu\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Beach Club Restaurant & Bar, Porto Cervo | Reviews, Photos, Address, Phone Number | Foodle",
+          "url": "https://foodle.pro/restaurants/porto-cervo/beach-club-restaurant-bar"
+        },
+        {
+          "title": "[Porto Cervo] Spiagge private e giardino - Maisons à louer à Porto Cervo, Sardegna, Italie - Airbnb",
+          "url": "https://www.airbnb.fr/rooms/854100377523285862"
+        },
+        {
+          "title": "I 50 migliori posti per il pranzo a Porto Cervo",
+          "url": "https://wanderlog.com/it/list/geoCategory/322344"
+        },
+        {
+          "title": "Beach Club Restaurant & Bar, Porto Cervo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/porto-cervo/ristorante/217059/beach-club-restaurant-e-bar"
+        },
+        {
+          "title": "[Porto Cervo] Plazhe dhe kopsht privat - Banesat me qira në Porto Cervo, Sardegna, Itali - Airbnb",
+          "url": "https://sq.airbnb.com/rooms/854100377523285862"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112001:alghero:sant-miquel",
+      "query": "\"Birreria Sant Miquel\" \"Alghero\" \"Via Gaspare Vera e Libera Arduino, 51\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:117015:sanluri:mafe-caffe",
+      "query": "\"Mafe Caffè\" \"Sanluri\" \"Piazza San Pietro, 11\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "XIII Rievocazione storica",
+          "url": "https://www.comune.sanluri.su.it/wp-content/uploads/2023/06/definitivo-programma-sa-battalla-2023-web-1-1.pdf"
+        },
+        {
+          "title": "Stazione di servizio auto a Sanluri (SU) | 91 annunci e recensioni",
+          "url": "https://localitybiz.it/sardegna/stazione-di-servizio-auto-a-sanluri"
+        },
+        {
+          "title": "Sa Battalla a Sanluri Programma dal 29 Giugno al 1 Luglio 2023 - Sardegnatoujours",
+          "url": "https://www.sardegnatoujours.com/sa-battalla-a-sanluri-programma/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:113021:san-teodoro:san-teodoro-holiday-rooms",
+      "query": "\"San Teodoro Holiday Rooms\" \"San Teodoro\" \"Via del Tirreno, 46\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Dormire a San Teodoro",
+          "url": "https://imposta-soggiorno.org/santeodoro/dove-dormire/index.php"
+        },
+        {
+          "title": "Pensiones en San Teodoro (Sardinia)",
+          "url": "https://www.sardiniahotel24.com/es/san-teodoro-hotels-36926/type/guest-houses-10/3/"
+        },
+        {
+          "title": "Hotels in San Teodoro from €48 - Find Cheap Hotels with momondo",
+          "url": "https://www.momondo.ie/hotels/san-teodoro-sardinia"
+        },
+        {
+          "title": "Hotéis centrais em San Teodoro (Sardinia) - página 3",
+          "url": "https://www.top-hotels-sardinia.com/pt/san-teodoro-hotels-36926/theme/central-hotels-8/3/"
+        },
+        {
+          "title": "Cheap and budget hotels in San Teodoro (Sardinia) - page 2",
+          "url": "https://www.top-hotels-sardinia.com/en/san-teodoro-hotels-36926/theme/cheap-and-budget-hotels-9/2/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118006:cagliari:fresca-voglia",
+      "query": "\"Fresca Voglia\" \"Cagliari\" \"Via della Pineta, 249\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "GELATERIA FRESCA VOGLIA, Cagliari - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187881-d8450738-Reviews-Gelateria_Fresca_Voglia-Cagliari_Province_of_Cagliari_Sardinia.html"
+        },
+        {
+          "title": "Fresca Voglia Cagliari · 4.7★ (1393) | GelatoMaps",
+          "url": "https://gelatomaps.com/it/gelateria/fresca-voglia-cagliari/"
+        },
+        {
+          "title": "FRESCA VOGLIA S.R.L., Partita IVA: 03342730920, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/6500/fresca-voglia-srl"
+        },
+        {
+          "title": "Fresca Voglia | 070 451 1048 | Cagliari",
+          "url": "https://www.tuttiaffari.com/fresca-voglia_2V-070-451-1048"
+        },
+        {
+          "title": "Fresca Voglia, Cagliari - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Gelateria-Fresca-Voglia-Cagliari"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:114035:orgosolo:locoe",
+      "query": "\"Agriturismo Locoe\" \"Orgosolo\" \"Strada Provinciale 58, 15\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:118048:selargius:l-angolo-della-pizza",
+      "query": "\"L'Angolo della Pizza\" \"Selargius\" \"Via Trieste, 84b\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "L'ANGOLO DELLA PIZZA, Selargius - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1574679-d4027264-Reviews-L_angolo_della_pizza-Selargius_Province_of_Cagliari_Sardinia.html"
+        },
+        {
+          "title": "L'ANGOLO DELLA PIZZA, Selargius - Menu, Prices & Restaurant Reviews - Order Online Food Delivery - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1574679-d4027264-Reviews-L_angolo_della_pizza-Selargius_Province_of_Cagliari_Sardinia.html"
+        },
+        {
+          "title": "L'ANGOLO DELLA PIZZA, Selargius - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1574679-d4027264-Reviews-L_angolo_della_pizza-Selargius_Province_of_Cagliari_Sardinia.html"
+        },
+        {
+          "title": "L'ANGOLO DELLA PIZZA, Selargius - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1574679-d4027264-Reviews-or60-L_angolo_della_pizza-Selargius_Province_of_Cagliari_Sardinia.html"
+        },
+        {
+          "title": "Menu L'angolo Della Pizza",
+          "url": "https://weur-cdn.piatti.menu/storage/media/companies_menu_pdf/109034604/langolo-della-pizza-selargius-piatti.pdf"
+        }
+      ]
+    }
+  ]
+}

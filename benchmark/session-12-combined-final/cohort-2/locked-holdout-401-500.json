@@ -1,0 +1,2242 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-extension-capture-401-500",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:077013:irsina:ducale-ristorante-pizzeria-braceria",
+      "query": "\"Il Ducale Ristorante Pizzeria Braceria\" \"Irsina\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "LOS 10 MEJORES restaurantes en Irsina (2026) - Tripadvisor",
+          "url": "https://www.tripadvisor.com.ar/Restaurants-g2369013-Irsina_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "Ducale Pizzeria da IRSINA",
+          "url": "https://piatti.menu/restaurants/irsina/caffe-ducale"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076007:avigliano:anema-e-core",
+      "query": "\"Anema e Core\" \"Avigliano\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Anema e Core cafè, Avigliano - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Anema-e-Core-cafe-Avigliano"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077014:matera:villa-ristories",
+      "query": "\"Villa Ristòries\" \"Matera\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "VILLA RISTÒRIES, Matera - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187772-d34493070-Reviews-Villa_Ristories-Matera_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "Villa Ristòries 4 Camera con Vista sulla collina Materana, Wi-Fi e Aria Condizionata - Matera | Vrbo",
+          "url": "https://www.vrbo.com/it-it/affitto-vacanze/p5797774"
+        },
+        {
+          "title": "Villa Ristòries Camera 6 con Terrazza, Wi-Fi e Aria Condizionata - Matera | Vrbo",
+          "url": "https://www.vrbo.com/it-it/affitto-vacanze/p5797780"
+        },
+        {
+          "title": "VILLA RISTÒRIES, Matera - Restaurant Avis, Numéro de Téléphone & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g187772-d34493070-Reviews-Villa_Ristories-Matera_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "VILLA RISTÒRIES, Matera - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187772-d34493070-Reviews-Villa_Ristories-Matera_Province_of_Matera_Basilicata.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077017:montescaglioso:bon-ton",
+      "query": "\"Bon Ton\" \"Montescaglioso\" \"Via Gaetano Donizetti\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bon Ton, Montescaglioso - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Bon-Ton-Cafe-Montescaglioso"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076048:melfi:sfizio-melfi",
+      "query": "\"Sfizio Melfi\" \"Melfi\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "SFIZIO, Melfi - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2027115-d12857657-Reviews-Sfizio-Melfi_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Sfizio, Melfi - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g2027115-d12857657-Sfizio-Melfi_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "Sfizio, Melfi - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Sfizio-Melfi"
+        },
+        {
+          "title": "Sfizio: Experience Culinary Excellence in Melfi, Italy",
+          "url": "https://sfizio.shop/"
+        },
+        {
+          "title": "Sfizio, Melfi - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Sfizio-Melfi"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:central-station-caffe",
+      "query": "\"Central Station Caffe\" \"Potenza\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Central Station Caffé | 327 358 6260 | Potenza (Italia)",
+          "url": "https://www.tuttiaffari.com/central-station-caff%C3%A9-327-358-6260"
+        },
+        {
+          "title": "Central Station Caffé, Potenza, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/14126705/central-station-caff%C3%A9"
+        },
+        {
+          "title": "Central Station Caffé, Potenza - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Central-Station-Caffe-Potenza"
+        },
+        {
+          "title": "Central Station Caffé, Potenza - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Central-Station-Caffe-Potenza"
+        },
+        {
+          "title": "Potenza Centrale Map - Railway station - Potenza, Basilicata, Italy",
+          "url": "https://mapcarta.com/W349593802"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076085:senise:eldorado-pub",
+      "query": "\"Eldorado Pub\" \"Senise\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Eldorado Pub, 51 Via Amendola, Senise - Waze",
+          "url": "https://www.waze.com/live-map/directions/italy/basilicata/senise/eldorado-pub?to=place.ChIJVdIp-hqzOBMRBisBPoID7U8"
+        },
+        {
+          "title": "Eldorado Pub | 349 415 3527 | Senise (Italia)",
+          "url": "https://www.tuttiaffari.com/eldorado-pub-349-415-3527"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Eldorado Pub“ | Via Giorgio Amendola",
+          "url": "https://www.oraridiapertura24.it/filiale/Senise-Eldorado%2520Pub-892784Y.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076044:maratea:gelateria-pasticceria-da-riccardo",
+      "query": "\"Bar Gelateria Pasticceria Da Riccardo\" \"Maratea\" \"Via Santavenere\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Gelateria Pasticceria Da Riccardo, Maratea - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Gelateria-Pasticceria-da-Riccardo-Maratea"
+        },
+        {
+          "title": "Bar Gelateria Pasticceria Da Riccardo, Maratea - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Bar-Gelateria-Pasticceria-da-Riccardo-Maratea"
+        },
+        {
+          "title": "Bar Gelateria Pasticceria Da Riccardo, Maratea - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Bar-Gelateria-Pasticceria-da-Riccardo-Maratea"
+        },
+        {
+          "title": "Bar Gelateria Pasticceria Da Riccardo, Camerota, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3124574/bar-gelateria-pasticceria-da-riccardo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077014:matera:girotondo-di-pizza",
+      "query": "\"Girotondo di pizza\" \"Matera\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "GIROTONDO DI PIZZA, Matera - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187772-d3484074-Reviews-Girotondo_di_Pizza-Matera_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "GIROTONDO DI PIZZA ALLA GOCCIA, Matera - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187772-d18724612-Reviews-Pizza_Alla_Goccia-Matera_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "Un Girotondo di Pizza Aquarium consegna in zona Matera - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/Matera/matera/un-girotondo-di-pizza-aquarium"
+        },
+        {
+          "title": "GIROTONDO DI PIZZA, Matera - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g187772-d3484074-Reviews-Girotondo_di_Pizza-Matera_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "Un Girotondo di Pizza Aquarium consegna in zona Matera - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/matera/matera/un-girotondo-di-pizza-aquarium"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076056:oppido-lucano:85015-ristopub",
+      "query": "\"85015 Ristopub\" \"Oppido Lucano\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "85015 Ristopub a Oppido Lucano, in provincia di Potenza",
+          "url": "https://www.85015ristopub.it/"
+        },
+        {
+          "title": "Locale con Musica dal Vivo a Oppido Lucano (PZ) | 85015 Ristopub",
+          "url": "https://www.85015ristopub.it/contatti"
+        },
+        {
+          "title": "Pub Ristorante Pizzeria a Oppido Lucano (PZ) | 85015 Ristopub",
+          "url": "https://www.85015ristopub.it/servizi"
+        },
+        {
+          "title": "85015 RISTOPUB, Oppido Lucano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/85015-RISTOPUB-Oppido-Lucano"
+        },
+        {
+          "title": "85015 RISTO-PUB, Oppido Lucano - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1235333-d33014383-Reviews-85015_Risto_Pub-Oppido_Lucano_Province_of_Potenza_Basilicata.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076066:rionero-in-vulture:vecchio-cortile",
+      "query": "\"Ristorante Osteria Vecchio Cortile\" \"Rionero in Vulture\" \"Via Luigi la Vista\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Banchetti | Rionero In Vulture | Ristorante Osteria Vecchio Cortile",
+          "url": "https://www.osteriavecchiocortile.it/contatti"
+        },
+        {
+          "title": "Ristorante per eventi | Rionero In Vulture, PZ | Ristorante Osteria Vecchio Cortile",
+          "url": "https://www.osteriavecchiocortile.it/"
+        },
+        {
+          "title": "RISTORANTE OSTERIA VECCHIO CORTILE, Rionero in Vulture - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1234704-d1509470-Reviews-Osteria_Vecchio_Cortile-Rionero_in_Vulture_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "Ristorante Osteria Vecchio Cortile, Rionero In Vulture - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Osteria-Vecchio-Cortile-Rionero-In-Vulture"
+        },
+        {
+          "title": "RISTORANTE OSTERIA VECCHIO CORTILE, Rionero in Vulture - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g1234704-d1509470-Reviews-Osteria_Vecchio_Cortile-Rionero_in_Vulture_Province_of_Potenza_Basilicata.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:mediterraneo",
+      "query": "\"Caffe Mediterraneo\" \"Potenza\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "CAFFE' MEDITERRANEO - S.R.L., Partita IVA: 01637870765, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/9546/caffe-mediterraneo-srl"
+        },
+        {
+          "title": "CAFFE MEDITERRANEO POTENZA - Impresa Italia",
+          "url": "https://www.impresaitalia.info/kk03741138/caffe-mediterraneo/potenza.aspx"
+        },
+        {
+          "title": "Caffe' Mediterraneo Srl | Bar e altri esercizi simili senza cucina a Potenza | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/caffe-mediterraneo-srl/bf6f858d0af1"
+        },
+        {
+          "title": "▷ Caffe Mediterraneo a Potenza (85100) - Bar",
+          "url": "https://www.misterimprese.it/basilicata/potenza/potenza/bar-e-caffe/1915936.html"
+        },
+        {
+          "title": "Dati della società Caffe' Mediterraneo Srl (01637870765), Basilicata, Potenza, POTENZA - REGISTROAZIENDE.it",
+          "url": "https://registroaziende.it/azienda/caffe-mediterraneo-srl-potenza"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076059:picerno:plebiscito-cafe-bistrot",
+      "query": "\"Plebiscito Cafè - Bistrot\" \"Picerno\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Plebiscito Cafè - Gambero Rosso",
+          "url": "https://www.gamberorosso.it/luoghi/locali/ristorante/plebiscito-cafe"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077021:policoro:rosa",
+      "query": "\"Bar Rosa\" \"Policoro\" \"Via Siris\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Rosa | 0835 971819 | Policoro",
+          "url": "https://www.tuttiaffari.com/bar-rosa_13G-0835-971819"
+        },
+        {
+          "title": "Bar Rosa, Policoro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Rosa-Policoro"
+        },
+        {
+          "title": "Bar Rosa Policoro, Policoro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/policoro/ristorante/8603304/bar-rosa-policoro"
+        },
+        {
+          "title": "BAR ROSA POLICORO - Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1020248-d23984462-Reviews-Bar_Rosa_Policoro-Policoro_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "Menu da Bar Rosa, Policoro, Via Siris",
+          "url": "https://restaurantguru.it/Bar-Rosa-Policoro/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:pipistrello-pub",
+      "query": "\"Pipistrello Pub\" \"Potenza\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pipistrello Pub | 333 382 9430 | Potenza (Italia)",
+          "url": "https://www.tuttiaffari.com/pipistrello-pub-333-382-9430"
+        },
+        {
+          "title": "Pipistrello Pub, Potenza - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Al-Pipistrello-Potenza"
+        },
+        {
+          "title": "AL PIPISTRELLO PUB, Potenza - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187773-d4754627-Reviews-Al_Pipistrello_Pub-Potenza_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "Pipistrello, Potenza - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Al-Pipistrello-Potenza"
+        },
+        {
+          "title": "Al Pipistrello Pub - Potenza",
+          "url": "https://www.papido.it/potenza/cocktail-bar/al-pipistrello-pub.htm"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076056:oppido-lucano:ice-cream-cafe-lounge",
+      "query": "\"Ice Cream Cafè & Lounge\" \"Oppido Lucano\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ice cream cafè & lounge | 329 315 6038 | Oppido Lucano",
+          "url": "https://www.tuttiaffari.com/ice-cream-caf%C3%A8-lounge-329-315-6038"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077003:bernalda:san-donato",
+      "query": "\"Ristorante - Pizzeria San Donato\" \"Bernalda\" \"Corso Umberto I\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante - Pizzeria San Donato | 349 646 3527 | Bernalda",
+          "url": "https://www.tuttiaffari.com/ristorante-pizzeria-san-donato-349-646-3527"
+        },
+        {
+          "title": "Ristorante - Pizzeria San Donato, Bernalda - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/RistorantePizzeria-Le-Sirene-Bernalda"
+        },
+        {
+          "title": "Ristorante - Pizzeria San Donato, Bernalda - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/RistorantePizzeria-Le-Sirene-Bernalda"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077014:matera:paradiso-del-boschetto",
+      "query": "\"Paradiso del boschetto\" \"Matera\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "PARADISO DEL BOSCHETTO, Matera - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g187772-d17748908-Reviews-Paradiso_del_boschetto-Matera_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "Paradiso del boschetto a Matera - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork",
+          "url": "https://www.thefork.it/ristorante/paradiso-del-boschetto-r817392"
+        },
+        {
+          "title": "Restaurante Paradiso del boschetto en Matera - Menú 2026, opiniones, precios y reserva | TheFork",
+          "url": "https://www.thefork.es/restaurante/paradiso-del-boschetto-r817392"
+        },
+        {
+          "title": "PARADISO DEL BOSCHETTO, Matera - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187772-d17748908-Reviews-Paradiso_del_boschetto-Matera_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "Menù completo e carta 2026 - Paradiso del boschetto a Matera | TheFork",
+          "url": "https://www.thefork.it/ristorante/paradiso-del-boschetto-r817392/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077008:ferrandina:da-vincenzo-1977",
+      "query": "\"Da Vincenzo 1977\" \"Ferrandina\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Recensioni Bar La Lampada (28) - Ferrandina | Sluurpy",
+          "url": "https://www.sluurpy.it/ferrandina/gastronomia/18424/bar-la-lampada/recensioni"
+        },
+        {
+          "title": "La tradizione millenaria del panzerotto a Ferrandina trasferita da Vincenzo Festa, intervento Enzo Scasciamacchia - SassiLive",
+          "url": "https://www.sassilive.it/cultura-e-spettacoli/terza-pagina/la-tradizione-millenaria-del-panzerotto-a-ferrandina-trasferita-da-vincenzo-festa-intervento-enzo-scasciamacchia/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076095:venosa:boulevard-cafe",
+      "query": "\"Boulevard Cafe\" \"Venosa\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Dove Bere | Comune di Venosa",
+          "url": "https://www.comune.venosa.pz.it/page/dove-bere"
+        },
+        {
+          "title": "Menu at Boulevard Cafè pub & bar, Venosa",
+          "url": "https://restaurantguru.com/Boulevard-Cafe-Venosa/menu"
+        },
+        {
+          "title": "Boulevard Cafè, Venosa - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Boulevard-Cafe-Venosa"
+        },
+        {
+          "title": "Boulevard Cafè, Venosa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Boulevard-Cafe-Venosa"
+        },
+        {
+          "title": "Boulevard Cafè, Venosa - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Boulevard-Cafe-Venosa"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:mcdonald-s",
+      "query": "site:mcdonalds.it \"Viale del Basento\" \"Potenza\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Locale  | Indirizzo ubicazione  | Città  | CAP",
+          "url": "https://www.mcdonalds.it/sites/default/files/html/documents/2023-04/ristoranti-aderenti-crispy-mcbacon-days.pdf"
+        },
+        {
+          "title": "Potenza | McDonaldʹs Italia",
+          "url": "https://www.mcdonalds.it/ristorante/basilicata/potenza/potenza"
+        },
+        {
+          "title": "Ristoranti aderenti | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076040:latronico:perla-nera",
+      "query": "\"La perla nera\" \"Latronico\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "AVVISO PUBBLICO",
+          "url": "https://www.regione.basilicata.it/wp-content/uploads/giunta/docs/DOCUMENT_FILE_3058232.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077020:pisticci:16-parallelo",
+      "query": "\"16° Parallelo\" \"Pisticci\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "A Marconia la \"Prima festa dell'agricoltore\" - Pisticci.com",
+          "url": "https://www.pisticci.com/index.php/interventi-e-appuntamenti/item/6553-a-marconia-la-prima-festa-dell-agricoltore.html"
+        },
+        {
+          "title": "16° Parallelo 2.0 - Pisticci, Viale Ontario, 12",
+          "url": "https://aziende.virgilio.it/ristoranti/marconia-mt/16-parallelo-2-0"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077014:matera:rl-cafe",
+      "query": "\"Rl Cafe\" \"Matera\" \"Via Monte Rosa\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Rl Cafe | 0835 307753 | Matera",
+          "url": "https://www.tuttiaffari.com/rl-cafe-0835-307753"
+        },
+        {
+          "title": "▷ Rl Cafe | Gelateria, Matera",
+          "url": "https://www.cylex-italia.it/matera/rl-cafe-14220421.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076046:marsicovetere:da-massimino",
+      "query": "\"Pizzeria da Massimino\" \"Marsicovetere\" \"Via Quinto Orazio Flacco\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA D'ASPORTO DA MASSIMINO, Villa d'Agri - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2167630-d6451348-Reviews-Pizzeria_D_asporto_Da_Massimino-Villa_d_Agri_Marsicovetere_Province_of_Potenza_B.html"
+        },
+        {
+          "title": "PIZZERIA D'ASPORTO DA MASSIMINO, Villa d'Agri - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2167630-d6451348-Reviews-Pizzeria_D_asporto_Da_Massimino-Villa_d_Agri_Marsicovetere_Province_of_Potenza_B.html"
+        },
+        {
+          "title": "PIZZERIA D'ASPORTO DA MASSIMINO, Villa d'Agri - 2026 Reviews",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g2167630-d6451348-Reviews-Pizzeria_D_asporto_Da_Massimino-Villa_d_Agri_Marsicovetere_Province_of_Potenza_B.html"
+        },
+        {
+          "title": "Pizzeria D'asporto Da Massimino, Villa d'Agri - Menü, Fiyatlar ve Restoran Yorumları",
+          "url": "https://www.tripadvisor.com.tr/Restaurant_Review-g2167630-d6451348-Reviews-Pizzeria_D_asporto_Da_Massimino-Villa_d_Agri_Marsicovetere_Province_of_Potenza_B.html"
+        },
+        {
+          "title": "PIZZERIA D'ASPORTO DA MASSIMINO, Villa d'Agri - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2167630-d6451348-Reviews-or15-Pizzeria_D_asporto_Da_Massimino-Villa_d_Agri_Marsicovetere_Province_of_Pote.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078037:cerisano:las-vegas",
+      "query": "\"Bar Las Vegas\" \"Cerisano\" \"Via San Pietro\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Mappa dei Bar e dei Locali a Domanico - Tuttocittà",
+          "url": "https://www.tuttocitta.it/bar/domanico"
+        },
+        {
+          "title": "á… Orari di apertura â€žBar Las Vegas Sas Di Muoio Eugenio & c.â€œ | Via San Pietro",
+          "url": "https://www.oraridiapertura24.it/filiale/Cerisano-Bar%2520Las%2520Vegas%2520Sas%2520Di%2520Muoio%2520Eugenio%2520%2526%2520c.-2375428E.html"
+        },
+        {
+          "title": "BAR LAS VEGAS S.A.S. DI MUOIO EUGENIO & C., Partita IVA: 03140250782, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/7302/bar-las-vegas-sas-di-muoio-eugenio-c"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078138:scalea:l-oliva",
+      "query": "\"Osteria L'Oliva\" \"Scalea\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante Osteria L'Oliva, Scalea - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Ristorante-Osteria-LOliva-Scalea"
+        },
+        {
+          "title": "Menu da Ristorante Osteria L'Oliva, Scalea",
+          "url": "https://restaurantguru.it/Ristorante-Osteria-LOliva-Scalea/menu"
+        },
+        {
+          "title": "OSTERIA L'OLIVA DI CODREANU ROBERT ANDREI | Scheda Azienda | iCRIBIS",
+          "url": "https://www.icribis.com/it/scheda-azienda/CS255654_OSTERIA_LOLIVA_DI_CODREANU_ROBERT_ANDREI"
+        },
+        {
+          "title": "Osteria L'oliva from Scalea",
+          "url": "https://menuweb.menu/restaurants/scalea-2/osteria-loliva-2"
+        },
+        {
+          "title": "OSTERIA L'OLIVA DI CODREANU ROBERT ANDREI Partita IVA:03737420780 | Report aziendale Gratuito",
+          "url": "https://www.visura.pro/imprese/4165554660-osteria-l-oliva-di-codreanu-robert-andrei.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079023:catanzaro:maxcafe",
+      "query": "\"Maxcafè\" \"Catanzaro\" \"Via Contrada Janò\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Torrefazioni Caffe Esercizi e Vendita al Dettaglio a Catanzaro in Via Contrada Janò",
+          "url": "https://www.virgilio.it/italia/catanzaro/via/via-contrada-jan%C3%B2/torrefazioni-caffe-esercizi-e-vendita-al-dettaglio"
+        },
+        {
+          "title": "Maxcafè Torrefazione Artigianale - Catanzaro, Via Contrada Janò, 23",
+          "url": "https://aziende.virgilio.it/torrefazione/catanzaro-cz/maxcaftorrefazioneartigianale-catanzaro"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078093:parenti:speedy-food-drink",
+      "query": "\"Speedy Food & Drink\" \"Parenti\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "SPEEDY FOOD & DRINK DI CELLO MARCELLO, Parenti - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g3526912-d27831297-Reviews-Speedy_Food_Drink_Di_Cello_Marcello-Parenti_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "Speedy Food & Drink di Cello Marcello, Parenti - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Speedy-Food-and-Drink-di-Cello-Marcello-Parenti"
+        },
+        {
+          "title": "SPEEDY FOOD & DRINK DI CELLO MARCELLO, Parenti - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g3526912-d27831297-Reviews-Speedy_Food_Drink_Di_Cello_Marcello-Parenti_Province_of_Cosenza_Calabria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:102047:vibo-valentia:270-grammi-pizzeria-friggitoria-vibo-valentia",
+      "query": "\"270 Grammi Pizzeria Friggitoria Vibo Valentia\" \"Vibo Valentia\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "270 Grammi | Pizzeria Braceria a Vibo Valentia e Vibo Marina",
+          "url": "https://www.pizzeria270grammi.it/"
+        },
+        {
+          "title": "270 GRAMMI PIZZERIA FRIGGITORIA, Vibo Valentia - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g580200-d14016459-Reviews-270_Grammi_Pizzeria_Friggitoria-Vibo_Valentia_Province_of_Vibo_Valentia_Calabria.html"
+        },
+        {
+          "title": "270 GRAMMI - PIZZERIA E FRIGGITORIA NAPOLETANA CON DEHOR ESTERNO | PagineSI!",
+          "url": "https://www.paginesi.it/scheda/vibo-valentia-270-grammi-pizzeria-e-friggitoria-napoletana-con-dehor-esterno/26132727/"
+        },
+        {
+          "title": "270 GRAMMI PIZZERIA FRIGGITORIA, Vibo Valentia - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g580200-d14016459-Reviews-270_Grammi_Pizzeria_Friggitoria-Vibo_Valentia_Province_of_Vibo_Valentia_Calabria.html"
+        },
+        {
+          "title": "270 GRAMMI PIZZERIA FRIGGITORIA, Vibo Valentia - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.ie/Restaurant_Review-g580200-d14016459-Reviews-270_Grammi_Pizzeria_Friggitoria-Vibo_Valentia_Province_of_Vibo_Valentia_Calabria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080063:reggio-di-calabria:pasticceria-fragomeni",
+      "query": "\"Pasticceria Fragomeni\" \"Reggio di Calabria\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pasticceria Fragomeni | Touring Club Italiano",
+          "url": "https://www.touringclub.it/destinazioni/reggio-di-calabria/fare/282751-pasticceria-fragomeni"
+        },
+        {
+          "title": "Fragomeni | Pasticceria a Reggio di Calabria | Dove Pasticcio",
+          "url": "https://www.dovepasticcio.it/pasticcerie/dettaglio/4735/fragomeni-a-reggio-di-calabria"
+        },
+        {
+          "title": "Fragomeni - Pasticceria a Reggio Calabria ▷ Via Sbarre Inferiori N 120, Reggio Calabria, Reggio di Calabria, 89129 | Firmania",
+          "url": "https://firmania.it/reggio-calabria/pasticceria-fragomeni-2477476"
+        },
+        {
+          "title": "Orari di apertura Fragomeni ▷ Reggio Calabria Via Sbarre Inferiori N 120, Reggio Calabria, Reggio di Calabria, 89129 | Trova Aperto",
+          "url": "https://trova-aperto.it/reggio-calabria/pasticceria-fragomeni-143510"
+        },
+        {
+          "title": "Fragomeni da REGGIO DI CALABRIA",
+          "url": "https://piatti.menu/restaurants/reggio-di-calabria/pasticceria-fratelli-fragomeni"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078066:lattarico:monaco-ristorante",
+      "query": "\"Il Monaco ristorante\" \"Lattarico\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Il Monaco – Ristorante e Pizzeria a Lattarico",
+          "url": "https://www.ilmonaco.it/"
+        },
+        {
+          "title": "Il Monaco Ristorante Pizzeria a Lattarico (CS)",
+          "url": "https://www.saleepepequantobasta.com/2022/10/il-monaco-ristorante-pizzeria-lattarico.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Il Monaco Ristorante“ | Via Monaco",
+          "url": "https://www.oraridiapertura24.it/filiale/Lattarico-Il%2520Monaco%2520Ristorante-2896584V.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080025:caulonia:friggitoria-ma-no-chips",
+      "query": "\"Friggitoria ma.no chips\" \"Caulonia\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Friggitoria ma.no chips, Caulonia Marina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Friggitoria-mano-chips-Caulonia-Marina"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078157:corigliano-rossano:olimpia",
+      "query": "\"Bar Olimpia\" \"Corigliano-Rossano\" \"Via Margherita\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Olimpia | Via Margherita 60, Corigliano-rossano",
+          "url": "https://negozi.sisal.com/my-sisal/corigliano-rossano-via-margherita-60-bar-olimpia"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Bar Olimpia“ | Via Margherita",
+          "url": "https://www.oraridiapertura24.it/filiale/Corigliano-Rossano-Bar%2520Olimpia-1793032V.html"
+        },
+        {
+          "title": "▷ Bar Olimpia a Corigliano-Rossano (87064) - Bar",
+          "url": "https://www.misterimprese.it/calabria/cosenza/corigliano-rossano/bar-e-caffe/1932236.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078025:cariati:san-gennaro",
+      "query": "\"Pizzeria San Gennaro\" \"Cariati\" \"Via Dante Alighieri\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA SAN GENNARO, Cariati - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1186288-d10733453-Reviews-Pizzeria_San_Gennaro-Cariati_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Pizzeria San Gennaro, Cariati",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g1186288-d10733453-Pizzeria_San_Gennaro-Cariati_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "PIZZERIA SAN GENNARO, Cariati - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1186288-d10733453-Reviews-Pizzeria_San_Gennaro-Cariati_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "PIZZERIA SAN GENNARO, Cariati - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g1186288-d10733453-Reviews-Pizzeria_San_Gennaro-Cariati_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "PIZZERIA SAN GENNARO DI OLIVA SALVATORE, Partita IVA: 03360430783, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/5626/pizzeria-san-gennaro-di-oliva-salvatore"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080096:villa-san-giovanni:icaffe-capsule-e-cialde-per-caffe",
+      "query": "\"Icaffe Capsule e Cialde per Caffe\" \"Villa San Giovanni\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Icaffe' Capsule e Cialde per Caffe' | 329 649 3627 | Villa San Giovanni",
+          "url": "https://www.tuttiaffari.com/icaffe_1D-329-649-3627"
+        },
+        {
+          "title": "Icaffe' Capsule e Cialde per Caffe' a Villa San Giovanni",
+          "url": "https://www.ricercare-imprese.it/villa-san-giovanni/icaffe-capsule-e-cialde-per-caffe-aYucbi.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078045:cosenza:morrison-s-pub",
+      "query": "\"Morrison's Pub\" \"Cosenza\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "qodeup",
+          "url": "https://www.qodeup.com/index.php/home/index/morrisonspub/it"
+        },
+        {
+          "title": "Morrison's Pub | 338 586 9961 | Cosenza",
+          "url": "https://www.tuttiaffari.com/morrisons-pub-338-586-9961"
+        },
+        {
+          "title": "MORRISON'S IRISH PUB, Cosenza - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187776-d10112240-Reviews-Morrison_s_Irish_Pub-Cosenza_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "MORRISON'S IRISH PUB, Cosenza - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187776-d10112240-Reviews-Morrison_s_Irish_Pub-Cosenza_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "Morrison's Pub, Cosenza - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Morrisons-Cosenza"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080013:bova-marina:di-petru-i-ntoni",
+      "query": "\"Di Petru i ‘Ntoni\" \"Bova Marina\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Agriturismo Di Petru i ‘Ntoni – Agriturismo Di Petru i ‘Ntoni – Cucina Calabrese, Tradizione e Relax a Bova Marina",
+          "url": "https://www.agriturismodipetruintoni.it/"
+        },
+        {
+          "title": "Le Camere – Agriturismo Di Petru i ‘Ntoni",
+          "url": "https://www.agriturismodipetruintoni.it/le-camere/"
+        },
+        {
+          "title": "Contatti – Agriturismo Di Petru i ‘Ntoni",
+          "url": "https://www.agriturismodipetruintoni.it/contatti/"
+        },
+        {
+          "title": "Chi Siamo – Agriturismo Di Petru i ‘Ntoni",
+          "url": "https://www.agriturismodipetruintoni.it/chi-siamo/"
+        },
+        {
+          "title": "Agriturismo di Petru i 'Ntoni, Reggio Calabria, Italia - Recensioni, Valutazioni, Consigli e Perché Dovresti Andare – Wanderlog",
+          "url": "https://wanderlog.com/it/place/details/3209986/agriturismo-di-petru-i-ntoni"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078091:paola:desire",
+      "query": "\"Desire\" \"Paola\" \"Via Nazionale\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "PASTICCERIA E GELATERIA DESIRE' S.A.S. DI PENNA FEDELE & C., Partita IVA: 02446070787, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/4979/pasticceria-e-gelateria-desire-snc-di-penna-fedele-c"
+        },
+        {
+          "title": "PASTICCERIA DESIRÉ, Paola - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1028673-d27484858-Reviews-Pasticceria_Desire-Paola_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "PASTICCERIA E GELATERIA DESIRE SNC DI PENNA FRANCESCO E C PAOLA - Impresa Italia",
+          "url": "https://www.impresaitalia.info/mstdb80356593/pasticceria-e-gelateria-desire-snc-di-penna-francesco-e-c/paola.aspx"
+        },
+        {
+          "title": "PASTICCERIA E GELATERIA DESIRE' S.A.S. DI PENNA FEDELE & C. | Scheda Azienda | iCRIBIS",
+          "url": "https://www.icribis.com/it/scheda-azienda/CS165907_PASTICCERIA_E_GELATERIA_DESIRE_S.A.S._DI_PENNA_FEDELE_%26amp%3Bamp%3B_C."
+        },
+        {
+          "title": "Pasticceria E Gelateria Desiré, Paola - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pasticceria-E-Gelateria-Desire-Paola"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078157:corigliano-rossano:peterland-corigliano-rossano",
+      "query": "\"Peterland Corigliano Rossano\" \"Corigliano-Rossano\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Peterland - Corigliano-Rossano, Peterland Via Bari, 42",
+          "url": "https://aziende.virgilio.it/alimentari/corigliano-rossano-cs/peterland"
+        },
+        {
+          "title": "Prenota Apeiron a Corigliano-Rossano - Hotels.com",
+          "url": "https://it.hotels.com/ho3287467776/apeiron-schiavonea-italia/"
+        },
+        {
+          "title": "Prenota Apulia Hotel Corigliano Calabro a Corigliano-Rossano - Hotels.com",
+          "url": "https://it.hotels.com/ho759134176/apulia-hotel-corigliano-calabro-corigliano-rossano-italia/?equalTargetTab=tab-0"
+        },
+        {
+          "title": "Prenota Holiday Affittacamere a Corigliano-Rossano - Hotels.com",
+          "url": "https://it.hotels.com/ho877564768/holiday-affittacamere-corigliano-rossano-italia/"
+        },
+        {
+          "title": "Peterland (Burger Store | Master Chips), Corigliano-Rossano, Italia - Recensioni, Valutazioni, Consigli e Perché Dovresti Andare – Wanderlog",
+          "url": "https://wanderlog.com/it/place/details/3721381/peterland-burger-store--master-chips"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078145:tarsia:sinopoli-industrial-cafe",
+      "query": "\"Sinopoli Industrial Cafe\" \"Tarsia\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "TARSIA | Olea",
+          "url": "https://www.bbolea.it/blank"
+        },
+        {
+          "title": "Sinopoli industrial cafè, Tarsia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Sinopoli-industrial-cafe-Tarsia"
+        },
+        {
+          "title": "Sinopoli industrial cafè, Tarsia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Sinopoli-industrial-cafe-Tarsia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079137:soverato:stuzzichino",
+      "query": "\"Lo stuzzichino\" \"Soverato\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Lo Stuzzichino",
+          "url": "https://www.lostuzzichinosoverato.it/"
+        },
+        {
+          "title": "Menu Pizzeria – Lo Stuzzichino",
+          "url": "https://www.lostuzzichinosoverato.it/menu-pizzeria/"
+        },
+        {
+          "title": "Lo stuzzichino",
+          "url": "https://soverato.comune.digital/fooddrinks/i/77510206/lo-stuzzichino"
+        },
+        {
+          "title": "LO STUZZICHINO, Soverato - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g677476-d7980804-Reviews-Lo_Stuzzichino-Soverato_Province_of_Catanzaro_Calabria.html"
+        },
+        {
+          "title": "LO STUZZICHINO, Soverato - Photos & Restaurant Reviews - Order Online Food Delivery - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g677476-d7980804-Reviews-Lo_Stuzzichino-Soverato_Province_of_Catanzaro_Calabria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079023:catanzaro:pizza-e-sfizi",
+      "query": "\"Pizza e Sfizi\" \"Catanzaro\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Don Vittò Pizza e Sfizi - Catanzaro - Pizza",
+          "url": "https://don-vitto-pizza-e-sfizi.it/"
+        },
+        {
+          "title": "Pizza e Sfizi, Catanzaro, Italia - Recensioni, Valutazioni, Consigli e Perché Dovresti Andare – Wanderlog",
+          "url": "https://wanderlog.com/it/place/details/2990750/pizza-e-sfizi"
+        },
+        {
+          "title": "Pizza e Sfizi, Catanzaro",
+          "url": "https://www.nuovaopinione.it/catanzaro/pizzerie/pizza-e-sfizi-91995"
+        },
+        {
+          "title": "Pizza e Sfizi, Catanzaro, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/2990750/pizza-e-sfizi"
+        },
+        {
+          "title": "Pizza e Sfizi | 0961 020015 | Catanzaro",
+          "url": "https://www.tuttiaffari.com/pizza-e-sfizi_29L-0961-020015"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:102042:spilinga:gelati-dominique",
+      "query": "\"Gelati Dominique\" \"Spilinga\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Panettoni e Colombe Artigianali | Pasticceria Dominique",
+          "url": "https://www.gelatidominique.com/"
+        },
+        {
+          "title": "GELATI DOMINIQUE: Tutto quello che c'è da sapere (agosto 2026)",
+          "url": "https://www.tripadvisor.it/Attraction_Review-g2436268-d5927275-Reviews-Gelati_Dominique-Spilinga_Province_of_Vibo_Valentia_Calabria.html"
+        },
+        {
+          "title": "Gelati Dominique - All You SHOULD Know Before Going 2026 (with Reviews)",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g2436268-d5927275-Reviews-Gelati_Dominique-Spilinga_Province_of_Vibo_Valentia_Calabria.html"
+        },
+        {
+          "title": "GELATI DOMINIQUE (Spilinga): Ce qu'il faut savoir pour votre visite (avec avis)",
+          "url": "https://fr.tripadvisor.ch/Attraction_Review-g2436268-d5927275-Reviews-Gelati_Dominique-Spilinga_Province_of_Vibo_Valentia_Calabria.html"
+        },
+        {
+          "title": "GelatiDominique - Spilinga, Provincia di Vibo Valentia Progetto Pralina Educativa",
+          "url": "https://praline-project.eu/gelatidominique/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079160:lamezia-terme:mary-s-pub",
+      "query": "\"Mary's Pub\" \"Lamezia Terme\" \"Via del Mare\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Come arrivare a Mary's Pub a Catanzaro con bus o treno?",
+          "url": "https://moovitapp.com/index/it/mezzi_pubblici-Mary_s_Pub-Cosenza-site_274825463-3280"
+        },
+        {
+          "title": "MARY'S PUB, Santa Eufemia Lamezia - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1959401-d6622326-Reviews-Mary_s_Pub-Santa_Eufemia_Lamezia_Province_of_Catanzaro_Calabria.html"
+        },
+        {
+          "title": "MARY'S PUB, Santa Eufemia Lamezia - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1959401-d6622326-Reviews-Mary_s_Pub-Santa_Eufemia_Lamezia_Province_of_Catanzaro_Calabria.html"
+        },
+        {
+          "title": "MARY'S PUB, Santa Eufemia Lamezia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1959401-d6622326-Reviews-Mary_s_Pub-Santa_Eufemia_Lamezia_Province_of_Catanzaro_Calabria.html"
+        },
+        {
+          "title": "Mary's Pub, Lamezia Terme, Italia - Anmeldelser, Vurderinger, Tips og Hvorfor Du Bør Dra – Wanderlog",
+          "url": "https://wanderlog.com/nb/place/details/3445769/marys-pub"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079023:catanzaro:a-c-triolo",
+      "query": "\"A&C Triolo\" \"Catanzaro\" \"Via Lungomare Stefano Pugliese\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Menu di A&C Triolo Paninoteca e Birreria a domicilio a Catanzaro | Ordina su Just Eat",
+          "url": "https://www.justeat.it/restaurants-triolopaninotecaebirreria/menu"
+        },
+        {
+          "title": "A&C Triolo Paninoteca, Catanzaro",
+          "url": "https://www.nuovaopinione.it/catanzaro/pub/ac-triolo-paninoteca-32728"
+        },
+        {
+          "title": "230 recensioni di A&C Triolo Paninoteca a Catanzaro",
+          "url": "https://altraopinione.org/ristorante/catanzaro/a-c-triolo-paninoteca/"
+        },
+        {
+          "title": "A&C Triolo Paninoteca, Catanzaro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Triolo-Paninoteca-e-Birreria-di-Marina-Merante-Catanzaro"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078004:aiello-calabro:borgo-antico",
+      "query": "\"Borgo Antico\" \"Aiello Calabro\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Storia di Aiello Calabro - Comune di Aiello calabro",
+          "url": "https://comune.aiellocalabro.cs.it/vivere-il-comune/territorio/storia-di-aiello-calabro/"
+        },
+        {
+          "title": "BORGO ANTICO, Aiello Calabro - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g2616084-d17764877-Reviews-Borgo_Antico-Aiello_Calabro_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "BORGO ANTICO, Aiello Calabro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2616084-d17764877-Reviews-Borgo_Antico-Aiello_Calabro_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "Borgo Antico | 0982 43628 | Aiello Calabro",
+          "url": "https://www.tuttiaffari.com/borgo-antico_1540-0982-43628"
+        },
+        {
+          "title": "Borgo Antico, Aiello Calabro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Borgo-Antico-Aiello-Calabro"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080045:marina-di-gioiosa-ionica:karaba-spaghetteria",
+      "query": "\"Karabà Spaghetteria\" \"Marina di Gioiosa Ionica\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "20+ profili “Vincenzo Femia” | LinkedIn",
+          "url": "https://it.linkedin.com/pub/dir/vincenzo/femia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078045:cosenza:barbuscio-la-cappuccineria",
+      "query": "\"Barbuscio La Cappuccineria\" \"Cosenza\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Barbuscio La Cappuccineria - Consegna a domicilio a Cosenza | Glovo",
+          "url": "https://glovoapp.com/it/it/cosenza/stores/barbuscio-la-cappuccineria-csz"
+        },
+        {
+          "title": "Barbuscio La Cappuccineria consegna in zona Cosenza - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/cosenza/cosenza/barbuscio-la-cappuccineria-cosenza"
+        },
+        {
+          "title": "BARBUSCIO LA CAPPUCCINERIA, Cosenza - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g187776-d27355378-Reviews-Barbuscio_La_Cappuccineria-Cosenza_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "Barbuscio \"La Cappuccineria\", Cosenza - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Barbuscio-La-Cappuccineria-Cosenza"
+        },
+        {
+          "title": "BARBUSCIO LA CAPPUCCINERIA, Cosenza - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g187776-d27355378-Reviews-Barbuscio_La_Cappuccineria-Cosenza_Province_of_Cosenza_Calabria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078013:belmonte-calabro:esso",
+      "query": "\"Esso\" \"Belmonte Calabro\" \"VIA VERI (S.S. 18 KM. 340+680)\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Mappa dei Distributori di Benzina a Malito - Tuttocittà",
+          "url": "https://www.tuttocitta.it/benzinai/malito"
+        },
+        {
+          "title": "Esso a Falconara Albanese: Numeri di Telefono ed indirizzi",
+          "url": "https://www.virgilio.it/italia/falconara-albanese/ricerca-aziende/esso"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:084019:joppolo-giancaxio:duca",
+      "query": "\"Il Duca\" \"Joppolo Giancaxio\" \"Piazza Curiale\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Il Duca - Lounge Bar Gelateria - Joppolo Giancaxio - Nextdoor",
+          "url": "https://it.nextdoor.com/pages/pizzeria-il-duca-lounge-bar-gelateria/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081012:mazara-del-vallo:giulia-caffe",
+      "query": "\"Giulia Caffe\" \"Mazara del Vallo\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "GIULIA CAFFE' DI BALLATORE FRANCESCO, Partita IVA: 02540600810, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1296/giulia-caffe-di-ballatore-francesco"
+        },
+        {
+          "title": "Giulia Caffe, Mazara del Vallo - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Giulia-Caffe-Mazara-del-Vallo"
+        },
+        {
+          "title": "Giulia Caffe, Mazara del Vallo - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/amp/Giulia-Caffe-Mazara-del-Vallo"
+        },
+        {
+          "title": "Giulia Caffè Mazara",
+          "url": "https://www.myandroid.org/apps/com-qbitsoftware-giuliacaffe"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083097:taormina:tiramisu-taormina",
+      "query": "\"Ristorante Tiramisù Taormina\" \"Taormina\" \"Via Cappuccini\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Comune di Taormina",
+          "url": "https://taormina.comune.digital/fooddrink/c/1"
+        },
+        {
+          "title": "Ristorante Tiramisu, Taormina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/taormina/ristorante/109357/ristorante-tiramisu"
+        },
+        {
+          "title": "Comune di Taormina",
+          "url": "https://taormina.comune.digital/fooddrink/c/0"
+        },
+        {
+          "title": "TIRAMISU' RISTORANTE PIZZERIA, Taormina - Restaurant Reviews, Phone Number & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.ie/Restaurant_Review-g187892-d1149985-Reviews-Tiramisu_Ristorante_Pizzeria-Taormina_Province_of_Messina_Sicily.html"
+        },
+        {
+          "title": "▷ Tiramisù | Ristorante, Taormina",
+          "url": "https://www.cylex-italia.it/taormina/tiramis%C3%B9-10596537.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083061:nizza-di-sicilia:lido-primosole",
+      "query": "\"Bar Lido Primosole\" \"Nizza di Sicilia\" \"Via Lungomare Unità dell'Italia\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Bar Lido Primosole, 135 Via Lungomare Unità dell'Italia, Nizza di Sicilia - Waze",
+          "url": "https://www.waze.com/live-map/directions/italy/sicily/nizza-di-sicilia/bar-lido-primosole?to=place.ChIJO6KbAHVAFBMRG61A6PA8WOw"
+        },
+        {
+          "title": "Bar Lido Primosole | 329 183 5883 | Nizza di Sicilia",
+          "url": "https://www.tuttiaffari.com/bar-lido-primosole-329-183-5883"
+        },
+        {
+          "title": "Bar Lido Primosole, Nizza di Sicilia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Primosole-Nizza-di-Sicilia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:088003:comiso:scornavacche-turismo-rurale",
+      "query": "\"Scornavacche Turismo Rurale\" \"Comiso\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "scornavacche.com - centro turistico rurale ragusa, agriturismo chiaramonte gulfi, pizzeria, comiso, turismo rurale, ragusa, ristorante, chiaramonte gulfi, affitta camere, sicilia, mazzarrone",
+          "url": "https://www.scornavacche.com/"
+        },
+        {
+          "title": "scornavacche.com - centro turistico rurale ragusa, agriturismo chiaramonte gulfi, pizzeria, comiso, turismo rurale, ragusa, ristorante, chiaramonte gulfi, affitta camere, sicilia, mazzarrone",
+          "url": "https://scornavacche.com/azienda/index.php"
+        },
+        {
+          "title": "scornavacche.com - centro turistico rurale ragusa, agriturismo chiaramonte gulfi, pizzeria, comiso, turismo rurale, ragusa, ristorante, chiaramonte gulfi, affitta camere, sicilia, mazzarrone",
+          "url": "https://scornavacche.com/agriturismo/index.php"
+        },
+        {
+          "title": "scornavacche.com - centro turistico rurale ragusa, agriturismo chiaramonte gulfi, pizzeria, comiso, turismo rurale, ragusa, ristorante, chiaramonte gulfi, affitta camere, sicilia, mazzarrone",
+          "url": "https://scornavacche.com/contatti/index.php"
+        },
+        {
+          "title": "Ristorante Pizzeria | Chiaramonte Gulfi, RG | Scornavacche Turismo Rurale",
+          "url": "https://www.agriturismoscornavacche.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:082053:palermo:roxy-ristofriggitoria",
+      "query": "\"Ristorante Roxy Ristofriggitoria\" \"Palermo\" \"Piazza Mondello\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ROXY RISTOFRIGGITORIA PANINERIA MONDELLO, Palermo - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187890-d8606706-Reviews-Roxy_RistoFriggitoria_Panineria-Palermo_Province_of_Palermo_Sicily.html"
+        },
+        {
+          "title": "Driving directions to Ristorante Roxy Ristofriggitoria, 27 Piazza Mondello, Palermo - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/sicilia/palermo/ristorante-roxy-ristofriggitoria?to=place.ChIJHyIZoTnoGRMRIWGnoD0KMYo"
+        },
+        {
+          "title": "ROXY RISTOFRIGGITORIA PANINERIA MONDELLO, Palermo - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g187890-d8606706-Reviews-Roxy_RistoFriggitoria_Panineria-Palermo_Province_of_Palermo_Sicily.html"
+        },
+        {
+          "title": "RISTORANTE ROXY RISTOFRIGGITORIA - Ristorante a Palermo | LocalShop24",
+          "url": "https://www.localshop24.com/it/palermo-pa-it/attivita/ristorante/ristorante-roxy-ristofriggitoria/"
+        },
+        {
+          "title": "ROXY RISTOFRIGGITORIA PANINERIA MONDELLO, Palermo - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187890-d8606706-Reviews-or75-Roxy_RistoFriggitoria_Panineria-Palermo_Province_of_Palermo_Sicily.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083106:terme-vigliatore:gelato-mania",
+      "query": "\"Gelato Mania\" \"Terme Vigliatore\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "GELATO MANIA, Terme Vigliatore - Via Intercomunale Acquitta - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g652027-d6976727-Reviews-Gelato_Mania-Terme_Vigliatore_Province_of_Messina_Sicily.html"
+        },
+        {
+          "title": "Gelato Mania Spinella Alessandro - Gelateria a Terme Vigliatore ▷ Via Intercomunale Acquitta, Terme Vigliatore, Messina, 98050 | Firmania",
+          "url": "https://firmania.it/terme-vigliatore/gelato-mania-spinella-alessandro-518716"
+        },
+        {
+          "title": "Recensioni Gelato Mania (23) - Terme Vigliatore | Sluurpy",
+          "url": "https://www.sluurpy.it/terme-vigliatore/ristorante/173226/gelato-mania/recensioni"
+        },
+        {
+          "title": "Gelato Mania Spinella Alessandro a Terme Vigliatore | MapTap.it",
+          "url": "https://maptap.it/attivita/gelato-mania-spinella-alessandro"
+        },
+        {
+          "title": "THE BEST Gelato in Terme Vigliatore (Updated September 2026) - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurants-g652027-zfd20533-Terme_Vigliatore_Province_of_Messina_Sicily-Gelato.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:084023:menfi:slurp",
+      "query": "\"Slurp\" \"Menfi\" \"Via Piemonte\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Slurp, Porto Palo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Slurp-Porto-Palo"
+        },
+        {
+          "title": "Slurp - Gelateria & Panineria Menfi 🇮🇹 - WorldPlaces",
+          "url": "https://italy.worldplaces.me/review/227627270-slurp-gelateria-and-panineria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087015:catania:antica-focacceria-san-francesco",
+      "query": "\"Antica Focacceria San Francesco\" \"Catania\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Antica Focacceria San Francesco in Catania, Italy - Apple Maps",
+          "url": "https://maps.apple.com/place?auid=16709159165824520682&lsp=9902"
+        },
+        {
+          "title": "ANTICA FOCACCERIA SAN FRANCESCO, Catania - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187888-d18072305-Reviews-Antica_focacceria_San_Francesco-Catania_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "Antica Focacceria - San Francesco - Air Side - Aeroporto Internazionale di Catania",
+          "url": "https://aeroporto.catania.it/shopping/antica-focacceria-sanfrancesco-airside"
+        },
+        {
+          "title": "ANTICA FOCACCERIA SAN FRANCESCO, Catania - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187888-d18072305-Reviews-Antica_focacceria_San_Francesco-Catania_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "Antica Focacceria - San Francesco - Air Side - Aeroporto Internazionale di Catania",
+          "url": "https://aeroporto.catania.it/en/shopping/antica-focacceria-sanfrancesco-airside"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:089005:canicattini-bagni:rosa-di-reali-giuseppe",
+      "query": "\"Bar La Rosa di Reali Giuseppe\" \"Canicattini Bagni\" \"Via Vittorio Emanuele\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR LA ROSA DI REALI GIUSEPPE, Canicattini Bagni - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2081366-d27815867-Reviews-Bar_La_Rosa_Di_Reali_Giuseppe-Canicattini_Bagni_Province_of_Syracuse_Sicily.html"
+        },
+        {
+          "title": "BAR LA ROSA DI REALI GIUSEPPE - Bar a Canicattini Bagni | LocalShop24",
+          "url": "https://www.localshop24.com/it/canicattini-bagni-sr-it/attivita/bar/bar-la-rosa-di-reali-giuseppe/"
+        },
+        {
+          "title": "Bar La Rosa di Reali Giuseppe, Canicattini Bagni - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Bar-La-Rosa-Sebastiano-Canicattini-Bagni"
+        },
+        {
+          "title": "BAR LA ROSA DI REALI GIUSEPPE, Canicattini Bagni - 2026 Reviews",
+          "url": "https://www.tripadvisor.ca/Restaurant_Review-g2081366-d27815867-Reviews-Bar_La_Rosa_Di_Reali_Giuseppe-Canicattini_Bagni_Province_of_Syracuse_Sicily.html"
+        },
+        {
+          "title": "Bar La Rosa di Reali Giuseppe, Canicattini Bagni - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-La-Rosa-Sebastiano-Canicattini-Bagni"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081008:erice:baretto",
+      "query": "\"Al Baretto\" \"Erice\" \"Via Cosenza\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Calendario Eventi - FKM Productions",
+          "url": "https://fkmproductions.com/tour/"
+        },
+        {
+          "title": "Al Baretto - 91016 Erice -",
+          "url": "https://www.reteimprese.it/bar-caffetterie/erice/azienda/3493541"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:084001:agrigento:anima-e-cori",
+      "query": "\"Anima e Cori\" \"Agrigento\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Home - Anima e Cori",
+          "url": "https://pizzeriaanimaecori.it/"
+        },
+        {
+          "title": "Contatti - Anima e Cori",
+          "url": "https://pizzeriaanimaecori.it/contatti/"
+        },
+        {
+          "title": "Chi siamo - Anima e Cori",
+          "url": "https://pizzeriaanimaecori.it/chi-siamo/"
+        },
+        {
+          "title": "ANIMA E CORI, Agrigento - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194662-d26724273-Reviews-Anima_E_Cori-Agrigento_Province_of_Agrigento_Sicily.html"
+        },
+        {
+          "title": "Anima e Cori Map - Restaurant - Agrigento, Sicily, Italy",
+          "url": "https://mapcarta.com/N10298373195"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:084002:alessandria-della-rocca:roma-caffe",
+      "query": "\"Roma Caffè\" \"Alessandria della Rocca\" \"Via Roma\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Imprese di Bar, Pub E Taverne in Bivona - Cybo",
+          "url": "https://guida-delle-societa.cybo.com/IT/bivona/bar%2C-pub-e-taverne"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081001:alcamo:foresteria-san-giacomo",
+      "query": "\"Foresteria San Giacomo\" \"Alcamo\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ALCAMO | CALA BIANCA VILLAS",
+          "url": "https://www.calabiancavillas.com/alcamo"
+        },
+        {
+          "title": "Foresteria San Giacomo, Alcamo",
+          "url": "https://www.nuovaopinione.it/alcamo/ristoranti/foresteria-san-giacomo-211022"
+        },
+        {
+          "title": "FORESTERIA SAN GIACOMO, Alcamo - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g616191-d16880897-Reviews-Foresteria_San_Giacomo-Alcamo_Province_of_Trapani_Sicily.html"
+        },
+        {
+          "title": "FORESTERIA SAN GIACOMO, Alcamo - Cardápio, Preços, Comentários de Restaurantes & Reservas",
+          "url": "https://www.tripadvisor.com.br/Restaurant_Review-g616191-d16880897-Reviews-Foresteria_San_Giacomo-Alcamo_Province_of_Trapani_Sicily.html"
+        },
+        {
+          "title": "Foresteria San Giacomo a Alcamo - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork",
+          "url": "https://www.thefork.it/ristorante/foresteria-san-giacomo-r485775"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:089017:siracusa:nazionale",
+      "query": "\"Ristorante Pizzeria Nazionale\" \"Siracusa\" \"Via Vitaliano Brancati\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE PIZZERIA NAZIONALE SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA, Partita IVA: 01904100896, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/4013/ristorante-pizzeria-nazionale-societa-a-responsabilita-limitata-semplificata"
+        },
+        {
+          "title": "Ristorante Pizzeria Nazionale Srl Semplificata | Ristorazione con somministrazione a Siracusa | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/ristorante-pizzeria-nazionale-societa-a-responsabilita-limitata-semplificata/23f4099e9e5e"
+        },
+        {
+          "title": "NAZIONALE RISTORANTE PIZZERIA DAL 1982, Cassibile - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1097284-d6578424-Reviews-Il_Nazionale_Ristorante_Pizzeria_Dal_1982-Cassibile_Syracuse_Province_of_Syracus.html"
+        },
+        {
+          "title": "Ristorante Pizzeria Nazionale, Siracusa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/siracusa/ristorante/66429/ristorante-pizzeria-nazionale"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA NAZIONALE SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA | Scheda Azienda | iCRIBIS",
+          "url": "https://www.icribis.com/it/scheda-azienda/SR156704_RISTORANTE_PIZZERIA_NAZIONALE_SRL_SEMPLIFICATA"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:089012:melilli:vizi-e-sfizi",
+      "query": "\"Vizi e Sfizi\" \"Melilli\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "VIZI & SFIZI, Melilli - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1643957-d8532690-Reviews-or30-Vizi_Sfizi-Melilli_Province_of_Syracuse_Sicily.html"
+        },
+        {
+          "title": "VIZI & SFIZI, Melilli - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1643957-d8532690-Reviews-or15-Vizi_Sfizi-Melilli_Province_of_Syracuse_Sicily.html"
+        },
+        {
+          "title": "Vizi & Sfizi, Siracusa, Italia - Recensioni, Valutazioni, Consigli e Perché Dovresti Andare – Wanderlog",
+          "url": "https://wanderlog.com/it/place/details/3310924/vizi--sfizi"
+        },
+        {
+          "title": "VIZI & SFIZI, Melilli - Carta, fotos y opiniones del restaurante",
+          "url": "https://www.tripadvisor.com.pe/Restaurant_Review-g1643957-d8532690-Reviews-Vizi_Sfizi-Melilli_Province_of_Syracuse_Sicily.html"
+        },
+        {
+          "title": "Vizi Sfizi da MELILLI",
+          "url": "https://piatti.menu/restaurants/melilli/vizi-sfizi"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:085007:gela:naif",
+      "query": "\"Cafe Naif\" \"Gela\" \"Corso Salvatore Aldisio\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "50 makanan murah terbaik di the Province of Caltanissetta",
+          "url": "https://wanderlog.com/ms/list/geoCategory/193668"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:088009:ragusa:carpe-diem-caffetteria",
+      "query": "\"Carpe Diem Caffetteria\" \"Ragusa\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Servizi - Bar / Pub - Carpe Diem caffetteria - Ragusa Centro",
+          "url": "https://www.ragusawelcome.com/it/scopri-ragusa/a-disposizione-dell-ospite/ristoranti/carpe-diem-caffetteria"
+        },
+        {
+          "title": "Services - Bar / Pub - Carpe Diem Caffetteria - Ragusa Center",
+          "url": "https://www.ragusawelcome.com/en/discover-ragusa/available-to-the-guest/restaurants/carpe-diem-caffetteria"
+        },
+        {
+          "title": "Carpe Diem Caffetteria, Ragusa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Carpe-diem-Ragusa"
+        },
+        {
+          "title": "Carpe Diem Caffetteria | 339 206 1697 | Ragusa",
+          "url": "https://www.tuttiaffari.com/carpe-diem-caffetteria_2n-339-206-1697"
+        },
+        {
+          "title": "Carpe Diem Caffetteria, Ragusa - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Carpe-diem-Ragusa"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083015:castelmola:nina",
+      "query": "\"Pizzeria Nina\" \"Castelmola\" \"Via Tutti I Santi\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Nina | 0942 28228 | Castelmola",
+          "url": "https://www.tuttiaffari.com/pizzeria-nina_3h-0942-28228"
+        },
+        {
+          "title": "Pizzeria Nina",
+          "url": "https://www.eatoutsicily.com/it/ristorante/pizzeria-nina/scheda"
+        },
+        {
+          "title": "Pizzeria Nina, Castelmola",
+          "url": "https://www.nuovaopinione.it/castelmola/pizzerie/pizzeria-nina-351327"
+        },
+        {
+          "title": "Pizzeria Nina",
+          "url": "https://www.eatoutsicily.com/restaurant/pizzeria-nina/profile"
+        },
+        {
+          "title": "Pizzeria Nina, Castelmola - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Nina-Castelmola"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:082022:castelbuono:monkey-fast-food-gourmet",
+      "query": "\"Monkey Fast Food Gourmet\" \"Castelbuono\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Al via la stagione teatrale 24/25 a Spazioscena",
+          "url": "https://www.castelbuonolive.com/al-via-la-stagione-teatrale-24-25-a-spazioscena/"
+        },
+        {
+          "title": "Monkey Fast Food Gourmet, Castelbuono - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Monkey-Fast-Food-Gourmet-Castelbuono"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:081021:trapani:gelateria-liparoti",
+      "query": "\"Gelateria Liparoti\" \"Trapani\" \"Via Sirene\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "GELATERIA LIPAROTI, Trapani - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g494955-d3225904-Reviews-Gelateria_liparoti-Trapani_Province_of_Trapani_Sicily.html"
+        },
+        {
+          "title": "Gelateria Liparoti, Erice, Italia - Recensioni, Valutazioni, Consigli e Perché Dovresti Andare – Wanderlog",
+          "url": "https://wanderlog.com/it/place/details/349826/gelateria-liparoti"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:084042:siculiana:ginestra-siculiana",
+      "query": "\"La Ginestra Siculiana\" \"Siculiana\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante la Ginestra, Siculiana - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Ginestra-Siculiana"
+        },
+        {
+          "title": "Ristorante La Ginestra Siculiana, Siculiana - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/siculiana/ristorante/64800/ristorante-la-ginestra-siculiana"
+        },
+        {
+          "title": "RISTORANTE LA GINESTRA CONTRADA CAPO SICULIANA - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1064639-d4784885-Reviews-Ristorante_la_Ginestra_Contrada_Capo_Siculiana-Siculiana_Province_of_Agrigento_S.html"
+        },
+        {
+          "title": "Siciliana a Siculiana - 13 Locali Trovati | Aggiornato 24/08/2026 - Sluurpy.it",
+          "url": "https://www.sluurpy.it/siculiana/siciliana"
+        },
+        {
+          "title": "Siculiana | Visit Sicani",
+          "url": "https://www.visitsicani.it/borgo/siculiana/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087006:adrano:noir",
+      "query": "\"Cafè Noir\" \"Adrano\" \"Via Aurelio Spampinato\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "CAFE NOIR DI LAZZARO GIUSEPPE, Adrano - Ristorante Recensioni & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1515854-d11444267-Reviews-Cafe_Noir_Di_Lazzaro_Giuseppe-Adrano_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "CAFE NOIR DI LAZZARO GIUSEPPE, Adrano - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g1515854-d11444267-Reviews-Cafe_Noir_Di_Lazzaro_Giuseppe-Adrano_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "CAFE NOIR DI LAZZARO GIUSEPPE, Adrano - Opiniones, Menú y Fotos",
+          "url": "https://www.tripadvisor.com.ar/Restaurant_Review-g1515854-d11444267-Reviews-Cafe_Noir_Di_Lazzaro_Giuseppe-Adrano_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "CAFE NOIR DI LAZZARO GIUSEPPE, Adrano - Restaurant Reviews & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1515854-d11444267-Reviews-Cafe_Noir_Di_Lazzaro_Giuseppe-Adrano_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "Cafe Noir Di Lazzaro Giuseppe en ADRANO",
+          "url": "https://carta.menu/restaurants/adrano/cafe-noir-di-lazzaro-giuseppe"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087004:acireale:mulino",
+      "query": "\"Al Mulino\" \"Acireale\" \"Lungomare Mario Martinez\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "AL MULINO, Acireale - Lungomare Mario Martinez - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g652017-d2215584-Reviews-Al_Mulino-Acireale_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "AL MULINO, Acireale - Lungomare Mario Martinez - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g652017-d2215584-Reviews-Al_Mulino-Acireale_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "AL MULINO, Acireale - Lungomare Mario Martinez - Comentários de Restaurantes, Fotos & Número de Telefone",
+          "url": "https://www.tripadvisor.com.br/Restaurant_Review-g652017-d2215584-Reviews-Al_Mulino-Acireale_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "AL MULINO, Acireale - Lungomare Mario Martinez - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g652017-d2215584-Reviews-Al_Mulino-Acireale_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "AL MULINO, Acireale - Lungomare Mario Martinez - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g652017-d2215584-Reviews-or30-Al_Mulino-Acireale_Province_of_Catania_Sicily.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:082023:casteldaccia:113",
+      "query": "\"Cafe 113\" \"Casteldaccia\" \"SS113\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Cafe 113 By Matranga, Casteldaccia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Cafe-113-Casteldaccia"
+        },
+        {
+          "title": "Cafe 113 By Matranga, Casteldaccia - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Cafe-113-Casteldaccia"
+        },
+        {
+          "title": "CAFE 113 BY MATRANGA - Ristorante a Casteldaccia | LocalShop24",
+          "url": "https://www.localshop24.com/it/casteldaccia-pa-it/attivita/ristorante/cafe-113-by-matranga/"
+        },
+        {
+          "title": "Cafe 113 By Matranga - Casteldaccia, Città metropolitana di Palermo",
+          "url": "https://mammamiabistrot.it/cafe-113-by-matranga/"
+        },
+        {
+          "title": "Cafe 113 By Matranga - Casteldaccia - lamigliorepizzeria",
+          "url": "https://lamigliorepizzeria.com/cafe-113-by-matranga-casteldaccia/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:116014:perdasdefogu:sa-brecca",
+      "query": "\"Sa Brecca\" \"Perdasdefogu\" \"Località Santa Barbara\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "SA BRECCA, Perdasdefogu - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g662370-d25800025-Reviews-Sa_Brecca_Chiosco_Bar-Perdasdefogu_Province_of_Ogliastra_Sardinia.html"
+        },
+        {
+          "title": "SA BRECCA, Perdasdefogu - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g662370-d25800025-Reviews-Sa_Brecca-Perdasdefogu_Province_of_Ogliastra_Sardinia.html"
+        },
+        {
+          "title": "SA BRECCA, Perdasdefogu - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.ca/Restaurant_Review-g662370-d25800025-Reviews-Sa_Brecca-Perdasdefogu_Province_of_Ogliastra_Sardinia.html"
+        },
+        {
+          "title": "SA BRECCA, Perdasdefogu - Restaurant Avis, Numéro de Téléphone & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g662370-d25800025-Reviews-Sa_Brecca_Chiosco_Bar-Perdasdefogu_Province_of_Ogliastra_Sardinia.html"
+        },
+        {
+          "title": "Sa Brecca Chiosco Bar - Sentiero Italia Cai",
+          "url": "https://sentieroitalia.cai.it/de/poi/sa-brecca-chiosco-bar-de/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:113004:arzachena:l-angoletto",
+      "query": "\"Pizzeria L'Angoletto\" \"Arzachena\" \"Via Lungomare A. Doria\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Hot Spots | PDF",
+          "url": "https://it.scribd.com/document/89529548/HotSpots"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118006:cagliari:24",
+      "query": "\"Café 24\" \"Cagliari\" \"Viale La Plaia\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Cafè 24, Cagliari - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Cafe-24-Cagliari"
+        },
+        {
+          "title": "Café 24 - Bar caffè a Cagliari ▷ Viale la Plaia 24, 09123, Cagliari | Firmania",
+          "url": "https://firmania.it/cagliari/caf%C3%A9-24-2853280"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Café 24“ | Viale la Plaia",
+          "url": "https://www.oraridiapertura24.it/filiale/Cagliari-Caf%25E9%252024-3935676D.html"
+        },
+        {
+          "title": "Cafè 24 | 320 473 5798 | Cagliari",
+          "url": "https://www.tuttiaffari.com/caf%C3%A8_387-320-473-5798"
+        },
+        {
+          "title": "Cafè 24 - Cagliari, Città Metropolitana di Cagliari - Ristorante Vicari",
+          "url": "https://it.ristorantevicari.it/cafe-24/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:119024:teulada:ittiturismo-la-pescheria",
+      "query": "\"Ittiturismo La Pescheria\" \"Teulada\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ittiturismo La Pescheria – Visit Teulada",
+          "url": "https://www.visitteulada.it/territorio/ittiturismolapescheria/"
+        },
+        {
+          "title": "Ittiturismo – Visit Teulada",
+          "url": "https://www.visitteulada.it/turismo/ittiturismo/"
+        },
+        {
+          "title": "La Pescheria Ittiturismo – Visit Teulada",
+          "url": "https://www.visitteulada.it/en/territorio/la-pescheria-ittiturismo/"
+        },
+        {
+          "title": "Ittiturismo La Pescheria - Teulada, Provincia del Sud Sardegna Pesce Fresco Online",
+          "url": "https://pescevia.it/ittiturismo-la-pescheria/"
+        },
+        {
+          "title": "Ittiturismo La Pescheria, Teulada - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Ittiturismo-La-Pescheria-Teulada-Sardinia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:119009:iglesias:food-mine",
+      "query": "\"Food Mine\" \"Iglesias\" \"Piazza Quintino Sella\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "where to eat – Iglesias Turismo",
+          "url": "https://www.iglesiasturismo.it/en/where-to-eat/"
+        },
+        {
+          "title": "FOOD MINE - Paninoteca a Iglesias | LocalShop24",
+          "url": "https://www.localshop24.com/it/iglesias-su-it/attivita/paninoteca/food-mine/"
+        },
+        {
+          "title": "Food Mine · Iglesias — Menu, opening hours and contacts | Foodlista",
+          "url": "https://www.foodlista.it/r/foodmine"
+        },
+        {
+          "title": "Food Mine, Iglesias - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Food-Mine-Iglesias"
+        },
+        {
+          "title": "Orari di apertura Food Mine ▷ Iglesias Piazza Quintino Sella 30, Iglesias, Sud Sardegna, 09016 | Trova Aperto",
+          "url": "https://trova-aperto.it/iglesias/food-mine-2668577"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112050:sassari:copacabana-club",
+      "query": "\"Copacabana Club\" \"Sassari\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Copacabana Club - Sassari | Bar nelle mie vicinanze",
+          "url": "https://copacabanaasssportdil.eatbu.com/?lang=it"
+        },
+        {
+          "title": "Copacabana Club, Sassari - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Copacabana-Club-Sassari"
+        },
+        {
+          "title": "Copacabana Club, Sassari - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Copacabana-Club-Sassari"
+        },
+        {
+          "title": "Top 7 clubs in Sassari, may 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/club-Sassari-t10"
+        },
+        {
+          "title": "Le top 7 clubs à Sassari, septembre 2026 - Restaurant Guru",
+          "url": "https://fr.restaurantguru.com/club-Sassari-t10"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:117007:gonnosfanadiga:centrale-gelateria-di-spina-salvatore",
+      "query": "\"Bar Centrale Gelateria di Spina Salvatore\" \"Gonnosfanadiga\" \"Via Porru Bonelli\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR CENTRALE GELATERIA DI SPINA SALVATORE S.A.S., Partita IVA: 01629750926, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/5041/bar-centrale-gelateria-di-spina-salvatore-sas"
+        },
+        {
+          "title": "Bar centrale Gelateria di Spina Salvatore S.A.S., Gonnosfanadiga - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-centrale-di-eredi-Spina-Antonio-and-C-snc-Gonnosfanadiga"
+        },
+        {
+          "title": "Bar Centrale Gelateria Di Spina Salvatore S.a.s.: Dati societari | Atoka",
+          "url": "https://atoka.io/public/it/azienda/bar-centrale-gelateria-di-spina-salvatore-sas/8ffb054d03ea"
+        },
+        {
+          "title": "BAR CENTRALE GELATERIA DI SPINA SALVATORE S.A.S. | Scheda Azienda | iCRIBIS",
+          "url": "https://www.icribis.com/it/scheda-azienda/CA191440_BAR_CENTRALE_GELATERIA_DI_SPINA_SALVATORE_SAS"
+        },
+        {
+          "title": "á… Orari di apertura â€žBar Centrale Gelateria di Spina Salvatore Sasâ€œ | Via Porru Bonelli",
+          "url": "https://www.oraridiapertura24.it/filiale/Gonnosfanadiga-Bar%2520Centrale%2520Gelateria%2520di%2520Spina%2520Salvatore%2520Sas-4490913M.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:113020:palau:casetta-di-iris",
+      "query": "\"la casetta di IRIS\" \"Palau\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "LA CASETTA DI IRIS \"MAGNENDI E PASSIZENDI\", Palau - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g562810-d13974238-Reviews-La_Casetta_di_Iris_Magnendi_e_Passizendi-Palau_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "LA CASETTA DI IRIS \"MAGNENDI E PASSIZENDI\", Palau - Reviews",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g562810-d13974238-Reviews-La_Casetta_di_Iris_Magnendi_e_Passizendi-Palau_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "la casetta di IRIS Palau",
+          "url": "https://mymenuweb.com/it/restaurants/982339/"
+        },
+        {
+          "title": "LA CASETTA DI IRIS \"MAGNENDI E PASSIZENDI\", Palau - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g562810-d13974238-Reviews-La_Casetta_di_Iris_Magnendi_e_Passizendi-Palau_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "la casetta di IRIS, Palau, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://app.wanderlog.com/place/details/2961094/la-casetta-di-iris"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:113017:olbia:riflesso-sul-porto",
+      "query": "\"Il Riflesso sul Porto\" \"Olbia\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "THE 10 BEST Restaurants Near Tartarughino Beach, Olbia",
+          "url": "https://www.tripadvisor.co.uk/RestaurantsNear-g187883-d6224938-Tartarughino_Beach-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Porto Rotondo, Olbia - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/RestaurantsNear-g187883-d4567558-Porto_Rotondo-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "THE 10 BEST Restaurants Near Porto Rotondo, Olbia - Tripadvisor",
+          "url": "https://www.tripadvisor.com.au/RestaurantsNear-g187883-d4567558-Porto_Rotondo-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "LOS 10 MEJORES restaurantes cerca de Porto Rotondo, Olbia",
+          "url": "https://www.tripadvisor.es/RestaurantsNear-g187883-d4567558-Porto_Rotondo-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "THE 10 BEST Restaurants Near Porto Rotondo, Olbia - Tripadvisor",
+          "url": "https://www.tripadvisor.co.uk/RestaurantsNear-g187883-d4567558-Porto_Rotondo-Olbia_Province_of_Olbia_Tempio_Sardinia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112066:villanova-monteleone:pizzanu-s-pizzeria-ristorante",
+      "query": "\"Pizzanu's Pizzeria Ristorante\" \"Villanova Monteleone\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "MIGLIORI pizzerie: Villanova Monteleone (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g1924369-c31-Villanova_Monteleone_Province_of_Sassari_Sardinia.html"
+        },
+        {
+          "title": "PIZZANU'S, Villanova Monteleone - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1924369-d23888639-Reviews-Pizzanu_s-Villanova_Monteleone_Province_of_Sassari_Sardinia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:119003:carbonia:enocaffe",
+      "query": "\"Enocaffe\" \"Carbonia\" \"Vico Costituente\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Dove mangiare a Carbonia – carboniaturismo",
+          "url": "https://carboniaturismo.it/it/dove-mangiare/"
+        },
+        {
+          "title": "ENOCAFFÈ, Carbonia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2208277-d14069316-Reviews-Enocaffe-Carbonia_Province_of_Carbonia_Iglesias_Sardinia.html"
+        },
+        {
+          "title": "Enocaffè, Carbonia - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Enocaffe-Carbonia"
+        },
+        {
+          "title": "Enocaffè, Carbonia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Enocaffe-Carbonia"
+        },
+        {
+          "title": "Enocaffè: Warm Aperitivo Vibes & Local Charm in Carbonia",
+          "url": "https://enocaffe.placejoys.com/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112050:sassari:tical-music-pub",
+      "query": "\"Tical Music Pub\" \"Sassari\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Tical Music Pub, Sassari - Italia.it",
+          "url": "https://www.italia.it/it/sardegna/sassari/dove-mangiare/tical-music-pub"
+        },
+        {
+          "title": "Tical Music Pub, Sassari - Italia.it",
+          "url": "https://www.italia.it/en/sardegna/sassari/where-to-eat/tical-music-pub"
+        },
+        {
+          "title": "Tical Music Pub: una nuova era a Sassari - Francesco Selicato",
+          "url": "https://www.francescoselicato.it/tical-music-pub/"
+        },
+        {
+          "title": "Tical Music Pub / Italy Beer Week",
+          "url": "https://italybeerweek.com/aderenti/scheda/457/tical_music_pub/"
+        },
+        {
+          "title": "Tical Music Pub - FaiMenu - Crea il tuo menu digitale e accetta ordini direttamente online",
+          "url": "https://faimenu.it/tical"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:114006:bitti:italiano",
+      "query": "\"Bar Caffè Italiano\" \"Bitti\" \"Via Mulinu\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Caffè Italiano da Paolo, Bitti - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Caffe-Italiano-da-Paolo-Bitti"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:114048:siniscola:boutique-del-gelato",
+      "query": "\"Boutique del Gelato\" \"Siniscola\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BOUTIQUE DEL GELATO, La Caletta - Opiniones, Menú y Fotos",
+          "url": "https://www.tripadvisor.co/Restaurant_Review-g1186593-d6350701-Reviews-Boutique_del_Gelato-La_Caletta_Siniscola_Province_of_Nuoro_Sardinia.html"
+        },
+        {
+          "title": "BOUTIQUE DEL GELATO, La Caletta - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1186593-d6350701-Reviews-Boutique_del_Gelato-La_Caletta_Siniscola_Province_of_Nuoro_Sardinia.html"
+        },
+        {
+          "title": "BOUTIQUE DEL GELATO, La Caletta - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1186593-d6350701-Reviews-Boutique_del_Gelato-La_Caletta_Siniscola_Province_of_Nuoro_Sardinia.html"
+        },
+        {
+          "title": "BOUTIQUE DEL GELATO, La Caletta - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1186593-d6350701-Reviews-Boutique_del_Gelato-La_Caletta_Siniscola_Province_of_Nuoro_Sardinia.html"
+        },
+        {
+          "title": "Boutique Del Gelato - 08020 Siniscola -",
+          "url": "https://www.reteimprese.it/gelaterie/siniscola/azienda/415427"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112001:alghero:parco-dei-pini-alghero",
+      "query": "\"Il Parco dei Pini - Alghero\" \"Alghero\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Parco avventura, ristorante & griglieria | Il Parco dei Pini Alghero",
+          "url": "https://ilparcodeipini.com/"
+        },
+        {
+          "title": "Il Parco dei Pini Alghero | MNDesign",
+          "url": "https://mirkonughes.com/portfolio/il-parco-dei-pini-alghero/"
+        },
+        {
+          "title": "Alghero con i bambini: cosa fare e attività da non perdere in famiglia",
+          "url": "https://www.bonsaialghero.it/alghero-con-bambini-cosa-fare-in-famiglia.html"
+        },
+        {
+          "title": "Ristorante Panorama - Ristorante vista Mare Alghero | Hotel dei Pini 4*",
+          "url": "https://www.hoteldeipini.it/ristorazione.html"
+        },
+        {
+          "title": "Hotel Dei Pini ad Alghero: camera a ore e day use | Brekko",
+          "url": "https://brekko.day/it-it/hotel/dei-pini?city=Alghero"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:119011:musei:king-of-130",
+      "query": "\"King of 130\" \"Musei\" \"Strada Provinciale per Montresta Bivio Strada Statale\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:118029:muravera:zio-ciro",
+      "query": "\"Pizzeria Zio Ciro\" \"Muravera\" \"Via Montessori\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "»Pizzeria Zio Ciro a Muravera (SU): Orari Apertura e Mappa",
+          "url": "https://www.paginegialle.it/muravera-su/ristoranti/pizzeria-zio-ciro"
+        },
+        {
+          "title": "Pizzeria Zio Ciro a Muravera: Numero Telefono e Mappa",
+          "url": "https://www.paginebianche.it/muravera/pizzeria-zio-ciro.14020018"
+        },
+        {
+          "title": "MURAVERA: Zio Ciro, la nuova casa della pizza, dove tradizione e innovazione camminano insieme - IlSarrabus.news",
+          "url": "https://ilsarrabus.news/muravera-zio-ciro-la-nuova-casa-della-pizza-dove-tradizione-e-innovazione-camminano-insieme/"
+        },
+        {
+          "title": "MURAVERA, Trofeo Msc in The World, Giuseppe Viola di “Zio Ciro” difenderà i colori del Sarrabus - IlSarrabus.news",
+          "url": "https://ilsarrabus.news/muravera-trofeo-msc-in-the-world-giuseppe-viola-di-zio-ciro-difendera-i-colori-del-sarrabus/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:118006:cagliari:lithium-cafe",
+      "query": "\"Lithium Cafe\" \"Cagliari\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "LITHIUM CAFÈ, Cagliari - Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187881-d33130628-Reviews-Lithium_Cafe-Cagliari_Province_of_Cagliari_Sardinia.html"
+        },
+        {
+          "title": "Lithium Cafè, Cagliari - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Lithium-Cafe-Cagliari"
+        },
+        {
+          "title": "LITHIUM CAFÈ, Cagliari - Carta, fotos y opiniones del restaurante",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g187881-d33130628-Reviews-Lithium_Cafe-Cagliari_Province_of_Cagliari_Sardinia.html"
+        },
+        {
+          "title": "LITHIUM CAFÈ, Cagliari - Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.ie/Restaurant_Review-g187881-d33130628-Reviews-Lithium_Cafe-Cagliari_Province_of_Cagliari_Sardinia.html"
+        },
+        {
+          "title": "Lithium Cafè Reviews - Espresso bar in Cagliari, Italy | Top-Rated.Online Travel",
+          "url": "https://www.top-rated.online/cities/Cagliari/place/p/13782577/Lithium%2BCaf%C3%A8"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112053:sennori:buena-cafe",
+      "query": "\"Buena Cafe\" \"Sennori\" \"Via Giorgio la Pira\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Buena Cafe, Sassari, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3414190/buena-cafe"
+        },
+        {
+          "title": "Buena Cafe, Sassari, Italien - Anmeldelser, Vurderinger, Tips og Hvorfor Du Skal Besøge – Wanderlog",
+          "url": "https://wanderlog.com/da/place/details/3414190/buena-cafe"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:115045:oristano:gelateria-smeralda",
+      "query": "\"Gelateria Smeralda\" \"Oristano\" \"Corso Umberto I\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Gelateria artigianale Oristano | Gelateria Smeralda",
+          "url": "https://www.gelateriaartigianaleoristano.it/"
+        },
+        {
+          "title": "Smeralda - Oristano, Corso Umberto I, 39",
+          "url": "https://aziende.virgilio.it/gelaterie/oristano-or/smeralda"
+        },
+        {
+          "title": "Gelateria Smeralda, Oristano",
+          "url": "https://www.nuovaopinione.it/oristano/gelaterie/gelateria-smeralda-15685"
+        },
+        {
+          "title": "Gelateria Smeralda Oristano | Estate in Sardegna",
+          "url": "https://www.estateinsardegna.it/dove-mangiare/oristano/smeralda/"
+        },
+        {
+          "title": "Gelateria Smeralda | Pasticceria a Oristano | Dove Pasticcio",
+          "url": "https://www.dovepasticcio.it/pasticcerie/dettaglio/3922/gelateria-smeralda-a-oristano"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:113017:olbia:sergio-ristorante-pizzeria",
+      "query": "\"SerGio Ristorante Pizzeria\" \"Olbia\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "THE 5 BEST Pizza Places in San Pantaleo (Updated 2026)",
+          "url": "https://www.tripadvisor.com/Restaurants-g608918-c31-San_Pantaleo_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Sergio ristorante pizzeria",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g608918-d26338001-Sergio_ristorante_pizzeria-San_Pantaleo_Province_of_Olbia_Tempio_Sardinia.html"
+        },
+        {
+          "title": "Sergiò Ristorante Pizzeria - Olbia, Sardegna - Untappd",
+          "url": "https://untappd.com/v/sergio-ristorante-pizzeria/12044012"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Sergio ristorante pizzeria",
+          "url": "https://it.tripadvisor.ch/RestaurantsNear-g608918-d26338001-Sergio_ristorante_pizzeria-San_Pantaleo_Province_of_Olbia_Tempio_Sardinia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:116019:ulassai:mani-in-pasta",
+      "query": "\"Le Mani In Pasta\" \"Ulassai\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Le Mani In Pasta | 320 306 6033 | Ulassai",
+          "url": "https://www.tuttiaffari.com/le-mani-in-pasta_7o-320-306-6033"
+        },
+        {
+          "title": "Le Mani In Pasta, Ulassai - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Le-Mani-In-Pasta-Ulassai"
+        },
+        {
+          "title": "LE MANI IN PASTA, Ulassai - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1080449-d27205843-Reviews-Le_Mani_In_Pasta-Ulassai_Province_of_Ogliastra_Sardinia.html"
+        },
+        {
+          "title": "LE MANI IN PASTA, Ulassai - Comentários de Restaurantes, Fotos & Número de Telefone",
+          "url": "https://www.tripadvisor.com.br/Restaurant_Review-g1080449-d27205843-Reviews-Le_Mani_In_Pasta-Ulassai_Province_of_Ogliastra_Sardinia.html"
+        },
+        {
+          "title": "Le Mani In Pasta, Baunei, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/13117145/le-mani-in-pasta"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:117025:villacidro:letterario",
+      "query": "\"Caffè Letterario\" \"Villacidro\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Villacidro Turismo | Caffè letterario",
+          "url": "https://www.villacidroturismo.it/it/organizza/struttura/Caffe-letterario/"
+        },
+        {
+          "title": "Villacidro Turismo | Caffè letterario",
+          "url": "https://www.villacidroturismo.it/en/plan/receptive-structure/Caffe-letterario/"
+        },
+        {
+          "title": "Caffè Letterario | 392 700 4692 | Villacidro",
+          "url": "https://www.tuttiaffari.com/caff%C3%A8-letterario_65Q-392-700-4692"
+        },
+        {
+          "title": "Driving directions to Caffè Letterario, 5 Piazza Zampillo, Villacidro - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/sardegna/villacidro/caffe-letterario?to=place.ChIJeeqPoiRv5xIRx9nYClPpjt4"
+        },
+        {
+          "title": "Caffe' Letterario Villacidro | 351 960 9665 | Villacidro",
+          "url": "https://www.tuttiaffari.com/caffe-letterario-villacidro-351-960-9665"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:112001:alghero:none-vineria",
+      "query": "\"NONE vineria\" \"Alghero\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "THE 10 BEST Restaurants Near None Vineria (Updated 2026)",
+          "url": "https://www.tripadvisor.com/RestaurantsNear-g1185014-d27198884-None_Vineria-Porto_Conte_Alghero_Province_of_Sassari_Sardinia.html"
+        },
+        {
+          "title": "NONE VINERIA, Porto Conte - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1185014-d27198884-Reviews-None_Vineria-Porto_Conte_Alghero_Province_of_Sassari_Sardinia.html"
+        },
+        {
+          "title": "NONE VINERIA, Porto Conte - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1185014-d27198884-Reviews-None_Vineria-Porto_Conte_Alghero_Province_of_Sassari_Sardinia.html"
+        },
+        {
+          "title": "None Vineria - 07041 Alghero -",
+          "url": "https://www.reteimprese.it/enoteche/alghero/azienda/3451445"
+        },
+        {
+          "title": "THE 10 BEST Restaurants Near None Vineria (Updated 2026)",
+          "url": "https://www.tripadvisor.com/RestaurantsNear-g1185014-d27198884-oa30-None_Vineria-Porto_Conte_Alghero_Province_of_Sassari_Sardinia.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:117008:guspini:pizza-undici",
+      "query": "\"Pizzeria Pizza Undici\" \"Guspini\" \"Via Nuoro\"",
+      "retrieved_at": "2026-09-07T14:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Pizza Undici 11, Guspini - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Pizzeria-Pizza-Undici-11-Guspini"
+        },
+        {
+          "title": "Pizzeria Pizza Undici 11, Guspini - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Pizza-Undici-11-Guspini"
+        },
+        {
+          "title": "Pizzeria Pizza Undici 11, Guspini - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Pizzeria-Pizza-Undici-11-Guspini"
+        }
+      ]
+    }
+  ]
+}

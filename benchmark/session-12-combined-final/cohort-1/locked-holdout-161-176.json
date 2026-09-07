@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-161-176",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:010044:portofino:da-o-batti",
+      "query": "\"Ristorante Da O Batti\" Portofino \"Vico Nuovo, 17\"",
+      "retrieved_at": "2026-09-02T23:45:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante “Da ö Batti Portofino” - Da ö Batti Unica sede Portofino - Ristorante Portofino",
+          "url": "https://www.daobattiportofino.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009056:savona:oyster-cafe",
+      "query": "\"Oyster Cafe\" Savona \"Calata Pietro Sbarbaro, 24r\"",
+      "retrieved_at": "2026-09-02T23:45:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:008017:cervo:spiaggia-cervo-marina-de-re",
+      "query": "\"Spiaggia Cervo Marina De Rè\" Cervo \"Via Aurelia, 22\"",
+      "retrieved_at": "2026-09-02T23:45:00.000Z",
+      "candidates": [
+        {
+          "title": "Spiaggia Cervo Marina De Rè | 338 194 2139",
+          "url": "https://www.tuttiaffari.com/spiaggia-cervo-marina-de-r-u-e-338-194-2139"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010017:cogoleto:fior-di-lotte",
+      "query": "\"Fior di Lotte\" Cogoleto \"Via Rati, 113\"",
+      "retrieved_at": "2026-09-02T23:45:00.000Z",
+      "candidates": [
+        {
+          "title": "Restaurants in Cogoleto: seafood, focaccia, Ligurian food — Cogoleto",
+          "url": "https://www.cogole.to/en/restaurants/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011015:la-spezia:murphy-s-la-spezia",
+      "query": "\"Murphy's La Spezia\" \"Piazza Domenico Chiodo, 32\"",
+      "retrieved_at": "2026-09-02T23:50:00.000Z",
+      "candidates": [
+        {
+          "title": "Contatti | Murphy's La Spezia",
+          "url": "https://www.murphysp.it/contatti"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008010:borgomaro:logge",
+      "query": "\"Ristorante Le Logge\" Borgomaro \"Piazza San Giovanni, 2\"",
+      "retrieved_at": "2026-09-02T23:50:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante Le Logge, Borgomaro - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Le-Logge-Borgomaro"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010046:rapallo:devoto-take-away-mr-fried",
+      "query": "\"Devoto Take Away & Mr Fried\" Rapallo \"Via Trento, 5\"",
+      "retrieved_at": "2026-09-02T23:50:00.000Z",
+      "candidates": [
+        {
+          "title": "Devoto Take Away & Mr Fried, Rapallo - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/DEVOTO-TAKE-AWAY-and-MR-FRIED-Rapallo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010025:genova:chiosco-pegli",
+      "query": "\"Il Chiosco Pegli\" Genova \"Pontile Antonio Milani\"",
+      "retrieved_at": "2026-09-02T23:50:00.000Z",
+      "candidates": [
+        {
+          "title": "il Chiosco Pegli - Il Pontile di Marchese, Genova - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Il-Chiosco-Genoa-6"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011003:beverino:pro-loco-beverino-in-val-di-vara",
+      "query": "\"Pro Loco Beverino in Val di Vara\" \"Via Aurelia Nord, 1\"",
+      "retrieved_at": "2026-09-02T23:55:00.000Z",
+      "candidates": [
+        {
+          "title": "Home Page della Pro loco Beverino in Val di Vara - PRO LOCO BEVERINO VAL DI VARA",
+          "url": "https://www.prolocobeverinovaldivara.org/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009029:finale-ligure:carlin",
+      "query": "\"Carlin\" \"Finale Ligure\" \"Piazza Vittorio Emanuele II, 6\"",
+      "retrieved_at": "2026-09-02T23:55:00.000Z",
+      "candidates": [
+        {
+          "title": "GELATERIA CARLIN DI BASSANI DAMIANO & C. - SOCIETA' IN ACCOMANDITA SEMPLICE, Partita IVA: 01757430093, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/3557/gelateria-carlin-di-bassani-damiano-c-societa-in-accomandit-a-semplice"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008055:sanremo:chicken-n-chicken-sanremo",
+      "query": "\"Chicken N Chicken Sanremo\" \"Piazza Eroi Sanremesi, 57\"",
+      "retrieved_at": "2026-09-02T23:55:00.000Z",
+      "candidates": [
+        {
+          "title": "CHICKEN N CHICKEN, Sanremo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194900-d11746992-Reviews-Chicken_N_Chicken-Sanremo_Italian_Riviera_Liguria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010052:rovegno:tana-del-brig-bar-mia",
+      "query": "\"La Tana del Brig Bar Mia\" Rovegno \"SS45, 27\"",
+      "retrieved_at": "2026-09-02T23:55:00.000Z",
+      "candidates": [
+        {
+          "title": "La Tana del Brig \"Bar Mia\", Rovegno - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-tana-del-Brig-Rovegno"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008027:diano-marina:del-caprice",
+      "query": "\"Il Caffè del Caprice\" \"Diano Marina\" \"Via Cristoforo Colombo, 54\"",
+      "retrieved_at": "2026-09-03T00:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Il Caffè del Caprice | 340 079 9610 | Diano Marina",
+          "url": "https://www.tuttiaffari.com/il-caff%C3%A8-del-caprice-340-079-9610"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:011015:la-spezia:vanity-cafe",
+      "query": "\"Vanity Cafe\" \"La Spezia\" \"Via Vittorio Veneto, 195\"",
+      "retrieved_at": "2026-09-03T00:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:010061:tiglieto:tavernetta-di-paolo-e-chiara",
+      "query": "\"La Tavernetta di Paolo e Chiara\" Tiglieto \"Via Celestino Valcalda, 8\"",
+      "retrieved_at": "2026-09-03T00:00:00.000Z",
+      "candidates": [
+        {
+          "title": "LA TAVERNETTA DI PAOLO E CHIARA, Tiglieto - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2372935-d6529844-Reviews-La_Tavernetta_Di_Paolo_E_Chiara-Tiglieto_Province_of_Genoa_Liguria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:035044:viano:vulcanetto-del-querciola",
+      "query": "\"Il Vulcanetto del Querciola\" Viano \"Via Salone, 3\"",
+      "retrieved_at": "2026-09-03T00:00:00.000Z",
+      "candidates": [
+        {
+          "title": "IL VULCANETTO | Ristorante dal 1954 | Regnano, Viano, Appenino Reggiano",
+          "url": "https://www.ilvulcanetto.it/"
+        }
+      ]
+    }
+  ]
+}

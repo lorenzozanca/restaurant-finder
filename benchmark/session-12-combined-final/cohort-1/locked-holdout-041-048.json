@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-041-048",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:007032:gressoney-la-trinite:adler-s-nest",
+      "query": "\"Adler's Nest\" \"Gressoney-La-Trinité\"",
+      "retrieved_at": "2026-09-02T21:10:00.000Z",
+      "candidates": [
+        {
+          "title": "Adler's Nest",
+          "url": "https://www.lovevda.it/it/banca-dati/16/ristoranti/gressoney-la-trinite/adler-s-nest/2318"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007003:aosta:gelateria-diana",
+      "query": "\"Bar Gelateria Diana\" Aosta \"Via Lys, 32\"",
+      "retrieved_at": "2026-09-02T21:10:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Gelateria Diana",
+          "url": "https://www.tuttiaffari.com/bar-gelateria-diana_2S-0165-32138"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007027:fenis:bufala",
+      "query": "\"Pizzeria La Bufala\" \"Fénis\"",
+      "retrieved_at": "2026-09-02T21:10:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria La Bufala, Fénis",
+          "url": "https://restaurantguru.com/Pizzeria-Scaccomatto-Fenis"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007033:gressoney-saint-jean:oro-argento-e-bronzo",
+      "query": "\"Oro Argento e Bronzo\" \"Gressoney-Saint-Jean\"",
+      "retrieved_at": "2026-09-02T21:10:00.000Z",
+      "candidates": [
+        {
+          "title": "Oro Argento e Bronzo - Gressoney-Saint-Jean",
+          "url": "https://garlini.it/oro-argento-e-bronzo/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007007:ayas:l-essentiel",
+      "query": "\"Ristorante L'Essentiel\" Ayas",
+      "retrieved_at": "2026-09-02T21:15:00.000Z",
+      "candidates": [
+        {
+          "title": "L'Essentiel da Andreone",
+          "url": "https://www.lovevda.it/fr/base-de-donnees/16/restaurants/champoluc-ayas-antagnod/l-essentiel-da-andreone/2537"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007022:courmayeur:fodze",
+      "query": "\"Bar Ristorante La Fodze\" Courmayeur",
+      "retrieved_at": "2026-09-02T21:15:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Ristorante La Fodze",
+          "url": "https://www.tuttiaffari.com/bar-ristorante-la-fodze-392-071-1699"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007037:issogne:du-chateau",
+      "query": "\"Cafe du Chateau\" Issogne",
+      "retrieved_at": "2026-09-02T21:15:00.000Z",
+      "candidates": [
+        {
+          "title": "Chateau de Issogne - Commune de Issogne",
+          "url": "https://comune.issogne.ao.it/fr-fr/vivere-il-comune/cosa-vedere/castello-di-issogne-52857-1-685cdb8a5fd28a5c80fda27999bb16d7"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007071:valtournenche:yeti-bar",
+      "query": "\"Yeti Bar\" \"Via Bich, 12\" Valtournenche",
+      "retrieved_at": "2026-09-02T21:15:00.000Z",
+      "candidates": []
+    }
+  ]
+}

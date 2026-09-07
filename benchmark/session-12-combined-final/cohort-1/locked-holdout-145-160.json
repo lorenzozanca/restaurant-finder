@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-145-160",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:093025:maniago:dolcefreddo-maniago",
+      "query": "\"Il Dolcefreddo\" Maniago \"Via Roma, 31\"",
+      "retrieved_at": "2026-09-02T23:25:00.000Z",
+      "candidates": [
+        {
+          "title": "Il Dolcefreddo, Maniago - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Il-Dolcefreddo-Maniago"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:macelleria-fast-food",
+      "query": "\"Macelleria Fast Food\" Trieste \"Viale dei Campi Elisi, 33\"",
+      "retrieved_at": "2026-09-02T23:25:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:030122:torreano:prog-futuri",
+      "query": "\"Prog futuri\" Torreano",
+      "retrieved_at": "2026-09-02T23:25:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:093037:sacile:german-pub",
+      "query": "\"German Pub\" Sacile \"Via Ronche, 32\"",
+      "retrieved_at": "2026-09-02T23:25:00.000Z",
+      "candidates": [
+        {
+          "title": "Birreria German Pub - Sacile (PN) Italy",
+          "url": "https://www.germanpub.it/it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030129:udine:tazza-d-oro",
+      "query": "\"Caffè La Tazza d'Oro\" Udine \"Piazza 10 Settembre 1870\"",
+      "retrieved_at": "2026-09-02T23:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:093031:polcenigo:taverna-slow-shop-bar",
+      "query": "\"La Taverna Slow Shop & Bar\" Polcenigo \"Via Gorgazzo, 3\"",
+      "retrieved_at": "2026-09-02T23:30:00.000Z",
+      "candidates": [
+        {
+          "title": "La Taverna Slow Shop and Bar",
+          "url": "https://www.latavernaslowshopandbar.com/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009068:villanova-d-albenga:boschetto",
+      "query": "\"Il Boschetto\" \"Villanova d'Albenga\" \"Strada per Ligo, 1\"",
+      "retrieved_at": "2026-09-02T23:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante Il Boschetto in Villanova D'Albenga | Matrimoni & Cerimonie | Villanova d'Albenga",
+          "url": "https://www.ilboschettomatrimoni.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008065:ventimiglia:cuventu",
+      "query": "\"Bar Cuventu\" Ventimiglia \"Via Ernesto Chiappori, 20\"",
+      "retrieved_at": "2026-09-02T23:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Cuventu | 327 654 3621 | Ventimiglia",
+          "url": "https://www.tuttiaffari.com/bar-cuventu-327-654-3621"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008055:sanremo:bluebird-caffe-restaurant",
+      "query": "\"Bluebird caffè & Restaurant\" Sanremo \"Strada Privata Barabino, 21\"",
+      "retrieved_at": "2026-09-02T23:35:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:010058:serra-ricco:gilda-caffe",
+      "query": "\"Gilda Caffe\" \"Serra Riccò\" \"Via Antonio Medicina, 54c\"",
+      "retrieved_at": "2026-09-02T23:35:00.000Z",
+      "candidates": [
+        {
+          "title": "GILDA CAFFÈ, Serra Ricco - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2138846-d27867758-Reviews-Gilda_Caffe-Serra_Ricco_Province_of_Genoa_Liguria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008008:bordighera:graffiti-pub",
+      "query": "\"Graffiti Pub\" Bordighera \"Via Vittorio Emanuele II, 122\"",
+      "retrieved_at": "2026-09-02T23:35:00.000Z",
+      "candidates": [
+        {
+          "title": "GRAFFITI PUB - Bar a Bordighera | LocalShop24",
+          "url": "https://www.localshop24.com/it/bordighera-im-it/attivita/bar/graffiti-pub/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010025:genova:san-francesco",
+      "query": "\"Pizzeria San Francesco\" Genova \"Via Campi, 15\"",
+      "retrieved_at": "2026-09-02T23:35:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria San Francesco, Genova - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-San-Francesco-Genoa"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:009013:borgio-verezzi:cappero-ristorante",
+      "query": "\"Il Cappero Ristorante\" \"Borgio Verezzi\" \"Via San Giuseppe, 4\"",
+      "retrieved_at": "2026-09-02T23:40:00.000Z",
+      "candidates": [
+        {
+          "title": "Il Cappero - Consulta la disponibilità e i prezzi",
+          "url": "https://www.matrimonio.com/location-matrimoni/il-cappero--e365646"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:010001:arenzano:cremeria-roma-due",
+      "query": "\"Cremeria Roma Due\" Arenzano \"Via Serafino Maria Rapallo, 4\"",
+      "retrieved_at": "2026-09-02T23:40:00.000Z",
+      "candidates": [
+        {
+          "title": "Cremeria Roma Due, Savona, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3015270"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008031:imperia:delfo",
+      "query": "\"Bar Delfo\" Imperia \"Via Vincenzo Monti, 18\"",
+      "retrieved_at": "2026-09-02T23:40:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Delfo, Imperia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Delfo-Imperia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:008011:camporosso:del-ponte",
+      "query": "\"Pizzeria Del Ponte\" Camporosso \"Corso della Repubblica, 106\"",
+      "retrieved_at": "2026-09-02T23:40:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Del Ponte | 349 397 4155 | Camporosso",
+          "url": "https://www.tuttiaffari.com/pizzeria-del-ponte_17h-349-397-4155"
+        }
+      ]
+    }
+  ]
+}

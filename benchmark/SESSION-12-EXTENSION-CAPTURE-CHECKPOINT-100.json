@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "stage": "B",
+  "checkpoint_sample_index": 100,
+  "selection_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+  "capture_path": "benchmark/session-12-extension-web/locked-holdout-capture-001-100.partial.json",
+  "capture_sha256": "e6a48208547bc7ac684b40c6edb46663b2e8c50ee413aa233d451dd3baad3e10",
+  "continuous_selection_order_coverage": "001-100",
+  "unique_venue_ids": 100,
+  "retained_candidate_urls": 308,
+  "normalized_urls_valid": true,
+  "title_bounds_valid": true,
+  "completed_queries_reopened": 0,
+  "brave_requests_made": 0,
+  "evaluator_runs": 0,
+  "evaluator_excluded": true,
+  "validation_status": "passed"
+}

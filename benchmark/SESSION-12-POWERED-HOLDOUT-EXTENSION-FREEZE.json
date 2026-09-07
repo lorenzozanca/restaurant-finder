@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "freeze_id": "session-12-powered-holdout-extension-v1",
+  "frozen_at": "2026-09-07T12:10:00.000Z",
+  "status": "frozen_before_extension_search_outcomes",
+  "publication_authorized": false,
+  "original_cohort": {
+    "selection_path": "benchmark/SESSION-12-POWERED-HOLDOUT-SELECTION.json",
+    "selection_sha256": "5a867db62b5ced8b39bb56a1b784cbe7065b9dcc7ea15a0ca6b0254992a25d60",
+    "candidate_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+    "freeze_path": "benchmark/SESSION-12-POWERED-HOLDOUT-FREEZE.json",
+    "freeze_sha256": "c753c176d35f26d88422d7eb7b22e5309659af478796e8dfdeac78dd2fb5ae91",
+    "original_frozen_hashes": {
+      "selection_implementation": "af773fde2afac69241cc69e6732411b8c5c746102f910ce047bd3807d9135899",
+      "fixture_policy": "eb6f9053c481c1775e810d6461b8a475181f5979a1e2de960b24b5457d2a0183",
+      "registrable_domain_policy": "ebc028cadae67062c707688fae9b2211534761caf717bcaf8f50fd3294fbfb1b",
+      "evaluator": "5c07cf13e8370ec731e98650fa3e3fa48a5de6a69ab933c05457dd2c97650dad",
+      "prior_holdout_report": "5b4f9a4a81fd49b259a108f69b40416244d8a94baa01a0888d3db812f031b9a6"
+    },
+    "preservation_snapshot": {
+      "checkpoint_sha256": "9b7123953f4a8aaee48b6b8f51189b209ea236c23e90d107957da5d33231c16a",
+      "extension_plan_sha256": "0317f71bf24e02b0ed1e9affeaccb301f71b7fe9c42335e08bebc093df81e318",
+      "adjudication_preparer_sha256": "e79e957cb0e4cdb31589cdc542f9378216c46ebaf07556aae872e363303ab7ac",
+      "capture_and_adjudication_artifact_count": 40,
+      "path_hash_tree_sha256": "627965618d6504370ed5cba082bd6e614752b0e9e0dae0821f7d228f3359d6d7"
+    }
+  },
+  "extension_cohort": {
+    "selection_path": "benchmark/SESSION-12-POWERED-HOLDOUT-EXTENSION-SELECTION.json",
+    "selection_sha256": "2841998716788cb45523202b28509f75e3f0f893997a1fcf60ffd8a355f139f7",
+    "candidate_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+    "ordered_venue_count": 500,
+    "prior_venue_ids_excluded": 1556,
+    "cross_cohort_overlap": 0,
+    "historical_overlap": 0,
+    "regions": 20,
+    "venues_per_region": 25,
+    "known_source_website": 260,
+    "missing_source_website": 240,
+    "queries_opened_at_freeze": 0
+  },
+  "sampling_protocol": {
+    "selection_wrapper": {
+      "path": "benchmark/select-session-12-extension.mjs",
+      "sha256": "9a77195ec5621f663812b03925ec5fb3fc1741d5f41fefee36d348dd48c84048"
+    },
+    "unchanged_selector": {
+      "path": "select-powered-holdout.mjs",
+      "sha256": "af773fde2afac69241cc69e6732411b8c5c746102f910ce047bd3807d9135899"
+    },
+    "rule": "Deterministic next draw after excluding all 1,056 original-lineage IDs plus the 500 first-cohort IDs; exactly 25 venues per each of 20 regions, with the original alternating known/missing website and balancing rules."
+  },
+  "bounded_search_protocol": {
+    "query_plan_path": "benchmark/SESSION-12-POWERED-HOLDOUT-EXTENSION-QUERIES.json",
+    "query_plan_sha256": "d0f39d422aee8dc7e1a7db315bff119177873efa1f986dd3cb3f472dded60b2e",
+    "query_fingerprint_sha256": "4a35474d09fcba73f77fd293d4b7ddac7f9a1fbd7a64ded9d049eadf82866185",
+    "query_preparer": {
+      "path": "benchmark/prepare-session-12-extension-queries.mjs",
+      "sha256": "2bf62a57a722e1a9f44a5a730f65a1896afee000c0d445d3cfd2db09a75c1a05"
+    },
+    "provider_interface": "Codex integrated web search",
+    "locale": "it-IT",
+    "country_assumption": "Italy",
+    "bounded_result_limit": 5,
+    "capture_metadata": ["title", "normalized_url"],
+    "title_projection": "first 200 Unicode code points",
+    "retry_limit": 1,
+    "completed_queries_may_be_reopened": false,
+    "capture_suffix": ".partial.json",
+    "evaluator_visible_during_capture": false
+  },
+  "combined_evaluation_protocol": {
+    "evaluator_path": "benchmark/evaluate-session-12-combined.mjs",
+    "evaluator_sha256": "909bedeaba5ba0c5f9740ce0701a335d31a3a2d3374a16392bdf3b0bc6014a22",
+    "fixture_policy_path": "lib/web-stress-fixture.mjs",
+    "fixture_policy_sha256": "eb6f9053c481c1775e810d6461b8a475181f5979a1e2de960b24b5457d2a0183",
+    "registrable_domain_policy_path": "lib/publisher-ownership.mjs",
+    "registrable_domain_policy_sha256": "ebc028cadae67062c707688fae9b2211534761caf717bcaf8f50fd3294fbfb1b",
+    "cohort_fingerprints_remain_separate": true,
+    "pooled_fixed_venue_count": 1000,
+    "minimum_conclusive_publications": 73,
+    "maximum_false_publications": 0,
+    "precision_interval": "two-sided 95% Wilson score interval",
+    "minimum_precision_wilson_lower_bound": 0.95,
+    "acceptance_rule": "Evaluate every conclusive publication across both fixed cohorts; pass only with at least 73 conclusive publications, zero false publications, and a two-sided 95% Wilson precision lower bound of at least 0.95.",
+    "authorized_evaluator_executions": 1,
+    "evaluator_executions_at_freeze": 0,
+    "post_result_extension_or_exclusion_permitted": false
+  },
+  "extension_search_authorized": true,
+  "brave_requests_authorized": false
+}

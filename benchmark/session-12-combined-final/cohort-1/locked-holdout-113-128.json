@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-113-128",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:024036:creazzo:fior-di-panini-food-truck-e-street-food-di-qualita-a-vicenza",
+      "query": "\"Fior di Panini\" \"Via Olmo, 29\"",
+      "retrieved_at": "2026-09-02T22:45:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:023071:san-giovanni-lupatoto:l-americano",
+      "query": "\"L'Americano\" \"San Giovanni Lupatoto\" \"Piazza Umberto I, 63\"",
+      "retrieved_at": "2026-09-02T22:45:00.000Z",
+      "candidates": [
+        {
+          "title": "L'americano Bar, San Giovanni Lupatoto - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Lamericano-bar-Verona"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:026086:treviso:vecchio-gelatiere",
+      "query": "\"Il Vecchio Gelatiere\" Treviso \"Strada Terraglio, 43\"",
+      "retrieved_at": "2026-09-02T22:45:00.000Z",
+      "candidates": [
+        {
+          "title": "Il Vecchio Gelatiere da TREVISO",
+          "url": "https://piatti.menu/restaurants/treviso/il-vecchio-gelatiere"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:025053:sedico:red-pub-by-marty",
+      "query": "\"Red Pub by marty\" Sedico \"Viale Venezia, 55\"",
+      "retrieved_at": "2026-09-02T22:45:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Red Pub by marty, 55 Viale Venezia, Sedico - Waze",
+          "url": "https://www.waze.com/live-map/directions/italy/veneto/sedico/red-pub-by-marty?to=place.ChIJszVuiXwBeUcRS6Aqt4M3xqM"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023036:garda:milano",
+      "query": "\"Bar Pizzeria Milano\" Garda \"Via Don Carlo Gnocchi, 37\"",
+      "retrieved_at": "2026-09-02T22:50:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:027042:venezia:cip-ciap-la-bottega-della-pizza",
+      "query": "\"Cip Ciap La Bottega della Pizza\" Venezia \"Calle del Mondo Novo\"",
+      "retrieved_at": "2026-09-02T22:50:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Cip Ciap La Bottega della Pizza, 5799/a Calle del Mondo Novo, Venezia - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/veneto/venezia/cip-ciap-la-bottega-della-pizza?to=place.ChIJTyRKANmxfkcRDdMPMG2S-fs"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027014:fiesso-d-artico:angi-bistrot-e-caffetteria",
+      "query": "\"AnGi Bistrot e Caffetteria\" \"Fiesso d'Artico\"",
+      "retrieved_at": "2026-09-02T22:50:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:024084:recoaro-terme:gelatiamoci",
+      "query": "\"Gelatiamoci\" \"Recoaro Terme\" \"Via Lelia, 47\"",
+      "retrieved_at": "2026-09-02T22:50:00.000Z",
+      "candidates": [
+        {
+          "title": "GELATIAMOCI DI LORENZETTO CINZIA, Partita IVA: 04192310243, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1610/gelatiamoci-di-lorenzetto-cinzia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027008:chioggia:doppio-zero-pizzeria-da-asporto",
+      "query": "\"Doppio Zero\" pizzeria Chioggia \"Via Borgo San Giovanni, 350\"",
+      "retrieved_at": "2026-09-02T22:55:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:028075:san-giorgio-delle-pertiche:mcdonald-s",
+      "query": "\"McDonald's\" \"San Giorgio delle Pertiche\" \"Via Caselle, 1\"",
+      "retrieved_at": "2026-09-02T22:55:00.000Z",
+      "candidates": [
+        {
+          "title": "McDonald's San Giorgio delle Pertiche | Fast food",
+          "url": "https://www.cylex-italia.it/san-giorgio-delle-pertiche/mcdonald%27s-san-giorgio-delle-pertiche-16166993.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:023089:valeggio-sul-mincio:corallino-caffe-bistrot",
+      "query": "\"Corallino Caffè & Bistrot\" \"Valeggio sul Mincio\"",
+      "retrieved_at": "2026-09-02T22:55:00.000Z",
+      "candidates": [
+        {
+          "title": "I 5 migliori ristoranti con pizza a Valeggio Sul Mincio, agosto 2026 - Restaurant Guru pagina 3",
+          "url": "https://restaurantguru.it/pizza-Valeggio-Sul-Mincio-m2/3"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:027019:jesolo:mazzini",
+      "query": "\"Pizzeria Mazzini\" Jesolo \"Via Silvio Trentin, 7\"",
+      "retrieved_at": "2026-09-02T22:55:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Mazzini - Pizzeria senza glutine per celiaci a Jesolo",
+          "url": "https://www.celiachiaitalia.com/pizzerie_per_celiaci/pizzeria-mazzini-jesolo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:024042:gallio:capr-allegra",
+      "query": "\"La Capr'Allegra\" Gallio \"Via Colle del Gastagh, 4\"",
+      "retrieved_at": "2026-09-02T23:00:00.000Z",
+      "candidates": [
+        {
+          "title": "La Capr'Allegra Gallio Sito Ufficiale | Bed&Breakfast con Ristorante Asiago",
+          "url": "https://www.lacaprallegra.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030016:campoformido:tirelli",
+      "query": "\"Bar Tirelli\" Campoformido \"Via Adriatica, 182\"",
+      "retrieved_at": "2026-09-02T23:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Tirelli - Ristorante italiano - Campoformido - UD",
+          "url": "https://bartirelliud.myadj.it/v/bartirelliud"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:030117:tarvisio:convento-da-jure",
+      "query": "\"Locanda al Convento Da Jure\" Tarvisio \"Monte Lussari 184\"",
+      "retrieved_at": "2026-09-02T23:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Un saluto da Jure!",
+          "url": "https://rifugioalconvento.it/wp-content/uploads/2018/08/brochure.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:032006:trieste:pizzalonga-away-trieste-p-zza-casali",
+      "query": "\"Pizzalonga Away\" Trieste \"Piazza Casali, 4\"",
+      "retrieved_at": "2026-09-02T23:00:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZALONGA AWAY, Trieste - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187813-d21353412-Reviews-Pizzalonga_Away-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html"
+        }
+      ]
+    }
+  ]
+}

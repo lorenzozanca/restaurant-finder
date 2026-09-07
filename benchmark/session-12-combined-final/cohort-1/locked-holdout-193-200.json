@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-193-200",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:035033:reggio-nell-emilia:orchidea-fogliano",
+      "query": "\"Pizzeria Orchidea Fogliano\" \"Reggio nell'Emilia\" \"Via Enrico Fermi, 24\"",
+      "retrieved_at": "2026-09-03T00:25:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Orchidea Fogliano | 0522 520419 | Reggio nell'Emilia",
+          "url": "https://www.tuttiaffari.com/pizzeria-orchidea-fogliano-0522-520419"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:033006:borgonovo-val-tidone:baldo",
+      "query": "\"Bar Baldo\" \"Borgonovo Val Tidone\" \"Viale Risorgimento, 2\"",
+      "retrieved_at": "2026-09-03T00:25:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:036022:mirandola:coop",
+      "query": "\"Coop\" Mirandola \"VIA GREGORIO AGNINI\"",
+      "retrieved_at": "2026-09-03T00:25:00.000Z",
+      "candidates": [
+        {
+          "title": "Ministero delle Imprese e del Made in Italy",
+          "url": "https://www.mimit.gov.it/images/stories/documenti/province/Emilia-Romagna_-_MO_-_Modena.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:038008:ferrara:ray-gelato",
+      "query": "\"Ray Gelato\" Ferrara \"Via Ravenna, 47\"",
+      "retrieved_at": "2026-09-03T00:25:00.000Z",
+      "candidates": [
+        {
+          "title": "Ray Gelato Ferrara, Ferrara - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Ray-gelato-Ferrara"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:038019:portomaggiore:piadineria",
+      "query": "\"La Piadineria\" Portomaggiore \"Via Roma, 43C\"",
+      "retrieved_at": "2026-09-03T00:30:00.000Z",
+      "candidates": [
+        {
+          "title": "La Piadineria - Portomaggiore (Fe) | Chiosco nelle mie vicinanze",
+          "url": "https://lapiadineria.eatbu.com/?lang=it"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:040013:forlimpopoli:symon-caffe",
+      "query": "\"Symon Caffè\" Forlimpopoli \"Via Emilia per Forlì, 1119\"",
+      "retrieved_at": "2026-09-03T00:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ospitalità - Forlimpopoli Città Artusiana",
+          "url": "https://www.forlimpopolicittartusiana.it/ospitalita/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:037006:bologna:rosticceria-da-toto",
+      "query": "\"Pizzeria Rosticceria da Toto\" Bologna \"Via Toscana, 58/3A\"",
+      "retrieved_at": "2026-09-03T00:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Rosticceria Da Totò - Bologna - Pizza",
+          "url": "https://pizzeria-rosticceria-da-toto.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:040046:sogliano-al-rubicone:dalla-naty",
+      "query": "\"Bar Trattoria dalla Naty\" \"Sogliano al Rubicone\" \"Via Rontagnano Castello, 37\"",
+      "retrieved_at": "2026-09-03T00:30:00.000Z",
+      "candidates": []
+    }
+  ]
+}

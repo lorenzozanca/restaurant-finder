@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "stage": "C",
+  "checkpoint_sample_index": 500,
+  "selection_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+  "continuous_selection_order_coverage": "001-500",
+  "unique_venue_ids": 500,
+  "publisher_domains": 1590,
+  "ownership_statuses": { "verified": 55, "rejected": 1522, "uncertain": 13 },
+  "adjudication_sha256": {
+    "locked-holdout-adjudication-001-100.json": "1e41591661cb3c51db0f7df6c68070e7d2db02b4d13fa687ab511c5c9cfd0c4f",
+    "locked-holdout-adjudication-101-200.json": "4706a24ed17cb8a38b8f4c070c65fbeb2e6a88e9cc2ff4aa0f1797497881d9f4",
+    "locked-holdout-adjudication-201-300.json": "25ab3a491ef735b37e78905b28c86eabf78cccbb5c0300c3d7809874dcdc73a0",
+    "locked-holdout-adjudication-301-400.json": "6407333e1f671bec896020c7787e485e8871be3a4d9f660488f309d679e5e4ef",
+    "locked-holdout-adjudication-401-500.json": "f28b5a599268302eb5f95b0fc32527e063e11f004679285a8842dbae9fad82ff"
+  },
+  "capture_sha256": {
+    "locked-holdout-capture-001-100.partial.json": "e6a48208547bc7ac684b40c6edb46663b2e8c50ee413aa233d451dd3baad3e10",
+    "locked-holdout-capture-101-200.partial.json": "6ffb7506c715a677d9f342d4cc9c6314ce9d0c722a77936bffaf9be871d2216f",
+    "locked-holdout-capture-201-300.partial.json": "1794f96e610a66450dfdcf947e594115f4e06611581c052269255aee69a311cd",
+    "locked-holdout-capture-301-400.partial.json": "1110029c916a833d3864d8ed7d6ee50099489ccd504ae8ad1e572e95ab692c02",
+    "locked-holdout-capture-401-500.partial.json": "fbd10979776346d3820a8eb2b526f74129e2aaef0db57b4a20ac1b6698d532ef"
+  },
+  "plausible_urls_directly_inspected_total": 71,
+  "identical_url_retry_attempts_total": 11,
+  "search_queries_issued_or_reopened_during_adjudication": 0,
+  "evaluator_runs": 0,
+  "every_candidate_domain_reviewed_exactly_once": true,
+  "validation_status": "passed"
+}

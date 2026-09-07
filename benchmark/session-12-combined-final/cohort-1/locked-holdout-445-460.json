@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-445-460",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:078138:scalea:sweet-cafe",
+      "query": "\"Sweet Cafe\" \"Scalea\" \"Corso Mediterraneo, 273\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "SWEET CAFÉ, Scalea - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194909-d7772612-Reviews-Sweet_Cafe-Scalea_Province_of_Cosenza_Calabria.html"
+        },
+        {
+          "title": "Sweet Café | 0985 270395 | Scalea",
+          "url": "https://www.tuttiaffari.com/sweet-caf%C3%A9_8I-0985-270395"
+        },
+        {
+          "title": "Sweet Café, Scalea - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Sweet-Cafe-Scalea"
+        },
+        {
+          "title": "Sweet Café, Scalea - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Sweet-Cafe-Scalea"
+        },
+        {
+          "title": "SWEET CAFE, Scalea - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194909-d7772612-Reviews-Sweet_Cafe-Scalea_Province_of_Cosenza_Calabria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080063:reggio-di-calabria:bridge-lounge-pub",
+      "query": "\"Bridge Lounge Pub\" \"Reggio di Calabria\" \"Via Sbarre Centrali, 775\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bridge Lounge Pub - Reggio di Calabria, Via Sbarre Centrali, 775",
+          "url": "https://aziende.virgilio.it/locali-e-ritrovi/reggio-di-calabria-rc/bridge-lounge-pub_2"
+        },
+        {
+          "title": "Bridge Lounge Pub | Touring Club Italiano",
+          "url": "https://www.touringclub.it/destinazioni/reggio-di-calabria/fare/282833-bridge-lounge-pub"
+        },
+        {
+          "title": "Pizzeria pizza in Via Sbarre Centrali a Reggio Di Calabria",
+          "url": "https://www.paginegialle.it/calabria/reggio_di_calabria/pizzeria_pizza/via-sbarre-centrali.html"
+        },
+        {
+          "title": "1046 recensioni di Bridge Lounge Pub a Reggio di Calabria",
+          "url": "https://altraopinione.org/pub/reggio-di-calabria/bridge-lounge-pub/"
+        },
+        {
+          "title": "Locali e Ritrovi Birrerie e Pubs a Reggio di Calabria in Via Sbarre Centrali",
+          "url": "https://www.virgilio.it/italia/reggio-di-calabria/via/via-sbarre-centrali/locali-e-ritrovi-birrerie-e-pubs"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:078017:bisignano:pasticceria-gelateria-bar-longo",
+      "query": "\"Pasticceria Gelateria bar Longo\" \"Bisignano\" \"Corso Italia, 15A\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pasticceria Gelateria bar Longo a Bisignano | PagineUrbane",
+          "url": "https://pagineurbane.it/citta/bisignano/attivita/pasticceria-gelateria-bar-longo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080061:polistena:sema",
+      "query": "\"SēMa\" \"Polistena\" \"Viale della Rivoluzione d'Ottobre, 3\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "SēMa | 338 880 2306 | Polistena",
+          "url": "https://www.tuttiaffari.com/s%C4%93ma-338-880-2306"
+        },
+        {
+          "title": "SēMa, Polistena - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Charlie-Brown-Polistena"
+        },
+        {
+          "title": "SēMa, Polistena - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Charlie-Brown-Polistena"
+        },
+        {
+          "title": "SēMa - Polistena, Città metropolitana di Reggio Calabria",
+          "url": "https://frhome.it/sema/"
+        },
+        {
+          "title": "SēMa, Polistena - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Charlie-Brown-Polistena"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079023:catanzaro:casello",
+      "query": "\"Al Casello\" \"Catanzaro\" \"Via Sardegna, 3\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "» Pizzeria Rosticceria Al Casello a Catanzaro (CZ) | PagineGialle",
+          "url": "https://www.paginegialle.it/catanzaro-cz/ristoranti/pizzeria-rosticceria-al-casello"
+        },
+        {
+          "title": "PIZZERIA ROSTICCERIA AL CASELLO, Catanzaro Lido - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1575063-d8378734-Reviews-Pizzeria_Rosticceria_Al_Casello-Catanzaro_Lido_Catanzaro_Province_of_Catanzaro_C.html"
+        },
+        {
+          "title": "PIZZERIA ROSTICCERIA AL CASELLO, Catanzaro Lido - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g1575063-d8378734-Reviews-Pizzeria_Rosticceria_Al_Casello-Catanzaro_Lido_Catanzaro_Province_of_Catanzaro_C.html"
+        },
+        {
+          "title": "Pizzeria Rosticceria al Casello - Catanzaro, Via Sardegna, 3",
+          "url": "https://aziende.virgilio.it/ristoranti/catanzaro-cz/pizzeria-rosticceria-al-casello"
+        },
+        {
+          "title": "PIZZERIA ROSTICCERIA AL CASELLO, Catanzaro Lido - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1575063-d8378734-Reviews-or30-Pizzeria_Rosticceria_Al_Casello-Catanzaro_Lido_Catanzaro_Province_of_Catanz.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:079072:marcellinara:piazzetta",
+      "query": "\"La Piazzetta\" \"Marcellinara\" \"Piazzetta San Vito, 13\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffetteria La Piazzetta | 0961 996686 | Marcellinara",
+          "url": "https://www.tuttiaffari.com/caffetteria-la-piazzetta_6P-0961-996686"
+        },
+        {
+          "title": "Enciclopedia storico-nobiliare italiana, Vol. VI",
+          "url": "https://italiarinasc.cloudfree.jp/HText/VittorioSpretiWork02.htm"
+        },
+        {
+          "title": "Punti Vendita - Artecora, produzione gioielli.",
+          "url": "https://www.artecora.it/punti-vendita/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083091:santo-stefano-di-camastra:oro-nero-coffee-store",
+      "query": "\"Oro Nero Coffee Store\" \"Santo Stefano di Camastra\" \"Via Vittorio Emanuele, 15\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Oro Nero Coffee Store | 328 565 5575 | Santo Stefano di Camastra",
+          "url": "https://www.tuttiaffari.com/oro-nero-coffee-store_41-328-565-5575"
+        },
+        {
+          "title": "ORO NERO COFFEE STORE, Santo Stefano di Camastra - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g968422-d15650726-Reviews-Oro_Nero_Coffee_Store-Santo_Stefano_di_Camastra_Province_of_Messina_Sicily.html"
+        },
+        {
+          "title": "Oro Nero Coffee Store, Santo Stefano di Camastra - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Oro-Nero-Coffee-Store-Santo-Stefano-di-Camastra"
+        },
+        {
+          "title": "ORO NERO COFFEE STORE, Santo Stefano di Camastra - Restaurant Reviews & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g968422-d15650726-Reviews-Oro_Nero_Coffee_Store-Santo_Stefano_di_Camastra_Province_of_Messina_Sicily.html"
+        },
+        {
+          "title": "Oro Nero Coffee Store, Santo Stefano di Camastra - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Oro-Nero-Coffee-Store-Santo-Stefano-di-Camastra"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:089013:noto:tre-valli",
+      "query": "\"Tre valli\" \"Noto\" \"Largo Porta Nazionale, 3\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "TRE VALLI DI ANDREA SIPIONE, Partita IVA: 01989910896, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/8835/tre-valli-di-andrea-sipione"
+        },
+        {
+          "title": "Tre valli, Noto - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Tre-Valli-Italy"
+        },
+        {
+          "title": "pizzeria a Noto - Cylex Ricerca Locale",
+          "url": "https://www.cylex-italia.it/noto/pizzeria.html"
+        },
+        {
+          "title": "Tre valli, Noto - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Pizzeria-Tre-Valli-Italy"
+        },
+        {
+          "title": "Top pizzerie in Noto - Cylex Ricerca locale",
+          "url": "https://www.cylex-italia.it/noto/pizzeria/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:082053:palermo:modi",
+      "query": "\"Modì\" \"Palermo\" \"Via Francesco Lo Jacono, 52\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "MODÌ, Palermo - Libertà - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187890-d8801354-Reviews-Modi-Palermo_Province_of_Palermo_Sicily.html"
+        },
+        {
+          "title": "Modì | 320 762 8745 | Palermo",
+          "url": "https://www.tuttiaffari.com/mod%C3%AC_18z-320-762-8745"
+        },
+        {
+          "title": "Modì, Palermo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Modi-Palermo-3"
+        },
+        {
+          "title": "MODÌ, Palermo - Libertà - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187890-d8801354-Reviews-Modi-Palermo_Province_of_Palermo_Sicily.html"
+        },
+        {
+          "title": "Modì da Palermo",
+          "url": "https://piatti.menu/restaurants/palermo-2/modi-22"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:089012:melilli:civico-dodici",
+      "query": "\"Civico Dodici\" \"Melilli\" \"Via Carmine, 2\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Civico Dodici, Melilli - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Civico-12-Logos-Melilli-Melilli-2"
+        },
+        {
+          "title": "Civico Dodici, Syracuse, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3745589/civico-dodici"
+        },
+        {
+          "title": "Locali, Birrerie e Pub a Sortino",
+          "url": "https://www.reteimprese.it/locali-birrerie-pub/sortino"
+        },
+        {
+          "title": "Via Vittorio Emanuele Secondo, Melilli: mappa e CAP",
+          "url": "https://distanzechilometriche.net/mappa/melilli/via-vittorio-emanuele-secondo/"
+        },
+        {
+          "title": "Via Scianna, Melilli: mappa, CAP e come arrivare",
+          "url": "https://distanzechilometriche.net/mappa/melilli/via-scianna/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087031:nicolosi:panta-rei",
+      "query": "\"Panta Rei\" \"Nicolosi\" \"Via Fratelli Gemmellaro, 122\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Panta Rei Nicolosi - Ristorante Nicolosi | Cucina Italiana nelle mie vicinanze",
+          "url": "https://panta-rei-nicolosi.eatbu.com/?lang=it"
+        },
+        {
+          "title": "PANTA REI, Nicolosi - Via Fratelli Gemmellaro 122 - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g660767-d8550375-Reviews-Panta_Rei-Nicolosi_Province_of_Catania_Sicily.html"
+        },
+        {
+          "title": "Panta Rei | 342 193 9021 | Nicolosi",
+          "url": "https://www.tuttiaffari.com/panta-rei_23K-342-193-9021"
+        },
+        {
+          "title": "PANTA REI S.A.S. DI ANTONIO CAPONETTO, Partita IVA: 05173570879, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1401/panta-rei-sas-di-antonio-caponetto"
+        },
+        {
+          "title": "PantaRei a Nicolosi - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork",
+          "url": "https://www.thefork.it/ristorante/pantarei-r542583"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:087015:catania:the-orange-pub",
+      "query": "\"The Orange Pub\" \"Catania\" \"Via Pietro Antonio Coppola, 45\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "The Orange Pub, Catania, Stesicoro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/The-Orange-Pub-Catania"
+        },
+        {
+          "title": "The Orange Pub, Catania, Stesicoro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/The-Orange-Pub-Catania"
+        },
+        {
+          "title": "Via Paternò, Catania (Centro storico, San Berillo)",
+          "url": "https://vie.openalfa.it/vie/via-paterno-centro-storico-catania"
+        },
+        {
+          "title": "Luogo accogliente a Catania (CT) | 121 annunci e recensioni",
+          "url": "https://localitybiz.it/palermo/luogo-accogliente-a-catania"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083061:nizza-di-sicilia:casa-di-lucio",
+      "query": "\"La Casa di Lucio\" \"Nizza di Sicilia\" \"Via La Marmora 4\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Il Piccolo Trieste Del 1973-O1-28 | PDF",
+          "url": "https://it.scribd.com/document/841461211/Il-Piccolo-Trieste-Del-1973-o1-28"
+        },
+        {
+          "title": "Lista Dentisti | PDF",
+          "url": "https://it.scribd.com/doc/255123728/Lista-Dentisti"
+        },
+        {
+          "title": "1985. 1 fo - Biblioteca centrale della Regione siciliana",
+          "url": "https://happylibnet.com/doc/370448/1985.-1-fo---biblioteca-centrale-della-regione-siciliana"
+        },
+        {
+          "title": "Donboscoland.it | MGS Triveneto | Memorie Biografiche - Vol.3",
+          "url": "https://www.donboscoland.it/it/page/memorie-biografiche-vol3"
+        },
+        {
+          "title": "Senza categoria – Pagina 2 – Dalla Sicilia alle Alpi",
+          "url": "https://dallasiciliaallealpi.wordpress.com/category/senza-categoria/page/2/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:084027:palma-di-montechiaro:risto-pub-bellavia",
+      "query": "\"Risto Pub Bellavia\" \"Palma di Montechiaro\" \"Corso G.Odierna\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:088006:modica:kaffa-street-bar",
+      "query": "\"Kaffa Street bar\" \"Modica\" \"Via Gianforma Margione, 46\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "KAFFA - STREET BAR, Modica - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g616190-d11804679-Reviews-Kaffa_Street_Bar-Modica_Province_of_Ragusa_Sicily.html"
+        },
+        {
+          "title": "Kaffa Street Bar - Gambero Rosso",
+          "url": "https://www.gamberorosso.it/luoghi/locali/caffe-bar/kaffa-street-bar"
+        },
+        {
+          "title": "Kaffa Street bar, Frigintini - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Kaffa-Street-Bar-Modica"
+        },
+        {
+          "title": "KAFFA - STREET BAR, Modica - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g616190-d11804679-Reviews-Kaffa_Street_Bar-Modica_Province_of_Ragusa_Sicily.html"
+        },
+        {
+          "title": "Modica - Wikivoyage, guida turistica di viaggio",
+          "url": "https://it.wikivoyage.org/wiki/Modica"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:083007:brolo:antico-borgo-marinario",
+      "query": "\"Antico Borgo Marinario\" \"Brolo\" \"Via Marina, 45\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    }
+  ]
+}

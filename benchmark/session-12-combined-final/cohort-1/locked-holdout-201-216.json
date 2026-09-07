@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-201-216",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:053028:semproniano:novecento",
+      "query": "\"ristorante NOVECENTO\" Semproniano \"Via Toscana 4\"",
+      "retrieved_at": "2026-09-03T00:35:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante Novecento Semproniano | Pasta fresca fatta a mano | Via Toscana, 4, Semproniano, Province of Grosseto, Italy",
+          "url": "https://www.ristorantenovecentosemproniano.com/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:049012:piombino:bernardini",
+      "query": "\"Caffe Bernardini\" Piombino \"Via Francesco Petrarca, 47\"",
+      "retrieved_at": "2026-09-03T00:35:00.000Z",
+      "candidates": [
+        {
+          "title": "CAFFÈ BERNARDINI - Bar a Piombino | LocalShop24",
+          "url": "https://www.localshop24.com/it/piombino-li-it/attivita/bar/caffe-bernardini/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:048017:firenze:berbere-pizzeria",
+      "query": "\"Berberè Pizzeria\" Firenze \"Piazza dei Nerli, 1\"",
+      "retrieved_at": "2026-09-03T00:35:00.000Z",
+      "candidates": [
+        {
+          "title": "Berberè Firenze San Frediano - Berberè Pizzeria",
+          "url": "https://www.berberepizza.it/en/berbere-firenze-san-frediano/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:050009:castelfranco-di-sotto:ciurli",
+      "query": "\"Bar Ciurli\" \"Castelfranco di Sotto\" \"Via Remo Bertoncini, 63\"",
+      "retrieved_at": "2026-09-03T00:35:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:053009:follonica:casa-del-gelato",
+      "query": "\"Casa del Gelato\" Follonica \"Via Cassarello, 5\"",
+      "retrieved_at": "2026-09-03T00:40:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:050026:pisa:njoy",
+      "query": "\"Bar Njoy\" Pisa \"Via Giuseppe Garibaldi\"",
+      "retrieved_at": "2026-09-03T00:40:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar NJOY, Pisa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Njoy-Pisa"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:050015:guardistallo:giunche",
+      "query": "\"Locanda Le Giunche\" Guardistallo \"Via Camminata, 3\"",
+      "retrieved_at": "2026-09-03T00:40:00.000Z",
+      "candidates": [
+        {
+          "title": "Locanda Le Giunche. Guardistallo, Costa degli Etruschi, Toscana",
+          "url": "https://locandalegiunche.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:048014:empoli:billy-tacos",
+      "query": "\"Billy Tacos\" Empoli \"Via Raffaello Sanzio, 199\"",
+      "retrieved_at": "2026-09-03T00:40:00.000Z",
+      "candidates": [
+        {
+          "title": "Billy Tacos - Empoli, Empoli - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Billy-Tacos-Empoli-Empoli"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046017:lucca:pasticceria-elisa",
+      "query": "\"Bar Pasticceria Elisa\" Lucca \"Piazza San Ponziano, 1\"",
+      "retrieved_at": "2026-09-03T00:45:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR PASTICCERIA ELISA, Lucca - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187898-d12971898-Reviews-Bar_Pasticceria_Elisa-Lucca_Province_of_Lucca_Tuscany.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:052017:monteroni-d-arbia:mascolo-caffe",
+      "query": "\"Mascolo Caffe\" \"Monteroni d'Arbia\" \"Via 4 Novembre, 357\"",
+      "retrieved_at": "2026-09-03T00:45:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:052028:san-gimignano:ceppo-toscano",
+      "query": "\"Il Ceppo Toscano\" \"San Gimignano\" \"Via delle Romite, 13\"",
+      "retrieved_at": "2026-09-03T00:45:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorante Il Ceppo Toscano: cucina tipica toscana a San Gimignano",
+          "url": "https://ilceppotoscano.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046033:viareggio:gelateria-mario-5e6391a5",
+      "query": "\"Gelateria Mario\" Viareggio \"Via dei Lecci, 132/8\"",
+      "retrieved_at": "2026-09-03T00:45:00.000Z",
+      "candidates": [
+        {
+          "title": "Gelateria Mario a Viareggio — gelateria artigianale in Toscana",
+          "url": "https://www.appgelato.it/gelaterie/toscana/gelateria-mario-viareggio/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:047010:montale:hub21-cafe",
+      "query": "\"Hub21 Cafè\" Montale \"Via Enrico Berlinguer\"",
+      "retrieved_at": "2026-09-03T00:50:00.000Z",
+      "candidates": [
+        {
+          "title": "Hub21 Cafè, Montale - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Hub21-Cafe-Montale"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:050039:volterra:vecchia-maniera",
+      "query": "\"Alla Vecchia Maniera\" Volterra \"Via Ricciarelli, 38\"",
+      "retrieved_at": "2026-09-03T00:50:00.000Z",
+      "candidates": [
+        {
+          "title": "Alla Vecchia Maniera - Visit Valdicecina",
+          "url": "https://www.visitvaldicecina.com/volterra-alla-vecchia-maniera/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:051002:arezzo:piadineria-paris-arezzo",
+      "query": "\"Piadineria Paris Arezzo\" \"Via Alessandro dal Borro, 4\"",
+      "retrieved_at": "2026-09-03T00:50:00.000Z",
+      "candidates": [
+        {
+          "title": "Piadineria Paris Arezzo - Arezzo, Via Alessandro dal Borro, 4",
+          "url": "https://aziende.virgilio.it/ristoranti/arezzo-ar/piadineriaparisarezzo-arezzo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:053017:montieri:luna-nel-pozzo",
+      "query": "\"La Luna nel Pozzo\" Montieri \"Via Giacomo Matteotti, 4\"",
+      "retrieved_at": "2026-09-03T00:50:00.000Z",
+      "candidates": [
+        {
+          "title": "la luna nel pozzo - montieri | Restaurant near me",
+          "url": "https://lalunanelpozzo.metro.bar/?lang=en"
+        }
+      ]
+    }
+  ]
+}

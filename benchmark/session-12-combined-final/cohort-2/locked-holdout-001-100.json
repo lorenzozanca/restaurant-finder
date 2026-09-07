@@ -1,0 +1,1931 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-extension-capture-001-100",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:005018:cantarana:cascina-caldera",
+      "query": "\"Cascina Caldera\" \"Cantarana\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Cascina Caldera Snc",
+          "url": "https://www.comune.cantarana.at.it/Guidaalpaese?IDDettaglio=45337"
+        },
+        {
+          "title": "Cascina Caldera | Touring Club Italiano",
+          "url": "https://www.touringclub.it/destinazioni/cantarana/dormire/115353-cascina-caldera"
+        },
+        {
+          "title": "Cascina Caldera - Menu Digitale",
+          "url": "https://www.leggimenu.it/menu/7dtkdd2n"
+        },
+        {
+          "title": "Cascina Caldera - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187852-d2026700-Reviews-Cascina_Caldera-Asti_Province_of_Asti_Piedmont.html"
+        },
+        {
+          "title": "CASCINA CALDERA | Piemonte Italia",
+          "url": "https://www.piemonteitalia.eu/it/dormire/affittacamere/cascina-caldera"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:006160:serravalle-scrivia:starbucks",
+      "query": "site:starbucks.it \"Bb Outlet Serravalle\" \"Serravalle Scrivia\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:003106:novara:premiata-pizzeria-d-asporto",
+      "query": "\"La Premiata Pizzeria d’asporto\" \"Novara\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "La Premiata Pizzeria d’asporto | Novara",
+          "url": "https://www.tuttiaffari.com/la-premiata-0321-513348"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001089:coazze:caffetteria-cremeria-gramsci",
+      "query": "\"Caffetteria Cremeria Gramsci\" \"Coazze\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffetteria Cremeria Gramsci, Coazze",
+          "url": "https://restaurantguru.it/Caffetteria-Cremeria-Gramsci-Coazze"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001024:beinasco:cremglasse-le-fornaci",
+      "query": "\"Cremglasse Le Fornaci\" \"Beinasco\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "CremGlassé Le Fornaci Reviews",
+          "url": "https://www.top-rated.online/cities/Beinasco/place/p/15780913/CremGlass%C3%A9%2BLe%2BFornaci"
+        },
+        {
+          "title": "CremGlassé Le Fornaci, Beinasco",
+          "url": "https://restaurantguru.it/Cremglasse-Le-Fornaci-Beinasco"
+        },
+        {
+          "title": "Ristoranti vicino a Cremglassé Le Fornaci",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g1587633-d21361143-Cremglasse_Le_Fornaci-Beinasco_Province_of_Turin_Piedmont.html"
+        },
+        {
+          "title": "CREMGLASSÉ LE FORNACI",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1587633-d21361143-Reviews-Cremglasse_Le_Fornaci-Beinasco_Province_of_Turin_Piedmont.html"
+        },
+        {
+          "title": "Cremglassè Le Fornaci - Too Good To Go",
+          "url": "https://www.toogoodtogo.com/it/find/beinasco/cremglasselefornaci-beinasco/bakedgoods/surprisebagpiccolaprodottidaforno-529594"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001272:torino:amsterdam-chips",
+      "query": "\"Amsterdam Chips\" \"Torino\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:001178:pancalieri:industry",
+      "query": "\"Industry\" \"Pancalieri\" \"Via Cavalier Jomenico Galasso\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:006174:tortona:tiziana",
+      "query": "\"Bar Tiziana\" \"Tortona\" \"Corso Giuseppe Romita\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR TIZIANA, Tortona - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194938-d7235929-Reviews-Bar_Tiziana-Tortona_Province_of_Alessandria_Piedmont.html"
+        },
+        {
+          "title": "Bar Tiziana, Tortona",
+          "url": "https://restaurantguru.it/Bar-Tiziana-Tortona"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:006003:alessandria:antica-casa-rava",
+      "query": "\"Ristorante Antica Casa Rava\" \"Alessandria\" \"Largo Catania\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Antica Casa Rava - Alessandria",
+          "url": "https://www.anticacasarava.com/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:096019:coggiola:nerone",
+      "query": "\"Pizzeria Nerone\" \"Coggiola\" \"Via Giuseppe Mazzini\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZERIA NERONE, Coggiola - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2050002-d2045296-Reviews-Pizzeria_Nerone-Coggiola_Province_of_Biella_Piedmont.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:004003:alba:san-lazzaro",
+      "query": "\"Bar San Lazzaro\" \"Alba\" \"Via Armando Diaz\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:096004:biella:afterglow-pub-paninoteca-birreria",
+      "query": "\"Afterglow Pub Paninoteca Birreria\" \"Biella\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "AFTERGLOW PUB PANINOTECA BIRRERIA",
+          "url": "https://www.localshop24.com/it/biella-bi-it/attivita/paninoteca/afterglow-pub-paninoteca-birreria/"
+        },
+        {
+          "title": "Afterglow Pub Paninoteca Birreria",
+          "url": "https://restaurantguru.com/Afterglow-Biella"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:005031:castelnuovo-don-bosco:cremglasse-castelnuovo-don-bosco",
+      "query": "\"Cremglassè Castelnuovo Don Bosco\" \"Castelnuovo Don Bosco\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:003008:arona:pa-ta-ta",
+      "query": "\"Pa-ta-ta\" \"Arona\" \"Corso Guglielmo Marconi\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:005005:asti:cicchetto",
+      "query": "\"Il Cicchetto\" \"Asti\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:004057:castino:del-peso",
+      "query": "\"Trattoria Del Peso\" \"Castino\" \"Via 20 Settembre\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:001164:nichelino:tuttocapsule-nichelino",
+      "query": "\"Tuttocapsule Nichelino\" \"Nichelino\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "RIVENDITORI - So Food, So Good!",
+          "url": "https://www.sofood.it/rivenditori"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:005005:asti:dai-toscanacci",
+      "query": "\"Dai Toscanacci\" \"Asti\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Dai Toscanacci - Ristorante Asti",
+          "url": "https://daitoscanacci.eatbu.com/?lang=it"
+        },
+        {
+          "title": "DAI TOSCANACCI DI REXHEPI AUREL",
+          "url": "https://www.ufficiocamerale.it/1004/dai-toscanacci-di-rexhepi-aurel"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:004025:borgo-san-dalmazzo:gelateria-kiwi",
+      "query": "\"Gelateria Kiwi\" \"Borgo San Dalmazzo\" \"Via Bergia\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR GELATERIA KIWI, Borgo San Dalmazzo",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2012043-d2718102-Reviews-Bar_Gelateria_Kiwi-Borgo_San_Dalmazzo_Province_of_Cuneo_Piedmont.html"
+        },
+        {
+          "title": "Provincia di CUNEO",
+          "url": "https://expydoc.com/doc/7059048/provincia-di-cuneo-al-17-11-2014"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:103072:verbania:uso-cucina-il-dollaro",
+      "query": "\"Birreria Pub Uso Cucina Il Dollaro\" \"Verbania\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Birreria Pub Uso Cucina Il Dollaro, Verbania",
+          "url": "https://www.nuovaopinione.it/verbania/pub/birreria-pub-uso-cucina-il-dollaro-7046"
+        },
+        {
+          "title": "Recensioni di Birreria Pub Uso Cucina Il Dollaro",
+          "url": "https://altraopinione.org/pub/verbania/birreria-pub-uso-cucina-il-dol/"
+        },
+        {
+          "title": "Birreria Pub Uso Cucina Il Dollaro - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Attraction_Review-g21253326-d28310011-Reviews-Birreria_Pub_Uso_Cucina_Il_Dollaro-Suna_Verbania_Lake_Maggiore_Piedmont.html"
+        },
+        {
+          "title": "Birreria Pub Uso Cucina Il Dollaro",
+          "url": "https://restaurantguru.com/Il-Dollaro-Intra"
+        },
+        {
+          "title": "Birreria Pub Uso Cucina Il Dollaro - Wanderlog",
+          "url": "https://wanderlog.com/place/details/13097622/birreria-pub-uso-cucina-il-dollaro"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:001272:torino:m-bun",
+      "query": "\"M** Bun\" \"Torino\" \"Via Urbano Rattazzi\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "M**BUN, Torino - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187855-d3840625-Reviews-M_Bun-Turin_Province_of_Turin_Piedmont.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:006072:frassinello-monferrato:vecchia-rocka-pub",
+      "query": "\"Vecchia Rocka Pub\" \"Frassinello Monferrato\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Il Monferrato - Frassinello Monferrato",
+          "url": "https://guida.ilmonferrato.it/comuni/vPkku864CkS_iCG8VEYi-Q/frassinello-monferrato"
+        },
+        {
+          "title": "Vecchia Rocka Pub",
+          "url": "https://restaurantguru.it/Vecchia-Rocka-Frassinello-Monferrato"
+        },
+        {
+          "title": "Vecchia Rocka",
+          "url": "https://www.nuovaopinione.it/frassinello-monferrato/pub/vecchia-rocka-415108"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:004029:bra:mondo-del-caffe",
+      "query": "\"Il Mondo del Caffè\" \"Bra\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "IL MONDO DEL CAFFE' BRA",
+          "url": "https://www.localshop24.com/it/bra-cn-it/attivita/caffetteria/caffetteria-il-mondo-del-caffe-bra/"
+        },
+        {
+          "title": "IL MONDO DEL CAFFE SNC",
+          "url": "https://www.ufficiocamerale.it/7144/il-mondo-del-caffe-snc-di-muscella-roberto-e-muscella-antonella"
+        },
+        {
+          "title": "Caffetteria IL MONDO DEL CAFFE' Bra",
+          "url": "https://www.tuttiaffari.com/caffetteria-il-mondo-del-caffe-bra-0172-751449"
+        },
+        {
+          "title": "Il Mondo Del Caffe' Snc",
+          "url": "https://atoka.io/public/it/azienda/il-mondo-del-caffe-snc-di-muscella-roberto-e-muscella-antonella/7c091c3fd0ac"
+        },
+        {
+          "title": "IL MONDO DEL CAFFE' | iCRIBIS",
+          "url": "https://www.icribis.com/it/scheda-azienda/CN325160_IL_MONDO_DEL_CAFFE_SNC_DI_MUSCELLA_ROBERTO_E_MUSCELLA_ANTONELLA"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:006003:alessandria:primavera-ristorante",
+      "query": "\"Bar Primavera Ristorante\" \"Alessandria\" \"SP180\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:001276:trana:caffetteria-san-bernardino",
+      "query": "\"Caffetteria San Bernardino\" \"Trana\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffetteria S. Bernardino BrasileraLab",
+          "url": "https://www.tuttiaffari.com/caffetteria-s-bernardino-brasileralab-011-933-8526"
+        },
+        {
+          "title": "Val Sangone Archivi",
+          "url": "https://www.christianperfumo.it/val-sangone/"
+        },
+        {
+          "title": "Girovagando per la Collina Morenica di Rivoli",
+          "url": "https://www.christianperfumo.it/val-susa/girovagando-per-la-collina-morenica-di-rivoli/"
+        },
+        {
+          "title": "Ristoranti nella città Trana",
+          "url": "https://gastroranking.it/ristoranti/piemonte/torino/trana/"
+        },
+        {
+          "title": "Ristoranti in San Bernardino",
+          "url": "https://restaurantguru.it/San-Bernardino-Piedmont"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007061:saint-nicolas:foyer-saint-nicolas-vecchia-gestione-luigina-nereo",
+      "query": "\"Le Foyer - Saint Nicolas . Vecchia gestione Luigina & Nereo\" \"Saint-Nicolas\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:007071:valtournenche:tasty-cervinia",
+      "query": "\"Tasty cervinia\" \"Valtournenche\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "TASTY CERVINIA, Breuil-Cervinia - Restaurant Reviews & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187864-d12815918-Reviews-Tasty_Cervinia-Breuil_Cervinia_Valtournenche_Valle_d_Aosta.html"
+        },
+        {
+          "title": "TASTY CERVINIA, Breuil-Cervinia - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g187864-d12815918-Reviews-Tasty_Cervinia-Breuil_Cervinia_Valtournenche_Valle_d_Aosta.html"
+        },
+        {
+          "title": "TASTY CERVINIA, Breuil-Cervinia - Restaurant Bewertungen & Fotos - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g187864-d12815918-Reviews-Tasty_Cervinia-Breuil_Cervinia_Valtournenche_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Tasty Cervinia - Valtournenche, Via Carrel, 33",
+          "url": "https://aziende.virgilio.it/ristoranti/valtournenche-ao/tasty-cervinia"
+        },
+        {
+          "title": "TASTY CERVINIA, Breuil-Cervinia - Restaurant Avis & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g187864-d12815918-Reviews-Tasty_Cervinia-Breuil_Cervinia_Valtournenche_Valle_d_Aosta.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007003:aosta:du-bourg",
+      "query": "\"Cafe du bourg\" \"Aosta\" \"Via Sant'Anselmo\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Cafe du bourg, Aosta - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Cafe-Du-Bourg-Aosta"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Cafè Du Bourg“ | Via S Anselmo",
+          "url": "https://www.oraridiapertura24.it/filiale/Aosta-Caf%25E8%2520Du%2520Bourg-219146A.html"
+        },
+        {
+          "title": "Top 16 Cafeterías en Aosta, Italia | Coffeeland",
+          "url": "https://coffeeland.ch/es/Italy/map/coffee/Aosta"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007031:gressan:belvedere",
+      "query": "\"Pizzeria Belvedere\" \"Gressan\" \"Frazione Pila\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Belvedere, Gressan",
+          "url": "https://www.nuovaopinione.it/gressan/ristoranti/pizzeria-belvedere-326302"
+        },
+        {
+          "title": "Driving directions to Pizzeria Belvedere, 10 Frazione Pila, Pila - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/valle-daosta/pila/pizzeria-belvedere?to=place.ChIJyRe72xIgiUcR8gNgFKVeqFg"
+        },
+        {
+          "title": "Pizzeria Belvedere da Gressan AO",
+          "url": "https://piatti.menu/restaurants/gressan-ao/pizzeria-belvedere-79"
+        },
+        {
+          "title": "Pizzeria Belvedere a Gressan: menù e prezzi | Mycia.it",
+          "url": "https://www.mycia.it/menu/gressan/pizzeria-belvedere-RZ0lr1ED8"
+        },
+        {
+          "title": "Recensioni - Pizzeria Belvedere Gressan AO",
+          "url": "https://piatti.menu/restaurants/gressan-ao/pizzeria-belvedere-79/reviews"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007003:aosta:mpc-maison-publique-de-la-cervoise",
+      "query": "\"MPC Maison Publique de la Cervoise\" \"Aosta\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "MPC Maison Publique de la Cervoise",
+          "url": "https://mpcaosta.wordpress.com/"
+        },
+        {
+          "title": "Contatti – MPC Maison Publique de la Cervoise",
+          "url": "https://mpcaosta.wordpress.com/contatti/"
+        },
+        {
+          "title": "MPC Maison Publique de la Cervoise, Aoste - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/MPC-Maison-Publique-de-la-Cervoise-Aosta"
+        },
+        {
+          "title": "MPC MAISON PUBLIQUE DE LA CERVOISE, Aosta - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187863-d12473948-Reviews-MPC_Maison_Publique_de_La_Cervoise-Aosta_Valle_d_Aosta.html"
+        },
+        {
+          "title": "MPC Maison Publique de la Cervoise | 339 127 3379 | Aosta",
+          "url": "https://www.tuttiaffari.com/mpc-maison-publique-de-la-cervoise-339-127-3379"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007022:courmayeur:wood-cafe",
+      "query": "\"Wood Cafe\" \"Courmayeur\" \"Strada delle Volpi\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "WOOD CAFÈ, Courmayeur - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187865-d26455354-Reviews-Wood_Cafe-Courmayeur_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Wood Cafè, Courmayeur - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Wood-Cafe-Italy"
+        },
+        {
+          "title": "WOOD CAFÈ, Courmayeur - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187865-d26455354-Reviews-Wood_Cafe-Courmayeur_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Wood Cafè, Courmayeur - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Wood-Cafe-Italy"
+        },
+        {
+          "title": "Wood Cafè, Courmayeur - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Wood-Cafe-Italy"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007049:pollein:genzianella",
+      "query": "\"Trattoria Genzianella\" \"Pollein\" \"Località Capoluogo\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Trattoria Genzianella, 8/B Località Capoluogo, Pollein - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/valle-daosta/pollein/trattoria-genzianella?to=place.ChIJk6HUqEDfiEcR65KnUv9fd_M"
+        },
+        {
+          "title": "TRATTORIA GENZIANELLA, Pollein - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g736260-d2147308-Reviews-Trattoria_Genzianella-Pollein_Aosta_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Trattoria Genzianella, Pollein",
+          "url": "https://www.nuovaopinione.it/pollein/pizzerie/trattoria-genzianella-326558"
+        },
+        {
+          "title": "TRATTORIA GENZIANELLA, Pollein - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g736260-d2147308-Reviews-Trattoria_Genzianella-Pollein_Aosta_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Orari di apertura Trattoria Genzianella ▷ Pollein Località Capoluogo, 8/B, Pollein, Valle d'Aosta, 11020 | Trova Aperto",
+          "url": "https://trova-aperto.it/pollein/trattoria-genzianella-2281463"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007041:la-thuile:offshore-bar",
+      "query": "\"Offshore Bar\" \"La Thuile\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "OFFSHORE BAR, La Thuile - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g656941-d16350450-Reviews-Offshore_Bar-La_Thuile_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Offshore Bar | 335 532 0597 | La Thuile (Italia)",
+          "url": "https://www.tuttiaffari.com/offshore-bar-335-532-0597"
+        },
+        {
+          "title": "Offshore Bar, La Thuile - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Off-Shore-Italy"
+        },
+        {
+          "title": "OFFSHORE BAR, La Thuile - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g656941-d16350450-Reviews-Offshore_Bar-La_Thuile_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Offshore Bar, La Thuile - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Off-Shore-Italy"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007038:jovencan:avalon",
+      "query": "\"Pizzeria Avalon\" \"Jovençan\" \"Frazione Etral\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "AVALON, Jovencan - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1509112-d2512853-Reviews-Avalon-Jovencan_Valle_d_Aosta.html"
+        },
+        {
+          "title": "AVALON, Jovencan - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1509112-d2512853-Reviews-Avalon-Jovencan_Valle_d_Aosta.html"
+        },
+        {
+          "title": "AVALON, Jovencan - Restaurant Reviews, Phone Number & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.ie/Restaurant_Review-g1509112-d2512853-Reviews-Avalon-Jovencan_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Avalon – Jovençan, Valle d’Aosta – Psicanalisi Critica",
+          "url": "https://psicanalisicritica.it/avalon/"
+        },
+        {
+          "title": "Avalon - Jovençan, Valle d'Aosta",
+          "url": "https://ristoranteyukimarconi.it/avalon/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007065:saint-vincent:cage-aux-folles",
+      "query": "\"La Cage Aux Folles\" \"Saint-Vincent\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Michou, le célèbre directeur de cabaret parisien, est mort",
+          "url": "https://www.lefigaro.fr/culture/michou-le-celebre-directeur-de-cabaret-parisien-est-mort-20200126"
+        },
+        {
+          "title": "La Cage Aux Folles - Saint-Vincent, Valle d’Aosta - Venue Photos - Untappd",
+          "url": "https://untappd.com/v/la-cage-aux-folles/5184455/photos"
+        },
+        {
+          "title": "Menu da La Cage Aux Folles pub & bar, Saint-Vincent",
+          "url": "https://restaurantguru.it/La-Cage-Aux-Folles-Saint-Vincent/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007022:courmayeur:pierre-alexis",
+      "query": "\"Restaurant Pierre Alexis\" \"Courmayeur\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pierre Alexis 1877",
+          "url": "https://pierrealexis.it/en/"
+        },
+        {
+          "title": "Pierre Alexis 1877",
+          "url": "https://www.lovevda.it/fr/base-de-donnees/16/restaurants/courmayeur/pierre-alexis-1877/2101"
+        },
+        {
+          "title": "Pierre Alexis 1877 - Restaurant Courmayeur - ViaMichelin",
+          "url": "https://www.viamichelin.fr/cartes-plans/restaurants/poi/courmayeur-11013-9hmjmgsy"
+        },
+        {
+          "title": "RESTAURANT PIERRE ALEXIS 1877, Courmayeur - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Pierre-Alexis-1877-Courmayeur"
+        },
+        {
+          "title": "RESTAURANT PIERRE ALEXIS 1877, Courmayeur - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Pierre-Alexis-1877-Courmayeur"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007073:verres:agip",
+      "query": "\"Bar Agip\" \"Verrès\" \"Via Circonvallazione\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Agip, Verres - Italia.it",
+          "url": "https://www.italia.it/it/valle-d-aosta/verres/dove-mangiare/bar-agip"
+        },
+        {
+          "title": "Bar Agip, Verres - Italia.it",
+          "url": "https://www.italia.it/en/valle-d-aosta/verres/where-to-eat/bar-agip"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Bar Agip“ | Via Circonvallazione",
+          "url": "https://www.oraridiapertura24.it/filiale/Verres-Bar%2520Agip-214071J.html"
+        },
+        {
+          "title": "SuperEnalotto, sfiorato il “6” a Verres (AO): centrato un “5” da 30mila euro | AgiproNews",
+          "url": "https://www.agipronews.it/superenalotto/SuperEnalotto-sfiorato-il-%E2%80%9C6%E2%80%9D-a-Verres-%28AO%29%3A-centrato-un-%E2%80%9C5%E2%80%9D-da-30mila-euro-id.227106"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007054:quart:isaulle",
+      "query": "\"iSaulle\" \"Quart\" \"Località Amerique\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ISAULLE, Quart - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g635639-d9592255-Reviews-ISaulle-Quart_Aosta_Valle_d_Aosta.html"
+        },
+        {
+          "title": "| iSaulle",
+          "url": "https://www.identitagolose.it/sito/it/462/34869/locali/isaulle.html"
+        },
+        {
+          "title": "2969 recensioni di iSaulle a Quart",
+          "url": "https://altraopinione.org/pizzeria/quart/saulle-re-il-regno-della-pizza/"
+        },
+        {
+          "title": "Capodanno da iSaulle, eccellenza valdostana della pizza che guarda all’Italia - La Prima Linea",
+          "url": "https://www.laprimalinea.it/2025/12/20/leggi-notizia/argomenti/pubbliredazionali/articolo/capodanno-da-isaulle-eccellenza-valdostana-della-pizza-che-guarda-allitalia.html"
+        },
+        {
+          "title": "iSaulle - Aosta - Plateform",
+          "url": "https://saullere.plateform.app/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007021:cogne:du-centre",
+      "query": "\"Cafe du Centre\" \"Cogne\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Café du Centre - VisitCogne",
+          "url": "https://www.visitcogne.it/fr/cucina/cafe-du-centre/"
+        },
+        {
+          "title": "Café du Centre - VisitCogne",
+          "url": "https://www.visitcogne.it/en/cucina/cafe-du-centre/"
+        },
+        {
+          "title": "Café du Centre - VisitCogne",
+          "url": "https://www.visitcogne.it/cucina/cafe-du-centre/"
+        },
+        {
+          "title": "CAFE' DU CENTRE COGNE - Restaurant Avis, Numéro de Téléphone & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g736252-d5233953-Reviews-Cafe_du_Centre_Cogne-Cogne_Valle_d_Aosta.html"
+        },
+        {
+          "title": "CAFE' DU CENTRE COGNE - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g736252-d5233953-Reviews-Cafe_du_Centre_Cogne-Cogne_Valle_d_Aosta.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007065:saint-vincent:summer-pub",
+      "query": "\"Summer Pub\" \"Saint-Vincent\" \"Via E. Chanoux\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Mangiare vicino 11024 Châtillon AO, Italia",
+          "url": "https://local.reteimprese.it/11024-ch%C3%A2tillon-ao-italia/mangiare"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007020:chatillon:dei-cacciatori",
+      "query": "\"Osteria dei cacciatori\" \"Châtillon\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "OSTERIA DEI CACCIATORI, Chatillon - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g736250-d6846854-Reviews-Osteria_Dei_Cacciatori-Chatillon_Valle_d_Aosta.html"
+        },
+        {
+          "title": "OSTERIA DEI CACCIATORI, Chatillon - Restaurant Avis, Numéro de Téléphone & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g736250-d6846854-Reviews-Osteria_Dei_Cacciatori-Chatillon_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Osteria dei cacciatori | 0166 61295 | Châtillon (Italia)",
+          "url": "https://www.tuttiaffari.com/osteria-dei-cacciatori_7J-0166-61295"
+        },
+        {
+          "title": "Osteria Dei Cacciatori | 338 583 1106 | Châtillon (Italia)",
+          "url": "https://www.tuttiaffari.com/osteria-dei-cacciatori_1C-338-583-1106"
+        },
+        {
+          "title": "Osteria Dei Cacciatori, Châtillon - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/TRATTORIA-AL-CACCIATORE-Chatillon-Aosta"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007007:ayas:brasserie-du-breithorn",
+      "query": "\"Brasserie du Breithorn\" \"Ayas\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Brasserie du Breithorn",
+          "url": "https://www.breithornhotel.com/fr/brasserie/"
+        },
+        {
+          "title": "Brasserie du Breithorn",
+          "url": "https://www.breithornhotel.com/brasserie/"
+        },
+        {
+          "title": "Brasserie du Breithorn - Champoluc",
+          "url": "https://www.breithornhotel.com/en/brasserie/"
+        },
+        {
+          "title": "Brasserie Du Breithorn",
+          "url": "https://www.lovevda.it/it/banca-dati/16/ristorante/champoluc-ayas-antagnod/brasserie-du-breithorn/2570"
+        },
+        {
+          "title": "Brasserie Du Breithorn",
+          "url": "https://www.lovevda.it/en/database/16/restaurants/champoluc-ayas-antagnod/brasserie-du-breithorn/2570"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007058:saint-christophe:castoro-lo-tsanti",
+      "query": "\"Bar Castoro / Lo Tsanti\" \"Saint-Christophe\" \"Località Chef-Lieu\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR Castoro Aoste ★4.5 — Wine, Garden, Mountain | Recensioni",
+          "url": "https://pos.do/it/aoste/ristorante/bar-castoro"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007045:nus:strapizzami",
+      "query": "\"Pizzeria Strapizzami\" \"Nus\" \"Via Martinet\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "417 recensioni di Pizzeria Strapizzami a Nus",
+          "url": "https://altraopinione.org/ristorante/nus/pizzeria-strapizzami/"
+        },
+        {
+          "title": "Pizzeria Strapizzami | 393 422 0744 | Nus",
+          "url": "https://www.tuttiaffari.com/pizzeria-strapizzami_16O-393-422-0744"
+        },
+        {
+          "title": "Strapizzami",
+          "url": "https://www.lovevda.it/it/banca-dati/16/ristorante/nus/ristorante-zazy-s-pub/2465"
+        },
+        {
+          "title": "Pizzeria Strapizzami - Nus, Via Martinet, 30",
+          "url": "https://aziende.virgilio.it/pizzerie/nus-ao/strapizzami-di-cotroneo-sara"
+        },
+        {
+          "title": "Strapizzami",
+          "url": "https://balteus.lovevda.it/it/banca-dati/16/ristoranti-pizzerie/nus/strapizzami/2465"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007003:aosta:mitcho-de-tcheutte",
+      "query": "\"Lo mitcho de tcheutte\" \"Aosta\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "LO MITCHO DE TCHEUTTE, Aosta - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187863-d19342775-Reviews-Lo_Mitcho_de_Tcheutte-Aosta_Valle_d_Aosta.html"
+        },
+        {
+          "title": "LO MITCHO DE TCHEUTTE, Aosta - Comentários de Restaurantes & Número de Telefone",
+          "url": "https://www.tripadvisor.com.br/Restaurant_Review-g187863-d19342775-Reviews-Lo_Mitcho_de_Tcheutte-Aosta_Valle_d_Aosta.html"
+        },
+        {
+          "title": "Lo Mitcho De Tcheutte Bar Pub - Alimentari | 346 717 0660 | Aosta",
+          "url": "https://www.tuttiaffari.com/lo-mitcho-de-tcheutte-bar-pub-346-717-0660"
+        },
+        {
+          "title": "LO MITCHO DE TCHEUTTE DI MANELLA | AOSTA | Bombola gas Liquigas",
+          "url": "https://www.liquigas.it/rivenditore-bombole/LO-MITCHO-DE-TCHEUTTE-DI-MANELLA-11100-AOSTA-FRAZIONE-EXCENEX-CAPOLUOGO-33-P16011"
+        },
+        {
+          "title": "Orari di apertura Lo Mitcho De Tcheutte Bar Pub - Alimentari ▷ Aosta Frazione Excenex, 33, 11100, Aosta | Trova Aperto",
+          "url": "https://trova-aperto.it/aosta/lo-mitcho-de-tcheutte-bar-pub-alimentari-477078"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007022:courmayeur:les-jorasses",
+      "query": "\"Ristorante Les Jorasses\" \"Courmayeur\" \"Via Roma\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Ristorante Les Jorasses, 13 Via Roma, Courmayeur - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/valle-daosta/courmayeur/ristorante-les-jorasses?to=place.ChIJ7cFIMQBHiUcR8yJiCbAicRg"
+        },
+        {
+          "title": "Ristorante Les Jorasses, Courmayeur - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Ristorante-Les-Jorasses-Courmayeur"
+        },
+        {
+          "title": "Ristorante Les Jorasses, Courmayeur - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Ristorante-Les-Jorasses-Courmayeur"
+        },
+        {
+          "title": "Ristorante Les Jorasses, Courmayeur - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Ristorante-Les-Jorasses-Courmayeur"
+        },
+        {
+          "title": "Ristorante Les Jorasses, Courmayeur - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/amp/Ristorante-Les-Jorasses-Courmayeur"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007011:brissogne:brasserie-jardins-des-reves",
+      "query": "\"Brasserie Jardins des Reves\" \"Brissogne\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "COMUNE DI BRISSOGNE - Prot 0001104 del 16/02/2021 Tit 1 Cl 15 Fasc  |  |  |  |  |  |  |  |",
+          "url": "https://website.pa-online.it/brissogne/wp-content/uploads/sites/48/2023/12/n-60-cronaca-anno-2020.pdf"
+        },
+        {
+          "title": "Brasserie Jardins Des Rêves, Brissogne",
+          "url": "https://www.nuovaopinione.it/brissogne/bar/brasserie-jardins-des-reves-235240"
+        },
+        {
+          "title": "Brasserie Jardins des Rêves, Grand Brissogne - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Brasserie-Jardins-des-Reves-Grand-Brissogne"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007003:aosta:mcdonald-s",
+      "query": "site:mcdonalds.it \"Corso Ivrea\" \"Aosta\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Aosta | McDonaldʹs Italia",
+          "url": "https://www.mcdonalds.it/ristorante/valle-daosta/aosta/aosta"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007044:morgex:pizza-out",
+      "query": "\"Pizza Out\" \"Morgex\" \"Strada La Ruine\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizza Out Di Tosello Filadelfio & C. Snc | 0165 809157 | Morgex",
+          "url": "https://www.tuttiaffari.com/pizza-out-di-tosello-filadelfio-c-snc-0165-809157"
+        },
+        {
+          "title": "Pizza Out Di Ghidotti Marco & C. S.a.s. | Ristorazione senza somministrazione con preparazione di cibi da asporto a Morgex | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/pizza-out-di-ghidotti-marco-c-snc/4f628d378929"
+        },
+        {
+          "title": "Pizza Out Di Ghidotti Marco & C. S.a.s. | Attività di ristoranti senza servizio al tavolo o da asporto, escluse gelaterie e pasticcerie a Morgex | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/pizza-out-di-ghidotti-marco-c-sas/4f628d378929"
+        },
+        {
+          "title": "Wine Place Guide - Pizza Out - DiWineTaste",
+          "url": "https://www.diwinetaste.com/english/SDForm.php?u=e0gy6k8"
+        },
+        {
+          "title": "Guida ai Luoghi del Vino - Pizza Out - DiWineTaste",
+          "url": "https://www.diwinetaste.com/italiano/SchedaGS.php?u=e0gy6k8"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:007029:gaby:des-alpes",
+      "query": "\"Café des Alpes\" \"Gaby\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "CAFE DES ALPES, Gaby - Restaurant Avis, Numéro de Téléphone & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g2412442-d2406939-Reviews-Cafe_Des_Alpes-Gaby_Valle_d_Aosta.html"
+        },
+        {
+          "title": "CAFE DES ALPES, Gaby - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2412442-d2406939-Reviews-Cafe_Des_Alpes-Gaby_Valle_d_Aosta.html"
+        },
+        {
+          "title": "CAFE DES ALPES, Gaby - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g2412442-d2406939-Reviews-Cafe_Des_Alpes-Gaby_Valle_d_Aosta.html"
+        },
+        {
+          "title": "CAFE DES ALPES, Gaby - Comentários de Restaurantes, Fotos & Número de Telefone",
+          "url": "https://www.tripadvisor.com.br/Restaurant_Review-g2412442-d2406939-Reviews-Cafe_Des_Alpes-Gaby_Valle_d_Aosta.html"
+        },
+        {
+          "title": "CAFE DES ALPES, Gaby - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2412442-d2406939-Reviews-Cafe_Des_Alpes-Gaby_Valle_d_Aosta.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:097005:barzago:leonardo",
+      "query": "\"Pizzeria Leonardo\" \"Barzago\" \"Via Statale\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ᐅ Orari di apertura „Pizzeria Leonardo“ | Via Statale",
+          "url": "https://www.oraridiapertura24.it/filiale/Barzago-Pizzeria%2520Leonardo-747698Q.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Pizzeria Leonardo“ | Via Statale",
+          "url": "https://www.oraridiapertura24.it/filiale/Barzago-Pizzeria%2520Leonardo-1503216J.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Pizzeria Leonardo Barzago“ | Via Statale",
+          "url": "https://www.oraridiapertura24.it/filiale/Barzago-Pizzeria%2520Leonardo%2520Barzago-709222J.html"
+        },
+        {
+          "title": "Pizzeria Leonardo Di Valoncini Mario da BARZAGO",
+          "url": "https://piatti.menu/restaurants/barzago/pizzeria-leonardo-di-valoncini-mario"
+        },
+        {
+          "title": "Pizzeria Leonardo Di Valoncini Mario Pizzerie Barzago 23890 by overplace",
+          "url": "https://www.overplace.com/lombardia/lc/barzago/pizzerie/pizzeria-leonardo-di-valoncini-mario.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:015221:trezzo-sull-adda:mcdonald-s",
+      "query": "site:mcdonalds.it \"via Cavour\" \"Trezzo sull'Adda\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristoranti aderenti | McDonald's Italia",
+          "url": "https://www.mcdonalds.it/static/app/ristoranti-aderenti.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:015146:milano:pancaffe-ramadan",
+      "query": "\"Pancaffè ramadan\" \"Milano\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Via Costanza, 26, Milano — idealista",
+          "url": "https://www.idealista.it/maps/milano-milano/via-costanza/26/"
+        },
+        {
+          "title": "Ristorante Pancaffe Ramadan in Milano",
+          "url": "https://gastroranking.it/r/pancaffe-ramadan_198361/"
+        },
+        {
+          "title": "PanCaffè Ramadan | 02 3659 8767 | Milano 2",
+          "url": "https://www.tuttiaffari.com/pancaff%C3%A8-ramadan-02-3659-8767"
+        },
+        {
+          "title": "Pancaffe Ramadan | Halal Middle Eastern in Milano, Lombardia — Zabihah",
+          "url": "https://www.zabihah.com/restaurants/cab92cc5-7767-11ef-95ae-6045bdeb9f57/pancaffe-ramadan-milano-lombardia"
+        },
+        {
+          "title": "Pancaffe Ramadan - Milano, Via Sardegna, 40",
+          "url": "https://aziende.virgilio.it/pizzerie/milano-mi/pancaffe-ramadan"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:017103:manerbio:autostop-manerbio",
+      "query": "\"Autostop Manerbio\" \"Manerbio\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "AUTOSTOP MANERBIO, Manerbio - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/AUTOSTOP-MANERBIO-Manerbio"
+        },
+        {
+          "title": "AUTOSTOP MANERBIO - Bar a Manerbio | LocalShop24",
+          "url": "https://www.localshop24.com/it/manerbio-bs-it/attivita/bar/autostop-manerbio/"
+        },
+        {
+          "title": "AUTOSTOP MANERBIO - Manerbio, Provincia di Brescia",
+          "url": "https://prolocosantagostino.it/autostop-manerbio/"
+        },
+        {
+          "title": "Top 7 pubs & bars in Manerbio, june 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.com/pub-and-bar-Manerbio-t2"
+        },
+        {
+          "title": "I 5 migliori ristoranti con brioches a Manerbio, luglio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/brioches-Manerbio-m9334"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:017143:pisogne:l-anonimo-different-pub",
+      "query": "\"L'anonimo different pub\" \"Pisogne\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "L’Anonimo Different Pub Pisogne, Brescia - Pub, Hamburgeria e Pizzeria",
+          "url": "https://www.anonimodifferentpub.it/"
+        },
+        {
+          "title": "L'ANONIMO DIFFERENT PUB | PUB - BIRRERIA - HAMBURGERIA - Pub a Pisogne | LocalShop24",
+          "url": "https://www.localshop24.com/it/pisogne-bs-it/attivita/pub/lanonimo-different-pub-pub-birreria-hamburgeria/"
+        },
+        {
+          "title": "L'Anonimo Different Pub Pub - Birreria - Hamburgeria, Pisogne - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Lanonimo-different-pub-Pisogne"
+        },
+        {
+          "title": "L'Anonimo Different Pub Pub - Birreria - Hamburgeria, Pisogne - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Lanonimo-different-pub-Pisogne"
+        },
+        {
+          "title": "Menu da L'Anonimo Different Pub Pub - Birreria - Hamburgeria, Pisogne",
+          "url": "https://restaurantguru.it/Lanonimo-different-pub-Pisogne/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:017029:brescia:caffetteria-vittorio",
+      "query": "\"Caffetteria Vittorio\" \"Brescia\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "CAFFETTERIA VITTORIO, Brescia - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194702-d20722389-Reviews-Caffetteria_Vittorio-Brescia_Province_of_Brescia_Lombardy.html"
+        },
+        {
+          "title": "Caffetteria Vittorio | 338 125 1109 | Brescia",
+          "url": "https://www.tuttiaffari.com/caffetteria-vittorio_5Z-338-125-1109"
+        },
+        {
+          "title": "Caffetteria Vittorio, Brescia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/brescia/ristorante/270113/caffetteria-vittorio"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:016096:fara-gera-d-adda:oasi-badalasco",
+      "query": "\"Oasi Badalasco\" \"Fara Gera d'Adda\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pasticceria | Oasi Badalasco",
+          "url": "https://www.gelateria-oasi.it/copia-di-sala-da-t%C3%A8"
+        },
+        {
+          "title": "Lavora con noi | Oasi Badalasco",
+          "url": "https://www.gelateria-oasi.it/copia-di-contatti"
+        },
+        {
+          "title": "Contatti | Oasi Badalasco",
+          "url": "https://www.gelateria-oasi.it/contact-8"
+        },
+        {
+          "title": "Business Lunch | Brunch | Aperitivo | Oasi Badalasco",
+          "url": "https://www.gelateria-oasi.it/copia-di-aperitivo"
+        },
+        {
+          "title": "Premi e riconoscimenti | Oasi Badalasco",
+          "url": "https://www.gelateria-oasi.it/copia-di-gelateria"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:015086:cormano:fresco-bar",
+      "query": "\"Ristorante Fresco Bar\" \"Cormano\" \"piazza primo maggio c/o Palasesto\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:020030:mantova:della-fragoletta-mantova",
+      "query": "\"Osteria della Fragoletta Mantova\" \"Mantova\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Antica Osteria Fragoletta - Benvenuti",
+          "url": "https://www.fragoletta.it/"
+        },
+        {
+          "title": "OSTERIA DELLA FRAGOLETTA, Mantova - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187848-d947863-Reviews-Osteria_della_Fragoletta-Mantua_Province_of_Mantua_Lombardy.html"
+        },
+        {
+          "title": "OSTERIA DELLA FRAGOLETTA, Mantova - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g187848-d947863-Reviews-Osteria_della_Fragoletta-Mantua_Province_of_Mantua_Lombardy.html"
+        },
+        {
+          "title": "OSTERIA DELLA FRAGOLETTA, Mantua - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187848-d947863-Reviews-Osteria_della_Fragoletta-Mantua_Province_of_Mantua_Lombardy.html"
+        },
+        {
+          "title": "Osteria della Fragoletta Mantova, Mantova - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Osteria-della-Fragoletta-Mantua"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:015024:binasco:joy-cafe",
+      "query": "\"Joy Cafe\" \"Binasco\" \"Via Onorevole Filippo Turati\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:017133:palazzolo-sull-oglio:voglia-di-pizza",
+      "query": "\"Voglia di pizza\" \"Palazzolo sull'Oglio\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Voglia Di Pizza consegna in zona Palazzolo sull'Oglio - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/brescia/erbusco/voglia-di-pizza-erbusco"
+        },
+        {
+          "title": "Voglia Di Pizza consegna in zona Palazzolo sull'Oglio - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/milano/palazzolo-sulloglio/voglia-di-pizza-erbusco"
+        },
+        {
+          "title": "Voglia di pizza | 328 655 9270 | Palazzolo sull'Oglio",
+          "url": "https://www.tuttiaffari.com/voglia-di-pizza_189h-328-655-9270"
+        },
+        {
+          "title": "Voglia di pizza, Palazzolo sull'Oglio - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Voglia-di-Pizza-Palazzolo-sullOglio"
+        },
+        {
+          "title": "Driving directions to Voglia di pizza, 22 Via S. Pancrazio, Palazzolo sull'Oglio - Waze",
+          "url": "https://www.waze.com/live-map/directions/italy/lombardy/palazzolo-sulloglio/voglia-di-pizza?to=place.ChIJbQdukSNogUcRHEt1IHT47ew"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:016024:bergamo:piadineria",
+      "query": "site:lapiadineria.com \"Viale Papa Giovanni XXIII\" \"Bergamo\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "La Piadineria - L'Italia in un morso -",
+          "url": "https://lapiadineria.com/i-nostri-ristoranti/bergamo-pzza-papa-giovanni"
+        },
+        {
+          "title": "La Piadineria - L'Italia in un morso -",
+          "url": "https://lapiadineria.com/regolamento-concorso"
+        },
+        {
+          "title": "La Piadineria - L'Italia in un morso -",
+          "url": "https://lapiadineria.com/trova_ristorante_ricerca?indirizzo=Merate%2C+LC%2C+Italia&latitude=45.6983647&longitude=9.4065471"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:017195:verolanuova:oasi-cafe",
+      "query": "\"Oasi Cafè\" \"Verolanuova\" \"Viale Italia\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Oasi Cafe' Di Fabio Cervati E C. Snc | Bar e altri esercizi simili senza cucina a Verolanuova | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/oasi-cafe-di-fabio-cervati-e-c-snc/a4cb13a5abef"
+        },
+        {
+          "title": "Oasi Cafe' Di Fabio Cervati E C. Snc | Bar e altri esercizi simili senza cucina a Verolanuova | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/oasi-cafe-di-laura-e-fabio-cervati-snc/a4cb13a5abef"
+        },
+        {
+          "title": "OASI CAFE DI LAURA E FABIO CERVATI SNC VEROLANUOVA 25028 BS | PARTITA IVA, CODICE FISCALE, SEDE, FATTURATO, DIPENDENTI, PEC, VISURA - Cerca con wogha",
+          "url": "https://www.wogha.com/company/oasi-cafe-di-laura-e-fabio-cervati-snc-vle-italia-9-verolanuova-25028-bs_it-1-bs623773"
+        },
+        {
+          "title": "Oasi Cafe' Di Fabio Cervati E C. Snc | C.F, telefono e altro",
+          "url": "https://www.informazione-aziende.it/Azienda_OASI-CAFE-DI-FABIO-CERVATI-E-C-SNC"
+        },
+        {
+          "title": "Oasi Cafe' Di Laura E Fabio Cervati Snc Verolanuova(BS) 04561970981",
+          "url": "https://m.companyreports.it/oasi-cafe-di-laura-e-fabio-cervati-snc-04561970981"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:014004:aprica:the-keller-pub",
+      "query": "\"The Keller Pub\" \"Aprica\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "The Keller Pub | 0342 748031 | Aprica",
+          "url": "https://www.tuttiaffari.com/the-keller-pub-0342-748031"
+        },
+        {
+          "title": "THE KELLER PUB, Aprica - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194672-d11903406-Reviews-The_Keller_Pub-Aprica_Province_of_Sondrio_Lombardy.html"
+        },
+        {
+          "title": "THE KELLER PUB, Aprica - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g194672-d11903406-Reviews-The_Keller_Pub-Aprica_Province_of_Sondrio_Lombardy.html"
+        },
+        {
+          "title": "Recensioni The Keller Pub (26) - Aprica | Sluurpy",
+          "url": "https://www.sluurpy.it/aprica/ristorante/238527/the-keller-pub/recensioni"
+        },
+        {
+          "title": "THE KELLER PUB, Aprica - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.ca/Restaurant_Review-g194672-d11903406-Reviews-The_Keller_Pub-Aprica_Province_of_Sondrio_Lombardy.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:013075:como:gelateria-lariana",
+      "query": "\"Gelateria Lariana\" \"Como\" \"Lungo Lario Trento\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Gelateria Lariana",
+          "url": "https://www.gelaterialariana.it/"
+        },
+        {
+          "title": "Gelateria Lariana in Como, Italy - Apple Maps",
+          "url": "https://maps.apple.com/place?place-id=ID994520B49CE38D8"
+        },
+        {
+          "title": "Gelateria Lariana - Google Maps",
+          "url": "https://www.google.com/maps/search/Gelato%2Bat%2BGelateria%2BLario%2C%2BLake%2BComo%2C%2BItaly"
+        },
+        {
+          "title": "Gelateria Lariana - Como, Lungo Lario Trento, 5",
+          "url": "https://aziende.virgilio.it/confetteria/como-co/gelateria-lariana_2"
+        },
+        {
+          "title": "Gelateria Lariana - Google Maps",
+          "url": "https://www.google.com/maps/search/Breakfast%2Bat%2BBar%2BGelateria%2BLariana%2C%2BLake%2BComo%2C%2BItaly"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:015172:pessano-con-bornago:pizza-in-piazza-pessano-con-bornago",
+      "query": "\"Pizza in piazza Pessano con Bornago\" \"Pessano con Bornago\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizza in piazza Pessano con Bornago Pessano con Bornago, Pessano Con Bornago - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizza-in-piazza-Pessano-Con-Bornago"
+        },
+        {
+          "title": "Menu da Pizza in piazza Pessano con Bornago Pessano con Bornago pizzeria, Pessano Con Bornago",
+          "url": "https://restaurantguru.it/Pizza-in-piazza-Pessano-Con-Bornago/menu"
+        },
+        {
+          "title": "Pizza in Pessano con Bornago",
+          "url": "https://www.cybo.com/IT/pessano-con-bornago/pizza/"
+        },
+        {
+          "title": "I migliori 5 pizzerie di Pessano Con Bornago, agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/pizza-Pessano-Con-Bornago-c97"
+        },
+        {
+          "title": "I migliori 5 ristoranti di Pessano Con Bornago , agosto 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/Pessano-Con-Bornago"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:016219:treviglio:pelikan-s-bar",
+      "query": "\"Pelikan's Bar\" \"Treviglio\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pelikan's Bar, Treviglio - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pelikans-Food-Treviglio"
+        },
+        {
+          "title": "Pelikan's Bar S.R.L. - Pronto Imprese",
+          "url": "https://www.prontoimprese.it/impresa/treviglio/bar/pelikans-1"
+        },
+        {
+          "title": "PELIKAN'S BAR DI PIVETTA FRANCO, Partita IVA: 02618750133, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/9680/pelikans-bar-di-pivetta-franco"
+        },
+        {
+          "title": "Pelikan's Bar S.r.l. Centro Commerciale Il Pellicano - Gelateria a Treviglio ▷ VIALE MONTEGRAPPA, 31, 24047, Treviglio | Firmania",
+          "url": "https://firmania.it/treviglio/pelikans-bar-srl-centro-commerciale-il-pellicano-414683"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:019036:cremona:nuovo-sole",
+      "query": "\"Nuovo sole\" \"Cremona\" \"Viale Po\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar / Caffetteria Nuovo sole - Cremona - Menu Digitale",
+          "url": "https://www.leggimenu.it/menu/menunuovosole/"
+        },
+        {
+          "title": "Nuovo sole, Cremona - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Nuovo-Sole-Cremona"
+        },
+        {
+          "title": "NUOVO SOLE - Caffetteria a Cremona | LocalShop24",
+          "url": "https://www.localshop24.com/it/cremona-cr-it/attivita/caffetteria/nuovo-sole/"
+        },
+        {
+          "title": "Nuovo sole | 347 875 3312 | Cremona",
+          "url": "https://www.tuttiaffari.com/nuovo-sole_2J-347-875-3312"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Nuovo Sole“ | Viale Po",
+          "url": "https://www.oraridiapertura24.it/filiale/Cremona-Nuovo%2520Sole-2561670E.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:017073:gambara:societa-agricola-gambara-sud",
+      "query": "\"Societa Agricola Gambara Sud\" \"Gambara\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "SOCIETA' AGRICOLA GAMBARA SUD S.R.L., Partita IVA: 01779960986, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1222/societa-agricola-gambara-sud-srl"
+        },
+        {
+          "title": "Società Agricola Gambara Sud Srl | Coltivazioni miste di cereali, legumi da granella e semi oleosi a Gambara | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/societa-agricola-gambara-sud-srl/6adbf9166939"
+        },
+        {
+          "title": "SOCIETA' AGRICOLA GAMBARA SUD S.R.L. | Scheda Azienda | iCRIBIS",
+          "url": "https://www.icribis.com/it/scheda-azienda/BS252962_SOCIETA_AGRICOLA_GAMBARA_SUD_S.R.L."
+        },
+        {
+          "title": "SOCIETA' AGRICOLA GAMBARA SUD S.R.L. Partita IVA:01779960986 | Report aziendale Gratuito",
+          "url": "https://www.visura.pro/imprese/1064707384-societa-agricola-gambara-sud-s-r-l.html"
+        },
+        {
+          "title": "SOCIETA' AGRICOLA GAMBARA SUD S.R.L. - 01779960986",
+          "url": "https://xrayfinance.it/societa-agricola-gambara-sud-s-r-l"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:016150:orio-al-serio:vero-gusto",
+      "query": "\"Il vero gusto\" \"Orio al Serio\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Migliori Gelaterie a Orio al Serio | LocalShop24",
+          "url": "https://www.localshop24.com/it/orio-al-serio-bg-it/attivita/gelateria/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:017067:desenzano-del-garda:calavera-rapido",
+      "query": "\"Calavera Rapido\" \"Desenzano del Garda\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Calavera Rapido | 030 991 4643 | Desenzano del Garda",
+          "url": "https://www.tuttiaffari.com/calavera-rapido-030-991-4643"
+        },
+        {
+          "title": "CALAVERA RAPIDO, Desenzano del Garda - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194965-d15595251-Reviews-Calavera_Rapido-Desenzano_del_Garda_Province_of_Brescia_Lombardy.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:012136:venegono-inferiore:piadineria",
+      "query": "site:lapiadineria.com \"Venegono Inferiore (VA)\" \"Venegono Inferiore\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "La Piadineria - L'Italia in un morso -",
+          "url": "https://lapiadineria.com/i-nostri-ristoranti/venegono"
+        },
+        {
+          "title": "La Piadineria - L'Italia in un morso -",
+          "url": "https://lapiadineria.com/trova_ristorante_ricerca?indirizzo=Merate%2C+LC%2C+Italia&latitude=45.6983647&longitude=9.4065471"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:018182:voghera:coco-cafe",
+      "query": "\"Coco Café\" \"Voghera\" \"Via Emilia\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Coco Café, 273 Via Emilia, Voghera - Waze",
+          "url": "https://www.waze.com/live-map/directions/italy/lombardy/voghera/coco-cafe?to=place.ChIJqdcpQcE-h0cRGoGNZVm_QXI"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Coco Café“ | Via Emilia",
+          "url": "https://www.oraridiapertura24.it/filiale/Voghera-Coco%2520Caf%25E9-2772995O.html"
+        },
+        {
+          "title": "Coco Café Reviews - Bar in Voghera, Italy | Top-Rated.Online",
+          "url": "https://www.top-rated.online/cities/Voghera/place/p/16156874/Coco%2BCaf%C3%A9"
+        },
+        {
+          "title": "COCO CAFÉ, Voghera - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1180050-d15234465-Reviews-Coco_Cafe-Voghera_Province_of_Pavia_Lombardy.html"
+        },
+        {
+          "title": "COCO CAFÉ - Bar a Voghera | LocalShop24",
+          "url": "https://www.localshop24.com/it/voghera-pv-it/attivita/bar/coco-cafe/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:018110:pavia:salsamenteria-del-borgo",
+      "query": "\"Salsamenteria del Borgo\" \"Pavia\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "SALSAMENTERIA DEL BORGO, Pavia - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187850-d17326429-Reviews-Salsamenteria_del_borgo-Pavia_Province_of_Pavia_Lombardy.html"
+        },
+        {
+          "title": "SALSAMENTERIA DEL BORGO OSTERIA CON CUCINA, Pavia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187850-d17326429-Reviews-Salsamenteria_del_borgo-Pavia_Province_of_Pavia_Lombardy.html"
+        },
+        {
+          "title": "Salsamenteria del Borgo | 338 479 6305 | Pavia",
+          "url": "https://www.tuttiaffari.com/salsamenteria-del-borgo-osteria-con-338-479-6305"
+        },
+        {
+          "title": "SALSAMENTERIA DEL BORGO OSTERIA CON CUCINA, Pavia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g187850-d17326429-Reviews-Salsamenteria_del_borgo-Pavia_Province_of_Pavia_Lombardy.html"
+        },
+        {
+          "title": "Driving directions to Salsamenteria del Borgo Osteria con Cucina, 115 Via dei Mille, Pavia - Waze",
+          "url": "https://www.waze.com/live-map/directions/italy/lombardy/pavia/salsamenteria-del-borgo-osteria-con-cucina?to=place.ChIJS7U4EEImh0cR55Rr5pdw7nc"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:016128:lovere:lucignolo",
+      "query": "\"Lucignolo\" \"Lovere\" \"Via Guglielmo Marconi\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "LUCIGNOLO, Lovere - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g664239-d7596965-Reviews-Lucignolo-Lovere_Province_of_Bergamo_Lombardy.html"
+        },
+        {
+          "title": "Lucignolo, Lovere - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Mangiafuoco-Lovere"
+        },
+        {
+          "title": "Lucignolo - Lovere - Nextdoor",
+          "url": "https://it.nextdoor.com/pages/lucignolo-lovere-lombardia/"
+        },
+        {
+          "title": "LUCIGNOLO S.R.L., Partita IVA: 04172700165, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/9192/lucignolo-srl"
+        },
+        {
+          "title": "▷ Lucignolo | Pizzeria, Lovere",
+          "url": "https://www.cylex-italia.it/lovere/lucignolo-14218326.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021047:marebbe-enneberg:vives-pizza-loungebar",
+      "query": "\"Vives Pizza Loungebar\" \"Marebbe/Enneberg\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Dove mangiare: i 40 migliori ristoranti a Marebbe",
+          "url": "https://wanderlog.com/it/list/geoCategory/201156"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021092:sesto-sexten:rifugio-piano-fiscalina",
+      "query": "\"Rifugio Piano Fiscalina\" \"Sesto/Sexten\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Meridiana di Sesto: meraviglia naturale dolomitica",
+          "url": "https://www.sesto.it/it/dolomites/la-meridiana-di-sesto.html"
+        },
+        {
+          "title": "Stazione di ricarica E-Bike Rifugio Piano Fiscalina • Servicio bici » outdooractive.com",
+          "url": "https://www.outdooractive.com/it/poi/hochpustertal/stazione-di-ricarica-e-bike-rifugio-piano-fiscalina/32549931/"
+        },
+        {
+          "title": "Trailrunning: Sesto – Val Fiscalina – Rifugio Fondo Valle, Sesto - Attività ed eventi in Alto Adige",
+          "url": "https://www.suedtirol.info/it/it/esperienze-eventi/plp-esperienze/esperienze-alto-adige/pdp-esperienze.smgpoi79ae99d9d657119a8b9f19d2425e7473.corsa-sesto---val-fiscalina---rifugio-fondo-valle.sesto"
+        },
+        {
+          "title": "Passeggiata con il passeggino: Sesto – Val Fiscalina – Rifugio Fondo Valle , S.Giuseppe - Sesto - Attività ed eventi in Alto Adige",
+          "url": "https://www.suedtirol.info/it/it/esperienze-eventi/plp-esperienze/esperienze-alto-adige/pdp-esperienze.smgpoi670afbd030c45cdca1661f7041b79084.passeggiata-con-il-passeggino-sesto-moso---val-fiscalina---rifugio-fondo-valle.s-giuseppe---sesto"
+        },
+        {
+          "title": "Rifugio Pian di Cengia - Croda Fiscalina, South Tyrol, Italy - 2 Reviews, Map | AllTrails",
+          "url": "https://www.alltrails.com/trail/italy/south-tyrol/rifugio-pian-di-cengia-croda-fiscalina"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:enjoey-bar",
+      "query": "\"Enjoey Bar\" \"Bolzano/Bozen\" \"Via Piave\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ENJOEY BAR, Bolzano (Bozen) - Restaurant Bewertungen, Telefonnummer & Fotos - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g187857-d27391604-Reviews-Enjoey_Bar-Bolzano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021010:brennero-brenner:vecchia-locomotiva",
+      "query": "\"Vecchia Locomotiva\" \"Brennero/Brenner\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "shopping&active ∞ smarthotel brenner24",
+          "url": "https://www.hotelbrenner24.com/it/shopping-active"
+        },
+        {
+          "title": "VECCHIA LOCOMOTIVA, Brennero/Brenner – Menu, reviews & opening hours",
+          "url": "https://www.swipein.restaurant/en/restaurant/vecchia-locomotiva-brennerobrenner"
+        },
+        {
+          "title": "Vecchia Locomotiva da Brenner",
+          "url": "https://piatti.menu/restaurants/brenner-2/vecchia-locomotiva"
+        },
+        {
+          "title": "Vecchia Locomotiva, Brennero - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/La-Vecchia-Locomotiva-Brennero"
+        },
+        {
+          "title": "Piatti - Vecchia Locomotiva Brenner",
+          "url": "https://piatti.menu/restaurants/brenner-2/vecchia-locomotiva/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022161:rovereto:gelateria-marco",
+      "query": "\"Gelateria marco\" \"Rovereto\" \"Corso Angelo Bettini\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "COMPLETO ONPAPER 41.pdf",
+          "url": "https://doc.exibart.com/onpaper/pdf/Onpaper_41.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022205:trento:chicken-fast-food",
+      "query": "\"Chicken Fast Food\" \"Trento\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Chicken fast food consegna in zona Trento - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/trento/trento/chicken-fast-food-trento"
+        },
+        {
+          "title": "Chicken fast food delivery from Trento - Order with Deliveroo",
+          "url": "https://deliveroo.it/en/menu/trento/trento/chicken-fast-food-trento"
+        },
+        {
+          "title": "Chicken fast food delivery from Trento - Order with Deliveroo",
+          "url": "https://deliveroo.it/en/menu/Trento/trento/chicken-fast-food-trento"
+        },
+        {
+          "title": "Menu di Chicken Fast Food - Pollo e Pizza a domicilio a Trento | Ordina su Just Eat",
+          "url": "https://www.justeat.it/restaurants-chicken-fast-food-trento/menu"
+        },
+        {
+          "title": "Menu di Chicken Fast Food - Pollo e Pizza a domicilio a Trento | Ordina su Just Eat",
+          "url": "https://www.justeat.it/restaurants-chicken-fast-food-trento/menu?c_id=019e07db-54df-7cc0-b89f-2e0a226dfc24"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021083:san-martino-in-passiria-st-martin-in-passeier:forelle",
+      "query": "\"Pub Forelle\" \"San Martino in Passiria/St. Martin in Passeier\" \"Jaufenstraße\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "PUB FORELLE, St. Martin in Passeier – Speisekarte & Bewertungen",
+          "url": "https://www.swipein.restaurant/de/restaurant/pub-forelle-st-martin-in-passeier"
+        },
+        {
+          "title": "Pub Forelle, San Martino In Passiria - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Pub-Forelle-Lana"
+        },
+        {
+          "title": "Forelle Pizzeria Pub, San Martino i.P./St. Martin i.P. - All the info here | South Tyrol",
+          "url": "https://www.suedtirol.info/en/en/experiences-and-events/plp-experiences/experiences-south-tyrol/pdp-experience.smgpoi80e9fcbaa7b8b8191333f0d880c48142.forelle-pizzeria-pub.san-martino-i-p--st--martin-i-p-"
+        },
+        {
+          "title": "Pizzeria Pub Forelle • Ristorante » outdooractive.com",
+          "url": "https://www.outdooractive.com/it/gastro/meraner-land/pizzeria-pub-forelle/61294771/"
+        },
+        {
+          "title": "PUB FORELLE, St. Martin in Passeier – Menu, recensioni & orari",
+          "url": "https://www.swipein.restaurant/it/restaurant/pub-forelle-st-martin-in-passeier"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021011:bressanone-brixen:villa-berta",
+      "query": "\"Bar Villa Berta\" \"Bressanone/Brixen\" \"Via San Cassiano\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR VILLA BERTA, Bressanone (Brixen) - Restaurant Bewertungen & Telefonnummer - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g194703-d27870055-Reviews-Bar_Villa_Berta-Bressanone_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:patisserie-peter",
+      "query": "\"Patisserie Peter\" \"Bolzano/Bozen\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "10 MIGLIORI ristoranti per colazione: Bolzano - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurants-g187857-c8-zfp2-Bolzano_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022177:sover:balera",
+      "query": "\"La Balera\" \"Sover\" \"Strada della Vernera\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "La Balera - Baita Monte Pat | Dolomiti Superski",
+          "url": "https://www.dolomitisuperski.com/it/esperienze/servizi/dolomiti-a-z/Val-di-Fiemme/La-Balera-Baita-Monte-Pat"
+        },
+        {
+          "title": "Ristorante - La Balera - Baita Monte Pat",
+          "url": "https://www.trentinofishing.it/it/pois/la-balera-baita-monte-pat"
+        },
+        {
+          "title": "LA BALERA (BAITA MONTE PAT)TEL:SOLO CON WHATSAPP, Sover – Recensioni e menu",
+          "url": "https://www.swipein.restaurant/it/restaurant/la-balera-baita-monte-pattelsolo-con-whatsapp-s"
+        },
+        {
+          "title": "La Balera (Baita Monte Pat)tel:solo con whatsapp, Montesover - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/La-Balera-Montesover"
+        },
+        {
+          "title": "La Balera (Baita Monte Pat)tel:solo con whatsapp, Montesover - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Balera-Montesover"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021061:ortisei-st-ulrich:turonda",
+      "query": "\"Turonda\" \"Ortisei/St. Ulrich\" \"Via Johann Baptist Purger\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "APARTMENTS ISABELLA - 2026 Bewertungen & Fotos (Val Gardena, Italien - Trentino-Südtirol) - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Hotel_Review-g194841-d6023582-Reviews-Apartments_Isabella-Ortisei_Val_Gardena_Province_of_South_Tyrol_Trentino_Alto_Adige.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022205:trento:caffetteria-gelateria-pingu",
+      "query": "\"Caffetteria Gelateria Pingu\" \"Trento\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "CAFFETTERIA GELATERIA PINGU, Trento - Via Oss Mazzurana 35 - Ristorante Recensioni & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187861-d10068734-Reviews-Caffetteria_Gelateria_Pingu-Trento_Province_of_Trento_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "CAFFETTERIA GELATERIA PINGU, Trento - Via di Madonna Bianca 124 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187861-d25331659-Reviews-Caffetteria_Gelateria_Pingu-Trento_Province_of_Trento_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "CAFFETTERIA GELATERIA PINGU, Trento - Via Paolo Oss Mazzurana 35 - Restaurant Reviews & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187861-d10068734-Reviews-Caffetteria_Gelateria_Pingu-Trento_Province_of_Trento_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "CAFFETTERIA GELATERIA PINGU, Trento - Via di Madonna Bianca 124 - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187861-d25331659-Reviews-Caffetteria_Gelateria_Pingu-Trento_Province_of_Trento_Trentino_Alto_Adige.html"
+        },
+        {
+          "title": "CAFFETTERIA GELATERIA PINGU, Trento - Via Oss Mazzurana 35 - Ristorante Recensioni & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187861-d10068734-Reviews-or45-Caffetteria_Gelateria_Pingu-Trento_Province_of_Trento_Trentino_Alto_Adige.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021058:nova-levante-welschnofen:pauls-pub",
+      "query": "\"Pauls Pub\" \"Nova Levante/Welschnofen\" \"Via Roma\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Restaurants in Carezza Ski | FindSkiHolidays.com",
+          "url": "https://www.findskiholidays.com/carezza-ski/restaurants"
+        },
+        {
+          "title": "Recensioni - Pauls Pub Welschnofen",
+          "url": "https://piatti.menu/restaurants/welschnofen/pauls-pub-9/reviews"
+        },
+        {
+          "title": "Pauls Pub - Информация, фотографии, карта, комментарии, советы и события - Nova Levante, Италия",
+          "url": "https://hikersbay.com/venue/austria/Pauls-Pub-/loc/46.4333333/11.5333333?lang=ru"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021011:bressanone-brixen:borgers-kings",
+      "query": "\"Börgers & Kings\" \"Bressanone/Brixen\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Börgers & Kings, Brixen - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Borgers-and-Kings-Brixen"
+        },
+        {
+          "title": "Börgers & Kings, Bressanone - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Borgers-and-Kings-Brixen"
+        },
+        {
+          "title": "Börgers & Kings, Bressanone - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/amp/Borgers-and-Kings-Brixen"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022205:trento:grotta",
+      "query": "\"Pizzeria Ristorante Alla Grotta\" \"Trento\" \"Vicolo San Marco\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE PIZZERIA ALLA GROTTA, Trento - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187861-d2258288-Reviews-or15-Ristorante_Pizzeria_Alla_Grotta-Trento_Province_of_Trento_Trentino_Alto_Adig.html"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA ALLA GROTTA, Trento - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187861-d2258288-Reviews-or720-Ristorante_Pizzeria_Alla_Grotta-Trento_Province_of_Trento_Trentino_Alto_Adi.html"
+        },
+        {
+          "title": "Pizzeria Ristorante Alla Grotta Pizzeria Trento | foodiestrip.com",
+          "url": "https://www.foodiestrip.com/it/ristorante/pizzeria-ristorante-alla-grotta-vicolo-s-marco-trento-italy-0"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA ALLA GROTTA, Trento - Menü, Preise & Restaurant Bewertungen - Tripadvisor",
+          "url": "https://www.tripadvisor.de/Restaurant_Review-g187861-d2258288-Reviews-Ristorante_Pizzeria_Alla_Grotta-Trento_Province_of_Trento_Trentino_Alto_Adige.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021029:egna-neumarkt:herbert-konditorei-pasticceria",
+      "query": "\"Cafe Herbert Konditorei-Pasticceria\" \"Egna/Neumarkt\" \"Via Val di Fiemme\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Eating and drinking in Trentino-Alto Adige/Südtirol, Italy",
+          "url": "https://italy-streets.openalfa.com/trentino-alto-adige-sudtirol/eating-drinking"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022250:san-giovanni-di-fassa-sen-jan:giare",
+      "query": "\"Ristorante Pizzeria Le Giare\" \"San Giovanni di Fassa-Sèn Jan\" \"Piazza del Malgher\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE PIZZERIA LE GIARE, San Giovanni di Fassa-Sèn Jan",
+          "url": "https://www.swipein.restaurant/de/restaurant/ristorante-pizzeria-le-giare-sankt-giovanni-von-fa"
+        },
+        {
+          "title": "Mapstr - Restaurant Ristorante Pizzeria Le Giare Pozza di Fassa - Ristorante, Pizzeria, Pizza, Cucina locale",
+          "url": "https://mapstr.com/place/ytHZY4BDCOg/ristorante-pizzeria-le-giare-pozza-di-fassa-ristorante-pizza-restaurant-carne-pizzeria"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:pia",
+      "query": "\"Bar Pia\" \"Bolzano/Bozen\" \"Piazzetta del Bersaglio\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Alpina Cicli Map - Bike shop - Bolzano/Bozen, Trentino-Alto Adige, Italy",
+          "url": "https://mapcarta.com/W144789329"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021060:ora-auer:centrale-ora",
+      "query": "\"Bar Centrale Ora\" \"Ora/Auer\" \"Via Stazione\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Eating and drinking in Trentino-Alto Adige/Südtirol, Italy",
+          "url": "https://italy-streets.openalfa.com/trentino-alto-adige-sudtirol/eating-drinking"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021019:castelrotto-kastelruth:eisdiele-florian",
+      "query": "\"Eisdiele Florian\" \"Castelrotto/Kastelruth\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Food in Castelrotto - South Tyrol",
+          "url": "https://www.castelrotto.info/en/castelrotto/shopping/food-stores.html"
+        },
+        {
+          "title": "Eisdiele Florian, Kastelruth - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Eisdiele-Florian-Kastelruth"
+        },
+        {
+          "title": "EISDIELE FLORIAN, Kastelruth – Menu, recensioni & orari",
+          "url": "https://www.swipein.restaurant/it/restaurant/eisdiele-florian-kastelruth"
+        },
+        {
+          "title": "Eisdiele Florian, Kastelruth - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/amp/Eisdiele-Florian-Kastelruth"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021008:bolzano-bozen:mair-fast-food",
+      "query": "\"Mair Fast Food\" \"Bolzano/Bozen\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Mair Fast Food Map - Fast food restaurant - Bolzano/Bozen, Trentino-Alto Adige, Italy",
+          "url": "https://mapcarta.com/N4202698899"
+        },
+        {
+          "title": "Mair Fast Food, Bolzano (Bozen), Italien - Bewertungen, Bewertungen, Tipps und warum Sie dorthin gehen sollten – Wanderlog",
+          "url": "https://wanderlog.com/de/place/details/1469892/mair-fast-food"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022034:caldonazzo:svolta",
+      "query": "\"La Svolta\" \"Caldonazzo\" \"Via Trento\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Mappa dei Bar e dei Locali a Caldonazzo - Tuttocittà",
+          "url": "https://www.tuttocitta.it/bar/caldonazzo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022139:pergine-valsugana:cocceria-alla-stella",
+      "query": "\"Cocceria Alla Stella\" \"Pergine Valsugana\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Mangiare - Alla Stella - Ristorante-Pizzeria - Pergine Valsugana - APT ValsuganaIT",
+          "url": "https://www.visitvalsugana.it/it/dormire-mangiare/mangiare/alla-stella_3050_idr/"
+        },
+        {
+          "title": "PIZZERIA COCCERIA ALLA STELLA, Pergine Valsugana - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1450274-d2108313-Reviews-Pizzeria_Cocceria_Alla_Stella-Pergine_Valsugana_Province_of_Trento_Trentino_Alto.html"
+        },
+        {
+          "title": "Cocceria Alla Stella, Roncogno - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Stella-Pergine-Valsugana"
+        },
+        {
+          "title": "PIZZERIA COCCERIA ALLA STELLA, Pergine Valsugana - Reviews",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1450274-d2108313-Reviews-Pizzeria_Cocceria_Alla_Stella-Pergine_Valsugana_Province_of_Trento_Trentino_Alto.html"
+        },
+        {
+          "title": "PIZZERIA COCCERIA ALLA STELLA, Pergine Valsugana - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g1450274-d2108313-Reviews-Pizzeria_Cocceria_Alla_Stella-Pergine_Valsugana_Province_of_Trento_Trentino_Alto.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:022205:trento:sun7-cafe",
+      "query": "\"Sun7 Café\" \"Trento\" \"Via Valembrar\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Davide sfida anche il Covid ed apre un nuovo bar a Ravina - Trento - Trentino",
+          "url": "https://www.giornaletrentino.it/cronaca/trento/davide-sfida-anche-il-covid-ed-apre-un-nuovo-bar-a-ravina-1.2453764"
+        },
+        {
+          "title": "‎Marco Pandolfi - Sun7 Cafè, Ravina TN Concert & Tour Dates | Apple Music",
+          "url": "https://music.apple.com/ug/concerts/ce.7ac96cba-e618-4506-ae7e-57299f06d1a9"
+        },
+        {
+          "title": "Marco Pandolfi concert - Trento, Sun7 Café Jun 06, 2026, 8:30 PM 🎤",
+          "url": "https://www.shazam.com/event/7ac96cba-e618-4506-ae7e-57299f06d1a9"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:021105:vadena-pfatten:viktor-s-imbiss",
+      "query": "\"Viktor‘s Imbiss\" \"Vadena/Pfatten\"",
+      "retrieved_at": "2026-09-07T12:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Viktor‘s Imbiss Reviews - Restaurant in Vadena - Pfatten, Italy | Top-Rated.Online Travel",
+          "url": "https://www.top-rated.online/cities/Vadena%2B-%2BPfatten/place/p/12462391/Viktor%E2%80%98s%2BImbiss"
+        },
+        {
+          "title": "VIKTOR‘S IMBISS in PFATTEN - Reviews & menu",
+          "url": "https://www.swipein.restaurant/en/restaurant/viktors-imbiss-pfatten"
+        },
+        {
+          "title": "VIKTOR‘S IMBISS, Pfatten – Speisekarte, Bewertungen & Öffnungszeiten",
+          "url": "https://www.swipein.restaurant/de/restaurant/viktors-imbiss-pfatten/speisekarte"
+        }
+      ]
+    }
+  ]
+}

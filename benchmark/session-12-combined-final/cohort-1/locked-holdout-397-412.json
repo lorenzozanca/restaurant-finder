@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-397-412",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:075042:matino:affetto-pane-vino-e-cose",
+      "query": "\"Affetto - pane, vino e cose\" \"Matino\" \"Via Ugo Foscolo, 15\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Concerti e Spettacoli a Caserta",
+          "url": "https://www.casertamusica.com/rubriche/eventi_concerti_spettacoli_Caserta/eventi_concerti_spettacoli_Caserta.asp?DataRicerca=13%2F10%2F2019"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:072027:modugno:brunocaffe",
+      "query": "\"Brunocaffè\" \"Modugno\" \"Via dei Falegnami, 11\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Agglomerato Bari-Modugno – Consorzio ASI Bari",
+          "url": "https://www.consorzioasibari.it/wp/index.php/agglomerato-bari-modugno/"
+        },
+        {
+          "title": "BRUNOCAFFE S.R.L., Partita IVA: 02499960728, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/9136/brunocaffe-srl"
+        },
+        {
+          "title": "Brunocaffè | Torrefazione Premiato | Gambero Rosso",
+          "url": "https://www.gamberorosso.it/luoghi/aziende/torrefazione/brunocaffe/"
+        },
+        {
+          "title": "Brunocaffè | LinkedIn",
+          "url": "https://it.linkedin.com/company/brunocaffeit"
+        },
+        {
+          "title": "Brunocaffè - Gambero Rosso",
+          "url": "https://www.gamberorosso.it/luoghi/locali/torrefazione/brunocaffe/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:110003:bisceglie:snoopy-2-0",
+      "query": "\"Snoopy 2.0\" \"Bisceglie\" \"Via Aldo Moro, 93\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Mangiare e bere a Bisceglie, Barletta-Andria-Trani",
+          "url": "https://vie.openalfa.it/bisceglie/mangiare-bere"
+        },
+        {
+          "title": "Via Fratelli Cairoli, Bisceglie Mappa",
+          "url": "https://www.cartogiraffe.com/italia/puglia/barletta-andria-trani/bisceglie/via%2Bfratelli%2Bcairoli/"
+        },
+        {
+          "title": "Via Nicotera, Bisceglie Mappa",
+          "url": "https://www.cartogiraffe.com/italia/puglia/barletta-andria-trani/bisceglie/via%2Bnicotera/"
+        },
+        {
+          "title": "Via Fratelli Bandiera, Bisceglie Mappa",
+          "url": "https://www.cartogiraffe.com/italia/puglia/barletta-andria-trani/bisceglie/via%2Bfratelli%2Bbandiera/"
+        },
+        {
+          "title": "Via Giordano Bruno, Bisceglie Mappa",
+          "url": "https://www.cartogiraffe.com/italia/puglia/barletta-andria-trani/bisceglie/via%2Bgiordano%2Bbruno/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:075061:poggiardo:cittadino",
+      "query": "\"Bar Cittadino\" \"Poggiardo\" \"Piazza Umberto I, 12\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Piazza Umberto I, 12 - Google Maps",
+          "url": "https://www.google.com/maps/search/Piazza%20Umberto%20I%2012%2C%20Poggiardo%20%28LE%29"
+        },
+        {
+          "title": "Bar Cittadino, Poggiardo | Disponibilità, Foto e altro",
+          "url": "https://coparking.ch/it/Italy/parkings/6017"
+        },
+        {
+          "title": "Services ⋆ Palazzo Circolone",
+          "url": "https://www.palazzocircolone.it/new/en/services/"
+        },
+        {
+          "title": "Bar Cittadino, Poggiardo | Availability, Photos and more",
+          "url": "https://coparking.ch/en/Italy/parkings/6017"
+        },
+        {
+          "title": "Bar Cittadino, Poggiardo | Verfügbarkeit, Fotos und mehr",
+          "url": "https://coparking.ch/de/Italy/parkings/6017"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076080:sant-arcangelo:acquista-caffe",
+      "query": "\"Acquista Caffe\" \"Sant'Arcangelo\" \"Viale Europa, 99\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:076048:melfi:macelleria-braceria-rauseo",
+      "query": "\"Macelleria Braceria Rauseo\" \"Melfi\" \"Corso Giuseppe Garibaldi, 25\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Macelleria Braceria Rauseo | 0972 082080 | Melfi",
+          "url": "https://www.tuttiaffari.com/macelleria-braceria-rauseo-0972-082080"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:diwine-cafe-caffetteria-enoteca",
+      "query": "\"Diwine Café - Caffetteria Enoteca\" \"Potenza\" \"Viale Guglielmo Marconi, 173\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:076083:satriano-di-lucania:semaforo",
+      "query": "\"Bar Il Semaforo\" \"Satriano di Lucania\" \"c.da Passariello\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Il Semaforo, Satriano di Lucania - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Snack-Bar-Il-Semaforo-Satriano-di-Lucania"
+        },
+        {
+          "title": "Zoppas Bar, Satriano di Lucania - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Zoppas-Bar-Satriano-di-Lucania"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076007:avigliano:belle-epoque",
+      "query": "\"La Belle Epoque\" \"Avigliano\" \"Via Santissima Trinità, 21\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Avigliano – Borgo Racconta",
+          "url": "https://www.borgoracconta.it/en/citta/avigliano/"
+        },
+        {
+          "title": "Avigliano – Borgo Racconta",
+          "url": "https://www.borgoracconta.it/de/citta/avigliano/"
+        },
+        {
+          "title": "Bar per serate con amici a Basilicata | 35 annunci e recensioni",
+          "url": "https://localitybiz.it/basilicata/bar-per-serate-con-amici-a-basilicata"
+        },
+        {
+          "title": "Mikahawa Biashara katika Lagopesole - Cybo",
+          "url": "https://biashara.cybo.com/IT/lagopesole/mikahawa"
+        },
+        {
+          "title": "Pub cena con amici a Basilicata | 52 annunci e recensioni",
+          "url": "https://localitybiz.it/basilicata/pub-cena-con-amici-a-basilicata"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077014:matera:speedygonzales",
+      "query": "\"Speedygonzales\" \"Matera\" \"Via Annunziatella, 33\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Speedygonzales | 0835 684376 | Matera",
+          "url": "https://www.tuttiaffari.com/speedygonzales-0835-684376"
+        },
+        {
+          "title": "Pizza Sfizi e Delizie | 0835 335351 | Matera",
+          "url": "https://www.tuttiaffari.com/pizza-sfizi-e-delizie"
+        },
+        {
+          "title": "Speedy Gonzales, Matera - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/matera/ristorante/8587567/speedy-gonzales"
+        },
+        {
+          "title": "Pizzerie in italia",
+          "url": "https://www.reteimprese.it/pizzerie?p=203"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076079:sant-angelo-le-fratte:san-michele",
+      "query": "\"Ristorante Pizzeria San Michele\" \"Sant'Angelo Le Fratte\" \"Contrada San Vito, 11\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE PIZZERIA SAN MICHELE, Sant'Angelo Le Fratte - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g12660094-d16825238-Reviews-Ristorante_Pizzeria_San_Michele-Sant_Angelo_Le_Fratte_Province_of_Potenza_Basi.html"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA SAN MICHELE, Sant'Angelo Le Fratte - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g12660094-d16825238-Reviews-Ristorante_Pizzeria_San_Michele-Sant_Angelo_Le_Fratte_Province_of_Potenza_Basi.html"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA SAN MICHELE, Sant'Angelo Le Fratte - Reviews",
+          "url": "https://www.tripadvisor.ca/Restaurant_Review-g12660094-d16825238-Reviews-Ristorante_Pizzeria_San_Michele-Sant_Angelo_Le_Fratte_Province_of_Potenza_Basi.html"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA SAN MICHELE, Sant'Angelo Le Fratte - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g12660094-d16825238-Reviews-or30-Ristorante_Pizzeria_San_Michele-Sant_Angelo_Le_Fratte_Province_of_Potenza.html"
+        },
+        {
+          "title": "elenco dei ristoranti selezionati da Camperistorante",
+          "url": "https://www.camperistorante.it/elenco-camperistoranti"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077020:pisticci:mioss3-0",
+      "query": "\"Mioss3.0\" \"Pisticci\" \"Via Antonio Gramsci, 33\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Aziende a Pisticci in Contrada+Pucchieta (2)",
+          "url": "https://www.virgilio.it/italia/pisticci/via/contrada%2Bpucchieta_%282%29?azi_eq_iq=e35b3d50-a8dd-4d63-88ee-47df16ef4bc3"
+        },
+        {
+          "title": "Aziende a Pisticci in Via Cagliari",
+          "url": "https://www.virgilio.it/italia/pisticci/via/via-cagliari"
+        },
+        {
+          "title": "Aziende a Pisticci in Marconia Pisticci v. e. de Filippo (7)",
+          "url": "https://www.virgilio.it/italia/pisticci/via/marconia---pisticci---v.-e.-de-filippo_%287%29?azi_eq_iq=e2e98c97-dc87-4053-a0da-6ad076cab4e1"
+        },
+        {
+          "title": "Aziende a Pisticci in Contrada Serricchio",
+          "url": "https://www.virgilio.it/italia/pisticci/via/contrada-serricchio"
+        },
+        {
+          "title": "Aziende a Pisticci in Via Siena",
+          "url": "https://www.virgilio.it/italia/pisticci/via/via-siena"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077014:matera:tipicamente-matera",
+      "query": "\"Tipicamente Matera\" \"Matera\" \"Via San Biagio, 20\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Home - Tipicamente Matera Fast food Tradizionale Lucano",
+          "url": "https://www.tipica-mente.it/"
+        },
+        {
+          "title": "Driving directions to Tipicamente Matera - Mangiare prodotti tipici a Matera, 20 Via San Biagio, Matera - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/basilicata/matera/tipicamente-matera-mangiare-prodotti-tipici-a-matera?to=place.ChIJfbk9u7V_RxMRh6DyYURXQQE"
+        },
+        {
+          "title": "Tipicamente | Paninerie Premiato | Gambero Rosso",
+          "url": "https://www.gamberorosso.it/luoghi/locali/paninerie/tipicamente/"
+        },
+        {
+          "title": "Tipicamente Matera - Matera, Via San Biagio, 20",
+          "url": "https://aziende.virgilio.it/gastronomie/matera-mt/tipicamente-matera"
+        },
+        {
+          "title": "TIPICAMENTE MATERA - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187772-d23552479-Reviews-Tipicamente_Matera-Matera_Province_of_Matera_Basilicata.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077030:valsinni:gusti-di-corte",
+      "query": "\"I Gusti di Corte\" \"Valsinni\" \"Via Salita Castello, 24\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "I Gusti di Corte, Valsinni - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/I-Gusti-di-Corte-Valsinni"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077003:bernalda:pizza-stop",
+      "query": "\"Pizza Stop\" \"Bernalda\" \"Via Francesco Ferri, 5\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizza stop - Bernalda Restaurant - ViaMichelin",
+          "url": "https://www.viamichelin.com/maps/restaurants/poi/bernalda-75012-cc942cdb"
+        },
+        {
+          "title": "PIZZA STOP - Pizzeria a Bernalda | LocalShop24",
+          "url": "https://www.localshop24.com/it/bernalda-mt-it/attivita/pizzeria/pizza-stop/"
+        },
+        {
+          "title": "Pizza stop a Bernalda - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork",
+          "url": "https://www.thefork.it/ristorante/pizza-stop-r845103"
+        },
+        {
+          "title": "Pizza stop a Bernalda - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork",
+          "url": "https://www.thefork.it/ristorante/pizza-stop-r845103?cc=18174-54f"
+        },
+        {
+          "title": "Pizza Stop, Bernalda - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Pizza-Stop-Bernalda"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:85100",
+      "query": "\"Bar 85100\" \"Potenza\" \"Via Ancona, 88\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar 85100, Potenza",
+          "url": "https://www.nuovaopinione.it/potenza/bar/bar-85100-117770"
+        },
+        {
+          "title": "Bar 85100, Potenza - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-85100-Potenza"
+        },
+        {
+          "title": "Bar 85100, Potenza - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Bar-85100-Potenza"
+        },
+        {
+          "title": "Bar e caffetterie in provincia di Potenza",
+          "url": "https://www.nuovaopinione.it/potenza-provincia/bar"
+        },
+        {
+          "title": "Bar e Caffetterie a Pietragalla",
+          "url": "https://www.reteimprese.it/bar-caffetterie/pietragalla"
+        }
+      ]
+    }
+  ]
+}

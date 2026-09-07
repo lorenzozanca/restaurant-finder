@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "stage": "B",
+  "checkpoint_sample_index": 500,
+  "selection_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+  "continuous_selection_order_coverage": "001-500",
+  "unique_venue_ids": 500,
+  "retained_candidate_urls": 1859,
+  "zero_candidate_venues": 21,
+  "capture_sha256": {
+    "locked-holdout-capture-001-100.partial.json": "e6a48208547bc7ac684b40c6edb46663b2e8c50ee413aa233d451dd3baad3e10",
+    "locked-holdout-capture-101-200.partial.json": "6ffb7506c715a677d9f342d4cc9c6314ce9d0c722a77936bffaf9be871d2216f",
+    "locked-holdout-capture-201-300.partial.json": "1794f96e610a66450dfdcf947e594115f4e06611581c052269255aee69a311cd",
+    "locked-holdout-capture-301-400.partial.json": "1110029c916a833d3864d8ed7d6ee50099489ccd504ae8ad1e572e95ab692c02",
+    "locked-holdout-capture-401-500.partial.json": "fbd10979776346d3820a8eb2b526f74129e2aaef0db57b4a20ac1b6698d532ef"
+  },
+  "normalized_urls_valid": true,
+  "title_bounds_valid": true,
+  "completed_queries_reopened": 0,
+  "brave_requests_made": 0,
+  "evaluator_runs": 0,
+  "evaluator_excluded": true,
+  "validation_status": "passed"
+}

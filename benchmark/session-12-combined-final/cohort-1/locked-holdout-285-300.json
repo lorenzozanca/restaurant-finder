@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-285-300",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:057029:forano:degli-eroi",
+      "query": "\"Bar degli Eroi\" Forano \"Piazza degli Eroi, 1\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Degli Eroi Di Galassetti Marco | 0765 515019 | Rieti",
+          "url": "https://www.tuttiaffari.com/bar-degli-eroi-di-galassetti-marco-0765-515019"
+        },
+        {
+          "title": "Guida ai Luoghi del Vino - Bar Degli Eroi - DiWineTaste",
+          "url": "https://www.diwinetaste.com/italiano/SchedaGS.php?u=bvvbg9iy"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060019:cassino:onion",
+      "query": "\"Bar Onion\" Cassino \"Via Sandro Botticelli, 16\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:058091:roma:piadineria-88ccf508",
+      "query": "\"La Piadineria\" Roma \"Via Collatina, 858\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Ministero delle Imprese e del Made in Italy",
+          "url": "https://www.mimit.gov.it/images/stories/documenti/province/tavola/Lazio_-_RM_-_Roma.pdf"
+        },
+        {
+          "title": "ALLEGATO A) - Elenco Punti Vendita La Piadineria aderenti",
+          "url": "https://www.lapiadineria.com/public/up/2025COCA-COLA-CONCORSOOLIMPIADI-LA%20PIADINERIA_instant_win_SMSWhatsApp%20DEF.pdf"
+        },
+        {
+          "title": "PV_LA-PIADINERIA",
+          "url": "https://s3-eu-west-1.amazonaws.com/ferrero-static/globalcms/documenti/3761.pdf"
+        },
+        {
+          "title": "La Piadineria, Roma - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Piadineria-Rome-9"
+        },
+        {
+          "title": "La Piadineria - Tout le goût de l'Italie",
+          "url": "https://www.lapiadineria.fr/rechercher-un-resto-filtre?filtri=on"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060025:ceprano:ciolli-caffe",
+      "query": "\"Ciolli Caffè\" Ceprano \"Via della Stazione, 7\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Ciolli Caffe",
+          "url": "https://ciollicaffe.it/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058036:fiano-romano:da-v-erne",
+      "query": "\"Da v'Erne\" \"Fiano Romano\" \"Piazza Giacomo Matteotti, 18\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "DA V'ERNE, Fiano Romano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g227666-d34390921-Reviews-Da_v_Erne-Fiano_Romano_Province_of_Rome_Lazio.html"
+        },
+        {
+          "title": "DA V'ERNE - Pub a Fiano Romano | LocalShop24",
+          "url": "https://www.localshop24.com/it/fiano-romano-rm-it/attivita/pub/da-verne/"
+        },
+        {
+          "title": "Dove è stato girato Le dolci zie - Film (1975) | il Davinotti",
+          "url": "https://www.davinotti.com/forum/location-verificate/le-dolci-zie-1975"
+        },
+        {
+          "title": "Da v'Erne, Fiano Romano - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Da-vErne-Fiano-Romano"
+        },
+        {
+          "title": "Da v'Erne, Fiano Romano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Da-vErne-Fiano-Romano"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059011:latina:dolce-tentazione-2-0",
+      "query": "\"Dolce Tentazione 2.0\" Latina \"Strada Minturnae, 66\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Dolce Tentazione 2.0 - Pasticceria a Latina",
+          "url": "https://firmania.it/latina/dolce-tentazione-20-2340277"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056012:canino:da-isolina",
+      "query": "\"Da Isolina\" Canino \"SP109, 804\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:058022:castel-gandolfo:birrodrome-ristorante-pizzeria",
+      "query": "\"Birrodrome Ristorante Pizzeria\" \"Castel Gandolfo\" \"Via Spiaggia del Lago, 2\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Birrodrome",
+          "url": "https://birrodrome.com/"
+        },
+        {
+          "title": "Birrodrome",
+          "url": "https://www.birrodrome.com/en/"
+        },
+        {
+          "title": "La Storia di Birrodrome | Dal 1939 un locale di famiglia sul Lago",
+          "url": "https://birrodrome.com/en/chi-siamo/"
+        },
+        {
+          "title": "Birrodrome Ristorante Pizzeria, Castel Gandolfo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Birrodrome-Castel-Gandolfo"
+        },
+        {
+          "title": "Birrodrome Ristorante Pizzeria, Castel Gandolfo - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Birrodrome-Castel-Gandolfo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056059:viterbo:ripasso",
+      "query": "\"Caffe Ripasso\" Viterbo \"Piazza della Rocca, 20\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "CAFFE' RIPASSO DI CHIOCCHIA CARLO, Partita IVA: 01896090568, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/7006/caffe-ripasso-di-chiocchia-carlo"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Caffè Ripasso“ | Piazza Della Rocca",
+          "url": "https://www.oraridiapertura24.it/filiale/Viterbo-Caff%25E8%2520Ripasso-5458473Z.html"
+        },
+        {
+          "title": "LAZIO ELETTRONICO.xlsx",
+          "url": "https://www.ausl.latina.it/attachments/article/2906/elenco%20esercizi%20commerciali%20buoni%20pasto%20Repas%20aggiornato%20al%2028%20nov.%202019.pdf"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056041:oriolo-romano:risto-pub-13c",
+      "query": "\"Risto Pub 13C\" \"Oriolo Romano\" \"Piazza Claudia, 13\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Risto Pub 13C | 06 9983 8664 | Oriolo Romano",
+          "url": "https://www.tuttiaffari.com/risto-pub-c-06-9983-8664"
+        },
+        {
+          "title": "132 recensioni di Risto Pub 13C a Oriolo Romano",
+          "url": "https://altraopinione.org/pub/oriolo-romano/risto-pub-13c/"
+        },
+        {
+          "title": "Risto Pub Panini Primi Espressi Oriolo Romano Cucina Romana | JMENU",
+          "url": "https://www.jmenu.it/menu-ristopub-13c-oriolo-romano-viterbo/"
+        },
+        {
+          "title": "Oriolo Romano, la magia della foresta che non dovrebbe esserci - Escursionismo.it",
+          "url": "https://www.escursionismo.it/escursioni/oriolo-romano-la-magia-della-foresta-che-non-dovrebbe-esserci/"
+        },
+        {
+          "title": "Risto Pub 13C, Oriolo Romano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Bar-13c-Oriolo-Romano"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058029:cerveteri:chiccheria",
+      "query": "\"La Chiccheria\" Cerveteri \"Piazza Aldo Moro\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "CAI Roma » Il Fosso della Cascata del Norcino – Anello da Cerveteri",
+          "url": "https://www.cairoma.it/?p=30716"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059011:latina:tobiland-play-food",
+      "query": "\"Tobiland Play & Food\" Latina \"Via San Francesco d'Assisi, 3/b\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Tobiland Play & Food, Latina - Italia.it",
+          "url": "https://www.italia.it/en/lazio/latina/where-to-eat/tobiland-play---food"
+        },
+        {
+          "title": "TOBILAND PLAY & FOOD - Ristorante a Latina | LocalShop24",
+          "url": "https://www.localshop24.com/it/latina-lt-it/attivita/ristorante/tobiland-play-food/"
+        },
+        {
+          "title": "Tobiland Play & Food, Latina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Tobiland-Play-and-Food-Latina"
+        },
+        {
+          "title": "TOBILAND PLAY & FOOD, Latina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194787-d25547985-Reviews-Tobiland_Play_Food-Latina_Province_of_Latina_Lazio.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060044:monte-san-giovanni-campano:sant-anna",
+      "query": "\"Caffe Sant'Anna\" \"Monte San Giovanni Campano\" \"Via Anitrella, 18\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:060038:frosinone:pizzapi",
+      "query": "\"Pizzapì\" Frosinone \"Via Fratelli Rosselli, 3\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzapi' - Frosinone | Ristorante nelle mie vicinanze | Prenoti subito",
+          "url": "https://pizzapi.eatbu.com/?lang=it"
+        },
+        {
+          "title": "Pizzapi : The Italian Pizza a Frosinone",
+          "url": "https://www.pizzapimenu.com/"
+        },
+        {
+          "title": "Pizzapi' - Frosinone | Restaurant near me | Book now",
+          "url": "https://pizzapi.eatbu.com/?lang=en"
+        },
+        {
+          "title": "Pizzapì, Frosinone - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzapi-Frosinone-Frosinone"
+        },
+        {
+          "title": "PIZZAPÌ FROSINONE - Pizzeria a Frosinone | LocalShop24",
+          "url": "https://www.localshop24.com/it/frosinone-fr-it/attivita/pizzeria/pizzapi-frosinone/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058104:tivoli:napofollia",
+      "query": "\"Napofollia\" Tivoli \"Via Cesare Pascarella, 4\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Napofollia | 0774 403433 | Tivoli",
+          "url": "https://www.tuttiaffari.com/pizzeria-forno_4d-0774-403433"
+        },
+        {
+          "title": "Napofollia, Tivoli Terme - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Pizzeria-Forno-400-Tivoli-Terme"
+        },
+        {
+          "title": "Napofollia, Tivoli Terme - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Forno-400-Tivoli-Terme"
+        },
+        {
+          "title": "1338 recensioni di Napofollia a Tivoli",
+          "url": "https://altraopinione.org/pizzeria/tivoli/napofollia/"
+        },
+        {
+          "title": "Napofollia, Tivoli Terme - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Pizzeria-Forno-400-Tivoli-Terme"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058099:sant-oreste:cruscioff-pizzeria-risto-pub",
+      "query": "\"Cruscioff Pizzeria Risto Pub\" \"Sant'Oreste\" \"Via Josafat Riccioni, 35\"",
+      "retrieved_at": "2026-09-07T07:00:00.000Z",
+      "candidates": []
+    }
+  ]
+}

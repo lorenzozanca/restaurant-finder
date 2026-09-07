@@ -1,0 +1,3055 @@
+{
+  "schema_version": 1,
+  "adjudication_set": "session-12-powered-locked-holdout-adjudication-221-320",
+  "partition": "locked_holdout",
+  "source": "independent_fixture_review",
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "reviewer": "Codex independent bounded-fixture review",
+  "reviewed_at": "2026-09-07T07:26:29.000Z",
+  "review_basis": "Independent review of retained bounded-query URL/title metadata and direct inspection of plausible retained candidate URLs; publisher-domain ownership is approved only where retained first-party content identifies the selected venue or exact chain branch.",
+  "scope_limitations": "No search query was issued or reopened. Minimal URL/title capture and direct inspection of retained candidate URLs only. A no_official_site disposition means no publishable official site was established within the bounded retained evidence, not that no site exists on the open web.",
+  "entries": [
+    {
+      "venue_id": "venue:052032:siena:monkey-s-risto-pizza-pub",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:049020:suvereto:vicolo-stretto",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.comune.suvereto.li.it/pagina192583_dove-mangiare.html/",
+        "https://www.viveresuvereto.it/area_letturaServizio/76/pagsistema.html",
+        "https://www.tripadvisor.it/Restaurant_Review-g1180066-d28662583-Reviews-Vicolo_Stretto_Pizzeria-Suvereto_Province_of_Livorno_Tuscany.html",
+        "https://www.ufficiocamerale.it/5294/bar-barina-pizzeria-di-pruneti-barbara",
+        "https://www.tripadvisor.com/Restaurant_Review-g1180066-d28662583-Reviews-Vicolo_Stretto_Pizzeria-Suvereto_Province_of_Livorno_Tuscany.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "li.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.comune.suvereto.li.it/pagina192583_dove-mangiare.html/"
+          ]
+        },
+        {
+          "registrable_domain": "viveresuvereto.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.viveresuvereto.it/area_letturaServizio/76/pagsistema.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1180066-d28662583-Reviews-Vicolo_Stretto_Pizzeria-Suvereto_Province_of_Livorno_Tuscany.html"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/5294/bar-barina-pizzeria-di-pruneti-barbara"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1180066-d28662583-Reviews-Vicolo_Stretto_Pizzeria-Suvereto_Province_of_Livorno_Tuscany.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:051012:castiglion-fiorentino:antico-caffe-la-posta",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.vigorsol.it/app/uploads/2021/10/ElencoBar_15102021.pdf",
+        "https://atoka.io/public/it/azienda/antico-caffe-la-posta-castiglion-fiorentino-sas-di-salvietti-federica-e-c/e406bd59c62b",
+        "https://www.oraridiapertura24.it/filiale/Castiglion%2520Fiorentino-Antico%2520Caff%25E8%2520La%2520Posta-909669H.html",
+        "https://app.wanderlog.com/place/details/3313969/antico-caff-la-posta"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "vigorsol.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.vigorsol.it/app/uploads/2021/10/ElencoBar_15102021.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "atoka.io",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://atoka.io/public/it/azienda/antico-caffe-la-posta-castiglion-fiorentino-sas-di-salvietti-federica-e-c/e406bd59c62b"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Castiglion%2520Fiorentino-Antico%2520Caff%25E8%2520La%2520Posta-909669H.html"
+          ]
+        },
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://app.wanderlog.com/place/details/3313969/antico-caff-la-posta"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:049009:livorno:nduja-bistrot",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.thefork.it/ristorante/nduja-bistrot-r699847",
+        "https://www.thefork.com/restaurant/nduja-bistrot-r699847",
+        "https://www.tuttiaffari.com/nduja-bistrot-348-899-3543"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "thefork.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.thefork.it/ristorante/nduja-bistrot-r699847"
+          ]
+        },
+        {
+          "registrable_domain": "thefork.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.thefork.com/restaurant/nduja-bistrot-r699847"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/nduja-bistrot-348-899-3543"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046002:bagni-di-lucca:ruota",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.bagnidilucca.info/dove-mangiare-a-bagni-di-lucca/bar-la-ruota/",
+        "https://restaurantguru.it/Gelateria-La-Ruota-Fornoli-Bagni-di-Lucca-2",
+        "https://restaurantguru.com/Gelateria-La-Ruota-Fornoli-Bagni-di-Lucca-2"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "bagnidilucca.info",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.bagnidilucca.info/dove-mangiare-a-bagni-di-lucca/bar-la-ruota/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Gelateria-La-Ruota-Fornoli-Bagni-di-Lucca-2"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Gelateria-La-Ruota-Fornoli-Bagni-di-Lucca-2"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055001:acquasparta:aquas-partas",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Acquas-Partas-Acquasparta",
+        "https://flowinacquasparta.com/ristoranti-e-alloggi/",
+        "https://www.tuttiaffari.com/aquas-partas-pizzeria-focacceria-338-308-9112"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Acquas-Partas-Acquasparta"
+          ]
+        },
+        {
+          "registrable_domain": "flowinacquasparta.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://flowinacquasparta.com/ristoranti-e-alloggi/"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/aquas-partas-pizzeria-focacceria-338-308-9112"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054018:foligno:bacerotti",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.localshop24.com/it/foligno-pg-it/attivita/ristorante/osteria-bacerotti/",
+        "https://aziende.virgilio.it/osteria/foligno-pg/osteria-bacerotti_9979883",
+        "https://restaurantguru.it/Osteria-Bacerotti-Foligno",
+        "https://www.tuttiaffari.com/osteria-bacerotti_1R-0742-263901"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/foligno-pg-it/attivita/ristorante/osteria-bacerotti/"
+          ]
+        },
+        {
+          "registrable_domain": "virgilio.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://aziende.virgilio.it/osteria/foligno-pg/osteria-bacerotti_9979883"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Osteria-Bacerotti-Foligno"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/osteria-bacerotti_1R-0742-263901"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054039:perugia:stadium-cafe",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/AC-Perugia-Stadium-Cafe-Perugia",
+        "https://restaurantguru.com/AC-Perugia-Stadium-Cafe-Perugia"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/AC-Perugia-Stadium-Cafe-Perugia"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/AC-Perugia-Stadium-Cafe-Perugia"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055012:ferentillo:di-piazza",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:054002:bastia-umbra:gargotta-villaggio-del-gusto",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.gargottavillaggiodelgusto.it/",
+        "https://gargottatavern.eatbu.com/?lang=it",
+        "https://www.oraridiapertura24.it/filiale/Bastia%2520Umbra-Gargotta%2520Villaggio%2520del%2520Gusto-2156165E.html",
+        "https://www.eurochocolate.com/indoor2021/around-bastia",
+        "https://www.umbriajournaltv.it/gargotta-aperto-anche-pranzo-punto-vendita-bastia-umbra/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "gargottavillaggiodelgusto.it",
+          "publisher_class": "uncertain",
+          "ownership_status": "uncertain",
+          "evidence_urls": [
+            "https://www.gargottavillaggiodelgusto.it/"
+          ],
+          "uncertainty_reason": "The retained title and custom domain identify Gargotta Villaggio del Gusto in Bastia Umbra, but two direct inspections reached only an anti-bot verification page; venue control could not be independently established.",
+          "uncertainty_reviewed_at": "2026-09-07T07:26:29.000Z",
+          "uncertainty_evidence_urls": [
+            "https://www.gargottavillaggiodelgusto.it/"
+          ]
+        },
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://gargottatavern.eatbu.com/?lang=it"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Bastia%2520Umbra-Gargotta%2520Villaggio%2520del%2520Gusto-2156165E.html"
+          ]
+        },
+        {
+          "registrable_domain": "eurochocolate.com",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.eurochocolate.com/indoor2021/around-bastia"
+          ]
+        },
+        {
+          "registrable_domain": "umbriajournaltv.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.umbriajournaltv.it/gargotta-aperto-anche-pranzo-punto-vendita-bastia-umbra/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054001:assisi:oxy-bar-gelateria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.appgelato.it/gelaterie/umbria/oxy-bar-gelateria/",
+        "https://www.norimarandricardo.it/things-to-do-in-assisi",
+        "https://www.fromthesourcedoc.com/travel-guide",
+        "https://atoka.io/public/it/azienda/oxy-bar-di-alessandretti-massimiliano-e-alessandretti-filippo-snc-o-piu-brevemente-oxy-bar-snc/ac0d52208125"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "appgelato.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.appgelato.it/gelaterie/umbria/oxy-bar-gelateria/"
+          ]
+        },
+        {
+          "registrable_domain": "norimarandricardo.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.norimarandricardo.it/things-to-do-in-assisi"
+          ]
+        },
+        {
+          "registrable_domain": "fromthesourcedoc.com",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.fromthesourcedoc.com/travel-guide"
+          ]
+        },
+        {
+          "registrable_domain": "atoka.io",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://atoka.io/public/it/azienda/oxy-bar-di-alessandretti-massimiliano-e-alessandretti-filippo-snc-o-piu-brevemente-oxy-bar-snc/ac0d52208125"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054011:citerna:da-quei-due",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.reteimprese.it/citerna",
+        "https://www.virgilio.it/italia/citerna/via/via-della-libert%C3%A0/ristoranti",
+        "https://www.ricercare-imprese.it/citta-di-castello/da-quei-due-ristorante-pizzeria-aYDtiX.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "reteimprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.reteimprese.it/citerna"
+          ]
+        },
+        {
+          "registrable_domain": "virgilio.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.virgilio.it/italia/citerna/via/via-della-libert%C3%A0/ristoranti"
+          ]
+        },
+        {
+          "registrable_domain": "ricercare-imprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ricercare-imprese.it/citta-di-castello/da-quei-due-ristorante-pizzeria-aYDtiX.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054024:gubbio:marino-lo-spuntino",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:055032:terni:bonjour",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:054021:giano-dell-umbria:cristal-bar",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://firmania.it/giano-dell-umbria/cristal-bar-558575",
+        "https://www.ufficiocamerale.it/5932/cristal-bar-di-tordi-alessandro-sas",
+        "https://www.cylex-italia.it/giano-dell-umbria/cristal-bar-12897019.html",
+        "https://trova-aperto.it/giano-dell-umbria/cristal-bar-1803144",
+        "https://www.tuttocitta.it/bar/gualdo-cattaneo"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "firmania.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://firmania.it/giano-dell-umbria/cristal-bar-558575"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/5932/cristal-bar-di-tordi-alessandro-sas"
+          ]
+        },
+        {
+          "registrable_domain": "cylex-italia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.cylex-italia.it/giano-dell-umbria/cristal-bar-12897019.html"
+          ]
+        },
+        {
+          "registrable_domain": "trova-aperto.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://trova-aperto.it/giano-dell-umbria/cristal-bar-1803144"
+          ]
+        },
+        {
+          "registrable_domain": "tuttocitta.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttocitta.it/bar/gualdo-cattaneo"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054050:spello:taverna-san-silvestro",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g672717-d2289709-Reviews-Taverna_San_Silvestro-Spello_Province_of_Perugia_Umbria.html",
+        "https://www.tripadvisor.com/Restaurant_Review-g672717-d2289709-Reviews-Taverna_San_Silvestro-Spello_Province_of_Perugia_Umbria.html",
+        "https://www.tripadvisor.it/FAQ-g672717-d2289709-Taverna_San_Silvestro.html",
+        "https://www.comune.spello.pg.it/wp-content/uploads/2021/01/Piano-Protezione-Civile-4.pdf",
+        "https://www.tripadvisor.it/RestaurantsNear-g672717-d2289709-Taverna_San_Silvestro-Spello_Province_of_Perugia_Umbria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g672717-d2289709-Reviews-Taverna_San_Silvestro-Spello_Province_of_Perugia_Umbria.html",
+            "https://www.tripadvisor.it/FAQ-g672717-d2289709-Taverna_San_Silvestro.html",
+            "https://www.tripadvisor.it/RestaurantsNear-g672717-d2289709-Taverna_San_Silvestro-Spello_Province_of_Perugia_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g672717-d2289709-Reviews-Taverna_San_Silvestro-Spello_Province_of_Perugia_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "pg.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.comune.spello.pg.it/wp-content/uploads/2021/01/Piano-Protezione-Civile-4.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055032:terni:rosticceria-i-templari",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.waze.com/live-map/directions/it/umbria/terni/pizzeria-rosticceria-i-templari?to=place.ChIJQ2hYusn3LhMRdyiUci-KtVs"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/it/umbria/terni/pizzeria-rosticceria-i-templari?to=place.ChIJQ2hYusn3LhMRdyiUci-KtVs"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055010:castel-viscardo:las-vegas",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:054051:spoleto:gelateria-artigianale-del-tordelli-tordellina-spoleto",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:054039:perugia:spuntino-del-ghiottone",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.lospuntinodelghiottone.net/contact",
+        "https://www.tripadvisor.it/Restaurant_Review-g187907-d26977016-Reviews-Lo_Spuntino_Del_Ghiottone-Perugia_Province_of_Perugia_Umbria.html",
+        "https://www.ufficiocamerale.it/7744/lo-spuntino-del-ghiottone-di-giorgio-maria",
+        "https://www.nuovaopinione.it/perugia/pizzerie/lo-spuntino-del-ghiottone-140416",
+        "https://restaurantguru.it/Lo-Spuntino-del-Ghiottone-Perugia"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "lospuntinodelghiottone.net",
+          "publisher_class": "uncertain",
+          "ownership_status": "uncertain",
+          "evidence_urls": [
+            "https://www.lospuntinodelghiottone.net/contact"
+          ],
+          "uncertainty_reason": "The retained title and custom domain identify Lo Spuntino del Ghiottone, but direct inspection of the retained contact URL was unavailable and bounded metadata alone does not establish publisher control.",
+          "uncertainty_reviewed_at": "2026-09-07T07:26:29.000Z",
+          "uncertainty_evidence_urls": [
+            "https://www.lospuntinodelghiottone.net/contact"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187907-d26977016-Reviews-Lo_Spuntino_Del_Ghiottone-Perugia_Province_of_Perugia_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/7744/lo-spuntino-del-ghiottone-di-giorgio-maria"
+          ]
+        },
+        {
+          "registrable_domain": "nuovaopinione.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.nuovaopinione.it/perugia/pizzerie/lo-spuntino-del-ghiottone-140416"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Lo-Spuntino-del-Ghiottone-Perugia"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055002:allerona:l-povecchio",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/lpovecchio-0763-628138",
+        "https://www.tripadvisor.it/Restaurant_Review-g1062527-d4742428-Reviews-L_Povecchio-Allerona_Province_of_Terni_Umbria.html",
+        "https://www.impresaitalia.info/kk05311320/pizzeria-l-povecchio-di-albani-felice-e-c-snc/allerona.aspx",
+        "https://registroaziende.it/azienda/lpovecchio-snc-di-albani-leonardo-e-serranti-mattia-allerona",
+        "https://www.tripadvisor.com/Restaurant_Review-g1062527-d4742428-Reviews-L_Povecchio-Allerona_Province_of_Terni_Umbria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/lpovecchio-0763-628138"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g1062527-d4742428-Reviews-L_Povecchio-Allerona_Province_of_Terni_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "impresaitalia.info",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.impresaitalia.info/kk05311320/pizzeria-l-povecchio-di-albani-felice-e-c-snc/allerona.aspx"
+          ]
+        },
+        {
+          "registrable_domain": "registroaziende.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://registroaziende.it/azienda/lpovecchio-snc-di-albani-leonardo-e-serranti-mattia-allerona"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1062527-d4742428-Reviews-L_Povecchio-Allerona_Province_of_Terni_Umbria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054009:castiglione-del-lago:gelateria-bee-bop",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:054001:assisi:pizza-al-taglio",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Pizza-al-taglio-Assisi",
+        "https://altraopinione.org/pizzeria/assisi/pizza-al-taglio/",
+        "https://www.reteimprese.it/pizzerie/assisi/azienda/3069782",
+        "https://carta.menu/list/82269099/pizza-restaurantes-assisi",
+        "https://wanderlog.com/ro/list/geoCategory/74483/where-to-eat-best-restaurants-in-assisi"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Pizza-al-taglio-Assisi"
+          ]
+        },
+        {
+          "registrable_domain": "altraopinione.org",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://altraopinione.org/pizzeria/assisi/pizza-al-taglio/"
+          ]
+        },
+        {
+          "registrable_domain": "reteimprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.reteimprese.it/pizzerie/assisi/azienda/3069782"
+          ]
+        },
+        {
+          "registrable_domain": "carta.menu",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://carta.menu/list/82269099/pizza-restaurantes-assisi"
+          ]
+        },
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/ro/list/geoCategory/74483/where-to-eat-best-restaurants-in-assisi"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055011:fabro:centrale",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.de/Restaurant_Review-g11964842-d25155616-Reviews-Caffe_Centrale-Fabro_Scalo_Fabro_Province_of_Terni_Umbria.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.de",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.de/Restaurant_Review-g11964842-d25155616-Reviews-Caffe_Centrale-Fabro_Scalo_Fabro_Province_of_Terni_Umbria.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054013:citta-di-castello:fox-hunt",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.localshop24.com/it/citta-di-castello-pg-it/attivita/pub/fox-hunt/",
+        "https://www.tuttiaffari.com/fox-hunt_4E-075-855-2364",
+        "https://restaurantguru.it/Fox-Hunt-Citta-di-Castello",
+        "https://altraopinione.org/pub/citta-di-castello/fox-hunt/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/citta-di-castello-pg-it/attivita/pub/fox-hunt/"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/fox-hunt_4E-075-855-2364"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Fox-Hunt-Citta-di-Castello"
+          ]
+        },
+        {
+          "registrable_domain": "altraopinione.org",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://altraopinione.org/pub/citta-di-castello/fox-hunt/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055032:terni:panineria-bardascio",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.com/Restaurant_Review-g580242-d32760600-Reviews-Panineria_Bardascio-Terni_Province_of_Terni_Umbria.html",
+        "https://www.ufficiocamerale.it/4733/panineria-bardascio-di-petrollini-andrea",
+        "https://restaurantguru.it/Panineria-Bardascio-Terni",
+        "https://www.ricercare-imprese.it/terni/panineria-bardascio-aYDq2c.html",
+        "https://www.justeat.it/restaurants-panineria-bardascio-terni/menu?jet-source=content_page"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g580242-d32760600-Reviews-Panineria_Bardascio-Terni_Province_of_Terni_Umbria.html"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/4733/panineria-bardascio-di-petrollini-andrea"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Panineria-Bardascio-Terni"
+          ]
+        },
+        {
+          "registrable_domain": "ricercare-imprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ricercare-imprese.it/terni/panineria-bardascio-aYDq2c.html"
+          ]
+        },
+        {
+          "registrable_domain": "justeat.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.justeat.it/restaurants-panineria-bardascio-terni/menu?jet-source=content_page"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054017:deruta:piano-b",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:054015:corciano:piadina-piu",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:054039:perugia:firenze",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.nuovaopinione.it/perugia/bar/bar-firenze-117281",
+        "https://restaurantguru.it/Bar-Firenze-Perugia",
+        "https://www.nuovaopinione.it/perugia/bar"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "nuovaopinione.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.nuovaopinione.it/perugia/bar/bar-firenze-117281",
+            "https://www.nuovaopinione.it/perugia/bar"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Firenze-Perugia"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054014:collazzone:exfor-pizzeria-e-friggitoria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://wanderlog.com/it/list/geoCategory/201667/where-to-eat-best-restaurants-in-collazzone",
+        "https://fr.restaurantguru.com/Exfor-Pizzeria-e-Friggitoria-Collepepe",
+        "https://localitybiz.it/umbria/pizzeria-con-forno-a-legna-e-cucina-tradizionale-a-umbria"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/it/list/geoCategory/201667/where-to-eat-best-restaurants-in-collazzone"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://fr.restaurantguru.com/Exfor-Pizzeria-e-Friggitoria-Collepepe"
+          ]
+        },
+        {
+          "registrable_domain": "localitybiz.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://localitybiz.it/umbria/pizzeria-con-forno-a-legna-e-cucina-tradizionale-a-umbria"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043031:monte-san-giusto:bestia",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.localshop24.com/it/monte-san-giusto-mc-it/attivita/pub/pub-la-bestia/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/monte-san-giusto-mc-it/attivita/pub/pub-la-bestia/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:109033:porto-san-giorgio:pirimpilla",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://es.restaurantguru.com/Pirimpilla-Porto-San-Giorgio",
+        "https://www.tripadvisor.it/Restaurant_Review-g194859-d28006994-Reviews-Pirimpilla_Pizza_Romana-Porto_San_Giorgio_Province_of_Fermo_Marche.html",
+        "https://bandi.regione.marche.it/Allegati/6134/DDS%20309.pdf",
+        "https://www.icribis.com/it/scheda-azienda/FM293726_PIRIMPILLA_PIZZA_ROMANA_DI_VIRGILI_KATJA",
+        "https://www.reteimprese.it/pizzerie/porto-san-giorgio"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://es.restaurantguru.com/Pirimpilla-Porto-San-Giorgio"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194859-d28006994-Reviews-Pirimpilla_Pizza_Romana-Porto_San_Giorgio_Province_of_Fermo_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "marche.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://bandi.regione.marche.it/Allegati/6134/DDS%20309.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "icribis.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.icribis.com/it/scheda-azienda/FM293726_PIRIMPILLA_PIZZA_ROMANA_DI_VIRGILI_KATJA"
+          ]
+        },
+        {
+          "registrable_domain": "reteimprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.reteimprese.it/pizzerie/porto-san-giorgio"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042045:senigallia:mali-bar",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:042007:camerata-picena:calore-della-tavola",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g5114288-d9601945-Reviews-Il_Calore_della_Tavola-Camerata_Picena_Province_of_Ancona_Marche.html",
+        "https://www.tuttiaffari.com/il-calore-della-tavola_1G-071-946014",
+        "https://restaurantguru.it/Il-Calore-della-Tavola-Camerata-Picena",
+        "https://www.tripadvisor.com/Restaurant_Review-g5114288-d9601945-Reviews-Il_Calore_della_Tavola-Camerata_Picena_Province_of_Ancona_Marche.html",
+        "https://www.tripadvisor.ca/Restaurant_Review-g5114288-d9601945-Reviews-Il_Calore_della_Tavola-Camerata_Picena_Province_of_Ancona_Marche.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g5114288-d9601945-Reviews-Il_Calore_della_Tavola-Camerata_Picena_Province_of_Ancona_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/il-calore-della-tavola_1G-071-946014"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Il-Calore-della-Tavola-Camerata-Picena"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g5114288-d9601945-Reviews-Il_Calore_della_Tavola-Camerata_Picena_Province_of_Ancona_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.ca",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.ca/Restaurant_Review-g5114288-d9601945-Reviews-Il_Calore_della_Tavola-Camerata_Picena_Province_of_Ancona_Marche.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042022:loreto:salerni",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:042002:ancona:pasticceria-gelateria-saracinelli-1921",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:041010:cartoceto:old-jack",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.prolococartoceto.com/ristoranti",
+        "https://cercastrade.com/cartoceto/via-del-casello"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "prolococartoceto.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.prolococartoceto.com/ristoranti"
+          ]
+        },
+        {
+          "registrable_domain": "cercastrade.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://cercastrade.com/cartoceto/via-del-casello"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041068:vallefoglia:ciao-2000",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:041013:fano:dalla-peppa",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.osteriadallapeppa.it/contatti/",
+      "evidence_urls": [
+        "https://www.osteriadallapeppa.it/contatti/",
+        "https://www.accademia1953.it/it/ristoranti/ristorante/3153-osteria-dalla-peppa",
+        "https://take2me.it/locali/ristorante-dalla-peppa-fano.html",
+        "https://www.falstaff.com/it/ristoranti/osteria-dalla-peppa-fano-1",
+        "https://www.ufficiocamerale.it/3596/osteria-dalla-peppa-srl"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "osteriadallapeppa.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.osteriadallapeppa.it/contatti/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-07T07:26:29.000Z",
+          "ownership_evidence_urls": [
+            "https://www.osteriadallapeppa.it/contatti/"
+          ]
+        },
+        {
+          "registrable_domain": "accademia1953.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.accademia1953.it/it/ristoranti/ristorante/3153-osteria-dalla-peppa"
+          ]
+        },
+        {
+          "registrable_domain": "take2me.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://take2me.it/locali/ristorante-dalla-peppa-fano.html"
+          ]
+        },
+        {
+          "registrable_domain": "falstaff.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.falstaff.com/it/ristoranti/osteria-dalla-peppa-fano-1"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/3596/osteria-dalla-peppa-srl"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043028:montecosaro:konvivia",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.montecosarodascoprire.it/struttura/konvivia-gelato-per-passione/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "montecosarodascoprire.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.montecosarodascoprire.it/struttura/konvivia-gelato-per-passione/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042048:sirolo:grotta",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.com/Restaurant_Review-g608900-d14015593-Reviews-Ristorante_La_Grotta-Sirolo_Province_of_Ancona_Marche.html",
+        "https://www.oraridiapertura24.it/filiale/Sirolo%2520%2528AN%2529-La%2520Grotta%2520Ristorante%2520Pizzeria-2212576M.html",
+        "https://www.sluurpy.it/sirolo/spiaggia/21413-spiaggia-urbani-sirolo",
+        "https://www.impegnatipersirolo.it/ristoranti-pizzerie.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g608900-d14015593-Reviews-Ristorante_La_Grotta-Sirolo_Province_of_Ancona_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Sirolo%2520%2528AN%2529-La%2520Grotta%2520Ristorante%2520Pizzeria-2212576M.html"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/sirolo/spiaggia/21413-spiaggia-urbani-sirolo"
+          ]
+        },
+        {
+          "registrable_domain": "impegnatipersirolo.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.impegnatipersirolo.it/ristoranti-pizzerie.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044066:san-benedetto-del-tronto:housecafe",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:041020:gradara:gustare-alimentari-gourmet",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.gustaregourmet.com/",
+      "evidence_urls": [
+        "https://www.gustaregourmet.com/",
+        "https://restaurantguru.it/Gustare-Alimentari-Gourmet-Gradara",
+        "https://wanderlog.com/it/list/geoCategory/314410/i-migliori-posti-per-il-pranzo-a-gradara",
+        "https://www.virgilio.it/italia/gradara/cat/RISTORANTI_%282%29.html",
+        "https://www.paginegialle.it/marche/pesaro/alimentari/p-2.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "gustaregourmet.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.gustaregourmet.com/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-07T07:26:29.000Z",
+          "ownership_evidence_urls": [
+            "https://www.gustaregourmet.com/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Gustare-Alimentari-Gourmet-Gradara"
+          ]
+        },
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/it/list/geoCategory/314410/i-migliori-posti-per-il-pranzo-a-gradara"
+          ]
+        },
+        {
+          "registrable_domain": "virgilio.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.virgilio.it/italia/gradara/cat/RISTORANTI_%282%29.html"
+          ]
+        },
+        {
+          "registrable_domain": "paginegialle.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.paginegialle.it/marche/pesaro/alimentari/p-2.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043024:matelica:moa-project",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:043013:civitanova-marche:lulu-ristorante",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:109001:altidona:papillon",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.ufficiocamerale.it/3513/pizzeria-ristorante-le-papillon-di-isabella-cataldi",
+        "https://www.overplace.com/marche/fm/altidona/pizzerie/pizzeria-ristorante-le-papillon.html",
+        "https://firmania.it/altidona/pizzeria-ristorante-le-papillon-di-isabella-cataldi-2397179",
+        "https://www.tuttocitta.it/pizzerie/pedaso",
+        "https://www.ricercare-imprese.it/altidona/pizzeria-ristorante-le-papillon-di-isabella-cataldi-aYgqkY.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/3513/pizzeria-ristorante-le-papillon-di-isabella-cataldi"
+          ]
+        },
+        {
+          "registrable_domain": "overplace.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.overplace.com/marche/fm/altidona/pizzerie/pizzeria-ristorante-le-papillon.html"
+          ]
+        },
+        {
+          "registrable_domain": "firmania.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://firmania.it/altidona/pizzeria-ristorante-le-papillon-di-isabella-cataldi-2397179"
+          ]
+        },
+        {
+          "registrable_domain": "tuttocitta.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttocitta.it/pizzerie/pedaso"
+          ]
+        },
+        {
+          "registrable_domain": "ricercare-imprese.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ricercare-imprese.it/altidona/pizzeria-ristorante-le-papillon-di-isabella-cataldi-aYgqkY.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044017:cupra-marittima:chiosco-tongatapu",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://de.restaurantguru.com/Chiosco-Tongatapu-Cupra-Marittima",
+        "https://restaurantguru.it/amp/Chiosco-Tongatapu-Cupra-Marittima",
+        "https://www.tuttiaffari.com/chiosco-tongatap%C3%B9-335-137-9024"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://de.restaurantguru.com/Chiosco-Tongatapu-Cupra-Marittima"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/amp/Chiosco-Tongatapu-Cupra-Marittima"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/chiosco-tongatap%C3%B9-335-137-9024"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044007:ascoli-piceno:duomo-caffetteria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://wanderlog.com/place/details/11714038/duomo-caffetteria",
+        "https://restaurantguru.it/amp/Duomo-Caffetteria-Ascoli-Piceno"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/place/details/11714038/duomo-caffetteria"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/amp/Duomo-Caffetteria-Ascoli-Piceno"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043041:pollenza:brian-boru-pub",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.brianboru.it/contatti/",
+      "evidence_urls": [
+        "https://www.brianboru.it/contatti/",
+        "https://www.oraridiapertura24.it/filiale/Pollenza-Brian%2520Bor%25F9%2520Pub-1547343Q.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "brianboru.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.brianboru.it/contatti/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-07T07:26:29.000Z",
+          "ownership_evidence_urls": [
+            "https://www.brianboru.it/contatti/"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Pollenza-Brian%2520Bor%25F9%2520Pub-1547343Q.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:109034:porto-sant-elpidio:gelateria-guneson",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Gelateria-Guneson-Porto-SantElpidio"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Gelateria-Guneson-Porto-SantElpidio"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042045:senigallia:secchiello",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194914-d12614637-Reviews-Al_Secchiello-Senigallia_Province_of_Ancona_Marche.html",
+        "https://www.ufficiocamerale.it/8589/al-secchiello-di-nazari-sabet-nasim",
+        "https://wanderlog.com/place/details/13226614/al-secchiello",
+        "https://www.sluurpy.it/senigallia/ristorante/218458/al-secchiello",
+        "https://www.virgilio.it/italia/senigallia/cat/RISTORANTI/vicino_PIAZZA_DEL_DUCA.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194914-d12614637-Reviews-Al_Secchiello-Senigallia_Province_of_Ancona_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/8589/al-secchiello-di-nazari-sabet-nasim"
+          ]
+        },
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/place/details/13226614/al-secchiello"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/senigallia/ristorante/218458/al-secchiello"
+          ]
+        },
+        {
+          "registrable_domain": "virgilio.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.virgilio.it/italia/senigallia/cat/RISTORANTI/vicino_PIAZZA_DEL_DUCA.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042016:cupramontana:viale-19",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/ristorante-pizzeria-al-viale-380-344-8729",
+        "https://ristorante-pizzeria-al-viale-19.hey-restaurants.com/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/ristorante-pizzeria-al-viale-380-344-8729"
+          ]
+        },
+        {
+          "registrable_domain": "hey-restaurants.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://ristorante-pizzeria-al-viale-19.hey-restaurants.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043053:tolentino:elite-caffe",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/elite-caff%C3%A8-srl-ufficio_1c-0733-961097",
+        "https://sisma2016.gov.it/wp-content/uploads/2020/01/Allegato1.pdf",
+        "https://xrayfinance.it/elite-caffe-s-r-l",
+        "https://bandi.regione.marche.it/Allegati/889/Graduatoria%20bando%202018%20come%20modificata%20da%20decreto%2095.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/elite-caff%C3%A8-srl-ufficio_1c-0733-961097"
+          ]
+        },
+        {
+          "registrable_domain": "gov.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://sisma2016.gov.it/wp-content/uploads/2020/01/Allegato1.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "xrayfinance.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://xrayfinance.it/elite-caffe-s-r-l"
+          ]
+        },
+        {
+          "registrable_domain": "marche.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://bandi.regione.marche.it/Allegati/889/Graduatoria%20bando%202018%20come%20modificata%20da%20decreto%2095.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041044:pesaro:fridy-pesaro",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g187796-d11788840-Reviews-Pizzeria_Fridy-Pesaro_Province_of_Pesaro_and_Urbino_Marche.html",
+        "https://www.thefork.it/ristorante/fridy-r717565",
+        "https://restaurantguru.it/Pizzeria-Fridy-Pesaro",
+        "https://restaurantguru.com/Pizzeria-Fridy-Pesaro",
+        "https://static.regione.marche.it/portals/0/Attivita_Produttive/Artigianato/Varie/PESARO.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g187796-d11788840-Reviews-Pizzeria_Fridy-Pesaro_Province_of_Pesaro_and_Urbino_Marche.html"
+          ]
+        },
+        {
+          "registrable_domain": "thefork.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.thefork.it/ristorante/fridy-r717565"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Pizzeria-Fridy-Pesaro"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Pizzeria-Fridy-Pesaro"
+          ]
+        },
+        {
+          "registrable_domain": "marche.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://static.regione.marche.it/portals/0/Attivita_Produttive/Artigianato/Varie/PESARO.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043033:morrovalle:gimaviet-bar-food",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:058070:nemi:stuzzico-e-vinello-bistrot",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/stuzzico-vinello-bistrot-392-639-2197",
+        "https://bistrot-stuzzico-vinello.metro.bar/?lang=en",
+        "https://restaurantguru.it/Stuzzico-and-Vinello-Bistrot-Nemi",
+        "https://www.tripadvisor.co.uk/Restaurant_Review-g794657-d16827167-Reviews-Stuzzico_Vinello_Bistrot-Nemi_Province_of_Rome_Lazio.html",
+        "https://piatti.menu/restaurants/nemi-1/stuzzico-vinello-bistrot"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/stuzzico-vinello-bistrot-392-639-2197"
+          ]
+        },
+        {
+          "registrable_domain": "metro.bar",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://bistrot-stuzzico-vinello.metro.bar/?lang=en"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Stuzzico-and-Vinello-Bistrot-Nemi"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.co.uk",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.co.uk/Restaurant_Review-g794657-d16827167-Reviews-Stuzzico_Vinello_Bistrot-Nemi_Province_of_Rome_Lazio.html"
+          ]
+        },
+        {
+          "registrable_domain": "piatti.menu",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://piatti.menu/restaurants/nemi-1/stuzzico-vinello-bistrot"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058047:guidonia-montecelio:kfc",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:058091:roma:gima-caffe",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.gimacaffe.it/condizione-vendita/",
+      "evidence_urls": [
+        "https://www.gimacaffe.it/condizione-vendita/",
+        "https://www.linkedin.com/company/gima-caffe",
+        "https://www.ice.it/en/sites/default/files/inline-files/ita_anuga23_catalogue_7.pdf",
+        "https://aziende.virgilio.it/roma-rm/gima-caff",
+        "https://www.gimacaffe.it/download/catalogo_prodotti.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "gimacaffe.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.gimacaffe.it/condizione-vendita/",
+            "https://www.gimacaffe.it/download/catalogo_prodotti.pdf"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-07T07:26:29.000Z",
+          "ownership_evidence_urls": [
+            "https://www.gimacaffe.it/condizione-vendita/"
+          ]
+        },
+        {
+          "registrable_domain": "linkedin.com",
+          "publisher_class": "social",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.linkedin.com/company/gima-caffe"
+          ]
+        },
+        {
+          "registrable_domain": "ice.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ice.it/en/sites/default/files/inline-files/ita_anuga23_catalogue_7.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "virgilio.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://aziende.virgilio.it/roma-rm/gima-caff"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060060:roccasecca:chiosco-la-villetta",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Chiosco-La-villetta-Roccasecca"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Chiosco-La-villetta-Roccasecca"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058074:palestrina:pitbull-pub",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.scopripalestrina.it/ospitalit%C3%A0",
+        "https://www.waze.com/live-map/directions/italy/lazio/palestrina/pitbull-pub?to=place.ChIJKVNMKreALxMRXSWS8gIVOPM",
+        "https://www.tripadvisor.it/Restaurant_Review-g635624-d7788148-Reviews-PitBull_Pub-Palestrina_Province_of_Rome_Lazio.html",
+        "https://www.justeat.it/restaurants-pitbull-pub---steak-house-palestrina/menu",
+        "https://www.jmenu.it/menu-pitbull-pub-palestrina-roma/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "scopripalestrina.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.scopripalestrina.it/ospitalit%C3%A0"
+          ]
+        },
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/italy/lazio/palestrina/pitbull-pub?to=place.ChIJKVNMKreALxMRXSWS8gIVOPM"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g635624-d7788148-Reviews-PitBull_Pub-Palestrina_Province_of_Rome_Lazio.html"
+          ]
+        },
+        {
+          "registrable_domain": "justeat.it",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.justeat.it/restaurants-pitbull-pub---steak-house-palestrina/menu"
+          ]
+        },
+        {
+          "registrable_domain": "jmenu.it",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.jmenu.it/menu-pitbull-pub-palestrina-roma/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058007:anzio:tana-del-gusto",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:060063:san-giorgio-a-liri:gelateria-nimue",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:056057:vetralla:eden-pizzeria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.ufficiocamerale.it/5071/eden-pizzeria-tavola-calda-sas-di-giardino-giorgio",
+        "https://www.tuttiaffari.com/eden-pizzeria-tavola-calda-377-358-6615",
+        "https://www.tripadvisor.it/Restaurant_Review-g673503-d25215489-Reviews-Eden_Pizzeria_Tavola_Calda-Vetralla_Province_of_Viterbo_Lazio.html",
+        "https://www.tripadvisor.com/Restaurant_Review-g673503-d25215489-Reviews-Eden_Pizzeria_Tavola_Calda-Vetralla_Province_of_Viterbo_Lazio.html",
+        "https://restaurantguru.it/Eden-Pizzeria-Tavola-Calda-Vetralla"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/5071/eden-pizzeria-tavola-calda-sas-di-giardino-giorgio"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/eden-pizzeria-tavola-calda-377-358-6615"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g673503-d25215489-Reviews-Eden_Pizzeria_Tavola_Calda-Vetralla_Province_of_Viterbo_Lazio.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g673503-d25215489-Reviews-Eden_Pizzeria_Tavola_Calda-Vetralla_Province_of_Viterbo_Lazio.html"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Eden-Pizzeria-Tavola-Calda-Vetralla"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058120:fiumicino:giardinetti-da-annibale",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://i-giardinetti-da-annibale.eatbu.com/?lang=it",
+        "https://i-giardinetti-da-annibale.eatbu.com/?lang=en",
+        "https://www.localshop24.com/it/fiumicino-rm-it/attivita/ristorante/i-giardinetti-da-annibale/",
+        "https://restaurantguru.it/I-Giardinetti-Da-Annibale-Fiumicino",
+        "https://restaurantguru.com/I-Giardinetti-Da-Annibale-Fiumicino"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://i-giardinetti-da-annibale.eatbu.com/?lang=it",
+            "https://i-giardinetti-da-annibale.eatbu.com/?lang=en"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/fiumicino-rm-it/attivita/ristorante/i-giardinetti-da-annibale/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/I-Giardinetti-Da-Annibale-Fiumicino"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/I-Giardinetti-Da-Annibale-Fiumicino"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:057029:forano:degli-eroi",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/bar-degli-eroi-di-galassetti-marco-0765-515019",
+        "https://www.diwinetaste.com/italiano/SchedaGS.php?u=bvvbg9iy"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/bar-degli-eroi-di-galassetti-marco-0765-515019"
+          ]
+        },
+        {
+          "registrable_domain": "diwinetaste.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.diwinetaste.com/italiano/SchedaGS.php?u=bvvbg9iy"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060019:cassino:onion",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:058091:roma:piadineria-88ccf508",
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.lapiadineria.com/public/up/2025COCA-COLA-CONCORSOOLIMPIADI-LA%20PIADINERIA_instant_win_SMSWhatsApp%20DEF.pdf",
+      "evidence_urls": [
+        "https://www.mimit.gov.it/images/stories/documenti/province/tavola/Lazio_-_RM_-_Roma.pdf",
+        "https://www.lapiadineria.com/public/up/2025COCA-COLA-CONCORSOOLIMPIADI-LA%20PIADINERIA_instant_win_SMSWhatsApp%20DEF.pdf",
+        "https://s3-eu-west-1.amazonaws.com/ferrero-static/globalcms/documenti/3761.pdf",
+        "https://restaurantguru.it/La-Piadineria-Rome-9",
+        "https://www.lapiadineria.fr/rechercher-un-resto-filtre?filtri=on"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "gov.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.mimit.gov.it/images/stories/documenti/province/tavola/Lazio_-_RM_-_Roma.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "lapiadineria.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://www.lapiadineria.com/public/up/2025COCA-COLA-CONCORSOOLIMPIADI-LA%20PIADINERIA_instant_win_SMSWhatsApp%20DEF.pdf"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-07T07:26:29.000Z",
+          "ownership_evidence_urls": [
+            "https://www.lapiadineria.com/public/up/2025COCA-COLA-CONCORSOOLIMPIADI-LA%20PIADINERIA_instant_win_SMSWhatsApp%20DEF.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "amazonaws.com",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://s3-eu-west-1.amazonaws.com/ferrero-static/globalcms/documenti/3761.pdf"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/La-Piadineria-Rome-9"
+          ]
+        },
+        {
+          "registrable_domain": "lapiadineria.fr",
+          "publisher_class": "official",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.lapiadineria.fr/rechercher-un-resto-filtre?filtri=on"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060025:ceprano:ciolli-caffe",
+      "official_website_status": "accepted",
+      "official_website_url": "https://ciollicaffe.it/",
+      "evidence_urls": [
+        "https://ciollicaffe.it/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ciollicaffe.it",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://ciollicaffe.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-07T07:26:29.000Z",
+          "ownership_evidence_urls": [
+            "https://ciollicaffe.it/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058036:fiano-romano:da-v-erne",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g227666-d34390921-Reviews-Da_v_Erne-Fiano_Romano_Province_of_Rome_Lazio.html",
+        "https://www.localshop24.com/it/fiano-romano-rm-it/attivita/pub/da-verne/",
+        "https://www.davinotti.com/forum/location-verificate/le-dolci-zie-1975",
+        "https://restaurantguru.com/Da-vErne-Fiano-Romano",
+        "https://restaurantguru.it/Da-vErne-Fiano-Romano"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g227666-d34390921-Reviews-Da_v_Erne-Fiano_Romano_Province_of_Rome_Lazio.html"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/fiano-romano-rm-it/attivita/pub/da-verne/"
+          ]
+        },
+        {
+          "registrable_domain": "davinotti.com",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.davinotti.com/forum/location-verificate/le-dolci-zie-1975"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Da-vErne-Fiano-Romano"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Da-vErne-Fiano-Romano"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059011:latina:dolce-tentazione-2-0",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://firmania.it/latina/dolce-tentazione-20-2340277"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "firmania.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://firmania.it/latina/dolce-tentazione-20-2340277"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056012:canino:da-isolina",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:058022:castel-gandolfo:birrodrome-ristorante-pizzeria",
+      "official_website_status": "accepted",
+      "official_website_url": "https://birrodrome.com/en/chi-siamo/",
+      "evidence_urls": [
+        "https://birrodrome.com/",
+        "https://www.birrodrome.com/en/",
+        "https://birrodrome.com/en/chi-siamo/",
+        "https://restaurantguru.it/Birrodrome-Castel-Gandolfo",
+        "https://restaurantguru.com/Birrodrome-Castel-Gandolfo"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "birrodrome.com",
+          "publisher_class": "official",
+          "ownership_status": "verified",
+          "evidence_urls": [
+            "https://birrodrome.com/",
+            "https://www.birrodrome.com/en/",
+            "https://birrodrome.com/en/chi-siamo/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-07T07:26:29.000Z",
+          "ownership_evidence_urls": [
+            "https://birrodrome.com/en/chi-siamo/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Birrodrome-Castel-Gandolfo"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Birrodrome-Castel-Gandolfo"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056059:viterbo:ripasso",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.ufficiocamerale.it/7006/caffe-ripasso-di-chiocchia-carlo",
+        "https://www.oraridiapertura24.it/filiale/Viterbo-Caff%25E8%2520Ripasso-5458473Z.html",
+        "https://www.ausl.latina.it/attachments/article/2906/elenco%20esercizi%20commerciali%20buoni%20pasto%20Repas%20aggiornato%20al%2028%20nov.%202019.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/7006/caffe-ripasso-di-chiocchia-carlo"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Viterbo-Caff%25E8%2520Ripasso-5458473Z.html"
+          ]
+        },
+        {
+          "registrable_domain": "latina.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ausl.latina.it/attachments/article/2906/elenco%20esercizi%20commerciali%20buoni%20pasto%20Repas%20aggiornato%20al%2028%20nov.%202019.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056041:oriolo-romano:risto-pub-13c",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/risto-pub-c-06-9983-8664",
+        "https://altraopinione.org/pub/oriolo-romano/risto-pub-13c/",
+        "https://www.jmenu.it/menu-ristopub-13c-oriolo-romano-viterbo/",
+        "https://www.escursionismo.it/escursioni/oriolo-romano-la-magia-della-foresta-che-non-dovrebbe-esserci/",
+        "https://restaurantguru.it/amp/Bar-13c-Oriolo-Romano"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/risto-pub-c-06-9983-8664"
+          ]
+        },
+        {
+          "registrable_domain": "altraopinione.org",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://altraopinione.org/pub/oriolo-romano/risto-pub-13c/"
+          ]
+        },
+        {
+          "registrable_domain": "jmenu.it",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.jmenu.it/menu-ristopub-13c-oriolo-romano-viterbo/"
+          ]
+        },
+        {
+          "registrable_domain": "escursionismo.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.escursionismo.it/escursioni/oriolo-romano-la-magia-della-foresta-che-non-dovrebbe-esserci/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/amp/Bar-13c-Oriolo-Romano"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058029:cerveteri:chiccheria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.cairoma.it/?p=30716"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "cairoma.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.cairoma.it/?p=30716"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059011:latina:tobiland-play-food",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.italia.it/en/lazio/latina/where-to-eat/tobiland-play---food",
+        "https://www.localshop24.com/it/latina-lt-it/attivita/ristorante/tobiland-play-food/",
+        "https://restaurantguru.it/Tobiland-Play-and-Food-Latina",
+        "https://www.tripadvisor.it/Restaurant_Review-g194787-d25547985-Reviews-Tobiland_Play_Food-Latina_Province_of_Latina_Lazio.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "italia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.italia.it/en/lazio/latina/where-to-eat/tobiland-play---food"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/latina-lt-it/attivita/ristorante/tobiland-play-food/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Tobiland-Play-and-Food-Latina"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194787-d25547985-Reviews-Tobiland_Play_Food-Latina_Province_of_Latina_Lazio.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060044:monte-san-giovanni-campano:sant-anna",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:060038:frosinone:pizzapi",
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://pizzapi.eatbu.com/?lang=it",
+        "https://www.pizzapimenu.com/",
+        "https://pizzapi.eatbu.com/?lang=en",
+        "https://restaurantguru.it/Pizzapi-Frosinone-Frosinone",
+        "https://www.localshop24.com/it/frosinone-fr-it/attivita/pizzeria/pizzapi-frosinone/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://pizzapi.eatbu.com/?lang=it",
+            "https://pizzapi.eatbu.com/?lang=en"
+          ]
+        },
+        {
+          "registrable_domain": "pizzapimenu.com",
+          "publisher_class": "uncertain",
+          "ownership_status": "uncertain",
+          "evidence_urls": [
+            "https://www.pizzapimenu.com/"
+          ],
+          "uncertainty_reason": "The retained title and custom domain identify Pizzapì in Frosinone, but direct inspection of the retained URL failed twice; publisher control could not be independently established.",
+          "uncertainty_reviewed_at": "2026-09-07T07:26:29.000Z",
+          "uncertainty_evidence_urls": [
+            "https://www.pizzapimenu.com/"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Pizzapi-Frosinone-Frosinone"
+          ]
+        },
+        {
+          "registrable_domain": "localshop24.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.localshop24.com/it/frosinone-fr-it/attivita/pizzeria/pizzapi-frosinone/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058104:tivoli:napofollia",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/pizzeria-forno_4d-0774-403433",
+        "https://fr.restaurantguru.com/Pizzeria-Forno-400-Tivoli-Terme",
+        "https://restaurantguru.it/Pizzeria-Forno-400-Tivoli-Terme",
+        "https://altraopinione.org/pizzeria/tivoli/napofollia/",
+        "https://restaurantguru.com/Pizzeria-Forno-400-Tivoli-Terme"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/pizzeria-forno_4d-0774-403433"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://fr.restaurantguru.com/Pizzeria-Forno-400-Tivoli-Terme",
+            "https://restaurantguru.com/Pizzeria-Forno-400-Tivoli-Terme"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Pizzeria-Forno-400-Tivoli-Terme"
+          ]
+        },
+        {
+          "registrable_domain": "altraopinione.org",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://altraopinione.org/pizzeria/tivoli/napofollia/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058099:sant-oreste:cruscioff-pizzeria-risto-pub",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:066093:scanno:vecchio-mulino",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:067035:pineto:pinetina",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/La-Pinetina-Pineto",
+        "https://www.tuttiaffari.com/la-pinetina-snc-339-475-5783",
+        "https://www.cylex-italia.it/pineto/la-pinetina-snc-15271630.html",
+        "https://trova-aperto.it/pineto/bar",
+        "https://www.cylex-italia.it/pineto/bar/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/La-Pinetina-Pineto"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/la-pinetina-snc-339-475-5783"
+          ]
+        },
+        {
+          "registrable_domain": "cylex-italia.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.cylex-italia.it/pineto/la-pinetina-snc-15271630.html",
+            "https://www.cylex-italia.it/pineto/bar/"
+          ]
+        },
+        {
+          "registrable_domain": "trova-aperto.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://trova-aperto.it/pineto/bar"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:066049:l-aquila:oronero-caffe-delizie",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:066050:lecce-nei-marsi:tasty-food",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:067041:teramo:liverpool-pub",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/liverpool-pub-0861-240181"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/liverpool-pub-0861-240181"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:068028:pescara:gelato-della-pineta",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:066082:rocca-di-mezzo:rifugio-del-lupo",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.halleyweb.com/c066082/zf/index.php/atti-amministrativi/ordinanze/dettaglio/table-ordinanze-public-page/4/atto/GTVRReU61WT0-H",
+        "https://www.cairoma.it/?p=29474",
+        "https://www.majellando.it/it/ristoranti-in-abruzzo/ristorante-il-rifugio-del-lupo",
+        "https://www.follettidelmorrone.it/programma-attivita-2013/programma-2025/22-giu-piani-di-pezza.html",
+        "https://www.rifugiovincenzosebastiani.it/sentieri/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "halleyweb.com",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.halleyweb.com/c066082/zf/index.php/atti-amministrativi/ordinanze/dettaglio/table-ordinanze-public-page/4/atto/GTVRReU61WT0-H"
+          ]
+        },
+        {
+          "registrable_domain": "cairoma.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.cairoma.it/?p=29474"
+          ]
+        },
+        {
+          "registrable_domain": "majellando.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.majellando.it/it/ristoranti-in-abruzzo/ristorante-il-rifugio-del-lupo"
+          ]
+        },
+        {
+          "registrable_domain": "follettidelmorrone.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.follettidelmorrone.it/programma-attivita-2013/programma-2025/22-giu-piani-di-pezza.html"
+          ]
+        },
+        {
+          "registrable_domain": "rifugiovincenzosebastiani.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.rifugiovincenzosebastiani.it/sentieri/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:068024:montesilvano:gianni-street-food",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.oraridiapertura24.it/filiale/Montesilvano%2520Marina-Gianni%2520Street%2520Food%2520dal%25201977-2280529B.html",
+        "https://www.tripadvisor.com/Restaurant_Review-g194834-d7351218-Reviews-Gianni_Street_Food_dal_1977-Montesilvano_Province_of_Pescara_Abruzzo.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Montesilvano%2520Marina-Gianni%2520Street%2520Food%2520dal%25201977-2280529B.html"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g194834-d7351218-Reviews-Gianni_Street_Food_dal_1977-Montesilvano_Province_of_Pescara_Abruzzo.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:069022:chieti:borgo-antico",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tuttiaffari.com/borgo-antico_767-340-385-4902",
+        "https://www.oraridiapertura24.it/filiale/Chieti-Borgo%2520Antico%25202-2274607E.html",
+        "https://www.unich.it/sites/default/files/2024-09/Brochure%20BIP%2011.06.24%20.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/borgo-antico_767-340-385-4902"
+          ]
+        },
+        {
+          "registrable_domain": "oraridiapertura24.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.oraridiapertura24.it/filiale/Chieti-Borgo%2520Antico%25202-2274607E.html"
+          ]
+        },
+        {
+          "registrable_domain": "unich.it",
+          "publisher_class": "unrelated",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.unich.it/sites/default/files/2024-09/Brochure%20BIP%2011.06.24%20.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:066075:pratola-peligna:900",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/Caffe-900-Pratola-Peligna",
+        "https://restaurantguru.it/cafeteria-Pratola-Peligna-t7",
+        "https://restaurantguru.com/Caffe-del-Corso-Pratola-Peligna",
+        "https://ilfaro24.it/pratola-peligna-diversarte-e-aperitivo-diverso/",
+        "https://sl.cybo.com/IT/pratola-peligna/bari%2C-pubi-in-taverne/"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Caffe-900-Pratola-Peligna",
+            "https://restaurantguru.it/cafeteria-Pratola-Peligna-t7"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Caffe-del-Corso-Pratola-Peligna"
+          ]
+        },
+        {
+          "registrable_domain": "ilfaro24.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://ilfaro24.it/pratola-peligna-diversarte-e-aperitivo-diverso/"
+          ]
+        },
+        {
+          "registrable_domain": "cybo.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://sl.cybo.com/IT/pratola-peligna/bari%2C-pubi-in-taverne/"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:067001:alba-adriatica:follia-pratica",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/Restaurant_Review-g194665-d6458688-Reviews-Follia_Pratica-Alba_Adriatica_Province_of_Teramo_Abruzzo.html",
+        "https://www.sluurpy.it/alba-adriatica/ristorante/91152/follia-pratica/recensioni"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/Restaurant_Review-g194665-d6458688-Reviews-Follia_Pratica-Alba_Adriatica_Province_of_Teramo_Abruzzo.html"
+          ]
+        },
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/alba-adriatica/ristorante/91152/follia-pratica/recensioni"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:066049:l-aquila:pocoloco-pubewinebar",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.sluurpy.it/paganica/ristorante/88008/pocoloco-pubewinebar",
+        "https://piatti.menu/restaurants/laquila/pocoloco-pubewinebar",
+        "https://www.tripadvisor.com/Restaurant_Review-g1392017-d7852105-Reviews-Pocoloco_House_of_Music-Paganica_Province_of_L_Aquila_Abruzzo.html"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "sluurpy.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.sluurpy.it/paganica/ristorante/88008/pocoloco-pubewinebar"
+          ]
+        },
+        {
+          "registrable_domain": "piatti.menu",
+          "publisher_class": "menu_mirror",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://piatti.menu/restaurants/laquila/pocoloco-pubewinebar"
+          ]
+        },
+        {
+          "registrable_domain": "tripadvisor.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.com/Restaurant_Review-g1392017-d7852105-Reviews-Pocoloco_House_of_Music-Paganica_Province_of_L_Aquila_Abruzzo.html"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:067028:montorio-al-vomano:toto",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:067040:silvi:gallonero",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.visitsilvi.it/mangiare/ristorante-pizzeria-gallonero/41-53.html",
+        "https://www.visitsilvi.it/en/food-and-restaurants/ristorante-pizzeria-gallonero/41-53.html",
+        "https://www.tuttiaffari.com/ristorante-pizzeria-gallonero-085-797-8908",
+        "https://www.glutoapp.com/it/locale/9498/ristorante-pizzeria-gallonero",
+        "https://wanderlog.com/place/details/3003306/ristorante-pizzeria-gallonero"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "visitsilvi.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.visitsilvi.it/mangiare/ristorante-pizzeria-gallonero/41-53.html",
+            "https://www.visitsilvi.it/en/food-and-restaurants/ristorante-pizzeria-gallonero/41-53.html"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/ristorante-pizzeria-gallonero-085-797-8908"
+          ]
+        },
+        {
+          "registrable_domain": "glutoapp.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.glutoapp.com/it/locale/9498/ristorante-pizzeria-gallonero"
+          ]
+        },
+        {
+          "registrable_domain": "wanderlog.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://wanderlog.com/place/details/3003306/ristorante-pizzeria-gallonero"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:069022:chieti:tricalle",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.waze.com/live-map/directions/it/abruzzo/chieti/bar-tricalle?to=place.ChIJPz2oUCKsMRMR2jLXGdnYHxA",
+        "https://restaurantguru.it/Bar-Tricalle-Chieti",
+        "https://www.tuttiaffari.com/bar-tricalle_1h-329-757-7513",
+        "https://www.ufficiocamerale.it/9743/bar-tricalle-srls",
+        "https://www.dovepasticcio.it/pasticcerie/dettaglio/1758/bar-tricalle-di-di-cintio-catia-a-chieti"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "waze.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.waze.com/live-map/directions/it/abruzzo/chieti/bar-tricalle?to=place.ChIJPz2oUCKsMRMR2jLXGdnYHxA"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Bar-Tricalle-Chieti"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/bar-tricalle_1h-329-757-7513"
+          ]
+        },
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/9743/bar-tricalle-srls"
+          ]
+        },
+        {
+          "registrable_domain": "dovepasticcio.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.dovepasticcio.it/pasticcerie/dettaglio/1758/bar-tricalle-di-di-cintio-catia-a-chieti"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:066093:scanno:angelone",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [],
+      "domain_reviews": []
+    },
+    {
+      "venue_id": "venue:066006:avezzano:crema-cioccolato-avezzano",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://crema-cioccolato.eatbu.com/?lang=it",
+        "https://crema-cioccolato.eatbu.com/?lang=en",
+        "https://restaurantguru.it/Crema-and-Cioccolato-Torlonia-Avezzano",
+        "https://www.mixerplanet.com/wp-content/uploads/2015/08/Network-di-adesioni.pdf"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "eatbu.com",
+          "publisher_class": "booking_or_order_platform",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://crema-cioccolato.eatbu.com/?lang=it",
+            "https://crema-cioccolato.eatbu.com/?lang=en"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Crema-and-Cioccolato-Torlonia-Avezzano"
+          ]
+        },
+        {
+          "registrable_domain": "mixerplanet.com",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.mixerplanet.com/wp-content/uploads/2015/08/Network-di-adesioni.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:068028:pescara:tazze-pazze-caffetteria",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://restaurantguru.it/TazzePazze-Pescara"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/TazzePazze-Pescara"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:069016:casalincontrada:hamlet",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.tripadvisor.it/RestaurantsNear-g3308310-d21276837-Hamlet-Casalincontrada_Province_of_Chieti_Abruzzo.html",
+        "https://www.tuttiaffari.com/hamlet-pub-388-584-1685",
+        "https://restaurantguru.com/Hamlet-Pub-Casalincontrada",
+        "https://www.tripadvisor.it/Restaurant_Review-g3308310-d21276837-Reviews-or60-Hamlet-Casalincontrada_Province_of_Chieti_Abruzzo.html",
+        "https://restaurantguru.it/Hamlet-Pub-Casalincontrada"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "tripadvisor.it",
+          "publisher_class": "editorial_or_review",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tripadvisor.it/RestaurantsNear-g3308310-d21276837-Hamlet-Casalincontrada_Province_of_Chieti_Abruzzo.html",
+            "https://www.tripadvisor.it/Restaurant_Review-g3308310-d21276837-Reviews-or60-Hamlet-Casalincontrada_Province_of_Chieti_Abruzzo.html"
+          ]
+        },
+        {
+          "registrable_domain": "tuttiaffari.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.tuttiaffari.com/hamlet-pub-388-584-1685"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.com",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.com/Hamlet-Pub-Casalincontrada"
+          ]
+        },
+        {
+          "registrable_domain": "restaurantguru.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://restaurantguru.it/Hamlet-Pub-Casalincontrada"
+          ]
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:069035:francavilla-al-mare:speedy-food",
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "evidence_urls": [
+        "https://www.ufficiocamerale.it/2752/speedy-food-sas-di-cinque-sabrina-c"
+      ],
+      "domain_reviews": [
+        {
+          "registrable_domain": "ufficiocamerale.it",
+          "publisher_class": "directory",
+          "ownership_status": "rejected",
+          "evidence_urls": [
+            "https://www.ufficiocamerale.it/2752/speedy-food-sas-di-cinque-sabrina-c"
+          ]
+        }
+      ]
+    }
+  ]
+}

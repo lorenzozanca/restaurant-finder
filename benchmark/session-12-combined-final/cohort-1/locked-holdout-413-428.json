@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-413-428",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:076070:rotonda:girula",
+      "query": "\"Ristorante Pizzeria Girulà\" \"Rotonda\" \"Rione Pietro Nenni, 42\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE PIZZERIA GIRULÀ, Rotonda - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1535857-d15098460-Reviews-Bar_Ristorante_Pizzeria_Girula-Rotonda_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA GIRULÀ, Rotonda - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1535857-d15098460-Reviews-or60-Bar_Ristorante_Pizzeria_Girula-Rotonda_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "RISTORANTE PIZZERIA GIRULÀ, Rotonda - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1535857-d15098460-Reviews-or15-Bar_Ristorante_Pizzeria_Girula-Rotonda_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "Ristorante Pizzeria Girulà, Rotonda - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Girula-Latronico"
+        },
+        {
+          "title": "Parco Nazionale del Pollino: Where to eat: Restaurants: Ristorante Pizzeria Girulà di Pataro Domenico",
+          "url": "https://www.parks.it/parco.nazionale.pollino/Eristoratore.php?progressivooperatore=615"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077021:policoro:centrale",
+      "query": "\"Bar centrale\" \"Policoro\" \"Via Siris, 4\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Centrale | Via Siris 4 6, Policoro",
+          "url": "https://negozi.sisal.com/my-sisal/policoro-via-siris-4-6-bar-centrale"
+        },
+        {
+          "title": "Bar centrale, Policoro - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Bar-centrale-Policoro"
+        },
+        {
+          "title": "Driving directions to Bar centrale, 4 Via Siris, Policoro - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/basilicata/policoro/bar-centrale?to=place.ChIJIT4O6JlRRxMR8fYivURvVco"
+        },
+        {
+          "title": "Bar centrale, Policoro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-centrale-Policoro"
+        },
+        {
+          "title": "Pangaro Prospero | 0835 972087 | Policoro",
+          "url": "https://www.tuttiaffari.com/pangaro-prospero-0835-972087"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:roulette",
+      "query": "\"La Roulette\" \"Potenza\" \"Contrada Botte, 16\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "La Roulette, Potenza - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Roulette-Potenza-2"
+        },
+        {
+          "title": "LA ROULETTE, Potenza - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187773-d3237342-Reviews-La_Roulette-Potenza_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "LA ROULETTE DI LOVALLO MICHELE, Partita IVA: 01845820768, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/7955/la-roulette-di-lovallo-michele"
+        },
+        {
+          "title": "Scopri Ristoranti a Potenza: Cenare Senza Sfondare il Portafoglio",
+          "url": "https://restaurantguru.it/Potenza/picks/affordable-moderate-dining-potenza"
+        },
+        {
+          "title": "La Roulette, Potenza - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/potenza/ristorante/64385/la-roulette"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077016:montalbano-jonico:di-pinto-maria",
+      "query": "\"Di Pinto Maria\" \"Montalbano Jonico\" \"Via Armando Miele, 21\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Aziende Montalbano Jonico (MT)",
+          "url": "https://aziende.tuttosuitalia.com/basilicata/matera/montalbano-jonico/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076066:rionero-in-vulture:alter-ego",
+      "query": "\"Alter Ego\" \"Rionero in Vulture\" \"Via Giardini, 13\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Scaricalo gratis",
+          "url": "https://paperzz.com/doc/5249294/scaricalo-gratis"
+        },
+        {
+          "title": "Virgilio Ilari Debellare Superbos. Taccuino 2003-2014 | PDF",
+          "url": "https://fr.scribd.com/doc/214292815/Virgilio-Ilari-Debellare-Superbos-Taccuino-2003-2014"
+        },
+        {
+          "title": "Piero Chiara. Le Corna Del Diavolo e Altri Racconti | PDF",
+          "url": "https://it.scribd.com/document/171373587/Piero-Chiara-Le-Corna-Del-Diavolo-e-Altri-Racconti"
+        },
+        {
+          "title": "Virgilio Ilari Debellare Superbos. Taccuino 2003-2012",
+          "url": "https://expydoc.com/doc/6948388/virgilio-ilari-debellare-superbos.-taccuino-2003-2012"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077014:matera:checco-eppoi",
+      "query": "\"Checco EPPOI\" \"Matera\" \"Via Ascanio Persio, 34\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:076092:trecchina:lanterna-verde",
+      "query": "\"Ristorante Pizzeria Lanterna Verde\" \"Trecchina\" \"Piazza del Popolo, 43\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Ristorante Pizzeria Lanterna Verde, 43 Piazza del Popolo, Trecchina - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/basilicata/trecchina/ristorante-pizzeria-lanterna-verde?to=place.ChIJASItX4woPxMR-o6nOvgXiQw"
+        },
+        {
+          "title": "Ristorante Pizzeria Lanterna Verde, Trecchina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Lanterna-Verde-Trecchina"
+        },
+        {
+          "title": "LANTERNA VERDE, Trecchina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2287573-d3461201-Reviews-Lanterna_Verde-Trecchina_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "▷ Ristorante Pizzeria Lanterna Verde, Trecchina",
+          "url": "https://www.cylex-italia.it/trecchina/ristorante-pizzeria-lanterna-verde-7002617.html"
+        },
+        {
+          "title": "LANTERNA VERDE, Trecchina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2287573-d3461201-Reviews-or45-Lanterna_Verde-Trecchina_Province_of_Potenza_Basilicata.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076043:lavello:iguana-cafe",
+      "query": "\"Iguana Cafe\" \"Lavello\" \"Via Roma, 116\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "IGUANA CAFÈ, Lavello - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2059171-d27339060-Reviews-Iguana_Cafe-Lavello_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "Iguana Cafè | 324 591 1508 | Lavello (Italia)",
+          "url": "https://www.tuttiaffari.com/iguana-caf%C3%A8_4m-324-591-1508"
+        },
+        {
+          "title": "IGUANA CAFE' DI TERRANA MIRIAM & C. S.A.S., Partita IVA: 01785230762, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1672/iguana-cafe-di-terrana-miriam-c-sas"
+        },
+        {
+          "title": "Iguana Cafè, Lavello - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Iguana-Cafe-Lavello"
+        },
+        {
+          "title": "Iguana Café - Lavello - il Tacco di Bacco",
+          "url": "https://iltaccodibacco.it/lavello/iguana-cafe"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077014:matera:rugantino",
+      "query": "\"Rugantino\" \"Matera\" \"Via Cosenza, 11\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "RISTORANTE AL RUGANTINO, Matera - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187772-d743348-Reviews-Ristorante_Al_Rugantino-Matera_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "Elenco esercizi convenzionati",
+          "url": "https://noidiposte.poste.it/wp-content/uploads/2014/09/ELENCO-POSTE-BPE.PDF.pdf"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Rugantino Srl“ | Via Cosenza 11/13",
+          "url": "https://www.oraridiapertura24.it/filiale/Matera-Rugantino%2520Srl-1461777W.html"
+        },
+        {
+          "title": "Domenica delle Palme, Pasqua e Pasquetta 2018 a Matera: i ristoranti consigliati da SassiLive - SassiLive",
+          "url": "https://www.sassilive.it/economia/enogastronomia/domenica-delle-palme-pasqua-e-pasquetta-2018-a-matera-i-ristoranti-consigliati-da-sassilive/"
+        },
+        {
+          "title": "RISTORANTE AL RUGANTINO, Matera - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g187772-d743348-Reviews-Ristorante_Al_Rugantino-Matera_Province_of_Matera_Basilicata.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076085:senise:l-infinito",
+      "query": "\"L'infinito\" \"Senise\" \"Viale Papa Giovanni XXIII, 23\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "L'infinito, Senise - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/senise/ristorante/9123642/l-infinito"
+        },
+        {
+          "title": "L'infinito, Senise - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Linfinito-Senise"
+        },
+        {
+          "title": "Os 10 melhores restaurantes próximos ao L'infinito, Senise",
+          "url": "https://www.tripadvisor.pt/RestaurantsNear-g1063518-d27398926-L_infinito-Senise_Province_of_Potenza_Basilicata.html"
+        },
+        {
+          "title": "Fondazione Matera Basilicata 2019 – Matera Welcome EVENTS",
+          "url": "https://events.materawelcome.it/organizer/view/233/fondazione_matera_basilicata_2019"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076095:venosa:roma-caffe",
+      "query": "\"Roma Caffè\" \"Venosa\" \"Via Roma, 200\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Ordina Fritti online - Fritti a domicilio",
+          "url": "https://www.ordina-online-ristoranti.it/fritti"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:076063:potenza:el-divino",
+      "query": "\"El Divino\" \"Potenza\" \"Via Achille Rosica, 45\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "El Divino, Potenza - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/El-Divino-Potenza"
+        },
+        {
+          "title": "Locali, Birrerie e Pub a Potenza",
+          "url": "https://www.reteimprese.it/locali-birrerie-pub/potenza"
+        },
+        {
+          "title": "Locali, Birrerie e Pub vicino a Brienza",
+          "url": "https://www.reteimprese.it/locali-birrerie-pub/brienza"
+        },
+        {
+          "title": "Locali, Birrerie e Pub a Tricarico",
+          "url": "https://www.reteimprese.it/locali-birrerie-pub/tricarico"
+        },
+        {
+          "title": "Locali, Birrerie e Pub a Tito",
+          "url": "https://www.reteimprese.it/locali-birrerie-pub/tito"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:077031:scanzano-jonico:marlin-bleu",
+      "query": "\"Marlin Bleu\" \"Scanzano Jonico\" \"Piazza Antonio Gramsci, 22\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "MARTIN BLEU, Scanzano Jonico - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1392015-d4548278-Reviews-Marlin_Bleu-Scanzano_Jonico_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "MARLIN BLEU, Scanzano Jonico - Menu, Prices, Restaurant Reviews & Reservations - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1392015-d4548278-Reviews-Marlin_Bleu-Scanzano_Jonico_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "MARLIN BLEU, Scanzano Jonico - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1392015-d4548278-Reviews-Marlin_Bleu-Scanzano_Jonico_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "MARTIN BLEU, Scanzano Jonico - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g1392015-d4548278-Reviews-Marlin_Bleu-Scanzano_Jonico_Province_of_Matera_Basilicata.html"
+        },
+        {
+          "title": "Marlin Bleu Pub a Scanzano Jonico: 1 opinioni e 5 foto",
+          "url": "https://www.minube.it/posto-preferito/marlin-bleu-pub-a3635094"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:080069:rosarno:grano-e-brace",
+      "query": "\"Grano e Brace\" \"Rosarno\" \"Via Genaia, 4\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": [
+        {
+          "title": "Grano e Brace, Rosarno - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Grano-e-Brace-Rosarno"
+        },
+        {
+          "title": "Grano e Brace, Rosarno - Menu du restaurant, prix et avis",
+          "url": "https://fr.restaurantguru.com/Grano-e-Brace-Rosarno"
+        },
+        {
+          "title": "Grano e Brace, Rosarno - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Grano-e-Brace-Rosarno"
+        },
+        {
+          "title": "Grano E Brace da ROSARNO",
+          "url": "https://piatti.menu/restaurants/rosarno/grano-e-brace"
+        },
+        {
+          "title": "▷ Grano e Brace | Ristorante, Rosarno",
+          "url": "https://www.cylex-italia.it/rosarno/grano-e-brace-15911759.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:101010:crotone:fragobar",
+      "query": "\"FRAGOBAR\" \"Crotone\" \"Via 25 Aprile, 75\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:078045:cosenza:demode-baguetteria",
+      "query": "\"Démodé Baguetteria\" \"Cosenza\" \"Via Gregorio Caloprese, 21\"",
+      "retrieved_at": "2026-09-07T08:00:00.000Z",
+      "candidates": []
+    }
+  ]
+}

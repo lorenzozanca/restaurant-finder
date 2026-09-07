@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "stage": "C",
+  "checkpoint_sample_index": 100,
+  "selection_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+  "continuous_selection_order_coverage": "001-100",
+  "unique_venue_ids": 100,
+  "publisher_domains": 259,
+  "ownership_statuses": {
+    "verified": 13,
+    "rejected": 246,
+    "uncertain": 0
+  },
+  "adjudication_sha256": {
+    "locked-holdout-adjudication-001-100.json": "1e41591661cb3c51db0f7df6c68070e7d2db02b4d13fa687ab511c5c9cfd0c4f"
+  },
+  "capture_sha256": {
+    "locked-holdout-capture-001-100.partial.json": "e6a48208547bc7ac684b40c6edb46663b2e8c50ee413aa233d451dd3baad3e10"
+  },
+  "plausible_urls_directly_inspected_total": 71,
+  "identical_url_retry_attempts_total": 11,
+  "search_queries_issued_or_reopened_during_adjudication": 0,
+  "evaluator_runs": 0,
+  "every_candidate_domain_reviewed_exactly_once": true,
+  "validation_status": "passed"
+}

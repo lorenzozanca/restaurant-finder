@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-capture-221-236",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "09d36070bdb62e5c64eaa9eada9ca0c240b4deafcfabef091d3ff2eba6645b48",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:052032:siena:monkey-s-risto-pizza-pub",
+      "query": "\"Monkey's Risto Pizza Pub\" Siena \"Via Cesare Battisti, 28A\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:049020:suvereto:vicolo-stretto",
+      "query": "\"Vicolo stretto\" Suvereto \"Via Magenta, 5\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "Comune di Suvereto - Dove Mangiare",
+          "url": "https://www.comune.suvereto.li.it/pagina192583_dove-mangiare.html/"
+        },
+        {
+          "title": "Vivere Suvereto - Pizzeria IL VICOLO STRETTO",
+          "url": "https://www.viveresuvereto.it/area_letturaServizio/76/pagsistema.html"
+        },
+        {
+          "title": "VICOLO STRETTO PIZZERIA, Suvereto - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1180066-d28662583-Reviews-Vicolo_Stretto_Pizzeria-Suvereto_Province_of_Livorno_Tuscany.html"
+        },
+        {
+          "title": "PIZZERIA VICOLO STRETTO DI PRUNETI BARBARA, Partita IVA: 01958530493, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/5294/bar-barina-pizzeria-di-pruneti-barbara"
+        },
+        {
+          "title": "VICOLO STRETTO PIZZERIA, Suvereto - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1180066-d28662583-Reviews-Vicolo_Stretto_Pizzeria-Suvereto_Province_of_Livorno_Tuscany.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:051012:castiglion-fiorentino:antico-caffe-la-posta",
+      "query": "\"Antico Caffè La Posta\" \"Castiglion Fiorentino\" \"Piazza del Municipio, 4\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "Elenco pdv attivati AAV - update 15.10",
+          "url": "https://www.vigorsol.it/app/uploads/2021/10/ElencoBar_15102021.pdf"
+        },
+        {
+          "title": "Antico Caffe' La Posta Castiglion Fiorentino S....: Dati societari | Atoka",
+          "url": "https://atoka.io/public/it/azienda/antico-caffe-la-posta-castiglion-fiorentino-sas-di-salvietti-federica-e-c/e406bd59c62b"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Antico Caffè La Posta“ | Piazza del Municipio",
+          "url": "https://www.oraridiapertura24.it/filiale/Castiglion%2520Fiorentino-Antico%2520Caff%25E8%2520La%2520Posta-909669H.html"
+        },
+        {
+          "title": "Antico Caffè La Posta, Cortona, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://app.wanderlog.com/place/details/3313969/antico-caff-la-posta"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:049009:livorno:nduja-bistrot",
+      "query": "\"Nduja Bistrot\" Livorno \"Via della Madonna, 10\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "Nduja Bistrot a Livorno - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork",
+          "url": "https://www.thefork.it/ristorante/nduja-bistrot-r699847"
+        },
+        {
+          "title": "Nduja Bistrot in Livorno - Restaurant Reviews, Menu and Prices | TheFork",
+          "url": "https://www.thefork.com/restaurant/nduja-bistrot-r699847"
+        },
+        {
+          "title": "Nduja Bistrot | 348 899 3543 | Livorno",
+          "url": "https://www.tuttiaffari.com/nduja-bistrot-348-899-3543"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046002:bagni-di-lucca:ruota",
+      "query": "\"Bar La Ruota\" \"Bagni di Lucca\" \"Viale Papa Giovanni XXIII, 29\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "Bar la Ruota - BagniDiLucca.info",
+          "url": "https://www.bagnidilucca.info/dove-mangiare-a-bagni-di-lucca/bar-la-ruota/"
+        },
+        {
+          "title": "Bar La Ruota Di Riccardo Franchi, Bagni di Lucca - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Gelateria-La-Ruota-Fornoli-Bagni-di-Lucca-2"
+        },
+        {
+          "title": "Bar La Ruota Di Riccardo Franchi, Bagni di Lucca - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Gelateria-La-Ruota-Fornoli-Bagni-di-Lucca-2"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055001:acquasparta:aquas-partas",
+      "query": "\"Pizzeria Aquas Partas\" Acquasparta \"Via Guglielmo Marconi, 13\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria Aquas Partas, Acquasparta - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Acquas-Partas-Acquasparta"
+        },
+        {
+          "title": "Ristoranti e Alloggi – Flowin Acquasparta – Il sito di Acquasparta",
+          "url": "https://flowinacquasparta.com/ristoranti-e-alloggi/"
+        },
+        {
+          "title": "Pizzeria Aquas Partas | 338 308 9112 | Acquasparta",
+          "url": "https://www.tuttiaffari.com/aquas-partas-pizzeria-focacceria-338-308-9112"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054018:foligno:bacerotti",
+      "query": "\"Osteria Bacerotti\" Foligno \"Via della Zecca, 30\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "OSTERIA BACEROTTI - Ristorante a Foligno | LocalShop24",
+          "url": "https://www.localshop24.com/it/foligno-pg-it/attivita/ristorante/osteria-bacerotti/"
+        },
+        {
+          "title": "Osteria Bacerotti - Foligno, Via della Zecca, 30",
+          "url": "https://aziende.virgilio.it/osteria/foligno-pg/osteria-bacerotti_9979883"
+        },
+        {
+          "title": "Osteria Bacerotti, Foligno - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Osteria-Bacerotti-Foligno"
+        },
+        {
+          "title": "Osteria Bacerotti | 0742 263901 | Foligno",
+          "url": "https://www.tuttiaffari.com/osteria-bacerotti_1R-0742-263901"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054039:perugia:stadium-cafe",
+      "query": "\"Stadium Cafè\" Perugia \"Viale Pietro Conti, 4\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "STADIUM CAFÈ, Perugia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/AC-Perugia-Stadium-Cafe-Perugia"
+        },
+        {
+          "title": "STADIUM CAFÈ, Perugia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/AC-Perugia-Stadium-Cafe-Perugia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055012:ferentillo:di-piazza",
+      "query": "\"Caffe di Piazza\" Ferentillo \"Piazza Giuseppe Garibaldi, 9\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:054002:bastia-umbra:gargotta-villaggio-del-gusto",
+      "query": "\"Gargotta Villaggio del Gusto\" \"Bastia Umbra\" \"Via delle Ginestre, 1\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "Gargotta Villaggio del Gusto – Ristorante a Bastia Umbra",
+          "url": "https://www.gargottavillaggiodelgusto.it/"
+        },
+        {
+          "title": "GARGOTTA villaggio del gusto - BASTIA UMBRA | Cucina Italiana nelle mie vicinanze | Prenoti subito",
+          "url": "https://gargottatavern.eatbu.com/?lang=it"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Gargotta Villaggio del Gusto“ | Via Delle Ginestre",
+          "url": "https://www.oraridiapertura24.it/filiale/Bastia%2520Umbra-Gargotta%2520Villaggio%2520del%2520Gusto-2156165E.html"
+        },
+        {
+          "title": "Around Bastia | Eurochocolate Indoor Special Edition | 15-24 Ottobre 2021",
+          "url": "https://www.eurochocolate.com/indoor2021/around-bastia"
+        },
+        {
+          "title": "Gargotta aperto anche a pranzo, nuovo punto vendita a Bastia Umbra",
+          "url": "https://www.umbriajournaltv.it/gargotta-aperto-anche-pranzo-punto-vendita-bastia-umbra/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054001:assisi:oxy-bar-gelateria",
+      "query": "\"Oxy Bar Gelateria\" Assisi \"Viale Michelangelo, 62\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "Oxy Bar Gelateria — gelateria artigianale in Umbria",
+          "url": "https://www.appgelato.it/gelaterie/umbria/oxy-bar-gelateria/"
+        },
+        {
+          "title": "Things to Do in Assisi — Norimar & Ricardo's Wedding",
+          "url": "https://www.norimarandricardo.it/things-to-do-in-assisi"
+        },
+        {
+          "title": "Travel Guide — From The Source",
+          "url": "https://www.fromthesourcedoc.com/travel-guide"
+        },
+        {
+          "title": "Oxy Bar Di Alessandretti Massimiliano E Alessan... | Bar e altri esercizi simili senza cucina a Assisi | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/oxy-bar-di-alessandretti-massimiliano-e-alessandretti-filippo-snc-o-piu-brevemente-oxy-bar-snc/ac0d52208125"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054011:citerna:da-quei-due",
+      "query": "\"Ristorante Pizzeria da Quei Due\" Citerna \"Via Roma, 33\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "Aziende di Citerna",
+          "url": "https://www.reteimprese.it/citerna"
+        },
+        {
+          "title": "Ristoranti a Citerna in Via della Libertà",
+          "url": "https://www.virgilio.it/italia/citerna/via/via-della-libert%C3%A0/ristoranti"
+        },
+        {
+          "title": "Da Quei Due Ristorante Pizzeria a Pistrino",
+          "url": "https://www.ricercare-imprese.it/citta-di-castello/da-quei-due-ristorante-pizzeria-aYDtiX.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054024:gubbio:marino-lo-spuntino",
+      "query": "\"Marino Lo Spuntino\" Gubbio \"Viale del Teatro Romano, 1\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:055032:terni:bonjour",
+      "query": "\"Caffe Bonjour\" Terni \"Viale Mario Umberto Borzacchini, 7\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:054021:giano-dell-umbria:cristal-bar",
+      "query": "\"Cristal Bar\" \"Giano dell'Umbria\" \"Piazza del Mercato, 8\"",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "Cristal Bar - Gelateria a Giano dell'Umbria ▷ PIAZZA DEL MERCATO, 8 - BASTARDO, 06030, Giano dell'Umbria | Firmania",
+          "url": "https://firmania.it/giano-dell-umbria/cristal-bar-558575"
+        },
+        {
+          "title": "CRISTAL BAR DI TORDI ALESSANDRO S.A.S., Partita IVA: 03141660542, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/5932/cristal-bar-di-tordi-alessandro-sas"
+        },
+        {
+          "title": "▷ Cristal Bar | Gelateria, Giano dell'Umbria",
+          "url": "https://www.cylex-italia.it/giano-dell-umbria/cristal-bar-12897019.html"
+        },
+        {
+          "title": "Orari di apertura Cristal Bar ▷ Giano dell'Umbria PIAZZA DEL MERCATO, 8 - BASTARDO, Giano dell'Umbria, Perugia, 06030 | Trova Aperto",
+          "url": "https://trova-aperto.it/giano-dell-umbria/cristal-bar-1803144"
+        },
+        {
+          "title": "Bar e Locali a Gualdo Cattaneo - Tuttocittà",
+          "url": "https://www.tuttocitta.it/bar/gualdo-cattaneo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054050:spello:taverna-san-silvestro",
+      "query": "\"Taverna San Silvestro\" Spello",
+      "retrieved_at": "2026-09-07T06:15:46.000Z",
+      "candidates": [
+        {
+          "title": "TAVERNA SAN SILVESTRO, Spello - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g672717-d2289709-Reviews-Taverna_San_Silvestro-Spello_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "TAVERNA SAN SILVESTRO, Spello - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g672717-d2289709-Reviews-Taverna_San_Silvestro-Spello_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "Taverna San Silvestro FAQ (Spello) - Tripadvisor",
+          "url": "https://www.tripadvisor.it/FAQ-g672717-d2289709-Taverna_San_Silvestro.html"
+        },
+        {
+          "title": "COMUNE DI SPELLO",
+          "url": "https://www.comune.spello.pg.it/wp-content/uploads/2021/01/Piano-Protezione-Civile-4.pdf"
+        },
+        {
+          "title": "I MIGLIORI 10 ristoranti vicino a Taverna San Silvestro, Spello",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g672717-d2289709-Taverna_San_Silvestro-Spello_Province_of_Perugia_Umbria.html"
+        }
+      ]
+    }
+  ]
+}

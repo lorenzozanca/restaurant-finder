@@ -6,6 +6,10 @@ Evidence base: `ODERZO-SCAN-REPORT.md`
 
 Next-session handoff: [`NEXT-SCALING-SESSION.md`](NEXT-SCALING-SESSION.md)
 
+Rollout strategy: [`ZERO-COST-ENRICHMENT-PLAN.md`](ZERO-COST-ENRICHMENT-PLAN.md) —
+national scaling uses crawl-only plus free discovery tracks. No paid search
+provider is part of the rollout; Brave-dependent capacity planning is superseded.
+
 ## Purpose
 
 The long-term product is not merely a national list of restaurants. The useful
@@ -567,6 +571,8 @@ Goal: expand without losing measurable correctness.
 
 Work:
 
+- Enrich under `ZERO-COST-ENRICHMENT-PLAN.md`: crawl-only baseline first, free
+  discovery tracks for the backlog, no paid search.
 - Process one region or capacity-sized wave at a time.
 - Sample and review every wave before publication.
 - Pause automatically when quality, error, or budget thresholds fail.
@@ -628,8 +634,10 @@ and regression gates must pass.
 
 ## Deliberately deferred choices
 
-- Search provider and commercial budget: record actual provider terms before
-  capacity planning.
+- Search provider and commercial budget: resolved 2026-09-07 — national rollout
+  follows `ZERO-COST-ENRICHMENT-PLAN.md` with no paid search provider, so there
+  is no commercial search budget to plan. Terms review now applies only to free
+  engines/registers before use (see `DATA-LICENSING.md`).
 - SQLite versus PostgreSQL: decide after expected worker/concurrency needs are
   measured; keep the data model portable.
 - Exact national hardware and duration: estimate from the stratified cold-cache

@@ -1,0 +1,3017 @@
+{
+  "schema_version": 1,
+  "query_plan_id": "session-12-powered-holdout-extension-queries-v1",
+  "frozen_before_search_outcomes": true,
+  "selection_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+  "search_provider_interface": "Codex integrated web search",
+  "locale": "it-IT",
+  "country_assumption": "Italy",
+  "bounded_result_limit": 5,
+  "retention_policy": "Retain at most the first five query-relevant organic results in provider order; store only normalized HTTP(S) URL and title, with title projected to its first 200 Unicode code points.",
+  "url_normalization_policy": "lib/web-stress-fixture.mjs normalizeCandidateUrl: remove fragments and tracking parameters, sort remaining query parameters, lowercase hostname, preserve HTTP(S).",
+  "failure_policy": "A completed response, including zero relevant results, is final and is never reopened. A provider/tool failure before a result is returned permits one retry of the identical query; after two failed attempts record an empty candidate list and the failure in the checkpoint.",
+  "queries_opened_at_freeze": 0,
+  "query_fingerprint_sha256": "4a35474d09fcba73f77fd293d4b7ddac7f9a1fbd7a64ded9d049eadf82866185",
+  "queries": [
+    {
+      "sample_index": 1,
+      "venue_id": "venue:005018:cantarana:cascina-caldera",
+      "template": "exact_name_locality",
+      "query": "\"Cascina Caldera\" \"Cantarana\""
+    },
+    {
+      "sample_index": 2,
+      "venue_id": "venue:006160:serravalle-scrivia:starbucks",
+      "template": "official_chain_branch",
+      "query": "site:starbucks.it \"Bb Outlet Serravalle\" \"Serravalle Scrivia\""
+    },
+    {
+      "sample_index": 3,
+      "venue_id": "venue:003106:novara:premiata-pizzeria-d-asporto",
+      "template": "exact_name_locality",
+      "query": "\"La Premiata Pizzeria d’asporto\" \"Novara\""
+    },
+    {
+      "sample_index": 4,
+      "venue_id": "venue:001089:coazze:caffetteria-cremeria-gramsci",
+      "template": "exact_name_locality",
+      "query": "\"Caffetteria Cremeria Gramsci\" \"Coazze\""
+    },
+    {
+      "sample_index": 5,
+      "venue_id": "venue:001024:beinasco:cremglasse-le-fornaci",
+      "template": "exact_name_locality",
+      "query": "\"Cremglasse Le Fornaci\" \"Beinasco\""
+    },
+    {
+      "sample_index": 6,
+      "venue_id": "venue:001272:torino:amsterdam-chips",
+      "template": "exact_name_locality",
+      "query": "\"Amsterdam Chips\" \"Torino\""
+    },
+    {
+      "sample_index": 7,
+      "venue_id": "venue:001178:pancalieri:industry",
+      "template": "exact_name_locality_street",
+      "query": "\"Industry\" \"Pancalieri\" \"Via Cavalier Jomenico Galasso\""
+    },
+    {
+      "sample_index": 8,
+      "venue_id": "venue:006174:tortona:tiziana",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Tiziana\" \"Tortona\" \"Corso Giuseppe Romita\""
+    },
+    {
+      "sample_index": 9,
+      "venue_id": "venue:006003:alessandria:antica-casa-rava",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Antica Casa Rava\" \"Alessandria\" \"Largo Catania\""
+    },
+    {
+      "sample_index": 10,
+      "venue_id": "venue:096019:coggiola:nerone",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Nerone\" \"Coggiola\" \"Via Giuseppe Mazzini\""
+    },
+    {
+      "sample_index": 11,
+      "venue_id": "venue:004003:alba:san-lazzaro",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar San Lazzaro\" \"Alba\" \"Via Armando Diaz\""
+    },
+    {
+      "sample_index": 12,
+      "venue_id": "venue:096004:biella:afterglow-pub-paninoteca-birreria",
+      "template": "exact_name_locality",
+      "query": "\"Afterglow Pub Paninoteca Birreria\" \"Biella\""
+    },
+    {
+      "sample_index": 13,
+      "venue_id": "venue:005031:castelnuovo-don-bosco:cremglasse-castelnuovo-don-bosco",
+      "template": "exact_name_locality",
+      "query": "\"Cremglassè Castelnuovo Don Bosco\" \"Castelnuovo Don Bosco\""
+    },
+    {
+      "sample_index": 14,
+      "venue_id": "venue:003008:arona:pa-ta-ta",
+      "template": "exact_name_locality_street",
+      "query": "\"Pa-ta-ta\" \"Arona\" \"Corso Guglielmo Marconi\""
+    },
+    {
+      "sample_index": 15,
+      "venue_id": "venue:005005:asti:cicchetto",
+      "template": "exact_name_locality",
+      "query": "\"Il Cicchetto\" \"Asti\""
+    },
+    {
+      "sample_index": 16,
+      "venue_id": "venue:004057:castino:del-peso",
+      "template": "exact_name_locality_street",
+      "query": "\"Trattoria Del Peso\" \"Castino\" \"Via 20 Settembre\""
+    },
+    {
+      "sample_index": 17,
+      "venue_id": "venue:001164:nichelino:tuttocapsule-nichelino",
+      "template": "exact_name_locality",
+      "query": "\"Tuttocapsule Nichelino\" \"Nichelino\""
+    },
+    {
+      "sample_index": 18,
+      "venue_id": "venue:005005:asti:dai-toscanacci",
+      "template": "exact_name_locality",
+      "query": "\"Dai Toscanacci\" \"Asti\""
+    },
+    {
+      "sample_index": 19,
+      "venue_id": "venue:004025:borgo-san-dalmazzo:gelateria-kiwi",
+      "template": "exact_name_locality_street",
+      "query": "\"Gelateria Kiwi\" \"Borgo San Dalmazzo\" \"Via Bergia\""
+    },
+    {
+      "sample_index": 20,
+      "venue_id": "venue:103072:verbania:uso-cucina-il-dollaro",
+      "template": "exact_name_locality",
+      "query": "\"Birreria Pub Uso Cucina Il Dollaro\" \"Verbania\""
+    },
+    {
+      "sample_index": 21,
+      "venue_id": "venue:001272:torino:m-bun",
+      "template": "exact_name_locality_street",
+      "query": "\"M** Bun\" \"Torino\" \"Via Urbano Rattazzi\""
+    },
+    {
+      "sample_index": 22,
+      "venue_id": "venue:006072:frassinello-monferrato:vecchia-rocka-pub",
+      "template": "exact_name_locality",
+      "query": "\"Vecchia Rocka Pub\" \"Frassinello Monferrato\""
+    },
+    {
+      "sample_index": 23,
+      "venue_id": "venue:004029:bra:mondo-del-caffe",
+      "template": "exact_name_locality",
+      "query": "\"Il Mondo del Caffè\" \"Bra\""
+    },
+    {
+      "sample_index": 24,
+      "venue_id": "venue:006003:alessandria:primavera-ristorante",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Primavera Ristorante\" \"Alessandria\" \"SP180\""
+    },
+    {
+      "sample_index": 25,
+      "venue_id": "venue:001276:trana:caffetteria-san-bernardino",
+      "template": "exact_name_locality",
+      "query": "\"Caffetteria San Bernardino\" \"Trana\""
+    },
+    {
+      "sample_index": 26,
+      "venue_id": "venue:007061:saint-nicolas:foyer-saint-nicolas-vecchia-gestione-luigina-nereo",
+      "template": "exact_name_locality",
+      "query": "\"Le Foyer - Saint Nicolas . Vecchia gestione Luigina & Nereo\" \"Saint-Nicolas\""
+    },
+    {
+      "sample_index": 27,
+      "venue_id": "venue:007071:valtournenche:tasty-cervinia",
+      "template": "exact_name_locality",
+      "query": "\"Tasty cervinia\" \"Valtournenche\""
+    },
+    {
+      "sample_index": 28,
+      "venue_id": "venue:007003:aosta:du-bourg",
+      "template": "exact_name_locality_street",
+      "query": "\"Cafe du bourg\" \"Aosta\" \"Via Sant'Anselmo\""
+    },
+    {
+      "sample_index": 29,
+      "venue_id": "venue:007031:gressan:belvedere",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Belvedere\" \"Gressan\" \"Frazione Pila\""
+    },
+    {
+      "sample_index": 30,
+      "venue_id": "venue:007003:aosta:mpc-maison-publique-de-la-cervoise",
+      "template": "exact_name_locality",
+      "query": "\"MPC Maison Publique de la Cervoise\" \"Aosta\""
+    },
+    {
+      "sample_index": 31,
+      "venue_id": "venue:007022:courmayeur:wood-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Wood Cafe\" \"Courmayeur\" \"Strada delle Volpi\""
+    },
+    {
+      "sample_index": 32,
+      "venue_id": "venue:007049:pollein:genzianella",
+      "template": "exact_name_locality_street",
+      "query": "\"Trattoria Genzianella\" \"Pollein\" \"Località Capoluogo\""
+    },
+    {
+      "sample_index": 33,
+      "venue_id": "venue:007041:la-thuile:offshore-bar",
+      "template": "exact_name_locality",
+      "query": "\"Offshore Bar\" \"La Thuile\""
+    },
+    {
+      "sample_index": 34,
+      "venue_id": "venue:007038:jovencan:avalon",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Avalon\" \"Jovençan\" \"Frazione Etral\""
+    },
+    {
+      "sample_index": 35,
+      "venue_id": "venue:007065:saint-vincent:cage-aux-folles",
+      "template": "exact_name_locality",
+      "query": "\"La Cage Aux Folles\" \"Saint-Vincent\""
+    },
+    {
+      "sample_index": 36,
+      "venue_id": "venue:007022:courmayeur:pierre-alexis",
+      "template": "exact_name_locality",
+      "query": "\"Restaurant Pierre Alexis\" \"Courmayeur\""
+    },
+    {
+      "sample_index": 37,
+      "venue_id": "venue:007073:verres:agip",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Agip\" \"Verrès\" \"Via Circonvallazione\""
+    },
+    {
+      "sample_index": 38,
+      "venue_id": "venue:007054:quart:isaulle",
+      "template": "exact_name_locality_street",
+      "query": "\"iSaulle\" \"Quart\" \"Località Amerique\""
+    },
+    {
+      "sample_index": 39,
+      "venue_id": "venue:007021:cogne:du-centre",
+      "template": "exact_name_locality",
+      "query": "\"Cafe du Centre\" \"Cogne\""
+    },
+    {
+      "sample_index": 40,
+      "venue_id": "venue:007065:saint-vincent:summer-pub",
+      "template": "exact_name_locality_street",
+      "query": "\"Summer Pub\" \"Saint-Vincent\" \"Via E. Chanoux\""
+    },
+    {
+      "sample_index": 41,
+      "venue_id": "venue:007020:chatillon:dei-cacciatori",
+      "template": "exact_name_locality",
+      "query": "\"Osteria dei cacciatori\" \"Châtillon\""
+    },
+    {
+      "sample_index": 42,
+      "venue_id": "venue:007007:ayas:brasserie-du-breithorn",
+      "template": "exact_name_locality",
+      "query": "\"Brasserie du Breithorn\" \"Ayas\""
+    },
+    {
+      "sample_index": 43,
+      "venue_id": "venue:007058:saint-christophe:castoro-lo-tsanti",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Castoro / Lo Tsanti\" \"Saint-Christophe\" \"Località Chef-Lieu\""
+    },
+    {
+      "sample_index": 44,
+      "venue_id": "venue:007045:nus:strapizzami",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Strapizzami\" \"Nus\" \"Via Martinet\""
+    },
+    {
+      "sample_index": 45,
+      "venue_id": "venue:007003:aosta:mitcho-de-tcheutte",
+      "template": "exact_name_locality",
+      "query": "\"Lo mitcho de tcheutte\" \"Aosta\""
+    },
+    {
+      "sample_index": 46,
+      "venue_id": "venue:007022:courmayeur:les-jorasses",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Les Jorasses\" \"Courmayeur\" \"Via Roma\""
+    },
+    {
+      "sample_index": 47,
+      "venue_id": "venue:007011:brissogne:brasserie-jardins-des-reves",
+      "template": "exact_name_locality",
+      "query": "\"Brasserie Jardins des Reves\" \"Brissogne\""
+    },
+    {
+      "sample_index": 48,
+      "venue_id": "venue:007003:aosta:mcdonald-s",
+      "template": "official_chain_branch",
+      "query": "site:mcdonalds.it \"Corso Ivrea\" \"Aosta\""
+    },
+    {
+      "sample_index": 49,
+      "venue_id": "venue:007044:morgex:pizza-out",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizza Out\" \"Morgex\" \"Strada La Ruine\""
+    },
+    {
+      "sample_index": 50,
+      "venue_id": "venue:007029:gaby:des-alpes",
+      "template": "exact_name_locality",
+      "query": "\"Café des Alpes\" \"Gaby\""
+    },
+    {
+      "sample_index": 51,
+      "venue_id": "venue:097005:barzago:leonardo",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Leonardo\" \"Barzago\" \"Via Statale\""
+    },
+    {
+      "sample_index": 52,
+      "venue_id": "venue:015221:trezzo-sull-adda:mcdonald-s",
+      "template": "official_chain_branch",
+      "query": "site:mcdonalds.it \"via Cavour\" \"Trezzo sull'Adda\""
+    },
+    {
+      "sample_index": 53,
+      "venue_id": "venue:015146:milano:pancaffe-ramadan",
+      "template": "exact_name_locality",
+      "query": "\"Pancaffè ramadan\" \"Milano\""
+    },
+    {
+      "sample_index": 54,
+      "venue_id": "venue:017103:manerbio:autostop-manerbio",
+      "template": "exact_name_locality",
+      "query": "\"Autostop Manerbio\" \"Manerbio\""
+    },
+    {
+      "sample_index": 55,
+      "venue_id": "venue:017143:pisogne:l-anonimo-different-pub",
+      "template": "exact_name_locality",
+      "query": "\"L'anonimo different pub\" \"Pisogne\""
+    },
+    {
+      "sample_index": 56,
+      "venue_id": "venue:017029:brescia:caffetteria-vittorio",
+      "template": "exact_name_locality",
+      "query": "\"Caffetteria Vittorio\" \"Brescia\""
+    },
+    {
+      "sample_index": 57,
+      "venue_id": "venue:016096:fara-gera-d-adda:oasi-badalasco",
+      "template": "exact_name_locality",
+      "query": "\"Oasi Badalasco\" \"Fara Gera d'Adda\""
+    },
+    {
+      "sample_index": 58,
+      "venue_id": "venue:015086:cormano:fresco-bar",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Fresco Bar\" \"Cormano\" \"piazza primo maggio c/o Palasesto\""
+    },
+    {
+      "sample_index": 59,
+      "venue_id": "venue:020030:mantova:della-fragoletta-mantova",
+      "template": "exact_name_locality",
+      "query": "\"Osteria della Fragoletta Mantova\" \"Mantova\""
+    },
+    {
+      "sample_index": 60,
+      "venue_id": "venue:015024:binasco:joy-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Joy Cafe\" \"Binasco\" \"Via Onorevole Filippo Turati\""
+    },
+    {
+      "sample_index": 61,
+      "venue_id": "venue:017133:palazzolo-sull-oglio:voglia-di-pizza",
+      "template": "exact_name_locality",
+      "query": "\"Voglia di pizza\" \"Palazzolo sull'Oglio\""
+    },
+    {
+      "sample_index": 62,
+      "venue_id": "venue:016024:bergamo:piadineria",
+      "template": "official_chain_branch",
+      "query": "site:lapiadineria.com \"Viale Papa Giovanni XXIII\" \"Bergamo\""
+    },
+    {
+      "sample_index": 63,
+      "venue_id": "venue:017195:verolanuova:oasi-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Oasi Cafè\" \"Verolanuova\" \"Viale Italia\""
+    },
+    {
+      "sample_index": 64,
+      "venue_id": "venue:014004:aprica:the-keller-pub",
+      "template": "exact_name_locality",
+      "query": "\"The Keller Pub\" \"Aprica\""
+    },
+    {
+      "sample_index": 65,
+      "venue_id": "venue:013075:como:gelateria-lariana",
+      "template": "exact_name_locality_street",
+      "query": "\"Gelateria Lariana\" \"Como\" \"Lungo Lario Trento\""
+    },
+    {
+      "sample_index": 66,
+      "venue_id": "venue:015172:pessano-con-bornago:pizza-in-piazza-pessano-con-bornago",
+      "template": "exact_name_locality",
+      "query": "\"Pizza in piazza Pessano con Bornago\" \"Pessano con Bornago\""
+    },
+    {
+      "sample_index": 67,
+      "venue_id": "venue:016219:treviglio:pelikan-s-bar",
+      "template": "exact_name_locality",
+      "query": "\"Pelikan's Bar\" \"Treviglio\""
+    },
+    {
+      "sample_index": 68,
+      "venue_id": "venue:019036:cremona:nuovo-sole",
+      "template": "exact_name_locality_street",
+      "query": "\"Nuovo sole\" \"Cremona\" \"Viale Po\""
+    },
+    {
+      "sample_index": 69,
+      "venue_id": "venue:017073:gambara:societa-agricola-gambara-sud",
+      "template": "exact_name_locality",
+      "query": "\"Societa Agricola Gambara Sud\" \"Gambara\""
+    },
+    {
+      "sample_index": 70,
+      "venue_id": "venue:016150:orio-al-serio:vero-gusto",
+      "template": "exact_name_locality",
+      "query": "\"Il vero gusto\" \"Orio al Serio\""
+    },
+    {
+      "sample_index": 71,
+      "venue_id": "venue:017067:desenzano-del-garda:calavera-rapido",
+      "template": "exact_name_locality",
+      "query": "\"Calavera Rapido\" \"Desenzano del Garda\""
+    },
+    {
+      "sample_index": 72,
+      "venue_id": "venue:012136:venegono-inferiore:piadineria",
+      "template": "official_chain_branch",
+      "query": "site:lapiadineria.com \"Venegono Inferiore (VA)\" \"Venegono Inferiore\""
+    },
+    {
+      "sample_index": 73,
+      "venue_id": "venue:018182:voghera:coco-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Coco Café\" \"Voghera\" \"Via Emilia\""
+    },
+    {
+      "sample_index": 74,
+      "venue_id": "venue:018110:pavia:salsamenteria-del-borgo",
+      "template": "exact_name_locality",
+      "query": "\"Salsamenteria del Borgo\" \"Pavia\""
+    },
+    {
+      "sample_index": 75,
+      "venue_id": "venue:016128:lovere:lucignolo",
+      "template": "exact_name_locality_street",
+      "query": "\"Lucignolo\" \"Lovere\" \"Via Guglielmo Marconi\""
+    },
+    {
+      "sample_index": 76,
+      "venue_id": "venue:021047:marebbe-enneberg:vives-pizza-loungebar",
+      "template": "exact_name_locality",
+      "query": "\"Vives Pizza Loungebar\" \"Marebbe/Enneberg\""
+    },
+    {
+      "sample_index": 77,
+      "venue_id": "venue:021092:sesto-sexten:rifugio-piano-fiscalina",
+      "template": "exact_name_locality",
+      "query": "\"Rifugio Piano Fiscalina\" \"Sesto/Sexten\""
+    },
+    {
+      "sample_index": 78,
+      "venue_id": "venue:021008:bolzano-bozen:enjoey-bar",
+      "template": "exact_name_locality_street",
+      "query": "\"Enjoey Bar\" \"Bolzano/Bozen\" \"Via Piave\""
+    },
+    {
+      "sample_index": 79,
+      "venue_id": "venue:021010:brennero-brenner:vecchia-locomotiva",
+      "template": "exact_name_locality",
+      "query": "\"Vecchia Locomotiva\" \"Brennero/Brenner\""
+    },
+    {
+      "sample_index": 80,
+      "venue_id": "venue:022161:rovereto:gelateria-marco",
+      "template": "exact_name_locality_street",
+      "query": "\"Gelateria marco\" \"Rovereto\" \"Corso Angelo Bettini\""
+    },
+    {
+      "sample_index": 81,
+      "venue_id": "venue:022205:trento:chicken-fast-food",
+      "template": "exact_name_locality",
+      "query": "\"Chicken Fast Food\" \"Trento\""
+    },
+    {
+      "sample_index": 82,
+      "venue_id": "venue:021083:san-martino-in-passiria-st-martin-in-passeier:forelle",
+      "template": "exact_name_locality_street",
+      "query": "\"Pub Forelle\" \"San Martino in Passiria/St. Martin in Passeier\" \"Jaufenstraße\""
+    },
+    {
+      "sample_index": 83,
+      "venue_id": "venue:021011:bressanone-brixen:villa-berta",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Villa Berta\" \"Bressanone/Brixen\" \"Via San Cassiano\""
+    },
+    {
+      "sample_index": 84,
+      "venue_id": "venue:021008:bolzano-bozen:patisserie-peter",
+      "template": "exact_name_locality",
+      "query": "\"Patisserie Peter\" \"Bolzano/Bozen\""
+    },
+    {
+      "sample_index": 85,
+      "venue_id": "venue:022177:sover:balera",
+      "template": "exact_name_locality_street",
+      "query": "\"La Balera\" \"Sover\" \"Strada della Vernera\""
+    },
+    {
+      "sample_index": 86,
+      "venue_id": "venue:021061:ortisei-st-ulrich:turonda",
+      "template": "exact_name_locality_street",
+      "query": "\"Turonda\" \"Ortisei/St. Ulrich\" \"Via Johann Baptist Purger\""
+    },
+    {
+      "sample_index": 87,
+      "venue_id": "venue:022205:trento:caffetteria-gelateria-pingu",
+      "template": "exact_name_locality",
+      "query": "\"Caffetteria Gelateria Pingu\" \"Trento\""
+    },
+    {
+      "sample_index": 88,
+      "venue_id": "venue:021058:nova-levante-welschnofen:pauls-pub",
+      "template": "exact_name_locality_street",
+      "query": "\"Pauls Pub\" \"Nova Levante/Welschnofen\" \"Via Roma\""
+    },
+    {
+      "sample_index": 89,
+      "venue_id": "venue:021011:bressanone-brixen:borgers-kings",
+      "template": "exact_name_locality",
+      "query": "\"Börgers & Kings\" \"Bressanone/Brixen\""
+    },
+    {
+      "sample_index": 90,
+      "venue_id": "venue:022205:trento:grotta",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Ristorante Alla Grotta\" \"Trento\" \"Vicolo San Marco\""
+    },
+    {
+      "sample_index": 91,
+      "venue_id": "venue:021029:egna-neumarkt:herbert-konditorei-pasticceria",
+      "template": "exact_name_locality_street",
+      "query": "\"Cafe Herbert Konditorei-Pasticceria\" \"Egna/Neumarkt\" \"Via Val di Fiemme\""
+    },
+    {
+      "sample_index": 92,
+      "venue_id": "venue:022250:san-giovanni-di-fassa-sen-jan:giare",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Pizzeria Le Giare\" \"San Giovanni di Fassa-Sèn Jan\" \"Piazza del Malgher\""
+    },
+    {
+      "sample_index": 93,
+      "venue_id": "venue:021008:bolzano-bozen:pia",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Pia\" \"Bolzano/Bozen\" \"Piazzetta del Bersaglio\""
+    },
+    {
+      "sample_index": 94,
+      "venue_id": "venue:021060:ora-auer:centrale-ora",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Centrale Ora\" \"Ora/Auer\" \"Via Stazione\""
+    },
+    {
+      "sample_index": 95,
+      "venue_id": "venue:021019:castelrotto-kastelruth:eisdiele-florian",
+      "template": "exact_name_locality",
+      "query": "\"Eisdiele Florian\" \"Castelrotto/Kastelruth\""
+    },
+    {
+      "sample_index": 96,
+      "venue_id": "venue:021008:bolzano-bozen:mair-fast-food",
+      "template": "exact_name_locality",
+      "query": "\"Mair Fast Food\" \"Bolzano/Bozen\""
+    },
+    {
+      "sample_index": 97,
+      "venue_id": "venue:022034:caldonazzo:svolta",
+      "template": "exact_name_locality_street",
+      "query": "\"La Svolta\" \"Caldonazzo\" \"Via Trento\""
+    },
+    {
+      "sample_index": 98,
+      "venue_id": "venue:022139:pergine-valsugana:cocceria-alla-stella",
+      "template": "exact_name_locality",
+      "query": "\"Cocceria Alla Stella\" \"Pergine Valsugana\""
+    },
+    {
+      "sample_index": 99,
+      "venue_id": "venue:022205:trento:sun7-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Sun7 Café\" \"Trento\" \"Via Valembrar\""
+    },
+    {
+      "sample_index": 100,
+      "venue_id": "venue:021105:vadena-pfatten:viktor-s-imbiss",
+      "template": "exact_name_locality",
+      "query": "\"Viktor‘s Imbiss\" \"Vadena/Pfatten\""
+    },
+    {
+      "sample_index": 101,
+      "venue_id": "venue:026059:ponzano-veneto:da-miceon",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Ristorante da Miceon\" \"Ponzano Veneto\" \"Via Talponera\""
+    },
+    {
+      "sample_index": 102,
+      "venue_id": "venue:026021:conegliano:cacciatore",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Al Cacciatore\" \"Conegliano\" \"Via Maggiore Giovanni Piovesana\""
+    },
+    {
+      "sample_index": 103,
+      "venue_id": "venue:027042:venezia:tolentini-cafe",
+      "template": "exact_name_locality",
+      "query": "\"Tolentini Cafè\" \"Venezia\""
+    },
+    {
+      "sample_index": 104,
+      "venue_id": "venue:023041:isola-rizza:nek-caffe",
+      "template": "exact_name_locality_street",
+      "query": "\"Nek Caffe\" \"Isola Rizza\" \"Via Luigi Ferrari\""
+    },
+    {
+      "sample_index": 105,
+      "venue_id": "venue:029040:rosolina:hotel-gran-delta",
+      "template": "exact_name_locality",
+      "query": "\"Hotel Gran Delta\" \"Rosolina\""
+    },
+    {
+      "sample_index": 106,
+      "venue_id": "venue:023091:verona:farmacia-dei-sani",
+      "template": "exact_name_locality",
+      "query": "\"La farmacia dei sani\" \"Verona\""
+    },
+    {
+      "sample_index": 107,
+      "venue_id": "venue:026070:salgareda:l-epoca-gelateria-bar",
+      "template": "exact_name_locality",
+      "query": "\"L'Epoca Gelateria Bar\" \"Salgareda\""
+    },
+    {
+      "sample_index": 108,
+      "venue_id": "venue:029041:rovigo:vesuvio",
+      "template": "exact_name_locality_street",
+      "query": "\"Vesuvio\" \"Rovigo\" \"Via Silvestri\""
+    },
+    {
+      "sample_index": 109,
+      "venue_id": "venue:028060:padova:pago-pago-pizzeria-con-ristorante",
+      "template": "exact_name_locality",
+      "query": "\"Pago Pago Pizzeria con Ristorante\" \"Padova\""
+    },
+    {
+      "sample_index": 110,
+      "venue_id": "venue:029050:villanova-del-ghebbo:falco",
+      "template": "exact_name_locality_street",
+      "query": "\"Falco\" \"Villanova del Ghebbo\" \"Via Belfiore\""
+    },
+    {
+      "sample_index": 111,
+      "venue_id": "venue:025016:cortina-d-ampezzo:arnika-in-galleria-cortina",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Arnika In Galleria Cortina\" \"Cortina d'Ampezzo\" \"Località Corso Italia\""
+    },
+    {
+      "sample_index": 112,
+      "venue_id": "venue:027019:jesolo:luna-gelateria-and-cocktail-bar",
+      "template": "exact_name_locality",
+      "query": "\"Luna Gelateria and Cocktail Bar\" \"Jesolo\""
+    },
+    {
+      "sample_index": 113,
+      "venue_id": "venue:026072:san-fior:doner-kebab",
+      "template": "exact_name_locality_street",
+      "query": "\"Döner Kebab\" \"San Fior\" \"Via Europa\""
+    },
+    {
+      "sample_index": 114,
+      "venue_id": "venue:023044:legnago:jolly-roger",
+      "template": "exact_name_locality_street",
+      "query": "\"Jolly Roger\" \"Legnago\" \"Via Marzabotto\""
+    },
+    {
+      "sample_index": 115,
+      "venue_id": "venue:026086:treviso:antica-osteria-al-botegon",
+      "template": "exact_name_locality",
+      "query": "\"Antica Osteria Al Botegon\" \"Treviso\""
+    },
+    {
+      "sample_index": 116,
+      "venue_id": "venue:024024:carre:diana",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Diana\" \"Carrè\" \"Via Val d'Assa\""
+    },
+    {
+      "sample_index": 117,
+      "venue_id": "venue:028072:rubano:ottonote-caffe",
+      "template": "exact_name_locality",
+      "query": "\"Ottonote Caffe\" \"Rubano\""
+    },
+    {
+      "sample_index": 118,
+      "venue_id": "venue:024116:vicenza:classico",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Classico\" \"Vicenza\" \"Via Valentino Giaretta\""
+    },
+    {
+      "sample_index": 119,
+      "venue_id": "venue:025019:falcade:stua",
+      "template": "exact_name_locality_street",
+      "query": "\"La Stua\" \"Falcade\" \"Via del Mercato\""
+    },
+    {
+      "sample_index": 120,
+      "venue_id": "venue:027029:portogruaro:tuttigusti",
+      "template": "exact_name_locality_street",
+      "query": "\"Tuttigusti\" \"Portogruaro\" \"Borgo Sant'Agnese\""
+    },
+    {
+      "sample_index": 121,
+      "venue_id": "venue:023091:verona:dorati-official",
+      "template": "exact_name_locality",
+      "query": "\"Dorati_official\" \"Verona\""
+    },
+    {
+      "sample_index": 122,
+      "venue_id": "venue:028059:ospedaletto-euganeo:pomodoro",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Pomodoro\" \"Ospedaletto Euganeo\" \"Via 4 Novembre\""
+    },
+    {
+      "sample_index": 123,
+      "venue_id": "venue:027012:dolo:commercio",
+      "template": "exact_name_locality",
+      "query": "\"Caffè Commercio\" \"Dolo\""
+    },
+    {
+      "sample_index": 124,
+      "venue_id": "venue:027008:chioggia:berita",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Berita\" \"Chioggia\" \"Viale Cristoforo Colombo\""
+    },
+    {
+      "sample_index": 125,
+      "venue_id": "venue:025051:san-vito-di-cadore:dogana-vecchia",
+      "template": "exact_name_locality",
+      "query": "\"Dogana Vecchia\" \"San Vito di Cadore\""
+    },
+    {
+      "sample_index": 126,
+      "venue_id": "venue:030189:sappada:edelweiss-stube",
+      "template": "exact_name_locality",
+      "query": "\"Edelweiss Stube\" \"Sappada\""
+    },
+    {
+      "sample_index": 127,
+      "venue_id": "venue:093025:maniago:area-verde-violis",
+      "template": "exact_name_locality",
+      "query": "\"Area Verde Violis\" \"Maniago\""
+    },
+    {
+      "sample_index": 128,
+      "venue_id": "venue:032006:trieste:bazzara-espresso",
+      "template": "exact_name_locality",
+      "query": "\"Bazzara Espresso\" \"Trieste\""
+    },
+    {
+      "sample_index": 129,
+      "venue_id": "venue:093036:roveredo-in-piano:les-cadeaux",
+      "template": "exact_name_locality_street",
+      "query": "\"Les Cadeaux\" \"Roveredo in Piano\" \"Piazza Roma\""
+    },
+    {
+      "sample_index": 130,
+      "venue_id": "venue:030027:codroipo:gelab",
+      "template": "exact_name_locality_street",
+      "query": "\"GeLab\" \"Codroipo\" \"Piazzale Gemona\""
+    },
+    {
+      "sample_index": 131,
+      "venue_id": "venue:030129:udine:casa-del-ron",
+      "template": "exact_name_locality",
+      "query": "\"Casa Del Ron\" \"Udine\""
+    },
+    {
+      "sample_index": 132,
+      "venue_id": "venue:093007:brugnera:bowman-pub",
+      "template": "exact_name_locality_street",
+      "query": "\"Bowman Pub\" \"Brugnera\" \"Via Vittorio Veneto\""
+    },
+    {
+      "sample_index": 133,
+      "venue_id": "venue:093021:fiume-veneto:pizzalonga-away",
+      "template": "exact_name_locality",
+      "query": "\"Pizzalonga Away\" \"Fiume Veneto\""
+    },
+    {
+      "sample_index": 134,
+      "venue_id": "venue:032006:trieste:mancini-vicino-mare",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Mancini Vicino Mare\" \"Trieste\" \"Riva Nazario Sauro\""
+    },
+    {
+      "sample_index": 135,
+      "venue_id": "venue:030188:rivignano-teor:cale",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar La Cale\" \"Rivignano Teor\" \"Via Umberto I\""
+    },
+    {
+      "sample_index": 136,
+      "venue_id": "venue:031007:gorizia:pataoro-food-drinks",
+      "template": "exact_name_locality",
+      "query": "\"Pataoro food & drinks\" \"Gorizia\""
+    },
+    {
+      "sample_index": 137,
+      "venue_id": "venue:030129:udine:kiko-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Kiko Cafe\" \"Udine\" \"Viale Ungheria\""
+    },
+    {
+      "sample_index": 138,
+      "venue_id": "venue:030069:palazzolo-dello-stella:stella-palazzolo-dello-stella-ud",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Stella - PALAZZOLO DELLO STELLA (UD)\" \"Palazzolo dello Stella\" \"Via Nazionale\""
+    },
+    {
+      "sample_index": 139,
+      "venue_id": "venue:031012:monfalcone:2000",
+      "template": "exact_name_locality_street",
+      "query": "\"2000\" \"Monfalcone\" \"Via Arrigo Boito\""
+    },
+    {
+      "sample_index": 140,
+      "venue_id": "venue:030129:udine:da-artico",
+      "template": "exact_name_locality",
+      "query": "\"Osteria da Artico\" \"Udine\""
+    },
+    {
+      "sample_index": 141,
+      "venue_id": "venue:030037:fagagna:miribar",
+      "template": "exact_name_locality_street",
+      "query": "\"Miribar\" \"Fagagna\" \"Via Battaglia\""
+    },
+    {
+      "sample_index": 142,
+      "venue_id": "venue:031009:grado:ciacolada",
+      "template": "exact_name_locality",
+      "query": "\"La Ciacolada\" \"Grado\""
+    },
+    {
+      "sample_index": 143,
+      "venue_id": "venue:032006:trieste:the-buccaneers-pub",
+      "template": "exact_name_locality",
+      "query": "\"The Buccaneers Pub\" \"Trieste\""
+    },
+    {
+      "sample_index": 144,
+      "venue_id": "venue:030130:varmo:caffetaj",
+      "template": "exact_name_locality_street",
+      "query": "\"CaffeTaj\" \"Varmo\" \"Via dei Castelli\""
+    },
+    {
+      "sample_index": 145,
+      "venue_id": "venue:093022:fontanafredda:dolcefreddo",
+      "template": "exact_name_locality",
+      "query": "\"Il Dolcefreddo\" \"Fontanafredda\""
+    },
+    {
+      "sample_index": 146,
+      "venue_id": "venue:032006:trieste:crispy",
+      "template": "exact_name_locality_street",
+      "query": "\"Crispy\" \"Trieste\" \"Via Luigi Cadorna\""
+    },
+    {
+      "sample_index": 147,
+      "venue_id": "venue:093010:casarsa-della-delizia:pasticceria-la-dolce-vita",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Pasticceria La Dolce Vita\" \"Casarsa della Delizia\" \"Piazza della Vittoria\""
+    },
+    {
+      "sample_index": 148,
+      "venue_id": "venue:030023:cervignano-del-friuli:san-gallo",
+      "template": "exact_name_locality",
+      "query": "\"Agriturismo San Gallo\" \"Cervignano del Friuli\""
+    },
+    {
+      "sample_index": 149,
+      "venue_id": "venue:030129:udine:terzotempo",
+      "template": "exact_name_locality_street",
+      "query": "\"Terzotempo\" \"Udine\" \"Via Daniele Manin\""
+    },
+    {
+      "sample_index": 150,
+      "venue_id": "venue:031008:gradisca-d-isonzo:centrale",
+      "template": "exact_name_locality",
+      "query": "\"Caffe Centrale\" \"Gradisca d'Isonzo\""
+    },
+    {
+      "sample_index": 151,
+      "venue_id": "venue:010014:ceranesi:o-strixeu",
+      "template": "exact_name_locality_street",
+      "query": "\"O Strixeu\" \"Ceranesi\" \"Piazza Santuario Guardia\""
+    },
+    {
+      "sample_index": 152,
+      "venue_id": "venue:009024:ceriale:noemi",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar noemi\" \"Ceriale\" \"Lungomare Armando Diaz\""
+    },
+    {
+      "sample_index": 153,
+      "venue_id": "venue:009056:savona:101-caffe",
+      "template": "exact_name_locality_street",
+      "query": "\"101 Caffè\" \"Savona\" \"Via Pietro Paleocapa\""
+    },
+    {
+      "sample_index": 154,
+      "venue_id": "venue:008028:diano-san-pietro:the-water-wheel",
+      "template": "exact_name_locality",
+      "query": "\"The Water Wheel\" \"Diano San Pietro\""
+    },
+    {
+      "sample_index": 155,
+      "venue_id": "venue:010059:sestri-levante:due-forni-pizzeria",
+      "template": "exact_name_locality",
+      "query": "\"I Due Forni Pizzeria\" \"Sestri Levante\""
+    },
+    {
+      "sample_index": 156,
+      "venue_id": "venue:010025:genova:cinque-sapori",
+      "template": "exact_name_locality",
+      "query": "\"I Cinque Sapori\" \"Genova\""
+    },
+    {
+      "sample_index": 157,
+      "venue_id": "venue:009025:cisano-sul-neva:torrefazione-caffe-pasqualini",
+      "template": "exact_name_locality",
+      "query": "\"Torrefazione Caffe Pasqualini\" \"Cisano sul Neva\""
+    },
+    {
+      "sample_index": 158,
+      "venue_id": "venue:008059:taggia:sicilia-e-i-suoi-sapori",
+      "template": "exact_name_locality",
+      "query": "\"Sicilia e i suoi Sapori\" \"Taggia\""
+    },
+    {
+      "sample_index": 159,
+      "venue_id": "venue:008055:sanremo:maison-di-nat",
+      "template": "exact_name_locality",
+      "query": "\"La Maison di Nat\" \"Sanremo\""
+    },
+    {
+      "sample_index": 160,
+      "venue_id": "venue:011002:arcola:totalerg-pontremoli",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar TotalErg Pontremoli\" \"Arcola\" \"Via Nazionale\""
+    },
+    {
+      "sample_index": 161,
+      "venue_id": "venue:010044:portofino:el-portico",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria El Portico\" \"Portofino\" \"Via Roma\""
+    },
+    {
+      "sample_index": 162,
+      "venue_id": "venue:011015:la-spezia:sempre-pizza-da-toto",
+      "template": "exact_name_locality",
+      "query": "\"Sempre Pizza Da Toto\" \"La Spezia\""
+    },
+    {
+      "sample_index": 163,
+      "venue_id": "venue:011004:bolano:baldi-caffe",
+      "template": "exact_name_locality_street",
+      "query": "\"Baldi Caffè\" \"Bolano\" \"Via Europa\""
+    },
+    {
+      "sample_index": 164,
+      "venue_id": "venue:010046:rapallo:pubbino",
+      "template": "exact_name_locality_street",
+      "query": "\"Il Pubbino\" \"Rapallo\" \"Via Marsala\""
+    },
+    {
+      "sample_index": 165,
+      "venue_id": "venue:010025:genova:vercesi-gelateria-pasticceria-artigianale",
+      "template": "exact_name_locality",
+      "query": "\"Vercesi - Gelateria Pasticceria Artigianale\" \"Genova\""
+    },
+    {
+      "sample_index": 166,
+      "venue_id": "venue:008010:borgomaro:da-linda",
+      "template": "exact_name_locality_street",
+      "query": "\"Trattoria Da Linda\" \"Borgomaro\" \"Via Don Paolo Thomatis\""
+    },
+    {
+      "sample_index": 167,
+      "venue_id": "venue:011027:sarzana:novepunto80-express",
+      "template": "exact_name_locality",
+      "query": "\"Novepunto80 Express\" \"Sarzana\""
+    },
+    {
+      "sample_index": 168,
+      "venue_id": "venue:008031:imperia:seven-imperia",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Seven Imperia\" \"Imperia\" \"Lungomare Cristoforo Colombo\""
+    },
+    {
+      "sample_index": 169,
+      "venue_id": "venue:008001:airole:happy-days",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Happy Days\" \"Airole\" \"Via Repubblica\""
+    },
+    {
+      "sample_index": 170,
+      "venue_id": "venue:008065:ventimiglia:nuova-olivia",
+      "template": "exact_name_locality",
+      "query": "\"Nuova Olivia\" \"Ventimiglia\""
+    },
+    {
+      "sample_index": 171,
+      "venue_id": "venue:008055:sanremo:kebabis-grill",
+      "template": "exact_name_locality",
+      "query": "\"Kebabis Grill\" \"Sanremo\""
+    },
+    {
+      "sample_index": 172,
+      "venue_id": "venue:009047:pallare:san-lazzaro",
+      "template": "exact_name_locality",
+      "query": "\"Osteria San Lazzaro\" \"Pallare\""
+    },
+    {
+      "sample_index": 173,
+      "venue_id": "venue:009064:vado-ligure:u-cafe-de-vue",
+      "template": "exact_name_locality",
+      "query": "\"U Cafè de Vue\" \"Vado Ligure\""
+    },
+    {
+      "sample_index": 174,
+      "venue_id": "venue:011015:la-spezia:tommy-bar",
+      "template": "exact_name_locality_street",
+      "query": "\"Tommy Bar\" \"La Spezia\" \"Via Paverano\""
+    },
+    {
+      "sample_index": 175,
+      "venue_id": "venue:009013:borgio-verezzi:feno-s",
+      "template": "exact_name_locality_street",
+      "query": "\"Feno's\" \"Borgio Verezzi\" \"Via Giacomo Matteotti\""
+    },
+    {
+      "sample_index": 176,
+      "venue_id": "venue:036010:concordia-sulla-secchia:luciana",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Luciana\" \"Concordia sulla Secchia\" \"Via per Mirandola\""
+    },
+    {
+      "sample_index": 177,
+      "venue_id": "venue:099018:santarcangelo-di-romagna:piadineria-alla-scalinata",
+      "template": "official_chain_branch",
+      "query": "site:lapiadineria.com \"Via Aurelio Saffi\" \"Santarcangelo di Romagna\""
+    },
+    {
+      "sample_index": 178,
+      "venue_id": "venue:099014:rimini:piu39-di-luca-di-massa",
+      "template": "exact_name_locality",
+      "query": "\"Più39 di Luca Di Massa\" \"Rimini\""
+    },
+    {
+      "sample_index": 179,
+      "venue_id": "venue:038014:mesola:del-pirata",
+      "template": "exact_name_locality",
+      "query": "\"Pub del pirata\" \"Mesola\""
+    },
+    {
+      "sample_index": 180,
+      "venue_id": "venue:035014:castellarano:della-posta",
+      "template": "exact_name_locality",
+      "query": "\"Locanda della Posta\" \"Castellarano\""
+    },
+    {
+      "sample_index": 181,
+      "venue_id": "venue:037006:bologna:gelateria-la-siberiana",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Gelateria La Siberiana\" \"Bologna\" \"Via Ferrarese\""
+    },
+    {
+      "sample_index": 182,
+      "venue_id": "venue:037048:pieve-di-cento:pizzi-nicola",
+      "template": "exact_name_locality",
+      "query": "\"Pizzi Nicola\" \"Pieve di Cento\""
+    },
+    {
+      "sample_index": 183,
+      "venue_id": "venue:099001:bellaria-igea-marina:sunny-da-darione",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Sunny Da Darione\" \"Bellaria-Igea Marina\" \"Via Alfonso Pinzon\""
+    },
+    {
+      "sample_index": 184,
+      "venue_id": "venue:040008:cesenatico:bagno-clipper-100",
+      "template": "exact_name_locality",
+      "query": "\"Bagno Clipper 100\" \"Cesenatico\""
+    },
+    {
+      "sample_index": 185,
+      "venue_id": "venue:039009:cotignola:parco-ristorante",
+      "template": "exact_name_locality",
+      "query": "\"Al Parco Ristorante\" \"Cotignola\""
+    },
+    {
+      "sample_index": 186,
+      "venue_id": "venue:038001:argenta:fiordipanna-cremeria",
+      "template": "exact_name_locality",
+      "query": "\"Fiordipanna Cremeria\" \"Argenta\""
+    },
+    {
+      "sample_index": 187,
+      "venue_id": "venue:099013:riccione:time-riccione",
+      "template": "exact_name_locality",
+      "query": "\"Pub Time Riccione\" \"Riccione\""
+    },
+    {
+      "sample_index": 188,
+      "venue_id": "venue:034023:montechiarugolo:armeno-caffe",
+      "template": "exact_name_locality",
+      "query": "\"Armeno Caffè\" \"Montechiarugolo\""
+    },
+    {
+      "sample_index": 189,
+      "venue_id": "venue:034020:medesano:ramiola-city",
+      "template": "exact_name_locality",
+      "query": "\"Ramiola City\" \"Medesano\""
+    },
+    {
+      "sample_index": 190,
+      "venue_id": "venue:036023:modena:bella-italia-srl-uninominale",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria La Bella Italia srl uninominale\" \"Modena\" \"Via Ippolito Nievo\""
+    },
+    {
+      "sample_index": 191,
+      "venue_id": "venue:035004:bibbiano:ida",
+      "template": "exact_name_locality_street",
+      "query": "\"BAR IDA\" \"Bibbiano\" \"Via Vladimir Ilic Ulianov Lenin\""
+    },
+    {
+      "sample_index": 192,
+      "venue_id": "venue:039001:alfonsine:tradizioni-di-nick",
+      "template": "exact_name_locality",
+      "query": "\"Le Tradizioni di Nick\" \"Alfonsine\""
+    },
+    {
+      "sample_index": 193,
+      "venue_id": "venue:038006:comacchio:beeriamo-caffetteria-beer-shop",
+      "template": "exact_name_locality",
+      "query": "\"Beeriamo Caffetteria & Beer Shop\" \"Comacchio\""
+    },
+    {
+      "sample_index": 194,
+      "venue_id": "venue:040050:verghereto:autogrill",
+      "template": "exact_name_locality_street",
+      "query": "\"Autogrill\" \"Verghereto\" \"km. 164 E45\""
+    },
+    {
+      "sample_index": 195,
+      "venue_id": "venue:099020:verucchio:olivia-pizza-e-dintorni",
+      "template": "exact_name_locality",
+      "query": "\"Olivia Pizza e Dintorni\" \"Verucchio\""
+    },
+    {
+      "sample_index": 196,
+      "venue_id": "venue:039007:cervia:moio-lab",
+      "template": "exact_name_locality_street",
+      "query": "\"Moio Lab\" \"Cervia\" \"Viale Dante Alighieri\""
+    },
+    {
+      "sample_index": 197,
+      "venue_id": "venue:099028:poggio-torriana:piadineria-di-angela",
+      "template": "official_chain_branch",
+      "query": "site:lapiadineria.com \"Via Santarcangiolese\" \"Poggio Torriana\""
+    },
+    {
+      "sample_index": 198,
+      "venue_id": "venue:039010:faenza:casa-mokador-caffe-faenza",
+      "template": "exact_name_locality",
+      "query": "\"Casa Mokador & Caffè Faenza\" \"Faenza\""
+    },
+    {
+      "sample_index": 199,
+      "venue_id": "venue:038008:ferrara:piadineria-pandini",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Pizzeria Piadineria Pandini\" \"Ferrara\" \"Viale Po\""
+    },
+    {
+      "sample_index": 200,
+      "venue_id": "venue:037026:fontanelice:cacciatori",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Cacciatori\" \"Fontanelice\" \"Via 8 Dicembre 1944\""
+    },
+    {
+      "sample_index": 201,
+      "venue_id": "venue:046021:montecarlo:syrah",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Syrah\" \"Montecarlo\" \"Via di Montecarlo\""
+    },
+    {
+      "sample_index": 202,
+      "venue_id": "venue:047011:montecatini-terme:dany",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Dany\" \"Montecatini-Terme\" \"Via Enrico Toti\""
+    },
+    {
+      "sample_index": 203,
+      "venue_id": "venue:050026:pisa:letterario-volta-pagina",
+      "template": "exact_name_locality",
+      "query": "\"Caffè Letterario Volta Pagina\" \"Pisa\""
+    },
+    {
+      "sample_index": 204,
+      "venue_id": "venue:049011:marciana-marina:tanta-roba-schiaccineria-pizzeria",
+      "template": "exact_name_locality",
+      "query": "\"Tanta Roba Schiaccineria Pizzeria\" \"Marciana Marina\""
+    },
+    {
+      "sample_index": 205,
+      "venue_id": "venue:048014:empoli:spizzometro-empoli",
+      "template": "exact_name_locality",
+      "query": "\"Spizzometro Empoli\" \"Empoli\""
+    },
+    {
+      "sample_index": 206,
+      "venue_id": "venue:048017:firenze:mangiapepe",
+      "template": "exact_name_locality_street",
+      "query": "\"Mangiapepe\" \"Firenze\" \"Via dei Macci\""
+    },
+    {
+      "sample_index": 207,
+      "venue_id": "venue:046010:castiglione-di-garfagnana:castello",
+      "template": "exact_name_locality_street",
+      "query": "\"Il Castello\" \"Castiglione di Garfagnana\" \"Località Cigiana di Sopra\""
+    },
+    {
+      "sample_index": 208,
+      "venue_id": "venue:048021:greve-in-chianti:gelateria-mordicrema",
+      "template": "exact_name_locality_street",
+      "query": "\"Gelateria Mordicrema\" \"Greve in Chianti\" \"Viale Vittorio Veneto\""
+    },
+    {
+      "sample_index": 209,
+      "venue_id": "venue:046017:lucca:tagliapizza",
+      "template": "exact_name_locality_street",
+      "query": "\"Tagliapizza\" \"Lucca\" \"Via Giovanni Battista Giorgini\""
+    },
+    {
+      "sample_index": 210,
+      "venue_id": "venue:100006:vaiano:circolo-arci-schignano",
+      "template": "exact_name_locality",
+      "query": "\"Circolo ARCI Schignano\" \"Vaiano\""
+    },
+    {
+      "sample_index": 211,
+      "venue_id": "venue:052028:san-gimignano:diba70-coffee",
+      "template": "exact_name_locality",
+      "query": "\"Diba70 Coffee\" \"San Gimignano\""
+    },
+    {
+      "sample_index": 212,
+      "venue_id": "venue:046033:viareggio:dal-siriano",
+      "template": "exact_name_locality_street",
+      "query": "\"Dal Siriano\" \"Viareggio\" \"Via Ugo Foscolo\""
+    },
+    {
+      "sample_index": 213,
+      "venue_id": "venue:051041:pratovecchio-stia:trentatre-tuscan-bistro-bar",
+      "template": "exact_name_locality",
+      "query": "\"Trentatré Tuscan Bistrò & Bar\" \"Pratovecchio Stia\""
+    },
+    {
+      "sample_index": 214,
+      "venue_id": "venue:048050:vinci:l-unicorno-bar-gelateria",
+      "template": "exact_name_locality",
+      "query": "\"L' Unicorno Bar Gelateria\" \"Vinci\""
+    },
+    {
+      "sample_index": 215,
+      "venue_id": "venue:047014:pistoia:berk-the-pub",
+      "template": "exact_name_locality",
+      "query": "\"Berk the pub\" \"Pistoia\""
+    },
+    {
+      "sample_index": 216,
+      "venue_id": "venue:050027:pomarance:dello-sport",
+      "template": "exact_name_locality",
+      "query": "\"Caffe dello Sport\" \"Pomarance\""
+    },
+    {
+      "sample_index": 217,
+      "venue_id": "venue:053009:follonica:f-lli-ballerini",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria F.lli Ballerini\" \"Follonica\" \"Piazza 25 Aprile\""
+    },
+    {
+      "sample_index": 218,
+      "venue_id": "venue:045010:massa:moe-s-bar",
+      "template": "exact_name_locality_street",
+      "query": "\"MOE'S BAR\" \"Massa\" \"Via San Leonardo\""
+    },
+    {
+      "sample_index": 219,
+      "venue_id": "venue:047008:massa-e-cozzile:murphys-pub",
+      "template": "exact_name_locality_street",
+      "query": "\"Murphys Pub\" \"Massa e Cozzile\" \"Via Antonio Gramsci\""
+    },
+    {
+      "sample_index": 220,
+      "venue_id": "venue:050029:pontedera:creamylla-gelateria-pasticceria",
+      "template": "exact_name_locality",
+      "query": "\"Creamylla Gelateria Pasticceria\" \"Pontedera\""
+    },
+    {
+      "sample_index": 221,
+      "venue_id": "venue:049009:livorno:vino-dei-brilli",
+      "template": "exact_name_locality",
+      "query": "\"il vino dei Brilli\" \"Livorno\""
+    },
+    {
+      "sample_index": 222,
+      "venue_id": "venue:052013:gaiole-in-chianti:ponte",
+      "template": "exact_name_locality",
+      "query": "\"Osteria Al Ponte\" \"Gaiole in Chianti\""
+    },
+    {
+      "sample_index": 223,
+      "venue_id": "venue:048024:lastra-a-signa:posta-caffe-bar",
+      "template": "exact_name_locality",
+      "query": "\"La Posta Caffè Bar\" \"Lastra a Signa\""
+    },
+    {
+      "sample_index": 224,
+      "venue_id": "venue:053011:grosseto:wave-bar",
+      "template": "exact_name_locality_street",
+      "query": "\"Wave Bar\" \"Grosseto\" \"Commendone\""
+    },
+    {
+      "sample_index": 225,
+      "venue_id": "venue:052009:chianciano-terme:pizza-al-volo",
+      "template": "exact_name_locality",
+      "query": "\"Pizza Al Volo\" \"Chianciano Terme\""
+    },
+    {
+      "sample_index": 226,
+      "venue_id": "venue:055017:montecastrilli:botte-di-mirko-e-elena",
+      "template": "exact_name_locality",
+      "query": "\"La Botte di Mirko e Elena\" \"Montecastrilli\""
+    },
+    {
+      "sample_index": 227,
+      "venue_id": "venue:054024:gubbio:antica-osteria",
+      "template": "exact_name_locality",
+      "query": "\"Antica Osteria\" \"Gubbio\""
+    },
+    {
+      "sample_index": 228,
+      "venue_id": "venue:055032:terni:zero-f9802f83",
+      "template": "exact_name_locality_street",
+      "query": "\"Caffè Zero\" \"Terni\" \"Via Antonio Pacinotti\""
+    },
+    {
+      "sample_index": 229,
+      "venue_id": "venue:055010:castel-viscardo:violet-bar",
+      "template": "exact_name_locality_street",
+      "query": "\"Violet Bar\" \"Castel Viscardo\" \"Corso Umberto I\""
+    },
+    {
+      "sample_index": 230,
+      "venue_id": "venue:054018:foligno:chicco-gelateria",
+      "template": "exact_name_locality",
+      "query": "\"Il Chicco Gelateria\" \"Foligno\""
+    },
+    {
+      "sample_index": 231,
+      "venue_id": "venue:054039:perugia:elfo-pub",
+      "template": "exact_name_locality_street",
+      "query": "\"Elfo Pub\" \"Perugia\" \"Via Sant'Agata\""
+    },
+    {
+      "sample_index": 232,
+      "venue_id": "venue:054057:valfabbrica:terrazza",
+      "template": "exact_name_locality",
+      "query": "\"Agriturismo La Terrazza\" \"Valfabbrica\""
+    },
+    {
+      "sample_index": 233,
+      "venue_id": "venue:054051:spoleto:zeppelin",
+      "template": "exact_name_locality_street",
+      "query": "\"Zeppelin\" \"Spoleto\" \"Corso Giuseppe Garibaldi\""
+    },
+    {
+      "sample_index": 234,
+      "venue_id": "venue:054001:assisi:cento-passi",
+      "template": "exact_name_locality",
+      "query": "\"I Cento Passi\" \"Assisi\""
+    },
+    {
+      "sample_index": 235,
+      "venue_id": "venue:054021:giano-dell-umbria:f-c-caffe",
+      "template": "exact_name_locality_street",
+      "query": "\"f.c.caffe\" \"Giano dell'Umbria\" \"Largo Alcide De Gasperi\""
+    },
+    {
+      "sample_index": 236,
+      "venue_id": "venue:054050:spello:civico-57",
+      "template": "exact_name_locality_street",
+      "query": "\"Civico 57\" \"Spello\" \"Via Consolare\""
+    },
+    {
+      "sample_index": 237,
+      "venue_id": "venue:054039:perugia:jo-bar",
+      "template": "exact_name_locality_street",
+      "query": "\"Jo Bar\" \"Perugia\" \"Str. del Piccione\""
+    },
+    {
+      "sample_index": 238,
+      "venue_id": "venue:054053:torgiano:barcollo-al-pub",
+      "template": "exact_name_locality",
+      "query": "\"Barcollo al Pub\" \"Torgiano\""
+    },
+    {
+      "sample_index": 239,
+      "venue_id": "venue:054018:foligno:habanero",
+      "template": "exact_name_locality_street",
+      "query": "\"Habanero\" \"Foligno\" \"Piazza del Grano\""
+    },
+    {
+      "sample_index": 240,
+      "venue_id": "venue:055032:terni:gelateria-cocktail-bar-ff",
+      "template": "exact_name_locality_street",
+      "query": "\"Gelateria Cocktail Bar Ff\" \"Terni\" \"Via del Convento\""
+    },
+    {
+      "sample_index": 241,
+      "venue_id": "venue:054017:deruta:pasticceria-dolci-tentazioni-deruta",
+      "template": "exact_name_locality",
+      "query": "\"Pasticceria Dolci Tentazioni Deruta\" \"Deruta\""
+    },
+    {
+      "sample_index": 242,
+      "venue_id": "venue:054013:citta-di-castello:alberto-s",
+      "template": "exact_name_locality_street",
+      "query": "\"Alberto's\" \"Città di Castello\" \"Viale Romagna\""
+    },
+    {
+      "sample_index": 243,
+      "venue_id": "venue:054001:assisi:romantica-pizzeria",
+      "template": "exact_name_locality",
+      "query": "\"La Romantica- Pizzeria\" \"Assisi\""
+    },
+    {
+      "sample_index": 244,
+      "venue_id": "venue:055011:fabro:europa",
+      "template": "exact_name_locality",
+      "query": "\"Caffe Europa\" \"Fabro\""
+    },
+    {
+      "sample_index": 245,
+      "venue_id": "venue:055022:narni:arcomincio",
+      "template": "exact_name_locality",
+      "query": "\"Birreria Arcomincio\" \"Narni\""
+    },
+    {
+      "sample_index": 246,
+      "venue_id": "venue:054039:perugia:divino",
+      "template": "exact_name_locality",
+      "query": "\"Caffe Divino\" \"Perugia\""
+    },
+    {
+      "sample_index": 247,
+      "venue_id": "venue:055011:fabro:mennula-di-ciro-baiardi",
+      "template": "exact_name_locality",
+      "query": "\"Mennula di Ciro Baiardi\" \"Fabro\""
+    },
+    {
+      "sample_index": 248,
+      "venue_id": "venue:054012:citta-della-pieve:of-artists",
+      "template": "exact_name_locality",
+      "query": "\"Café of Artists\" \"Città della Pieve\""
+    },
+    {
+      "sample_index": 249,
+      "venue_id": "venue:055032:terni:dolce-luna-terni",
+      "template": "exact_name_locality",
+      "query": "\"Dolce Luna Terni\" \"Terni\""
+    },
+    {
+      "sample_index": 250,
+      "venue_id": "venue:054011:citerna:ristorate-belvedere-citerna",
+      "template": "exact_name_locality",
+      "query": "\"Ristorate Belvedere Citerna\" \"Citerna\""
+    },
+    {
+      "sample_index": 251,
+      "venue_id": "venue:041043:pergola:pergola",
+      "template": "exact_name_locality_street",
+      "query": "\"La Pergola\" \"Pergola\" \"Via Alcide De Gasperi\""
+    },
+    {
+      "sample_index": 252,
+      "venue_id": "venue:042010:castelfidardo:anema-core",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Anema & Core\" \"Castelfidardo\" \"Via Giovan Battista Pergolesi\""
+    },
+    {
+      "sample_index": 253,
+      "venue_id": "venue:044066:san-benedetto-del-tronto:lu-campano",
+      "template": "exact_name_locality_street",
+      "query": "\"Lu Campanò\" \"San Benedetto del Tronto\" \"Via Alessandro Manzoni\""
+    },
+    {
+      "sample_index": 254,
+      "venue_id": "venue:044027:maltignano:siriogrill-metano",
+      "template": "exact_name_locality",
+      "query": "\"Siriogrill Metano\" \"Maltignano\""
+    },
+    {
+      "sample_index": 255,
+      "venue_id": "venue:043015:corridonia:moon-s-pub",
+      "template": "exact_name_locality_street",
+      "query": "\"Moon's Pub\" \"Corridonia\" \"Viale Sant'Anna\""
+    },
+    {
+      "sample_index": 256,
+      "venue_id": "venue:043013:civitanova-marche:gigi",
+      "template": "exact_name_locality_street",
+      "query": "\"Gigi\" \"Civitanova Marche\" \"Piazza 20 Settembre\""
+    },
+    {
+      "sample_index": 257,
+      "venue_id": "venue:041036:montelabbate:casa-del-sole",
+      "template": "exact_name_locality",
+      "query": "\"Casa del Sole\" \"Montelabbate\""
+    },
+    {
+      "sample_index": 258,
+      "venue_id": "venue:041015:fossombrone:pizza-pop",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizza Pop\" \"Fossombrone\" \"Corso Giuseppe Garibaldi\""
+    },
+    {
+      "sample_index": 259,
+      "venue_id": "venue:042002:ancona:maxi-bar-trattoria",
+      "template": "exact_name_locality",
+      "query": "\"Pub Maxi Bar Trattoria\" \"Ancona\""
+    },
+    {
+      "sample_index": 260,
+      "venue_id": "venue:042035:ostra:piazzale",
+      "template": "exact_name_locality_street",
+      "query": "\"Il Piazzale\" \"Ostra\" \"Via Arceviese\""
+    },
+    {
+      "sample_index": 261,
+      "venue_id": "venue:042048:sirolo:antipasteria-di-mare-sara",
+      "template": "exact_name_locality",
+      "query": "\"Antipasteria di mare Sara\" \"Sirolo\""
+    },
+    {
+      "sample_index": 262,
+      "venue_id": "venue:042045:senigallia:klaus-bierbrauer-s-birreria-tipica",
+      "template": "exact_name_locality",
+      "query": "\"Klaus Bierbrauer's birreria tipica\" \"Senigallia\""
+    },
+    {
+      "sample_index": 263,
+      "venue_id": "venue:109004:campofilone:mas-que-nada-cafe",
+      "template": "exact_name_locality",
+      "query": "\"Más Que Nada Café\" \"Campofilone\""
+    },
+    {
+      "sample_index": 264,
+      "venue_id": "venue:044023:grottammare:meraviglia",
+      "template": "exact_name_locality",
+      "query": "\"La Meraviglia\" \"Grottammare\""
+    },
+    {
+      "sample_index": 265,
+      "venue_id": "venue:044007:ascoli-piceno:johnny-spiedino",
+      "template": "exact_name_locality",
+      "query": "\"Johnny Spiedino\" \"Ascoli Piceno\""
+    },
+    {
+      "sample_index": 266,
+      "venue_id": "venue:044011:castel-di-lama:street-pizza-mato",
+      "template": "exact_name_locality",
+      "query": "\"Street Pizza Mato\" \"Castel di Lama\""
+    },
+    {
+      "sample_index": 267,
+      "venue_id": "venue:043023:macerata:torquati",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Enoteca Ristorante Torquati\" \"Macerata\" \"Via Donato Bramante\""
+    },
+    {
+      "sample_index": 268,
+      "venue_id": "venue:041044:pesaro:vin-s-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Vin's Cafe\" \"Pesaro\" \"Viale Trieste\""
+    },
+    {
+      "sample_index": 269,
+      "venue_id": "venue:042012:castelplanio:giusti-gelateria-artigianale",
+      "template": "exact_name_locality",
+      "query": "\"Giusti Gelateria Artigianale\" \"Castelplanio\""
+    },
+    {
+      "sample_index": 270,
+      "venue_id": "venue:043043:potenza-picena:sottovoce-pub",
+      "template": "exact_name_locality",
+      "query": "\"Sottovoce Pub\" \"Potenza Picena\""
+    },
+    {
+      "sample_index": 271,
+      "venue_id": "venue:044066:san-benedetto-del-tronto:self-service-maccheroncini",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Self Service Maccheroncini\" \"San Benedetto del Tronto\" \"Via Pasubio\""
+    },
+    {
+      "sample_index": 272,
+      "venue_id": "venue:109001:altidona:baita-marina",
+      "template": "exact_name_locality",
+      "query": "\"La Baita Marina\" \"Altidona\""
+    },
+    {
+      "sample_index": 273,
+      "venue_id": "venue:042018:falconara-marittima:bussola-da-poldi",
+      "template": "exact_name_locality",
+      "query": "\"La Bussola da Poldì\" \"Falconara Marittima\""
+    },
+    {
+      "sample_index": 274,
+      "venue_id": "venue:041013:fano:da-pando-pizza-e-food",
+      "template": "exact_name_locality",
+      "query": "\"Da Pando Pizza e Food\" \"Fano\""
+    },
+    {
+      "sample_index": 275,
+      "venue_id": "venue:041057:sant-angelo-in-vado:del-corso",
+      "template": "exact_name_locality",
+      "query": "\"Caffe del Corso\" \"Sant'Angelo in Vado\""
+    },
+    {
+      "sample_index": 276,
+      "venue_id": "venue:060055:pofi:setteventi-agriturismo",
+      "template": "exact_name_locality",
+      "query": "\"Setteventi Agriturismo\" \"Pofi\""
+    },
+    {
+      "sample_index": 277,
+      "venue_id": "venue:058047:guidonia-montecelio:sfumature-di-cioccolato",
+      "template": "exact_name_locality",
+      "query": "\"Sfumature Di Cioccolato\" \"Guidonia Montecelio\""
+    },
+    {
+      "sample_index": 278,
+      "venue_id": "venue:058091:roma:on-the-road-9aa7ff16",
+      "template": "exact_name_locality",
+      "query": "\"Caffé on the Road\" \"Roma\""
+    },
+    {
+      "sample_index": 279,
+      "venue_id": "venue:060041:giuliano-di-roma:mc-mario-pizzeria",
+      "template": "exact_name_locality",
+      "query": "\"Mc Mario Pizzeria\" \"Giuliano di Roma\""
+    },
+    {
+      "sample_index": 280,
+      "venue_id": "venue:058043:genzano-di-roma:gio-brothers-pub",
+      "template": "exact_name_locality",
+      "query": "\"Gio Brothers Pub\" \"Genzano di Roma\""
+    },
+    {
+      "sample_index": 281,
+      "venue_id": "venue:059032:terracina:spaghetteria-paninoteca-le-palme",
+      "template": "exact_name_locality",
+      "query": "\"Spaghetteria Paninoteca Le Palme\" \"Terracina\""
+    },
+    {
+      "sample_index": 282,
+      "venue_id": "venue:060014:boville-ernica:crema-cioccolato-san-lucio",
+      "template": "exact_name_locality",
+      "query": "\"Crema & Cioccolato San Lucio\" \"Boville Ernica\""
+    },
+    {
+      "sample_index": 283,
+      "venue_id": "venue:059024:sabaudia:st-bar-saporetti",
+      "template": "exact_name_locality",
+      "query": "\"ST BAR - Saporetti\" \"Sabaudia\""
+    },
+    {
+      "sample_index": 284,
+      "venue_id": "venue:058120:fiumicino:tre-diavoletti",
+      "template": "exact_name_locality",
+      "query": "\"Osteria I Tre Diavoletti\" \"Fiumicino\""
+    },
+    {
+      "sample_index": 285,
+      "venue_id": "venue:058024:castelnuovo-di-porto:frantoio-di-ottavio",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Il Frantoio di Ottavio\" \"Castelnuovo di Porto\" \"Via Giuseppe Garibaldi\""
+    },
+    {
+      "sample_index": 286,
+      "venue_id": "venue:058074:palestrina:cuore-nel-caffe-di-elena-e-claudio",
+      "template": "exact_name_locality",
+      "query": "\"Il cuore nel caffe di elena e claudio\" \"Palestrina\""
+    },
+    {
+      "sample_index": 287,
+      "venue_id": "venue:058091:roma:burger-king-d0675f93",
+      "template": "official_chain_branch",
+      "query": "site:burgerking.it \"Via Aurelia\" \"Roma\""
+    },
+    {
+      "sample_index": 288,
+      "venue_id": "venue:060063:san-giorgio-a-liri:milord",
+      "template": "exact_name_locality",
+      "query": "\"Caffè Milord\" \"San Giorgio a Liri\""
+    },
+    {
+      "sample_index": 289,
+      "venue_id": "venue:056035:montalto-di-castro:cristybar",
+      "template": "exact_name_locality_street",
+      "query": "\"Cristybar\" \"Montalto di Castro\" \"Str. delle Murelle\""
+    },
+    {
+      "sample_index": 290,
+      "venue_id": "venue:058007:anzio:breezy-gelateria",
+      "template": "exact_name_locality",
+      "query": "\"Breezy Gelateria\" \"Anzio\""
+    },
+    {
+      "sample_index": 291,
+      "venue_id": "venue:057013:castel-di-tora:castellani",
+      "template": "exact_name_locality_street",
+      "query": "\"Trattoria Bar Castellani\" \"Castel di Tora\" \"Via Turanense\""
+    },
+    {
+      "sample_index": 292,
+      "venue_id": "venue:058003:albano-laziale:4-stelle",
+      "template": "exact_name_locality_street",
+      "query": "\"Le 4 Stelle\" \"Albano Laziale\" \"Via San Francesco d'Assisi\""
+    },
+    {
+      "sample_index": 293,
+      "venue_id": "venue:059011:latina:l-oasi-del-bar-club",
+      "template": "exact_name_locality",
+      "query": "\"L'Oasi del Bar Club\" \"Latina\""
+    },
+    {
+      "sample_index": 294,
+      "venue_id": "venue:056023:corchiano:jack-london-pub",
+      "template": "exact_name_locality",
+      "query": "\"Jack London Pub\" \"Corchiano\""
+    },
+    {
+      "sample_index": 295,
+      "venue_id": "venue:060011:atina:gelateria-persichini",
+      "template": "exact_name_locality_street",
+      "query": "\"Gelateria Persichini\" \"Atina\" \"SR627\""
+    },
+    {
+      "sample_index": 296,
+      "venue_id": "venue:059011:latina:pr-piadineria-romagnola",
+      "template": "exact_name_locality",
+      "query": "\"PR Piadineria Romagnola\" \"Latina\""
+    },
+    {
+      "sample_index": 297,
+      "venue_id": "venue:058064:monte-porzio-catone:lumiere",
+      "template": "exact_name_locality_street",
+      "query": "\"Cafe Lumiere\" \"Monte Porzio Catone\" \"Via Frascati Colonna\""
+    },
+    {
+      "sample_index": 298,
+      "venue_id": "venue:058013:bracciano:manu-osteria-del-mare",
+      "template": "exact_name_locality",
+      "query": "\"Manù Osteria del mare\" \"Bracciano\""
+    },
+    {
+      "sample_index": 299,
+      "venue_id": "venue:056059:viterbo:otium-cafe-ristorantino-bar",
+      "template": "exact_name_locality",
+      "query": "\"Otium Cafe.. Ristorantino bar\" \"Viterbo\""
+    },
+    {
+      "sample_index": 300,
+      "venue_id": "venue:060084:vallerotonda:collo",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar collo\" \"Vallerotonda\" \"Piazza Duomo\""
+    },
+    {
+      "sample_index": 301,
+      "venue_id": "venue:066093:scanno:antica-dimora-fuori-le-mura",
+      "template": "exact_name_locality",
+      "query": "\"Antica Dimora Fuori Le Mura\" \"Scanno\""
+    },
+    {
+      "sample_index": 302,
+      "venue_id": "venue:068027:penne:nottetempo",
+      "template": "exact_name_locality",
+      "query": "\"Pub Nottetempo\" \"Penne\""
+    },
+    {
+      "sample_index": 303,
+      "venue_id": "venue:068028:pescara:san-marco",
+      "template": "exact_name_locality",
+      "query": "\"Caffè San Marco\" \"Pescara\""
+    },
+    {
+      "sample_index": 304,
+      "venue_id": "venue:068020:lettomanoppello:maggi",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Maggi\" \"Lettomanoppello\" \"Corso Vittorio Emanuele\""
+    },
+    {
+      "sample_index": 305,
+      "venue_id": "venue:067025:giulianova:gnam",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Gnam\" \"Giulianova\" \"Via Amerigo Vespucci\""
+    },
+    {
+      "sample_index": 306,
+      "venue_id": "venue:069022:chieti:conca",
+      "template": "exact_name_locality_street",
+      "query": "\"La Conca\" \"Chieti\" \"Viale Abruzzo\""
+    },
+    {
+      "sample_index": 307,
+      "venue_id": "venue:067008:campli:porchetta-di-campli",
+      "template": "exact_name_locality",
+      "query": "\"Porchetta di Campli\" \"Campli\""
+    },
+    {
+      "sample_index": 308,
+      "venue_id": "venue:067040:silvi:gelateria-del-corso",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Gelateria del Corso\" \"Silvi\" \"Via Leonardo Da Vinci\""
+    },
+    {
+      "sample_index": 309,
+      "venue_id": "venue:066049:l-aquila:the-corner-pub",
+      "template": "exact_name_locality",
+      "query": "\"The Corner Pub\" \"L'Aquila\""
+    },
+    {
+      "sample_index": 310,
+      "venue_id": "venue:066040:collepietro:perla-nera",
+      "template": "exact_name_locality",
+      "query": "\"La Perla Nera\" \"Collepietro\""
+    },
+    {
+      "sample_index": 311,
+      "venue_id": "venue:067041:teramo:sda-vending-capsule-e-cialde",
+      "template": "exact_name_locality",
+      "query": "\"Sda Vending Capsule E Cialde\" \"Teramo\""
+    },
+    {
+      "sample_index": 312,
+      "venue_id": "venue:069022:chieti:gelateria-trinita-al-solito-posto",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Gelateria Trinita Al Solito Posto\" \"Chieti\" \"Piazza Trento e Trieste\""
+    },
+    {
+      "sample_index": 313,
+      "venue_id": "venue:068018:elice:venere",
+      "template": "exact_name_locality",
+      "query": "\"Caffè Venere\" \"Elice\""
+    },
+    {
+      "sample_index": 314,
+      "venue_id": "venue:066006:avezzano:max-s-food",
+      "template": "exact_name_locality_street",
+      "query": "\"Max's Food\" \"Avezzano\" \"Via Cavalieri di Vittorio Veneto\""
+    },
+    {
+      "sample_index": 315,
+      "venue_id": "venue:066049:l-aquila:fontanella",
+      "template": "exact_name_locality",
+      "query": "\"La Fontanella\" \"L'Aquila\""
+    },
+    {
+      "sample_index": 316,
+      "venue_id": "venue:066093:scanno:porta-scanno",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante La Porta Scanno\" \"Scanno\" \"Via Ciorla\""
+    },
+    {
+      "sample_index": 317,
+      "venue_id": "venue:067047:martinsicuro:fronte-mare-gelateria-artigianale",
+      "template": "exact_name_locality",
+      "query": "\"Fronte Mare gelateria artigianale\" \"Martinsicuro\""
+    },
+    {
+      "sample_index": 318,
+      "venue_id": "venue:068028:pescara:otello",
+      "template": "exact_name_locality_street",
+      "query": "\"Otello\" \"Pescara\" \"Piazza dell'Unione\""
+    },
+    {
+      "sample_index": 319,
+      "venue_id": "venue:067019:colonnella:portello-caffe-ad26236f",
+      "template": "exact_name_locality",
+      "query": "\"Portello Caffe\" \"Colonnella\""
+    },
+    {
+      "sample_index": 320,
+      "venue_id": "venue:069015:casalbordino:gelateria-artigianale-polo-nord",
+      "template": "exact_name_locality_street",
+      "query": "\"Gelateria Artigianale Polo Nord\" \"Casalbordino\" \"Via del Forte\""
+    },
+    {
+      "sample_index": 321,
+      "venue_id": "venue:068028:pescara:masterchips",
+      "template": "exact_name_locality_street",
+      "query": "\"Masterchips\" \"Pescara\" \"Corso Vittorio Emanuele II\""
+    },
+    {
+      "sample_index": 322,
+      "venue_id": "venue:069074:rocca-san-giovanni:chiaro-di-luna",
+      "template": "exact_name_locality",
+      "query": "\"Al Chiaro Di Luna\" \"Rocca San Giovanni\""
+    },
+    {
+      "sample_index": 323,
+      "venue_id": "venue:069035:francavilla-al-mare:different-caffe",
+      "template": "exact_name_locality",
+      "query": "\"Different Caffè\" \"Francavilla al Mare\""
+    },
+    {
+      "sample_index": 324,
+      "venue_id": "venue:069022:chieti:festival-chieti",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Festival Chieti\" \"Chieti\" \"Via Statale\""
+    },
+    {
+      "sample_index": 325,
+      "venue_id": "venue:066073:poggio-picenze:faraone-pizzeria",
+      "template": "exact_name_locality",
+      "query": "\"Al Faraone Pizzeria\" \"Poggio Picenze\""
+    },
+    {
+      "sample_index": 326,
+      "venue_id": "venue:070075:sepino:gustus-ristorante-sepino",
+      "template": "exact_name_locality",
+      "query": "\"Gustus Ristorante Sepino\" \"Sepino\""
+    },
+    {
+      "sample_index": 327,
+      "venue_id": "venue:094023:isernia:max-di-vacca-michelino",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Max Di Vacca Michelino\" \"Isernia\" \"Via Umbria\""
+    },
+    {
+      "sample_index": 328,
+      "venue_id": "venue:070059:ripalimosani:camardo",
+      "template": "exact_name_locality",
+      "query": "\"Caffè Camardo\" \"Ripalimosani\""
+    },
+    {
+      "sample_index": 329,
+      "venue_id": "venue:094010:castelpetroso:de-francesco",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Pizzeria De Francesco\" \"Castelpetroso\" \"Strada Statale 17 Km 192.700\""
+    },
+    {
+      "sample_index": 330,
+      "venue_id": "venue:070078:termoli:dickens",
+      "template": "exact_name_locality_street",
+      "query": "\"Dickens\" \"Termoli\" \"Via America\""
+    },
+    {
+      "sample_index": 331,
+      "venue_id": "venue:094027:miranda:pazzeria",
+      "template": "exact_name_locality_street",
+      "query": "\"La Pazzeria\" \"Miranda\" \"Via Antonio Evangelista\""
+    },
+    {
+      "sample_index": 332,
+      "venue_id": "venue:070004:bonefro:17",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Pub 17\" \"Bonefro\" \"Piazza Municipio\""
+    },
+    {
+      "sample_index": 333,
+      "venue_id": "venue:070010:campomarino:lido-aurora-di-balante-massimo",
+      "template": "exact_name_locality",
+      "query": "\"Lido Aurora di Balante Massimo\" \"Campomarino\""
+    },
+    {
+      "sample_index": 334,
+      "venue_id": "venue:070006:campobasso:pasticceria-ambrosia-campobasso",
+      "template": "exact_name_locality",
+      "query": "\"Pasticceria Ambrosia Campobasso\" \"Campobasso\""
+    },
+    {
+      "sample_index": 335,
+      "venue_id": "venue:094050:sesto-campano:strapizzami",
+      "template": "exact_name_locality_street",
+      "query": "\"Strapizzami\" \"Sesto Campano\" \"Via Taverna Vecchia\""
+    },
+    {
+      "sample_index": 336,
+      "venue_id": "venue:094052:venafro:radici-venafro-di-giacchetti-mariano",
+      "template": "exact_name_locality",
+      "query": "\"Radici Venafro di Giacchetti Mariano\" \"Venafro\""
+    },
+    {
+      "sample_index": 337,
+      "venue_id": "venue:094021:fornelli:sette-torri",
+      "template": "exact_name_locality",
+      "query": "\"Bar sette torri\" \"Fornelli\""
+    },
+    {
+      "sample_index": 338,
+      "venue_id": "venue:070028:guardiaregia:grifone-agriturismo",
+      "template": "exact_name_locality",
+      "query": "\"Il Grifone Agriturismo\" \"Guardiaregia\""
+    },
+    {
+      "sample_index": 339,
+      "venue_id": "venue:070046:montenero-di-bisaccia:pasticceria-dolcemania-di-potalivo-maria-rosaria",
+      "template": "exact_name_locality",
+      "query": "\"Pasticceria Dolcemania di Potalivo Maria Rosaria\" \"Montenero di Bisaccia\""
+    },
+    {
+      "sample_index": 340,
+      "venue_id": "venue:094002:agnone:komby-pub",
+      "template": "exact_name_locality_street",
+      "query": "\"Komby Pub\" \"Agnone\" \"Via Roma\""
+    },
+    {
+      "sample_index": 341,
+      "venue_id": "venue:070051:petacciato:faro-bar-bistrot",
+      "template": "exact_name_locality",
+      "query": "\"IL FARO BAR/Bistrot\" \"Petacciato\""
+    },
+    {
+      "sample_index": 342,
+      "venue_id": "venue:070003:bojano:da-tonino",
+      "template": "exact_name_locality_street",
+      "query": "\"Da Tonino\" \"Bojano\" \"Via S. Antonio Abate\""
+    },
+    {
+      "sample_index": 343,
+      "venue_id": "venue:094045:santa-maria-del-molise:amaranto-caffe",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Amaranto Caffe\" \"Santa Maria del Molise\" \"Via Gaetano Filangeri\""
+    },
+    {
+      "sample_index": 344,
+      "venue_id": "venue:070049:oratino:roccia-oratino",
+      "template": "exact_name_locality",
+      "query": "\"La Roccia - Oratino\" \"Oratino\""
+    },
+    {
+      "sample_index": 345,
+      "venue_id": "venue:070006:campobasso:peccati-di-bacco",
+      "template": "exact_name_locality",
+      "query": "\"I Peccati di Bacco\" \"Campobasso\""
+    },
+    {
+      "sample_index": 346,
+      "venue_id": "venue:070006:campobasso:mcdonald-s",
+      "template": "official_chain_branch",
+      "query": "site:mcdonalds.it \"Via Colle delle Api\" \"Campobasso\""
+    },
+    {
+      "sample_index": 347,
+      "venue_id": "venue:070025:gambatesa:quercia",
+      "template": "exact_name_locality_street",
+      "query": "\"La Quercia\" \"Gambatesa\" \"Contrada Varana\""
+    },
+    {
+      "sample_index": 348,
+      "venue_id": "venue:070046:montenero-di-bisaccia:atlas-caffe",
+      "template": "exact_name_locality_street",
+      "query": "\"Atlas Caffè\" \"Montenero di Bisaccia\" \"Via Vittorio Argentieri\""
+    },
+    {
+      "sample_index": 349,
+      "venue_id": "venue:094038:pozzilli:traliccio",
+      "template": "exact_name_locality",
+      "query": "\"Al Traliccio\" \"Pozzilli\""
+    },
+    {
+      "sample_index": 350,
+      "venue_id": "venue:070011:casacalenda:barcellona-cafe-kalena",
+      "template": "exact_name_locality",
+      "query": "\"Barcellona Cafe Kalena\" \"Casacalenda\""
+    },
+    {
+      "sample_index": 351,
+      "venue_id": "venue:064015:calitri:dell-arco",
+      "template": "exact_name_locality",
+      "query": "\"La Locanda dell'Arco\" \"Calitri\""
+    },
+    {
+      "sample_index": 352,
+      "venue_id": "venue:065039:centola:wanted",
+      "template": "exact_name_locality",
+      "query": "\"Bar Wanted\" \"Centola\""
+    },
+    {
+      "sample_index": 353,
+      "venue_id": "venue:064008:avellino:madai-bakery-cafe",
+      "template": "exact_name_locality",
+      "query": "\"Madai Bakery Café\" \"Avellino\""
+    },
+    {
+      "sample_index": 354,
+      "venue_id": "venue:063036:grumo-nevano:jolly-dal-1991",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria jolly dal 1991\" \"Grumo Nevano\" \"Corso Giuseppe Garibaldi\""
+    },
+    {
+      "sample_index": 355,
+      "venue_id": "venue:063001:acerra:chateau-f-lli-de-rosa",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Chateau - F.lli De Rosa\" \"Acerra\" \"Piazza Castello\""
+    },
+    {
+      "sample_index": 356,
+      "venue_id": "venue:065116:salerno:highlander-pub",
+      "template": "exact_name_locality",
+      "query": "\"Highlander Pub\" \"Salerno\""
+    },
+    {
+      "sample_index": 357,
+      "venue_id": "venue:061082:santa-maria-a-vico:arminio",
+      "template": "exact_name_locality_street",
+      "query": "\"Arminio\" \"Santa Maria a Vico\" \"Via Appia\""
+    },
+    {
+      "sample_index": 358,
+      "venue_id": "venue:061088:sessa-aurunca:the-dream-pub",
+      "template": "exact_name_locality",
+      "query": "\"The Dream pub\" \"Sessa Aurunca\""
+    },
+    {
+      "sample_index": 359,
+      "venue_id": "venue:063049:napoli:da-michele",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria da Michele\" \"Napoli\" \"Via Giuseppe Martucci\""
+    },
+    {
+      "sample_index": 360,
+      "venue_id": "venue:065016:bracigliano:piccola-locandina",
+      "template": "exact_name_locality",
+      "query": "\"La Piccola Locandina\" \"Bracigliano\""
+    },
+    {
+      "sample_index": 361,
+      "venue_id": "venue:065050:eboli:eburum-caffe",
+      "template": "exact_name_locality",
+      "query": "\"Eburum Caffe\" \"Eboli\""
+    },
+    {
+      "sample_index": 362,
+      "venue_id": "venue:061022:caserta:chalet-petite-fleur",
+      "template": "exact_name_locality",
+      "query": "\"Chalet Petite Fleur\" \"Caserta\""
+    },
+    {
+      "sample_index": 363,
+      "venue_id": "venue:064116:venticano:presu-ciarcia-experience",
+      "template": "exact_name_locality",
+      "query": "\"Presù - Ciarcia Experience\" \"Venticano\""
+    },
+    {
+      "sample_index": 364,
+      "venue_id": "venue:062074:telese-terme:n-toast",
+      "template": "exact_name_locality_street",
+      "query": "\"N'Toast\" \"Telese Terme\" \"Viale Europa\""
+    },
+    {
+      "sample_index": 365,
+      "venue_id": "venue:065014:battipaglia:citrus-artisan-gelato",
+      "template": "exact_name_locality",
+      "query": "\"Citrus Artisan Gelato\" \"Battipaglia\""
+    },
+    {
+      "sample_index": 366,
+      "venue_id": "venue:061084:santa-maria-la-fossa:tamoil-bar-tabacchi",
+      "template": "exact_name_locality",
+      "query": "\"Tamoil Bar&Tabacchi\" \"Santa Maria la Fossa\""
+    },
+    {
+      "sample_index": 367,
+      "venue_id": "venue:063089:volla:caffetteria-galante",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Caffetteria Galante\" \"Volla\" \"Viale Michelangelo\""
+    },
+    {
+      "sample_index": 368,
+      "venue_id": "venue:063034:giugliano-in-campania:erny-s-pizza",
+      "template": "exact_name_locality",
+      "query": "\"Erny's Pizza\" \"Giugliano in Campania\""
+    },
+    {
+      "sample_index": 369,
+      "venue_id": "venue:061059:pietravairano:terramia-ristopub",
+      "template": "exact_name_locality",
+      "query": "\"Terramia Ristopub\" \"Pietravairano\""
+    },
+    {
+      "sample_index": 370,
+      "venue_id": "venue:063067:san-giorgio-a-cremano:paninoteca-zio-coach",
+      "template": "exact_name_locality",
+      "query": "\"Paninoteca Zio Coach\" \"San Giorgio a Cremano\""
+    },
+    {
+      "sample_index": 371,
+      "venue_id": "venue:063080:sorrento:gelateria-chist-ammore",
+      "template": "exact_name_locality_street",
+      "query": "\"Gelateria Chist'ammore\" \"Sorrento\" \"Corso Italia\""
+    },
+    {
+      "sample_index": 372,
+      "venue_id": "venue:062010:bucciano:rusticana",
+      "template": "exact_name_locality",
+      "query": "\"La Rusticana\" \"Bucciano\""
+    },
+    {
+      "sample_index": 373,
+      "venue_id": "venue:063014:capri:salotto-bohemien-capri-wine-lounge-terrace",
+      "template": "exact_name_locality",
+      "query": "\"Salotto Bohèmien Capri - wine lounge terrace\" \"Capri\""
+    },
+    {
+      "sample_index": 374,
+      "venue_id": "venue:062008:benevento:renoir",
+      "template": "exact_name_locality",
+      "query": "\"Caffe Renoir\" \"Benevento\""
+    },
+    {
+      "sample_index": 375,
+      "venue_id": "venue:062001:airola:antovin",
+      "template": "exact_name_locality_street",
+      "query": "\"Antovin\" \"Airola\" \"Via Caudisi\""
+    },
+    {
+      "sample_index": 376,
+      "venue_id": "venue:071022:deliceto:casa-romano",
+      "template": "exact_name_locality_street",
+      "query": "\"Casa Romano\" \"Deliceto\" \"Via Fontana Vico 1\""
+    },
+    {
+      "sample_index": 377,
+      "venue_id": "venue:110005:margherita-di-savoia:plaza-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Plaza cafe\" \"Margherita di Savoia\" \"Corso Vittorio Emanuele\""
+    },
+    {
+      "sample_index": 378,
+      "venue_id": "venue:073013:martina-franca:da-nico-food-beverage",
+      "template": "exact_name_locality",
+      "query": "\"Da Nicò - Food & Beverage\" \"Martina Franca\""
+    },
+    {
+      "sample_index": 379,
+      "venue_id": "venue:074020:villa-castelli:evento-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Evento Cafe\" \"Villa Castelli\" \"Via Ceglie\""
+    },
+    {
+      "sample_index": 380,
+      "venue_id": "venue:072019:conversano:rosticceria-fuego",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Pizzeria Rosticceria FUEGO\" \"Conversano\" \"Via dei Longobardi\""
+    },
+    {
+      "sample_index": 381,
+      "venue_id": "venue:074001:brindisi:pacman-brindisi",
+      "template": "exact_name_locality",
+      "query": "\"Pacman Brindisi\" \"Brindisi\""
+    },
+    {
+      "sample_index": 382,
+      "venue_id": "venue:075064:ruffano:grotta",
+      "template": "exact_name_locality_street",
+      "query": "\"La Grotta\" \"Ruffano\" \"Piazza della Libertà\""
+    },
+    {
+      "sample_index": 383,
+      "venue_id": "venue:071051:san-severo:focaccia",
+      "template": "exact_name_locality_street",
+      "query": "\"La focaccia\" \"San Severo\" \"Viale Giacomo Matteotti\""
+    },
+    {
+      "sample_index": 384,
+      "venue_id": "venue:072006:bari:jerome-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Jerome Cafe\" \"Bari\" \"Via Alessandro Maria Calefati\""
+    },
+    {
+      "sample_index": 385,
+      "venue_id": "venue:110008:spinazzola:new-paradise",
+      "template": "exact_name_locality",
+      "query": "\"New Paradise\" \"Spinazzola\""
+    },
+    {
+      "sample_index": 386,
+      "venue_id": "venue:072003:alberobello:republic-19",
+      "template": "exact_name_locality_street",
+      "query": "\"Republic 19\" \"Alberobello\" \"Via Don Francesco Gigante\""
+    },
+    {
+      "sample_index": 387,
+      "venue_id": "venue:110009:trani:civico-10",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Civico 10\" \"Trani\" \"Via Giuseppe De Robertis\""
+    },
+    {
+      "sample_index": 388,
+      "venue_id": "venue:075006:aradeo:giore",
+      "template": "exact_name_locality_street",
+      "query": "\"Giorè\" \"Aradeo\" \"Piazzetta Grassi\""
+    },
+    {
+      "sample_index": 389,
+      "venue_id": "venue:072043:terlizzi:cubo",
+      "template": "exact_name_locality_street",
+      "query": "\"Il Cubo\" \"Terlizzi\" \"Via Luigi Settembrini\""
+    },
+    {
+      "sample_index": 390,
+      "venue_id": "venue:075035:lecce:settimo-cielo",
+      "template": "exact_name_locality",
+      "query": "\"Settimo Cielo\" \"Lecce\""
+    },
+    {
+      "sample_index": 391,
+      "venue_id": "venue:071012:carpino:lu-bar-la-signor",
+      "template": "exact_name_locality",
+      "query": "\"Lu' Bar La Signor\" \"Carpino\""
+    },
+    {
+      "sample_index": 392,
+      "venue_id": "venue:075093:vernole:castle-street-the-original-pizzeria",
+      "template": "exact_name_locality",
+      "query": "\"Castle Street The Original Pizzeria\" \"Vernole\""
+    },
+    {
+      "sample_index": 393,
+      "venue_id": "venue:110001:andria:beercollo",
+      "template": "exact_name_locality_street",
+      "query": "\"Beercollo\" \"Andria\" \"Corso Camillo Benso di Cavour\""
+    },
+    {
+      "sample_index": 394,
+      "venue_id": "venue:073014:maruggio:sandrino",
+      "template": "exact_name_locality_street",
+      "query": "\"Sandrino\" \"Maruggio\" \"Via Dante Alighieri\""
+    },
+    {
+      "sample_index": 395,
+      "venue_id": "venue:073015:massafra:dejavu-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Dejavu cafe\" \"Massafra\" \"Piazza Vittorio Emanuele\""
+    },
+    {
+      "sample_index": 396,
+      "venue_id": "venue:073027:taranto:bella-mia",
+      "template": "exact_name_locality_street",
+      "query": "\"Bella Mia\" \"Taranto\" \"Via Niccolò Tommaso d'Aquino\""
+    },
+    {
+      "sample_index": 397,
+      "venue_id": "venue:075084:taurisano:periferia",
+      "template": "exact_name_locality_street",
+      "query": "\"Periferia\" \"Taurisano\" \"Via Aldo Moro\""
+    },
+    {
+      "sample_index": 398,
+      "venue_id": "venue:072029:molfetta:vasco-caffe",
+      "template": "exact_name_locality_street",
+      "query": "\"Vasco Caffè\" \"Molfetta\" \"Via Pansini Legnami\""
+    },
+    {
+      "sample_index": 399,
+      "venue_id": "venue:071024:foggia:corte-sant-elena",
+      "template": "exact_name_locality",
+      "query": "\"Corte Sant'Elena\" \"Foggia\""
+    },
+    {
+      "sample_index": 400,
+      "venue_id": "venue:072040:sannicandro-di-bari:piccadilly",
+      "template": "exact_name_locality_street",
+      "query": "\"Piccadilly\" \"Sannicandro di Bari\" \"Via Calambra\""
+    },
+    {
+      "sample_index": 401,
+      "venue_id": "venue:077013:irsina:ducale-ristorante-pizzeria-braceria",
+      "template": "exact_name_locality",
+      "query": "\"Il Ducale Ristorante Pizzeria Braceria\" \"Irsina\""
+    },
+    {
+      "sample_index": 402,
+      "venue_id": "venue:076007:avigliano:anema-e-core",
+      "template": "exact_name_locality",
+      "query": "\"Anema e Core\" \"Avigliano\""
+    },
+    {
+      "sample_index": 403,
+      "venue_id": "venue:077014:matera:villa-ristories",
+      "template": "exact_name_locality",
+      "query": "\"Villa Ristòries\" \"Matera\""
+    },
+    {
+      "sample_index": 404,
+      "venue_id": "venue:077017:montescaglioso:bon-ton",
+      "template": "exact_name_locality_street",
+      "query": "\"Bon Ton\" \"Montescaglioso\" \"Via Gaetano Donizetti\""
+    },
+    {
+      "sample_index": 405,
+      "venue_id": "venue:076048:melfi:sfizio-melfi",
+      "template": "exact_name_locality",
+      "query": "\"Sfizio Melfi\" \"Melfi\""
+    },
+    {
+      "sample_index": 406,
+      "venue_id": "venue:076063:potenza:central-station-caffe",
+      "template": "exact_name_locality",
+      "query": "\"Central Station Caffe\" \"Potenza\""
+    },
+    {
+      "sample_index": 407,
+      "venue_id": "venue:076085:senise:eldorado-pub",
+      "template": "exact_name_locality",
+      "query": "\"Eldorado Pub\" \"Senise\""
+    },
+    {
+      "sample_index": 408,
+      "venue_id": "venue:076044:maratea:gelateria-pasticceria-da-riccardo",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Gelateria Pasticceria Da Riccardo\" \"Maratea\" \"Via Santavenere\""
+    },
+    {
+      "sample_index": 409,
+      "venue_id": "venue:077014:matera:girotondo-di-pizza",
+      "template": "exact_name_locality",
+      "query": "\"Girotondo di pizza\" \"Matera\""
+    },
+    {
+      "sample_index": 410,
+      "venue_id": "venue:076056:oppido-lucano:85015-ristopub",
+      "template": "exact_name_locality",
+      "query": "\"85015 Ristopub\" \"Oppido Lucano\""
+    },
+    {
+      "sample_index": 411,
+      "venue_id": "venue:076066:rionero-in-vulture:vecchio-cortile",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Osteria Vecchio Cortile\" \"Rionero in Vulture\" \"Via Luigi la Vista\""
+    },
+    {
+      "sample_index": 412,
+      "venue_id": "venue:076063:potenza:mediterraneo",
+      "template": "exact_name_locality",
+      "query": "\"Caffe Mediterraneo\" \"Potenza\""
+    },
+    {
+      "sample_index": 413,
+      "venue_id": "venue:076059:picerno:plebiscito-cafe-bistrot",
+      "template": "exact_name_locality",
+      "query": "\"Plebiscito Cafè - Bistrot\" \"Picerno\""
+    },
+    {
+      "sample_index": 414,
+      "venue_id": "venue:077021:policoro:rosa",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Rosa\" \"Policoro\" \"Via Siris\""
+    },
+    {
+      "sample_index": 415,
+      "venue_id": "venue:076063:potenza:pipistrello-pub",
+      "template": "exact_name_locality",
+      "query": "\"Pipistrello Pub\" \"Potenza\""
+    },
+    {
+      "sample_index": 416,
+      "venue_id": "venue:076056:oppido-lucano:ice-cream-cafe-lounge",
+      "template": "exact_name_locality",
+      "query": "\"Ice Cream Cafè & Lounge\" \"Oppido Lucano\""
+    },
+    {
+      "sample_index": 417,
+      "venue_id": "venue:077003:bernalda:san-donato",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante - Pizzeria San Donato\" \"Bernalda\" \"Corso Umberto I\""
+    },
+    {
+      "sample_index": 418,
+      "venue_id": "venue:077014:matera:paradiso-del-boschetto",
+      "template": "exact_name_locality",
+      "query": "\"Paradiso del boschetto\" \"Matera\""
+    },
+    {
+      "sample_index": 419,
+      "venue_id": "venue:077008:ferrandina:da-vincenzo-1977",
+      "template": "exact_name_locality",
+      "query": "\"Da Vincenzo 1977\" \"Ferrandina\""
+    },
+    {
+      "sample_index": 420,
+      "venue_id": "venue:076095:venosa:boulevard-cafe",
+      "template": "exact_name_locality",
+      "query": "\"Boulevard Cafe\" \"Venosa\""
+    },
+    {
+      "sample_index": 421,
+      "venue_id": "venue:076063:potenza:mcdonald-s",
+      "template": "official_chain_branch",
+      "query": "site:mcdonalds.it \"Viale del Basento\" \"Potenza\""
+    },
+    {
+      "sample_index": 422,
+      "venue_id": "venue:076040:latronico:perla-nera",
+      "template": "exact_name_locality",
+      "query": "\"La perla nera\" \"Latronico\""
+    },
+    {
+      "sample_index": 423,
+      "venue_id": "venue:077020:pisticci:16-parallelo",
+      "template": "exact_name_locality",
+      "query": "\"16° Parallelo\" \"Pisticci\""
+    },
+    {
+      "sample_index": 424,
+      "venue_id": "venue:077014:matera:rl-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Rl Cafe\" \"Matera\" \"Via Monte Rosa\""
+    },
+    {
+      "sample_index": 425,
+      "venue_id": "venue:076046:marsicovetere:da-massimino",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria da Massimino\" \"Marsicovetere\" \"Via Quinto Orazio Flacco\""
+    },
+    {
+      "sample_index": 426,
+      "venue_id": "venue:078037:cerisano:las-vegas",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Las Vegas\" \"Cerisano\" \"Via San Pietro\""
+    },
+    {
+      "sample_index": 427,
+      "venue_id": "venue:078138:scalea:l-oliva",
+      "template": "exact_name_locality",
+      "query": "\"Osteria L'Oliva\" \"Scalea\""
+    },
+    {
+      "sample_index": 428,
+      "venue_id": "venue:079023:catanzaro:maxcafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Maxcafè\" \"Catanzaro\" \"Via Contrada Janò\""
+    },
+    {
+      "sample_index": 429,
+      "venue_id": "venue:078093:parenti:speedy-food-drink",
+      "template": "exact_name_locality",
+      "query": "\"Speedy Food & Drink\" \"Parenti\""
+    },
+    {
+      "sample_index": 430,
+      "venue_id": "venue:102047:vibo-valentia:270-grammi-pizzeria-friggitoria-vibo-valentia",
+      "template": "exact_name_locality",
+      "query": "\"270 Grammi Pizzeria Friggitoria Vibo Valentia\" \"Vibo Valentia\""
+    },
+    {
+      "sample_index": 431,
+      "venue_id": "venue:080063:reggio-di-calabria:pasticceria-fragomeni",
+      "template": "exact_name_locality",
+      "query": "\"Pasticceria Fragomeni\" \"Reggio di Calabria\""
+    },
+    {
+      "sample_index": 432,
+      "venue_id": "venue:078066:lattarico:monaco-ristorante",
+      "template": "exact_name_locality",
+      "query": "\"Il Monaco ristorante\" \"Lattarico\""
+    },
+    {
+      "sample_index": 433,
+      "venue_id": "venue:080025:caulonia:friggitoria-ma-no-chips",
+      "template": "exact_name_locality",
+      "query": "\"Friggitoria ma.no chips\" \"Caulonia\""
+    },
+    {
+      "sample_index": 434,
+      "venue_id": "venue:078157:corigliano-rossano:olimpia",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Olimpia\" \"Corigliano-Rossano\" \"Via Margherita\""
+    },
+    {
+      "sample_index": 435,
+      "venue_id": "venue:078025:cariati:san-gennaro",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria San Gennaro\" \"Cariati\" \"Via Dante Alighieri\""
+    },
+    {
+      "sample_index": 436,
+      "venue_id": "venue:080096:villa-san-giovanni:icaffe-capsule-e-cialde-per-caffe",
+      "template": "exact_name_locality",
+      "query": "\"Icaffe Capsule e Cialde per Caffe\" \"Villa San Giovanni\""
+    },
+    {
+      "sample_index": 437,
+      "venue_id": "venue:078045:cosenza:morrison-s-pub",
+      "template": "exact_name_locality",
+      "query": "\"Morrison's Pub\" \"Cosenza\""
+    },
+    {
+      "sample_index": 438,
+      "venue_id": "venue:080013:bova-marina:di-petru-i-ntoni",
+      "template": "exact_name_locality",
+      "query": "\"Di Petru i ‘Ntoni\" \"Bova Marina\""
+    },
+    {
+      "sample_index": 439,
+      "venue_id": "venue:078091:paola:desire",
+      "template": "exact_name_locality_street",
+      "query": "\"Desire\" \"Paola\" \"Via Nazionale\""
+    },
+    {
+      "sample_index": 440,
+      "venue_id": "venue:078157:corigliano-rossano:peterland-corigliano-rossano",
+      "template": "exact_name_locality",
+      "query": "\"Peterland Corigliano Rossano\" \"Corigliano-Rossano\""
+    },
+    {
+      "sample_index": 441,
+      "venue_id": "venue:078145:tarsia:sinopoli-industrial-cafe",
+      "template": "exact_name_locality",
+      "query": "\"Sinopoli Industrial Cafe\" \"Tarsia\""
+    },
+    {
+      "sample_index": 442,
+      "venue_id": "venue:079137:soverato:stuzzichino",
+      "template": "exact_name_locality",
+      "query": "\"Lo stuzzichino\" \"Soverato\""
+    },
+    {
+      "sample_index": 443,
+      "venue_id": "venue:079023:catanzaro:pizza-e-sfizi",
+      "template": "exact_name_locality",
+      "query": "\"Pizza e Sfizi\" \"Catanzaro\""
+    },
+    {
+      "sample_index": 444,
+      "venue_id": "venue:102042:spilinga:gelati-dominique",
+      "template": "exact_name_locality",
+      "query": "\"Gelati Dominique\" \"Spilinga\""
+    },
+    {
+      "sample_index": 445,
+      "venue_id": "venue:079160:lamezia-terme:mary-s-pub",
+      "template": "exact_name_locality_street",
+      "query": "\"Mary's Pub\" \"Lamezia Terme\" \"Via del Mare\""
+    },
+    {
+      "sample_index": 446,
+      "venue_id": "venue:079023:catanzaro:a-c-triolo",
+      "template": "exact_name_locality_street",
+      "query": "\"A&C Triolo\" \"Catanzaro\" \"Via Lungomare Stefano Pugliese\""
+    },
+    {
+      "sample_index": 447,
+      "venue_id": "venue:078004:aiello-calabro:borgo-antico",
+      "template": "exact_name_locality",
+      "query": "\"Borgo Antico\" \"Aiello Calabro\""
+    },
+    {
+      "sample_index": 448,
+      "venue_id": "venue:080045:marina-di-gioiosa-ionica:karaba-spaghetteria",
+      "template": "exact_name_locality",
+      "query": "\"Karabà Spaghetteria\" \"Marina di Gioiosa Ionica\""
+    },
+    {
+      "sample_index": 449,
+      "venue_id": "venue:078045:cosenza:barbuscio-la-cappuccineria",
+      "template": "exact_name_locality",
+      "query": "\"Barbuscio La Cappuccineria\" \"Cosenza\""
+    },
+    {
+      "sample_index": 450,
+      "venue_id": "venue:078013:belmonte-calabro:esso",
+      "template": "exact_name_locality_street",
+      "query": "\"Esso\" \"Belmonte Calabro\" \"VIA VERI (S.S. 18 KM. 340+680)\""
+    },
+    {
+      "sample_index": 451,
+      "venue_id": "venue:084019:joppolo-giancaxio:duca",
+      "template": "exact_name_locality_street",
+      "query": "\"Il Duca\" \"Joppolo Giancaxio\" \"Piazza Curiale\""
+    },
+    {
+      "sample_index": 452,
+      "venue_id": "venue:081012:mazara-del-vallo:giulia-caffe",
+      "template": "exact_name_locality",
+      "query": "\"Giulia Caffe\" \"Mazara del Vallo\""
+    },
+    {
+      "sample_index": 453,
+      "venue_id": "venue:083097:taormina:tiramisu-taormina",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Tiramisù Taormina\" \"Taormina\" \"Via Cappuccini\""
+    },
+    {
+      "sample_index": 454,
+      "venue_id": "venue:083061:nizza-di-sicilia:lido-primosole",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Lido Primosole\" \"Nizza di Sicilia\" \"Via Lungomare Unità dell'Italia\""
+    },
+    {
+      "sample_index": 455,
+      "venue_id": "venue:088003:comiso:scornavacche-turismo-rurale",
+      "template": "exact_name_locality",
+      "query": "\"Scornavacche Turismo Rurale\" \"Comiso\""
+    },
+    {
+      "sample_index": 456,
+      "venue_id": "venue:082053:palermo:roxy-ristofriggitoria",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Roxy Ristofriggitoria\" \"Palermo\" \"Piazza Mondello\""
+    },
+    {
+      "sample_index": 457,
+      "venue_id": "venue:083106:terme-vigliatore:gelato-mania",
+      "template": "exact_name_locality",
+      "query": "\"Gelato Mania\" \"Terme Vigliatore\""
+    },
+    {
+      "sample_index": 458,
+      "venue_id": "venue:084023:menfi:slurp",
+      "template": "exact_name_locality_street",
+      "query": "\"Slurp\" \"Menfi\" \"Via Piemonte\""
+    },
+    {
+      "sample_index": 459,
+      "venue_id": "venue:087015:catania:antica-focacceria-san-francesco",
+      "template": "exact_name_locality",
+      "query": "\"Antica Focacceria San Francesco\" \"Catania\""
+    },
+    {
+      "sample_index": 460,
+      "venue_id": "venue:089005:canicattini-bagni:rosa-di-reali-giuseppe",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar La Rosa di Reali Giuseppe\" \"Canicattini Bagni\" \"Via Vittorio Emanuele\""
+    },
+    {
+      "sample_index": 461,
+      "venue_id": "venue:081008:erice:baretto",
+      "template": "exact_name_locality_street",
+      "query": "\"Al Baretto\" \"Erice\" \"Via Cosenza\""
+    },
+    {
+      "sample_index": 462,
+      "venue_id": "venue:084001:agrigento:anima-e-cori",
+      "template": "exact_name_locality",
+      "query": "\"Anima e Cori\" \"Agrigento\""
+    },
+    {
+      "sample_index": 463,
+      "venue_id": "venue:084002:alessandria-della-rocca:roma-caffe",
+      "template": "exact_name_locality_street",
+      "query": "\"Roma Caffè\" \"Alessandria della Rocca\" \"Via Roma\""
+    },
+    {
+      "sample_index": 464,
+      "venue_id": "venue:081001:alcamo:foresteria-san-giacomo",
+      "template": "exact_name_locality",
+      "query": "\"Foresteria San Giacomo\" \"Alcamo\""
+    },
+    {
+      "sample_index": 465,
+      "venue_id": "venue:089017:siracusa:nazionale",
+      "template": "exact_name_locality_street",
+      "query": "\"Ristorante Pizzeria Nazionale\" \"Siracusa\" \"Via Vitaliano Brancati\""
+    },
+    {
+      "sample_index": 466,
+      "venue_id": "venue:089012:melilli:vizi-e-sfizi",
+      "template": "exact_name_locality",
+      "query": "\"Vizi e Sfizi\" \"Melilli\""
+    },
+    {
+      "sample_index": 467,
+      "venue_id": "venue:085007:gela:naif",
+      "template": "exact_name_locality_street",
+      "query": "\"Cafe Naif\" \"Gela\" \"Corso Salvatore Aldisio\""
+    },
+    {
+      "sample_index": 468,
+      "venue_id": "venue:088009:ragusa:carpe-diem-caffetteria",
+      "template": "exact_name_locality",
+      "query": "\"Carpe Diem Caffetteria\" \"Ragusa\""
+    },
+    {
+      "sample_index": 469,
+      "venue_id": "venue:083015:castelmola:nina",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Nina\" \"Castelmola\" \"Via Tutti I Santi\""
+    },
+    {
+      "sample_index": 470,
+      "venue_id": "venue:082022:castelbuono:monkey-fast-food-gourmet",
+      "template": "exact_name_locality",
+      "query": "\"Monkey Fast Food Gourmet\" \"Castelbuono\""
+    },
+    {
+      "sample_index": 471,
+      "venue_id": "venue:081021:trapani:gelateria-liparoti",
+      "template": "exact_name_locality_street",
+      "query": "\"Gelateria Liparoti\" \"Trapani\" \"Via Sirene\""
+    },
+    {
+      "sample_index": 472,
+      "venue_id": "venue:084042:siculiana:ginestra-siculiana",
+      "template": "exact_name_locality",
+      "query": "\"La Ginestra Siculiana\" \"Siculiana\""
+    },
+    {
+      "sample_index": 473,
+      "venue_id": "venue:087006:adrano:noir",
+      "template": "exact_name_locality_street",
+      "query": "\"Cafè Noir\" \"Adrano\" \"Via Aurelio Spampinato\""
+    },
+    {
+      "sample_index": 474,
+      "venue_id": "venue:087004:acireale:mulino",
+      "template": "exact_name_locality_street",
+      "query": "\"Al Mulino\" \"Acireale\" \"Lungomare Mario Martinez\""
+    },
+    {
+      "sample_index": 475,
+      "venue_id": "venue:082023:casteldaccia:113",
+      "template": "exact_name_locality_street",
+      "query": "\"Cafe 113\" \"Casteldaccia\" \"SS113\""
+    },
+    {
+      "sample_index": 476,
+      "venue_id": "venue:116014:perdasdefogu:sa-brecca",
+      "template": "exact_name_locality_street",
+      "query": "\"Sa Brecca\" \"Perdasdefogu\" \"Località Santa Barbara\""
+    },
+    {
+      "sample_index": 477,
+      "venue_id": "venue:113004:arzachena:l-angoletto",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria L'Angoletto\" \"Arzachena\" \"Via Lungomare A. Doria\""
+    },
+    {
+      "sample_index": 478,
+      "venue_id": "venue:118006:cagliari:24",
+      "template": "exact_name_locality_street",
+      "query": "\"Café 24\" \"Cagliari\" \"Viale La Plaia\""
+    },
+    {
+      "sample_index": 479,
+      "venue_id": "venue:119024:teulada:ittiturismo-la-pescheria",
+      "template": "exact_name_locality",
+      "query": "\"Ittiturismo La Pescheria\" \"Teulada\""
+    },
+    {
+      "sample_index": 480,
+      "venue_id": "venue:119009:iglesias:food-mine",
+      "template": "exact_name_locality_street",
+      "query": "\"Food Mine\" \"Iglesias\" \"Piazza Quintino Sella\""
+    },
+    {
+      "sample_index": 481,
+      "venue_id": "venue:112050:sassari:copacabana-club",
+      "template": "exact_name_locality",
+      "query": "\"Copacabana Club\" \"Sassari\""
+    },
+    {
+      "sample_index": 482,
+      "venue_id": "venue:117007:gonnosfanadiga:centrale-gelateria-di-spina-salvatore",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Centrale Gelateria di Spina Salvatore\" \"Gonnosfanadiga\" \"Via Porru Bonelli\""
+    },
+    {
+      "sample_index": 483,
+      "venue_id": "venue:113020:palau:casetta-di-iris",
+      "template": "exact_name_locality",
+      "query": "\"la casetta di IRIS\" \"Palau\""
+    },
+    {
+      "sample_index": 484,
+      "venue_id": "venue:113017:olbia:riflesso-sul-porto",
+      "template": "exact_name_locality",
+      "query": "\"Il Riflesso sul Porto\" \"Olbia\""
+    },
+    {
+      "sample_index": 485,
+      "venue_id": "venue:112066:villanova-monteleone:pizzanu-s-pizzeria-ristorante",
+      "template": "exact_name_locality",
+      "query": "\"Pizzanu's Pizzeria Ristorante\" \"Villanova Monteleone\""
+    },
+    {
+      "sample_index": 486,
+      "venue_id": "venue:119003:carbonia:enocaffe",
+      "template": "exact_name_locality_street",
+      "query": "\"Enocaffe\" \"Carbonia\" \"Vico Costituente\""
+    },
+    {
+      "sample_index": 487,
+      "venue_id": "venue:112050:sassari:tical-music-pub",
+      "template": "exact_name_locality",
+      "query": "\"Tical Music Pub\" \"Sassari\""
+    },
+    {
+      "sample_index": 488,
+      "venue_id": "venue:114006:bitti:italiano",
+      "template": "exact_name_locality_street",
+      "query": "\"Bar Caffè Italiano\" \"Bitti\" \"Via Mulinu\""
+    },
+    {
+      "sample_index": 489,
+      "venue_id": "venue:114048:siniscola:boutique-del-gelato",
+      "template": "exact_name_locality",
+      "query": "\"Boutique del Gelato\" \"Siniscola\""
+    },
+    {
+      "sample_index": 490,
+      "venue_id": "venue:112001:alghero:parco-dei-pini-alghero",
+      "template": "exact_name_locality",
+      "query": "\"Il Parco dei Pini - Alghero\" \"Alghero\""
+    },
+    {
+      "sample_index": 491,
+      "venue_id": "venue:119011:musei:king-of-130",
+      "template": "exact_name_locality_street",
+      "query": "\"King of 130\" \"Musei\" \"Strada Provinciale per Montresta Bivio Strada Statale\""
+    },
+    {
+      "sample_index": 492,
+      "venue_id": "venue:118029:muravera:zio-ciro",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Zio Ciro\" \"Muravera\" \"Via Montessori\""
+    },
+    {
+      "sample_index": 493,
+      "venue_id": "venue:118006:cagliari:lithium-cafe",
+      "template": "exact_name_locality",
+      "query": "\"Lithium Cafe\" \"Cagliari\""
+    },
+    {
+      "sample_index": 494,
+      "venue_id": "venue:112053:sennori:buena-cafe",
+      "template": "exact_name_locality_street",
+      "query": "\"Buena Cafe\" \"Sennori\" \"Via Giorgio la Pira\""
+    },
+    {
+      "sample_index": 495,
+      "venue_id": "venue:115045:oristano:gelateria-smeralda",
+      "template": "exact_name_locality_street",
+      "query": "\"Gelateria Smeralda\" \"Oristano\" \"Corso Umberto I\""
+    },
+    {
+      "sample_index": 496,
+      "venue_id": "venue:113017:olbia:sergio-ristorante-pizzeria",
+      "template": "exact_name_locality",
+      "query": "\"SerGio Ristorante Pizzeria\" \"Olbia\""
+    },
+    {
+      "sample_index": 497,
+      "venue_id": "venue:116019:ulassai:mani-in-pasta",
+      "template": "exact_name_locality",
+      "query": "\"Le Mani In Pasta\" \"Ulassai\""
+    },
+    {
+      "sample_index": 498,
+      "venue_id": "venue:117025:villacidro:letterario",
+      "template": "exact_name_locality",
+      "query": "\"Caffè Letterario\" \"Villacidro\""
+    },
+    {
+      "sample_index": 499,
+      "venue_id": "venue:112001:alghero:none-vineria",
+      "template": "exact_name_locality",
+      "query": "\"NONE vineria\" \"Alghero\""
+    },
+    {
+      "sample_index": 500,
+      "venue_id": "venue:117008:guspini:pizza-undici",
+      "template": "exact_name_locality_street",
+      "query": "\"Pizzeria Pizza Undici\" \"Guspini\" \"Via Nuoro\""
+    }
+  ]
+}

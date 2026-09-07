@@ -192,7 +192,9 @@ currently supplies trusted ownership attestations at runtime, and the correction
 has only been replayed against cases already seen during the two failed pilots.
 Make attestations durable and reviewable, then test the system against a broad,
 preselected set of previously unseen venues before considering another Brave
-request.
+request. Once validation passes, national rollout follows
+`ZERO-COST-ENRICHMENT-PLAN.md` (crawl-only baseline first, free discovery for
+the backlog); Brave is not part of scaling.
 
 ### Stage 1 — freeze the unseen evaluation design before changing more rules
 

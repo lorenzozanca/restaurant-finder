@@ -1,0 +1,2330 @@
+{
+  "schema_version": 1,
+  "fixture_set": "session-12-powered-locked-holdout-extension-capture-201-300",
+  "partition": "locked_holdout",
+  "source": "codex_integrated_web_search",
+  "brave_requests_made": 0,
+  "selection_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+  "bounded_result_limit": 5,
+  "entries": [
+    {
+      "venue_id": "venue:046021:montecarlo:syrah",
+      "query": "\"Ristorante Syrah\" \"Montecarlo\" \"Via di Montecarlo\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Comune di Montecarlo - Ristoranti",
+          "url": "https://www.comune.montecarlo.lu.it/home/vivere/territorio/Cultura-e-Turismo/Ospitalit--/Ristoranti.html"
+        },
+        {
+          "title": "Menù completo e carta 2026 - Ristorante Syrah a Montecarlo | TheFork",
+          "url": "https://www.thefork.it/ristorante/ristorante-syrah-r455209/menu"
+        },
+        {
+          "title": "Ristorante Syrah a Montecarlo - Menu, prezzi, immagini, recensioni e indirizzo del ristorante | TheFork",
+          "url": "https://www.thefork.it/ristorante/ristorante-syrah-r455209"
+        },
+        {
+          "title": "Ristorante Syrah - Ristorante in Montecarlo - ViaMichelin",
+          "url": "https://www.viamichelin.it/mappe-piantine/ristoranti/poi/montecarlo-55015-d3bb2abe?bounds=10.6297982%7E43.7857342%7E10.7279438%7E43.848048&filters=%7B%22ACCOMMODATION_RATE%22%3A7%7D&itinerary=&poiCategories=7&selectedAddress=%7B%22address%22%3A%22Marginone%22%2C%22entityType%22%3A%22CITY%22%2C%22coordinates%22%3A%7B%22lng%22%3A10.6911765%2C%22lat%22%3A43.8371721%7D%2C%22boundsSync%22%3Atrue%2C%22region%22%3A%22Toscana%22%2C%22zipCode%22%3A%2255011%22%2C%22countryCode%22%3A%22ITA%22%2C%22city%22%3A%22Marginone%22%7D&zoiSettings=%7E20"
+        },
+        {
+          "title": "Restaurant Ristorante Syrah à Montecarlo - Menu, avis, prix et réservation | TheFork",
+          "url": "https://www.thefork.fr/restaurant/ristorante-syrah-r455209"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:047011:montecatini-terme:dany",
+      "query": "\"Bar Dany\" \"Montecatini-Terme\" \"Via Enrico Toti\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to BAR DANY, Via Enrico Toti, Montecatini-Terme - Waze",
+          "url": "https://www.waze.com/live-map/directions/bar-dany-via-enrico-toti-montecatini-terme?to=place.w.7078327.70586660.8416037"
+        },
+        {
+          "title": "Bar Dany, Montecatini Terme - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/BAR-DANY-Montecatini-Terme"
+        },
+        {
+          "title": "▷ Bar Dany, Montecatini-Terme",
+          "url": "https://www.cylex-italia.it/montecatini-terme/bar-dany-15755702.html"
+        },
+        {
+          "title": "Orari di apertura Bar Dany ▷ Montecatini-Terme VIA ENRICO TOTI 33, Montecatini-Terme, Pistoia, 51016 | Trova Aperto",
+          "url": "https://trova-aperto.it/montecatini-terme/bar-dany-2543752"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Bar Dany“ | Via Enrico Toti",
+          "url": "https://www.oraridiapertura24.it/filiale/Montecatini%2520Terme-Bar%2520Dany-845703Y.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:050026:pisa:letterario-volta-pagina",
+      "query": "\"Caffè Letterario Volta Pagina\" \"Pisa\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Locali convenzionati – FISAR Delegazione Storica di Pisa APS",
+          "url": "https://www.fisarpisa.it/locali-convenzionati/"
+        },
+        {
+          "title": "Caffè Letterario Volta Pagina - Libreria a Pisa ▷ Via S. Martino, 71, 56125, Pisa | Firmania",
+          "url": "https://firmania.it/pisa/caff%C3%A8-letterario-volta-pagina-2493306"
+        },
+        {
+          "title": "CAFFÈ LETTERARIO VOLTA PAGINA, Pisa - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187899-d3442161-Reviews-Caffe_Letterario_Volta_Pagina-Pisa_Province_of_Pisa_Tuscany.html"
+        },
+        {
+          "title": "Caffè Letterario Volta Pagina, Via San Martino 71-73, Pisa (2026)",
+          "url": "https://www.foodyas.com/IT/Pisa/130353853767899/Caff%C3%A8-Letterario-Volta-Pagina"
+        },
+        {
+          "title": "Caffè Letterario Volta Pagina in Pisa | In Your Pocket",
+          "url": "https://www.inyourpocket.com/italy/pisa/venues/caffe-letterario-volta-pagina"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:049011:marciana-marina:tanta-roba-schiaccineria-pizzeria",
+      "query": "\"Tanta Roba Schiaccineria Pizzeria\" \"Marciana Marina\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Tanta Roba Schiaccineria Pizzeria - Marciana Marina, Provincia di Livorno Pesce Fresco Online",
+          "url": "https://pescevia.it/tanta-roba-schiaccineria-pizzeria/"
+        },
+        {
+          "title": "Tanta Roba Schiaccineria Pizzeria | Marciana Marina",
+          "url": "https://www.tuttiaffari.com/tanta-roba-schiaccineria-pizzeria"
+        },
+        {
+          "title": "Tanta Roba Schiaccineria Pizzeria, Marciana Marina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Tanta-roba-Marciana-Marina"
+        },
+        {
+          "title": "Tanta Roba Schiaccineria Pizzeria, Marciana Marina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Tanta-roba-Marciana-Marina"
+        },
+        {
+          "title": "Tanta Roba Schiaccineria Pizzeria, Portoferraio, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/2937859/tanta-roba-schiaccineria-pizzeria"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:048014:empoli:spizzometro-empoli",
+      "query": "\"Spizzometro Empoli\" \"Empoli\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Spizzometro - Empoli | Ristorante nelle mie vicinanze",
+          "url": "https://spizzometro.eatbu.com/?lang=it"
+        },
+        {
+          "title": "SPIZZOMETRO, Empoli - Via Dei Navicelli 10 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194754-d12459754-Reviews-Spizzometro-Empoli_Tuscany.html"
+        },
+        {
+          "title": "Spizzometro Empoli, Empoli - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Spizzometro-Empoli"
+        },
+        {
+          "title": "Spizzometro - Empoli | Restaurant near me",
+          "url": "https://spizzometro.eatbu.com/?lang=en"
+        },
+        {
+          "title": "SPIZZOMETRO, Empoli - Carta, fotos y opiniones del restaurante",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g194754-d12459754-Reviews-Spizzometro-Empoli_Tuscany.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:048017:firenze:mangiapepe",
+      "query": "\"Mangiapepe\" \"Firenze\" \"Via dei Macci\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Mangiapepe, 61r Via dei Macci, Firenze - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/toscana/firenze/mangiapepe?to=place.ChIJUUQK5EhVKhMRHeLlFCXFJT0"
+        },
+        {
+          "title": "Mangiapepe | 333 138 4921 | Firenze",
+          "url": "https://www.tuttiaffari.com/mangiapepe"
+        },
+        {
+          "title": "Mangiapepe Schiacciateria - Mangiapepe | LinkedIn",
+          "url": "https://it.linkedin.com/in/mangiapepe-schiacciateria-a43a54164"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046010:castiglione-di-garfagnana:castello",
+      "query": "\"Il Castello\" \"Castiglione di Garfagnana\" \"Località Cigiana di Sopra\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Il Castello, Castiglione di Garfagnana - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Il-Castello-Castiglione-di-Garfagnana"
+        },
+        {
+          "title": "Il Castello | 0583 68787 | Castiglione di Garfagnana",
+          "url": "https://www.tuttiaffari.com/il-castello_133f-0583-68787"
+        },
+        {
+          "title": "IL CASTELLO - Ristorante tipico italiano e regionale a Castiglione di Garfagnana | LocalShop24",
+          "url": "https://www.localshop24.com/it/castiglione-di-garfagnana-lu-it/attivita/ristorante-tipico-italiano-regionale/il-castello/"
+        },
+        {
+          "title": "Il Castello, Castiglione di Garfagnana | Menu, Foto, Recensioni e Prenotazione",
+          "url": "https://corestaurant.ch/it/Italy/restaurant/il-castello-castiglione-di-garfagnana-60802"
+        },
+        {
+          "title": "Il Castello, Castiglione di Garfagnana - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Il-Castello-Castiglione-di-Garfagnana"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:048021:greve-in-chianti:gelateria-mordicrema",
+      "query": "\"Gelateria Mordicrema\" \"Greve in Chianti\" \"Viale Vittorio Veneto\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "GELATERIA MORDICREMA, Greti - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g12058116-d27851068-Reviews-Gelateria_Mordicrema-Greti_Greve_in_Chianti_Tuscany.html"
+        },
+        {
+          "title": "GELATERIA MORDICREMA, Greti - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g12058116-d27851068-Reviews-Gelateria_Mordicrema-Greti_Greve_in_Chianti_Tuscany.html"
+        },
+        {
+          "title": "GELATERIA MORDICREMA - Gelateria a Greve in Chianti | LocalShop24",
+          "url": "https://www.localshop24.com/it/greve-in-chianti-fi-it/attivita/gelateria/gelateria-mordicrema/"
+        },
+        {
+          "title": "Gelateria Mordicrema - Greve Ice Cream - HappyCow",
+          "url": "https://www.happycow.net/reviews/gelateria-mordicrema-greve-301232"
+        },
+        {
+          "title": "Gelateria Mordicrema - Greve | Review \"Vegan gelato, not just sorbets\" by julssss - HappyCow",
+          "url": "https://www.happycow.net/reviews/gelateria-mordicrema-greve-301232/1077309"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046017:lucca:tagliapizza",
+      "query": "\"Tagliapizza\" \"Lucca\" \"Via Giovanni Battista Giorgini\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "TAGLIAPIZZA DI JBIRI HAMZA, Partita IVA: 02689220461, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/3857/tagliapizza-di-jbiri-hamza"
+        },
+        {
+          "title": "Tagliapizza Di Del Chiaro Manola Srl: Dati societari | Atoka",
+          "url": "https://atoka.io/public/it/azienda/tagliapizza-di-del-chiaro-manola-srl/c9c76db1eca6"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:100006:vaiano:circolo-arci-schignano",
+      "query": "\"Circolo ARCI Schignano\" \"Vaiano\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ALBO DELLE ASSOCIAZIONI DI VOLONTARIATO DEL COMUNE DI VAIANO (PO)",
+          "url": "https://www.comune.vaiano.po.it/amministrazione/uffici/ufficio-segreteria/albo-comunale-delle-associazioni-di-volontariato/documenti/albo-associazioni-elenco-ultima.pdf/%40%40download/file/Albo%20Associazioni%20Elenco%20ultima.pdf"
+        },
+        {
+          "title": "SCHIGNANO – Associazione ARCI Prato APS",
+          "url": "https://www.arciprato.it/category/circoli/schignano/"
+        },
+        {
+          "title": "CIRCOLO ARCI SCHIGNANO, Vaiano - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1180068-d27873018-Reviews-Circolo_Arci_Schignano-Vaiano_Province_of_Prato_Tuscany.html"
+        },
+        {
+          "title": "Arriva il dispensario farmaceutico a Schignano - Comune di Vaiano",
+          "url": "https://www.comune.vaiano.po.it/novita/notizie/arriva-il-dispensario-farmaceutico-a-schignano"
+        },
+        {
+          "title": "Schignano, domenica 21 settembre l'inaugurazione della scuola dell'infanzia - Comune di Vaiano",
+          "url": "https://www.comune.vaiano.po.it/novita/notizie/schignano-domenica-21-settembre-linaugurazione-della-scuola-dellinfanzia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:052028:san-gimignano:diba70-coffee",
+      "query": "\"Diba70 Coffee\" \"San Gimignano\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Diba70 – dal 1973 storie di caffè e momenti di piacere – Da 50 anni i migliori distributori automatici, macchine e prodotti per casa, ufficio e Horeca dall'Italia all'Honduras",
+          "url": "https://www.diba70.it/"
+        },
+        {
+          "title": "Diba70 Shop, San Gimignano - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Diba-70-srl-San-Gimignano"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Diba70 Coffee“ | Via Fugnano",
+          "url": "https://www.oraridiapertura24.it/filiale/San%2520Gimignano-Diba70%2520Coffee-1307218X.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:046033:viareggio:dal-siriano",
+      "query": "\"Dal Siriano\" \"Viareggio\" \"Via Ugo Foscolo\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Dove Mangiare a Viareggio: Ristoranti e Guida di un Local",
+          "url": "https://dovevado.net/dove-mangiare-a-viareggio-la-guida-completa-di-un-viareggino-doc/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:051041:pratovecchio-stia:trentatre-tuscan-bistro-bar",
+      "query": "\"Trentatré Tuscan Bistrò & Bar\" \"Pratovecchio Stia\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Locali Amici | Naturalmente Pianoforte | Food Casentino",
+          "url": "https://naturalmentepianoforte.it/locali-amici/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:048050:vinci:l-unicorno-bar-gelateria",
+      "query": "\"L' Unicorno Bar Gelateria\" \"Vinci\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar a Vinci - Cylex Ricerca locale",
+          "url": "https://www.cylex-italia.it/vinci/bar/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:047014:pistoia:berk-the-pub",
+      "query": "\"Berk the pub\" \"Pistoia\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Contatti – Berk The Pub",
+          "url": "https://berkthepub.com/contatti/"
+        },
+        {
+          "title": "BERK THE PUB - Pub a Pistoia | LocalShop24",
+          "url": "https://www.localshop24.com/it/pistoia-pt-it/attivita/pub/berk-the-pub/"
+        },
+        {
+          "title": "BERK THE PUB, Pistoia - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194851-d27875232-Reviews-Berk_The_Pub-Pistoia_Province_of_Pistoia_Tuscany.html"
+        },
+        {
+          "title": "BERK THE PUB, Pistoia - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g194851-d27875232-Reviews-Berk_The_Pub-Pistoia_Province_of_Pistoia_Tuscany.html"
+        },
+        {
+          "title": "BERK THE PUB, Pistoia - Restaurant Reviews & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194851-d27875232-Reviews-Berk_The_Pub-Pistoia_Province_of_Pistoia_Tuscany.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:050027:pomarance:dello-sport",
+      "query": "\"Caffe dello Sport\" \"Pomarance\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "CAFFE' DELLO SPORT, Pomarance - Ristorante Recensioni & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g776018-d4744444-Reviews-Caffe_Dello_Sport-Pomarance_Province_of_Pisa_Tuscany.html"
+        },
+        {
+          "title": "Caffè dello sport a Pomarance, la scommessa di Giulio Nanni che a 22 anni rileva il bar - Il Tirreno",
+          "url": "https://www.iltirreno.it/pontedera/cronaca/2026/04/15/news/il-coraggio-d-investire-a-pomarance-a-22-anni-rileva-il-caffe-dello-sport-1.100857465"
+        },
+        {
+          "title": "CAFFE' DELLO SPORT, Pomarance - Ristorante Recensioni & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g776018-d4744444-Reviews-Caffe_Dello_Sport-Pomarance_Province_of_Pisa_Tuscany.html"
+        },
+        {
+          "title": "CAFFE DELLO SPORT, Pomarance - Restaurant Reviews & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.in/Restaurant_Review-g776018-d4744444-Reviews-Caffe_Dello_Sport-Pomarance_Province_of_Pisa_Tuscany.html"
+        },
+        {
+          "title": "Caffè dello Sport, Pomarance - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-Dello-Sport-Pomarance-2"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:053009:follonica:f-lli-ballerini",
+      "query": "\"Pizzeria F.lli Ballerini\" \"Follonica\" \"Piazza 25 Aprile\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pizzeria F.lli Ballerini | 0566 42045 | Follonica",
+          "url": "https://www.tuttiaffari.com/ballerini_2G-0566-42045"
+        },
+        {
+          "title": "Pizzeria F.lli Ballerini, Follonica - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizzeria-Ballerini-di-Marco-e-Simone-Follonica-2"
+        },
+        {
+          "title": "Pizzeria F.lli Ballerini, Follonica - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Pizzeria-Ballerini-di-Marco-e-Simone-Follonica-2"
+        },
+        {
+          "title": "746 recensioni di Pizzeria F.lli Ballerini a Follonica",
+          "url": "https://altraopinione.org/pizzeria/follonica/ballerini/"
+        },
+        {
+          "title": "Pizzeria F.lli Ballerini, Follonica - Menú del restaurante, precios y reseñas",
+          "url": "https://es.restaurantguru.com/Pizzeria-Ballerini-di-Marco-e-Simone-Follonica-2"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:045010:massa:moe-s-bar",
+      "query": "\"MOE'S BAR\" \"Massa\" \"Via San Leonardo\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Svizzera - Clubs, sale da concerto e altri luoghi per concerti e vari eventi 2026",
+          "url": "https://hikersbay.com/venues/switzerland/switzerland?lang=it"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:047008:massa-e-cozzile:murphys-pub",
+      "query": "\"Murphys Pub\" \"Massa e Cozzile\" \"Via Antonio Gramsci\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": []
+    },
+    {
+      "venue_id": "venue:050029:pontedera:creamylla-gelateria-pasticceria",
+      "query": "\"Creamylla Gelateria Pasticceria\" \"Pontedera\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Creamylla Gelateria Pasticceria, Pontedera - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Creamylla-Gelateria-Pasticceria-Pontedera"
+        },
+        {
+          "title": "Creamylla Gelateria Pasticceria, Pontedera - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Creamylla-Gelateria-Pasticceria-Pontedera"
+        },
+        {
+          "title": "Creamylla Gelateria Pasticceria, Pisa, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/10177942/creamylla-gelateria-pasticceria"
+        },
+        {
+          "title": "I 7 migliori ristoranti con pasticceria a Pontedera, luglio 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/pastry-Pontedera-m32"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:049009:livorno:vino-dei-brilli",
+      "query": "\"il vino dei Brilli\" \"Livorno\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "MenuDigitale | Il vino dei Brilli | Leggi il Menu Digitale di Il vino dei Brilli",
+          "url": "https://www.menudigitale.io/yfnzs/?lang=el"
+        },
+        {
+          "title": "IL VINO DEI BRILLI, Livorno - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187897-d17674880-Reviews-Il_Vino_dei_Brilli-Livorno_Province_of_Livorno_Tuscany.html"
+        },
+        {
+          "title": "MenuDigitale | Il vino dei Brilli | Leggi il Menu Digitale di Il vino dei Brilli",
+          "url": "https://www.menudigitale.io/yfnzs"
+        },
+        {
+          "title": "IL VINO DEI BRILLI, Livorno - Menu, Prices & Restaurant Reviews - Order Online Food Delivery - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187897-d17674880-Reviews-Il_Vino_dei_Brilli-Livorno_Province_of_Livorno_Tuscany.html"
+        },
+        {
+          "title": "MenuDigitale | Il vino dei Brilli | Leggi il Menu Digitale di Il vino dei Brilli",
+          "url": "https://www.menudigitale.io/yfnzs/?lang=sq"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:052013:gaiole-in-chianti:ponte",
+      "query": "\"Osteria Al Ponte\" \"Gaiole in Chianti\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "OSTERIA AL PONTE, Gaiole in Chianti - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g616196-d2261433-Reviews-OSTERIA_AL_PONTE-Gaiole_in_Chianti_Tuscany.html"
+        },
+        {
+          "title": "OSTERIA AL PONTE, Gaiole in Chianti - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g616196-d2261433-Reviews-OSTERIA_AL_PONTE-Gaiole_in_Chianti_Tuscany.html"
+        },
+        {
+          "title": "OSTERIA AL PONTE, Gaiole in Chianti - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g616196-d2261433-Reviews-OSTERIA_AL_PONTE-Gaiole_in_Chianti_Tuscany.html"
+        },
+        {
+          "title": "OSTERIA AL PONTE, Gaiole in Chianti - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g616196-d2261433-Reviews-OSTERIA_AL_PONTE-Gaiole_in_Chianti_Tuscany.html"
+        },
+        {
+          "title": "Osteria Al Ponte | 0577 744085 | Gaiole in Chianti",
+          "url": "https://www.tuttiaffari.com/osteria-al-ponte_5j-0577-744085"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:048024:lastra-a-signa:posta-caffe-bar",
+      "query": "\"La Posta Caffè Bar\" \"Lastra a Signa\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "LA POSTA CAFFE BAR (Lastra a Signa): Ce qu'il faut savoir pour votre visite (avec avis)",
+          "url": "https://www.tripadvisor.fr/Attraction_Review-g642189-d5937295-Reviews-La_Posta_Caffe_Bar-Lastra_a_Signa_Tuscany.html"
+        },
+        {
+          "title": "LA POSTA CAFFÈ BAR: Tutto quello che c'è da sapere (2026)",
+          "url": "https://www.tripadvisor.it/Attraction_Review-g642189-d5937295-Reviews-La_Posta_Caffe_Bar-Lastra_a_Signa_Tuscany.html"
+        },
+        {
+          "title": "La Posta Caffè Bar, Lastra a Signa - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Posta-Lastra-a-Signa"
+        },
+        {
+          "title": "La Posta Caffe Bar (2026) - All You MUST Know Before Going (with Reviews)",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g642189-d5937295-Reviews-La_Posta_Caffe_Bar-Lastra_a_Signa_Tuscany.html"
+        },
+        {
+          "title": "Caffè Bar La Posta | 339 822 8930 | Lastra a Signa",
+          "url": "https://www.tuttiaffari.com/caff%C3%A8-bar-la-posta-339-822-8930"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:053011:grosseto:wave-bar",
+      "query": "\"Wave Bar\" \"Grosseto\" \"Commendone\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Apre il centro commerciale Maremà: appuntamento alle 10, occhio alle modifiche al traffico - Il Tirreno",
+          "url": "https://www.iltirreno.it/grosseto/cronaca/2016/10/26/news/apre-il-centro-commerciale-marema-appuntamento-alle-10-occhio-alle-modifiche-al-traffico-1.14312559"
+        },
+        {
+          "title": "Anteprima Maremà: ecco Wave Bar, dai cocktail al pesce, al nuovo centro commerciale - Il Giunco",
+          "url": "https://www.ilgiunco.net/2016/10/25/anteprima-marema-ecco-wave-bar-dai-cocktail-al-pesce-al-nuovo-centro-commerciale/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:052009:chianciano-terme:pizza-al-volo",
+      "query": "\"Pizza Al Volo\" \"Chianciano Terme\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZA AL VOLO, Chianciano Terme - Viale delle Liberta' 343 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194734-d3726131-Reviews-Pizza_Al_Volo-Chianciano_Terme_Tuscany.html"
+        },
+        {
+          "title": "PIZZA AL VOLO, Chianciano Terme - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g194734-d3726131-Reviews-Pizza_Al_Volo-Chianciano_Terme_Tuscany.html"
+        },
+        {
+          "title": "PIZZA AL VOLO, Chianciano Terme - Opiniones, Menú y Fotos",
+          "url": "https://www.tripadvisor.com.mx/Restaurant_Review-g194734-d3726131-Reviews-Pizza_Al_Volo-Chianciano_Terme_Tuscany.html"
+        },
+        {
+          "title": "PIZZA AL VOLO, Chianciano Terme - Opiniones, Menú y Fotos",
+          "url": "https://www.tripadvisor.co/Restaurant_Review-g194734-d3726131-Reviews-Pizza_Al_Volo-Chianciano_Terme_Tuscany.html"
+        },
+        {
+          "title": "PIZZA AL VOLO - Chianciano Terme",
+          "url": "https://www.vivichiancianoterme.it/eats/pizza-al-volo/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055017:montecastrilli:botte-di-mirko-e-elena",
+      "query": "\"La Botte di Mirko e Elena\" \"Montecastrilli\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "LA BOTTE DI MIRKO E ELENA SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA, Partita IVA: 01641730559, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/5157/la-botte-di-mirko-e-elena-societa-a-responsabilita-limitata-semplificata"
+        },
+        {
+          "title": "LA BOTTE DI MIRKO E ELENA - RISTORANTE, PIZZERIA, BAR, PANETTERIA, Montecastrilli - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1803796-d33240301-Reviews-La_Botte_di_Mirko_e_Elena_ristorante_pizzeria_bar_panetteria-Montecastrilli_Pro.html"
+        },
+        {
+          "title": "LA BOTTE DI MIRKO E ELENA - RISTORANTE, PIZZERIA, BAR, PANETTERIA, Montecastrilli - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1803796-d33240301-Reviews-La_Botte_di_Mirko_e_Elena_ristorante_pizzeria_bar_panetteria-Montecastrilli_Pro.html"
+        },
+        {
+          "title": "LA BOTTE DI MIRKO E ELENA - RISTORANTE, PIZZERIA, BAR, PANETTERIA, Montecastrilli - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g1803796-d33240301-Reviews-La_Botte_di_Mirko_e_Elena_ristorante_pizzeria_bar_panetteria-Montecastrilli_Pro.html"
+        },
+        {
+          "title": "La Botte Di Mirko E Elena - Ristorante, Pizzeria, Bar, Panetteria, Montecastrilli - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/montecastrilli/ristorante/10977612/la-botte-di-mirko-e-elena-ristorante-pizzeria-bar-panetteria"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054024:gubbio:antica-osteria",
+      "query": "\"Antica Osteria\" \"Gubbio\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ANTICA OSTERIA ENOTECA, Gubbio - Via Dei Consoli 30 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187906-d23755767-Reviews-Antica_Osteria_Enoteca-Gubbio_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "ANTICA OSTERIA ENOTECA, Gubbio - Via Dei Consoli - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187906-d23755820-Reviews-Antica_Osteria_Enoteca-Gubbio_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "ANTICA OSTERIA ENOTECA, Gubbio - Via Consoli 30 - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187906-d23755767-Reviews-Antica_Osteria_Enoteca-Gubbio_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "ANTICA OSTERIA ENOTECA, Gubbio - Via Dei Consoli - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187906-d23755820-Reviews-Antica_Osteria_Enoteca-Gubbio_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "ANTICA OSTERIA ENOTECA, Gubbio - Via Dei Consoli 30 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187906-d23755767-Reviews-or45-Antica_Osteria_Enoteca-Gubbio_Province_of_Perugia_Umbria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055032:terni:zero-f9802f83",
+      "query": "\"Caffè Zero\" \"Terni\" \"Via Antonio Pacinotti\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffè Zero 8, Terni, locali aperitivo Terni TR, Bar, Cocktail Bar, locali aperitivo vicino a me Terni",
+          "url": "https://www.apetime.com/locali/terni-tr/caffe-zero-8"
+        },
+        {
+          "title": "Caffèzero, Terni - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/terni/ristorante/8603529/caff%C3%A8zero"
+        },
+        {
+          "title": "Orari di apertura Caffè Zero 8 ▷ Terni Via Antonio Pacinotti 1, Terni, Terni, 05100 | Trova Aperto",
+          "url": "https://trova-aperto.it/terni/caff%C3%A8-zero-8-539217"
+        },
+        {
+          "title": "Caffèzero Restaurant à Terni - Menu, Avis, Photos",
+          "url": "https://www.sluurpy.com/fr/terni/restaurant/8603529/caff%C3%A8zero"
+        },
+        {
+          "title": "Caffè Zero 8 - Gelateria a Terni ▷ Via Antonio Pacinotti 1, 05100, Terni | Firmania",
+          "url": "https://firmania.it/terni/caff%C3%A8-zero-8-2521445"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055010:castel-viscardo:violet-bar",
+      "query": "\"Violet Bar\" \"Castel Viscardo\" \"Corso Umberto I\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Violet Bar | 0763 361759 | Castel Viscardo",
+          "url": "https://www.tuttiaffari.com/violet-bar-0763-361759"
+        },
+        {
+          "title": "Violet Bar, Castel Viscardo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Violet-Bar-Castel-Viscardo"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054018:foligno:chicco-gelateria",
+      "query": "\"Il Chicco Gelateria\" \"Foligno\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "IL CHICCO GELATERIA - Gelateria a Foligno | LocalShop24",
+          "url": "https://www.localshop24.com/it/foligno-pg-it/attivita/gelateria/il-chicco-gelateria/"
+        },
+        {
+          "title": "Driving directions to IL CHICCO GELATERIA, 138 Viale Firenze, Foligno - Waze",
+          "url": "https://www.waze.com/live-map/directions/it/umbria/foligno/il-chicco-gelateria?to=place.ChIJHazxBemFLhMRDFJ1pRiGogM"
+        },
+        {
+          "title": "IL CHICCO GELATERIA - Foligno, Provincia di Perugia - Gelateria Moras",
+          "url": "https://gelateriamoras.it/il-chicco-gelateria/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054039:perugia:elfo-pub",
+      "query": "\"Elfo Pub\" \"Perugia\" \"Via Sant'Agata\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Elfo pub | 347 078 5981 | Perugia",
+          "url": "https://www.tuttiaffari.com/elfo-pub-347-078-5981"
+        },
+        {
+          "title": "Elfo Pub, Perugia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Elfo-pub-Perugia"
+        },
+        {
+          "title": "ELFO PUB - Pub a Perugia | LocalShop24",
+          "url": "https://www.localshop24.com/it/perugia-pg-it/attivita/pub/elfo-pub/"
+        },
+        {
+          "title": "ELFO PUB: Tutto quello che c'è da sapere (settembre 2026)",
+          "url": "https://www.tripadvisor.it/Attraction_Review-g187907-d3752939-Reviews-Elfo_Pub-Perugia_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "Elfo Pub, Perugia - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Elfo-pub-Perugia"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054057:valfabbrica:terrazza",
+      "query": "\"Agriturismo La Terrazza\" \"Valfabbrica\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Agriturismo La Terrazza, Valfabbrica (updated prices 2026)",
+          "url": "https://www.booking.com/hotel/it/agriturismo-la-terrazza.html"
+        },
+        {
+          "title": "Agriturismo La Terrazza, Valfabbrica (prezzi aggiornati per il 2026)",
+          "url": "https://www.booking.com/hotel/it/agriturismo-la-terrazza.it.html"
+        },
+        {
+          "title": "Agriturismo la terrazza - Agriturismo La Terrazza",
+          "url": "https://agriturismolaterrazza.com/"
+        },
+        {
+          "title": "Agriturismo La Terrazza - Agriturismi in Umbria a Valfabbrica",
+          "url": "https://www.valfabbricadasogno.it/agriturismo-la-terrazza/"
+        },
+        {
+          "title": "AGRITURISMO LA TERRAZZA, Valfabbrica - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1438741-d5433225-Reviews-Agriturismo_La_Terrazza-Valfabbrica_Province_of_Perugia_Umbria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054051:spoleto:zeppelin",
+      "query": "\"Zeppelin\" \"Spoleto\" \"Corso Giuseppe Garibaldi\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ZEPPELIN - Ristorante a Spoleto | LocalShop24",
+          "url": "https://www.localshop24.com/it/spoleto-pg-it/attivita/ristorante/zeppelin/"
+        },
+        {
+          "title": "Zeppelin, Spoleto - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Zeppelin-Pizza-Spoleto"
+        },
+        {
+          "title": "Pizzeria Zeppelin, Spoleto - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Zeppelin-Pizza-Spoleto"
+        },
+        {
+          "title": "Zeppelin | 0743 44900 | Spoleto",
+          "url": "https://www.tuttiaffari.com/zeppelin_71-0743-44900"
+        },
+        {
+          "title": "Zeppelin, Spoleto, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/10803419/zeppelin"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054001:assisi:cento-passi",
+      "query": "\"I Cento Passi\" \"Assisi\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Where to eat - Visit Assisi",
+          "url": "https://www.visit-assisi.it/en/where-to-eat/"
+        },
+        {
+          "title": "I CENTO PASSI, Santa Maria degli Angeli - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g657849-d23444132-Reviews-I_Cento_Passi-Santa_Maria_degli_Angeli_Assisi_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "I CENTO PASSI, Santa Maria degli Angeli - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g657849-d23444132-Reviews-I_Cento_Passi-Santa_Maria_degli_Angeli_Assisi_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "I CENTO PASSI, Santa Maria degli Angeli - 2026 Reviews & Info",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g657849-d23444132-Reviews-I_Cento_Passi-Santa_Maria_degli_Angeli_Assisi_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "I Cento Passi - Santa Maria degli Angeli | 075 900 3322 | Viole (Assisi)",
+          "url": "https://www.tuttiaffari.com/i-cento-passi-santa-maria-degli-angeli-075-900-3322"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054021:giano-dell-umbria:f-c-caffe",
+      "query": "\"f.c.caffe\" \"Giano dell'Umbria\" \"Largo Alcide De Gasperi\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "f.c.caffe | 0742 960225 | Bastardo (Giano dell'Umbria)",
+          "url": "https://www.tuttiaffari.com/f-c-caffe-0742-960225"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054050:spello:civico-57",
+      "query": "\"Civico 57\" \"Spello\" \"Via Consolare\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "CIVICO 57, I locali dove bere in Italia, Indipendente Artigianale",
+          "url": "https://www.indipendenteartigianale.it/it/locali/civico-57"
+        },
+        {
+          "title": "CIVICO 57, Spello - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g672717-d12871421-Reviews-Civico_57-Spello_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "424 recensioni di Civico 57 a Spello",
+          "url": "https://altraopinione.org/pub/spello/civico-57/"
+        },
+        {
+          "title": "CIVICO 57 DI GERVASI ANDREA, Partita IVA: 03568790541, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/2124/civico-57-di-gervasi-andrea"
+        },
+        {
+          "title": "Civico 57, Spello - Menu del ristorante, prezzi e recensioni",
+          "url": "https://www.sluurpy.it/spello/ristorante/233999/civico-57"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054039:perugia:jo-bar",
+      "query": "\"Jo Bar\" \"Perugia\" \"Str. del Piccione\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Jo Bar, Perugia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Jo-Bar-Piccione"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054053:torgiano:barcollo-al-pub",
+      "query": "\"Barcollo al Pub\" \"Torgiano\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Barcollo al Pub, Torgiano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Barcollo-Pub-Torgiano"
+        },
+        {
+          "title": "Barcollo Al Pub - 06089 Torgiano -",
+          "url": "https://www.reteimprese.it/locali-birrerie-pub/torgiano/azienda/3346429"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054018:foligno:habanero",
+      "query": "\"Habanero\" \"Foligno\" \"Piazza del Grano\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Habanero | 366 400 3270 | Foligno",
+          "url": "https://www.tuttiaffari.com/habanero_301-366-400-3270"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Habanero“ | Piazza Del Grano",
+          "url": "https://www.oraridiapertura24.it/filiale/Foligno-Habanero-3145654C.html"
+        },
+        {
+          "title": "Habanero, Foligno - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Habanero-Foligno"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055032:terni:gelateria-cocktail-bar-ff",
+      "query": "\"Gelateria Cocktail Bar Ff\" \"Terni\" \"Via del Convento\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Gelateria a Terni - Numeri di Telefono, Indirizzi, Orari, Mappa - MisterImprese",
+          "url": "https://www.misterimprese.it/umbria/terni/terni/gelaterie.html"
+        },
+        {
+          "title": "🕗 orari di apertura Gelateria Cocktail Bar FF , Via del Convento, 52, Terni, contatti",
+          "url": "https://it.near-place.com/gelateria-cocktail-bar-ff-via-del-convento-52-terni"
+        },
+        {
+          "title": "orari di apertura Bar più vicina Cocktail & Drink Di Fragomeni Antonio, contatti",
+          "url": "https://it.near-place.com/bar-nearby-cocktail-drink-di-fragomeni-antonio-via-narni-104-terni"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054017:deruta:pasticceria-dolci-tentazioni-deruta",
+      "query": "\"Pasticceria Dolci Tentazioni Deruta\" \"Deruta\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "DOLCI TENTAZIONI PASTICCERIA GELATERIA, Deruta - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g663568-d12955643-Reviews-Dolci_Tentazioni_Pasticceria_Gelateria-Deruta_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "▷ Pasticceria Dolci Tentazioni Deruta | Bar",
+          "url": "https://www.cylex-italia.it/deruta/pasticceria-dolci-tentazioni-deruta-15275084.html"
+        },
+        {
+          "title": "Dolci Tentazioni di Nardi Angelo e C. S.N.C., Deruta - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Dolci-Tentazioni-SNC-Di-Nardi-Angelo-and-C-Deruta"
+        },
+        {
+          "title": "I migliori 5 ristoranti di Deruta , settembre 2026 - Restaurant Guru",
+          "url": "https://restaurantguru.it/Deruta"
+        },
+        {
+          "title": "THE BEST Breakfast Restaurants in Deruta - Tripadvisor",
+          "url": "https://www.tripadvisor.com.ph/Restaurants-g663568-zfp2-Deruta_Province_of_Perugia_Umbria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054013:citta-di-castello:alberto-s",
+      "query": "\"Alberto's\" \"Città di Castello\" \"Viale Romagna\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ALBERTO'S, Città di Castello - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g580241-d11742146-Reviews-Alberto_s-Citta_di_Castello_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "Alberto's, Città di Castello - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Albertos-Citta-di-Castello"
+        },
+        {
+          "title": "ALBERTO'S - Bar a Città di Castello | LocalShop24",
+          "url": "https://www.localshop24.com/it/citta-di-castello-pg-it/attivita/bar/albertos/"
+        },
+        {
+          "title": "Alberto's | 335 785 5596 | Città di Castello",
+          "url": "https://www.tuttiaffari.com/albertos_2k-335-785-5596"
+        },
+        {
+          "title": "Alberto's | 331 754 5180 | Città di Castello",
+          "url": "https://www.tuttiaffari.com/albertos_1f-331-754-5180"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054001:assisi:romantica-pizzeria",
+      "query": "\"La Romantica- Pizzeria\" \"Assisi\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "La Volta Antica - Ristorante - Pizzeria",
+          "url": "https://www.lavoltantica.it/"
+        },
+        {
+          "title": "▷ La Romantica Pizzeria a Assisi (06081) - Pizzeria",
+          "url": "https://www.misterimprese.it/umbria/perugia/assisi/pizzerie/2589618.html"
+        },
+        {
+          "title": "Recensioni - La Romantica Pizzeria San Sisto, Pg Ferro Di Cavallo",
+          "url": "https://piatti.menu/restaurants/ferro-di-cavallo/la-romantica-pizzeria-san-sisto-pg-2/reviews"
+        },
+        {
+          "title": "Piatti - La Romantica Pizzeria San Sisto, Pg Ferro Di Cavallo",
+          "url": "https://piatti.menu/restaurants/ferro-di-cavallo/la-romantica-pizzeria-san-sisto-pg-2/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055011:fabro:europa",
+      "query": "\"Caffe Europa\" \"Fabro\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffè Europa - Contattaci",
+          "url": "https://caffeeuropa.eu/fr/pages/contatti"
+        },
+        {
+          "title": "Caffè Europa, Fabro Scalo - Speisekarte, Preise und Bewertungen",
+          "url": "https://de.restaurantguru.com/Caffe-Europa-Fabro-Scalo"
+        },
+        {
+          "title": "Caffè Europa, Fabro Scalo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-Europa-Fabro-Scalo"
+        },
+        {
+          "title": "CAFFÈ EUROPA - Bar a Fabro | LocalShop24",
+          "url": "https://www.localshop24.com/it/fabro-tr-it/attivita/bar/caffe-europa/"
+        },
+        {
+          "title": "Caffè Europa - Fabro Scalo, Provincia di Terni - Arredamenti Itaglietti",
+          "url": "https://itaglietti.it/caffe-europa/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055022:narni:arcomincio",
+      "query": "\"Birreria Arcomincio\" \"Narni\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BIRRERIA ARCOMINCIO, Narni - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g644287-d10028469-Reviews-Birreria_Arcomincio-Narni_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "BIRRERIA ARCOMINCIO, Narni - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g644287-d10028469-Reviews-Birreria_Arcomincio-Narni_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "Birreria Arcomincio, Terni, Italia - Recensioni, Valutazioni, Consigli e Perché Dovresti Andare – Wanderlog",
+          "url": "https://wanderlog.com/it/place/details/2732686/birreria-arcomincio"
+        },
+        {
+          "title": "BIRRERIA ARCOMINCIO, Narni - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.ca/Restaurant_Review-g644287-d10028469-Reviews-Birreria_Arcomincio-Narni_Province_of_Terni_Umbria.html"
+        },
+        {
+          "title": "BIRRERIA ARCOMINCIO, Narni - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g644287-d10028469-Reviews-Birreria_Arcomincio-Narni_Province_of_Terni_Umbria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054039:perugia:divino",
+      "query": "\"Caffe Divino\" \"Perugia\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Caffetteria e Sala da Tè - Caffè Divino",
+          "url": "https://caffedivinoshop.it/bar-caffetteria-e-sala-da-the/"
+        },
+        {
+          "title": "Cialde e Capsule - Caffè Divino",
+          "url": "https://caffedivinoshop.it/cialde-e-capsule/"
+        },
+        {
+          "title": "Caffè Divino | 075 375 2818 | Perugia",
+          "url": "https://www.tuttiaffari.com/caff%C3%A8-divino_176-075-375-2818"
+        },
+        {
+          "title": "Caffè Divino, Perugia - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/CAFFE-DIVINO-Perugia"
+        },
+        {
+          "title": "Caffè Divino - Caffè a Perugia ▷ Via P. Soriano, 6/B, Perugia, Sant'andrea Delle Fratte, Perugia, 06132 Sant'andrea Delle Fratte | Firmania",
+          "url": "https://firmania.it/perugia/caff%C3%A8-divino-3335571"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055011:fabro:mennula-di-ciro-baiardi",
+      "query": "\"Mennula di Ciro Baiardi\" \"Fabro\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "MENNULA DI CIRO BAIARDI, Partita IVA: 01518530553, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/2519/mennula-di-ciro-baiardi"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Mennula Di Ciro Baiardi“ | Piazzale della Stazione",
+          "url": "https://www.oraridiapertura24.it/filiale/Fabro-Mennula%2520Di%2520Ciro%2520Baiardi-3114834F.html"
+        },
+        {
+          "title": "Mennula - Fabro, Piazzale Stazione, 2",
+          "url": "https://aziende.virgilio.it/ristoranti/fabro-scalo-tr/ciro-baiardi"
+        },
+        {
+          "title": "Mennula di Ciro Baiardi, Fabro Scalo - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Mennula-di-Ciro-Baiardi-Fabro-Scalo-3"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054012:citta-della-pieve:of-artists",
+      "query": "\"Café of Artists\" \"Città della Pieve\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Café of Artists | 0578 298611 | Città della Pieve",
+          "url": "https://www.tuttiaffari.com/caf%C3%A9-of-artists-0578-298611"
+        },
+        {
+          "title": "Café of Artists, Città della Pieve - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Cafe-Degli-Artisti-Citta-della-Pieve"
+        },
+        {
+          "title": "Café of Artists, Orvieto, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/2466954/caffe-degli-artisti"
+        },
+        {
+          "title": "Café of Artists, Orvieto, Italia - Reseñas, Calificaciones, Consejos y Por Qué Deberías Ir – Wanderlog",
+          "url": "https://wanderlog.com/es/place/details/2466954/caf%C3%A9-of-artists"
+        },
+        {
+          "title": "Café of Artists, Città della Pieve - Menú del restaurante, precios y reseñas",
+          "url": "https://es.restaurantguru.com/Cafe-Degli-Artisti-Citta-della-Pieve"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:055032:terni:dolce-luna-terni",
+      "query": "\"Dolce Luna Terni\" \"Terni\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffe gelateria pasticceria artigianale, Terni - Italia.it",
+          "url": "https://www.italia.it/it/umbria/terni/dove-mangiare/caffe-gelateria-pasticceria-artigianale-"
+        },
+        {
+          "title": "Caffè Gelateria Artigianale Pasticceria DOLCE LUNA, Terni - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-Gelateria-Artigianale-Pasticceria-DOLCE-LUNA-Terni"
+        },
+        {
+          "title": "Gelateria Terni orari di apertura | Trova Aperto",
+          "url": "https://trova-aperto.it/terni/gelateria"
+        },
+        {
+          "title": "Caffè Gelateria Artigianale Pasticceria DOLCE LUNA, Terni - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Caffe-Gelateria-Artigianale-Pasticceria-DOLCE-LUNA-Terni"
+        },
+        {
+          "title": "Menu da Caffè Gelateria Artigianale Pasticceria DOLCE LUNA, Terni",
+          "url": "https://restaurantguru.it/Caffe-Gelateria-Artigianale-Pasticceria-DOLCE-LUNA-Terni/menu"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:054011:citerna:ristorate-belvedere-citerna",
+      "query": "\"Ristorate Belvedere Citerna\" \"Citerna\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "RISTORATE BELVEDERE CITERNA - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1604037-d27353996-Reviews-Ristorate_Belvedere_Citerna-Citerna_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "RISTORATE BELVEDERE CITERNA - Restaurantbeoordelingen, foto's en telefoonnummer",
+          "url": "https://www.tripadvisor.be/Restaurant_Review-g1604037-d27353996-Reviews-Ristorate_Belvedere_Citerna-Citerna_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "Ristorate Belvedere Citerna, Citerna - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Ristorate-Belvedere-Citerna-Citerna"
+        },
+        {
+          "title": "RISTORATE BELVEDERE CITERNA - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1604037-d27353996-Reviews-Ristorate_Belvedere_Citerna-Citerna_Province_of_Perugia_Umbria.html"
+        },
+        {
+          "title": "RISTORATE BELVEDERE CITERNA - Opiniones, Menú y Fotos",
+          "url": "https://www.tripadvisor.co/Restaurant_Review-g1604037-d27353996-Reviews-Ristorate_Belvedere_Citerna-Citerna_Province_of_Perugia_Umbria.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041043:pergola:pergola",
+      "query": "\"La Pergola\" \"Pergola\" \"Via Alcide De Gasperi\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "La Pergola – Caffetteria, Pasticceria, Gelateria, Bistrot – PERGOLA TURISMO",
+          "url": "https://www.pergolaturismo.it/eatery/la-pergola-caffetteria-pasticceria-gelateria-bistrot/"
+        },
+        {
+          "title": "120/2026 LA PERGOLA - SOCIETA' IN LIQUIDAZIONE - Liquidazione Giudiziale - Portale dei creditori - Fallco",
+          "url": "https://www.portalecreditori.it/procedura?id=rm9lWY1nKN"
+        },
+        {
+          "title": "LA PERGOLA SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA, Partita IVA: 02829740410, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/7724/la-pergola-societa-a-responsabilita-limitata-semplificata"
+        },
+        {
+          "title": "La Pergola Societa' A Responsabilita' Limitata - P.IVA 02829740410",
+          "url": "https://www.aziende.it/la-pergola-societa-a-responsabilita-limitata-semplificata"
+        },
+        {
+          "title": "ᐅ Orari di apertura „La Pergola“ | Via Alcide de Gasperi",
+          "url": "https://www.oraridiapertura24.it/filiale/Almenno%2520San%2520Bartolomeo-La%2520Pergola-2145755K.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042010:castelfidardo:anema-core",
+      "query": "\"Pizzeria Anema & Core\" \"Castelfidardo\" \"Via Giovan Battista Pergolesi\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "TOP Ristoranti CASTELFIDARDO",
+          "url": "https://piatti.menu/restaurants/castelfidardo/osteria-la-fisarmonica-trattoria-tipica-march"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044066:san-benedetto-del-tronto:lu-campano",
+      "query": "\"Lu Campanò\" \"San Benedetto del Tronto\" \"Via Alessandro Manzoni\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Lu Campanò - Ristorante Pizzeria - San Benedetto del Tronto",
+          "url": "https://www.lucampano.it/"
+        },
+        {
+          "title": "Locale per feste |San Benedetto Del Tronto |Ristorante Lu Campanò",
+          "url": "https://www.pizzeriaristorantelucampano.it/contatti"
+        },
+        {
+          "title": "Pizzeria | San Benedetto Del Tronto | Ristorante Lu Campanò",
+          "url": "https://www.pizzeriaristorantelucampano.it/"
+        },
+        {
+          "title": "Pizze grani antichi | San Benedetto Del Tronto | Ristorante Pizzeria Lu Campanò",
+          "url": "https://www.pizzeriaristorantelucampano.it/pizzeria"
+        },
+        {
+          "title": "PIZZERIA RISTORANTE LU CAMPANÒ, San Benedetto del Tronto - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194895-d17831083-Reviews-Pizzeria_Ristorante_Lu_Campano-San_Benedetto_del_Tronto_Province_of_Ascoli_Picen.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044027:maltignano:siriogrill-metano",
+      "query": "\"Siriogrill Metano\" \"Maltignano\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "SIRIOGRILL METANO, Maltignano - Restaurant Reviews & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g3334184-d14051902-Reviews-Siriogrill_Metano-Maltignano_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "SIRIOGRILL METANO, Maltignano - Ristorante Recensioni & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g3334184-d14051902-Reviews-Siriogrill_Metano-Maltignano_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "SIRIOGRILL METANO, Maltignano - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g3334184-d14051902-Reviews-Siriogrill_Metano-Maltignano_Province_of_Ascoli_Piceno_Marche.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043015:corridonia:moon-s-pub",
+      "query": "\"Moon's Pub\" \"Corridonia\" \"Viale Sant'Anna\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "MOON'S PUB, Corridonia - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2443628-d12207922-Reviews-Moon_S_Pub-Corridonia_Province_of_Macerata_Marche.html"
+        },
+        {
+          "title": "Moon'S Pub - Corridonia - Nextdoor",
+          "url": "https://it.nextdoor.com/pages/moons-pub-corridonia-marche/"
+        },
+        {
+          "title": "MOON'S PUB, Corridonia - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g2443628-d12207922-Reviews-Moon_S_Pub-Corridonia_Province_of_Macerata_Marche.html"
+        },
+        {
+          "title": "ᐅ Orari di apertura „Moon'S Pub“ | Viale Sant'anna",
+          "url": "https://www.oraridiapertura24.it/filiale/Corridonia-Moon%2527S%2520Pub-1547008B.html"
+        },
+        {
+          "title": "Moon'S Pub - Corridonia, Viale Sant'Anna, 51",
+          "url": "https://aziende.virgilio.it/locali-e-ritrovi/corridonia-mc/moons-pub-corridonia-mc"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043013:civitanova-marche:gigi",
+      "query": "\"Gigi\" \"Civitanova Marche\" \"Piazza 20 Settembre\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristoranti a Civitanova Marche in Viale",
+          "url": "https://www.virgilio.it/italia/civitanova-marche/via/viale/ristoranti"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041036:montelabbate:casa-del-sole",
+      "query": "\"Casa del Sole\" \"Montelabbate\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "CASA DEL SOLE, Montelabbate - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1575033-d7275854-Reviews-Casa_Del_Sole-Montelabbate_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "CASA DEL SOLE, Montelabbate - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.ca/Restaurant_Review-g1575033-d7275854-Reviews-Casa_Del_Sole-Montelabbate_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "CASA DEL SOLE AGRITURISMO (Montelabbate, Italia): reseñas 2026",
+          "url": "https://www.tripadvisor.es/Hotel_Review-g1575033-d5571301-Reviews-Casa_Del_Sole_Agriturismo-Montelabbate_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "CASA DEL SOLE, Montelabbate - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g1575033-d7275854-Reviews-Casa_Del_Sole-Montelabbate_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "Casa del Sole Agriturismo Pizzeria Ristorante | Hoteles de Google",
+          "url": "https://www.google.com.pa/travel/hotels/entity/CgsI_oHI9oyppPe0ARAB"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041015:fossombrone:pizza-pop",
+      "query": "\"Pizza Pop\" \"Fossombrone\" \"Corso Giuseppe Garibaldi\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "PIZZA POP - Pizzeria a Fossombrone | LocalShop24",
+          "url": "https://www.localshop24.com/it/fossombrone-pu-it/attivita/pizzeria/pizza-pop/"
+        },
+        {
+          "title": "Pizza Pop Di Corrado Mario | 0721 714130 | Fossombrone",
+          "url": "https://www.tuttiaffari.com/pizza-pop-di-corrado-mario-0721-714130"
+        },
+        {
+          "title": "Pizza Pop, Fossombrone - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Pizza-Pop-Di-Corrado-Mario-Fossombrone"
+        },
+        {
+          "title": "Pizza Pop: Authentic Pizza Experience in Fossombrone",
+          "url": "https://pizza-pop.menustic.com/"
+        },
+        {
+          "title": "Pizza Pop di Corrado Mario a Fossombrone",
+          "url": "https://www.ricercare-imprese.it/fossombrone/pizza-pop-di-corrado-mario-aYgOsN.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042002:ancona:maxi-bar-trattoria",
+      "query": "\"Pub Maxi Bar Trattoria\" \"Ancona\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Pub Maxi Bar Trattoria - Bar Ancona | Italian cuisine near me",
+          "url": "https://pub-maxi-bar-trattoria.eatbu.com/?lang=en"
+        },
+        {
+          "title": "Pub Maxi Bar Trattoria | 366 299 2727 | Ancona",
+          "url": "https://www.tuttiaffari.com/pub-maxi-bar-trattoria-366-299-2727"
+        },
+        {
+          "title": "Pub Maxi Bar Trattoria, Ancona - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Maxi-Bar-Ancona"
+        },
+        {
+          "title": "444 recensioni di Pub Maxi Bar Trattoria a Ancona",
+          "url": "https://altraopinione.org/pub/ancona/pub-maxi-bar-trattoria/"
+        },
+        {
+          "title": "Pub Maxi Bar Trattoria, Ancona - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Maxi-Bar-Ancona"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042035:ostra:piazzale",
+      "query": "\"Il Piazzale\" \"Ostra\" \"Via Arceviese\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Dove mangiare / Where eat - Comune di Ostra",
+          "url": "https://comune.ostra.an.it/it/page/dove-mangiare-where-eat"
+        },
+        {
+          "title": "Il Piazzale | Via Arceviese 55, Ostra",
+          "url": "https://negozi.sisal.com/my-sisal/ostra-via-arceviese-55-il-piazzale"
+        },
+        {
+          "title": "Il Piazzale da OSTRA",
+          "url": "https://piatti.menu/restaurants/ostra-1/il-piazzale"
+        },
+        {
+          "title": "IL PIAZZALE, Ostra - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2140648-d18493443-Reviews-Il_Piazzale-Ostra_Province_of_Ancona_Marche.html"
+        },
+        {
+          "title": "Il Piazzale from OSTRA",
+          "url": "https://menuweb.menu/restaurants/ostra-1/il-piazzale"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042048:sirolo:antipasteria-di-mare-sara",
+      "query": "\"Antipasteria di mare Sara\" \"Sirolo\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ANTIPASTERIA DI MARE SARA, Sirolo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g608900-d24091903-Reviews-Antipasteria_Di_Mare_Sara-Sirolo_Province_of_Ancona_Marche.html"
+        },
+        {
+          "title": "Antipasteria Di Mare Sara - Sirolo, Via Italia, 2",
+          "url": "https://aziende.virgilio.it/ristoranti/sirolo-an/antipasteriadimaresara-sirolo"
+        },
+        {
+          "title": "Antipasteria di mare Sara, Sirolo - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Antipasteria-di-mare-Sara-Sirolo"
+        },
+        {
+          "title": "Antipasteria di mare Sara | 328 625 0134 | Sirolo",
+          "url": "https://www.tuttiaffari.com/antipasteria-di-mare-sara-328-625-0134"
+        },
+        {
+          "title": "ANTIPASTERIA DI MARE SARA, Sirolo - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g608900-d24091903-Reviews-Antipasteria_Di_Mare_Sara-Sirolo_Province_of_Ancona_Marche.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042045:senigallia:klaus-bierbrauer-s-birreria-tipica",
+      "query": "\"Klaus Bierbrauer's birreria tipica\" \"Senigallia\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Attrazioni, Pagina 16 - Ancona, Italia, mezzi pubblici",
+          "url": "https://moovitapp.com/index/it/mezzi_pubblici-attractions-Ancona-16-4240"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:109004:campofilone:mas-que-nada-cafe",
+      "query": "\"Más Que Nada Café\" \"Campofilone\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Más Que Nada Café di Rongoni Tiziana, Campofilone - Italia.it",
+          "url": "https://www.italia.it/it/marche/campofilone/dove-mangiare/mas-que-nada-cafe"
+        },
+        {
+          "title": "Más Que Nada Café di Rongoni Tiziana, Campofilone – Italia.it",
+          "url": "https://www.italia.it/pt/marcas/campofilone/onde-comer/mas-que-nada-cafe"
+        },
+        {
+          "title": "Más Que Nada Café di Rongoni Tiziana, Campofilone – Italia.it",
+          "url": "https://www.italia.it/fr/marches/campofilone/restaurants/mas-que-nada-cafe"
+        },
+        {
+          "title": "Más Que Nada Café di Rongoni Tiziana, Campofilone - Italia.it",
+          "url": "https://www.italia.it/es/marche/campofilone/donde-comer/mas-que-nada-cafe"
+        },
+        {
+          "title": "Más Que Nada Café di Rongoni Tiziana, Campofilone - Italia.it",
+          "url": "https://www.italia.it/en/marche/campofilone/where-to-eat/mas-que-nada-cafe"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044023:grottammare:meraviglia",
+      "query": "\"La Meraviglia\" \"Grottammare\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "LA MERAVIGLIA, Grottammare - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g730082-d8610261-Reviews-La_Meraviglia-Grottammare_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "LA MERAVIGLIA, Grottammare - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://it.tripadvisor.ch/Restaurant_Review-g730082-d8610261-Reviews-La_Meraviglia-Grottammare_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "LA MERAVIGLIA, Grottammare - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g730082-d8610261-Reviews-La_Meraviglia-Grottammare_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "Gelateria La Meraviglia | 335 816 0246 | Grottammare",
+          "url": "https://www.tuttiaffari.com/gelateria-la-meraviglia-335-816-0246"
+        },
+        {
+          "title": "Gelateria Creperia La Meraviglia, Grottammare - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/La-Meraviglia-Grottammare"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044007:ascoli-piceno:johnny-spiedino",
+      "query": "\"Johnny Spiedino\" \"Ascoli Piceno\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Johnny Spiedino | Johnny Spiedino Blog",
+          "url": "https://www.johnnyspiedino.it/"
+        },
+        {
+          "title": "Johnny Spiedino consegna in zona Ascoli Piceno - Ordina su Deliveroo",
+          "url": "https://deliveroo.it/it/menu/ascoli-piceno/ascoli-piceno/johnny-spiedino-aspi"
+        },
+        {
+          "title": "JOHNNY SPIEDINO, Ascoli Piceno - Via Cino del Duca 18 - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194676-d17821070-Reviews-Johnny_Spiedino-Ascoli_Piceno_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "Johnny Spiedino delivery from Ascoli Piceno - Order with Deliveroo",
+          "url": "https://deliveroo.it/en/menu/ascoli-piceno/ascoli-piceno/johnny-spiedino-aspi"
+        },
+        {
+          "title": "JOHNNY SPIEDINO - Fast food a Ascoli Piceno | LocalShop24",
+          "url": "https://www.localshop24.com/it/ascoli-piceno-ap-it/attivita/fast-food/johnny-spiedino/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044011:castel-di-lama:street-pizza-mato",
+      "query": "\"Street Pizza Mato\" \"Castel di Lama\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "MIGLIOR cibo di strada: Castel di Lama (Aggiornamento al 2026)",
+          "url": "https://www.tripadvisor.it/Restaurants-g1025199-c10686-Castel_di_Lama_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "STREET PIZZA MATÓ, Castel di Lama - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1025199-d23301919-Reviews-Street_Pizza_Mato-Castel_di_Lama_Province_of_Ascoli_Piceno_Marche.html"
+        },
+        {
+          "title": "Recensioni Street Pizza Mató (10) - Castel di Lama | Sluurpy",
+          "url": "https://www.sluurpy.it/castel-di-lama/ristorante/8589631/street-pizza-mat%C3%B3/recensioni"
+        },
+        {
+          "title": "STREET PIZZA MATÓ, Castel di Lama - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1025199-d23301919-Reviews-Street_Pizza_Mato-Castel_di_Lama_Province_of_Ascoli_Piceno_Marche.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043023:macerata:torquati",
+      "query": "\"Bar Enoteca Ristorante Torquati\" \"Macerata\" \"Via Donato Bramante\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Enoteca Ristorante Torquati, Macerata - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Torquati-Macerata"
+        },
+        {
+          "title": "867 recensioni di Bar Enoteca Ristorante Torquati a Macerata",
+          "url": "https://altraopinione.org/ristorante/macerata/torquati/"
+        },
+        {
+          "title": "Bar Enoteca Ristorante Torquati, Macerata, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/2865394/bar-enoteca-ristorante-torquati"
+        },
+        {
+          "title": "Bar Enoteca Ristorante Torquati, Macerata, Ý - Đánh giá, Xếp hạng, Mẹo và Lý do Bạn Nên Đi – Wanderlog",
+          "url": "https://wanderlog.com/vi/place/details/2865394/bar-enoteca-ristorante-torquati"
+        },
+        {
+          "title": "Bar Enoteca Ristorante Torquati, Via Donato Bramante, 90, 62100 Macerata MC, Italy - TripTap",
+          "url": "https://triptap.com/places/it/the-marches/corridonia/bar-enoteca-ristorante-torquati-t017ac98"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041044:pesaro:vin-s-cafe",
+      "query": "\"Vin's Cafe\" \"Pesaro\" \"Viale Trieste\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Vin's Cafè, Pesaro - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Vins-Cafe-Pesaro"
+        },
+        {
+          "title": "VIN'S CAFE, Pesaro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187796-d3494285-Reviews-Vin_s_Cafe-Pesaro_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "Vin's Cafè | 349 754 4354 | Pesaro",
+          "url": "https://www.tuttiaffari.com/vins-caf%C3%A8-348-040-0706"
+        },
+        {
+          "title": "VIN'S CAFE, Pesaro - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g187796-d3494285-Reviews-Vin_s_Cafe-Pesaro_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "VIN'S CAFE, Pesaro - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187796-d3494285-Reviews-or15-Vin_s_Cafe-Pesaro_Province_of_Pesaro_and_Urbino_Marche.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042012:castelplanio:giusti-gelateria-artigianale",
+      "query": "\"Giusti Gelateria Artigianale\" \"Castelplanio\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Giusti Gelateria Artigianale - Castelplanio - Nextdoor",
+          "url": "https://it.nextdoor.com/pages/giusti-gelateria-artigianale/"
+        },
+        {
+          "title": "GIUSTI GELATERIA ARTIGIANALE, Castelplanio - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1934128-d6673191-Reviews-Giusti_Gelateria_Artigianale-Castelplanio_Province_of_Ancona_Marche.html"
+        },
+        {
+          "title": "Giusti Gelateria Artigianale - Castelplanio, Via del Commercio, 1",
+          "url": "https://aziende.virgilio.it/gelaterie/castelplanio-an/il-gelato-s-n-c-di-giusti-g-e-c_08360559"
+        },
+        {
+          "title": "GIUSTI GELATERIA ARTIGIANALE, Castelplanio - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1934128-d6673191-Reviews-Giusti_Gelateria_Artigianale-Castelplanio_Province_of_Ancona_Marche.html"
+        },
+        {
+          "title": "GIUSTI GELATERIA ARTIGIANALE, Castelplanio - 2026 Reviews",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g1934128-d6673191-Reviews-Giusti_Gelateria_Artigianale-Castelplanio_Province_of_Ancona_Marche.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:043043:potenza-picena:sottovoce-pub",
+      "query": "\"Sottovoce Pub\" \"Potenza Picena\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Sottovoce Pub | 333 796 9859 | Potenza Picena",
+          "url": "https://www.tuttiaffari.com/sottovoce-pub_16-333-796-9859"
+        },
+        {
+          "title": "SOTTOVOCE, Porto Potenza Picena - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1924689-d12495975-Reviews-Sottovoce_Pub-Porto_Potenza_Picena_Potenza_Picena_Province_of_Macerata_Marche.html"
+        },
+        {
+          "title": "SOTTOVOCE PUB, Porto Potenza Picena - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g1924689-d12495975-Reviews-Sottovoce_Pub-Porto_Potenza_Picena_Potenza_Picena_Province_of_Macerata_Marche.html"
+        },
+        {
+          "title": "Sottovoce, Porto Potenza Picena - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Sottovoce-Porto-Potenza-Picena"
+        },
+        {
+          "title": "SOTTOVOCE PUB, Porto Potenza Picena - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com.au/Restaurant_Review-g1924689-d12495975-Reviews-Sottovoce_Pub-Porto_Potenza_Picena_Potenza_Picena_Province_of_Macerata_Marche.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:044066:san-benedetto-del-tronto:self-service-maccheroncini",
+      "query": "\"Ristorante Self Service Maccheroncini\" \"San Benedetto del Tronto\" \"Via Pasubio\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristoranti Self Service e Fast Food vicino Via Pasubio a San Benedetto del Tronto e dintorni",
+          "url": "https://www.virgilio.it/italia/san-benedetto-del-tronto/cat/RISTORANTI_SELF_SERVICE_E_FAST_FOOD/vicino_VIA_PASUBIO.html"
+        },
+        {
+          "title": "Prenotazione per Ristorante Self-Service Maccheroncini | San Benedetto del Tronto, Marche | Italian",
+          "url": "https://autoreserve.com/it/restaurants/gCMFGmgsh4Z9Wf1ojWpe"
+        },
+        {
+          "title": "Ristoranti Self Service e Fast Food a San Benedetto del Tronto e dintorni",
+          "url": "https://www.virgilio.it/italia/san-benedetto-del-tronto/cat/RISTORANTI_SELF_SERVICE_E_FAST_FOOD.html"
+        },
+        {
+          "title": "Ristorante Self-Service Maccheroncini Menu (Updated 2025)",
+          "url": "https://ristorante-selfservice-maccheroncini.wheree.com/menu"
+        },
+        {
+          "title": "Ristorante Self-Service Maccheroncini - Fast Food Restaurant in San Benedetto del Tronto",
+          "url": "https://ristorante-self-service-maccheroncini.hey-restaurants.com/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:109001:altidona:baita-marina",
+      "query": "\"La Baita Marina\" \"Altidona\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "LA BAITA MARINA, Altidona - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g2189383-d4228015-Reviews-La_Baita_Marina-Altidona_Province_of_Fermo_Marche.html"
+        },
+        {
+          "title": "LA BAITA MARINA, Altidona - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2189383-d4228015-Reviews-La_Baita_Marina-Altidona_Province_of_Fermo_Marche.html"
+        },
+        {
+          "title": "LA*BAITA*MARINA DI GIORDANI QUIRINA & C. S.N.C., Partita IVA: 01315120442, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/6209/labaitamarina-di-giordani-quirina-c-snc"
+        },
+        {
+          "title": "La Baita Marina Reviews - 16 verified opinions | Altidona",
+          "url": "https://www.sluurpy.com/en/altidona/restaurant/49721/la-baita-marina/reviews"
+        },
+        {
+          "title": "Recensioni - La Baita Marina ALTIDONA",
+          "url": "https://piatti.menu/restaurants/altidona/la-baita-marina/reviews"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:042018:falconara-marittima:bussola-da-poldi",
+      "query": "\"La Bussola da Poldì\" \"Falconara Marittima\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "ᐅ Orari di apertura „La Bussola da Poldì“ | Via Italia",
+          "url": "https://www.oraridiapertura24.it/filiale/Falconara%2520Marittima-La%2520Bussola%2520da%2520Pold%25EC-891994Z.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041013:fano:da-pando-pizza-e-food",
+      "query": "\"Da Pando Pizza e Food\" \"Fano\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "I 40 migliori pasti economici a Fano",
+          "url": "https://wanderlog.com/it/list/geoCategory/184927/i-migliori-pasti-economici-a-fano"
+        },
+        {
+          "title": "Da Pando Pizza & Food, Fano - メニュー、写真、ピッツェリアのレビュー - Bestogoo",
+          "url": "https://www.bestogoo.com/detail.php?activity=ChIJK9NZ2GYQLRMReb9aS1LlQqw&lang=es"
+        },
+        {
+          "title": "Voglia di Pizza Fano, Fano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Voglia-Di-Pizza-Fano"
+        },
+        {
+          "title": "Da Pando Pizza & Food, Fano - メニュー、写真、ピッツェリアのレビュー - Bestogoo",
+          "url": "https://www.bestogoo.com/detail.php?activity=ChIJK9NZ2GYQLRMReb9aS1LlQqw&lang=ja"
+        },
+        {
+          "title": "Da Pando Pizza & Food, Fano - Menu, photos et critiques de pizzeria - Bestogoo",
+          "url": "https://www.bestogoo.com/detail.php?activity=ChIJK9NZ2GYQLRMReb9aS1LlQqw&lang=hi"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:041057:sant-angelo-in-vado:del-corso",
+      "query": "\"Caffe del Corso\" \"Sant'Angelo in Vado\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Centro commerciale naturale - Visit Sant'Angelo in Vado",
+          "url": "https://visitsantangeloinvado.it/centro-commerciale-naturale/"
+        },
+        {
+          "title": "CAFFÈ DEL CORSO, Sant'Angelo in Vado - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g1093086-d16863545-Reviews-Caffe_del_Corso-Sant_Angelo_in_Vado_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "Caffè del Corso, Sant'Angelo In Vado - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Caffe-del-Corso-SantAngelo-In-Vado"
+        },
+        {
+          "title": "CAFFÈ DEL CORSO, Sant'Angelo in Vado - Carta, fotos y opiniones",
+          "url": "https://www.tripadvisor.es/Restaurant_Review-g1093086-d16863545-Reviews-Caffe_del_Corso-Sant_Angelo_in_Vado_Province_of_Pesaro_and_Urbino_Marche.html"
+        },
+        {
+          "title": "CAFFÈ DEL CORSO, Sant'Angelo in Vado - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1093086-d16863545-Reviews-Caffe_del_Corso-Sant_Angelo_in_Vado_Province_of_Pesaro_and_Urbino_Marche.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060055:pofi:setteventi-agriturismo",
+      "query": "\"Setteventi Agriturismo\" \"Pofi\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "SETTEVENTI AGRITURISMO, Pofi - Menu, Prezzo, Ristorante Recensioni & Prenotazioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g3732318-d10464854-Reviews-Setteventi_Agriturismo-Pofi_Province_of_Frosinone_Lazio.html"
+        },
+        {
+          "title": "SETTEVENTI AGRITURISMO, Pofi - Menu, Prices, Restaurant Reviews & Reservations - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g3732318-d10464854-Reviews-Setteventi_Agriturismo-Pofi_Province_of_Frosinone_Lazio.html"
+        },
+        {
+          "title": "Agriturismo Setteventi | 331 300 7250 | Pofi",
+          "url": "https://www.tuttiaffari.com/agriturismo-setteventi-331-300-7250"
+        },
+        {
+          "title": "Agriturismo Setteventi - Google Hotel",
+          "url": "https://www.google.it/travel/hotels/entity/CgoIzZOwwqz78pNXEAE"
+        },
+        {
+          "title": "SETTEVENTI AGRITURISMO, Pofi - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.ca/Restaurant_Review-g3732318-d10464854-Reviews-Setteventi_Agriturismo-Pofi_Province_of_Frosinone_Lazio.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058047:guidonia-montecelio:sfumature-di-cioccolato",
+      "query": "\"Sfumature Di Cioccolato\" \"Guidonia Montecelio\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "SFUMATURE DI CIOCCOLATO SOCIETA' A RESPONSABILITA' LIMITATA, Partita IVA: 15668221003, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/1113/sfumature-di-cioccolato-societa-a-responsabilita-limitata"
+        },
+        {
+          "title": "SFUMATURE DI CIOCCOLATO BAR PASTICCERIA GELATERIA PIZZERIA - Tabaccheria e vendita sigarette a Guidonia Montecelio | LocalShop24",
+          "url": "https://www.localshop24.com/it/guidonia-montecelio-rm-it/attivita/tabaccheria-vendita-sigarette/sfumature-di-cioccolato-bar-pasticceria-gelateria-pizzeria/"
+        },
+        {
+          "title": "Sfumature Di Cioccolato | Largo Liborio Romano 2, Guidonia Montecelio",
+          "url": "https://negozi.sisal.com/my-sisal/guidonia-montecelio-largo-liborio-romano-2-sfumature-di-cioccolato"
+        },
+        {
+          "title": "Sfumature Di Cioccolato Srl | Bar e altri esercizi simili senza cucina a Guidonia Montecelio | Dati e Contatti",
+          "url": "https://atoka.io/public/it/azienda/sfumature-di-cioccolato-societa-a-responsabilita-limitata/22b1d3d5c6ae"
+        },
+        {
+          "title": "Sfumature Di Cioccolato Srl | Bar e altri esercizi simili senza cucina a Guidonia Montecelio | Dati e Contatti",
+          "url": "https://atoka.io/public/it/company/sfumature-di-cioccolato-societa-a-responsabilita-limitata/22b1d3d5c6ae"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058091:roma:on-the-road-9aa7ff16",
+      "query": "\"Caffé on the Road\" \"Roma\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Driving directions to Caffé on the Road, 623 Via dei Monti Tiburtini, Roma - Waze",
+          "url": "https://www.waze.com/live-map/directions/caffe-on-the-road-via-dei-monti-tiburtini-623-roma?to=place.w.8192419.82251872.21737639"
+        },
+        {
+          "title": "Opiniones de Caffé on the Road en Roma",
+          "url": "https://www.todobares.com/bar/caff-on-the-road-roma-it/"
+        },
+        {
+          "title": "Caffé on the Road, Rome - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Caffe-on-the-Road-Rome"
+        },
+        {
+          "title": "CAFFÉ ON THE ROAD - Caffetteria a Roma | LocalShop24",
+          "url": "https://www.localshop24.com/it/roma-rm-it/attivita/caffetteria/caffe-on-the-road/"
+        },
+        {
+          "title": "CAFFÉ ON THE ROAD, Roma - Ristorante Recensioni & Numero di Telefono - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g187791-d27873753-Reviews-Caffe_On_The_Road-Rome_Lazio.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060041:giuliano-di-roma:mc-mario-pizzeria",
+      "query": "\"Mc Mario Pizzeria\" \"Giuliano di Roma\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Mc Mario Pizzeria, Giuliano di Roma - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/pizzeria-Giuliano-di-Roma"
+        },
+        {
+          "title": "Mc Mario Pizzeria | 366 227 7436 | Giuliano di Roma",
+          "url": "https://www.tuttiaffari.com/pizzeria_358N-366-227-7436"
+        },
+        {
+          "title": "Mc Mario Pizzeria, Giuliano di Roma - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/pizzeria-Giuliano-di-Roma"
+        },
+        {
+          "title": "Mc Mario Pizzeria, Giuliano di Roma - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/amp/pizzeria-Giuliano-di-Roma"
+        },
+        {
+          "title": "Mc Mario Pizzeria - Viale XXIV Maggio, 4, 03020 Giuliano di Roma FR, Italy - Cybo",
+          "url": "https://pagini-aurii.cybo.com/IT-biz/mc-mario-pizzeria"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058043:genzano-di-roma:gio-brothers-pub",
+      "query": "\"Gio Brothers Pub\" \"Genzano di Roma\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Gio Brothers Pub | 06 8956 9749 | Genzano di Roma",
+          "url": "https://www.tuttiaffari.com/gio-brothers-pub-06-8956-9749"
+        },
+        {
+          "title": "GIO BROTHERS PUB, Genzano di Roma - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g799536-d3607865-Reviews-Gio_Brothers_Pub-Genzano_di_Roma_Province_of_Rome_Lazio.html"
+        },
+        {
+          "title": "Driving directions to Gio brothers pub, 3 Piazza Mazzini, Genzano di Roma - Waze",
+          "url": "https://www.waze.com/live-map/directions/gio-brothers-pub-piazza-mazzini-3-genzano-di-roma?to=place.w.8323489.83169355.9687525"
+        },
+        {
+          "title": "Gio Brothers Pub, Genzano di Roma - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Gio-Brothers-Pub-Genzano-di-Roma"
+        },
+        {
+          "title": "223 recensioni di Gio Brothers Pub a Genzano di Roma",
+          "url": "https://altraopinione.org/pub/genzano-di-roma/gio-brothers-pub/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059032:terracina:spaghetteria-paninoteca-le-palme",
+      "query": "\"Spaghetteria Paninoteca Le Palme\" \"Terracina\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Spaghetteria Paninoteca \"Le Palme\" | 0773 727296 | Terracina",
+          "url": "https://www.tuttiaffari.com/spaghetteria-paninoteca-le-palme-0773-727296"
+        },
+        {
+          "title": "Spaghetteria Paninoteca \"Le Palme\", Terracina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Le-Palme-Terracina"
+        },
+        {
+          "title": "Menu da Spaghetteria Paninoteca \"Le Palme\" fast food, Terracina",
+          "url": "https://restaurantguru.it/Le-Palme-Terracina/menu"
+        },
+        {
+          "title": "Spaghetteria Paninoteca \"Le Palme\", Terracina - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Le-Palme-Terracina"
+        },
+        {
+          "title": "371 recensioni di Spaghetteria Paninoteca \"Le Palme\" a Terracina",
+          "url": "https://altraopinione.org/ristorante/terracina/spaghetteria-paninoteca-le-pal/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060014:boville-ernica:crema-cioccolato-san-lucio",
+      "query": "\"Crema & Cioccolato San Lucio\" \"Boville Ernica\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Accademia Italiana Della Cucina 230 Luglio 2011 | PDF",
+          "url": "https://it.scribd.com/doc/87364497/Accademia-Italiana-Della-Cucina-230-luglio-2011"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059024:sabaudia:st-bar-saporetti",
+      "query": "\"ST BAR - Saporetti\" \"Sabaudia\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Saporetti – Stabilimento Balneare e Ristorante a Sabaudia",
+          "url": "https://saporetti.it/"
+        },
+        {
+          "title": "ST BAR – Saporetti",
+          "url": "https://saporetti.it/our-team/"
+        },
+        {
+          "title": "MENU ST BAR – Saporetti",
+          "url": "https://saporetti.it/menu-st-bar/"
+        },
+        {
+          "title": "EVENTI – Saporetti",
+          "url": "https://saporetti.it/eventi/"
+        },
+        {
+          "title": "Gallery – Saporetti",
+          "url": "https://saporetti.it/gallery/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058120:fiumicino:tre-diavoletti",
+      "query": "\"Osteria I Tre Diavoletti\" \"Fiumicino\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "OSTERIA I TRE DIAVOLETTI - Ristorante a Fiumicino | LocalShop24",
+          "url": "https://www.localshop24.com/it/fiumicino-rm-it/attivita/ristorante/osteria-i-tre-diavoletti/"
+        },
+        {
+          "title": "Osteria I Tre Diavoletti, Fiumicino - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/3-Diavoletti-Fiumicino"
+        },
+        {
+          "title": "Menu da Osteria I Tre Diavoletti ristorante, Fiumicino",
+          "url": "https://restaurantguru.it/3-Diavoletti-Fiumicino/menu"
+        },
+        {
+          "title": "Osteria I Tre Diavoletti, Fiumicino - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/3-Diavoletti-Fiumicino"
+        },
+        {
+          "title": "Osteria I Tre Diavoletti, Lido di Ostia, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/2300565/osteria-i-tre-diavoletti"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058024:castelnuovo-di-porto:frantoio-di-ottavio",
+      "query": "\"Pizzeria Il Frantoio di Ottavio\" \"Castelnuovo di Porto\" \"Via Giuseppe Garibaldi\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristorazione e Locali Pubblici in italia",
+          "url": "https://www.reteimprese.it/ristorazione-locali-pubblici?p=1144"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058074:palestrina:cuore-nel-caffe-di-elena-e-claudio",
+      "query": "\"Il cuore nel caffe di elena e claudio\" \"Palestrina\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Bar Il Cuore nel Caffé di Elena e Claudio | 06 953 4885 | Palestrina",
+          "url": "https://www.tuttiaffari.com/bar-il-cuore-nel-caff%C3%A9-di-elena-e-06-953-4885"
+        },
+        {
+          "title": "IL CUORE NEL CAFFÉ, Palestrina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g635624-d16721471-Reviews-Il_Cuore_nel_Caffe-Palestrina_Province_of_Rome_Lazio.html"
+        },
+        {
+          "title": "Il Cuore Nel Caffé Di Elena E Claudio da Palestrina RM",
+          "url": "https://piatti.menu/restaurants/palestrina-rm/il-cuore-nel-caffe-di-elena-e-claudio-2"
+        },
+        {
+          "title": "Il Cuore nel Caffé, Palestrina - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Il-cuore-nel-caffe-di-elena-e-claudio-Palestrina"
+        },
+        {
+          "title": "Bar Il Cuore nel Caffé di Elena e Claudio, Palestrina - Menú del restaurante, precios y reseñas",
+          "url": "https://es.restaurantguru.com/Il-cuore-nel-caffe-di-elena-e-claudio-Palestrina"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058091:roma:burger-king-d0675f93",
+      "query": "site:burgerking.it \"Via Aurelia\" \"Roma\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "*ref:raggiungimento fatturato",
+          "url": "https://www.burgerking.it/assets/documents/98_document_it.pdf"
+        },
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=31075"
+        },
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=25736"
+        },
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=31317"
+        },
+        {
+          "title": "BURGER KING® Italia - Ristoranti",
+          "url": "https://www.burgerking.it/trova-un-ristorante?storeId=32087"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060063:san-giorgio-a-liri:milord",
+      "query": "\"Caffè Milord\" \"San Giorgio a Liri\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Caffè Milord – La Torrefazione del tuo caffè",
+          "url": "https://www.caffemilord.it/"
+        },
+        {
+          "title": "Azienda – Caffè Milord",
+          "url": "https://www.caffemilord.it/azienda/"
+        },
+        {
+          "title": "Storia – Caffè Milord",
+          "url": "https://www.caffemilord.it/storia/"
+        },
+        {
+          "title": "Prodotti – Caffè Milord",
+          "url": "https://www.caffemilord.it/prodotti/"
+        },
+        {
+          "title": "CAFFÈ MILORD (PUNTO VENDITA) - Negozio di alimentari a San Giorgio a Liri | LocalShop24",
+          "url": "https://www.localshop24.com/it/san-giorgio-a-liri-fr-it/attivita/negozio-generi-alimentari/caffe-milord-punto-vendita/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056035:montalto-di-castro:cristybar",
+      "query": "\"Cristybar\" \"Montalto di Castro\" \"Str. delle Murelle\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Cristybar | 389 437 1487 | Montalto di Castro",
+          "url": "https://www.tuttiaffari.com/cristybar-389-437-1487"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058007:anzio:breezy-gelateria",
+      "query": "\"Breezy Gelateria\" \"Anzio\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BREEZY GELATERIA - Gelateria a Anzio | LocalShop24",
+          "url": "https://www.localshop24.com/it/anzio-rm-it/attivita/gelateria/breezy-gelateria/"
+        },
+        {
+          "title": "Breezy Gelateria | 06 987 7021 | Anzio",
+          "url": "https://www.tuttiaffari.com/breezy-gelateria-06-987-7021"
+        },
+        {
+          "title": "GELATERIA BREEZY, Anzio - Restaurant Reviews & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194670-d3323269-Reviews-Gelateria_Breezy-Anzio_Province_of_Rome_Lazio.html"
+        },
+        {
+          "title": "Breezy Gelateria, Anzio - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Gelateria-Breezy-Anzio"
+        },
+        {
+          "title": "Breezy Gelateria, Anzio, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3013421/breezy-gelateria"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:057013:castel-di-tora:castellani",
+      "query": "\"Trattoria Bar Castellani\" \"Castel di Tora\" \"Via Turanense\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Trattoria Bar Castellani | 328 196 3963 | Castel di Tora",
+          "url": "https://www.tuttiaffari.com/trattoria-bar-castellani-328-196-3963"
+        },
+        {
+          "title": "Trattoria Bar Castellani, Castel di Tora - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Bar-Ristoro-Trattoria-Pizzeria-Castellani-Castel-di-Tora"
+        },
+        {
+          "title": "Trattoria Bar Castellani, Castel di Tora - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Bar-Ristoro-Trattoria-Pizzeria-Castellani-Castel-di-Tora"
+        },
+        {
+          "title": "Bar Trattoria Castellani - www.andarperlago.it",
+          "url": "https://www.andarperlago.it/bar-trattoria-castellani/"
+        },
+        {
+          "title": "Trattoria Bar Castellani, Rieti, Italy - Reviews, Ratings, Tips and Why You Should Go – Wanderlog",
+          "url": "https://wanderlog.com/place/details/3212799/trattoria-bar-castellani"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058003:albano-laziale:4-stelle",
+      "query": "\"Le 4 Stelle\" \"Albano Laziale\" \"Via San Francesco d'Assisi\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Piadineria (4) a Velletri: Numeri di Telefono ed indirizzi",
+          "url": "https://www.virgilio.it/italia/velletri/ricerca-aziende/piadineria_%284%29?azi_eq_iq=579e8972-eb7a-4615-bb92-b6c8ba45a01a"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059011:latina:l-oasi-del-bar-club",
+      "query": "\"L'Oasi del Bar Club\" \"Latina\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "L'OASI DEL BAR CLUB, Latina - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g194787-d5541993-Reviews-L_Oasi_del_Bar_Club-Latina_Province_of_Latina_Lazio.html"
+        },
+        {
+          "title": "L'OASI DEL BAR CLUB, Latina - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g194787-d5541993-Reviews-L_Oasi_del_Bar_Club-Latina_Province_of_Latina_Lazio.html"
+        },
+        {
+          "title": "L'OASI DEL BAR CLUB, Latina - Restaurant Reviews, Photos & Phone Number - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g194787-d5541993-Reviews-L_Oasi_del_Bar_Club-Latina_Province_of_Latina_Lazio.html"
+        },
+        {
+          "title": "L'OASI DEL BAR CLUB, Latina - Restaurant Avis, Numéro de Téléphone & Photos - Tripadvisor",
+          "url": "https://www.tripadvisor.fr/Restaurant_Review-g194787-d5541993-Reviews-L_Oasi_del_Bar_Club-Latina_Province_of_Latina_Lazio.html"
+        },
+        {
+          "title": "354 recensioni di L'Oasi del Bar Club a Latina",
+          "url": "https://altraopinione.org/pub/latina/l-oasi-del-bar-club/"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056023:corchiano:jack-london-pub",
+      "query": "\"Jack London Pub\" \"Corchiano\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "JACK LONDON PUB, Corchiano - Menu, Prices & Restaurant Reviews - Tripadvisor",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g3198149-d17327059-Reviews-Jack_London_Pub-Corchiano_Province_of_Viterbo_Lazio.html"
+        },
+        {
+          "title": "JACK LONDON PUB, Corchiano - 2026 Reviews & Information",
+          "url": "https://www.tripadvisor.ca/Restaurant_Review-g3198149-d17327059-Reviews-Jack_London_Pub-Corchiano_Province_of_Viterbo_Lazio.html"
+        },
+        {
+          "title": "Jack London Pub | 0761 572199 | Corchiano",
+          "url": "https://www.tuttiaffari.com/jack-london-pub-0761-572199"
+        },
+        {
+          "title": "Jack London Pub, Corchiano - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Jack-London-Corchiano"
+        },
+        {
+          "title": "JACK LONDON PUB, Corchiano - Menu, Prezzo & Ristorante Recensioni - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g3198149-d17327059-Reviews-Jack_London_Pub-Corchiano_Province_of_Viterbo_Lazio.html"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060011:atina:gelateria-persichini",
+      "query": "\"Gelateria Persichini\" \"Atina\" \"SR627\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Gelateria Persichini, Atina Inferiore - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Persichini-Atina"
+        },
+        {
+          "title": "Gelateria Persichini, Atina",
+          "url": "https://www.nuovaopinione.it/atina/gelaterie/gelateria-persichini-190600"
+        },
+        {
+          "title": "Gelateria Persichini, Atina Inferiore - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Persichini-Atina"
+        },
+        {
+          "title": "Gelateria Persichini, Atina Inferiore - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/amp/Persichini-Atina"
+        },
+        {
+          "title": "Gelateria Persichini | 0776 610257 | Atina",
+          "url": "https://www.tuttiaffari.com/gelateria-persichini-0776-610257"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:059011:latina:pr-piadineria-romagnola",
+      "query": "\"PR Piadineria Romagnola\" \"Latina\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Ristoranti a Nettuno - Pagina 1",
+          "url": "https://www.findglocal.com/IT/Nettuno/140640-7"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058064:monte-porzio-catone:lumiere",
+      "query": "\"Cafe Lumiere\" \"Monte Porzio Catone\" \"Via Frascati Colonna\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Café Lumiere - Monte Porzio Catone | Bar nelle mie vicinanze",
+          "url": "https://cafe-lumiere.eatbu.com/?lang=it"
+        },
+        {
+          "title": "Café Lumiere - Monte Porzio Catone | Bar near me",
+          "url": "https://cafe-lumiere.eatbu.com/?lang=en"
+        },
+        {
+          "title": "CAFE' LUMIERE S.N.C. DI B. & C. MATTOCCIA, Partita IVA: 11600911009, Fatturato, Dipendenti, PEC",
+          "url": "https://www.ufficiocamerale.it/7944/cafe-lumiere-snc-di-b-c-mattoccia"
+        },
+        {
+          "title": "CAFÈ LUMÌERE, Colonna - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2017731-d27288298-Reviews-Cafe_Lumiere-Colonna_Province_of_Rome_Lazio.html"
+        },
+        {
+          "title": "Cafe' Lumiere S.n.c. di B.E C. Mattoccia - Monte Porzio Catone, Via Frascati Colonna, 2",
+          "url": "https://aziende.virgilio.it/bar/monte-porzio-catone-rm/cafe-lumiere-bar-tavola-calda-sala-the"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:058013:bracciano:manu-osteria-del-mare",
+      "query": "\"Manù Osteria del mare\" \"Bracciano\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Manu' Osteria del Mare, Lungolago - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Manu-Restaurant-Bracciano"
+        },
+        {
+          "title": "MANU' OSTERIA DEL MARE, Bracciano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g608891-d23691866-Reviews-Manu_Restaurant-Bracciano_Province_of_Rome_Lazio.html"
+        },
+        {
+          "title": "Menu da Manu' Osteria del Mare ristorante, Lungolago",
+          "url": "https://restaurantguru.it/Manu-Restaurant-Bracciano/menu"
+        },
+        {
+          "title": "MANU' OSTERIA DEL MARE, Bracciano - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g608891-d23691866-Reviews-or15-Manu_Restaurant-Bracciano_Province_of_Rome_Lazio.html"
+        },
+        {
+          "title": "Manù Osteria Del Mare da BRACCIANO",
+          "url": "https://piatti.menu/restaurants/bracciano/manu-osteria-del-mare"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:056059:viterbo:otium-cafe-ristorantino-bar",
+      "query": "\"Otium Cafe.. Ristorantino bar\" \"Viterbo\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "Otium Cafe.. Ristorantino bar | 0761 344621 | Viterbo",
+          "url": "https://www.tuttiaffari.com/otium-cafe-ristorantino-bar-0761-344621"
+        },
+        {
+          "title": "Otium Cafe.. Ristorantino bar, Viterbo - Menu del ristorante, prezzi e recensioni",
+          "url": "https://restaurantguru.it/Otium-Viterbo"
+        },
+        {
+          "title": "Otium Cafe.. Ristorantino bar, Viterbo - Restaurant menu, prices and reviews",
+          "url": "https://restaurantguru.com/Otium-Viterbo"
+        },
+        {
+          "title": "Otium Cafe.. Ristorantino bar, Via Vico Squarano, 88, 01100 Viterbo VT, Italy - TripTap",
+          "url": "https://triptap.com/places/it/lazio/viterbo/otium-cafe-ristorantino-bar-t0422cca"
+        },
+        {
+          "title": "Cafes in Viterbo - TripTap",
+          "url": "https://triptap.com/locations/it/lazio/viterbo/cafes"
+        }
+      ]
+    },
+    {
+      "venue_id": "venue:060084:vallerotonda:collo",
+      "query": "\"Bar collo\" \"Vallerotonda\" \"Piazza Duomo\"",
+      "retrieved_at": "2026-09-07T13:30:00.000Z",
+      "candidates": [
+        {
+          "title": "BAR COLLO, Vallerotonda - Ristorante Recensioni, Numero di Telefono & Foto - Tripadvisor",
+          "url": "https://www.tripadvisor.it/Restaurant_Review-g2530896-d28755643-Reviews-Bar_Collo-Vallerotonda_Province_of_Frosinone_Lazio.html"
+        },
+        {
+          "title": "I MIGLIORI ristoranti vicino a Bar Collo, Vallerotonda - Tripadvisor",
+          "url": "https://www.tripadvisor.it/RestaurantsNear-g2530896-d28755643-Bar_Collo-Vallerotonda_Province_of_Frosinone_Lazio.html"
+        },
+        {
+          "title": "Bar collo, Vallerotonda | Availability, Photos and more",
+          "url": "https://coparking.ch/en/Italy/parkings/26474"
+        }
+      ]
+    }
+  ]
+}

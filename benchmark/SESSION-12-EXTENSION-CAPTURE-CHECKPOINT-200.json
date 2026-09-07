@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "stage": "B",
+  "checkpoint_sample_index": 200,
+  "selection_fingerprint_sha256": "ad9d58f215a91ce0da8863e03bbe33cc6442a664bcd0d7c6022e83efa3b06e8e",
+  "continuous_selection_order_coverage": "001-200",
+  "unique_venue_ids": 200,
+  "retained_candidate_urls": 673,
+  "capture_sha256": {
+    "locked-holdout-capture-001-100.partial.json": "e6a48208547bc7ac684b40c6edb46663b2e8c50ee413aa233d451dd3baad3e10",
+    "locked-holdout-capture-101-200.partial.json": "6ffb7506c715a677d9f342d4cc9c6314ce9d0c722a77936bffaf9be871d2216f"
+  },
+  "normalized_urls_valid": true,
+  "title_bounds_valid": true,
+  "completed_queries_reopened": 0,
+  "brave_requests_made": 0,
+  "evaluator_runs": 0,
+  "evaluator_excluded": true,
+  "validation_status": "passed"
+}
