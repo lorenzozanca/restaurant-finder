@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ownership review — restaurant-finder</title>
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { background: #111; color: #e0e0e0;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    font-size: 14px; line-height: 1.5; }
+  #bar { display: flex; align-items: baseline; gap: 1em; padding: 0.6em 1em;
+    background: #1a1a2e; border-bottom: 1px solid #333; flex-wrap: wrap; }
+  #bar h1 { font-size: 1em; margin: 0; color: #888; font-weight: normal; }
+  #bar h1 b { color: #fbbf24; }
+  #remaining { color: #fbbf24; font-size: 0.85em; }
+  #bar a { color: #4ade80; font-size: 0.85em; }
+  #wrap { max-width: 60em; margin: 0 auto; padding: 1em; }
+  .card { background: #1e1e2e; border: 1px solid #333; border-radius: 6px;
+    padding: 1em; margin-bottom: 1em; }
+  .vname { font-weight: bold; font-size: 1.1em; }
+  .vmeta { color: #aaa; font-size: 0.85em; }
+  table { border-collapse: collapse; width: 100%; margin-top: 0.6em; font-size: 0.85em; }
+  th, td { text-align: left; padding: 0.3em 0.5em; border-bottom: 1px solid #333;
+    vertical-align: top; overflow-wrap: anywhere; }
+  th { color: #888; font-weight: normal; }
+  a { color: #4ade80; }
+  label { display: block; margin-top: 0.7em; color: #aaa; font-size: 0.85em; }
+  input[type=text], textarea, select { width: 100%; box-sizing: border-box;
+    background: #111; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;
+    padding: 0.5em; font: inherit; }
+  textarea { min-height: 3.5em; }
+  #buttons { display: flex; gap: 0.6em; margin-top: 1em; flex-wrap: wrap; }
+  button { font: inherit; border-radius: 4px; padding: 0.5em 1.2em; cursor: pointer; border: 1px solid; }
+  #approve { background: #14532d; color: #4ade80; border-color: #4ade80; }
+  #reject { background: #450a0a; color: #f87171; border-color: #f87171; }
+  #skip { background: #111; color: #aaa; border-color: #444; }
+  button:disabled { opacity: 0.4; cursor: default; }
+  #result { margin-top: 0.8em; min-height: 1.5em; }
+  #result.ok { color: #4ade80; }
+  #result.err { color: #f87171; }
+  #empty { color: #888; }
+  .hint { color: #666; font-size: 0.8em; }
+</style>
+</head>
+<body>
+<div id="bar">
+  <h1>restaurant-finder <b>ownership review</b></h1>
+  <span id="remaining">loading…</span>
+  <a href="/map.html">verified map</a>
+  <a href="/">town scanner</a>
+</div>
+<div id="wrap">
+  <div id="candidate"></div>
+  <div class="card" id="form" hidden>
+    <label>candidate website
+      <input type="text" id="website" placeholder="https://www.example.it/">
+    </label>
+    <label>evidence URLs (one per line)
+      <textarea id="evidence" placeholder="https://www.example.it/contatti"></textarea>
+    </label>
+    <label>reviewer
+      <input type="text" id="reviewer" placeholder="operator name or handle">
+    </label>
+    <label>notes <span class="hint">optional</span>
+      <input type="text" id="notes" placeholder="">
+    </label>
+    <div id="buttons">
+      <button id="approve" type="button">Approve</button>
+      <button id="reject" type="button">Reject</button>
+      <button id="skip" type="button">Skip</button>
+    </div>
+    <div id="result"></div>
+  </div>
+  <p class="hint">Each click records a venue-scoped attestation only — nothing is
+  published. After a batch, the operator re-exports the map:<br>
+  <code>node export-verified-map.mjs --db "$EVIDENCE_DB_PATH" --output ui/verified-venues.geojson</code></p>
+</div>
+<script>
+(function () {
+  'use strict';
+  var candidate = null;
+  var cursorVenue = '';
+  var cursorDomain = '';
+  var reviewerInput = document.getElementById('reviewer');
+  try { reviewerInput.value = localStorage.getItem('reviewer') || ''; } catch (e) {}
+
+  function esc(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function link(url) {
+    return '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(url) + '</a>';
+  }
+
+  function cell(value, isUrl) {
+    if (value == null || value === '') return '<span class="hint">—</span>';
+    return isUrl ? link(value) : esc(value);
+  }
+
+  function render(c) {
+    candidate = c;
+    var box = document.getElementById('candidate');
+  document.getElementById('remaining').textContent = c.queue_remaining + ' domain candidates awaiting review';
+    var lines = ['<div class="card"><div class="vname">' + esc(c.display_name) + '</div>',
+      '<div class="vmeta">' + esc(c.venue_id) + ' · ' + esc(c.municipality) +
+      ' · candidate <b>' + esc(c.candidate_domain) + '</b> via ' +
+      esc((c.candidate_origins || []).join(', ')) +
+      (c.already_attested ? ' · <b>already attested</b> (a decision here replaces it)' : '') + '</div>'];
+    lines.push('<table><tr><th>source</th><th>name</th><th>type</th><th>address</th><th>phone</th><th>website</th></tr>');
+    (c.sources || []).forEach(function (s) {
+      lines.push('<tr><td>' + esc(s.source) + '</td><td>' + esc(s.name) + '</td><td>' +
+        esc(s.type) + '</td><td>' + esc(s.address) + '</td><td>' + esc(s.phone) +
+        '</td><td>' + cell(s.website, true) + '</td></tr>');
+    });
+    lines.push('</table>');
+    if ((c.facts || []).length) {
+      lines.push('<table><tr><th>fact</th><th>url</th><th>decision</th><th>last check</th><th>last seen</th></tr>');
+      c.facts.forEach(function (f) {
+        lines.push('<tr><td>' + esc(f.kind) + '</td><td>' + cell(f.url, true) + '</td><td>' +
+          esc(f.decision_status) + '</td><td>' + esc(f.last_check_outcome) + '</td><td>' +
+          esc(String(f.last_seen || '').slice(0, 10)) + '</td></tr>');
+      });
+      lines.push('</table>');
+    } else {
+      lines.push('<p class="hint">no crawl facts yet for this venue</p>');
+    }
+    lines.push('</div>');
+    box.innerHTML = lines.join('');
+    document.getElementById('form').hidden = false;
+    document.getElementById('website').value = c.candidate_url || '';
+    document.getElementById('evidence').value = '';
+    document.getElementById('notes').value = '';
+    setResult('', '');
+  }
+
+  function setResult(kind, text) {
+    var el = document.getElementById('result');
+    el.className = kind;
+    el.textContent = text;
+  }
+
+  function setBusy(busy) {
+    ['approve', 'reject', 'skip'].forEach(function (id) {
+      document.getElementById(id).disabled = busy;
+    });
+  }
+
+  function load() {
+    setBusy(true);
+    setResult('', 'loading…');
+    var params = new URLSearchParams();
+    if (cursorVenue) params.set('after_venue', cursorVenue);
+    if (cursorDomain) params.set('after_domain', cursorDomain);
+    fetch('api/review/next' + (params.toString() ? '?' + params.toString() : ''))
+      .then(function (res) {
+        if (res.status === 503) throw new Error('review queue is not configured (set EVIDENCE_DB_PATH)');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      }).then(function (c) {
+        setBusy(false);
+        if (!c) {
+          document.getElementById('candidate').innerHTML =
+            '<div class="card" id="empty">This review pass is complete. Reload to revisit skipped candidates.</div>';
+          document.getElementById('form').hidden = true;
+          document.getElementById('remaining').textContent = 'review pass complete';
+          return;
+        }
+        cursorVenue = c.venue_id;
+        cursorDomain = c.candidate_domain;
+        render(c);
+      }).catch(function (err) {
+        setBusy(false);
+        setResult('err', 'failed to load candidate: ' + err.message);
+      });
+  }
+
+  function decide(kind) {
+    if (!candidate) return;
+    var reviewer = reviewerInput.value.trim();
+    try { localStorage.setItem('reviewer', reviewer); } catch (e) {}
+    setBusy(true);
+    setResult('', 'recording…');
+    fetch('api/review/decision', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        venue_id: candidate.venue_id,
+        candidate_domain: candidate.candidate_domain,
+        decision: kind,
+        website_url: document.getElementById('website').value.trim(),
+        evidence_urls: document.getElementById('evidence').value.split('\n'),
+        reviewer: reviewer,
+        method: 'manual_first_party_review',
+        notes: document.getElementById('notes').value.trim() || undefined
+      })
+    }).then(function (res) {
+      return res.json().then(function (doc) {
+        if (!res.ok) throw new Error(doc.error || ('HTTP ' + res.status));
+        return doc;
+      });
+    }).then(function (doc) {
+      setBusy(false);
+      setResult('ok', 'recorded ' + doc.status + ' attestation for ' +
+        doc.publisher_domain + ' (attestation ' + doc.attestation_id + ')');
+      load();
+    }).catch(function (err) {
+      setBusy(false);
+      setResult('err', 'decision rejected: ' + err.message);
+    });
+  }
+
+  document.getElementById('approve').addEventListener('click', function () { decide('approve'); });
+  document.getElementById('reject').addEventListener('click', function () { decide('reject'); });
+  document.getElementById('skip').addEventListener('click', function () {
+    if (candidate) load();
+  });
+
+  load();
+})();
+</script>
+</body>
+</html>

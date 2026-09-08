@@ -77,3 +77,25 @@ holds: review evidence plus an unconvincing live page still abstains.
 3. Backlog layers on the map (unverified density) only after the verified
    layer grows; wholesale queue crawling stays off until the worker honors
    reusable evidence.
+
+## Continuation — 2026-09-08
+
+The registry licensing review is complete and supersedes item 1 above: there
+is no lawful zero-cost bulk INI-PEC / Registro Imprese track. INI-PEC may be
+consulted manually for one venue, but an own-domain PEC is only a candidate
+hint and cannot create an ownership attestation by itself. See
+`DATA-LICENSING.md`.
+
+The next operational track is therefore the local ownership review queue at
+`/review.html`. Start it against the national store with:
+
+```sh
+EVIDENCE_DB_PATH=data/istat/2026-01-01/derived/italy-import.sqlite node ui/server.mjs
+```
+
+The queue presents stored website candidates one venue/domain at a time with
+minimised source and crawl evidence. Approve/reject writes a durable human
+review attestation only; it never publishes a fact. Rejected domains leave
+other candidate domains for the venue reviewable. `official_registry` is not
+available as a review-queue method. After a reviewed batch, crawl only newly
+attested venues and regenerate `ui/verified-venues.geojson`.

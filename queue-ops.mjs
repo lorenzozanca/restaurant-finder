@@ -47,6 +47,12 @@ export async function runQueueCommand(argv = process.argv.slice(2), env = proces
     if (command === "ownership-unattested") {
       return queue.store.listUnattestedCandidates({ limit: args.limit });
     }
+    if (command === "ownership-review-next") {
+      return queue.store.nextReviewCandidate({
+        venueId: args.venue, excludeVenueId: args.exclude,
+        afterVenueId: args.afterVenue, afterDomain: args.afterDomain,
+      });
+    }
     if (command === "ownership-import") {
       if (!args.selection) throw new Error("ownership-import requires --selection PATH");
       const selectionBytes = await readFile(resolve(String(args.selection)));
@@ -132,6 +138,9 @@ Commands:
                [--scope SCOPE] [--key KEY]
   ownership-list [--venue ID]    List durable publisher attestations
   ownership-unattested           List venues without an active attestation
+  ownership-review-next          Show the next review-queue candidate with evidence
+                           [--venue ID] [--exclude VENUE_ID]
+                           [--after-venue ID] [--after-domain DOMAIN]
   ownership-import --selection   Import accepted reviews idempotently
   ownership-approve              Record a verified ownership decision
   ownership-reject               Record a rejected ownership decision

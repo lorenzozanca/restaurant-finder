@@ -6,13 +6,16 @@ import { fileURLToPath } from "node:url";
 import { existsSync } from "node:fs";
 import { networkInterfaces } from "node:os";
 import { normalizeScanDocument } from "../scan-schema.mjs";
+import { EvidenceStore } from "../lib/evidence-store.mjs";
+import { recordReviewDecision } from "../lib/review-queue.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const UI_DIR = __dirname;
 const OUTPUT_DIR = resolve(__dirname, "..", "output");
 const DISCOVER = resolve(__dirname, "..", "discover.mjs");
+const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 const PORT = Number(process.env.PORT || 4188);
-const HOST = process.env.HOST || tailscaleAddress() || "127.0.0.1";
+const HOST = process.env.HOST || (isMain ? tailscaleAddress() : "127.0.0.1") || "127.0.0.1";
 const MAX_BODY_BYTES = 16 * 1024;
 // The app has no authentication of its own, so it only binds where every peer is
 // already authenticated: loopback, or a Tailscale address whose tailnet ACLs decide
@@ -43,7 +46,7 @@ const server = createServer(handle);
 // machine; a listener is per address, and loopback is already an allowed peer.
 const loopbackServer = isLoopback(HOST) ? null : createServer(handle);
 
-async function handle(req, res) {
+export async function handle(req, res) {
   if (!hostAllowed(req.headers.host) || !originAllowed(req)) {
     json(res, 403, { error: "host not allowed" });
     return;
@@ -65,6 +68,10 @@ async function handle(req, res) {
       await handleScans(req, res);
     } else if (url.pathname === "/api/map" && req.method === "GET") {
       await handleMap(req, res);
+    } else if (url.pathname === "/api/review/next" && req.method === "GET") {
+      await handleReviewNext(req, res, url);
+    } else if (url.pathname === "/api/review/decision" && req.method === "POST") {
+      await handleReviewDecision(req, res);
     } else if (url.pathname.startsWith("/api/scan/") && req.method === "DELETE") {
       await handleScanDelete(req, res, url);
     } else if (url.pathname.startsWith("/api/scan/")) {
@@ -470,6 +477,58 @@ async function handleMap(_req, res) {
   });
 }
 
+// Ownership review queue on top of the durable attestation store. Reads the
+// next unattested candidate with its evidence; decisions record attestations
+// only and never publish facts (enforced in lib/review-queue.mjs and covered
+// by tests). The database is operator-configured via EVIDENCE_DB_PATH and
+// must already exist: a typo'd path must 503, never create an empty store.
+function reviewDbPath(res) {
+  const dbPath = String(process.env.EVIDENCE_DB_PATH || "").trim();
+  if (!dbPath) {
+    json(res, 503, { error: "review queue is not configured (set EVIDENCE_DB_PATH)" });
+    return "";
+  }
+  if (!existsSync(dbPath)) {
+    json(res, 503, { error: "evidence store not found" });
+    return "";
+  }
+  return dbPath;
+}
+
+async function handleReviewNext(_req, res, url) {
+  const dbPath = reviewDbPath(res);
+  if (!dbPath) return;
+  const store = new EvidenceStore(dbPath);
+  try {
+    json(res, 200, store.nextReviewCandidate({
+      venueId: String(url.searchParams.get("venue") || ""),
+      candidateDomain: String(url.searchParams.get("domain") || ""),
+      excludeVenueId: String(url.searchParams.get("exclude") || ""),
+      afterVenueId: String(url.searchParams.get("after_venue") || ""),
+      afterDomain: String(url.searchParams.get("after_domain") || ""),
+    }) || null);
+  } finally {
+    store.close();
+  }
+}
+
+async function handleReviewDecision(req, res) {
+  const dbPath = reviewDbPath(res);
+  if (!dbPath) return;
+  const body = await readBody(req);
+  let parsed;
+  try {
+    parsed = JSON.parse(body);
+  } catch {
+    return json(res, 400, { error: "invalid JSON" });
+  }
+  try {
+    json(res, 200, recordReviewDecision(dbPath, parsed));
+  } catch (error) {
+    json(res, 400, { error: error.message || "invalid review decision" });
+  }
+}
+
 async function handleScanGet(_req, res, url) {
   const parts = decodeURIComponent(url.pathname).replace(/^\/api\/scan\//, "").split("/");
   if (parts.length === 0) return json(res, 400, { error: "invalid path" });
@@ -616,9 +675,6 @@ function capitalizeTown(slug) {
     .join(" ");
 }
 
-process.on("SIGTERM", shutdown);
-process.on("SIGINT", shutdown);
-
 function shutdown() {
   if (runningScan) {
     try { runningScan.proc.kill("SIGKILL"); } catch {}
@@ -671,24 +727,26 @@ function originAllowed(req) {
   try { return hostAllowed(new URL(origin).host); } catch { return false; }
 }
 
-if (!isLoopback(HOST) && !isTailnet(HOST) && !WIDE_BIND) {
-  console.error(
-    `refusing to bind ${HOST}: it has no authenticated network in front of it. Use a loopback or `
-    + "Tailscale (100.64.0.0/10) address, or set ALLOW_WIDE_BIND=1 once your own access controls are in place.",
-  );
-  process.exit(1);
-}
-
-loopbackServer?.listen(PORT, "127.0.0.1", () => {
-  console.log(`restaurant-finder UI — http://127.0.0.1:${PORT}`);
-});
-
-server.listen(PORT, HOST, () => {
-  console.log(`restaurant-finder UI — http://${HOST}:${PORT}`);
-  if (WIDE_BIND && !isLoopback(HOST) && !isTailnet(HOST)) {
-    console.warn(
-      `warning: ${HOST} is reachable beyond the tailnet and this app has no authentication of its own. `
-      + "List the names it is served under in ALLOWED_HOSTS; other Host headers are rejected.",
+if (isMain) {
+  process.on("SIGTERM", shutdown);
+  process.on("SIGINT", shutdown);
+  if (!isLoopback(HOST) && !isTailnet(HOST) && !WIDE_BIND) {
+    console.error(
+      `refusing to bind ${HOST}: it has no authenticated network in front of it. Use a loopback or `
+      + "Tailscale (100.64.0.0/10) address, or set ALLOW_WIDE_BIND=1 once your own access controls are in place.",
     );
+    process.exit(1);
   }
-});
+  loopbackServer?.listen(PORT, "127.0.0.1", () => {
+    console.log(`restaurant-finder UI — http://127.0.0.1:${PORT}`);
+  });
+  server.listen(PORT, HOST, () => {
+    console.log(`restaurant-finder UI — http://${HOST}:${PORT}`);
+    if (WIDE_BIND && !isLoopback(HOST) && !isTailnet(HOST)) {
+      console.warn(
+        `warning: ${HOST} is reachable beyond the tailnet and this app has no authentication of its own. `
+        + "List the names it is served under in ALLOWED_HOSTS; other Host headers are rejected.",
+      );
+    }
+  });
+}

@@ -33,3 +33,22 @@ test("bounded ownership operator commands approve, inspect, and revoke without p
   const history = await runQueueCommand(["ownership-history", "--db", db, "--venue", "venue:test"]);
   assert.deepEqual(history.map((event) => event.event_type), ["created", "revoked"]);
 });
+
+test("ownership-review-next returns the first undecided domain candidate with evidence", async (t) => {
+  const directory = await mkdtemp(join(tmpdir(), "ownership-review-"));
+  t.after(() => rm(directory, { recursive: true, force: true }));
+  const db = join(directory, "store.sqlite");
+  const store = new EvidenceStore(db, { clock: () => new Date("2026-09-02T00:00:00Z") });
+  store.rememberVenue({ canonical_venue_id: "venue:review", name: "Review Venue",
+    source_records: [{ source_record_id: "overture:review", source: "overture_places",
+      name: "Review Venue", website: "https://review.example/" }] },
+  { checkedAt: "2026-09-01T00:00:00Z", municipality: "Torino" });
+  store.close();
+
+  const candidate = await runQueueCommand(["ownership-review-next", "--db", db]);
+  assert.equal(candidate.venue_id, "venue:review");
+  assert.equal(candidate.candidate_domain, "review.example");
+  assert.deepEqual(candidate.candidate_origins, ["source:overture_places"]);
+  assert.equal(candidate.sources[0].website, "https://review.example/");
+  assert.equal(candidate.queue_remaining, 1);
+});
