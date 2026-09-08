@@ -2,12 +2,28 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   classifyWebsite,
+  crawlWebsiteCandidate,
   extractRelevantSiteResources,
   findMenuSources,
   scoreOfficialWebsite,
   scoreSearchCandidate,
   validateResourceCandidate,
 } from "./find-menu.mjs";
+
+test("candidate crawl falls back to the same publisher root after a dead path", async () => {
+  const requested = [];
+  const result = await crawlWebsiteCandidate("https://venue.test/old-page", {
+    get: async (url) => { requested.push(url); return url.endsWith("/old-page")
+      ? { ok: false, status: 404, final_url: url, body: "" }
+      : { ok: true, status: 200, final_url: url,
+        body: "Venue Test ristorante Roma ".repeat(20), content_type: "text/html" }; },
+    getRendered: async () => ({ ok: false, status: 0, body: "" }),
+  });
+  assert.deepEqual(requested, ["https://venue.test/old-page", "https://venue.test/"]);
+  assert.equal(result.status, "succeeded");
+  assert.equal(result.same_publisher_root_fallback, true);
+  assert.equal(result.candidate_http_status, 404);
+});
 
 const oderzo = { name: "Al Giardinetto", type: "ristorante" };
 

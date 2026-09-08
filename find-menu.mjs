@@ -28,6 +28,10 @@ const DIRECTORY_DOMAINS = [
   // Fresh Session 10 regressions: menu mirrors and business directories.
   "giallozafferano.it", "grubbio.com", "opendi.it", "res-menu.net",
   "mycia.it", "mapstr.com",
+  // Labelled development-corpus false positives: navigation/tourism directories
+  // and hosted restaurant microsites are not controlled by the venue.
+  "waze.com", "aroundfaenza.it", "eatbu.com", "lovevda.it",
+  "ilvenetoshopping.it", "turismocordovado.it",
 ];
 const DIRECTORY_DOMAIN_MARKERS = ["tripadvisor.", "restaurantguru."];
 const SOCIAL_DOMAINS = ["facebook.com", "instagram.com", "youtube.com", "tiktok.com"];
@@ -252,7 +256,10 @@ async function crawlWebsiteUncached(website, dependencies) {
   let html;
   let requestCount = 1;
   try {
-    const res = await dependencies.get(website, { timeout: 8_000, maxBytes: MAX_HTML_BODY_BYTES });
+    const res = await dependencies.get(website, {
+      timeout: dependencies.timeout || 8_000,
+      maxBytes: dependencies.maxBytes || MAX_HTML_BODY_BYTES,
+    });
     if (!res.ok) return {
       status: "failed", resources: [], cache_hit: false, request_count: requestCount,
       final_url: res.final_url || website, http_status: res.status || 0,
@@ -266,7 +273,10 @@ async function crawlWebsiteUncached(website, dependencies) {
   if (textLen < 200 || /enable\s?(js|javascript)/i.test(html)) {
     try {
       requestCount++;
-      const rendered = await dependencies.getRendered(website, { timeout: 10_000, maxBytes: MAX_HTML_BODY_BYTES });
+      const rendered = await dependencies.getRendered(website, {
+        timeout: dependencies.renderedTimeout || 10_000,
+        maxBytes: dependencies.maxBytes || MAX_HTML_BODY_BYTES,
+      });
       if (rendered.ok && rendered.body && rendered.body.length > html.length + 100) {
         html = rendered.body;
         responseFacts = { ...responseFacts, ...rendered };
@@ -286,6 +296,37 @@ async function crawlWebsiteUncached(website, dependencies) {
     last_modified: responseFacts?.last_modified,
     body_truncated: Boolean(responseFacts?.body_truncated),
     site_facts: extractWebsiteFacts(html, website),
+  };
+}
+
+// Crawl one already-known candidate without invoking discovery or resource search.
+// Callers use this for labelled-corpus and production candidate assessment; the
+// returned page facts are inputs to scoreOfficialWebsite, not publishable facts.
+export async function crawlWebsiteCandidate(website, options = {}) {
+  const dependencies = {
+    get: options.get || get,
+    getRendered: options.getRendered || getRendered,
+    timeout: options.timeout,
+    renderedTimeout: options.renderedTimeout,
+    maxBytes: options.maxBytes,
+  };
+  const first = await crawlWebsiteUncached(website, dependencies);
+  if (first.status === "succeeded") return first;
+  let root;
+  try {
+    const requested = new URL(website);
+    if (requested.pathname === "/" && !requested.search) return first;
+    root = requested.origin + "/";
+  } catch { return first; }
+  const fallback = await crawlWebsiteUncached(root, dependencies);
+  if (fallback.status !== "succeeded") return {
+    ...first, request_count: first.request_count + fallback.request_count,
+  };
+  return {
+    ...fallback,
+    request_count: first.request_count + fallback.request_count,
+    same_publisher_root_fallback: true,
+    candidate_http_status: first.http_status || 0,
   };
 }
 
@@ -466,7 +507,9 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
 
   if (crawl.status === "failed") {
     return officialDecision(requestedUrl, url, "review", 0, 0, 0,
-      ["candidate_temporarily_unreachable"], undefined, "retryable");
+      ["candidate_temporarily_unreachable",
+        Number.isInteger(crawl.http_status) ? `http_status_${crawl.http_status}` : "transport_failure"],
+      undefined, "retryable");
   }
 
   const facts = crawl.site_facts || {};
@@ -490,10 +533,23 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
   const streetTokens = meaningfulAddressTokens(restaurant.address);
   const streetMatches = streetTokens.filter((token) => haystack.includes(token));
   const addressMatch = streetTokens.length >= 2 && streetMatches.length >= Math.min(2, streetTokens.length);
+  const pageAlias = bestAlias(aliases, pageText);
+  const normalizedPageAlias = normalizeText(pageAlias);
+  const pageNameTokens = meaningfulNameTokens(pageAlias);
+  const pageTokenRatio = pageNameTokens.length
+    ? pageNameTokens.filter((token) => pageText.includes(token)).length / pageNameTokens.length : 0;
+  const pageExactName = normalizedPageAlias.length >= 4 && pageText.includes(normalizedPageAlias);
+  const pagePhoneMatch = normalizedPhones(restaurant.phone).some((phone) =>
+    normalizedPhones(`${facts.phones || ""} ${pageText}`).some((found) =>
+      phone.endsWith(found) || found.endsWith(phone)));
+  const pageStreetMatches = streetTokens.filter((token) => pageText.includes(token));
+  const pageAddressMatch = streetTokens.length >= 2
+    && pageStreetMatches.length >= Math.min(2, streetTokens.length);
 
   const requestedPlaces = requestedPlaceTokens(location);
   const targetPlace = requestedPlaces[0] || "";
   const hasTargetPlace = Boolean(targetPlace && haystack.includes(targetPlace));
+  const pageHasTargetPlace = Boolean(targetPlace && pageText.includes(targetPlace));
   const foreignPlaces = [...ITALIAN_PLACE_TOKENS]
     .filter((place) => !requestedPlaces.includes(place) && haystack.includes(place));
   const geographyContradiction = !hasTargetPlace && foreignPlaces.length > 0;
@@ -545,16 +601,22 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
   if (candidate.known) reasons.push("source_provided_website");
   if (exactName) reasons.push("exact_name");
   else if (tokenRatio >= 0.5) reasons.push("name_tokens");
+  if (pageExactName) reasons.push("page_exact_name");
+  else if (pageTokenRatio >= 0.5) reasons.push("page_name_tokens");
   if (brandedDomain) reasons.push("branded_domain");
   if (hasTargetPlace) reasons.push("municipality_match");
+  if (pageHasTargetPlace) reasons.push("page_municipality_match");
   if (phoneMatch) reasons.push("phone_match");
   if (addressMatch) reasons.push("address_match");
+  if (pagePhoneMatch) reasons.push("page_phone_match");
+  if (pageAddressMatch) reasons.push("page_address_match");
   if (hasFood) reasons.push("restaurant_context");
   if (structuredBusiness) reasons.push("structured_business_data");
   if (structuredEditorial) reasons.push("structured_editorial_data");
   if (canonicalSameDomain) reasons.push("same_domain_canonical");
   if (usefulResources) reasons.push("useful_first_party_resource");
   if (redirectDomainChanged) reasons.push("redirect_domain_changed");
+  if (crawl.same_publisher_root_fallback) reasons.push("same_publisher_root_fallback");
   if (canonicalConflict) reasons.push("cross_domain_canonical");
   if (nonRestaurantContext) reasons.push("non_restaurant_context");
   if (geographyContradiction) reasons.push("geography_contradiction", ...foreignPlaces.map((place) => `mentions_${place}`));

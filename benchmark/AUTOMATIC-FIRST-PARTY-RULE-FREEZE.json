@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "freeze_id": "automatic-first-party-corroboration-v1",
+  "frozen_at": "2026-09-08T22:05:53Z",
+  "status": "frozen_before_locked_holdout_crawl_and_evaluation",
+  "search_requests_authorized": 0,
+  "brave_requests_authorized": false,
+  "publication_authorized": false,
+  "rule": {
+    "version": "strict-first-party-v1",
+    "criteria": [
+      "successful live crawl",
+      "publisher URL and final URL are not classified as directory, booking, social, editorial, or generic platform content",
+      "venue-branded publisher domain",
+      "compatible venue name on the page",
+      "compatible municipality on the page",
+      "normalized phone or street-address match",
+      "no redirect, canonical, geography, identity, or publisher contradiction",
+      "multiple eligible publisher domains for one venue force abstention"
+    ]
+  },
+  "frozen_code_sha256": {
+    "lib/automatic-first-party-rule.mjs": "a6a422135321fc5f7baa94f5e43b8aa4ae5ce2a49fff2fdf4c47e1fdb989b298",
+    "find-menu.mjs": "72f3460e929fd2d33f949a5121a6ae17820b541890ee8317d34040771268a412",
+    "assess-labelled-corpus.mjs": "1914c2d7fed2e3d8dbaebdd0504cb490a507433b344cf7622afc31047447056f",
+    "evaluate-automatic-rule.mjs": "a7c930e4d465a522853d03f4d19275b75f5b15c396126565074c4584b11505f6"
+  },
+  "development": {
+    "venues": 200,
+    "candidate_urls": 987,
+    "assessment_counts": {
+      "strongly_correlated": 42,
+      "ambiguous": 65,
+      "contradicted": 30,
+      "retryable": 214,
+      "unsupported_publisher": 636
+    },
+    "publications": 7,
+    "true_publications": 7,
+    "false_publications": 0,
+    "report": "benchmark/AUTOMATIC-FIRST-PARTY-DEVELOPMENT-EVALUATION-V7.json",
+    "report_sha256": "589c956d9e1e9780b7cbba1e118d89f31f08be86ab107e7b09dbc8ef2620b104",
+    "local_assessment_database": "data/automatic-rule/development-assessments.sqlite",
+    "local_assessment_database_sha256": "9223b8d7df430f0bc2d26b7584f89b21ce7b905faff30f27899e33b8d1bd8628"
+  },
+  "locked_holdout": {
+    "venues": 1000,
+    "candidate_urls": 2804,
+    "cohort_1_artifact_files": 40,
+    "cohort_1_tree_sha256": "4186b9f56d7ff569c7a093b268801df60eae3bec77147064efa8a482558ffbc5",
+    "cohort_2_artifact_files": 10,
+    "cohort_2_tree_sha256": "75fab44affb65055b51be79e6d1f6678a19bd9677b9fbc3de3a3d191005e367e",
+    "authorized_evaluator_executions": 1,
+    "evaluator_executions_at_freeze": 0
+  },
+  "acceptance_gate": {
+    "minimum_correct_conclusive_publications": 73,
+    "maximum_false_publications": 0,
+    "minimum_two_sided_wilson_95_lower_bound": 0.95
+  }
+}
