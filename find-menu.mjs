@@ -460,7 +460,13 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
   const url = finalUrl || requestedUrl;
   const domain = extractDomain(url);
   if (!domain || classifyWebsite(url) !== "official") {
-    return officialDecision(requestedUrl, url, "rejected", 0, 0, 0, ["non_official_domain"]);
+    return officialDecision(requestedUrl, url, "rejected", 0, 0, 0, ["non_official_domain"],
+      undefined, "unsupported_publisher");
+  }
+
+  if (crawl.status === "failed") {
+    return officialDecision(requestedUrl, url, "review", 0, 0, 0,
+      ["candidate_temporarily_unreachable"], undefined, "retryable");
   }
 
   const facts = crawl.site_facts || {};
@@ -559,24 +565,27 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
     && hasTargetPlace && usefulResources;
   const hasOfficialContext = hasFood || structuredBusiness || phoneMatch || addressMatch
     || structuredKnownIdentity || structuredSourceWebsite;
+  const contradicted = canonicalConflict || geographyContradiction || nonRestaurantContext
+    || structuredEditorial;
+  const stronglyCorrelated = !contradicted && identity >= 55 && officialness >= 45
+    && hasOfficialContext && (geography >= 50 || candidate.known);
+  const assessmentState = contradicted ? "contradicted"
+    : stronglyCorrelated ? "strongly_correlated" : "ambiguous";
   let outcome = "rejected";
-  if (!canonicalConflict && !geographyContradiction && !nonRestaurantContext && !structuredEditorial
-      && identity >= 55 && officialness >= 45
-      && publisherOwnership.status === "verified"
-      && hasOfficialContext && (geography >= 50 || candidate.known)) {
+  if (stronglyCorrelated && publisherOwnership.status === "verified") {
     outcome = "accepted";
-  } else if (!canonicalConflict && !geographyContradiction && !nonRestaurantContext && !structuredEditorial
-      && identity >= 35 && officialness >= 30) {
+  } else if (!contradicted && identity >= 35 && officialness >= 30) {
     outcome = "review";
   }
   if (redirectDomainChanged && outcome === "accepted" && !(exactName && hasTargetPlace)) outcome = "review";
 
   return officialDecision(requestedUrl, url, outcome, identity, geography, officialness, reasons,
-    publisherOwnership);
+    publisherOwnership, assessmentState);
 }
 
 function officialDecision(requestedUrl, finalUrl, outcome, identity, geography, officialness, reasons,
-  publisherOwnership = { status: "unverified", method: null, reason: "not_evaluated" }) {
+  publisherOwnership = { status: "unverified", method: null, reason: "not_evaluated" },
+  assessmentState = outcome === "rejected" ? "contradicted" : "ambiguous") {
   const score = Math.round(identity * 0.4 + geography * 0.25 + officialness * 0.35);
   const confidence = outcome === "accepted" && score >= 78 ? "high"
     : outcome === "accepted" ? "medium" : "low";
@@ -592,6 +601,7 @@ function officialDecision(requestedUrl, finalUrl, outcome, identity, geography, 
     scores: { identity, geography, officialness },
     reasons: [...new Set(reasons)],
     publisher_ownership: publisherOwnership,
+    assessment_state: assessmentState,
   };
 }
 
@@ -604,6 +614,7 @@ function publicWebsiteDecision(candidate) {
     final_url: candidate.final_url,
     evidence: candidate.reasons || [],
     publisher_ownership: candidate.publisher_ownership,
+    assessment_state: candidate.assessment_state,
   };
 }
 

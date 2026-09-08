@@ -28,9 +28,10 @@ without candidates.
 
 [`PROCESS.md`](PROCESS.md) is the sole active delivery plan. In one sentence:
 
-> Crawl and classify the 86,852 known candidates without search, certify one strict
-> automatic first-party verification rule on a frozen holdout, apply it nationally,
-> then discover URLs for the remaining 69,205 venues and pass them through the same
+> Certify one strict automatic first-party verification rule on labelled development
+> evidence and a frozen holdout, crawl the 86,852 known candidates without search,
+> apply the passing rule nationally, then discover URLs for the remaining 69,205
+> venues and pass them through the same
 > verifier.
 
 Search finds candidates; it does not verify them. Brave is reserved for the unresolved

@@ -601,6 +601,21 @@ test("requires first-party evidence before publishing a matching venue page", ()
     },
   }, { name: "Fixture", phone: "+39 0422 123456" }, "Oderzo TV");
   assert.equal(scored.outcome, "review");
+  assert.equal(scored.assessment_state, "strongly_correlated");
+  assert.equal(scored.publisher_ownership.status, "unverified");
+});
+
+test("candidate assessment states distinguish crawl and corroboration outcomes", () => {
+  const retryable = scoreOfficialWebsite({ url: "https://fixture.test/",
+    crawl: { status: "failed", final_url: "https://fixture.test/" } },
+  { name: "Fixture" }, "Oderzo TV");
+  const unsupported = scoreOfficialWebsite({ url: "https://facebook.com/fixture" },
+    { name: "Fixture" }, "Oderzo TV");
+  const ambiguous = scoreOfficialWebsite({ url: "https://fixture.test/", title: "Fixture" },
+    { name: "Fixture" }, "Oderzo TV");
+  assert.equal(retryable.assessment_state, "retryable");
+  assert.equal(unsupported.assessment_state, "unsupported_publisher");
+  assert.equal(ambiguous.assessment_state, "ambiguous");
 });
 
 test("rejects editorial schema even when an article repeats venue identity", () => {
@@ -618,6 +633,7 @@ test("rejects editorial schema even when an article repeats venue identity", () 
     },
   }, { name: "Fixture", phone: "+39 0422 123456" }, "Oderzo TV");
   assert.equal(scored.outcome, "rejected");
+  assert.equal(scored.assessment_state, "contradicted");
   assert.ok(scored.reasons.includes("structured_editorial_data"));
 });
 

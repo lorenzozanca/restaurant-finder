@@ -5,9 +5,8 @@ Branch: `main`
 
 ## Current milestone
 
-Decouple automatic crawl corroboration from publisher-ownership approval, validate a
-strict automatic first-party rule against the existing labelled evidence, and then
-process the 86,852 known source candidates in resumable zero-search batches.
+Validate a strict automatic first-party rule against the existing labelled evidence,
+then process the 86,852 known source candidates in resumable zero-search batches.
 
 ## Completed and visible
 
@@ -21,6 +20,15 @@ process the 86,852 known source candidates in resumable zero-search batches.
 - `PROCESS.md` is the sole active plan. Superseded direction documents are preserved
   under `docs/archive/`; frozen benchmark evidence remains under `benchmark/`.
 - `AGENTS.md` makes this ledger and the canonical process mandatory session context.
+- Evidence-store schema v5 persists one assessment per venue/candidate URL with its
+  crawl outcome; identity, geography, and officialness scores; evidence; origin; and
+  checked time, independently of publisher attestations and accepted facts.
+- The scorer distinguishes `strongly_correlated`, `ambiguous`, `contradicted`,
+  `retryable`, and `unsupported_publisher`. Strong correlation without ownership
+  remains unpublished.
+- The national map/API reports assessment counts and exposes the assessment and three
+  scores for each assessed source candidate. The real national store is migrated to
+  schema v5 and currently contains 0 assessments because no national crawl has run.
 
 ## Verified facts about the old method
 
@@ -35,21 +43,11 @@ process the 86,852 known source candidates in resumable zero-search batches.
 
 ## Next executable task
 
-Implement and persist **persistent candidate assessments** so a crawl can durably record
-its result independently of publication ownership. The implementation must:
-
-1. Store, per venue and candidate URL, the crawl outcome and identity, geography, and
-   officialness scores.
-2. Distinguish at least `strongly_correlated`, `ambiguous`, `contradicted`,
-   `retryable`, and `unsupported_publisher` without creating an ownership attestation.
-3. Preserve the existing rule that only ownership-verified websites are published.
-4. Expose assessment counts and each candidate's assessment state through the map/API.
-5. Add deterministic schema/store/scoring/map tests and migration coverage.
-
-After this task is committed, the following task is to crawl the already-labelled
-development corpus, derive the strict automatic rule there, freeze it, and evaluate it
-once against the existing locked national holdout. Do not start the 86,852-candidate
-production run before that accuracy gate passes.
+Crawl the already-labelled development corpus with search disabled, persist its
+candidate assessments, derive the strict automatic first-party rule only on that
+development evidence, freeze the rule, and evaluate it once against the existing
+locked national holdout. Do not start the 86,852-candidate production run before that
+accuracy gate passes.
 
 ## Acceptance gate for the automatic rule
 
@@ -63,12 +61,11 @@ production run before that accuracy gate passes.
 - `npm test`: 46 test files passed, 0 failed.
 - `git diff --check`: clean.
 - Real national-map API: 156,057 venues; 86,852 source candidates; 112 verified; 6
-  rejected; 69,205 without candidates. An Oderzo (`TV`) query returned 54 venues.
-- National index cold-load time on this machine: approximately 10 seconds; subsequent
-  viewport queries use the in-memory index.
+  rejected; 69,205 without candidates; 0 assessments in every assessment bucket. An
+  Oderzo (`TV`) query returned 54 venues and included the per-candidate assessment
+  field. National index cold-load time was 10.5 seconds.
 
 ## Blockers
 
-None for the next executable task. Live crawling and any paid search require the
-network/budget permissions described in `PROCESS.md`; the next task is local code and
-tests.
+The next task's zero-search live crawl requires network permission. It requires no
+paid-search budget; Brave remains disabled.

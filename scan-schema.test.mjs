@@ -227,6 +227,7 @@ test("validates explainable official-website decisions", () => {
       scores: { identity: 60, geography: 20, officialness: 55 },
       confidence: "low",
       evidence: ["name_tokens"],
+      assessment_state: "ambiguous",
     },
   };
   const scan = {
@@ -247,6 +248,15 @@ test("validates explainable official-website decisions", () => {
       }],
     }),
     /identity score must be an integer from 0 to 100/
+  );
+  assert.throws(
+    () => validateCurrentScanDocument({
+      ...scan,
+      restaurants: [{ ...restaurant, website_decision: {
+        ...restaurant.website_decision, assessment_state: "verified",
+      } }],
+    }),
+    /invalid candidate assessment state/
   );
 });
 

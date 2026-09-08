@@ -206,6 +206,11 @@ function validateWebsiteDecision(decision, label) {
   if (!Array.isArray(decision.evidence)) {
     throw schemaError(`${label}: website decision evidence must be an array`);
   }
+  if (decision.assessment_state !== undefined
+      && !["strongly_correlated", "ambiguous", "contradicted", "retryable",
+        "unsupported_publisher"].includes(decision.assessment_state)) {
+    throw schemaError(`${label}: website decision has an invalid candidate assessment state`);
+  }
 }
 
 function validateEnrichmentRun(run, label) {

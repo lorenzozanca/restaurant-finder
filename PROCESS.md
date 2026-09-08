@@ -23,6 +23,8 @@ Current baseline (2026-09-08):
 - 69,205 without a source website candidate;
 - 112 verified websites;
 - 6 rejected candidate domains.
+- 0 persisted candidate assessments (the assessment schema is ready; no national
+  candidate crawl has run).
 
 Run `node ui/server.mjs` and open `http://localhost:4188/map.html`. The server uses
 `data/istat/2026-01-01/derived/italy-import.sqlite` by default. Override it with
@@ -58,22 +60,16 @@ also coupled the scorer to the ownership gate: without an attestation, a strong 
 can only return `review`. The 86,852 candidates were consequently neither processed
 nationally nor shown as candidates.
 
-The map now fixes visibility. The next code change must decouple **automatic
-corroboration** from **publication** so crawl evidence is stored and measurable even
-when ownership is not yet approved.
+The map now fixes visibility, and schema v5 decouples **automatic corroboration** from
+**publication**. Every crawled candidate can persist its crawl outcome, identity,
+geography, and officialness scores as `strongly_correlated`, `ambiguous`,
+`contradicted`, `retryable`, or `unsupported_publisher`. These assessments never
+create an ownership attestation. The map/API exposes their counts and the assessment
+attached to each source candidate.
 
 ## Execution order
 
-### 1. Known candidates first
-
-Run the existing crawl/scoring flow over all 86,852 source candidates with search
-budgets fixed at zero. Persist the crawl result and its signals independently of the
-ownership gate. Reuse cached pages and run in bounded, resumable batches.
-
-This run sorts candidates into contradiction/retry/manual-review/strong-corroboration
-buckets. It does not spend Brave requests and it does not hide unresolved venues.
-
-### 2. Certify one automatic ownership rule
+### 1. Certify one automatic ownership rule
 
 Use the already-reviewed Session 10–12 material as development data and a frozen,
 previously unseen stratified subset as the final test. The proposed rule may verify a
@@ -94,8 +90,19 @@ false positive is reported. Until that test passes, results remain
 there will be no new sequence of exploratory session plans.
 
 If it passes, record the method as `automated_first_party_corroboration`, with the same
-audit, expiry, and revalidation requirements as other attestations, then apply it to
-the already-crawled strong-corroboration bucket and update the map.
+audit, expiry, and revalidation requirements as other attestations. The subsequent
+known-candidate run may then apply it to strong-corroboration outcomes and update the
+map.
+
+### 2. Process the known candidates
+
+Only after the accuracy gate passes, run the crawl/scoring flow over all 86,852 source
+candidates with search budgets fixed at zero. Persist the crawl result and its signals
+independently of the ownership gate. Reuse cached pages and run in bounded, resumable
+batches.
+
+This run sorts candidates into contradiction/retry/manual-review/strong-corroboration
+buckets. It does not spend Brave requests and it does not hide unresolved venues.
 
 ### 3. Review the residual known-candidate tail
 
@@ -116,8 +123,8 @@ architecture for Brave results.
 
 ## Current milestone and definition of done
 
-Current milestone: **crawl and classify the 86,852 known candidates, then certify the
-automatic rule on a locked holdout**.
+Current milestone: **certify the automatic rule on the labelled development corpus
+and locked holdout, then crawl and classify the 86,852 known candidates**.
 
 The milestone is done only when the map reports counts for crawled, strongly
 corroborated, verified, rejected, retryable, and unresolved candidates; the holdout
