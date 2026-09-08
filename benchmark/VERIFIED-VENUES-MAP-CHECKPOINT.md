@@ -99,3 +99,10 @@ review attestation only; it never publishes a fact. Rejected domains leave
 other candidate domains for the venue reviewable. `official_registry` is not
 available as a review-queue method. After a reviewed batch, crawl only newly
 attested venues and regenerate `ui/verified-venues.geojson`.
+
+The first agent-assisted batch and its crawl-only follow-up are complete:
+**190 verified / 6 rejected attestations, 108 accepted website facts, and 108
+map features (67 with menus), with zero Brave requests**. The phone-review UX
+fix, decision log, five-venue crawl outcomes, safety backup, and next operating
+loop are recorded in
+[`benchmark/AGENT-ASSISTED-REVIEW-BATCH-2026-09-08.md`](AGENT-ASSISTED-REVIEW-BATCH-2026-09-08.md).
