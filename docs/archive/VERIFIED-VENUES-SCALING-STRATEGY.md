@@ -1,4 +1,4 @@
-# Verified-venues scaling strategy
+# ARCHIVED — Verified-venues scaling strategy
 
 Date: 2026-09-08
 Status: **canonical next-session strategy; analysis first, no wholesale run authorized**

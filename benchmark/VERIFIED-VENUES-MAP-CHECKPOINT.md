@@ -133,4 +133,4 @@ followed by a dry-run automatic-verification eligibility analysis. No new
 automatic ownership method and no wholesale national crawl is authorized yet.
 The canonical rationale, ordered plan, policy boundary, and success criteria
 are in
-[`benchmark/VERIFIED-VENUES-SCALING-STRATEGY.md`](VERIFIED-VENUES-SCALING-STRATEGY.md).
+the archived [`VERIFIED-VENUES-SCALING-STRATEGY.md`](../docs/archive/VERIFIED-VENUES-SCALING-STRATEGY.md).

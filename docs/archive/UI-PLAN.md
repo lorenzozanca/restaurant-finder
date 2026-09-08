@@ -1,4 +1,4 @@
-# restaurant-finder UI
+# ARCHIVED — restaurant-finder UI
 
 ## What to build
 

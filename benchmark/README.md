@@ -1,5 +1,10 @@
 # Offline quality benchmark
 
+> This directory contains historical evaluation evidence and frozen fixtures, not the
+> active product roadmap. The only current delivery process is
+> [`../PROCESS.md`](../PROCESS.md). Some files remain here instead of under
+> `docs/archive/` because reproducibility scripts and hashes require their exact paths.
+
 Run the human-readable evaluator:
 
 ```bash

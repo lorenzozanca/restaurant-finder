@@ -1,4 +1,4 @@
-# Italy-wide web enrichment: architecture note and session plan
+# ARCHIVED — Italy-wide web enrichment: architecture note and session plan
 
 Status: active — Sessions 1–9 complete; Session 10 pilot planning next; enrichment not started
 Created: 2026-08-26

@@ -311,7 +311,7 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
   <span class="spacer"></span>
   <nav class="desktop-tabs" aria-label="Main navigation">
     <button class="on" data-tab="scan">Scan</button>
-    <button data-tab="map">Map</button>
+    <button data-tab="map">Italy map</button>
   </nav>
   <span id="status"></span>
 </header>
@@ -326,7 +326,7 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
 
 <nav class="tabs" role="tablist">
   <button id="tabScan" class="on" data-tab="scan" role="tab"><span class="ic">🔎</span>Scan</button>
-  <button id="tabMap" data-tab="map" role="tab"><span class="ic">📍</span>Map</button>
+  <button id="tabMap" data-tab="map" role="tab"><span class="ic">📍</span>Italy</button>
   <button id="tabHistory" data-tab="history" role="tab"><span class="ic">🗂️</span>History</button>
 </nav>
 
@@ -753,6 +753,10 @@ nav.tabs button .badge-dot{position:absolute;transform:translate(14px,-14px);wid
   }
 
   async function showGlobalMap() {
+    window.location.assign("/map.html");
+    return;
+    // Historical per-scan map implementation retained below for compatibility with
+    // saved scan rendering. Product navigation now opens the national inventory map.
     destroyMap();
     stopTimer();
     state.view = "global-map";

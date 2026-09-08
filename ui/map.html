@@ -3,93 +3,198 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Verified venues — restaurant-finder</title>
+<title>Italy venue map — restaurant-finder</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
-  body { background: #111; color: #e0e0e0;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; }
-  #bar { display: flex; align-items: baseline; gap: 1em; padding: 0.6em 1em;
-    background: #1a1a2e; border-bottom: 1px solid #333; flex-wrap: wrap; }
-  #bar h1 { font-size: 1em; margin: 0; color: #888; font-weight: normal; }
-  #bar h1 b { color: #4ade80; }
-  #stats { color: #4ade80; font-size: 0.85em; }
-  #meta { color: #888; font-size: 0.8em; }
-  #bar a { color: #4ade80; font-size: 0.85em; }
-  #legend { margin-left: auto; font-size: 0.8em; color: #aaa; }
-  .dot { display: inline-block; width: 0.7em; height: 0.7em; border-radius: 50%; margin: 0 0.3em 0 0.8em; }
-  .dot.menu { background: #4ade80; }
-  .dot.site { background: #60a5fa; }
-  #map { height: calc(100% - 3.2em); }
-  .leaflet-popup-content-wrapper { background: #1e1e2e; color: #e0e0e0; border-radius: 6px; }
-  .leaflet-popup-content { font-family: inherit; font-size: 12px; line-height: 1.5; margin: 10px 14px; }
-  .leaflet-popup-content a { color: #4ade80; }
-  .leaflet-popup-tip { background: #1e1e2e; }
-  .vname { font-weight: bold; font-size: 13px; }
-  .vmeta { color: #aaa; }
+  body { background: #0f1115; color: #e5e7eb; font-family: Inter, system-ui, sans-serif; }
+  #bar { display: grid; grid-template-columns: auto minmax(18rem, 1fr) auto; gap: .8rem;
+    align-items: center; padding: .65rem .9rem; background: #171a21; border-bottom: 1px solid #30343d; }
+  h1 { font-size: 1rem; margin: 0; white-space: nowrap; }
+  h1 b { color: #4ade80; }
+  #search { display: flex; gap: .45rem; min-width: 0; }
+  input, select, button { border: 1px solid #3f4652; background: #222630; color: #f3f4f6;
+    border-radius: 5px; padding: .48rem .62rem; font: inherit; }
+  input { min-width: 8rem; flex: 1; }
+  button { cursor: pointer; background: #315c42; border-color: #4c8b64; }
+  #summary { grid-column: 1 / -1; display: flex; gap: 1rem; flex-wrap: wrap; font-size: .78rem; color: #aeb4c0; }
+  #summary b { color: #f3f4f6; }
+  #status { margin-left: auto; }
+  #legend { font-size: .78rem; white-space: nowrap; color: #c1c6d0; }
+  .dot { display: inline-block; width: .7rem; height: .7rem; border-radius: 50%; margin: 0 .25rem 0 .65rem; }
+  .verified { background: #22c55e; } .candidate { background: #f59e0b; }
+  .none { background: #64748b; } .rejected { background: #ef4444; }
+  #map { height: calc(100% - 6.2rem); min-height: 20rem; }
+  .leaflet-popup-content-wrapper { background: #20242d; color: #e5e7eb; }
+  .leaflet-popup-tip { background: #20242d; }
+  .leaflet-popup-content { font-size: 13px; line-height: 1.45; min-width: 220px; }
+  .leaflet-popup-content a { color: #6ee7b7; word-break: break-all; }
+  .venue-name { font-weight: 700; font-size: 14px; }
+  .venue-meta { color: #aeb4c0; margin-bottom: .35rem; }
+  .badge { display: inline-block; margin: .35rem 0; padding: .15rem .4rem; border-radius: 4px;
+    color: #111827; font-weight: 700; font-size: 11px; text-transform: uppercase; }
+  .badge.verified { background: #4ade80; } .badge.candidate { background: #fbbf24; }
+  .badge.no_candidate { background: #94a3b8; } .badge.rejected { background: #f87171; }
+  .cluster-label { background: #252b36; color: #fff; border: 1px solid #768096; border-radius: 14px;
+    box-shadow: 0 1px 4px #0008; font-weight: 700; text-align: center; line-height: 25px; }
+  @media (max-width: 850px) {
+    #bar { grid-template-columns: 1fr; }
+    #legend { white-space: normal; }
+    #map { height: calc(100% - 10.5rem); }
+  }
 </style>
 </head>
 <body>
 <div id="bar">
-  <h1>restaurant-finder <b>verified map</b></h1>
-  <span id="stats">loading…</span>
-  <span id="meta"></span>
-  <a href="/">town scanner</a>
-  <span id="legend"><span class="dot menu"></span>with menu<span class="dot site"></span>website only</span>
+  <h1>restaurant-finder <b>Italy inventory</b></h1>
+  <form id="search">
+    <input id="place" list="municipalities" placeholder="Search a municipality or venue" autocomplete="off">
+    <datalist id="municipalities"></datalist>
+    <button type="submit">Find</button>
+    <button id="clear" type="button">All Italy</button>
+  </form>
+  <select id="filter" aria-label="Website status">
+    <option value="all">All venues</option>
+    <option value="candidate">Has source candidate</option>
+    <option value="verified">Verified website</option>
+    <option value="no_candidate">No website candidate</option>
+    <option value="rejected">Rejected candidate</option>
+  </select>
+  <div id="summary">
+    <span><b id="all-count">…</b> venues</span>
+    <span><b id="candidate-count">…</b> source candidates</span>
+    <span><b id="verified-count">…</b> verified</span>
+    <span><b id="missing-count">…</b> without candidate</span>
+    <span id="legend"><span class="dot verified"></span>verified<span class="dot candidate"></span>candidate, unverified<span class="dot none"></span>no candidate<span class="dot rejected"></span>rejected</span>
+    <span id="status">loading national inventory…</span>
+  </div>
 </div>
 <div id="map"></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>
 (function () {
   'use strict';
-  var map = L.map('map').setView([42.8, 12.8], 6);
+  var map = L.map('map', { preferCanvas: true }).setView([42.8, 12.8], 6);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; Overture Maps Foundation and data providers'
   }).addTo(map);
+  var layer = L.layerGroup().addTo(map);
+  var filter = document.getElementById('filter');
+  var place = document.getElementById('place');
+  var status = document.getElementById('status');
+  var activeQuery = '';
+  var activeProvince = '';
+  var requestNumber = 0;
 
-  function esc(value) {
-    return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  fetch('italian-municipalities.json').then(function (response) { return response.json(); })
+    .then(function (data) {
+      var list = document.getElementById('municipalities');
+      (data.towns || []).forEach(function (town) {
+        var option = document.createElement('option');
+        option.value = town[0] + ' (' + town[1] + ')';
+        list.appendChild(option);
+      });
     });
-  }
 
-  function popup(props) {
-    var lines = ['<div class="vname">' + esc(props.name) + '</div>'];
-    var place = [props.municipality, props.province].filter(Boolean).join(' ');
-    lines.push('<div class="vmeta">' + esc([place, props.venue_type].filter(Boolean).join(' · ')) + '</div>');
-    if (props.address) lines.push('<div>' + esc(props.address) + '</div>');
-    if (props.website) lines.push('<div><a href="' + esc(props.website) + '" target="_blank" rel="noopener">official website</a></div>');
-    if (props.menu_url) lines.push('<div><a href="' + esc(props.menu_url) + '" target="_blank" rel="noopener">menu (' + esc(props.resource_count) + ' resources)</a></div>');
-    return lines.join('');
-  }
-
-  fetch('verified-venues.geojson').then(function (res) {
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    return res.json();
-  }).then(function (doc) {
-    var features = doc.features || [];
-    var withMenu = features.filter(function (f) { return f.properties.menu_url; }).length;
-    document.getElementById('stats').textContent =
-      features.length + ' verified venues, ' + withMenu + ' with menus';
-    document.getElementById('meta').textContent =
-      'generated ' + String(doc.generated_at || '').slice(0, 10) +
-      ' · every pin has a reviewed ownership attestation';
-    var bounds = [];
-    features.forEach(function (f) {
-      var lng = f.geometry.coordinates[0], lat = f.geometry.coordinates[1];
-      bounds.push([lat, lng]);
-      L.circleMarker([lat, lng], {
-        radius: 6,
-        color: f.properties.menu_url ? '#4ade80' : '#60a5fa',
-        weight: 2, fillOpacity: 0.7
-      }).addTo(map).bindPopup(popup(f.properties));
-    });
-    if (bounds.length) map.fitBounds(bounds, { padding: [30, 30] });
-  }).catch(function (err) {
-    document.getElementById('stats').textContent = 'failed to load verified venues: ' + err.message;
-    document.getElementById('stats').style.color = '#f87171';
+  document.getElementById('search').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var match = place.value.trim().match(/^(.*) \(([A-Z]{2})\)$/);
+    activeQuery = match ? match[1] : place.value.trim();
+    activeProvince = match ? match[2] : '';
+    load(true);
   });
+  document.getElementById('clear').addEventListener('click', function () {
+    activeQuery = ''; activeProvince = ''; place.value = ''; filter.value = 'all';
+    map.setView([42.8, 12.8], 6); load(false);
+  });
+  filter.addEventListener('change', function () { load(false); });
+  map.on('moveend', function () { if (!activeQuery) load(false); });
+
+  function load(fitResults) {
+    var current = ++requestNumber;
+    var bounds = map.getBounds();
+    var params = new URLSearchParams({
+      zoom: String(Math.round(map.getZoom())), status: filter.value,
+      bbox: [bounds.getWest(), bounds.getSouth(), bounds.getEast(), bounds.getNorth()].join(',')
+    });
+    if (activeQuery) params.set('q', activeQuery);
+    if (activeProvince) params.set('province', activeProvince);
+    status.textContent = 'loading…';
+    fetch('/api/national-map?' + params).then(function (response) {
+      if (!response.ok) return response.json().then(function (body) { throw new Error(body.error || ('HTTP ' + response.status)); });
+      return response.json();
+    }).then(function (data) {
+      if (current !== requestNumber) return;
+      render(data);
+      setStats(data.stats || {});
+      status.style.color = '';
+      status.textContent = number(data.visible_count) + (data.mode === 'clusters' ? ' venues represented by clusters' : ' venues shown');
+      if (fitResults && data.features.length) {
+        var resultBounds = L.latLngBounds(data.features.map(function (feature) {
+          return [feature.geometry.coordinates[1], feature.geometry.coordinates[0]];
+        }));
+        map.fitBounds(resultBounds.pad(.15), { maxZoom: 14 });
+      }
+    }).catch(function (error) {
+      if (current !== requestNumber) return;
+      status.textContent = 'failed: ' + error.message;
+      status.style.color = '#f87171';
+    });
+  }
+
+  function render(data) {
+    layer.clearLayers();
+    (data.features || []).forEach(function (feature) {
+      var coordinates = feature.geometry.coordinates;
+      var props = feature.properties || {};
+      if (props.kind === 'cluster') {
+        var icon = L.divIcon({ className: 'cluster-label', html: number(props.count), iconSize: [46, 26] });
+        L.marker([coordinates[1], coordinates[0]], { icon: icon }).addTo(layer)
+          .bindPopup(clusterPopup(props)).on('click', function () { map.setView([coordinates[1], coordinates[0]], map.getZoom() + 2); });
+      } else {
+        L.circleMarker([coordinates[1], coordinates[0]], {
+          radius: props.status === 'verified' ? 6 : 4,
+          color: color(props.status), weight: props.status === 'verified' ? 2 : 1,
+          fillColor: color(props.status), fillOpacity: .72
+        }).addTo(layer).bindPopup(venuePopup(props));
+      }
+    });
+  }
+
+  function clusterPopup(props) {
+    return '<b>' + number(props.count) + ' venues</b><br>' +
+      number(props.candidate) + ' with source candidates<br>' +
+      number(props.verified) + ' verified<br>' +
+      number(props.no_candidate) + ' without candidates<br><small>Click or zoom in to inspect venues.</small>';
+  }
+
+  function venuePopup(props) {
+    var html = '<div class="venue-name">' + esc(props.name) + '</div>' +
+      '<div class="venue-meta">' + esc([props.municipality, props.province, props.type].filter(Boolean).join(' · ')) + '</div>' +
+      '<span class="badge ' + esc(props.status) + '">' + esc(label(props.status)) + '</span>';
+    if (props.address) html += '<div>' + esc(props.address) + '</div>';
+    if (props.phone) html += '<div>' + esc(props.phone) + '</div>';
+    if (props.verified_url) html += '<div><a target="_blank" rel="noopener" href="' + esc(props.verified_url) + '">verified website</a></div>';
+    if (props.candidate_url && props.candidate_url !== props.verified_url) html += '<div><a target="_blank" rel="noopener" href="' + esc(props.candidate_url) + '">source candidate — not verified</a></div>';
+    if (props.menu_url) html += '<div><a target="_blank" rel="noopener" href="' + esc(props.menu_url) + '">menu/resource</a></div>';
+    return html;
+  }
+
+  function setStats(stats) {
+    document.getElementById('all-count').textContent = number(stats.venues);
+    document.getElementById('candidate-count').textContent = number(stats.source_candidates);
+    document.getElementById('verified-count').textContent = number(stats.verified);
+    document.getElementById('missing-count').textContent = number(stats.no_candidate);
+  }
+  function label(value) { return { verified: 'verified', candidate: 'candidate — unverified', rejected: 'candidate rejected', no_candidate: 'no website candidate' }[value] || value; }
+  function color(value) { return { verified: '#22c55e', candidate: '#f59e0b', rejected: '#ef4444', no_candidate: '#64748b' }[value] || '#64748b'; }
+  function number(value) { return Number(value || 0).toLocaleString('en'); }
+  function esc(value) { return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  load(false);
 })();
 </script>
 </body>

@@ -61,7 +61,7 @@ Resulting national state:
 
 Stop sequential queue review: these small batches were calibration, not the
 scaling mechanism. Next produce the read-only national backlog census defined
-in [`VERIFIED-VENUES-SCALING-STRATEGY.md`](VERIFIED-VENUES-SCALING-STRATEGY.md),
+in the archived [`VERIFIED-VENUES-SCALING-STRATEGY.md`](../docs/archive/VERIFIED-VENUES-SCALING-STRATEGY.md),
 then measure automatic-verification eligibility without publishing. Separately
 inspect the Al29 and Avilius crawl signals before changing any scoring rule;
 their manual evidence alone must not bypass the live-page gate.

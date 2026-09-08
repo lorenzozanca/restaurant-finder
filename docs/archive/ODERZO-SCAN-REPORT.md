@@ -1,4 +1,4 @@
-# Oderzo scan comparison and Italy-scale assessment
+# ARCHIVED — Oderzo scan comparison and Italy-scale assessment
 
 Date: 2026-08-25
 

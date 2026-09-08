@@ -1,4 +1,4 @@
-# Zero-cost national enrichment plan
+# ARCHIVED — Zero-cost national enrichment plan
 
 > **2026-09-08 update:** Use this document for its discovery-track design, but
 > follow

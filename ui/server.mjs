@@ -8,6 +8,7 @@ import { networkInterfaces } from "node:os";
 import { normalizeScanDocument } from "../scan-schema.mjs";
 import { EvidenceStore } from "../lib/evidence-store.mjs";
 import { recordReviewDecision } from "../lib/review-queue.mjs";
+import { loadNationalVenueIndex, queryNationalVenueIndex } from "../lib/national-map.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const UI_DIR = __dirname;
@@ -17,6 +18,7 @@ const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(imp
 const PORT = Number(process.env.PORT || 4188);
 const HOST = process.env.HOST || (isMain ? tailscaleAddress() : "127.0.0.1") || "127.0.0.1";
 const MAX_BODY_BYTES = 16 * 1024;
+const DEFAULT_NATIONAL_DB = resolve(__dirname, "..", "data", "istat", "2026-01-01", "derived", "italy-import.sqlite");
 // The app has no authentication of its own, so it only binds where every peer is
 // already authenticated: loopback, or a Tailscale address whose tailnet ACLs decide
 // who can reach it. Any wider interface stays opt-in. See PRIVACY.md, "Security".
@@ -40,6 +42,7 @@ let runningScan = null;
 // Kept after a scan finishes so a page reload can restore the last run's
 // results and full log instead of showing an empty form.
 let lastScan = null;
+let nationalIndexCache = null;
 
 const server = createServer(handle);
 // Bound in addition to a tailnet HOST so http://localhost:PORT keeps working on this
@@ -68,6 +71,8 @@ export async function handle(req, res) {
       await handleScans(req, res);
     } else if (url.pathname === "/api/map" && req.method === "GET") {
       await handleMap(req, res);
+    } else if (url.pathname === "/api/national-map" && req.method === "GET") {
+      await handleNationalMap(req, res, url);
     } else if (url.pathname === "/api/review/next" && req.method === "GET") {
       await handleReviewNext(req, res, url);
     } else if (url.pathname === "/api/review/decision" && req.method === "POST") {
@@ -475,6 +480,30 @@ async function handleMap(_req, res) {
     restaurants,
     towns: [...towns].sort((a, b) => a.localeCompare(b, "it")),
   });
+}
+
+async function handleNationalMap(_req, res, url) {
+  const dbPath = resolve(String(process.env.NATIONAL_DB_PATH
+    || process.env.EVIDENCE_DB_PATH || DEFAULT_NATIONAL_DB));
+  if (!existsSync(dbPath)) {
+    return json(res, 503, {
+      error: "national inventory is not configured",
+      expected_path: dbPath,
+    });
+  }
+  if (!nationalIndexCache || nationalIndexCache.path !== dbPath) {
+    nationalIndexCache = { path: dbPath, index: loadNationalVenueIndex(dbPath) };
+  }
+  const bounds = url.searchParams.get("bbox") || "";
+  const document = queryNationalVenueIndex(nationalIndexCache.index, {
+    bbox: bounds,
+    zoom: url.searchParams.get("zoom") || 6,
+    query: url.searchParams.get("q") || "",
+    province: url.searchParams.get("province") || "",
+    status: url.searchParams.get("status") || "all",
+    limit: url.searchParams.get("limit") || 12000,
+  });
+  json(res, 200, document);
 }
 
 // Ownership review queue on top of the durable attestation store. Reads the

@@ -1,4 +1,4 @@
-# Next scaling session handoff
+# ARCHIVED — Next scaling session handoff
 
 > **2026-09-08 update:** This document preserves the earlier validation and
 > architecture handoff, but its operational "next session" instructions are

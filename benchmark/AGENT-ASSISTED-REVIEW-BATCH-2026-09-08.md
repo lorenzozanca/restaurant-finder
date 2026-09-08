@@ -100,7 +100,7 @@ runs; the status remains fail-closed.
 ## Next
 
 This instruction is superseded by
-[`VERIFIED-VENUES-SCALING-STRATEGY.md`](VERIFIED-VENUES-SCALING-STRATEGY.md).
+the archived [`VERIFIED-VENUES-SCALING-STRATEGY.md`](../docs/archive/VERIFIED-VENUES-SCALING-STRATEGY.md).
 Small audited batches are calibration and residual-tail work, not a plan to
 review the national inventory sequentially. The next task is the read-only
 backlog census. Separately inspect the three crawl abstentions before changing

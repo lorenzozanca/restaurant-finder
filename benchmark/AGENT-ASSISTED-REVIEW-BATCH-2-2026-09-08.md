@@ -62,7 +62,7 @@ Resulting national state:
 ## Next
 
 This instruction is superseded by
-[`VERIFIED-VENUES-SCALING-STRATEGY.md`](VERIFIED-VENUES-SCALING-STRATEGY.md).
+the archived [`VERIFIED-VENUES-SCALING-STRATEGY.md`](../docs/archive/VERIFIED-VENUES-SCALING-STRATEGY.md).
 Small batches are calibration and residual-tail work only; the next task is the
 read-only backlog census. A separate quality pass should add freshness handling
 for dated event-menu resources so an old event image is not presented as a
