@@ -106,3 +106,12 @@ map features (67 with menus), with zero Brave requests**. The phone-review UX
 fix, decision log, five-venue crawl outcomes, safety backup, and next operating
 loop are recorded in
 [`benchmark/AGENT-ASSISTED-REVIEW-BATCH-2026-09-08.md`](AGENT-ASSISTED-REVIEW-BATCH-2026-09-08.md).
+
+Agent-assisted batch 2 approved and live-crawled three exact first-party
+matches: McDonald's Alpignano, Pizzeria Napoli, and Locanda Il Pomo d'Oro.
+The national state is now **193 verified / 6 rejected attestations, 111
+accepted website facts, and 111 map features (69 with menu URLs)**. The crawl
+again used zero search requests, all 156,057 national jobs remain queued, and
+ambiguous candidates were left undecided. Evidence, abstentions, backup, fact
+deltas, and the dated-event-menu caveat are recorded in
+[`benchmark/AGENT-ASSISTED-REVIEW-BATCH-2-2026-09-08.md`](AGENT-ASSISTED-REVIEW-BATCH-2-2026-09-08.md).
