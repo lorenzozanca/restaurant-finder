@@ -123,3 +123,14 @@ after crawl-only abstentions. The current state is **196 verified / 6 rejected
 attestations, 112 accepted website facts, and 112 map features (69 with menu
 URLs)**, still with all national jobs queued and zero search requests. See
 [`benchmark/AGENT-ASSISTED-REVIEW-BATCH-3-2026-09-08.md`](AGENT-ASSISTED-REVIEW-BATCH-3-2026-09-08.md).
+
+## Scaling clarification — binding for the next session
+
+Do **not** continue manual or agent-assisted batches as a path through all
+156,057 venues. Those batches were calibration/audit work only. The next task
+is a reproducible, read-only census of the entire backlog by candidate class,
+followed by a dry-run automatic-verification eligibility analysis. No new
+automatic ownership method and no wholesale national crawl is authorized yet.
+The canonical rationale, ordered plan, policy boundary, and success criteria
+are in
+[`benchmark/VERIFIED-VENUES-SCALING-STRATEGY.md`](VERIFIED-VENUES-SCALING-STRATEGY.md).

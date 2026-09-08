@@ -1,5 +1,12 @@
 # Zero-cost national enrichment plan
 
+> **2026-09-08 update:** Use this document for its discovery-track design, but
+> follow
+> [`benchmark/VERIFIED-VENUES-SCALING-STRATEGY.md`](benchmark/VERIFIED-VENUES-SCALING-STRATEGY.md)
+> for current execution order. The registry licensing review found no lawful
+> zero-cost bulk registry path, and small manual batches are not the national
+> scaling mechanism. The next authorized task is a read-only backlog census.
+
 Status: proposed — 2026-09-07
 Context: national Brave search estimated at ~$2k; budget target is $0.
 Supersedes nothing; constrains how Sessions 11–12 (`ITALY-WEB-ENRICHMENT-PLAN.md`)

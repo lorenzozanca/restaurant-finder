@@ -99,9 +99,9 @@ runs; the status remains fail-closed.
 
 ## Next
 
-Continue agent-assisted review in small audited batches, prioritising
-first-party-looking domains and deterministic third-party classes. Keep broken
-or ambiguous candidates undecided. After each batch, use the bounded
-attested-only crawl, audit fact deltas, and regenerate the map. Separately
-inspect the three crawl abstentions before changing scoring; review evidence
-alone must not override a failed live-page gate.
+This instruction is superseded by
+[`VERIFIED-VENUES-SCALING-STRATEGY.md`](VERIFIED-VENUES-SCALING-STRATEGY.md).
+Small audited batches are calibration and residual-tail work, not a plan to
+review the national inventory sequentially. The next task is the read-only
+backlog census. Separately inspect the three crawl abstentions before changing
+scoring; review evidence alone must not override a failed live-page gate.

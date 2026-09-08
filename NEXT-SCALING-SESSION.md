@@ -1,5 +1,12 @@
 # Next scaling session handoff
 
+> **2026-09-08 update:** This document preserves the earlier validation and
+> architecture handoff, but its operational "next session" instructions are
+> superseded by
+> [`benchmark/VERIFIED-VENUES-SCALING-STRATEGY.md`](benchmark/VERIFIED-VENUES-SCALING-STRATEGY.md).
+> Small review batches are calibration only. The current next task is a
+> read-only national backlog census, not sequential review or a wholesale run.
+
 Updated: 2026-09-01
 State: Sessions 8 and 9 are complete. Both Session 10 pilots ended in quality
 NO-GO decisions. The fresh isolated cold and warm runs completed 36/36 jobs

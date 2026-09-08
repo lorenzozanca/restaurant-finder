@@ -61,7 +61,9 @@ Resulting national state:
 
 ## Next
 
-Continue in small, audited batches. Prefer exact first-party contact/branch
-pages and leave conflicts unresolved. A separate quality pass should add
-freshness handling for dated event-menu resources so an old event image is not
-presented as a current menu merely because it remains reachable.
+This instruction is superseded by
+[`VERIFIED-VENUES-SCALING-STRATEGY.md`](VERIFIED-VENUES-SCALING-STRATEGY.md).
+Small batches are calibration and residual-tail work only; the next task is the
+read-only backlog census. A separate quality pass should add freshness handling
+for dated event-menu resources so an old event image is not presented as a
+current menu merely because it remains reachable.
