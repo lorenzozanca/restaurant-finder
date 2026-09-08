@@ -65,6 +65,15 @@ test("review HTTP endpoints advance rejected candidates without publishing facts
   assert.equal(next.candidate_domain, "official.example");
   assert.equal(next.queue_remaining, 1);
 
+  const correctedApproval = await request("POST", "/api/review/decision", JSON.stringify({
+    venue_id: next.venue_id, candidate_domain: next.candidate_domain,
+    decision: "approve", website_url: "https://corrected.example/",
+    evidence_urls: ["https://corrected.example/contatti"], reviewer: "http-reviewer",
+    method: "manual_first_party_review",
+  }));
+  assert.equal(correctedApproval.status, 200);
+  assert.equal(JSON.parse(correctedApproval.body).publisher_domain, "corrected.example");
+
   const reopened = new EvidenceStore(db);
   assert.equal(reopened.db.prepare("SELECT COUNT(*) AS count FROM facts").get().count, 0);
   reopened.close();

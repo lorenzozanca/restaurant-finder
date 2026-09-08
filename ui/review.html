@@ -53,7 +53,7 @@
 <div id="wrap">
   <div id="candidate"></div>
   <div class="card" id="form" hidden>
-    <label>candidate website
+    <label>official website <span class="hint">replace this if you find the corrected site</span>
       <input type="text" id="website" placeholder="https://www.example.it/">
     </label>
     <label>evidence URLs (one per line)
@@ -103,7 +103,8 @@
   function render(c) {
     candidate = c;
     var box = document.getElementById('candidate');
-  document.getElementById('remaining').textContent = c.queue_remaining + ' domain candidates awaiting review';
+    document.getElementById('remaining').textContent =
+      c.queue_remaining + ' domain candidates awaiting review';
     var lines = ['<div class="card"><div class="vname">' + esc(c.display_name) + '</div>',
       '<div class="vmeta">' + esc(c.venue_id) + ' · ' + esc(c.municipality) +
       ' · candidate <b>' + esc(c.candidate_domain) + '</b> via ' +
@@ -181,6 +182,11 @@
     if (!candidate) return;
     var reviewer = reviewerInput.value.trim();
     try { localStorage.setItem('reviewer', reviewer); } catch (e) {}
+    var website = document.getElementById('website').value.trim();
+    var evidence = document.getElementById('evidence').value.split('\n').filter(function (url) {
+      return url.trim();
+    });
+    if (!evidence.length && website) evidence = [website];
     setBusy(true);
     setResult('', 'recording…');
     fetch('api/review/decision', {
@@ -190,8 +196,8 @@
         venue_id: candidate.venue_id,
         candidate_domain: candidate.candidate_domain,
         decision: kind,
-        website_url: document.getElementById('website').value.trim(),
-        evidence_urls: document.getElementById('evidence').value.split('\n'),
+        website_url: website,
+        evidence_urls: evidence,
         reviewer: reviewer,
         method: 'manual_first_party_review',
         notes: document.getElementById('notes').value.trim() || undefined
