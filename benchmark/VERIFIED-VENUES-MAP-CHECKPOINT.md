@@ -115,3 +115,11 @@ again used zero search requests, all 156,057 national jobs remain queued, and
 ambiguous candidates were left undecided. Evidence, abstentions, backup, fact
 deltas, and the dated-event-menu caveat are recorded in
 [`benchmark/AGENT-ASSISTED-REVIEW-BATCH-2-2026-09-08.md`](AGENT-ASSISTED-REVIEW-BATCH-2-2026-09-08.md).
+
+Agent-assisted batch 3 reviewed three Avigliana venues. All three received
+evidence-backed ownership attestations, but the independent crawl gate
+published only Osteria del Lago; Osteria Al29 and Avilius remain unpublished
+after crawl-only abstentions. The current state is **196 verified / 6 rejected
+attestations, 112 accepted website facts, and 112 map features (69 with menu
+URLs)**, still with all national jobs queued and zero search requests. See
+[`benchmark/AGENT-ASSISTED-REVIEW-BATCH-3-2026-09-08.md`](AGENT-ASSISTED-REVIEW-BATCH-3-2026-09-08.md).
