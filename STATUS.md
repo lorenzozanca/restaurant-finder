@@ -5,8 +5,8 @@ Branch: `main`
 
 ## Current milestone
 
-Validate a strict automatic first-party rule against the existing labelled evidence,
-then process the 86,852 known source candidates in resumable zero-search batches.
+Resolve the failed automatic-publication gate before any 86,852-candidate production
+run. The frozen v1 rule is rejected and its locked holdout cannot be reused.
 
 ## Completed and visible
 
@@ -40,10 +40,20 @@ then process the 86,852 known source candidates in resumable zero-search batches
 - The rule, crawler, evaluator, development report/database hashes, and locked
   holdout artifact hashes are frozen in
   `benchmark/AUTOMATIC-FIRST-PARTY-RULE-FREEZE.json`. Search and Brave are disabled.
-- The locked holdout crawl is safely checkpointed at 669/2,804 persisted candidate
-  outcomes across all 1,000 venues: 41 strongly correlated, 36 ambiguous, 16
-  contradicted, 227 retryable, and 349 unsupported publisher. The locked labels have
-  not been evaluated; the one authorized evaluation remains unused.
+- The frozen locked-holdout crawl completed all 2,804 persisted candidate outcomes
+  across 1,000 venues: 45 strongly correlated, 58 ambiguous, 18 contradicted, 1,159
+  retryable, and 1,524 unsupported publisher. Of the retryable outcomes, 1,113 were
+  transport failures; inaccessible candidates abstained and were not rejected.
+- The one authorized locked-label evaluation was executed and is now spent. The v1
+  rule failed every acceptance condition: 3 conclusive publications versus the
+  required 73; 1 false publication versus the allowed 0; and 66.7% precision with a
+  20.8% two-sided 95% Wilson lower bound versus the required 95%. The 1 false
+  publication was the rejected booking/order platform
+  `https://lalunanelpozzo.metro.bar/?lang=en`. The immutable evaluation report is
+  `benchmark/AUTOMATIC-FIRST-PARTY-LOCKED-HOLDOUT-EVALUATION-V1.json`.
+- The v1 automatic rule is not approved. No automatic ownership attestations were
+  created, the national store still has 0 candidate assessments, and the
+  86,852-candidate production crawl remains unauthorized.
 
 ## Verified facts about the old method
 
@@ -58,14 +68,10 @@ then process the 86,852 known source candidates in resumable zero-search batches
 
 ## Next executable task
 
-Resume the frozen zero-search locked-holdout crawl from its 669/2,804 persisted
-candidate outcomes with:
-
-`node assess-labelled-corpus.mjs --partition locked_holdout --fixture-dir benchmark/session-12-combined-final/cohort-1 --fixture-dir benchmark/session-12-combined-final/cohort-2 --db data/automatic-rule/holdout-assessments.sqlite --cache-dir output/.cache/automatic-rule-holdout --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --concurrency 16 --timeout 20000`
-
-Do not run the evaluator until all 2,804 outcomes are present. Then execute the frozen
-evaluator exactly once against the locked labels and apply the acceptance gate before
-authorizing any 86,852-candidate production run.
+Obtain the operator's product decision: either authorize a development-only v2 rule
+effort with a genuinely new independent locked holdout, or replace the automatic
+publication route. Do not tune against or reevaluate the now-exposed v1 holdout, and
+do not start the 86,852-candidate production run under v1.
 
 ## Acceptance gate for the automatic rule
 
@@ -76,18 +82,22 @@ authorizing any 86,852-candidate production run.
 
 ## Last verification
 
+- Frozen holdout crawl command from the previous `Next executable task`: completed
+  the remaining 2,135 outcomes and resumed 669 existing outcomes, for 2,804 total.
+- `node evaluate-automatic-rule.mjs --partition locked_holdout --fixture-dir benchmark/session-12-combined-final/cohort-1 --fixture-dir benchmark/session-12-combined-final/cohort-2 --db data/automatic-rule/holdout-assessments.sqlite --expected-venues 1000 --expected-candidates 2804 --output benchmark/AUTOMATIC-FIRST-PARTY-LOCKED-HOLDOUT-EVALUATION-V1.json`: executed once; the gate failed with 2 correct and 1 false conclusive publication.
+- Report invariant check: 2,804 assessed candidates, 1,000 reviewed venues, 1 false
+  publication, and `acceptance.passed=false`.
 - `npm test`: 48 test files passed, 0 failed.
-- Holdout preflight with a no-network crawl stub: 39 fixture documents, 1,000 unique
-  venues, and 2,804 candidate outcomes persisted successfully in a temporary database.
-- Frozen SHA-256 check: all four code artifacts plus the development report and local
-  development assessment database matched the freeze manifest.
+- Frozen SHA-256 check: all four code artifacts still match the freeze manifest.
+  Evaluation report SHA-256:
+  `ef900e97c2beeddf5c4ac6aab31bdc2d9dd4aa07363cf7b69eec71ed7f68f89e`;
+  local holdout assessment database SHA-256:
+  `24216a740f96f8289295ba1ee5440a74856c69237524dc4cb07bcc67b89ef291`.
 - `git diff --check`: clean.
-- Real national-map API: 156,057 venues; 86,852 source candidates; 112 verified; 6
-  rejected; 69,205 without candidates; 0 assessments in every assessment bucket. An
-  Oderzo (`TV`) query returned 54 venues and included the per-candidate assessment
-  field. National index cold-load time was 10.5 seconds.
 
 ## Blockers
 
-No product or data blocker. Resuming the live crawl may require network permission;
-it requires no paid-search budget and Brave remains disabled.
+The required automatic-publication gate failed and the v1 holdout is now exposed.
+Continuing requires a product decision between a new independently tested v2 effort
+and a different delivery route. No paid-search budget was used; Brave remains
+disabled.

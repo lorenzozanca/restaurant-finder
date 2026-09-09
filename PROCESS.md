@@ -89,6 +89,15 @@ false positive is reported. Until that test passes, results remain
 `strongly_correlated`, not `verified`. This is the single bounded validation task;
 there will be no new sequence of exploratory session plans.
 
+The frozen `strict-first-party-v1` rule was evaluated once on 2026-09-09 and failed
+the gate: 3 conclusive publications included 2 correct and 1 false publication, for
+66.7% precision and a 20.8% two-sided 95% Wilson lower bound. The false publication
+was a rejected `metro.bar` booking/order-platform page. The immutable result is in
+`benchmark/AUTOMATIC-FIRST-PARTY-LOCKED-HOLDOUT-EVALUATION-V1.json`. This rule is not
+approved, and the 86,852-candidate production run remains unauthorized. Because the
+locked labels have now been exposed, this holdout cannot be reused to qualify a
+revised rule.
+
 If it passes, record the method as `automated_first_party_corroboration`, with the same
 audit, expiry, and revalidation requirements as other attestations. The subsequent
 known-candidate run may then apply it to strong-corroboration outcomes and update the
@@ -123,8 +132,11 @@ architecture for Brave results.
 
 ## Current milestone and definition of done
 
-Current milestone: **certify the automatic rule on the labelled development corpus
-and locked holdout, then crawl and classify the 86,852 known candidates**.
+Current milestone: **resolve the failed automatic-publication gate before any
+86,852-candidate production run**. The operator must choose whether to authorize a
+development-only v2 effort with a genuinely new independent locked test, or replace
+automatic publication with a different delivery route. Neither path is authorized by
+the failed v1 result alone.
 
 The milestone is done only when the map reports counts for crawled, strongly
 corroborated, verified, rejected, retryable, and unresolved candidates; the holdout
