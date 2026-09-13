@@ -38,7 +38,12 @@
   .badge.verified { background: #4ade80; } .badge.candidate { background: #fbbf24; }
   .badge.no_candidate { background: #94a3b8; } .badge.rejected { background: #f87171; }
   .cluster-label { background: #252b36; color: #fff; border: 1px solid #768096; border-radius: 14px;
-    box-shadow: 0 1px 4px #0008; font-weight: 700; text-align: center; line-height: 25px; }
+    box-shadow: 0 1px 4px #0008; font-weight: 700; text-align: center; line-height: 1.15;
+    padding: .2rem .5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cluster-region { font-size: 13px; border-color: #4ade80; min-width: 120px; }
+  .cluster-province { font-size: 12px; border-color: #f59e0b; min-width: 100px; }
+  .cluster-municipality { font-size: 11px; min-width: 80px; }
+  .cluster-grid { font-size: 12px; border-radius: 50%; width: 34px; height: 34px; line-height: 30px; padding: 0; }
   @media (max-width: 850px) {
     #bar { grid-template-columns: 1fr; }
     #legend { white-space: normal; }
@@ -94,6 +99,8 @@
   var activeQuery = '';
   var activeProvince = '';
   var requestNumber = 0;
+  var loadTimer = null;
+  var abortController = null;
 
   fetch('italian-municipalities.json').then(function (response) { return response.json(); })
     .then(function (data) {
@@ -117,9 +124,19 @@
     map.setView([42.8, 12.8], 6); load(false);
   });
   filter.addEventListener('change', function () { load(false); });
-  map.on('moveend', function () { if (!activeQuery) load(false); });
+  // Debounced: every pan/zoom fires moveend, but the backend scans 156k venues
+  // per request, so waiting 250ms collapses a drag into one fetch.
+  map.on('moveend', function () { if (!activeQuery) scheduleLoad(false); });
+
+  function scheduleLoad(fitResults) {
+    if (loadTimer) clearTimeout(loadTimer);
+    loadTimer = setTimeout(function () { loadTimer = null; load(fitResults); }, 250);
+  }
 
   function load(fitResults) {
+    if (loadTimer) { clearTimeout(loadTimer); loadTimer = null; }
+    if (abortController) { try { abortController.abort(); } catch (e) {} }
+    abortController = ('AbortController' in window) ? new AbortController() : null;
     var current = ++requestNumber;
     var bounds = map.getBounds();
     var params = new URLSearchParams({
@@ -129,7 +146,8 @@
     if (activeQuery) params.set('q', activeQuery);
     if (activeProvince) params.set('province', activeProvince);
     status.textContent = 'loading…';
-    fetch('/api/national-map?' + params).then(function (response) {
+    var fetchOptions = abortController ? { signal: abortController.signal } : undefined;
+    fetch('/api/national-map?' + params, fetchOptions).then(function (response) {
       if (!response.ok) return response.json().then(function (body) { throw new Error(body.error || ('HTTP ' + response.status)); });
       return response.json();
     }).then(function (data) {
@@ -137,7 +155,7 @@
       render(data);
       setStats(data.stats || {});
       status.style.color = '';
-      status.textContent = number(data.visible_count) + (data.mode === 'clusters' ? ' venues represented by clusters' : ' venues shown');
+      status.textContent = statusText(data);
       if (fitResults && data.features.length) {
         var resultBounds = L.latLngBounds(data.features.map(function (feature) {
           return [feature.geometry.coordinates[1], feature.geometry.coordinates[0]];
@@ -146,9 +164,36 @@
       }
     }).catch(function (error) {
       if (current !== requestNumber) return;
+      if (error && error.name === 'AbortError') return;
       status.textContent = 'failed: ' + error.message;
       status.style.color = '#f87171';
     });
+  }
+
+  function statusText(data) {
+    var base = number(data.visible_count);
+    if (data.mode === 'clusters') {
+      base += ' venues in ' + data.features.length + ' ' + levelWord(data.group_level);
+      base += ' — ' + levelHint(data.group_level);
+    } else if (data.truncated) {
+      base += ' venues match — showing first ' + number(data.features.length) + ' — zoom in for the rest';
+    } else {
+      base += ' venues shown — zoom out for groups';
+    }
+    return base;
+  }
+
+  function levelWord(level) {
+    return { region: 'regions', province: 'provinces', municipality: 'towns', grid: 'areas' }[level] || 'clusters';
+  }
+
+  function levelHint(level) {
+    return {
+      region: 'zoom in for provinces',
+      province: 'zoom in for towns',
+      municipality: 'zoom in for venues',
+      grid: 'zoom in for venues'
+    }[level] || 'zoom in to inspect';
   }
 
   function render(data) {
@@ -157,9 +202,13 @@
       var coordinates = feature.geometry.coordinates;
       var props = feature.properties || {};
       if (props.kind === 'cluster') {
-        var icon = L.divIcon({ className: 'cluster-label', html: number(props.count), iconSize: [46, 26] });
+        var level = props.level || 'grid';
+        var isArea = (level === 'grid' || !props.label);
+        var html = isArea ? number(props.count)
+          : esc(props.label) + '<br>' + number(props.count);
+        var icon = L.divIcon({ className: 'cluster-label cluster-' + level, html: html });
         L.marker([coordinates[1], coordinates[0]], { icon: icon }).addTo(layer)
-          .bindPopup(clusterPopup(props)).on('click', function () { map.setView([coordinates[1], coordinates[0]], map.getZoom() + 2); });
+          .bindPopup(clusterPopup(props)).on('click', function () { drillDown(props, coordinates); });
       } else {
         L.circleMarker([coordinates[1], coordinates[0]], {
           radius: props.status === 'verified' ? 6 : 4,
@@ -170,11 +219,37 @@
     });
   }
 
+  function drillDown(props, coordinates) {
+    var bounds = props.bounds;
+    if (bounds && isFinite(bounds[0]) && isFinite(bounds[1]) && isFinite(bounds[2]) && isFinite(bounds[3])
+        && (bounds[2] > bounds[0] || bounds[3] > bounds[1])) {
+      // Zoom to the area's own extent, advancing at least one level so a
+      // region click lands on provinces, a province on towns, etc.
+      map.fitBounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]], {
+        padding: [30, 30],
+        maxZoom: Math.min(map.getZoom() + 3, 14)
+      });
+      // Degenerate bounds (single venue point) still need a zoom step.
+      var after = map.getBounds();
+      if (after.getEast() - after.getWest() < 1e-9) map.setView([coordinates[1], coordinates[0]], map.getZoom() + 2);
+    } else {
+      map.setView([coordinates[1], coordinates[0]], map.getZoom() + 2);
+    }
+  }
+
   function clusterPopup(props) {
-    return '<b>' + number(props.count) + ' venues</b><br>' +
+    var title = props.label ? esc(props.label) + ' — ' + number(props.count) + ' venues'
+      : '<b>' + number(props.count) + ' venues</b>';
+    if (props.label) title = '<b>' + title + '</b>';
+    return title + '<br>' +
       number(props.candidate) + ' with source candidates<br>' +
       number(props.verified) + ' verified<br>' +
-      number(props.no_candidate) + ' without candidates<br><small>Click or zoom in to inspect venues.</small>';
+      number(props.no_candidate) + ' without candidates<br><small>Click to zoom to ' +
+      esc(nextLevelWord(props.level)) + '.</small>';
+  }
+
+  function nextLevelWord(level) {
+    return { region: 'provinces', province: 'towns', municipality: 'venues', grid: 'venues' }[level] || 'detail';
   }
 
   function venuePopup(props) {

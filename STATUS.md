@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-09
+Updated: 2026-09-13
 Branch: `main`
 
 ## Current milestone
@@ -16,6 +16,17 @@ run. The frozen v1 rule is rejected and its locked holdout cannot be reused.
   domains, and 69,205 venues without a source candidate.
 - The map supports municipality/venue search, municipality autocomplete, status
   filters, national clustering, and individual venue details.
+- Map hierarchy (2026-09-13): zoom ≤6 groups by region (20 features, ~7KB for
+  all Italy), 7–8 by province (110 max), 9–10 by municipality with fallback to
+  provinces above 2,500 groups, ≥11 shows venues up to 2,000 rows or capped
+  grid areas. Clicking a group zooms to its bounds (region → provinces →
+  towns → venues). Search results are capped at 2,000 with `truncated=true`.
+- Map loader (2026-09-13): source rows are read with SQL `json_extract` instead
+  of parsing the ~4KB provenance blobs in JS; index load ~10s → ~6.6s for
+  156,057 venues / 86,852 candidates, follow-up viewport queries 25–150ms.
+- Map frontend (2026-09-13): `moveend` is debounced 250ms with in-flight abort,
+  cluster icons are level-styled with names and counts, and the status line
+  names the current level plus the next drill step.
 - The main UI Map navigation opens the national inventory map.
 - `PROCESS.md` is the sole active plan. Superseded direction documents are preserved
   under `docs/archive/`; frozen benchmark evidence remains under `benchmark/`.
@@ -82,6 +93,18 @@ do not start the 86,852-candidate production run under v1.
 
 ## Last verification
 
+- Map hierarchy verification (2026-09-13, real national store):
+  - `node --test lib/national-map.test.mjs`: 4 tests passed (existing candidate
+    visibility plus new region/province/town/venue drill, dense-town fallback,
+    and grid-cap/search-truncation tests).
+  - `npm test`: 245 tests passed, 0 failed.
+  - Live `PORT=4189 node ui/server.mjs` then `/api/national-map`: first request
+    (index build) 8,880ms for 20 region features / 6KB at zoom 6 all-Italy;
+    follow-ups 40ms for 20 province features / 6KB (zoom 8 Veneto bbox),
+    30ms for 268 town features / 87KB (zoom 9), 26ms for 1,384 venues / 617KB
+    (zoom 11). Previously zoom 6 emitted 702 grid clusters (~139KB) and zoom 9
+    up to ~19,281 clusters (~3.6MB).
+  - `node --check` on the extracted inline map script: syntax OK.
 - Frozen holdout crawl command from the previous `Next executable task`: completed
   the remaining 2,135 outcomes and resumed 669 existing outcomes, for 2,804 total.
 - `node evaluate-automatic-rule.mjs --partition locked_holdout --fixture-dir benchmark/session-12-combined-final/cohort-1 --fixture-dir benchmark/session-12-combined-final/cohort-2 --db data/automatic-rule/holdout-assessments.sqlite --expected-venues 1000 --expected-candidates 2804 --output benchmark/AUTOMATIC-FIRST-PARTY-LOCKED-HOLDOUT-EVALUATION-V1.json`: executed once; the gate failed with 2 correct and 1 false conclusive publication.

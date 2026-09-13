@@ -501,7 +501,7 @@ async function handleNationalMap(_req, res, url) {
     query: url.searchParams.get("q") || "",
     province: url.searchParams.get("province") || "",
     status: url.searchParams.get("status") || "all",
-    limit: url.searchParams.get("limit") || 12000,
+    limit: url.searchParams.get("limit") || 2000,
   });
   json(res, 200, document);
 }
