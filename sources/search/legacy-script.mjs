@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const execFileAsync = promisify(execFile);
 const here = dirname(fileURLToPath(import.meta.url));
-const SEARCH_SCRIPT = resolve(here, "..", "..", "..", "researcher", "scripts", "search.sh");
+const SEARCH_SCRIPT = resolve(here, "html-engines", "search.mjs");
 
 export function createLegacyScriptProvider(options = {}) {
   const run = options.execFile || execFileAsync;
@@ -18,7 +18,7 @@ export function createLegacyScriptProvider(options = {}) {
       const args = [SEARCH_SCRIPT, "-n", String(request.limit)];
       if (options.engine) args.push("-e", options.engine);
       args.push(request.query);
-      const { stdout } = await run("bash", args, {
+      const { stdout } = await run(process.execPath, args, {
         timeout: 50_000, maxBuffer: 512 * 1024,
       });
       const results = parseLegacySearchOutput(stdout);
