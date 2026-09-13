@@ -16,17 +16,19 @@ run. The frozen v1 rule is rejected and its locked holdout cannot be reused.
   domains, and 69,205 venues without a source candidate.
 - The map supports municipality/venue search, municipality autocomplete, status
   filters, national clustering, and individual venue details.
-- Map hierarchy (2026-09-13): zoom ≤6 groups by region (20 features, ~7KB for
-  all Italy), 7–8 by province (110 max), 9–10 by municipality with fallback to
-  provinces above 2,500 groups, ≥11 shows venues up to 2,000 rows or capped
-  grid areas. Clicking a group zooms to its bounds (region → provinces →
-  towns → venues). Search results are capped at 2,000 with `truncated=true`.
+- Map clusters (2026-09-13): numeric grid counts at every zoom until close-up.
+  Cell size halves about every zoom level (1.0° at z≤5 down to 0.008° at z≥13),
+  so far-away views show plain counts (224 clusters / ~50KB for all Italy at
+  z6) instead of one chip per venue; an adaptive pass caps output at 2,500
+  clusters. Individual dots appear only at z≥12 with ≤2,000 venues in view
+  (search capped at 2,000 with `truncated=true`). Clicking a count zooms to
+  its cell bounds. No admin name chips: badges are fixed-size circles
+  (36/46/58px) with the count only and no per-cluster popups.
 - Map loader (2026-09-13): source rows are read with SQL `json_extract` instead
-  of parsing the ~4KB provenance blobs in JS; index load ~10s → ~6.6s for
-  156,057 venues / 86,852 candidates, follow-up viewport queries 25–150ms.
-- Map frontend (2026-09-13): `moveend` is debounced 250ms with in-flight abort,
-  cluster icons are level-styled with names and counts, and the status line
-  names the current level plus the next drill step.
+  of parsing the ~4KB provenance blobs in JS; index load ~10s → ~6.5s for
+  156,057 venues / 86,852 candidates, follow-up viewport queries 15–160ms.
+- Map frontend (2026-09-13): `moveend` is debounced 250ms with in-flight abort;
+  the status line reads "N venues in M clusters — click a cluster to zoom in".
 - The main UI Map navigation opens the national inventory map.
 - `PROCESS.md` is the sole active plan. Superseded direction documents are preserved
   under `docs/archive/`; frozen benchmark evidence remains under `benchmark/`.
@@ -93,17 +95,20 @@ do not start the 86,852-candidate production run under v1.
 
 ## Last verification
 
-- Map hierarchy verification (2026-09-13, real national store):
-  - `node --test lib/national-map.test.mjs`: 4 tests passed (existing candidate
-    visibility plus new region/province/town/venue drill, dense-town fallback,
-    and grid-cap/search-truncation tests).
+- Map cluster verification (2026-09-13, real national store):
+  - `node --test lib/national-map.test.mjs`: 4 tests passed (candidate
+    visibility, numeric counts far / dots up close with count conservation,
+    clusters kept at mid zoom, dense-area cap plus search truncation).
   - `npm test`: 245 tests passed, 0 failed.
-  - Live `PORT=4189 node ui/server.mjs` then `/api/national-map`: first request
-    (index build) 8,880ms for 20 region features / 6KB at zoom 6 all-Italy;
-    follow-ups 40ms for 20 province features / 6KB (zoom 8 Veneto bbox),
-    30ms for 268 town features / 87KB (zoom 9), 26ms for 1,384 venues / 617KB
-    (zoom 11). Previously zoom 6 emitted 702 grid clusters (~139KB) and zoom 9
-    up to ~19,281 clusters (~3.6MB).
+  - Direct index check: z5 all-Italy 77 clusters / 17KB, z6 224 / 51KB,
+    z7 702 / 160KB, z8+ adaptively capped (750 / 182KB), cluster counts sum
+    to 156,057; Venice bbox at z11 gives 66 clusters for 1,384 venues, Rome
+    centre at z14 gives 1,621 venue dots.
+  - Live `PORT=4190 node ui/server.mjs` then `/api/national-map`: first request
+    (index build) 6,702ms for 224 clusters / 50KB at zoom 6 all-Italy;
+    follow-ups 23ms for 341 clusters / 83KB (zoom 8 bbox), 16ms for
+    66 clusters / 15KB (zoom 11 Venice bbox), 23ms for 1,621 venues / 691KB
+    (zoom 14 Rome centre).
   - `node --check` on the extracted inline map script: syntax OK.
 - Frozen holdout crawl command from the previous `Next executable task`: completed
   the remaining 2,135 outcomes and resumed 669 existing outcomes, for 2,804 total.
