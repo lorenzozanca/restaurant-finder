@@ -187,20 +187,55 @@ publications, false rejections, abstentions, and cost per candidate.
 
 ### 3. Certify on a new locked holdout
 
-Select a new stratified holdout from the **source candidates** (the production
-population). It must exclude every venue ID in prior benchmark artifacts and be
-sized so the expected publications exceed 73. Label it with an independent
-OpenAI/Codex agent review before the reviewer sees it, and seal the labels. Then
-freeze the model IDs, prompts, text budget, and code hashes, and evaluate once. The
-gate:
+Protocol fixed 2026-09-24, before any new holdout is selected or labelled:
 
-- at least 73 correct automatic verifications;
-- zero false automatic verifications;
-- two-sided 95% Wilson precision lower bound at or above 95%;
-- timeouts and inaccessible pages abstain or retry, never reject;
-- false rejections and cost per candidate are reported.
+1. **Source-candidate pilot (development).** Run the reviewer on a random sample of
+   about 300 venues with a source (Overture) website, excluding every venue ID in
+   prior benchmark artifacts. It measures the publication rate on the production
+   population and exposes source-URL-specific failures. It is development data and
+   is never reused for certification.
+2. **Selection.** Draw the holdout at random, stratified by region, from the
+   remaining source-candidate venues (same exclusions, disjoint from the pilot). Size
+   it from the pilot's publication rate, so the expected number of publications is at
+   least 1.5 × 73. Record the selection fingerprint before labelling.
+3. **Reference labels.** Claude (the operator's subscription, strongest available
+   model, with web research, in sessions that never see the reviewer's output) labels
+   each holdout venue: official website status plus a verdict on its candidate domain.
+   This is the operator's choice (2026-09-24) and replaces labelling by OpenAI models
+   through OpenRouter. Seal the labels before the reviewer runs.
+4. **Freeze.** Freeze the reviewer's model IDs, prompt version and hash, text budget,
+   and code hashes. Then run it once on the holdout.
+5. **Blind adjudication (symmetric).** A pinned adjudicator re-reviews every
+   disagreement between reviewer and label: a reviewer publication whose domain is not
+   label-verified (including `uncertain` labels), and every candidate the reviewer
+   rejected while the label verifies it. The adjudicator (Claude in a fresh session that did not
+   produce the labels; not the MiMo reviewer) receives the venue record, the live
+   page text, and both claims as "A" and "B" in random order, without knowing which is
+   the label. Its verdict is final in either direction.
+6. **Agreement audit.** The same adjudicator also re-reviews a random 20% (at least
+   15) of publications where reviewer and label agree. Any error it finds counts as a
+   false publication.
+7. **Gate** on adjudicated labels:
+   - at least 73 correct automatic verifications;
+   - zero false automatic verifications;
+   - two-sided 95% Wilson precision lower bound at or above 95%;
+   - timeouts and inaccessible pages abstain or retry, never reject.
+   The report also gives raw-label metrics, every overturned label with its evidence,
+   false rejections, and cost per candidate.
 
 A failed gate spends that holdout, exactly as v1 did.
+
+Pilot result (2026-09-24, `pilot-dev-3`, 300 source-candidate venues, seed
+`source-pilot-2026-09-24`): 156 candidates reviewed, 71 accepted (a 23.7% venue
+publication rate), 36 rejected, 49 ambiguous; 83 retryable; $0.1828; 6 minutes. At
+23.7%, a 480-venue holdout expects about 114 publications (at least 1.5 × 73).
+The pilot drew from a single stratum because `region` was empty in the source
+records; the selector now uses `region_code` (20 regions).
+
+Evidence for this protocol: in `v1h-dev-3` (spent v1 holdout, development use),
+all 5 publications counted false against raw Codex labels were label errors. Four
+showed the record's exact phone and address on the venue's own domain; the fifth
+domain was itself labelled verified.
 
 ### 4. Process the known candidates
 

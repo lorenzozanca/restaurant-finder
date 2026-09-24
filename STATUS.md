@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-24 (LLM reviewer core)
+Updated: 2026-09-24 (source pilot; holdout protocol)
 Branch: `main`
 
 ## Current milestone
@@ -77,7 +77,18 @@ holdout can no longer qualify anything; it may serve as development data.
     - `peterland.it` is itself labelled `verified` official; the strict metric counts
       it false only because the labeller named `peterlandolbia.it` as *the* official URL.
     - The Codex labels carry no notes explaining these rejections.
-  - Total LLM spend to date: about $1.01 of the operator's $2 first-try limit.
+- Source-candidate pilot `pilot-dev-3` (`PROCESS.md` step 3.1; development only):
+  300 venues selected by `select-source-sample.mjs` (seed `source-pilot-2026-09-24`;
+  86,616 eligible; 2,076 benchmark venue IDs excluded; fixture in
+  `data/llm-review/source-pilot/`). Crawl: 85 strongly correlated, 71 ambiguous,
+  33 contradicted, 83 retryable, 28 unsupported. Review: 156 candidates; 71 accepted
+  (23.7% of venues), 36 rejected, 49 ambiguous; 0 provider errors; $0.1828; 6 minutes
+  at concurrency 12. No labels exist for the pilot, so precision is not measured here.
+  The sample was not region-stratified (empty `region` field), which is now fixed.
+- `openai/gpt-6-sol` (probe: routes to OpenAI under `data_collection: "deny"` only with
+  `temperature` omitted; the client now accepts `temperature: null`). Superseded: the
+  operator chose Claude, not OpenAI via OpenRouter, for labels and adjudication.
+- Total LLM spend to date: about $1.19 of the operator's $2 first-try limit.
 
 - Network diagnosis (resolved 15:27 UTC): the bottleneck was the laptop's Wi-Fi
   association, not the internet line. After 52 hours connected on DFS channel 124,
@@ -197,15 +208,18 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-Operator decision required before the new locked holdout: how label/reviewer
-disagreements are resolved in certification. `v1h-dev-3` shows the Codex reference
-labels are wrong on at least 4 of 57 conclusive publications (see above), so a
-zero-false-publication gate scored against raw labels would fail a reviewer that is
-right. Proposed protocol, to be frozen before the holdout is labelled: every
-disagreement between the frozen reviewer and the reference label is re-adjudicated
-by an independent second review that sees both evidence sets. Once decided, write
-the protocol into `PROCESS.md` step 3, then select the new holdout from the Overture
-source candidates.
+Select the 480-venue locked holdout (`PROCESS.md` step 3.2), disjoint from the pilot:
+
+```bash
+node select-source-sample.mjs --db data/istat/2026-01-01/derived/italy-import.sqlite \
+  --count 480 --seed locked-holdout-llm-v1 --partition locked_holdout \
+  --output-dir benchmark/llm-review-holdout-v1 --exclude-dir data/llm-review/source-pilot
+```
+
+Commit the fixture and manifest. Then Claude labels the holdout in fresh sessions
+(batches of about 50 venues, with web research, never seeing reviewer output) into
+`locked-holdout-adjudication-*.json` files in the existing adjudication format. Only
+after the labels are sealed: freeze the reviewer and run it once.
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
