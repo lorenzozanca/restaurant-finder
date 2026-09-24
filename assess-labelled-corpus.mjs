@@ -9,6 +9,9 @@ import { cacheGet, cacheSet } from "./lib/cache.mjs";
 import { createHeadlessRenderer } from "./lib/headless-browser.mjs";
 import { classifyWebsite, crawlWebsiteCandidate, scoreOfficialWebsite } from "./find-menu.mjs";
 import { validateWebFixtureDocument } from "./lib/web-stress-fixture.mjs";
+import { BudgetExhaustedError, createOpenRouterClient, readOpenRouterKey } from "./lib/openrouter-client.mjs";
+import { LLM_REVIEW_PROMPT_SHA256, LLM_REVIEW_PROMPT_VERSION, LLM_REVIEWABLE_STATES,
+  reviewCandidate } from "./lib/llm-ownership-reviewer.mjs";
 
 const DEFAULT_CONCURRENCY = 8;
 
@@ -42,8 +45,16 @@ export async function assessLabelledCorpus(options, dependencies = {}) {
     renderedTimeout: timeout,
     maxBytes: 256_000,
   }));
+  // Optional LLM ownership review in the same pass as the crawl (PROCESS.md step 2).
+  const llm = options.llm || null;
+  if (llm && !(llm.client && llm.runId && llm.verifierModel)) {
+    throw new Error("LLM review needs a client, run ID, and verifier model");
+  }
   let completed = 0;
   let skipped = 0;
+  let reviewed = 0;
+  const llmErrors = [];
+  let stoppedReason = null;
   try {
     for (const entry of entries) rememberFixtureVenue(store, entry, targetEvidence.get(entry.venue_id));
     const existing = new Map(store.listCandidateAssessments({ limit: 500 })
@@ -53,9 +64,15 @@ export async function assessLabelledCorpus(options, dependencies = {}) {
         FROM candidate_assessments`).all()) {
       existing.set(key(row), row.assessment_state);
     }
+    const reviewedKeys = new Set(llm ? store.listLlmReviewOutcomes(llm.runId).map(key) : []);
     const pending = units.filter(({ entry, candidate }) => {
-      const state = existing.get(key({ venue_id: entry.venue_id, candidate_url: canonicalUrl(candidate.url) }));
-      if (state && !retryStates.has(state)) {
+      const unitKey = key({ venue_id: entry.venue_id, candidate_url: canonicalUrl(candidate.url) });
+      const state = existing.get(unitKey);
+      // With review enabled, reviewable candidates without an outcome in this run are
+      // crawled again (from cache) so the model sees the page.
+      const needsReview = llm && !reviewedKeys.has(unitKey)
+        && (!state || LLM_REVIEWABLE_STATES.has(state) || retryStates.has(state));
+      if (state && !retryStates.has(state) && !needsReview) {
         skipped++;
         return false;
       }
@@ -63,9 +80,21 @@ export async function assessLabelledCorpus(options, dependencies = {}) {
     });
     let cursor = 0;
     const workers = Array.from({ length: Math.min(concurrency, pending.length) }, async () => {
-      while (cursor < pending.length) {
+      while (cursor < pending.length && !stoppedReason) {
         const unit = pending[cursor++];
-        await assessOne(store, unit, crawl, dependencies.clock, targetEvidence.get(unit.entry.venue_id));
+        const assessed = await assessOne(store, unit, crawl, dependencies.clock,
+          targetEvidence.get(unit.entry.venue_id));
+        if (llm && LLM_REVIEWABLE_STATES.has(assessed.decision.assessment_state)) {
+          try {
+            await reviewOne(store, llm, unit, assessed, dependencies.clock);
+            reviewed++;
+          } catch (error) {
+            if (error instanceof BudgetExhaustedError) stoppedReason = `budget_exhausted: ${error.message}`;
+            // Provider errors leave the candidate without an outcome; a resumed run retries it.
+            else llmErrors.push({ venue_id: unit.entry.venue_id, candidate_url: unit.candidate.url,
+              error: String(error?.message || error).slice(0, 200) });
+          }
+        }
         completed++;
         if (dependencies.onProgress) dependencies.onProgress({ completed, pending: pending.length });
         else if (completed % 25 === 0 || completed === pending.length) {
@@ -74,12 +103,27 @@ export async function assessLabelledCorpus(options, dependencies = {}) {
       }
     });
     await Promise.all(workers);
-    return {
+    const summary = {
       partition, fixture_documents: fixtures.length, venues: entries.length,
       candidates: units.length, assessed_now: completed, resumed_existing: skipped,
       database: dbPath, cache_directory: cacheDir,
       assessment_counts: store.candidateAssessmentCounts(),
     };
+    if (llm) {
+      const outcomes = store.listLlmReviewOutcomes(llm.runId);
+      summary.llm_review = {
+        run_id: llm.runId, prompt_version: LLM_REVIEW_PROMPT_VERSION,
+        triage_model: llm.triageModel || null, verifier_model: llm.verifierModel,
+        verifier_reasoning_effort: llm.verifierReasoning || null,
+        reviewed_now: reviewed, reviewed_total: outcomes.length,
+        outcome_counts: Object.fromEntries(["accepted", "rejected", "ambiguous"].map((outcome) =>
+          [outcome, outcomes.filter((row) => row.outcome === outcome).length])),
+        run_spend_usd: store.llmRunSpendUsd(llm.runId), budget_usd: llm.client.budgetUsd,
+        stopped_reason: stoppedReason, provider_errors: llmErrors.length,
+        provider_error_samples: llmErrors.slice(0, 5),
+      };
+    }
+    return summary;
   } finally {
     store.close();
     await renderer?.close();
@@ -113,6 +157,13 @@ async function assessOne(store, { entry, candidate }, crawl, clock, target = {})
     region: target.region || entry.region || "", country_code: "IT",
     postcodes: target.postcode ? [target.postcode] : [],
   });
+  const venue = {
+    name: target.name || entry.name, aliases: [...new Set([target.name || entry.name,
+      ...(target.aliases || [])].filter(Boolean))],
+    address: target.address || entry.address || "", phone: target.phone || "",
+    municipality: target.municipality || entry.municipality, region: target.region || entry.region || "",
+    postcodes: target.postcode ? [target.postcode] : [],
+  };
   store.recordCandidateAssessment(entry.venue_id, {
     candidate_url: candidate.url,
     final_url: decision.final_url || decision.url || crawlResult.final_url || candidate.url,
@@ -122,6 +173,23 @@ async function assessOne(store, { entry, candidate }, crawl, clock, target = {})
     evidence: decision.reasons,
     candidate_origin: "labelled_fixture",
   }, { checkedAt: clock ? clock() : new Date() });
+  return { decision, crawlResult, venue };
+}
+
+async function reviewOne(store, llm, { entry, candidate }, { crawlResult, venue }, clock) {
+  const at = () => (clock ? clock() : new Date());
+  const meta = { promptVersion: LLM_REVIEW_PROMPT_VERSION, promptSha256: LLM_REVIEW_PROMPT_SHA256 };
+  const review = await reviewCandidate({
+    client: llm.client, triageModel: llm.triageModel, verifierModel: llm.verifierModel,
+    venue, candidateUrl: candidate.url, crawl: crawlResult, zdr: llm.zdr,
+    reasoning: { verifier: llm.verifierReasoning }, maxTokens: { verifier: llm.verifierMaxTokens },
+    recordCall: (call) => store.recordLlmReviewCall(llm.runId, entry.venue_id, candidate.url, call,
+      { ...meta, at: at() }),
+  });
+  store.recordLlmReviewOutcome(llm.runId, entry.venue_id, candidate.url, review, {
+    ...meta, finalUrl: crawlResult.final_url || candidate.url, triageModel: llm.triageModel,
+    verifierModel: llm.verifierModel, at: at(),
+  });
 }
 
 function loadTargetEvidence(path, entries) {
@@ -216,6 +284,14 @@ function parseArgs(argv) {
     else if (flag === "--concurrency") result.concurrency = argv[++index];
     else if (flag === "--timeout") result.timeout = argv[++index];
     else if (flag === "--no-headless") result.headless = false;
+    else if (flag === "--llm-review") result.llmReview = true;
+    else if (flag === "--run-id") result.runId = argv[++index];
+    else if (flag === "--budget-usd") result.budgetUsd = argv[++index];
+    else if (flag === "--triage-model") result.triageModel = argv[++index];
+    else if (flag === "--verifier-model") result.verifierModel = argv[++index];
+    else if (flag === "--zdr") result.zdr = true;
+    else if (flag === "--verifier-reasoning") result.verifierReasoning = argv[++index];
+    else if (flag === "--verifier-max-tokens") result.verifierMaxTokens = Number(argv[++index]);
     else if (flag === "--retry-state") (result.retryStates ||= []).push(argv[++index]);
     else throw new Error(`unknown argument: ${flag}`);
   }
@@ -224,8 +300,27 @@ function parseArgs(argv) {
 
 function parseJson(value) { try { return JSON.parse(value); } catch { return {}; } }
 
+async function withLlmClient(options) {
+  if (!options.llmReview) return options;
+  if (existsSync(".env")) process.loadEnvFile(".env");
+  const apiKey = readOpenRouterKey();
+  if (!apiKey) throw new Error("--llm-review needs OPENROUTER (or OPENROUTER_API_KEY) in the environment or .env");
+  if (options.budgetUsd === undefined) throw new Error("--llm-review needs an explicit --budget-usd");
+  const runId = required(options.runId, "run-id");
+  const verifierModel = required(options.verifierModel, "verifier-model");
+  // The cap covers the whole run, including spend booked before a resume.
+  const store = new EvidenceStore(resolve(required(options.dbPath, "db")));
+  let spentUsd;
+  try { spentUsd = store.llmRunSpendUsd(runId); } finally { store.close(); }
+  const client = createOpenRouterClient({ apiKey, budgetUsd: Number(options.budgetUsd), spentUsd });
+  await client.loadPrices([options.triageModel, verifierModel].filter(Boolean));
+  return { ...options, llm: { client, runId, triageModel: options.triageModel || null,
+    verifierModel, zdr: Boolean(options.zdr), verifierReasoning: options.verifierReasoning || null,
+    verifierMaxTokens: options.verifierMaxTokens || undefined } };
+}
+
 if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
-  assessLabelledCorpus(parseArgs(process.argv.slice(2)))
+  withLlmClient(parseArgs(process.argv.slice(2))).then(assessLabelledCorpus)
     .then((result) => process.stdout.write(`${JSON.stringify(result, null, 2)}\n`))
     .catch((error) => { console.error(`assess-labelled-corpus: ${error.message}`); process.exitCode = 1; });
 }

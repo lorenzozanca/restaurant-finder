@@ -121,6 +121,30 @@ the attestation method `automated_llm_ownership_review`. The reviewer identity i
 the verifier model ID plus the prompt version, the evidence URL is the final URL,
 and expiry and revalidation follow the other attestations.
 
+## Model selection
+
+Benchmarks nominate models; our own development data decides.
+
+1. `node select-llm-models.mjs [--probe-free]` lists OpenRouter models with structured
+   output, their cost per 1,000 reviews, and, when `ARTIFICIAL_ANALYSIS_API_KEY` is set,
+   the Artificial Analysis intelligence index (attribution required). `--probe-free`
+   checks at zero cost which free models answer under `data_collection: "deny"`. On
+   2026-09-24 only `nex-agi/nex-n2.5-mini:free` and
+   `dots-studio/dots-3-note-preview:free` could be pinned. The others need
+   OpenRouter's "free model training" setting, which this project does not enable.
+2. A nominated model is tried in a capped development run and compared on false
+   publications, false rejections, and cost per candidate.
+3. Operator choice (2026-09-24): `xiaomi/mimo-v2.6-pro` for both roles, so development
+   runs skip the separate triage call and send every reviewable candidate to MiMo. The
+   free triage model `nex-agi/nex-n2.5-mini:free` contradicted itself in `dev-1`
+   (publisher "official venue site", decision "not official"). Meta Muse Spark 1.3
+   Contributor ($0.10/$0.20 per M) is refused under `data_collection: "deny"` (Meta
+   trains on its prompts). The full Muse Spark 1.3 ($1.25/$4.25 per M) is allowed but
+   would cost about 8× MiMo per verification.
+4. Certification freezes exact model IDs. Swapping either model later is a new
+   reviewer. It needs a fresh locked holdout slice, because comparing many models
+   on one holdout would select on noise.
+
 ## Spending limit
 
 Every LLM run has a hard USD cap, **default $5** (`--budget-usd`). The runner loads
@@ -150,10 +174,12 @@ limit. No LLM run starts without an explicit cap, and Brave budgets stay separat
 - Pending: re-measure the success rate on a random national candidate sample over a
   healthy network. The 2026-09-24 link was saturated (~20 KB/s).
 
-### 2. Build and develop the LLM reviewer
+### 2. Build and develop the LLM reviewer — core implemented 2026-09-24, development continuing
 
-Implement the budget-capped OpenRouter client, both stages, deterministic
-acceptance, and the audit tables. Develop prompts, the text budget, and model choice
+Implemented and tested: `lib/openrouter-client.mjs` (budget cap), `lib/llm-ownership-reviewer.mjs`
+(both stages, optional triage, deterministic acceptance), evidence-store schema v6
+(`llm_review_calls`, `llm_review_outcomes`), `assess-labelled-corpus.mjs --llm-review`,
+`evaluate-llm-review.mjs`, and `select-llm-models.mjs`. Develop prompts, the text budget, and model choice
 on the 200-venue development corpus. Because the v1 holdout (1,000 venues) can no
 longer qualify anything, it may also be used as development data. Every
 development run is capped (default $5) and reports publications, false

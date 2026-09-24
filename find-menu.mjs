@@ -447,6 +447,9 @@ function extractWebsiteFacts(html, website) {
   }
   return {
     text: stripTags(html).slice(0, 30_000),
+    // Script/style-free page text: the LLM ownership reviewer's input and quote source.
+    visible_text: decodeEntities(visibleText(html)).slice(0, 60_000),
+    title: decodeEntities(stripTags(String(html || "").match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1] || "")).slice(0, 300),
     canonical_url: resolveUrl(canonical?.[1] || canonical?.[2] || "", website),
     structured_types: [...new Set(structuredTypes)].slice(0, 10),
     phones: phones.join(" "),

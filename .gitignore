@@ -11,6 +11,7 @@ data/istat/**/derived/
 data/session-10/
 data/session-10-fresh/
 data/automatic-rule/
+data/llm-review/
 
 # Local compliance decisions may contain operator, contract, and hosting details.
 .compliance/

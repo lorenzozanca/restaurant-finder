@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-24
+Updated: 2026-09-24 (LLM reviewer core)
 Branch: `main`
 
 ## Current milestone
@@ -9,14 +9,52 @@ Certify the LLM ownership reviewer (`PROCESS.md` steps 2–3) before any
 86,852-candidate production run. The frozen v1 rule is rejected, and its locked
 holdout can no longer qualify anything; it may serve as development data.
 
+## LLM reviewer core and first development runs (2026-09-24)
+
+- Implemented and tested (fake transports, zero spend):
+  - `lib/openrouter-client.mjs`: reserves the worst case before each call, books
+    `usage.cost`, hard-stops at `--budget-usd`, and counts prior spend on resume.
+  - `lib/llm-ownership-reviewer.mjs` (prompt `llm-ownership-dev-3`): optional triage,
+    verifier, deterministic quote acceptance, and a guard so a self-contradictory
+    "own site but not official" answer never becomes a rejection.
+  - Evidence-store schema v6: `llm_review_calls` and `llm_review_outcomes`. These
+    never create publisher attestations.
+  - `assess-labelled-corpus.mjs --llm-review --run-id --budget-usd --verifier-model
+    [--triage-model] [--verifier-reasoning] [--verifier-max-tokens]`, which reads the
+    key from `.env` as `OPENROUTER`.
+  - `evaluate-llm-review.mjs` and `select-llm-models.mjs`.
+- Models: the operator chose `xiaomi/mimo-v2.6-pro` for both roles. Only two free
+  models can be pinned under `data_collection: "deny"`. Muse Spark 1.3 Contributor
+  is refused (Meta trains on its prompts), and full Muse Spark 1.3 costs about 8× MiMo.
+- Live smoke test: free triage plus MiMo verifier accepted a synthetic page with all
+  four quotes checked, for $0.000546.
+- Development runs on the 200-venue / 987-candidate corpus (local
+  `data/llm-review/development-run-1.sqlite`; labels in `benchmark/session-11-web`):
+  - `dev-1` (free Nex triage, then MiMo; prompt dev-1): 33 candidates reviewed.
+    2 venue publications, both correct, 0 false; 2 false rejections, both from the
+    triage self-contradiction that is now guarded. Cost $0.0118.
+  - `dev-2` (MiMo only; prompt dev-2; stopped at 125/335 when a latency test paused
+    its process): 36 reviewed. 1 publication, correct, 0 false; 3 false rejections,
+    all McDonald's corporate pages that the labels accept as the chain's official
+    domain. Prompt dev-3 now treats brand/chain sites that don't identify the branch
+    as "insufficient". Cost $0.0285.
+  - Total LLM spend to date: $0.040 of the operator's $2 first-try limit.
+  - These runs are not evidence of accuracy yet. Almost the whole corpus is still
+    unreviewed because of the network (below): 250 of 351 crawlable candidates are
+    still `retryable`.
+- Network diagnosis: the Wi-Fi link is healthy (−39 dBm, router RTT 2–30 ms, 0%
+  loss). Internet RTT to 1.1.1.1 measured 1.4 s, then 3.4 s with 70% loss, then 8 s
+  average with the crawler frozen (laptop traffic ~39 KB/s). The crawl is not the
+  cause; the congestion is upstream of this laptop.
+
 ## Route decision and crawler work (2026-09-24)
 
 - Operator decision: the automatic route is now an LLM ownership reviewer through
   OpenRouter (cheap triage model → stronger verifier → deterministic acceptance of
   quoted evidence). OpenAI/Codex agent reviews are accepted as reference labels,
   with no human audit sample. Every LLM run has a hard USD cap, default $5.
-  `PROCESS.md`, `AGENTS.md`, and `PLAN.md` record the route; the reviewer is not
-  built yet.
+  `PROCESS.md`, `AGENTS.md`, and `PLAN.md` record the route; the reviewer core
+  followed later the same day (section above).
 - `DATA-LICENSING.md` and `PRIVACY.md` register OpenRouter and the upstream model
   providers as processors. Requests must set `data_collection: "deny"` and
   `require_parameters: true` (`zdr: true` where supported). Only hashes, decisions,
@@ -117,27 +155,24 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-Implement the LLM ownership reviewer's offline core (`PROCESS.md` step 2), with
-tests that use a fake transport:
+Finish development run `dev-3` on the 200-venue corpus, once internet RTT to 1.1.1.1
+is healthy (under 300 ms):
 
-1. `lib/openrouter-client.mjs`: chat completions with a JSON-schema response;
-   provider routing `data_collection: "deny"`, `require_parameters: true`, optional
-   `zdr`; model prices loaded at start; worst-case reservation before each call;
-   `usage.cost` booked after each call; hard stop at `--budget-usd` (default 5);
-   the spend ledger persisted per run ID so resumed runs keep counting prior spend.
-2. `lib/llm-ownership-reviewer.mjs`: build the input from a crawl (visible text,
-   fixed character budget); stage-1 triage and stage-2 verifier schemas and prompts
-   (versioned and hashed); deterministic acceptance (verbatim quotes; phone or
-   street-and-number match; name and municipality compatible; no deterministic
-   veto).
-3. Evidence-store schema v6: an `llm_reviews` audit table (stage, model, prompt hash,
-   input hash, output JSON, tokens, cost, time) and a `run_spend` ledger.
-4. Wire the reviewer into `assess-labelled-corpus.mjs` behind `--llm-review` and
-   `--budget-usd`, so it runs in the same pass as the crawl.
+```bash
+node assess-labelled-corpus.mjs --partition development --fixture-dir benchmark/session-11-web \
+  --db data/llm-review/development-run-1.sqlite --cache-dir output/.cache \
+  --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --concurrency 4 --timeout 45000 \
+  --retry-state retryable --llm-review --run-id dev-3 --budget-usd 1.90 \
+  --verifier-model xiaomi/mimo-v2.6-pro
+node evaluate-llm-review.mjs --partition development --fixture-dir benchmark/session-11-web \
+  --db data/llm-review/development-run-1.sqlite --run-id dev-3 --output data/llm-review/dev-3-evaluation.json
+```
 
-The first live development run (200-venue development corpus, $5 cap) needs the
-operator to put `OPENROUTER_API_KEY` in `.env`, set the same credit limit on that
-key, and pick the two model IDs.
+Then record in this file: false publications, false rejections, verified sites left
+unresolved, cost per reviewed candidate, and candidates per minute. Keep the total
+first-try spend under $2. If the result has zero false publications, extend
+development to the spent v1 holdout (`benchmark/session-12-combined-final`, 1,000
+venues) under a new capped run before designing the new locked holdout.
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
@@ -148,6 +183,17 @@ key, and pick the two model IDs.
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- LLM reviewer (2026-09-24):
+  - `npm test`: 261 passed, 0 failed.
+  - `git diff --check`: clean.
+  - Live calls: the smoke test ($0.000546), `dev-1`, and `dev-2` as recorded above;
+    `node evaluate-llm-review.mjs ... --run-id dev-1|dev-2` produced the figures above.
+  - `node select-llm-models.mjs --probe-free`: 358 structured-output models. Free
+    models routable under `data_collection: "deny"`: `nex-agi/nex-n2.5-mini:free`,
+    `dots-studio/dots-3-note-preview:free`, and `openrouter/free` (a router, so not
+    pinnable).
+
 
 - Crawler and renderer (2026-09-24):
   - `node --test lib/headless-browser.test.mjs find-menu.test.mjs assess-labelled-corpus.test.mjs`:
@@ -196,9 +242,9 @@ Earlier (2026-09-13):
 
 ## Blockers
 
-- The LLM reviewer does not exist yet; building its offline core needs no external
-  permission.
-- Live LLM runs need an operator-supplied `OPENROUTER_API_KEY`, a key credit limit,
-  and the two model IDs. No LLM or Brave spend has occurred.
-- The crawler success rate at production scale is unmeasured because the network was
-  saturated during this session.
+- Internet connectivity: RTT to 1.1.1.1 of 1.4–8 s with up to 70% loss (the Wi-Fi link
+  itself is healthy). Crawls and OpenRouter calls time out until it recovers. A
+  background watcher started on 2026-09-24 launches `dev-3` automatically once RTT is
+  under 300 ms (it gives up after 6 hours).
+- No LLM verdict is "verified". Publication still requires certification on a new
+  locked holdout (`PROCESS.md` step 3).
