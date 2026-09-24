@@ -1,0 +1,35 @@
+{
+  "frozen_at": "2026-09-24T19:44:50.835Z",
+  "git_commit": "388315583e44a945a0abb72bea354d42d9a76d18",
+  "reviewer": {
+    "verifier_model": "xiaomi/mimo-v2.6-pro",
+    "triage_model": null,
+    "prompt_version": "llm-ownership-dev-3",
+    "prompt_sha256": "a20bcea61c452c48b4c605c21d52458a139bd90ce92621fd41e1ce30448d9748",
+    "text_budget": {
+      "head_chars": 8000,
+      "tail_chars": 4000
+    },
+    "temperature": 0
+  },
+  "run": {
+    "run_id": "holdout-v1",
+    "budget_usd": 2,
+    "command": "node assess-labelled-corpus.mjs --partition locked_holdout --fixture-dir benchmark/llm-review-holdout-v1 --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --db data/llm-review/holdout-v1.sqlite --cache-dir data/llm-review/holdout-v1-cache --concurrency 12 --llm-review --run-id holdout-v1 --budget-usd 2 --verifier-model xiaomi/mimo-v2.6-pro",
+    "authorized": "operator, 2026-09-24; one run only"
+  },
+  "files": {
+    "lib/llm-ownership-reviewer.mjs": "9eeee263ce3e6da2f0ebae9fd844489b1968ffdf6ae629421e50d96ad42262ef",
+    "lib/openrouter-client.mjs": "62be6cd9b9fa4d9a1116ec12270214d85158bb524c7c944a2ee643ee8325265b",
+    "assess-labelled-corpus.mjs": "9aa9527e5f310616889898705c2af7a4feb830cc7d80898768f99a79063c9949",
+    "find-menu.mjs": "46e67a65eabd5751d448ea1ed8a09f8ec9a3ad338585b4a51f12c4751c5853f3",
+    "lib/lib.mjs": "4d1b788012f6c390bd2a9297da0b1828818835c928a9b9b3a53c57ea8dd15d79",
+    "lib/headless-browser.mjs": "f935da73eb40d4acae21a31987d7d1bf20abcae87c7e7e3e4c53349739625fa9",
+    "lib/evidence-store.mjs": "dafa87701c5f2d0b110728d8d154f1a624547b01a2f745342d990b44eaa6ab12",
+    "lib/publisher-ownership.mjs": "ebc028cadae67062c707688fae9b2211534761caf717bcaf8f50fd3294fbfb1b",
+    "evaluate-llm-review.mjs": "21549016faa5868f44a60731738950bb4bf96b95c7aefc7b04f66bf33f0d34e9",
+    "lib/web-stress-fixture.mjs": "075910c409502c628d12240928c7291acbb09f059a56c0c6f9b889b83ab6ec92",
+    "benchmark/llm-review-holdout-v1/locked-holdout-001-480.json": "555ed1fd9d1a0b9484a368bfc388094542498c73c21385e66e435e2f8a263b25",
+    "benchmark/llm-review-holdout-v1/LABELS-SEAL.json": "359edb77a516edd1a5e5430a02f0bfa36d27e564b24a389699276000380bb92a"
+  }
+}
