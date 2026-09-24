@@ -87,6 +87,7 @@ await Promise.all(groups.map((group, index) => new Promise((done) => {
     "Read no other file in this repository. Do not run git.",
     `Write ${output} as a JSON array with one object per item: {"item_id", "verdict": "official"|"not_official"|"uncertain",`,
     '"correct_claim": "A"|"B"|null, "publisher_class", "evidence_urls": [...], "rationale": "what matched or contradicted"}.',
+    `Then run \`node -e 'JSON.parse(require("fs").readFileSync("${output}", "utf8"))'\` and fix the file until it parses.`,
   ].join("\n");
   const child = spawn("opencode", ["run", "-m", model, prompt], { stdio: ["ignore", "pipe", "pipe"] });
   let log = "";

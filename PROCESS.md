@@ -275,8 +275,9 @@ architecture for Brave results.
 
 ## Current milestone and definition of done
 
-Current milestone: **certify the LLM ownership reviewer (steps 2–3) before any
-86,852-candidate production run.**
+Current milestone: **process the 86,852 known candidates with the certified reviewer
+(step 4).** The reviewer passed the adjudicated holdout-v1 gate on 2026-09-24 (105
+correct, 0 false, Wilson lower bound 96.5%).
 
 The milestone is done only when the frozen reviewer passes the new locked holdout.
 The whole route is delivered only when the map reports counts for crawled, strongly

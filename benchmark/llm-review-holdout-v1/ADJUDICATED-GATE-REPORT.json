@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "run_id": "holdout-v1",
+  "adjudicated_at": "2026-09-24T20:59:11.322Z",
+  "adjudicator": "openrouter/deepseek/deepseek-v4-pro via opencode",
+  "adjudicator_spend_usd": 0.0119,
+  "budget_usd": 2,
+  "agreement_audit": {
+    "publications": 105,
+    "sampled": 21,
+    "errors": 0,
+    "uncertain": 0
+  },
+  "disputes": [
+    {
+      "kind": "disputed_rejection",
+      "venue_id": "venue:023061:pressana:prosciutteria-crosare",
+      "candidate_url": "https://www.ristorantecrosare.it/",
+      "adjudicated": "official"
+    },
+    {
+      "kind": "disputed_rejection",
+      "venue_id": "venue:063086:vico-equense:tradizione",
+      "candidate_url": "https://latradizionevicoequense.it/",
+      "adjudicated": "official"
+    }
+  ],
+  "gate": {
+    "correct_automatic_verifications": 105,
+    "false_automatic_verifications": 0,
+    "wilson_95": {
+      "lower": 0.9647059230708901,
+      "upper": 1
+    },
+    "adjudication_complete": true,
+    "passed": true
+  },
+  "items": [
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:037031:grizzana-morandi:fondacci",
+      "item_id": "item-01",
+      "candidate_url": "https://www.fondacci.it/shop/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-01",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first-party",
+        "evidence_urls": [
+          "https://www.fondacci.it/",
+          "https://www.fondacci.it/ospitalita.html",
+          "https://www.fondacci.it/cucina_tipica.html",
+          "https://www.fondacci.it/dove_siamo.html"
+        ],
+        "rationale": "The domain fondacci.it is a single-page portal for the agriturismo I Fondacci, owned by Società Agricola s.s. I FONDACCI. The homepage names the venue, lists the matching address (Via Orelia 38, 40030 Grizzana Morandi), the matching phone (+39 338 6656853), and describes the agriturismo, rooms, and restaurant. The footer repeats the registered business name and VAT number. Every page serves the same venue; no third-party booking or directory framing."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:063087:villaricca:tenuta-degli-antichi-sapori",
+      "item_id": "item-02",
+      "candidate_url": "http://www.tenutadegliantichisapori.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-02",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first_party",
+        "evidence_urls": [
+          "https://www.tenutadegliantichisapori.it/"
+        ],
+        "rationale": "The candidate domain tenutadegliantichisapori.it displays the venue name 'Tenuta Degli Antichi Sapori', the exact address Via Bologna 112 Villaricca, and describes the same business (agriturismo/event venue with traditional Campanian cuisine). The site contains original content: venue history, room descriptions (Maestra, Tavernetta, Rustica, Terrazzo), event hosting services, and a newsletter signup. No third-party branding or directory framing. This is the venue's own official website."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:046033:viareggio:pachino",
+      "item_id": "item-03",
+      "candidate_url": "http://www.pizzeriapachino.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-03",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "restaurant-business",
+        "evidence_urls": [
+          "https://www.pizzeriapachino.it/",
+          "https://www.pizzeriapachino.it/contattaci/"
+        ],
+        "rationale": "The site is branded 'Pizzeria Il Pachino – Viareggio', displays the matching address Via Vittorio Veneto 46, Viareggio, phone +39 0584 961063 (matches venue), features the venue's history since 1998, full menu, and reservation links. Footer names the business entity and VAT number. It is a dedicated first-party business website."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:015070:cernusco-sul-naviglio:portarossa-restaurant",
+      "item_id": "item-04",
+      "candidate_url": "http://www.portarossarestaurant.com/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-04",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "restaurant",
+        "evidence_urls": [
+          "https://portarossarestaurant.com/en",
+          "https://portarossarestaurant.com/en/about-us"
+        ],
+        "rationale": "Website matches venue name (Portarossa Restaurant), address (Via Giuseppe Verdi 99B, 20063 Cernusco sul Naviglio), and phone (+39 02 3654 5910). Site is run by the restaurant itself with menus, reservations, and chef Andrea Fontana details. Own-domain site operated by the business."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:046030:stazzema:sotto-la-loggia",
+      "item_id": "item-05",
+      "candidate_url": "http://www.ristorantesottolaloggia.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-05",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first-party",
+        "evidence_urls": [
+          "https://www.ristorantesottolaloggia.it/",
+          "https://www.ristorantesottolaloggia.it/#chi-siamo",
+          "https://www.ristorantesottolaloggia.it/#trovaci"
+        ],
+        "rationale": "ristorantesottolaloggia.it is the dedicated website of Ristorante Sotto La Loggia. The homepage displays the full venue name, matching address (Via Cadorna-Pomezzana 94, Stazzema LU), matching phone (0584 777839), and an email at the same domain. Sections cover the restaurant, enoteca, family farm, menu, gallery, and reservations. The footer shows the registered company name (Ristorante Sotto La Loggia S.r.l.) and VAT number. No intermediary platform or third-party branding is present."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:080036:gerace:terrazza",
+      "item_id": "item-06",
+      "candidate_url": "http://www.ristorantelaterrazzagerace.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-06",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first_party",
+        "evidence_urls": [
+          "https://ristorantelaterrazzagerace.it/"
+        ],
+        "rationale": "The candidate domain ristorantelaterrazzagerace.it presents 'Ristorante La Terrazza' in Gerace (RC) at Via Nazionale 2, with phone 3518531808 matching the venue record. The site describes the restaurant's specialities (grilled meats, Calabrian cuisine, event hosting) and lists the operator as Trimboli Michele Antonio (P.IVA IT03114210804). The domain name embeds both the restaurant name and location. Content is specific to this single venue. Official first-party website of the business."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:068028:pescara:siesta",
+      "item_id": "item-07",
+      "candidate_url": "http://www.lasiestapiadineria.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-07",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "restaurant-business",
+        "evidence_urls": [
+          "https://www.lasiestapiadineria.it/"
+        ],
+        "rationale": "The site is for 'Piadineria La Siesta' at Via Marco Polo 6, Pescara, phone 085 4549292 (matches +390854549292). It shows the venue's team, history since 1995, full menu, Instagram feed, and business entity 'Piadineria La Siesta di Sara Colangelo' with VAT number. The domain lasiestapiadineria.it reflects the venue alias La Siesta. It is a dedicated first-party business website."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:021016:campo-di-trens-freienfeld:sprechenstein",
+      "item_id": "item-08",
+      "candidate_url": "http://www.sprechenstein.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-08",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "farm-to-table restaurant",
+        "evidence_urls": [
+          "https://www.sprechenstein.it/de/",
+          "https://www.sprechenstein.it/de/impressum/",
+          "https://www.sprechenstein.it/de/gastgeber/"
+        ],
+        "rationale": "Website matches venue name (Sprechenstein), address (Sprechenstein 1, 39040 Freienfeld), and phone (+39 351 888 70 86). Impressum confirms operator Kasmi Soufien at Sprechenstein 1/A, 39040 Freienfeld. Farm-to-table restaurant with apartments at Schloss Sprechenstein. Own-domain site controlled by the business."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:048017:firenze:genio-italiano",
+      "item_id": "item-09",
+      "candidate_url": "http://www.ilgenioitaliano.com/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-09",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first-party",
+        "evidence_urls": [
+          "https://www.ilgenioitaliano.com/",
+          "https://www.ilgenioitaliano.com/#reservation",
+          "https://www.ilgenioitaliano.com/#footer"
+        ],
+        "rationale": "ilgenioitaliano.com is the proprietary website of Ristorante il Genio Italiano in Firenze. The page shows the venue name, the exact address (Viale Alessandro Guidoni 168, 50127 Firenze), the matching phone (3282382293), and lists the menu, staff, and hours. Copyright is held by ilgenioitaliano.com. No third-party booking, directory, or social-profile branding is present."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:001272:torino:pomme-de-terre",
+      "item_id": "item-10",
+      "candidate_url": "http://pommedeterrebistrot.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-10",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first_party",
+        "evidence_urls": [
+          "https://www.pommedeterrebistrot.it/"
+        ],
+        "rationale": "The candidate domain pommedeterrebistrot.it exactly matches the venue name 'Pomme de Terre Bistrot'. The site lists the address Via Paolo Sacchi 16, 10128 Torino and phone +39 011 562 0595 (both matching the venue record). It contains the business's brand story, menu descriptions, franchise information, and Instagram feed. The domain name and content are fully aligned with this single venue. Official first-party website."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:012039:casorate-sempione:oasi-pizza",
+      "item_id": "item-11",
+      "candidate_url": "http://www.oasipizza.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-11",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "restaurant-business",
+        "evidence_urls": [
+          "https://oasipizza.it/"
+        ],
+        "rationale": "The site is for 'OASI PIZZA – Pizzeria da asporto con forno a legna' at Via Udine 2, Casorate Sempione (VA), phone 0331 767262 (matches +390331767262). It features the full menu with categories, pricing, allergen information, and footer names the business entity 'OASI PIZZA SNC di Mariniello Francesco' with VAT number. A dedicated first-party business website."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:005007:baldichieri-d-asti:cascina-lane-agriturismo",
+      "item_id": "item-12",
+      "candidate_url": "http://www.cascinalane.com/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-12",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "agriturismo",
+        "evidence_urls": [
+          "https://www.cascinalane.com/",
+          "https://www.cascinalane.com/chi-siamo/",
+          "https://www.cascinalane.com/contatti/"
+        ],
+        "rationale": "Website matches venue name (Cascina Lanè / Agriturismo Cascina Lanè), address (Via Nazionale 120, 14011 Baldichieri d'Asti), and phone (+39 0141 66512). Site covers restaurant, rooms, and B&B services. Footer shows P.IVA 01060360052. Own-domain agriturismo site controlled by the business."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:016225:valgoglio:ristoro-dei-cinque-laghi",
+      "item_id": "item-13",
+      "candidate_url": "http://www.ristoro5laghi.com/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-13",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first-party",
+        "evidence_urls": [
+          "https://www.ristoro5laghi.com/",
+          "https://www.ristoro5laghi.com/contatti.php"
+        ],
+        "rationale": "ristoro5laghi.com is the official website of Ristoro 5 Laghi, a bar, restaurant, and holiday home in Valgoglio. The site names the venue, lists the matching address (Località Bortolotti 3, 24020 Valgoglio BG), the matching phone (+39 0346 47972 / +39 348 7335485), and describes the restaurant, rooms, and local area. The footer shows the registered business name 'RISTORO 5 LAGHI di RITA CHIODA' with a VAT number. All pages serve this single venue."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:063049:napoli:palato-experience",
+      "item_id": "item-14",
+      "candidate_url": "https://palato.pizza/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-14",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first_party",
+        "evidence_urls": [
+          "https://palato.pizza/",
+          "https://www.lucianopignataro.it/a/pizzeria-palato-vicino-lo-stadio-maradona-a-fuorigrotta/278272/",
+          "https://www.il10.it/palato-pizza-experience-il-gusto-che-racconta-napoli/",
+          "https://restaurantguru.it/PALATO-The-beauty-side-of-Pizza-by-Niko-Naples"
+        ],
+        "rationale": "The candidate domain palato.pizza is the official site of 'Palato' / 'Palato Pizza Experience' at Piazzale Vincenzo Tecchio 101, Napoli, phone 081 1840 2065 — all matching the venue record. The venue is called 'Palato Experience' in the data and is publicly known as 'Palato Pizza Experience' or 'Palato the beauty side of pizza'. News articles (Il10, LucianoPignataro, IlMattino) confirm the pizzeria at this exact address with this domain. The site features the pizzaiolo Niko De Caro and entrepreneur Mariano Balato. The menu pages (palato.pizza/menu-digitale/) contain the venue's brand story. Official first-party website."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:011030:vernazza:gianni-franzi",
+      "item_id": "item-15",
+      "candidate_url": "http://www.giannifranzi.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-15",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "restaurant-hotel-group",
+        "evidence_urls": [
+          "http://www.giannifranzi.it/",
+          "https://www.frommers.com/destinations/the-cinque-terre/hotels/gianni-franzi/",
+          "https://www.coobiz.it/azienda/vernazza-ristorante-bar/co5485552"
+        ],
+        "rationale": "The site is for 'Ristorante e hotel – Trattoria Gianni Franzi a Vernazza, Cinque Terre' at Piazza Guglielmo Marconi 1, Vernazza (matches venue address). Phone 0187 821003 (venue data) is confirmed by Frommer's and Coobiz as a valid Gianni Franzi number; the site displays 0187 812228 as a separate hotel/booking line and 393 9008155 as mobile. The site covers the restaurant, hotel rooms, history, and pricing. Entity is Gianni Franzi S.r.l. A dedicated first-party business website."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:048017:firenze:empire-rooftop-view",
+      "item_id": "item-16",
+      "candidate_url": "http://www.empireofirenze.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-16",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "hotel rooftop bar/restaurant",
+        "evidence_urls": [
+          "https://empireofirenze.it/",
+          "https://wanderlog.com/place/details/1613819/empire-rooftop-view-american-bar--pool",
+          "https://www.falstaff.com/nordics/bars/empire-rooftop-view-american-bar-pool"
+        ],
+        "rationale": "URL empireofirenze.it resolves to Empireo Firenze Rooftop at Lungarno Zecca vecchia 38, 50122 Firenze, matching venue address. Phone +39 055 26 23 500 matches venue phone. Venue is also listed as Empire Rooftop View American Bar & Pool on third-party sites with same address. Operated by Evan Hotels S.r.l. as part of Hotel Plaza Lucchesi. The hotel/group running this venue controls the domain, so it qualifies as official per adjudication rules."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:087011:caltagirone:villa-tasca-agriturismo",
+      "item_id": "item-17",
+      "candidate_url": "http://www.villatasca.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-17",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first-party",
+        "evidence_urls": [
+          "https://villatasca.it/",
+          "https://villatasca.it/agriturismo-con-spa-e-piscina-a-caltagirone/",
+          "https://villatasca.it/agriturismo-e-spa-sicilia/"
+        ],
+        "rationale": "villatasca.it is the official website of Villa Tasca Agriturismo & Spa in Caltagirone. The site names the venue, lists a Caltagirone address in Contrada Fontana della Pietra (consistent with the posted 'Largo della Fontana' address), the matching phone (+39 3341210205), and describes the agriturismo, SPA, restaurant, pool, and activities. The copyright line runs from 2002–2025 and the site offers direct booking. This is the venue's own domain operated by the business."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:030019:cassacco:mulino-ferrant-di-fant-paolo",
+      "item_id": "item-18",
+      "candidate_url": "http://www.mulinoferrant.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-18",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first_party",
+        "evidence_urls": [
+          "https://mulinoferrant.it/ristorante/",
+          "https://mulinoferrant.it/menu/",
+          "https://mulinoferrant.it/contatti/",
+          "https://www.reteimprese.it/osterie-trattorie/cassacco/azienda/1410066",
+          "https://restaurantguru.it/Mulino-Ferrant-Di-Fant-Paolo-Cassacco"
+        ],
+        "rationale": "The candidate domain mulinoferrant.it contains the venue's pages: the contact page lists Via dei mulini 8, 33010 Cassacco (UD) and phone 335 5488537, both matching the venue record exactly. The restaurant page describes Mulino Ferrant as an osteria with typical Friulian cuisine run by Paolo Fant since 1991 in a converted 18th-century mill. The business name 'Mulino Ferrant di Fant Paolo' is consistently referenced across third-party directories (reteimprese.it, restaurantguru.it) which all list mulinoferrant.it as the official site. Although the live fetch failed (server error), the crawled subpages and directory corroboration confirm this is the venue's official first-party website."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:017148:ponte-di-legno:rifugio-nigritella-bar-ristorante",
+      "item_id": "item-19",
+      "candidate_url": "http://rifugionigritella.com/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-19",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "restaurant-hospitality-business",
+        "evidence_urls": [
+          "https://www.rifugionigritella.com/",
+          "https://www.rifugionigritella.com/menu.pdf"
+        ],
+        "rationale": "The site is for 'Chalet Nigritella – Rifugio, Bar e Ristorante Gourmet al Passo del Tonale (2200 m)' in Ponte di Legno (BS). Address 'Via case sparse del Tonale' matches venue 'Loc. Case Sparse del Tonale, 25056 Ponte di Legno'. Phone 345 9565251 matches venue +393459565251. Venue alias 'Chalet Nigritella' is the primary branding on the site. It describes bar, ristorante gourmet, self-service, and cantina. A dedicated first-party business website."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:015242:vimodrone:dogana10",
+      "item_id": "item-20",
+      "candidate_url": "http://www.dogana10.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-20",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "bistro/lounge bar",
+        "evidence_urls": [
+          "https://www.dogana10.it/",
+          "https://www.dogana10.it/contatti/"
+        ],
+        "rationale": "Website matches venue name (Dogana10), address (Viale Martesana, 101, 20055 Vimodrone MI), and phone (02 8404 1477 matching +390284041477). Site describes the business as Bistrot, Lounge Bar, Vinoteca with lunch menus, aperitivi, and private events. Own-domain site controlled by the business."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "agreement_audit",
+      "venue_id": "venue:015146:milano:rubacuori-restaurant",
+      "item_id": "item-21",
+      "candidate_url": "https://www.hotelchateaumonfort.com/it/dining/rubacuori.html",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-21",
+        "verdict": "official",
+        "correct_claim": null,
+        "publisher_class": "first-party",
+        "evidence_urls": [
+          "https://www.hotelchateaumonfort.com/it/dining/rubacuori.html",
+          "https://www.hotelchateaumonfort.com/it/",
+          "https://www.hotelchateaumonfort.com/it/location.html"
+        ],
+        "rationale": "Rubacuori Restaurant is the in-house restaurant of Château Monfort, a Relais & Châteaux hotel in Milan. The candidate URL is a sub-page of the hotel's official domain (hotelchateaumonfort.com), which the hotel itself controls. The page is dedicated to Rubacuori, lists the matching address (Corso Concordia 1, 20129 Milano), the matching phone (+39 02 776761), and provides dining hours and reservation contacts. The hotel running this exact restaurant at this exact location operates the domain; the restaurant is not outsourced or listed on a third-party platform."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "disputed_rejection",
+      "venue_id": "venue:023061:pressana:prosciutteria-crosare",
+      "item_id": "item-22",
+      "candidate_url": "https://www.ristorantecrosare.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-22",
+        "verdict": "official",
+        "correct_claim": "B",
+        "publisher_class": "first_party",
+        "evidence_urls": [
+          "https://www.mycia.it/menu/pressana/ristorante-prosciutteria-crosare-hkZ8MriJp",
+          "https://www.paginegialle.it/crosare-vr/ristoranti/ristorante-prosciutteria-crosare",
+          "https://restaurantguru.it/Ristorante-Prosciutteria-Crosare-Pressana-2",
+          "https://www.sluurpy.it/pressana/ristorante/250351/ristorante-prosciutteria-crosare"
+        ],
+        "rationale": "The candidate domain ristorantecrosare.it is currently unreachable (connection timeout), but multiple Italian directory services — MyCIA, PagineGialle, RestaurantGuru, and Sluurpy — all independently list https://www.ristorantecrosare.it as the official website for 'Ristorante Prosciutteria Crosare' at Via Crosare di Sotto, Pressana (VR), phone 0442 460105. The venue name ('Prosciutteria Crosare'), address, and phone in the record all match these directory entries. The domain name itself embeds both 'ristorante' and 'crosare', matching the business. Claim B (official website) is correct; Claim A (not official) is incorrect. The site being temporarily down does not negate its status as the venue's official domain."
+      },
+      "publication_error": false
+    },
+    {
+      "kind": "disputed_rejection",
+      "venue_id": "venue:063086:vico-equense:tradizione",
+      "item_id": "item-23",
+      "candidate_url": "https://latradizionevicoequense.it/",
+      "adjudicated": "official",
+      "verdict": {
+        "item_id": "item-23",
+        "verdict": "official",
+        "correct_claim": "A",
+        "publisher_class": "restaurant-business",
+        "evidence_urls": [
+          "https://latradizionevicoequense.it/",
+          "https://latradizionevicoequense.it/menu/",
+          "https://latradizionevicoequense.it/privacy-policy/",
+          "https://www.ilgolosario.it/it/la-tradizione-di-salvatore-de-gennaro-ip03174"
+        ],
+        "rationale": "The site is protected by bot verification but web search results confirm it is the official site for 'La Tradizione a Vico Equense | Bancone – Ristorante – Enoteca' at Via Raffaele Bosco 969, Vico Equense (matches venue). Phone +39 081 802 8437 matches venue. The privacy policy names the business entity 'MAGARI SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA' at Via Raffaele Bosco 965 (adjacent address). Multiple directories (ilgolosario.it, mymenuweb.com) list this domain as the official website. The domain latradizionevicoequense.it reflects the venue name plus its location. Claim A is correct."
+      },
+      "publication_error": false
+    }
+  ]
+}

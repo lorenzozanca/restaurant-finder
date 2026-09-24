@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-24 (locked holdout labelled and sealed)
+Updated: 2026-09-24 (LLM reviewer passed the adjudicated holdout gate)
 Branch: `main`
 
 ## Current milestone
@@ -78,6 +78,12 @@ holdout can no longer qualify anything; it may serve as development data.
   the gate is decided on adjudicated labels: steps 3.5–3.6 are still open (blind
   adjudication of the 2 false rejections; agreement audit of a random 21 of the 105
   publications by a model that is neither MiMo nor Muse Spark). Not certified yet.
+- **Adjudicated gate: PASSED** (`ADJUDICATED-GATE-REPORT.json`, `adjudicate-holdout.mjs`;
+  DeepSeek V4 Pro via opencode, 4 parallel groups, $0.0971 total incl. one rerun of a
+  group whose verdict file was malformed JSON). Agreement audit: 21 of 105 publications,
+  0 errors, 0 uncertain. Both disputed rejections were adjudicated official (2 real
+  false rejections). Final: 105 correct, 0 false, Wilson lower bound 96.5%. The frozen
+  reviewer (`REVIEWER-FREEZE.json`) is certified for `PROCESS.md` step 4.
 
 ## LLM reviewer core and first development runs (2026-09-24)
 
@@ -278,11 +284,11 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-Finish certification (`PROCESS.md` steps 3.5–3.7) for `holdout-v1`: draw a seeded random
-21 of the 105 publications (20%, at least 15) and blind-adjudicate them plus the 2
-false rejections with an operator-chosen adjudicator (not MiMo, not Muse Spark), under
-a USD cap. Any audit error counts as a false publication and fails the gate. Then write
-the final gate report.
+`PROCESS.md` step 4: run the frozen reviewer (exact `REVIEWER-FREEZE.json` settings) over
+the 86,852 source candidates in resumable zero-search batches with an operator-approved
+USD cap per batch (about $0.0012 per reviewed candidate), write outcomes to the
+national store as `automated_llm_ownership_review` attestations, and expose progress
+counts on the map. Start with one small capped batch and check the map counts.
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
