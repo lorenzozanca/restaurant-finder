@@ -54,6 +54,30 @@ holdout can no longer qualify anything; it may serve as development data.
     concurrency 8 (about 40 candidates/min), with RTT to 1.1.1.1 at about 7 ms during
     the run. Retryable candidates fell from 250 to 97.
   - Total LLM spend after `dev-3`: about $0.30 of the operator's $2 first-try limit.
+- Development run `v1h-dev-3` on the spent v1 holdout (1,000 venues, 2,804 candidates;
+  development use only; prompt dev-3; MiMo only; local
+  `data/llm-review/v1-holdout-development.sqlite`):
+  - Crawl: 2,804 candidates in 21.5 minutes at concurrency 12 (~130/min): 385 strongly
+    correlated, 209 ambiguous, 166 contradicted, 520 retryable, 1,524 unsupported
+    publisher.
+  - Review: 594 candidates across 363 venues (116 accepted, 417 rejected, 61 ambiguous);
+    0 provider errors; 4 invalid outputs. Cost $0.7060 ($0.0012 per review).
+  - Venue metrics against the Codex labels: 70 publications, 57 conclusive, 52 correct,
+    5 counted false (Wilson 81.1%–96.2%). Recall 52/96 (54%). 6 candidate-level false
+    rejections: 2 JustEat white-label sites and 1 leggimenu-hosted menu (the verifier
+    calls these ordering/menu platforms), 2 pages that were "Account Suspended" at
+    crawl time, and 1 "Don Vittò Pizza e Sfizi" judged a different venue. 43
+    labelled-official candidates were left ambiguous.
+  - All 5 counted false publications look like label errors, not reviewer errors:
+    - `palazzocircolone.it` (Bar Cittadino) and `presu.it` (Presù – Ciarcia Experience)
+      are the venues' own Overture website URLs, and the quoted phone and address match
+      the record.
+    - `agriturismolaterrazza.com` and `agriturismodipetruintoni.it` show the exact
+      record name, address/contrada, and phone.
+    - `peterland.it` is itself labelled `verified` official; the strict metric counts
+      it false only because the labeller named `peterlandolbia.it` as *the* official URL.
+    - The Codex labels carry no notes explaining these rejections.
+  - Total LLM spend to date: about $1.01 of the operator's $2 first-try limit.
 
 - Network diagnosis (resolved 15:27 UTC): the bottleneck was the laptop's Wi-Fi
   association, not the internet line. After 52 hours connected on DFS channel 124,
@@ -173,26 +197,15 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-Finish and evaluate the capped development run on the spent v1 holdout (1,000 venues;
-2,804 candidates; development use only; started 2026-09-24):
-
-```bash
-node assess-labelled-corpus.mjs --partition locked_holdout \
-  --fixture-dir benchmark/session-12-combined-final/cohort-1 \
-  --fixture-dir benchmark/session-12-combined-final/cohort-2 \
-  --db data/llm-review/v1-holdout-development.sqlite --cache-dir output/.cache \
-  --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --concurrency 12 --timeout 20000 \
-  --llm-review --run-id v1h-dev-3 --budget-usd 1.60 --verifier-model xiaomi/mimo-v2.6-pro
-node evaluate-llm-review.mjs --partition locked_holdout \
-  --fixture-dir benchmark/session-12-combined-final/cohort-1 \
-  --fixture-dir benchmark/session-12-combined-final/cohort-2 \
-  --db data/llm-review/v1-holdout-development.sqlite --run-id v1h-dev-3 \
-  --output data/llm-review/v1h-dev-3-evaluation.json
-```
-
-Record the false publications (each by name), false rejections, recall, cost, and
-throughput here. If there are zero false publications, the next task is to design and
-select the new locked holdout from the Overture source candidates (`PROCESS.md` step 3).
+Operator decision required before the new locked holdout: how label/reviewer
+disagreements are resolved in certification. `v1h-dev-3` shows the Codex reference
+labels are wrong on at least 4 of 57 conclusive publications (see above), so a
+zero-false-publication gate scored against raw labels would fail a reviewer that is
+right. Proposed protocol, to be frozen before the holdout is labelled: every
+disagreement between the frozen reviewer and the reference label is re-adjudicated
+by an independent second review that sees both evidence sets. Once decided, write
+the protocol into `PROCESS.md` step 3, then select the new holdout from the Overture
+source candidates.
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
