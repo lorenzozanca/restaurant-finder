@@ -1,0 +1,756 @@
+{
+  "schema_version": 1,
+  "packet": "llm-review-holdout-v1-049-096",
+  "output_file": "locked-holdout-adjudication-049-096.json",
+  "instructions": "LABELLING-INSTRUCTIONS.md",
+  "adjudication_header": {
+    "schema_version": 1,
+    "adjudication_set": "llm-review-holdout-v1-adjudication-049-096",
+    "partition": "locked_holdout",
+    "source": "independent_fixture_review",
+    "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1"
+  },
+  "venues": [
+    {
+      "index": 49,
+      "venue_id": "venue:012003:angera:damino",
+      "name": "Pizzeria Damino",
+      "aliases": [
+        "Damino",
+        "Pizzeria Damino"
+      ],
+      "address": "Viale Pietro Martire, 34, 21021 Angera",
+      "postcode": "21021",
+      "municipality": "Angera",
+      "region_code": "03",
+      "phone": "+390331930498",
+      "candidate_url": "http://www.pizzeriadamino.net/",
+      "candidate_registrable_domain": "pizzeriadamino.net"
+    },
+    {
+      "index": 50,
+      "venue_id": "venue:012039:casorate-sempione:crazy-pub",
+      "name": "Crazy Pub",
+      "aliases": [
+        "Crazy",
+        "Crazy Pub"
+      ],
+      "address": "Via Torino, 20, 21011 Casorate Sempione",
+      "postcode": "21011",
+      "municipality": "Casorate Sempione",
+      "region_code": "03",
+      "phone": "+390331769213",
+      "candidate_url": "http://www.ilcrazypub.it/",
+      "candidate_registrable_domain": "ilcrazypub.it"
+    },
+    {
+      "index": 51,
+      "venue_id": "venue:012039:casorate-sempione:oasi-pizza",
+      "name": "Oasi Pizza",
+      "aliases": [
+        "Oasi Pizza"
+      ],
+      "address": "Via Udine, 2, 21011 Casorate Sempione",
+      "postcode": "21011",
+      "municipality": "Casorate Sempione",
+      "region_code": "03",
+      "phone": "+390331767262",
+      "candidate_url": "http://www.oasipizza.it/",
+      "candidate_registrable_domain": "oasipizza.it"
+    },
+    {
+      "index": 52,
+      "venue_id": "venue:012055:comerio:movida",
+      "name": "Ristorante Movida",
+      "aliases": [
+        "Movida",
+        "Ristorante Movida"
+      ],
+      "address": "Via Giuseppe Garibaldi, 3, 21025 Comerio",
+      "postcode": "21025",
+      "municipality": "Comerio",
+      "region_code": "03",
+      "phone": "+390332743240",
+      "candidate_url": "https://www.ristorantemovida.it/",
+      "candidate_registrable_domain": "ristorantemovida.it"
+    },
+    {
+      "index": 53,
+      "venue_id": "venue:012070:gallarate:enosteria-di-nicoletti-luca",
+      "name": "Enosteria di Nicoletti Luca",
+      "aliases": [
+        "Enosteria di Nicoletti Luca"
+      ],
+      "address": "Via Novara, 1, 21013 Gallarate",
+      "postcode": "21013",
+      "municipality": "Gallarate",
+      "region_code": "03",
+      "phone": "+393476009992",
+      "candidate_url": "http://www.enosteriagallarate.com/",
+      "candidate_registrable_domain": "enosteriagallarate.com"
+    },
+    {
+      "index": 54,
+      "venue_id": "venue:012108:olgiate-olona:idea-verde",
+      "name": "Idea Verde SRL",
+      "aliases": [
+        "Idea Verde SRL"
+      ],
+      "address": "Via San Francesco, 19, 21057 Olgiate Olona",
+      "postcode": "21057",
+      "municipality": "Olgiate Olona",
+      "region_code": "03",
+      "phone": "+390331629487",
+      "candidate_url": "http://www.ristoranteideaverde.com/",
+      "candidate_registrable_domain": "ristoranteideaverde.com"
+    },
+    {
+      "index": 55,
+      "venue_id": "venue:012109:origgio:dolcebeach",
+      "name": "dolcebeach",
+      "aliases": [
+        "dolcebeach"
+      ],
+      "address": "Via per Caronno, 6, 21040 Origgio",
+      "postcode": "21040",
+      "municipality": "Origgio",
+      "region_code": "03",
+      "phone": "+393458065290",
+      "candidate_url": "https://www.instagram.com/alberto_pante",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 56,
+      "venue_id": "venue:012121:solbiate-arno:capsule-caffe-compatibili",
+      "name": "capsule caffe compatibili",
+      "aliases": [
+        "capsule caffe compatibili"
+      ],
+      "address": "Via Alessandro Manzoni, 3, 21048 Solbiate Arno",
+      "postcode": "21048",
+      "municipality": "Solbiate Arno",
+      "region_code": "03",
+      "phone": "+393334472790",
+      "candidate_url": "https://capsule-caffe-compatibili-nespresso-nescafe-dolce-gusto-a.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 57,
+      "venue_id": "venue:012133:varese:fradiavolo-pizzeria",
+      "name": "Fradiavolo Pizzeria",
+      "aliases": [
+        "Fradiavolo",
+        "Fradiavolo Pizzeria"
+      ],
+      "address": "Via Gaetano Donizetti, 6, 21100 Varese",
+      "postcode": "21100",
+      "municipality": "Varese",
+      "region_code": "03",
+      "phone": "+3903321888140",
+      "candidate_url": "https://fradiavolopizzeria.com/",
+      "candidate_registrable_domain": "fradiavolopizzeria.com"
+    },
+    {
+      "index": 58,
+      "venue_id": "venue:012139:viggiu:bevera-54",
+      "name": "Trattoria Bevera 54",
+      "aliases": [
+        "Bevera 54",
+        "Trattoria Bevera 54"
+      ],
+      "address": "Via Bevera, 12, 21059 Viggiù",
+      "postcode": "21059",
+      "municipality": "Viggiù",
+      "region_code": "03",
+      "phone": "+390332486350",
+      "candidate_url": "https://trattoriabevera54.it/",
+      "candidate_registrable_domain": "trattoriabevera54.it"
+    },
+    {
+      "index": 59,
+      "venue_id": "venue:013075:como:baita-pian-valle",
+      "name": "Baita Pian Valle",
+      "aliases": [
+        "Baita Pian Valle"
+      ],
+      "address": "Via Monte Croce, 1, 22100 Como",
+      "postcode": "22100",
+      "municipality": "Como",
+      "region_code": "03",
+      "phone": "+39031505137",
+      "candidate_url": "http://www.baitapianvalle.it/",
+      "candidate_registrable_domain": "baitapianvalle.it"
+    },
+    {
+      "index": 60,
+      "venue_id": "venue:013075:como:tyamoo",
+      "name": "Tyamoo",
+      "aliases": [
+        "Tyamoo"
+      ],
+      "address": "Via Pretorio, 7, 22100 Como",
+      "postcode": "22100",
+      "municipality": "Como",
+      "region_code": "03",
+      "phone": "+393939580621",
+      "candidate_url": "http://www.tyamoo.como/",
+      "candidate_registrable_domain": "tyamoo.como"
+    },
+    {
+      "index": 61,
+      "venue_id": "venue:013163:novedrate:world-pizza",
+      "name": "World Pizza",
+      "aliases": [
+        "World Pizza"
+      ],
+      "address": "Via Cesare Cantù, 32, 22060 Novedrate",
+      "postcode": "22060",
+      "municipality": "Novedrate",
+      "region_code": "03",
+      "phone": "+39031791424",
+      "candidate_url": "http://www.world-pizza.it/",
+      "candidate_registrable_domain": "world-pizza.it"
+    },
+    {
+      "index": 62,
+      "venue_id": "venue:013252:tremezzina:grifo-lago-di-como",
+      "name": "Il Grifo Lago di Como",
+      "aliases": [
+        "Il Grifo Lago di Como"
+      ],
+      "address": "Via Mattia del Riccio, 19, 22016 Tremezzina",
+      "postcode": "22016",
+      "municipality": "Tremezzina",
+      "region_code": "03",
+      "phone": "+39034455161",
+      "candidate_url": "http://www.locandagrifo.it/",
+      "candidate_registrable_domain": "locandagrifo.it"
+    },
+    {
+      "index": 63,
+      "venue_id": "venue:014019:chiesa-in-valmalenco:vassallo",
+      "name": "Il vassallo",
+      "aliases": [
+        "Il vassallo"
+      ],
+      "address": "Vassalini, 35, 23023 Chiesa in Valmalenco",
+      "postcode": "23023",
+      "municipality": "Chiesa in Valmalenco",
+      "region_code": "03",
+      "phone": "+390342451200",
+      "candidate_url": "http://www.ristorantevassallo.it/",
+      "candidate_registrable_domain": "ristorantevassallo.it"
+    },
+    {
+      "index": 64,
+      "venue_id": "venue:014019:chiesa-in-valmalenco:volta",
+      "name": "Ristorante La Volta",
+      "aliases": [
+        "La Volta",
+        "Ristorante La Volta"
+      ],
+      "address": "Via Milano, 46, 23023 Chiesa in Valmalenco",
+      "postcode": "23023",
+      "municipality": "Chiesa in Valmalenco",
+      "region_code": "03",
+      "phone": "+390342454051",
+      "candidate_url": "http://www.lavoltavalmalenco.it/",
+      "candidate_registrable_domain": "lavoltavalmalenco.it"
+    },
+    {
+      "index": 65,
+      "venue_id": "venue:014037:livigno:roxy-bar-ristorante-pizzeria",
+      "name": "Roxy Bar Ristorante - Pizzeria",
+      "aliases": [
+        "Roxy Bar Ristorante -",
+        "Roxy Bar Ristorante - Pizzeria"
+      ],
+      "address": "Via Ostaria, 400, 23041 Livigno",
+      "postcode": "23041",
+      "municipality": "Livigno",
+      "region_code": "03",
+      "phone": "+390342014123",
+      "candidate_url": "http://locator.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 66,
+      "venue_id": "venue:015015:basiglio:acquaseltz",
+      "name": "Ristorante Acquaseltz",
+      "aliases": [
+        "Acquaseltz",
+        "Ristorante Acquaseltz"
+      ],
+      "address": "Via al Parco Giochi, 2, 23828 Perledo",
+      "postcode": "23828",
+      "municipality": "Basiglio",
+      "region_code": "03",
+      "phone": "+393205607106",
+      "candidate_url": "https://instagram.com/acquaseltz?igshid=17cy36pgdn2ag",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 67,
+      "venue_id": "venue:015026:boffalora-sopra-ticino:magnana",
+      "name": "Ristorante la Magnana",
+      "aliases": [
+        "Ristorante la Magnana",
+        "la Magnana"
+      ],
+      "address": "Via Folletta, 68, 20010 Boffalora Sopra Ticino",
+      "postcode": "20010",
+      "municipality": "Boffalora sopra Ticino",
+      "region_code": "03",
+      "phone": "+39029754108",
+      "candidate_url": "http://www.magnana.it/",
+      "candidate_registrable_domain": "magnana.it"
+    },
+    {
+      "index": 68,
+      "venue_id": "venue:015051:carugate:glamour-caffe",
+      "name": "Glamour Caffé",
+      "aliases": [
+        "Glamour Caffé"
+      ],
+      "address": "Via Roma, 11, 20061 Carugate",
+      "postcode": "20061",
+      "municipality": "Carugate",
+      "region_code": "03",
+      "phone": "+393926091988",
+      "candidate_url": "https://drive.google.com/file/d/1ikwgK5VnQ0d_FrX5KpPaVQwq5d4rIwSN/view?usp=share_link",
+      "candidate_registrable_domain": "google.com"
+    },
+    {
+      "index": 69,
+      "venue_id": "venue:015070:cernusco-sul-naviglio:portarossa-restaurant",
+      "name": "Portarossa Restaurant",
+      "aliases": [
+        "Portarossa Restaurant"
+      ],
+      "address": "Via Giuseppe Verdi, 99B, 20063 Cernusco sul Naviglio",
+      "postcode": "20063",
+      "municipality": "Cernusco sul Naviglio",
+      "region_code": "03",
+      "phone": "+390236545910",
+      "candidate_url": "http://www.portarossarestaurant.com/",
+      "candidate_registrable_domain": "portarossarestaurant.com"
+    },
+    {
+      "index": 70,
+      "venue_id": "venue:015146:milano:assaje-086e1fa1",
+      "name": "Pizzeria Assaje",
+      "aliases": [
+        "Assaje",
+        "Pizzeria Assaje"
+      ],
+      "address": "Via Raffaello Sanzio, 14, 20149 Milano",
+      "postcode": "20149",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+390243982700",
+      "candidate_url": "http://www.assaje.it/",
+      "candidate_registrable_domain": "assaje.it"
+    },
+    {
+      "index": 71,
+      "venue_id": "venue:015146:milano:baobab",
+      "name": "Ristorante Baobab",
+      "aliases": [
+        "Baobab",
+        "Ristorante Baobab"
+      ],
+      "address": "Via Alessandro Tadino, 48, 20124 Milano",
+      "postcode": "20124",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+393471465934",
+      "candidate_url": "https://www.ristorantebaobab.com/",
+      "candidate_registrable_domain": "ristorantebaobab.com"
+    },
+    {
+      "index": 72,
+      "venue_id": "venue:015146:milano:justme-milano",
+      "name": "Justme Milano",
+      "aliases": [
+        "Justme",
+        "Justme Milano"
+      ],
+      "address": "Torre Branca, Viale Luigi Camoens, 2, 20121 Milano",
+      "postcode": "20121",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+3902311817",
+      "candidate_url": "https://justmemilano.com/",
+      "candidate_registrable_domain": "justmemilano.com"
+    },
+    {
+      "index": 73,
+      "venue_id": "venue:015146:milano:lagrandissima",
+      "name": "Osteria Lagrandissima",
+      "aliases": [
+        "Lagrandissima",
+        "Osteria Lagrandissima"
+      ],
+      "address": "Via Ponte Nuovo, 25, 20128 Milano",
+      "postcode": "20128",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+393425593532",
+      "candidate_url": "https://lagrandissima.superbexperience.com/",
+      "candidate_registrable_domain": "superbexperience.com"
+    },
+    {
+      "index": 74,
+      "venue_id": "venue:015146:milano:little-italy",
+      "name": "Little Italy",
+      "aliases": [
+        "Little Italy"
+      ],
+      "address": "Via Alessandro Tadino, 41, 20124 Milano",
+      "postcode": "20124",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+390229522734",
+      "candidate_url": "http://www.littleitaly-milano.com/",
+      "candidate_registrable_domain": "littleitaly-milano.com"
+    },
+    {
+      "index": 75,
+      "venue_id": "venue:015146:milano:moda",
+      "name": "Bar Moda'",
+      "aliases": [
+        "Bar Moda'",
+        "Moda'"
+      ],
+      "address": "Via Marco Ulpio Traiano, 60, 20149 Milano",
+      "postcode": "20149",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+390239217751",
+      "candidate_url": "http://barmodamilano.com/",
+      "candidate_registrable_domain": "barmodamilano.com"
+    },
+    {
+      "index": 76,
+      "venue_id": "venue:015146:milano:paper-moon-giardino",
+      "name": "Paper Moon Giardino",
+      "aliases": [
+        "Paper Moon Giardino"
+      ],
+      "address": "Via Bagutta, 12, 20121 Milano",
+      "postcode": "20121",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+390276009895",
+      "candidate_url": "http://www.papermoonmilano.com/",
+      "candidate_registrable_domain": "papermoonmilano.com"
+    },
+    {
+      "index": 77,
+      "venue_id": "venue:015146:milano:paravia-26-ai-mosaici",
+      "name": "Osteria Paravia 26 “Ai Mosaici”",
+      "aliases": [
+        "Osteria Paravia 26 “Ai Mosaici”",
+        "Paravia 26 “Ai Mosaici”"
+      ],
+      "address": "Via Pier Alessandro Paravia, 26, 20148 Milano",
+      "postcode": "20148",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+393314157800",
+      "candidate_url": "http://t-it.facebook.com/",
+      "candidate_registrable_domain": "facebook.com"
+    },
+    {
+      "index": 78,
+      "venue_id": "venue:015146:milano:piadineria-97ff0596",
+      "name": "La Piadineria",
+      "aliases": [
+        "La Piadineria"
+      ],
+      "address": "Via Ernesto Calindri, The Sign, 20143 Milano",
+      "postcode": "20143",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "0249792129",
+      "candidate_url": "https://www.lapiadineria.com/",
+      "candidate_registrable_domain": "lapiadineria.com"
+    },
+    {
+      "index": 79,
+      "venue_id": "venue:015146:milano:pizzium-3dba1798",
+      "name": "Pizzium",
+      "aliases": [
+        "Pizzium"
+      ],
+      "address": "Via Vigevano, 33, 20144 Milano",
+      "postcode": "20144",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+390282955665",
+      "candidate_url": "http://www.pizzium.com/",
+      "candidate_registrable_domain": "pizzium.com"
+    },
+    {
+      "index": 80,
+      "venue_id": "venue:015146:milano:posteria-di-nonna-papera",
+      "name": "La Posteria di Nonna Papera",
+      "aliases": [
+        "La Posteria di Nonna Papera"
+      ],
+      "address": "Via Giuseppe Francesco Piermarini, 4, 20145 Milano",
+      "postcode": "20145",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+390233105757",
+      "candidate_url": "http://www.laposteriadinonnapapera.it/",
+      "candidate_registrable_domain": "laposteriadinonnapapera.it"
+    },
+    {
+      "index": 81,
+      "venue_id": "venue:015146:milano:rubacuori-restaurant",
+      "name": "Rubacuori Restaurant",
+      "aliases": [
+        "Rubacuori Restaurant"
+      ],
+      "address": "Chateau Monfort, Corso Concordia, 1, 20129 Milano",
+      "postcode": "20129",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+3902776761",
+      "candidate_url": "https://www.hotelchateaumonfort.com/it/dining/rubacuori.html",
+      "candidate_registrable_domain": "hotelchateaumonfort.com"
+    },
+    {
+      "index": 82,
+      "venue_id": "venue:015146:milano:tabacchi-san-t-alessandro",
+      "name": "Bar tabacchi San't Alessandro",
+      "aliases": [
+        "Bar tabacchi San't Alessandro",
+        "Bar tabacchi Sant Alessandro",
+        "tabacchi San't Alessandro"
+      ],
+      "address": "Piazza Sant'Alessandro, 2, 20123 Milano",
+      "postcode": "20123",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+393513102480",
+      "candidate_url": "http://www.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 83,
+      "venue_id": "venue:015146:milano:taverna-degli-amici",
+      "name": "Taverna degli Amici",
+      "aliases": [
+        "Taverna degli Amici"
+      ],
+      "address": "Via Spartaco, 4, 20135 Milano",
+      "postcode": "20135",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+390255194005",
+      "candidate_url": "http://www.latavernadegliamici.it/",
+      "candidate_registrable_domain": "latavernadegliamici.it"
+    },
+    {
+      "index": 84,
+      "venue_id": "venue:015146:milano:trive-time",
+      "name": "Trive Time",
+      "aliases": [
+        "Trive Time"
+      ],
+      "address": "Via Marghera, 47, 20149 Milano",
+      "postcode": "20149",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+390236708063",
+      "candidate_url": "http://www.trivetime.it/",
+      "candidate_registrable_domain": "trivetime.it"
+    },
+    {
+      "index": 85,
+      "venue_id": "venue:015146:milano:voglia-milano-first-italian-erotic-restaurant",
+      "name": "Voglia Milano | First Italian Erotic Restaurant",
+      "aliases": [
+        "Voglia Milano | First Italian Erotic Restaurant"
+      ],
+      "address": "Via Panfilo Castaldi, 33, 20124 Milano",
+      "postcode": "20124",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+393451161337",
+      "candidate_url": "https://vogliarestaurant.com/",
+      "candidate_registrable_domain": "vogliarestaurant.com"
+    },
+    {
+      "index": 86,
+      "venue_id": "venue:015146:milano:woodstock-3",
+      "name": "Woodstock 3",
+      "aliases": [
+        "Woodstock 3"
+      ],
+      "address": "Via Vigevano, 43, 20144 Milano",
+      "postcode": "20144",
+      "municipality": "Milano",
+      "region_code": "03",
+      "phone": "+39028373700",
+      "candidate_url": "http://www.woodstock-milano.com/",
+      "candidate_registrable_domain": "woodstock-milano.com"
+    },
+    {
+      "index": 87,
+      "venue_id": "venue:015169:paullo:ritrovo",
+      "name": "Al Ritrovo",
+      "aliases": [
+        "Al Ritrovo"
+      ],
+      "address": "Via Milano, 51, 20067 Paullo",
+      "postcode": "20067",
+      "municipality": "Paullo",
+      "region_code": "03",
+      "phone": "+390235950189",
+      "candidate_url": "https://al-ritrovo-paullo.eatbu.com/?lang=it",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 88,
+      "venue_id": "venue:015205:segrate:terrazza-13",
+      "name": "Terrazza 13",
+      "aliases": [
+        "Terrazza 13"
+      ],
+      "address": "Via Ernest Schering, 13, 20054 Segrate",
+      "postcode": "20054",
+      "municipality": "Segrate",
+      "region_code": "03",
+      "phone": "+390240044300",
+      "candidate_url": "https://www.terrazza13.com/",
+      "candidate_registrable_domain": "terrazza13.com"
+    },
+    {
+      "index": 89,
+      "venue_id": "venue:015242:vimodrone:dogana10",
+      "name": "Dogana10",
+      "aliases": [
+        "Dogana10"
+      ],
+      "address": "Viale Martesana, 101, 20055 Vimodrone",
+      "postcode": "20055",
+      "municipality": "Vimodrone",
+      "region_code": "03",
+      "phone": "+390284041477",
+      "candidate_url": "http://www.dogana10.it/",
+      "candidate_registrable_domain": "dogana10.it"
+    },
+    {
+      "index": 90,
+      "venue_id": "venue:015242:vimodrone:pizza-d-o-c",
+      "name": "Pizza D.O.C.",
+      "aliases": [
+        "Pizza D.O.C."
+      ],
+      "address": "Via San Remigio, 28, 20055 Vimodrone",
+      "postcode": "20055",
+      "municipality": "Vimodrone",
+      "region_code": "03",
+      "phone": "+390227401167",
+      "candidate_url": "http://www.pizza-doc.net/",
+      "candidate_registrable_domain": "pizza-doc.net"
+    },
+    {
+      "index": 91,
+      "venue_id": "venue:016008:alzano-lombardo:gio-di-giovanna-acerbis",
+      "name": "Bar Gio Di Giovanna Acerbis",
+      "aliases": [
+        "Bar Gio Di Giovanna Acerbis",
+        "Gio Di Giovanna Acerbis"
+      ],
+      "address": "Via Camillo Benso di Cavour, 26, 24022 Alzano Lombardo",
+      "postcode": "24022",
+      "municipality": "Alzano Lombardo",
+      "region_code": "03",
+      "phone": "+39035515674",
+      "candidate_url": "http://bargioalzano.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 92,
+      "venue_id": "venue:016051:capriate-san-gervasio:mcdonald-s",
+      "name": "McDonald's",
+      "aliases": [
+        "McDonald's",
+        "McDonalds"
+      ],
+      "address": "Via Vittorio Veneto, 59, 24041 Brembate",
+      "postcode": "24041",
+      "municipality": "Capriate San Gervasio",
+      "region_code": "03",
+      "phone": "+390355685577",
+      "candidate_url": "http://www.mcdonalds.it/",
+      "candidate_registrable_domain": "mcdonalds.it"
+    },
+    {
+      "index": 93,
+      "venue_id": "venue:016108:gandino:rondini",
+      "name": "Agriturismo Le Rondini",
+      "aliases": [
+        "Agriturismo Le Rondini"
+      ],
+      "address": "Via Opifici, 24024 Gandino",
+      "postcode": "24024",
+      "municipality": "Gandino",
+      "region_code": "03",
+      "phone": "+39035745760",
+      "candidate_url": "http://www.valseriana.eu/cerca-ospitalita/?_sfm_comune=gandino",
+      "candidate_registrable_domain": "valseriana.eu"
+    },
+    {
+      "index": 94,
+      "venue_id": "venue:016117:grassobbio:sette-50",
+      "name": "Sette&50",
+      "aliases": [
+        "Sette&50"
+      ],
+      "address": "Via Giacomo Matteotti, 3, 24050 Grassobbio",
+      "postcode": "24050",
+      "municipality": "Grassobbio",
+      "region_code": "03",
+      "phone": "+393201934565",
+      "candidate_url": "https://sette50.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 95,
+      "venue_id": "venue:016152:osio-sopra:retro",
+      "name": "Ristorante Retro",
+      "aliases": [
+        "Retro",
+        "Ristorante Retro"
+      ],
+      "address": "Via Rasica, 19, 24040 Osio Sopra",
+      "postcode": "24040",
+      "municipality": "Osio Sopra",
+      "region_code": "03",
+      "phone": "+39035500077",
+      "candidate_url": "http://www.ristoretro.it/",
+      "candidate_registrable_domain": "ristoretro.it"
+    },
+    {
+      "index": 96,
+      "venue_id": "venue:016183:romano-di-lombardia:che-storia",
+      "name": "Pizzeria che storia",
+      "aliases": [
+        "Pizzeria che storia",
+        "che storia"
+      ],
+      "address": "Piazza Medaglia d'Oro Antonio Locatelli, 3, 24058 Romano di Lombardia",
+      "postcode": "24058",
+      "municipality": "Romano di Lombardia",
+      "region_code": "03",
+      "phone": "+390363912233",
+      "candidate_url": "http://pizzeriachestoria.it/",
+      "candidate_registrable_domain": "pizzeriachestoria.it"
+    }
+  ]
+}

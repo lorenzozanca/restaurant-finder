@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-24 (source pilot; holdout protocol)
+Updated: 2026-09-24 (locked holdout selected; labelling packets ready)
 Branch: `main`
 
 ## Current milestone
@@ -8,6 +8,37 @@ Branch: `main`
 Certify the LLM ownership reviewer (`PROCESS.md` steps 2–3) before any
 86,852-candidate production run. The frozen v1 rule is rejected, and its locked
 holdout can no longer qualify anything; it may serve as development data.
+
+## Locked holdout v1 for the LLM reviewer (2026-09-24)
+
+- Selected (`PROCESS.md` step 3.2) with the command in the previous next task:
+  480 venues, seed `locked-holdout-llm-v1`, 86,616 eligible source-candidate venues,
+  2,376 venue IDs excluded (2,076 from `benchmark/` plus the 300 pilot venues; overlap
+  with the pilot checked: 0). Stratified across all 20 regions (`region_code`).
+  Selection fingerprint
+  `440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1`. Fixture and
+  manifest: `benchmark/llm-review-holdout-v1/locked-holdout-001-480.json`,
+  `selection-manifest.json`. No crawl or reviewer call has touched these venues.
+- Labelling packets: `prepare-holdout-labelling.mjs` wrote 10 packets of 48 venues to
+  `benchmark/llm-review-holdout-v1/labelling/` (plus `packets-manifest.json` with
+  hashes). Each carries the same venue record the reviewer receives (via the now
+  exported `loadTargetEvidence`), the exact candidate URL, and its registrable domain.
+  4 of 480 venues have no phone; all have an address.
+- `benchmark/llm-review-holdout-v1/LABELLING-INSTRUCTIONS.md`: task, independence
+  rules (never read `data/llm-review/` or other repo files; no MiMo), what counts as
+  official, the output format (existing adjudication schema plus a required
+  `rationale` per domain review, optional `final_url` and
+  `other_official_website_url`), and a worked example.
+- `validate-holdout-labels.mjs` checks each label file against the fixture and its
+  packet (exact venue set, rationale present, labeller is not MiMo); `--complete`
+  requires all 10 batches; `--seal` writes an immutable `LABELS-SEAL.json` with
+  file hashes. `validate-holdout-labels.test.mjs` validates the instruction example
+  block itself, so the documented format cannot drift from the validator.
+- Known issue before the freeze (step 3.4): `evaluate-llm-review.mjs` scores a
+  publication by the domain of the crawl's final URL. If a candidate redirects to
+  another domain, that domain has no label and the publication counts as false. Map
+  redirected publications to the candidate domain's label (the labeller records the
+  redirect in `final_url`) before freezing the evaluator.
 
 ## LLM reviewer core and first development runs (2026-09-24)
 
@@ -208,26 +239,22 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-1. Select the 480-venue locked holdout (`PROCESS.md` step 3.2), disjoint from the
-   pilot, and commit the fixture and manifest:
+**Operator action (blocking):** label the 10 packets. For each
+`benchmark/llm-review-holdout-v1/labelling/packet-AAA-BBB.json`, start a fresh agent
+session of your choice (Claude, Codex, …; web research allowed) with the prompt:
+"Follow `benchmark/llm-review-holdout-v1/LABELLING-INSTRUCTIONS.md` for
+`labelling/packet-AAA-BBB.json`." Commit each resulting
+`locked-holdout-adjudication-AAA-BBB.json`. Implementing sessions must not label: they
+have seen reviewer outputs.
 
-   ```bash
-   node select-source-sample.mjs --db data/istat/2026-01-01/derived/italy-import.sqlite \
-     --count 480 --seed locked-holdout-llm-v1 --partition locked_holdout \
-     --output-dir benchmark/llm-review-holdout-v1 --exclude-dir data/llm-review/source-pilot
-   ```
+While the labels are pending, an implementing session may only fix the redirect
+scoring issue in `evaluate-llm-review.mjs` (see the holdout section), tested with fake
+data, without opening any label file.
 
-2. Prepare the labelling packets for the operator: split the holdout into batches of
-   about 50 venues, and write one self-contained instruction file
-   (`benchmark/llm-review-holdout-v1/LABELLING-INSTRUCTIONS.md`). It must give the
-   task, the output format (`locked-holdout-adjudication-NNN-NNN.json`, matching the
-   existing adjudication schema validated by `validateWebAdjudicationSet`), and the
-   rule never to read `data/llm-review/`. Validate the format with a fake
-   one-entry example in a test, not with real labels.
-3. Stop and hand over to the operator. They run a labelling agent of their choice
-   (Claude, Codex, etc.) manually in fresh sessions. The implementing session must not
-   label the holdout: it has seen reviewer outputs. Once the labels are committed and
-   sealed: freeze the reviewer and run it once (steps 3.4–3.7).
+When all 10 files are committed, the next session runs
+`node validate-holdout-labels.mjs --seal`, commits `LABELS-SEAL.json`, freezes the
+reviewer and evaluator (model IDs, prompt version and hash, text budget, code hashes),
+and runs the reviewer once on the holdout (`PROCESS.md` steps 3.4–3.7).
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
@@ -238,6 +265,16 @@ holdout can no longer qualify anything; it may serve as development data.
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Locked holdout selection and labelling packets (2026-09-24):
+  - `node select-source-sample.mjs ... --count 480 --seed locked-holdout-llm-v1 ...`:
+    480 selected, 86,616 eligible, 2,376 excluded, fingerprint `440ad0df…caae1`.
+  - `node prepare-holdout-labelling.mjs --fixture benchmark/llm-review-holdout-v1/locked-holdout-001-480.json --db data/istat/2026-01-01/derived/italy-import.sqlite --output-dir benchmark/llm-review-holdout-v1/labelling`:
+    10 packets, 480 unique venues, 4 missing phones, 0 missing addresses.
+  - `node validate-holdout-labels.mjs --holdout-dir benchmark/llm-review-holdout-v1`:
+    0 batches, 10 packets (no labels yet).
+  - `node --test validate-holdout-labels.test.mjs`: 2 passed. `npm test`: 263 passed,
+    0 failed. `git diff --check`: clean.
 
 - LLM reviewer (2026-09-24):
   - `npm test`: 261 passed, 0 failed.

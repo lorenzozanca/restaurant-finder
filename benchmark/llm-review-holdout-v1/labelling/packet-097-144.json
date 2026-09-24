@@ -1,0 +1,760 @@
+{
+  "schema_version": 1,
+  "packet": "llm-review-holdout-v1-097-144",
+  "output_file": "locked-holdout-adjudication-097-144.json",
+  "instructions": "LABELLING-INSTRUCTIONS.md",
+  "adjudication_header": {
+    "schema_version": 1,
+    "adjudication_set": "llm-review-holdout-v1-adjudication-097-144",
+    "partition": "locked_holdout",
+    "source": "independent_fixture_review",
+    "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1"
+  },
+  "venues": [
+    {
+      "index": 97,
+      "venue_id": "venue:016219:treviglio:2001",
+      "name": "2001",
+      "aliases": [
+        "2001"
+      ],
+      "address": "Via Camillo Terni, 38B, 24047 Treviglio",
+      "postcode": "24047",
+      "municipality": "Treviglio",
+      "region_code": "03",
+      "phone": "+39036347362",
+      "candidate_url": "https://www.ristorante2001.com/",
+      "candidate_registrable_domain": "ristorante2001.com"
+    },
+    {
+      "index": 98,
+      "venue_id": "venue:016225:valgoglio:ristoro-dei-cinque-laghi",
+      "name": "Bar Ristoro dei Cinque Laghi",
+      "aliases": [
+        "Bar Ristoro dei Cinque Laghi",
+        "Ristoro dei Cinque Laghi"
+      ],
+      "address": "Località Bortolotti, 3, 24020 Valgoglio",
+      "postcode": "24020",
+      "municipality": "Valgoglio",
+      "region_code": "03",
+      "phone": "+39034647972",
+      "candidate_url": "http://www.ristoro5laghi.com/",
+      "candidate_registrable_domain": "ristoro5laghi.com"
+    },
+    {
+      "index": 99,
+      "venue_id": "venue:017005:anfo:imbarcadero",
+      "name": "Ristorante Pizzeria Imbarcadero",
+      "aliases": [
+        "Pizzeria Imbarcadero",
+        "Ristorante Pizzeria Imbarcadero"
+      ],
+      "address": "Via Rimembranze, 12, 25070 Anfo",
+      "postcode": "25070",
+      "municipality": "Anfo",
+      "region_code": "03",
+      "phone": "+390365800007",
+      "candidate_url": "http://www.imbarcaderoanfo.it/",
+      "candidate_registrable_domain": "imbarcaderoanfo.it"
+    },
+    {
+      "index": 100,
+      "venue_id": "venue:017029:brescia:eden",
+      "name": "Ristorante Eden",
+      "aliases": [
+        "Eden",
+        "Ristorante Eden"
+      ],
+      "address": "Via Guido Zadei, 6, 25123 Brescia",
+      "postcode": "25123",
+      "municipality": "Brescia",
+      "region_code": "03",
+      "phone": "+393356741762",
+      "candidate_url": "http://www.edenristorante.it/",
+      "candidate_registrable_domain": "edenristorante.it"
+    },
+    {
+      "index": 101,
+      "venue_id": "venue:017029:brescia:laboratorio-lanzani",
+      "name": "Laboratorio Lanzani",
+      "aliases": [
+        "Laboratorio Lanzani"
+      ],
+      "address": "Via Villa Glori, 3, 25126 Brescia",
+      "postcode": "25126",
+      "municipality": "Brescia",
+      "region_code": "03",
+      "phone": "+390303733097",
+      "candidate_url": "http://www.laboratoriolanzani.it/",
+      "candidate_registrable_domain": "laboratoriolanzani.it"
+    },
+    {
+      "index": 102,
+      "venue_id": "venue:017029:brescia:roco-s",
+      "name": "Roco's",
+      "aliases": [
+        "Roco's",
+        "Rocos"
+      ],
+      "address": "Viale Venezia, 76, 25123 Brescia",
+      "postcode": "25123",
+      "municipality": "Brescia",
+      "region_code": "03",
+      "phone": "+390302943654",
+      "candidate_url": "http://rocosfastpizza.com/wp-content/uploads/2019/11/Menu%CC%80-Rocos-FastPizza.pdf",
+      "candidate_registrable_domain": "rocosfastpizza.com"
+    },
+    {
+      "index": 103,
+      "venue_id": "venue:017067:desenzano-del-garda:desy-and-debby",
+      "name": "Caffè Desy and Debby",
+      "aliases": [
+        "Caffè Desy and Debby",
+        "Desy and Debby"
+      ],
+      "address": "Piazza Giacomo Matteotti, 20, 25015 Desenzano del Garda",
+      "postcode": "25015",
+      "municipality": "Desenzano del Garda",
+      "region_code": "03",
+      "phone": "",
+      "candidate_url": "https://instagram.com/caffedesy.debby?igshid=YmMyMTA2M2Y%3D",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 104,
+      "venue_id": "venue:017067:desenzano-del-garda:pizza-per-caso",
+      "name": "Pizza per Caso",
+      "aliases": [
+        "Pizza per Caso"
+      ],
+      "address": "Via Cà Vecchie, 11, 25015 Desenzano del Garda",
+      "postcode": "25015",
+      "municipality": "Desenzano del Garda",
+      "region_code": "03",
+      "phone": "+393939826058",
+      "candidate_url": "https://www.pizzapercaso.it/",
+      "candidate_registrable_domain": "pizzapercaso.it"
+    },
+    {
+      "index": 105,
+      "venue_id": "venue:017072:flero:due-pozzi",
+      "name": "Osteria Due Pozzi",
+      "aliases": [
+        "Due Pozzi",
+        "Osteria Due Pozzi"
+      ],
+      "address": "Via San Martino, 17, 25020 Flero",
+      "postcode": "25020",
+      "municipality": "Flero",
+      "region_code": "03",
+      "phone": "+390307821292",
+      "candidate_url": "http://osteria-due-pozzi.paqe.io/",
+      "candidate_registrable_domain": "paqe.io"
+    },
+    {
+      "index": 106,
+      "venue_id": "venue:017081:gussago:gusport",
+      "name": "Gusport",
+      "aliases": [
+        "Gusport"
+      ],
+      "address": "Via Antonio Gramsci, 60, 25064 Gussago",
+      "postcode": "25064",
+      "municipality": "Gussago",
+      "region_code": "03",
+      "phone": "+390307281741",
+      "candidate_url": "http://www.infotre.com/images/MENUCLIENTI/menu-gusport.pdf",
+      "candidate_registrable_domain": "infotre.com"
+    },
+    {
+      "index": 107,
+      "venue_id": "venue:017085:iseo:pane-al-sale",
+      "name": "Osteria Pane al Sale",
+      "aliases": [
+        "Osteria Pane al Sale",
+        "Pane al Sale"
+      ],
+      "address": "Corte Filanda Pirola, 6, 25049 Iseo",
+      "postcode": "25049",
+      "municipality": "Iseo",
+      "region_code": "03",
+      "phone": "+393755338637",
+      "candidate_url": "http://www.osteriapanealsale.it/",
+      "candidate_registrable_domain": "osteriapanealsale.it"
+    },
+    {
+      "index": 108,
+      "venue_id": "venue:017112:monticelli-brusati:fuori-orario",
+      "name": "Fuori Orario",
+      "aliases": [
+        "Fuori Orario"
+      ],
+      "address": "Via Europa, 3, 25040 Monticelli Brusati",
+      "postcode": "25040",
+      "municipality": "Monticelli Brusati",
+      "region_code": "03",
+      "phone": "+39030653614",
+      "candidate_url": "http://www.pizzeriafuoriorario.com/",
+      "candidate_registrable_domain": "pizzeriafuoriorario.com"
+    },
+    {
+      "index": 109,
+      "venue_id": "venue:017133:palazzolo-sull-oglio:fienile-palazzolo-s-o",
+      "name": "Al Fienile (Palazzolo S/O)",
+      "aliases": [
+        "Al Fienile (Palazzolo S/O)"
+      ],
+      "address": "Via Dogane, 1, 25036 Palazzolo sull'Oglio",
+      "postcode": "25036",
+      "municipality": "Palazzolo sull'Oglio",
+      "region_code": "03",
+      "phone": "+393290977878",
+      "candidate_url": "http://www.pizzeriaalfienile.it/",
+      "candidate_registrable_domain": "pizzeriaalfienile.it"
+    },
+    {
+      "index": 110,
+      "venue_id": "venue:017148:ponte-di-legno:rifugio-nigritella-bar-ristorante",
+      "name": "Rifugio Nigritella - Bar Ristorante",
+      "aliases": [
+        "Chalet Nigritella",
+        "Rifugio Nigritella -",
+        "Rifugio Nigritella - Bar Ristorante"
+      ],
+      "address": "Loc. Case Sparse del Tonale, 25056 Ponte di Legno",
+      "postcode": "25056",
+      "municipality": "Ponte di Legno",
+      "region_code": "03",
+      "phone": "+393459565251",
+      "candidate_url": "http://rifugionigritella.com/",
+      "candidate_registrable_domain": "rifugionigritella.com"
+    },
+    {
+      "index": 111,
+      "venue_id": "venue:017179:sirmione:spicchio",
+      "name": "Lo Spicchio",
+      "aliases": [
+        "Lo Spicchio"
+      ],
+      "address": "Via Roma, 3, 25019 Sirmione",
+      "postcode": "25019",
+      "municipality": "Sirmione",
+      "region_code": "03",
+      "phone": "+393248088714",
+      "candidate_url": "https://www.lospicchio.eu/",
+      "candidate_registrable_domain": "lospicchio.eu"
+    },
+    {
+      "index": 112,
+      "venue_id": "venue:018007:bagnaria:jerry-s",
+      "name": "Pizzeria Jerry's",
+      "aliases": [
+        "Jerry's",
+        "Pizzeria Jerry's",
+        "Pizzeria Jerrys"
+      ],
+      "address": "Via 1º Maggio, 27059 Bagnaria",
+      "postcode": "27059",
+      "municipality": "Bagnaria",
+      "region_code": "03",
+      "phone": "+390383572257",
+      "candidate_url": "https://sites.google.com/site/pizzeriajerrys/home",
+      "candidate_registrable_domain": "google.com"
+    },
+    {
+      "index": 113,
+      "venue_id": "venue:018088:mede:rainbow-max-and-stefy",
+      "name": "Rainbow Max and Stefy",
+      "aliases": [
+        "Rainbow Max and Stefy"
+      ],
+      "address": "Piazza della Repubblica, 17, 27035 Mede",
+      "postcode": "27035",
+      "municipality": "Mede",
+      "region_code": "03",
+      "phone": "+390384823490",
+      "candidate_url": "https://www.arcobalenobar.it/",
+      "candidate_registrable_domain": "arcobalenobar.it"
+    },
+    {
+      "index": 114,
+      "venue_id": "venue:018110:pavia:ipiros-authentic-greek-food",
+      "name": "Ipiros - Authentic Greek Food",
+      "aliases": [
+        "Ipiros - Authentic Greek Food"
+      ],
+      "address": "Via Alessandro Brambilla, 70B, 27100 Pavia",
+      "postcode": "27100",
+      "municipality": "Pavia",
+      "region_code": "03",
+      "phone": "+3903821751539",
+      "candidate_url": "http://www.tripadvisor.com/Restaurant_Review-g187850-d7622330-Reviews-Ipiros_Pita_Gyros-Pavia_Province_of_Pavia_Lombardy.html",
+      "candidate_registrable_domain": "tripadvisor.com"
+    },
+    {
+      "index": 115,
+      "venue_id": "venue:018110:pavia:radici",
+      "name": "Radici",
+      "aliases": [
+        "Radici"
+      ],
+      "address": "Via Siro Comi, 24, 27100 Pavia",
+      "postcode": "27100",
+      "municipality": "Pavia",
+      "region_code": "03",
+      "phone": "+393483281292",
+      "candidate_url": "http://www.radicipavia.it/",
+      "candidate_registrable_domain": "radicipavia.it"
+    },
+    {
+      "index": 116,
+      "venue_id": "venue:019036:cremona:cookies-bar",
+      "name": "Cookies Bar",
+      "aliases": [
+        "Cookies",
+        "Cookies Bar"
+      ],
+      "address": "Via dell'Innovazione Digitale, 3, 26100 Cremona",
+      "postcode": "26100",
+      "municipality": "Cremona",
+      "region_code": "03",
+      "phone": "+390372807400",
+      "candidate_url": "https://cookiesbarandrestaurant.it/",
+      "candidate_registrable_domain": "cookiesbarandrestaurant.it"
+    },
+    {
+      "index": 117,
+      "venue_id": "venue:020042:poggio-rusco:vinarium-cafe",
+      "name": "Trattoria Pizzeria Vinarium Cafe",
+      "aliases": [
+        "Pizzeria Vinarium Cafe",
+        "Trattoria Pizzeria Vinarium Cafe"
+      ],
+      "address": "Via Guglielmo Marconi, 150, 46025 Poggio Rusco",
+      "postcode": "46025",
+      "municipality": "Poggio Rusco",
+      "region_code": "03",
+      "phone": "+393381871814",
+      "candidate_url": "http://www.vinarium.altervista.org/",
+      "candidate_registrable_domain": "altervista.org"
+    },
+    {
+      "index": 118,
+      "venue_id": "venue:021006:badia-abtei:l-fana",
+      "name": "L'Fana",
+      "aliases": [
+        "L'Fana",
+        "LFana"
+      ],
+      "address": "Strada Colz, 57, 39036 Badia",
+      "postcode": "39036",
+      "municipality": "Badia/Abtei",
+      "region_code": "04",
+      "phone": "+390471847025",
+      "candidate_url": "http://www.lfana.com/",
+      "candidate_registrable_domain": "lfana.com"
+    },
+    {
+      "index": 119,
+      "venue_id": "venue:021008:bolzano-bozen:aida-restaurant-pizzeria",
+      "name": "Aida Restaurant Pizzeria",
+      "aliases": [
+        "Aida Restaurant",
+        "Aida Restaurant Pizzeria"
+      ],
+      "address": "Piazza Walther, 1, 39100 Bolzano",
+      "postcode": "39100",
+      "municipality": "Bolzano/Bozen",
+      "region_code": "04",
+      "phone": "+390471975369",
+      "candidate_url": "http://www.aida-restaurant.it/",
+      "candidate_registrable_domain": "aida-restaurant.it"
+    },
+    {
+      "index": 120,
+      "venue_id": "venue:021008:bolzano-bozen:good-day-caffe",
+      "name": "Good Day Caffe",
+      "aliases": [
+        "Good Day",
+        "Good Day Caffe"
+      ],
+      "address": "Corso della Libertà, 14, 39100 Bolzano",
+      "postcode": "39100",
+      "municipality": "Bolzano/Bozen",
+      "region_code": "04",
+      "phone": "+393270714000",
+      "candidate_url": "http://www.paginegialle.it/gooddaycafe",
+      "candidate_registrable_domain": "paginegialle.it"
+    },
+    {
+      "index": 121,
+      "venue_id": "venue:021013:brunico-bruneck:ett",
+      "name": "Ett",
+      "aliases": [
+        "Ett"
+      ],
+      "address": "Piazza Gilm, 1A, 39031 Brunico",
+      "postcode": "39031",
+      "municipality": "Brunico/Bruneck",
+      "region_code": "04",
+      "phone": "+393358398450",
+      "candidate_url": "http://www.kronplatz.com/it/esperienza-da-vivere/bar-ristoranti/bar+ett_i-65455",
+      "candidate_registrable_domain": "kronplatz.com"
+    },
+    {
+      "index": 122,
+      "venue_id": "venue:021016:campo-di-trens-freienfeld:sprechenstein",
+      "name": "Sprechenstein",
+      "aliases": [
+        "Sprechenstein"
+      ],
+      "address": "Sprechenstein, 1, 39040 Freienfeld",
+      "postcode": "39040",
+      "municipality": "Campo di Trens/Freienfeld",
+      "region_code": "04",
+      "phone": "+393518887086",
+      "candidate_url": "http://www.sprechenstein.it/",
+      "candidate_registrable_domain": "sprechenstein.it"
+    },
+    {
+      "index": 123,
+      "venue_id": "venue:021030:falzes-pfalzen:mitanond-sportbar",
+      "name": "Ristorante Mitanond Sportbar",
+      "aliases": [
+        "Mitanond Sportbar",
+        "Ristorante Mitanond Sportbar"
+      ],
+      "address": "Zona Sportiva, 2, 39030 Falzes",
+      "postcode": "39030",
+      "municipality": "Falzes/Pfalzen",
+      "region_code": "04",
+      "phone": "+390474529129",
+      "candidate_url": "https://www.mitanond.it/",
+      "candidate_registrable_domain": "mitanond.it"
+    },
+    {
+      "index": 124,
+      "venue_id": "venue:021033:funes-villno:dreimadelhaus",
+      "name": "Dreimädelhaus",
+      "aliases": [
+        "Dreimädelhaus"
+      ],
+      "address": "Collerstraße, 10, 39040 Villnöß",
+      "postcode": "39040",
+      "municipality": "Funes/Villnöß",
+      "region_code": "04",
+      "phone": "+390472840102",
+      "candidate_url": "http://www.dreimaedelhaus.info/",
+      "candidate_registrable_domain": "dreimaedelhaus.info"
+    },
+    {
+      "index": 125,
+      "venue_id": "venue:021071:rasun-anterselva-rasen-antholz:platzl-am-see",
+      "name": "Platzl am See",
+      "aliases": [
+        "Platzl am See"
+      ],
+      "address": "Obertaler Straße, 39, 39030 Rasen-Antholz",
+      "postcode": "39030",
+      "municipality": "Rasun-Anterselva/Rasen-Antholz",
+      "region_code": "04",
+      "phone": "+393496210987",
+      "candidate_url": "https://www.seerestaurant.it/",
+      "candidate_registrable_domain": "seerestaurant.it"
+    },
+    {
+      "index": 126,
+      "venue_id": "venue:022147:predazzo:zeche-da-bon",
+      "name": "Zeche da bon",
+      "aliases": [
+        "Zeche da bon"
+      ],
+      "address": "Via Trento, 7C, 38037 Predazzo",
+      "postcode": "38037",
+      "municipality": "Predazzo",
+      "region_code": "04",
+      "phone": "+393311472538",
+      "candidate_url": "http://www.bottegadolomiti.com/",
+      "candidate_registrable_domain": "bottegadolomiti.com"
+    },
+    {
+      "index": 127,
+      "venue_id": "venue:022153:riva-del-garda:maffei",
+      "name": "Ristorante Pizzeria Maffei",
+      "aliases": [
+        "Pizzeria Maffei",
+        "Ristorante Pizzeria Maffei"
+      ],
+      "address": "Via Andrea Maffei, 7, 38066 Riva del Garda",
+      "postcode": "38066",
+      "municipality": "Riva del Garda",
+      "region_code": "04",
+      "phone": "+390464553670",
+      "candidate_url": "http://www.ristorantepizzeriamaffei.it/",
+      "candidate_registrable_domain": "ristorantepizzeriamaffei.it"
+    },
+    {
+      "index": 128,
+      "venue_id": "venue:022205:trento:bookique",
+      "name": "La Bookique",
+      "aliases": [
+        "La Bookique"
+      ],
+      "address": "Via Torre d'Augusto, 29, 38122 Trento",
+      "postcode": "38122",
+      "municipality": "Trento",
+      "region_code": "04",
+      "phone": "+393898888286",
+      "candidate_url": "http://www.bookique.net/",
+      "candidate_registrable_domain": "bookique.net"
+    },
+    {
+      "index": 129,
+      "venue_id": "venue:022205:trento:gabry",
+      "name": "bar Gabry",
+      "aliases": [
+        "Gabry",
+        "bar Gabry"
+      ],
+      "address": "Via Don Leone Serafini, 52, 38121 Trento",
+      "postcode": "38121",
+      "municipality": "Trento",
+      "region_code": "04",
+      "phone": "+390461821613",
+      "candidate_url": "http://www.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 130,
+      "venue_id": "venue:022222:villa-lagarina:roma",
+      "name": "bar Roma",
+      "aliases": [
+        "Roma",
+        "bar Roma"
+      ],
+      "address": "Via 25 Aprile, 10, 38060 Villa Lagarina",
+      "postcode": "38060",
+      "municipality": "Villa Lagarina",
+      "region_code": "04",
+      "phone": "+390464410805",
+      "candidate_url": "http://www.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 131,
+      "venue_id": "venue:023001:affi:l-hostaria",
+      "name": "L'Hostaria",
+      "aliases": [
+        "L'Hostaria",
+        "LHostaria"
+      ],
+      "address": "Località Canove, 1, 37010 Affi",
+      "postcode": "37010",
+      "municipality": "Affi",
+      "region_code": "05",
+      "phone": "+390456260588",
+      "candidate_url": "http://www.hostaria-affi.com/",
+      "candidate_registrable_domain": "hostaria-affi.com"
+    },
+    {
+      "index": 132,
+      "venue_id": "venue:023012:bovolone:top-temple-of-pizza",
+      "name": "TOP Temple of Pizza",
+      "aliases": [
+        "TOP Temple of Pizza"
+      ],
+      "address": "Via Camillo Benso di Cavour, 7, 37051 Bovolone",
+      "postcode": "37051",
+      "municipality": "Bovolone",
+      "region_code": "05",
+      "phone": "+393515859808",
+      "candidate_url": "https://taplink.cc/toppizza",
+      "candidate_registrable_domain": "taplink.cc"
+    },
+    {
+      "index": 133,
+      "venue_id": "venue:023030:costermano-sul-garda:dehor-restaurant",
+      "name": "Dehor Restaurant",
+      "aliases": [
+        "Dehor Restaurant"
+      ],
+      "address": "Via Paul, 37010 Costermano sul Garda",
+      "postcode": "37010",
+      "municipality": "Costermano sul Garda",
+      "region_code": "05",
+      "phone": "+390452457570",
+      "candidate_url": "https://dehorestaurant.it/",
+      "candidate_registrable_domain": "dehorestaurant.it"
+    },
+    {
+      "index": 134,
+      "venue_id": "venue:023052:negrar-di-valpolicella:gelatoteca",
+      "name": "La Gelatoteca",
+      "aliases": [
+        "La Gelatoteca"
+      ],
+      "address": "Strada del Recioto, 3, 37024 Negrar di Valpolicella",
+      "postcode": "37024",
+      "municipality": "Negrar di Valpolicella",
+      "region_code": "05",
+      "phone": "+393496372655",
+      "candidate_url": "http://www.lagelatoteca.it/",
+      "candidate_registrable_domain": "lagelatoteca.it"
+    },
+    {
+      "index": 135,
+      "venue_id": "venue:023061:pressana:prosciutteria-crosare",
+      "name": "Prosciutteria Crosare",
+      "aliases": [
+        "Prosciutteria Crosare"
+      ],
+      "address": "Via Crosare di Sotto, 51, 37040 Pressana",
+      "postcode": "37040",
+      "municipality": "Pressana",
+      "region_code": "05",
+      "phone": "+390442460105",
+      "candidate_url": "https://www.ristorantecrosare.it/",
+      "candidate_registrable_domain": "ristorantecrosare.it"
+    },
+    {
+      "index": 136,
+      "venue_id": "venue:023069:san-bonifacio:vinvoglia",
+      "name": "Osteria VinVoglia",
+      "aliases": [
+        "Osteria VinVoglia",
+        "VinVoglia"
+      ],
+      "address": "Via Trento, 4, 37047 San Bonifacio",
+      "postcode": "37047",
+      "municipality": "San Bonifacio",
+      "region_code": "05",
+      "phone": "+393757383250",
+      "candidate_url": "http://www.vinvoglia.it/",
+      "candidate_registrable_domain": "vinvoglia.it"
+    },
+    {
+      "index": 137,
+      "venue_id": "venue:023073:san-martino-buon-albergo:pizza-ninja",
+      "name": "Pizza Ninja",
+      "aliases": [
+        "Pizza Ninja"
+      ],
+      "address": "Via Cavalieri di Vittorio Veneto, 7, 37036 San Martino Buon Albergo",
+      "postcode": "37036",
+      "municipality": "San Martino Buon Albergo",
+      "region_code": "05",
+      "phone": "+393293459610",
+      "candidate_url": "http://www.pizza-ninja.it/",
+      "candidate_registrable_domain": "pizza-ninja.it"
+    },
+    {
+      "index": 138,
+      "venue_id": "venue:023083:sona:da-asporto-loris",
+      "name": "Pizzeria da asporto Loris",
+      "aliases": [
+        "Pizzeria da asporto Loris",
+        "da asporto Loris"
+      ],
+      "address": "Via Adda, 2, 37060 Sona",
+      "postcode": "37060",
+      "municipality": "Sona",
+      "region_code": "05",
+      "phone": "+390458681090",
+      "candidate_url": "http://www.pizzeriadaasportoloris.it/",
+      "candidate_registrable_domain": "pizzeriadaasportoloris.it"
+    },
+    {
+      "index": 139,
+      "venue_id": "venue:023091:verona:taverna-di-via-stella",
+      "name": "La Taverna di Via Stella",
+      "aliases": [
+        "La Taverna di Via Stella"
+      ],
+      "address": "Via Stella, 5C, 37121 Verona",
+      "postcode": "37121",
+      "municipality": "Verona",
+      "region_code": "05",
+      "phone": "+390458008008",
+      "candidate_url": "http://www.tavernadiviastella.com/",
+      "candidate_registrable_domain": "tavernadiviastella.com"
+    },
+    {
+      "index": 140,
+      "venue_id": "venue:024004:altavilla-vicentina:passeggio",
+      "name": "Trattoria al Passeggio",
+      "aliases": [
+        "Trattoria al Passeggio",
+        "al Passeggio"
+      ],
+      "address": "Via Lonigo, 93, 36077 Altavilla Vicentina",
+      "postcode": "36077",
+      "municipality": "Altavilla Vicentina",
+      "region_code": "05",
+      "phone": "+390444573413",
+      "candidate_url": "http://www.trattoriaalpasseggio.com/",
+      "candidate_registrable_domain": "trattoriaalpasseggio.com"
+    },
+    {
+      "index": 141,
+      "venue_id": "venue:024009:asiago:pan-ciccia",
+      "name": "Pan&Ciccia",
+      "aliases": [
+        "Pan&Ciccia"
+      ],
+      "address": "Viale Giacomo Matteotti, 63, 36012 Asiago",
+      "postcode": "36012",
+      "municipality": "Asiago",
+      "region_code": "05",
+      "phone": "+390424463042",
+      "candidate_url": "http://www.paneciccia.com/",
+      "candidate_registrable_domain": "paneciccia.com"
+    },
+    {
+      "index": 142,
+      "venue_id": "venue:024017:brogliano:vecchio-forno-artigiano",
+      "name": "Il Vecchio Forno Artigiano",
+      "aliases": [
+        "Il Vecchio Forno Artigiano"
+      ],
+      "address": "Via Oltre Agno, 5, 36070 Brogliano",
+      "postcode": "36070",
+      "municipality": "Brogliano",
+      "region_code": "05",
+      "phone": "+390445940346",
+      "candidate_url": "http://www.ilvecchioforno.com/",
+      "candidate_registrable_domain": "ilvecchioforno.com"
+    },
+    {
+      "index": 143,
+      "venue_id": "venue:024063:monte-di-malo:da-rampon",
+      "name": "Trattoria Da Rampon",
+      "aliases": [
+        "Da Rampon",
+        "Trattoria Da Rampon"
+      ],
+      "address": "Via Emilia Casara, 9, 36030 Monte di Malo",
+      "postcode": "36030",
+      "municipality": "Monte di Malo",
+      "region_code": "05",
+      "phone": "+3904451947701",
+      "candidate_url": "https://gmaps.top/trattoria-da-rampon-di-cazzola-elisabetta",
+      "candidate_registrable_domain": "gmaps.top"
+    },
+    {
+      "index": 144,
+      "venue_id": "venue:024078:piovene-rocchette:summano",
+      "name": "Birreria Summano",
+      "aliases": [
+        "Birreria Summano"
+      ],
+      "address": "Via Alessandro Rossi, 115, 36013 Piovene Rocchette",
+      "postcode": "36013",
+      "municipality": "Piovene Rocchette",
+      "region_code": "05",
+      "phone": "+390445650110",
+      "candidate_url": "https://www.birreriasummano.it/",
+      "candidate_registrable_domain": "birreriasummano.it"
+    }
+  ]
+}

@@ -1,0 +1,755 @@
+{
+  "schema_version": 1,
+  "packet": "llm-review-holdout-v1-289-336",
+  "output_file": "locked-holdout-adjudication-289-336.json",
+  "instructions": "LABELLING-INSTRUCTIONS.md",
+  "adjudication_header": {
+    "schema_version": 1,
+    "adjudication_set": "llm-review-holdout-v1-adjudication-289-336",
+    "partition": "locked_holdout",
+    "source": "independent_fixture_review",
+    "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1"
+  },
+  "venues": [
+    {
+      "index": 289,
+      "venue_id": "venue:058091:roma:da-enzo-al-29",
+      "name": "Trattoria Da Enzo al 29",
+      "aliases": [
+        "Da Enzo al 29",
+        "Trattoria Da Enzo al 29"
+      ],
+      "address": "Via dei Vascellari, 29, 00153 Roma",
+      "postcode": "00153",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39065812260",
+      "candidate_url": "http://www.daenzoal29.com/",
+      "candidate_registrable_domain": "daenzoal29.com"
+    },
+    {
+      "index": 290,
+      "venue_id": "venue:058091:roma:da-zio-leo",
+      "name": "Pizzeria da Zio Leo",
+      "aliases": [
+        "Pizzeria da Zio Leo",
+        "da Zio Leo"
+      ],
+      "address": "Via Quinto Sertorio, 23, 00174 Roma",
+      "postcode": "00174",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+393294560140",
+      "candidate_url": "https://maps.app.goo.gl/K5vUMAmt9aATLcan8",
+      "candidate_registrable_domain": "goo.gl"
+    },
+    {
+      "index": 291,
+      "venue_id": "venue:058091:roma:due-colonne",
+      "name": "Due Colonne",
+      "aliases": [
+        "Due Colonne"
+      ],
+      "address": "Via dei Serpenti, 91, 00184 Roma",
+      "postcode": "00184",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39064880852",
+      "candidate_url": "http://www.ristorante2colonne.it/",
+      "candidate_registrable_domain": "ristorante2colonne.it"
+    },
+    {
+      "index": 292,
+      "venue_id": "venue:058091:roma:fattoria-toccaferro",
+      "name": "Fattoria Toccaferro",
+      "aliases": [
+        "Fattoria Toccaferro"
+      ],
+      "address": "Viale Salvatore Rebecchini, 5, 00148 Roma",
+      "postcode": "00148",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390660209091",
+      "candidate_url": "https://fattoriatoccaferro.it/",
+      "candidate_registrable_domain": "fattoriatoccaferro.it"
+    },
+    {
+      "index": 293,
+      "venue_id": "venue:058091:roma:fortuna",
+      "name": "Bar Fortuna",
+      "aliases": [
+        "Bar Fortuna",
+        "Fortuna"
+      ],
+      "address": "Via del Forte Braschi, 37, 00167 Roma",
+      "postcode": "00167",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39066270399",
+      "candidate_url": "http://www.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 294,
+      "venue_id": "venue:058091:roma:fraschetta-di-mastro-giorgio",
+      "name": "La Fraschetta di Mastro Giorgio",
+      "aliases": [
+        "La Fraschetta di Mastro Giorgio"
+      ],
+      "address": "Via Alessandro Volta, 36, 00153 Roma",
+      "postcode": "00153",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39065741369",
+      "candidate_url": "https://www.mastro-giorgio.it/",
+      "candidate_registrable_domain": "mastro-giorgio.it"
+    },
+    {
+      "index": 295,
+      "venue_id": "venue:058091:roma:interno-7-food-and-drink",
+      "name": "Interno 7 Food and Drink",
+      "aliases": [
+        "Interno 7 Food and Drink"
+      ],
+      "address": "Via Cornelia, 174, 00166 Roma",
+      "postcode": "00166",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+393208578481",
+      "candidate_url": "https://interno7ristopub.eatbu.com/?lang=it",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 296,
+      "venue_id": "venue:058091:roma:l-arcano",
+      "name": "L'Arcano",
+      "aliases": [
+        "L'Arcano",
+        "LArcano"
+      ],
+      "address": "Via delle Paste, 102, 00186 Roma",
+      "postcode": "00186",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39066786929",
+      "candidate_url": "http://www.larcano.eu/",
+      "candidate_registrable_domain": "larcano.eu"
+    },
+    {
+      "index": 297,
+      "venue_id": "venue:058091:roma:limonaia",
+      "name": "La Limonaia",
+      "aliases": [
+        "La Limonaia"
+      ],
+      "address": "Via Lazzaro Spallanzani, 1A, 00161 Roma",
+      "postcode": "00161",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390695065250",
+      "candidate_url": "https://www.leggimenu.it/menu/lalimonaia/244791?v=105557",
+      "candidate_registrable_domain": "leggimenu.it"
+    },
+    {
+      "index": 298,
+      "venue_id": "venue:058091:roma:marusa",
+      "name": "Cafe' Marusa",
+      "aliases": [
+        "Cafe' Marusa"
+      ],
+      "address": "Via Simone Mosca, 24, 00168 Roma",
+      "postcode": "00168",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390631075870",
+      "candidate_url": "https://module.lafourchette.com/it_IT/module/293447-e3515",
+      "candidate_registrable_domain": "lafourchette.com"
+    },
+    {
+      "index": 299,
+      "venue_id": "venue:058091:roma:max-a-trigoria",
+      "name": "Max a Trigoria",
+      "aliases": [
+        "Max a Trigoria"
+      ],
+      "address": "Via dei Redattori, 51, 00128 Roma",
+      "postcode": "00128",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39065574343",
+      "candidate_url": "http://www.ilbraceredimaxatrigoria.it/",
+      "candidate_registrable_domain": "ilbraceredimaxatrigoria.it"
+    },
+    {
+      "index": 300,
+      "venue_id": "venue:058091:roma:osti-matti",
+      "name": "Trattoria Osti Matti",
+      "aliases": [
+        "Osti Matti",
+        "Trattoria Osti Matti"
+      ],
+      "address": "Via Assisi, 11, 00181 Roma",
+      "postcode": "00181",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390678393610",
+      "candidate_url": "https://www.trattoriaostimatti.it/",
+      "candidate_registrable_domain": "trattoriaostimatti.it"
+    },
+    {
+      "index": 301,
+      "venue_id": "venue:058091:roma:pentolaccia",
+      "name": "La Pentolaccia",
+      "aliases": [
+        "La Pentolaccia"
+      ],
+      "address": "Via Flavia, 38, 00187 Roma",
+      "postcode": "00187",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+3906485777",
+      "candidate_url": "http://www.lapentolaccia-restaurant.it/",
+      "candidate_registrable_domain": "lapentolaccia-restaurant.it"
+    },
+    {
+      "index": 302,
+      "venue_id": "venue:058091:roma:perilli",
+      "name": "Trattoria Perilli",
+      "aliases": [
+        "Perilli",
+        "Trattoria Perilli"
+      ],
+      "address": "Via Marmorata, 39, 00153 Roma",
+      "postcode": "00153",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39065755100",
+      "candidate_url": "https://www.perilliatestaccio.com/",
+      "candidate_registrable_domain": "perilliatestaccio.com"
+    },
+    {
+      "index": 303,
+      "venue_id": "venue:058091:roma:piadineria-1a625180",
+      "name": "La Piadineria",
+      "aliases": [
+        "La Piadineria"
+      ],
+      "address": "Viale America, 143, 00144 Roma",
+      "postcode": "00144",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39065914325",
+      "candidate_url": "https://www.lapiadineria.com/",
+      "candidate_registrable_domain": "lapiadineria.com"
+    },
+    {
+      "index": 304,
+      "venue_id": "venue:058091:roma:pica-la-pasta-all-uovo",
+      "name": "Pica La Pasta all'Uovo",
+      "aliases": [
+        "Pica La Pasta all'Uovo",
+        "Pica La Pasta allUovo"
+      ],
+      "address": "Via degli Scipioni, 11, 00192 Roma",
+      "postcode": "00192",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390639722556",
+      "candidate_url": "http://www.pastapica.eu/",
+      "candidate_registrable_domain": "pastapica.eu"
+    },
+    {
+      "index": 305,
+      "venue_id": "venue:058091:roma:rimessa-roscioli",
+      "name": "Rimessa Roscioli",
+      "aliases": [
+        "Rimessa Roscioli"
+      ],
+      "address": "Via del Conservatorio, 58, 00186 Roma",
+      "postcode": "00186",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390668803914",
+      "candidate_url": "http://www.rimessaroscioli.com/",
+      "candidate_registrable_domain": "rimessaroscioli.com"
+    },
+    {
+      "index": 306,
+      "venue_id": "venue:058091:roma:scarpetta-rome",
+      "name": "Scarpetta Rome",
+      "aliases": [
+        "Scarpetta Rome"
+      ],
+      "address": "Via Vittorio Veneto, 60, 00187 Roma",
+      "postcode": "00187",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390642010788",
+      "candidate_url": "https://www.scarpettarestaurants.com/location/rome/",
+      "candidate_registrable_domain": "scarpettarestaurants.com"
+    },
+    {
+      "index": 307,
+      "venue_id": "venue:058091:roma:sciccherie-bottega-and-vineria",
+      "name": "Sciccherie Bottega and Vineria",
+      "aliases": [
+        "Sciccherie Bottega and Vineria"
+      ],
+      "address": "Via Metauro, 55, 00198 Roma",
+      "postcode": "00198",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390669306912",
+      "candidate_url": "http://www.sciccherieroma.com/",
+      "candidate_registrable_domain": "sciccherieroma.com"
+    },
+    {
+      "index": 308,
+      "venue_id": "venue:058091:roma:seacret",
+      "name": "Seacret",
+      "aliases": [
+        "Seacret"
+      ],
+      "address": "Via Marcantonio Bragadin, 13, 00136 Roma",
+      "postcode": "00136",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390686660460",
+      "candidate_url": "http://ristoranteseacret.it/",
+      "candidate_registrable_domain": "ristoranteseacret.it"
+    },
+    {
+      "index": 309,
+      "venue_id": "venue:058091:roma:strit-fud",
+      "name": "Strit Fud",
+      "aliases": [
+        "Strit Fud"
+      ],
+      "address": "Via Alessandro Volta, 65, 00153 Roma",
+      "postcode": "00153",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39065758983",
+      "candidate_url": "http://www.stritfud.it/",
+      "candidate_registrable_domain": "stritfud.it"
+    },
+    {
+      "index": 310,
+      "venue_id": "venue:058091:roma:taberna-all-acquedotto",
+      "name": "Taberna all'Acquedotto",
+      "aliases": [
+        "Taberna all'Acquedotto",
+        "Taberna allAcquedotto"
+      ],
+      "address": "Via Frascati, 50, 00178 Roma",
+      "postcode": "00178",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+393515062782",
+      "candidate_url": "https://www.mybestshops.it/log-in",
+      "candidate_registrable_domain": "mybestshops.it"
+    },
+    {
+      "index": 311,
+      "venue_id": "venue:058091:roma:tre-de-tutto",
+      "name": "Tre de Tutto",
+      "aliases": [
+        "Tre de Tutto"
+      ],
+      "address": "Via Giustino De Jacobis, 19, 00154 Roma",
+      "postcode": "00154",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390687606301",
+      "candidate_url": "http://www.tredetuttogarbatella.it/",
+      "candidate_registrable_domain": "tredetuttogarbatella.it"
+    },
+    {
+      "index": 312,
+      "venue_id": "venue:058111:velletri:casale-malatesta",
+      "name": "Casale Malatesta",
+      "aliases": [
+        "Casale Malatesta"
+      ],
+      "address": "Via Casale di Malatesta, 21, 00049 Velletri",
+      "postcode": "00049",
+      "municipality": "Velletri",
+      "region_code": "12",
+      "phone": "+393450338728",
+      "candidate_url": "https://www.ilcasalemalatesta.com/",
+      "candidate_registrable_domain": "ilcasalemalatesta.com"
+    },
+    {
+      "index": 313,
+      "venue_id": "venue:059008:formia:gretel-factory",
+      "name": "Gretel Factory",
+      "aliases": [
+        "Gretel Factory"
+      ],
+      "address": "Via Abate Tosti, 51, 04023 Formia",
+      "postcode": "04023",
+      "municipality": "Formia",
+      "region_code": "12",
+      "phone": "+390771268293",
+      "candidate_url": "http://www.gretelfactory.it/",
+      "candidate_registrable_domain": "gretelfactory.it"
+    },
+    {
+      "index": 314,
+      "venue_id": "venue:059008:formia:mari",
+      "name": "Mari",
+      "aliases": [
+        "Mari"
+      ],
+      "address": "Viale dell'Unità d'Italia, 128, 04023 Formia LT, Italia, 04023 Formia",
+      "postcode": "04023",
+      "municipality": "Formia",
+      "region_code": "12",
+      "phone": "+393272665943",
+      "candidate_url": "https://linktr.ee/mariristorantepizzeria",
+      "candidate_registrable_domain": "linktr.ee"
+    },
+    {
+      "index": 315,
+      "venue_id": "venue:059011:latina:da-zio-paolo-pizza-e-fritti",
+      "name": "Da Zio Paolo pizza e fritti",
+      "aliases": [
+        "Da Zio Paolo pizza e fritti"
+      ],
+      "address": "Via Villafranca, 32, 04100 Latina",
+      "postcode": "04100",
+      "municipality": "Latina",
+      "region_code": "12",
+      "phone": "+393471822132",
+      "candidate_url": "https://www.vetrinelaziali.it/da-zio-paolo-a-latina/",
+      "candidate_registrable_domain": "vetrinelaziali.it"
+    },
+    {
+      "index": 316,
+      "venue_id": "venue:059011:latina:dolce-notte-cafe",
+      "name": "Dolce Notte Cafe",
+      "aliases": [
+        "Dolce Notte Cafe"
+      ],
+      "address": "Piazzale Natale Prampolini, 36, 04100 Latina",
+      "postcode": "04100",
+      "municipality": "Latina",
+      "region_code": "12",
+      "phone": "+390773663621",
+      "candidate_url": "http://www.dolcenottecornetteria.it/",
+      "candidate_registrable_domain": "dolcenottecornetteria.it"
+    },
+    {
+      "index": 317,
+      "venue_id": "venue:059028:sezze:storta-inurban-pizza",
+      "name": "LA STORTA Inurban Pizza",
+      "aliases": [
+        "LA STORTA Inurban Pizza"
+      ],
+      "address": "Via Campania, 41, 04100 Latina",
+      "postcode": "04100",
+      "municipality": "Sezze",
+      "region_code": "12",
+      "phone": "+393278904156",
+      "candidate_url": "https://g.co/kgs/cQZArW",
+      "candidate_registrable_domain": "g.co"
+    },
+    {
+      "index": 318,
+      "venue_id": "venue:059032:terracina:fish-lab",
+      "name": "Fish Lab",
+      "aliases": [
+        "Fish Lab"
+      ],
+      "address": "via Bandino Vecchia Km 5800, 04019 Terracina",
+      "postcode": "04019",
+      "municipality": "Terracina",
+      "region_code": "12",
+      "phone": "+393349867826",
+      "candidate_url": "http://fishlabterracina.it/",
+      "candidate_registrable_domain": "fishlabterracina.it"
+    },
+    {
+      "index": 319,
+      "venue_id": "venue:060038:frosinone:salotto-dell-arte",
+      "name": "Salotto dell'arte",
+      "aliases": [
+        "Salotto dell'arte",
+        "Salotto dellarte"
+      ],
+      "address": "Via Piave, 35, 03100 Frosinone",
+      "postcode": "03100",
+      "municipality": "Frosinone",
+      "region_code": "12",
+      "phone": "+393404796285",
+      "candidate_url": "https://salotto-dellarte.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 320,
+      "venue_id": "venue:060041:giuliano-di-roma:laghetto",
+      "name": "Il Laghetto",
+      "aliases": [
+        "Il Laghetto"
+      ],
+      "address": "Via Valvazzata, 27, 03020 Giuliano di Roma",
+      "postcode": "03020",
+      "municipality": "Giuliano di Roma",
+      "region_code": "12",
+      "phone": "+390775699619",
+      "candidate_url": "https://bar-ristoro-il-laghetto-sas-di-cerroni-c.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 321,
+      "venue_id": "venue:061005:aversa:contrada",
+      "name": "Pizzeria La Contrada",
+      "aliases": [
+        "La Contrada",
+        "Pizzeria La Contrada"
+      ],
+      "address": "Piazza Guglielmo Marconi, 47, 81031 Aversa",
+      "postcode": "81031",
+      "municipality": "Aversa",
+      "region_code": "15",
+      "phone": "+390818111700",
+      "candidate_url": "http://lacontradaristorante.it/",
+      "candidate_registrable_domain": "lacontradaristorante.it"
+    },
+    {
+      "index": 322,
+      "venue_id": "venue:061015:capua:giacomino",
+      "name": "Caffe Giacomino",
+      "aliases": [
+        "Caffe Giacomino",
+        "Giacomino"
+      ],
+      "address": "Piazza dei Giudici, 9, 81043 Capua",
+      "postcode": "81043",
+      "municipality": "Capua",
+      "region_code": "15",
+      "phone": "+3908231298391",
+      "candidate_url": "https://www.localismart.it/caffegiacomino",
+      "candidate_registrable_domain": "localismart.it"
+    },
+    {
+      "index": 323,
+      "venue_id": "venue:061057:piedimonte-matese:zito-gianluca-pizzeria",
+      "name": "Zito Gianluca Pizzeria",
+      "aliases": [
+        "Zito Gianluca",
+        "Zito Gianluca Pizzeria"
+      ],
+      "address": "Via Antonio De Cesare, 11, 81016 Piedimonte Matese",
+      "postcode": "81016",
+      "municipality": "Piedimonte Matese",
+      "region_code": "15",
+      "phone": "+393384577489",
+      "candidate_url": "https://booxit.it/sharelinks/zitogianluca",
+      "candidate_registrable_domain": "booxit.it"
+    },
+    {
+      "index": 324,
+      "venue_id": "venue:061089:sparanise:rouge-et-noir-di-roncone-ivan",
+      "name": "Rouge Et Noir di Roncone Ivan",
+      "aliases": [
+        "Rouge Et Noir di Roncone Ivan"
+      ],
+      "address": "Via Abate Roffredo, 81056 Sparanise",
+      "postcode": "81056",
+      "municipality": "Sparanise",
+      "region_code": "15",
+      "phone": "+393339845330",
+      "candidate_url": "http://www.rouge-et-noir.jp/",
+      "candidate_registrable_domain": "rouge-et-noir.jp"
+    },
+    {
+      "index": 325,
+      "venue_id": "venue:062008:benevento:strega-73af280d",
+      "name": "Caffè Strega",
+      "aliases": [
+        "Caffè Strega",
+        "Strega"
+      ],
+      "address": "Via Antonio Abete, 1, 82100 Benevento",
+      "postcode": "82100",
+      "municipality": "Benevento",
+      "region_code": "15",
+      "phone": "+390824271170",
+      "candidate_url": "https://www.caffestrega.it/",
+      "candidate_registrable_domain": "caffestrega.it"
+    },
+    {
+      "index": 326,
+      "venue_id": "venue:063002:afragola:rodi",
+      "name": "Caffe' Rodi",
+      "aliases": [
+        "Caffe' Rodi"
+      ],
+      "address": "Via Mohandas Karamchand Gandhi, 3, 80021 Afragola",
+      "postcode": "80021",
+      "municipality": "Afragola",
+      "region_code": "15",
+      "phone": "+393392311427",
+      "candidate_url": "http://www.rodicaffe.it/",
+      "candidate_registrable_domain": "rodicaffe.it"
+    },
+    {
+      "index": 327,
+      "venue_id": "venue:063006:bacoli:fondi-di-baia",
+      "name": "Fondi Di Baia",
+      "aliases": [
+        "Fondi Di Baia"
+      ],
+      "address": "Via Fondi di Baia, 3, 80070 Bacoli",
+      "postcode": "80070",
+      "municipality": "Bacoli",
+      "region_code": "15",
+      "phone": "+390818545334",
+      "candidate_url": "http://www.parcofondidibaia.it/",
+      "candidate_registrable_domain": "parcofondidibaia.it"
+    },
+    {
+      "index": 328,
+      "venue_id": "venue:063014:capri:augusto",
+      "name": "Ristorante Augusto",
+      "aliases": [
+        "Augusto",
+        "Ristorante Augusto"
+      ],
+      "address": "Via Cristoforo Colombo, 24, 80073 Capri",
+      "postcode": "80073",
+      "municipality": "Capri",
+      "region_code": "15",
+      "phone": "+390818370853",
+      "candidate_url": "https://www.instagram.com/caffe_augusto/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 329,
+      "venue_id": "venue:063017:casalnuovo-di-napoli:luna-rossa",
+      "name": "Pizzeria Luna Rossa",
+      "aliases": [
+        "Luna Rossa",
+        "Pizzeria Luna Rossa"
+      ],
+      "address": "Parco, Sagittario, Viale delle Ginestre, 80013 Casalnuovo di Napoli",
+      "postcode": "80013",
+      "municipality": "Casalnuovo di Napoli",
+      "region_code": "15",
+      "phone": "+3908119257047",
+      "candidate_url": "http://www.pizzerialunarossa2.flazio.com/home?r=697799",
+      "candidate_registrable_domain": "flazio.com"
+    },
+    {
+      "index": 330,
+      "venue_id": "venue:063031:forio:da-nicola",
+      "name": "Ristorante Da Nicola",
+      "aliases": [
+        "Da Nicola",
+        "Ristorante Da Nicola"
+      ],
+      "address": "Via Tommaso Cigliano, 132, 80075 Forio",
+      "postcode": "80075",
+      "municipality": "Forio",
+      "region_code": "15",
+      "phone": "+39081987280",
+      "candidate_url": "https://www.ristorantedanicola.it/",
+      "candidate_registrable_domain": "ristorantedanicola.it"
+    },
+    {
+      "index": 331,
+      "venue_id": "venue:063032:frattamaggiore:lello-snack",
+      "name": "Lello Snack",
+      "aliases": [
+        "Lello Snack"
+      ],
+      "address": "Via Vittorio Emanuele III, 80, 80027 Frattamaggiore",
+      "postcode": "80027",
+      "municipality": "Frattamaggiore",
+      "region_code": "15",
+      "phone": "+3908118495436",
+      "candidate_url": "http://www.tempiotravel.com/",
+      "candidate_registrable_domain": "tempiotravel.com"
+    },
+    {
+      "index": 332,
+      "venue_id": "venue:063035:gragnano:cucineria-sempreinsieme",
+      "name": "Cucineria Sempreinsieme",
+      "aliases": [
+        "Cucineria Sempreinsieme"
+      ],
+      "address": "Via Giuseppe Raffaelli, 5, 80054 Gragnano",
+      "postcode": "80054",
+      "municipality": "Gragnano",
+      "region_code": "15",
+      "phone": "+390818794955",
+      "candidate_url": "https://www.instagram.com/sempreinsiemecucineria/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 333,
+      "venue_id": "venue:063049:napoli:a-figlia-d-o-luciano",
+      "name": "Ristorante A Figlia d'O Luciano",
+      "aliases": [
+        "A Figlia d'O Luciano",
+        "Ristorante A Figlia d'O Luciano",
+        "Ristorante A Figlia dO Luciano"
+      ],
+      "address": "Piazza Enrico De Nicola, 38, 80139 Napoli",
+      "postcode": "80139",
+      "municipality": "Napoli",
+      "region_code": "15",
+      "phone": "+390813934091",
+      "candidate_url": "https://ristorante-a-figlia-do-luciano.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 334,
+      "venue_id": "venue:063049:napoli:concettina-ai-tre-santi",
+      "name": "Pizzeria Concettina ai Tre Santi",
+      "aliases": [
+        "Concettina ai Tre Santi",
+        "Pizzeria Concettina ai Tre Santi"
+      ],
+      "address": "Via Arena della Sanità, 7, 80137 Napoli",
+      "postcode": "80137",
+      "municipality": "Napoli",
+      "region_code": "15",
+      "phone": "+39081290037",
+      "candidate_url": "http://www.pizzeriaoliva.it/",
+      "candidate_registrable_domain": "pizzeriaoliva.it"
+    },
+    {
+      "index": 335,
+      "venue_id": "venue:063049:napoli:leopardi",
+      "name": "Pizzeria Leopardi",
+      "aliases": [
+        "Leopardi",
+        "Pizzeria Leopardi"
+      ],
+      "address": "Vico Acitillo, 58, 80128 Napoli",
+      "postcode": "80128",
+      "municipality": "Napoli",
+      "region_code": "15",
+      "phone": "+3908118242100",
+      "candidate_url": "https://tinyurl.com/2qjnfz9w",
+      "candidate_registrable_domain": "tinyurl.com"
+    },
+    {
+      "index": 336,
+      "venue_id": "venue:063049:napoli:palato-experience",
+      "name": "Palato Experience",
+      "aliases": [
+        "Palato Experience"
+      ],
+      "address": "Piazzale Vincenzo Tecchio, 101, 80125 Napoli",
+      "postcode": "80125",
+      "municipality": "Napoli",
+      "region_code": "15",
+      "phone": "+3908118402065",
+      "candidate_url": "https://palato.pizza/",
+      "candidate_registrable_domain": "palato.pizza"
+    }
+  ]
+}

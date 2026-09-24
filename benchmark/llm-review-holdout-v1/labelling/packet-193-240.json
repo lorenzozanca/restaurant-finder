@@ -1,0 +1,756 @@
+{
+  "schema_version": 1,
+  "packet": "llm-review-holdout-v1-193-240",
+  "output_file": "locked-holdout-adjudication-193-240.json",
+  "instructions": "LABELLING-INSTRUCTIONS.md",
+  "adjudication_header": {
+    "schema_version": 1,
+    "adjudication_set": "llm-review-holdout-v1-adjudication-193-240",
+    "partition": "locked_holdout",
+    "source": "independent_fixture_review",
+    "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1"
+  },
+  "venues": [
+    {
+      "index": 193,
+      "venue_id": "venue:037006:bologna:da-maro",
+      "name": "Da Maro",
+      "aliases": [
+        "Da Maro"
+      ],
+      "address": "Via Broccaindosso, 71B, 40125 Bologna",
+      "postcode": "40125",
+      "municipality": "Bologna",
+      "region_code": "08",
+      "phone": "+39051227304",
+      "candidate_url": "http://trattoriamaro.it/",
+      "candidate_registrable_domain": "trattoriamaro.it"
+    },
+    {
+      "index": 194,
+      "venue_id": "venue:037006:bologna:las-piadina",
+      "name": "Las Piadina",
+      "aliases": [
+        "Las Piadina"
+      ],
+      "address": "Via Augusto Murri, 20D, 40137 Bologna",
+      "postcode": "40137",
+      "municipality": "Bologna",
+      "region_code": "08",
+      "phone": "+39051307233",
+      "candidate_url": "http://www.laspiadina.it/",
+      "candidate_registrable_domain": "laspiadina.it"
+    },
+    {
+      "index": 195,
+      "venue_id": "venue:037006:bologna:libra",
+      "name": "Libra",
+      "aliases": [
+        "Libra"
+      ],
+      "address": "Via Alfredo Testoni, 10, 40123 Bologna",
+      "postcode": "40123",
+      "municipality": "Bologna",
+      "region_code": "08",
+      "phone": "+39051237688",
+      "candidate_url": "https://ristorantelibra.it/",
+      "candidate_registrable_domain": "ristorantelibra.it"
+    },
+    {
+      "index": 196,
+      "venue_id": "venue:037006:bologna:mondo-pizza",
+      "name": "Mondo Pizza",
+      "aliases": [
+        "Mondo Pizza"
+      ],
+      "address": "Via Giuseppe Bentivogli, 19B, 40138 Bologna",
+      "postcode": "40138",
+      "municipality": "Bologna",
+      "region_code": "08",
+      "phone": "+39051347292",
+      "candidate_url": "http://www.mondopizzabologna.it/",
+      "candidate_registrable_domain": "mondopizzabologna.it"
+    },
+    {
+      "index": 197,
+      "venue_id": "venue:037006:bologna:oltre-cafe",
+      "name": "Oltre Cafe",
+      "aliases": [
+        "Oltre Cafe"
+      ],
+      "address": "Via Ferruccio Garavaglia, 6C, 40127 Bologna",
+      "postcode": "40127",
+      "municipality": "Bologna",
+      "region_code": "08",
+      "phone": "+393928866336",
+      "candidate_url": "https://www.instagram.com/oltrecafe_bo/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 198,
+      "venue_id": "venue:037006:bologna:randagio",
+      "name": "Il Randagio",
+      "aliases": [
+        "Il Randagio"
+      ],
+      "address": "Via Marco Emilio Lepido, 7C, 40132 Bologna",
+      "postcode": "40132",
+      "municipality": "Bologna",
+      "region_code": "08",
+      "phone": "+390516415336",
+      "candidate_url": "http://www.ristoranterandagio.it/",
+      "candidate_registrable_domain": "ristoranterandagio.it"
+    },
+    {
+      "index": 199,
+      "venue_id": "venue:037025:dozza:rivellino",
+      "name": "Il Rivellino",
+      "aliases": [
+        "Il Rivellino"
+      ],
+      "address": "Via Calanco, 5, 40060 Dozza",
+      "postcode": "40060",
+      "municipality": "Dozza",
+      "region_code": "08",
+      "phone": "+390542012043",
+      "candidate_url": "https://www.sumupbookings.com/pizzeria-ristorante-hotel-il-new-rivellino",
+      "candidate_registrable_domain": "sumupbookings.com"
+    },
+    {
+      "index": 200,
+      "venue_id": "venue:037031:grizzana-morandi:fondacci",
+      "name": "Agriturismo I Fondacci",
+      "aliases": [
+        "Agriturismo I Fondacci"
+      ],
+      "address": "Località Orelia, 38, 40030 Grizzana Morandi",
+      "postcode": "40030",
+      "municipality": "Grizzana Morandi",
+      "region_code": "08",
+      "phone": "+393386656853",
+      "candidate_url": "https://www.fondacci.it/shop/",
+      "candidate_registrable_domain": "fondacci.it"
+    },
+    {
+      "index": 201,
+      "venue_id": "venue:037032:imola:primo-piano",
+      "name": "Primo Piano",
+      "aliases": [
+        "Primo Piano"
+      ],
+      "address": "Via Emilia, 31, 40026 Imola",
+      "postcode": "40026",
+      "municipality": "Imola",
+      "region_code": "08",
+      "phone": "+393454500135",
+      "candidate_url": "https://loungebarprimopianoimola.eatbu.com/",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 202,
+      "venue_id": "venue:037054:san-lazzaro-di-savena:valfiore",
+      "name": "Ristorante Pizzeria Valfiore",
+      "aliases": [
+        "Pizzeria Valfiore",
+        "Ristorante Pizzeria Valfiore"
+      ],
+      "address": "Via Imelda Lambertini, 20, 40068 San Lazzaro di Savena",
+      "postcode": "40068",
+      "municipality": "San Lazzaro di Savena",
+      "region_code": "08",
+      "phone": "+390516258338",
+      "candidate_url": "http://www.ristorantevalfiore.it/",
+      "candidate_registrable_domain": "ristorantevalfiore.it"
+    },
+    {
+      "index": 203,
+      "venue_id": "venue:038008:ferrara:caldi-sapori",
+      "name": "Caldi Sapori",
+      "aliases": [
+        "Caldi Sapori"
+      ],
+      "address": "Via Giuseppe Giusti, 4, 44124 Ferrara",
+      "postcode": "44124",
+      "municipality": "Ferrara",
+      "region_code": "08",
+      "phone": "+390532977313",
+      "candidate_url": "http://www.centroilcastello.it/",
+      "candidate_registrable_domain": "centroilcastello.it"
+    },
+    {
+      "index": 204,
+      "venue_id": "venue:038008:ferrara:crissar",
+      "name": "Pizzeria Crissar",
+      "aliases": [
+        "Crissar",
+        "Pizzeria Crissar"
+      ],
+      "address": "Viale Olanda, 35, 44123 Ferrara",
+      "postcode": "44123",
+      "municipality": "Ferrara",
+      "region_code": "08",
+      "phone": "+393473490348",
+      "candidate_url": "https://pizzeriacrissar.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 205,
+      "venue_id": "venue:038008:ferrara:mcdonald-s",
+      "name": "McDonald's",
+      "aliases": [
+        "McDonald's",
+        "McDonalds"
+      ],
+      "address": "Piazza Trento Trieste, 6, 44121 Ferrara",
+      "postcode": "44121",
+      "municipality": "Ferrara",
+      "region_code": "08",
+      "phone": "+393466776895",
+      "candidate_url": "http://www.mcdonalds.it/",
+      "candidate_registrable_domain": "mcdonalds.it"
+    },
+    {
+      "index": 206,
+      "venue_id": "venue:038023:voghiera:d-artemi-ristorante-bar-pizzeria",
+      "name": "d'Artèmi - ristorante bar pizzeria",
+      "aliases": [
+        "d'Artèmi -",
+        "d'Artèmi - ristorante bar pizzeria",
+        "dArtèmi -"
+      ],
+      "address": "Via Antonio Gramsci, 5, 44019 Voghiera",
+      "postcode": "44019",
+      "municipality": "Voghiera",
+      "region_code": "08",
+      "phone": "+393391337224",
+      "candidate_url": "https://www.dartemi.it/",
+      "candidate_registrable_domain": "dartemi.it"
+    },
+    {
+      "index": 207,
+      "venue_id": "venue:039007:cervia:treseicinque",
+      "name": "Osteria TreSeiCinque",
+      "aliases": [
+        "Osteria TreSeiCinque",
+        "TreSeiCinque"
+      ],
+      "address": "Viale Volturno, 2, 48015 Cervia",
+      "postcode": "48015",
+      "municipality": "Cervia",
+      "region_code": "08",
+      "phone": "+390544201819",
+      "candidate_url": "http://osteria365.wordpress.com/",
+      "candidate_registrable_domain": "wordpress.com"
+    },
+    {
+      "index": 208,
+      "venue_id": "venue:039009:cotignola:dei-binari",
+      "name": "Osteria dei Binari",
+      "aliases": [
+        "Osteria dei Binari",
+        "dei Binari"
+      ],
+      "address": "Via Domenico Facciani, 1, 48033 Cotignola",
+      "postcode": "48033",
+      "municipality": "Cotignola",
+      "region_code": "08",
+      "phone": "+390545011509",
+      "candidate_url": "http://www.osteriadeibinari.it/",
+      "candidate_registrable_domain": "osteriadeibinari.it"
+    },
+    {
+      "index": 209,
+      "venue_id": "venue:039015:riolo-terme:querciola",
+      "name": "Agriturismo La Querciola",
+      "aliases": [
+        "Agriturismo La Querciola"
+      ],
+      "address": "Via Campolasso, 4, 48025 Riolo Terme",
+      "postcode": "48025",
+      "municipality": "Riolo Terme",
+      "region_code": "08",
+      "phone": "+39054674077",
+      "candidate_url": "http://www.agriturismolaquerciola.it/",
+      "candidate_registrable_domain": "agriturismolaquerciola.it"
+    },
+    {
+      "index": 210,
+      "venue_id": "venue:040007:cesena:incanto-cesena",
+      "name": "Incanto Cesena",
+      "aliases": [
+        "Incanto",
+        "Incanto Cesena"
+      ],
+      "address": "Via Antonio Manuzzi, 145, 47521 Cesena",
+      "postcode": "47521",
+      "municipality": "Cesena",
+      "region_code": "08",
+      "phone": "+393351341731",
+      "candidate_url": "https://incantocesena.it/",
+      "candidate_registrable_domain": "incantocesena.it"
+    },
+    {
+      "index": 211,
+      "venue_id": "venue:040007:cesena:mastro-birraio-cesena",
+      "name": "Mastro Birraio Cesena",
+      "aliases": [
+        "Mastro Birraio",
+        "Mastro Birraio Cesena"
+      ],
+      "address": "Via Boccaquattro, 2, 47521 Cesena",
+      "postcode": "47521",
+      "municipality": "Cesena",
+      "region_code": "08",
+      "phone": "+390547613484",
+      "candidate_url": "https://www.instagram.com/mastrobirraiocesena/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 212,
+      "venue_id": "venue:040012:forli:giustospirito",
+      "name": "Giustospirito",
+      "aliases": [
+        "Giustospirito"
+      ],
+      "address": "Via Edith Stein, 34, 47122 Forlì",
+      "postcode": "47122",
+      "municipality": "Forlì",
+      "region_code": "08",
+      "phone": "+390543566927",
+      "candidate_url": "http://www.giustospirito.com/",
+      "candidate_registrable_domain": "giustospirito.com"
+    },
+    {
+      "index": 213,
+      "venue_id": "venue:040016:gatteo:trabucco",
+      "name": "Il Trabucco",
+      "aliases": [
+        "Il Trabucco"
+      ],
+      "address": "Via Nazionale Adriatica, 29, 47043 Gatteo",
+      "postcode": "47043",
+      "municipality": "Gatteo",
+      "region_code": "08",
+      "phone": "+393249084281",
+      "candidate_url": "http://www.iltrabucco.net/",
+      "candidate_registrable_domain": "iltrabucco.net"
+    },
+    {
+      "index": 214,
+      "venue_id": "venue:040032:predappio:cittadella-del-vino",
+      "name": "La Cittadella del Vino",
+      "aliases": [
+        "La Cittadella del Vino"
+      ],
+      "address": "Via Lucchina, 23, 47016 Predappio",
+      "postcode": "47016",
+      "municipality": "Predappio",
+      "region_code": "08",
+      "phone": "+390543940864",
+      "candidate_url": "http://www.conde.it/",
+      "candidate_registrable_domain": "conde.it"
+    },
+    {
+      "index": 215,
+      "venue_id": "venue:040045:savignano-sul-rubicone:antica-osteria-del-gallo",
+      "name": "Antica Osteria del Gallo",
+      "aliases": [
+        "Antica Osteria del Gallo"
+      ],
+      "address": "Via Guidoni, 19, 47039 Savignano sul Rubicone",
+      "postcode": "47039",
+      "municipality": "Savignano sul Rubicone",
+      "region_code": "08",
+      "phone": "+390541381621",
+      "candidate_url": "http://www.osteriadelgallosavignano.com/",
+      "candidate_registrable_domain": "osteriadelgallosavignano.com"
+    },
+    {
+      "index": 216,
+      "venue_id": "venue:041008:cantiano:del-brolio",
+      "name": "La Locanda Del Brolio",
+      "aliases": [
+        "La Locanda Del Brolio"
+      ],
+      "address": "Via Giuseppe Mazzini, 8, 61044 Cantiano",
+      "postcode": "61044",
+      "municipality": "Cantiano",
+      "region_code": "11",
+      "phone": "+390721783068",
+      "candidate_url": "http://www.locandadelbrolio.it/",
+      "candidate_registrable_domain": "locandadelbrolio.it"
+    },
+    {
+      "index": 217,
+      "venue_id": "venue:041013:fano:orchidea",
+      "name": "Bar Orchidea",
+      "aliases": [
+        "Bar Orchidea",
+        "Orchidea"
+      ],
+      "address": "Via Luigi Einaudi, 10, 61032 Fano",
+      "postcode": "61032",
+      "municipality": "Fano",
+      "region_code": "11",
+      "phone": "+390721854020",
+      "candidate_url": "http://orchideafano.it/",
+      "candidate_registrable_domain": "orchideafano.it"
+    },
+    {
+      "index": 218,
+      "venue_id": "venue:041019:gabicce-mare:piazzetta-gabicce-monte",
+      "name": "La Piazzetta - Gabicce Monte",
+      "aliases": [
+        "La Piazzetta - Gabicce Monte"
+      ],
+      "address": "Piazza Valbruna, 4, 61011 Gabicce Mare",
+      "postcode": "61011",
+      "municipality": "Gabicce Mare",
+      "region_code": "11",
+      "phone": "+390451953018",
+      "candidate_url": "http://lapiazzettagabicce.com/",
+      "candidate_registrable_domain": "lapiazzettagabicce.com"
+    },
+    {
+      "index": 219,
+      "venue_id": "venue:041030:montecalvo-in-foglia:cavaliere",
+      "name": "Ristorante Cavaliere",
+      "aliases": [
+        "Cavaliere",
+        "Ristorante Cavaliere"
+      ],
+      "address": "Via Provinciale Feltresca, 81, 61020 Montecalvo in Foglia",
+      "postcode": "61020",
+      "municipality": "Montecalvo in Foglia",
+      "region_code": "11",
+      "phone": "+390722580312",
+      "candidate_url": "http://www.ristorantecavaliere.com/",
+      "candidate_registrable_domain": "ristorantecavaliere.com"
+    },
+    {
+      "index": 220,
+      "venue_id": "venue:041034:montefelcino:biologico-villa-rosa",
+      "name": "Agriturismo biologico Villa Rosa",
+      "aliases": [
+        "Agriturismo biologico Villa Rosa"
+      ],
+      "address": "Via Casarotonda, 24, 61030 Montefelcino",
+      "postcode": "61030",
+      "municipality": "Montefelcino",
+      "region_code": "11",
+      "phone": "+393334568167",
+      "candidate_url": "http://www.terrediurbino.it/it/turista/mangiare.aspx",
+      "candidate_registrable_domain": "terrediurbino.it"
+    },
+    {
+      "index": 221,
+      "venue_id": "venue:042002:ancona:maway-al-passetto",
+      "name": "MaWay - Al Passetto",
+      "aliases": [
+        "MaWay - Al Passetto"
+      ],
+      "address": "Piazza 4 Novembre, 1, 60124 Ancona",
+      "postcode": "60124",
+      "municipality": "Ancona",
+      "region_code": "11",
+      "phone": "+393510776705",
+      "candidate_url": "https://www.maway.it/",
+      "candidate_registrable_domain": "maway.it"
+    },
+    {
+      "index": 222,
+      "venue_id": "venue:042014:chiaravalle:origine-cucina-identitaria",
+      "name": "Ristorante Origine Cucina Identitaria",
+      "aliases": [
+        "Origine Cucina Identitaria",
+        "Ristorante Origine Cucina Identitaria"
+      ],
+      "address": "Via Grancetta, 49, 60033 Chiaravalle",
+      "postcode": "60033",
+      "municipality": "Chiaravalle",
+      "region_code": "11",
+      "phone": "+393508178505",
+      "candidate_url": "https://origine.superbexperience.com/",
+      "candidate_registrable_domain": "superbexperience.com"
+    },
+    {
+      "index": 223,
+      "venue_id": "venue:042017:fabriano:pasticceria-cafe-vinoteca-mimosa",
+      "name": "Pasticceria Cafe Vinoteca Mimosa",
+      "aliases": [
+        "Pasticceria Cafe Vinoteca Mimosa"
+      ],
+      "address": "Via Enrico Cialdini, 18, 60044 Fabriano",
+      "postcode": "60044",
+      "municipality": "Fabriano",
+      "region_code": "11",
+      "phone": "+3907324130",
+      "candidate_url": "http://pasticceriawinebar-mimosa.it/",
+      "candidate_registrable_domain": "pasticceriawinebar-mimosa.it"
+    },
+    {
+      "index": 224,
+      "venue_id": "venue:042034:osimo:gelateria-4-1",
+      "name": "Bar Gelateria 4 + 1",
+      "aliases": [
+        "Bar Gelateria 4 + 1",
+        "Gelateria 4 + 1"
+      ],
+      "address": "Via San Marco, 7, 60027 Osimo",
+      "postcode": "60027",
+      "municipality": "Osimo",
+      "region_code": "11",
+      "phone": "+390717231612",
+      "candidate_url": "http://www.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 225,
+      "venue_id": "venue:043013:civitanova-marche:freshenergy",
+      "name": "FreshEnergy",
+      "aliases": [
+        "FreshEnergy"
+      ],
+      "address": "Corso Dalmazia, 86, 62012 Civitanova Marche",
+      "postcode": "62012",
+      "municipality": "Civitanova Marche",
+      "region_code": "11",
+      "phone": "+393480108592",
+      "candidate_url": "https://freshenergy.it/",
+      "candidate_registrable_domain": "freshenergy.it"
+    },
+    {
+      "index": 226,
+      "venue_id": "venue:043043:potenza-picena:nettuno",
+      "name": "Ristorante Pizzeria Nettuno",
+      "aliases": [
+        "Pizzeria Nettuno",
+        "Ristorante Pizzeria Nettuno"
+      ],
+      "address": "Piazzale Stazione, 2, 62018 Potenza Picena",
+      "postcode": "62018",
+      "municipality": "Potenza Picena",
+      "region_code": "11",
+      "phone": "+390733880714",
+      "candidate_url": "https://www.ristorantenettuno1960.com/",
+      "candidate_registrable_domain": "ristorantenettuno1960.com"
+    },
+    {
+      "index": 227,
+      "venue_id": "venue:044021:force:euro-bar-alesiani",
+      "name": "Euro Bar Alesiani",
+      "aliases": [
+        "Euro Bar Alesiani"
+      ],
+      "address": "Via Roma, 2, 63086 Force",
+      "postcode": "63086",
+      "municipality": "Force",
+      "region_code": "11",
+      "phone": "+390736373133",
+      "candidate_url": "http://m.facebook.com/eurobar.force/?locale2=it_IT",
+      "candidate_registrable_domain": "facebook.com"
+    },
+    {
+      "index": 228,
+      "venue_id": "venue:044029:massignano:chiaraluce-country-house",
+      "name": "Chiaraluce Country House",
+      "aliases": [
+        "Chiaraluce Country House"
+      ],
+      "address": "Contrada Fonte Trufo, 34, 63061 Massignano",
+      "postcode": "63061",
+      "municipality": "Massignano",
+      "region_code": "11",
+      "phone": "+393479992381",
+      "candidate_url": "http://www.chiaraluce.eu/",
+      "candidate_registrable_domain": "chiaraluce.eu"
+    },
+    {
+      "index": 229,
+      "venue_id": "venue:045010:massa:sole",
+      "name": "Ristorante Il Sole",
+      "aliases": [
+        "Il Sole",
+        "Ristorante Il Sole"
+      ],
+      "address": "Via Lungomare di Levante, 42, 54100 Massa",
+      "postcode": "54100",
+      "municipality": "Massa",
+      "region_code": "09",
+      "phone": "+393456030907",
+      "candidate_url": "http://www.hotelsolemassa.com/index.php",
+      "candidate_registrable_domain": "hotelsolemassa.com"
+    },
+    {
+      "index": 230,
+      "venue_id": "venue:045011:montignoso:pasticceria-caffetteria-bonotti",
+      "name": "Pasticceria Caffetteria Bonotti",
+      "aliases": [
+        "Pasticceria Caffetteria Bonotti"
+      ],
+      "address": "Via Carlo Sforza, 72, 54038 Montignoso",
+      "postcode": "54038",
+      "municipality": "Montignoso",
+      "region_code": "09",
+      "phone": "+3905851980132",
+      "candidate_url": "https://bit.ly/Men%C3%B9PasticceriaCaffetteriaBonotti",
+      "candidate_registrable_domain": "bit.ly"
+    },
+    {
+      "index": 231,
+      "venue_id": "venue:046015:gallicano:nido-dell-aquila",
+      "name": "Ristorante Pizzeria Il Nido dell'Aquila",
+      "aliases": [
+        "Pizzeria Il Nido dell'Aquila",
+        "Ristorante Pizzeria Il Nido dell'Aquila",
+        "Ristorante Pizzeria Il Nido dellAquila"
+      ],
+      "address": "Località Colle Aginaia, 7, 55027 Gallicano",
+      "postcode": "55027",
+      "municipality": "Gallicano",
+      "region_code": "09",
+      "phone": "+390583709999",
+      "candidate_url": "http://www.hotelristorantetrecastelli.com/",
+      "candidate_registrable_domain": "hotelristorantetrecastelli.com"
+    },
+    {
+      "index": 232,
+      "venue_id": "venue:046017:lucca:bocconcino",
+      "name": "Il Bocconcino",
+      "aliases": [
+        "Il Bocconcino"
+      ],
+      "address": "Via Cesare Viviani, 1199, 55100 Lucca",
+      "postcode": "55100",
+      "municipality": "Lucca",
+      "region_code": "09",
+      "phone": "+390583342547",
+      "candidate_url": "https://barilbocconcino.eatbu.com/?lang=it",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 233,
+      "venue_id": "venue:046030:stazzema:sotto-la-loggia",
+      "name": "Sotto la loggia",
+      "aliases": [
+        "Sotto la loggia"
+      ],
+      "address": "Via Luigi Cadorna, 94, 55040 Stazzema",
+      "postcode": "55040",
+      "municipality": "Stazzema",
+      "region_code": "09",
+      "phone": "+390584777839",
+      "candidate_url": "http://www.ristorantesottolaloggia.it/",
+      "candidate_registrable_domain": "ristorantesottolaloggia.it"
+    },
+    {
+      "index": 234,
+      "venue_id": "venue:046033:viareggio:pachino",
+      "name": "Pizzeria Il Pachino",
+      "aliases": [
+        "Il Pachino",
+        "Pizzeria Il Pachino"
+      ],
+      "address": "Via Vittorio Veneto, 46, 55049 Viareggio",
+      "postcode": "55049",
+      "municipality": "Viareggio",
+      "region_code": "09",
+      "phone": "+390584961063",
+      "candidate_url": "http://www.pizzeriapachino.it/",
+      "candidate_registrable_domain": "pizzeriapachino.it"
+    },
+    {
+      "index": 235,
+      "venue_id": "venue:047014:pistoia:lago-giardino",
+      "name": "Lago Giardino",
+      "aliases": [
+        "Lago Giardino"
+      ],
+      "address": "Via del Pozzo San Sebastiano, 47/a, 51100 Pistoia",
+      "postcode": "51100",
+      "municipality": "Pistoia",
+      "region_code": "09",
+      "phone": "+390573946226",
+      "candidate_url": "http://www.lagogiardino.altervista.org/",
+      "candidate_registrable_domain": "altervista.org"
+    },
+    {
+      "index": 236,
+      "venue_id": "venue:047014:pistoia:soldi-dei-campagnoli",
+      "name": "Ristorante Soldi dei Campagnoli",
+      "aliases": [
+        "Ristorante Soldi dei Campagnoli",
+        "Soldi dei Campagnoli"
+      ],
+      "address": "Via Montechiaro, 29, 51100 Pistoia",
+      "postcode": "51100",
+      "municipality": "Pistoia",
+      "region_code": "09",
+      "phone": "+390573571738",
+      "candidate_url": "http://www.vivaisoldi.it/",
+      "candidate_registrable_domain": "vivaisoldi.it"
+    },
+    {
+      "index": 237,
+      "venue_id": "venue:048004:borgo-san-lorenzo:mediceo",
+      "name": "Caffè Mediceo",
+      "aliases": [
+        "Caffè Mediceo",
+        "Mediceo"
+      ],
+      "address": "Viale della Resistenza, 2, 50032 Borgo San Lorenzo",
+      "postcode": "50032",
+      "municipality": "Borgo San Lorenzo",
+      "region_code": "09",
+      "phone": "+390558459505",
+      "candidate_url": "http://www.caffemediceo.it/",
+      "candidate_registrable_domain": "caffemediceo.it"
+    },
+    {
+      "index": 238,
+      "venue_id": "venue:048006:campi-bisenzio:zero3",
+      "name": "Ristorante Pizzeria Zero3",
+      "aliases": [
+        "Pizzeria Zero3",
+        "Ristorante Pizzeria Zero3"
+      ],
+      "address": "Via San Quirico, 298, 50013 Campi Bisenzio",
+      "postcode": "50013",
+      "municipality": "Campi Bisenzio",
+      "region_code": "09",
+      "phone": "+390550984400",
+      "candidate_url": "https://www.zero3pizzeria.com/",
+      "candidate_registrable_domain": "zero3pizzeria.com"
+    },
+    {
+      "index": 239,
+      "venue_id": "venue:048017:firenze:brandi-gastronomia-e-prodotti-tipici-napoletani",
+      "name": "Brandi Gastronomia e Prodotti Tipici Napoletani",
+      "aliases": [
+        "Brandi Gastronomia e Prodotti Tipici Napoletani"
+      ],
+      "address": "Via Flavio Torello Baracchini, 37, 50127 Firenze",
+      "postcode": "50127",
+      "municipality": "Firenze",
+      "region_code": "09",
+      "phone": "+390555272302",
+      "candidate_url": "https://www.brandigastronomia.it/",
+      "candidate_registrable_domain": "brandigastronomia.it"
+    },
+    {
+      "index": 240,
+      "venue_id": "venue:048017:firenze:du-theatre",
+      "name": "Cafe du theatre",
+      "aliases": [
+        "Cafe du theatre"
+      ],
+      "address": "Via Ghibellina, 99, 50122 Firenze",
+      "postcode": "50122",
+      "municipality": "Firenze",
+      "region_code": "09",
+      "phone": "+393299238056",
+      "candidate_url": "https://instagram.com/cafedutheatrefirenze?igshid=YmMyMTA2M2Y%3D",
+      "candidate_registrable_domain": "instagram.com"
+    }
+  ]
+}

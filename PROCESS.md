@@ -234,6 +234,11 @@ publication rate), 36 rejected, 49 ambiguous; 83 retryable; $0.1828; 6 minutes. 
 The pilot drew from a single stratum because `region` was empty in the source
 records; the selector now uses `region_code` (20 regions).
 
+Holdout selected (2026-09-24): 480 venues across 20 regions, seed
+`locked-holdout-llm-v1`, fingerprint `440ad0df…caae1`, in
+`benchmark/llm-review-holdout-v1/` with 10 labelling packets and
+`LABELLING-INSTRUCTIONS.md`. Labels are pending (step 3.3).
+
 Evidence for this protocol: in `v1h-dev-3` (spent v1 holdout, development use),
 all 5 publications counted false against raw Codex labels were label errors. Four
 showed the record's exact phone and address on the venue's own domain; the fifth

@@ -1,0 +1,757 @@
+{
+  "schema_version": 1,
+  "packet": "llm-review-holdout-v1-385-432",
+  "output_file": "locked-holdout-adjudication-385-432.json",
+  "instructions": "LABELLING-INSTRUCTIONS.md",
+  "adjudication_header": {
+    "schema_version": 1,
+    "adjudication_set": "llm-review-holdout-v1-adjudication-385-432",
+    "partition": "locked_holdout",
+    "source": "independent_fixture_review",
+    "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1"
+  },
+  "venues": [
+    {
+      "index": 385,
+      "venue_id": "venue:073013:martina-franca:tomato-and-basil",
+      "name": "Pizzeria Tomato and Basil",
+      "aliases": [
+        "Pizzeria Tomato and Basil",
+        "Tomato and Basil"
+      ],
+      "address": "Vico 1 Salvator Rosa, 15, 74015 Martina Franca",
+      "postcode": "74015",
+      "municipality": "Martina Franca",
+      "region_code": "16",
+      "phone": "+390804306776",
+      "candidate_url": "https://sites.google.com/view/pizzeriapomodoroebasilico",
+      "candidate_registrable_domain": "google.com"
+    },
+    {
+      "index": 386,
+      "venue_id": "venue:073024:san-giorgio-ionico:punto-pizza",
+      "name": "Punto Pizza",
+      "aliases": [
+        "Punto Pizza"
+      ],
+      "address": "Via Gian Lorenzo Bernini, 5, 74027 San Giorgio Jonico",
+      "postcode": "74027",
+      "municipality": "San Giorgio Ionico",
+      "region_code": "16",
+      "phone": "+393319184599",
+      "candidate_url": "https://www.instagram.com/pizzeriapuntopizza/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 387,
+      "venue_id": "venue:073027:taranto:rainbow-lounge-cafe",
+      "name": "Rainbow Lounge Cafe",
+      "aliases": [
+        "Rainbow Lounge Cafe"
+      ],
+      "address": "Via Buccari, 36, 74121 Taranto",
+      "postcode": "74121",
+      "municipality": "Taranto",
+      "region_code": "16",
+      "phone": "+390997351723",
+      "candidate_url": "http://www.arcobalenoloungecafe.it/",
+      "candidate_registrable_domain": "arcobalenoloungecafe.it"
+    },
+    {
+      "index": 388,
+      "venue_id": "venue:073027:taranto:rosy",
+      "name": "Bar Rosy",
+      "aliases": [
+        "Bar Rosy",
+        "Rosy"
+      ],
+      "address": "Via Polibio, 9, 74121 Taranto",
+      "postcode": "74121",
+      "municipality": "Taranto",
+      "region_code": "16",
+      "phone": "+390994791558",
+      "candidate_url": "http://tarantoinshopping.it/",
+      "candidate_registrable_domain": "tarantoinshopping.it"
+    },
+    {
+      "index": 389,
+      "venue_id": "venue:073027:taranto:veneto",
+      "name": "Veneto",
+      "aliases": [
+        "Veneto"
+      ],
+      "address": "Via Veneto, 46, 74121 Taranto",
+      "postcode": "74121",
+      "municipality": "Taranto",
+      "region_code": "16",
+      "phone": "+393497796905",
+      "candidate_url": "http://l.ead.me/bb0dKR?trackSharing=1",
+      "candidate_registrable_domain": "ead.me"
+    },
+    {
+      "index": 390,
+      "venue_id": "venue:074001:brindisi:c-era-una-volta",
+      "name": "C'era una volta",
+      "aliases": [
+        "C'era una volta",
+        "Cera una volta"
+      ],
+      "address": "Piazzetta Fornaro, 5, 72100 Brindisi",
+      "postcode": "72100",
+      "municipality": "Brindisi",
+      "region_code": "16",
+      "phone": "+393281091294",
+      "candidate_url": "https://website-6031911357675738990154-restaurant.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 391,
+      "venue_id": "venue:074001:brindisi:concordia-bistrot",
+      "name": "Concordia Bistrot",
+      "aliases": [
+        "Concordia Bistrot"
+      ],
+      "address": "Largo Concordia, 9, 72100 Brindisi",
+      "postcode": "72100",
+      "municipality": "Brindisi",
+      "region_code": "16",
+      "phone": "+3908311707160",
+      "candidate_url": "http://www.concordiabistrot.it/",
+      "candidate_registrable_domain": "concordiabistrot.it"
+    },
+    {
+      "index": 392,
+      "venue_id": "venue:075023:corigliano-d-otranto:koria-restaurant",
+      "name": "Kòria Restaurant",
+      "aliases": [
+        "Kòria Restaurant"
+      ],
+      "address": "Via Giuseppe Garibaldi, 8, 73022 Corigliano d'Otranto",
+      "postcode": "73022",
+      "municipality": "Corigliano d'Otranto",
+      "region_code": "16",
+      "phone": "+393888950441",
+      "candidate_url": "https://koriarestaurant.it/",
+      "candidate_registrable_domain": "koriarestaurant.it"
+    },
+    {
+      "index": 393,
+      "venue_id": "venue:075029:galatina:signoria",
+      "name": "Ristorante Signoria",
+      "aliases": [
+        "Ristorante Signoria",
+        "Signoria"
+      ],
+      "address": "Via Castello, 19, 73013 Galatina",
+      "postcode": "73013",
+      "municipality": "Galatina",
+      "region_code": "16",
+      "phone": "+390836210616",
+      "candidate_url": "https://www.nohasipalace.com/ristorante/",
+      "candidate_registrable_domain": "nohasipalace.com"
+    },
+    {
+      "index": 394,
+      "venue_id": "venue:075035:lecce:capriccio-divino",
+      "name": "Ristorante Capriccio Divino",
+      "aliases": [
+        "Capriccio Divino",
+        "Ristorante Capriccio Divino"
+      ],
+      "address": "Via di Leuca, 123B, 73100 Lecce",
+      "postcode": "73100",
+      "municipality": "Lecce",
+      "region_code": "16",
+      "phone": "+390832289911",
+      "candidate_url": "http://www.capricciodivino.it/",
+      "candidate_registrable_domain": "capricciodivino.it"
+    },
+    {
+      "index": 395,
+      "venue_id": "venue:075035:lecce:re",
+      "name": "Pizzeria Lo Re",
+      "aliases": [
+        "Lo Re",
+        "Pizzeria Lo Re"
+      ],
+      "address": "Viale Francesco Lo Re, 13, 73100 Lecce",
+      "postcode": "73100",
+      "municipality": "Lecce",
+      "region_code": "16",
+      "phone": "+393319362000",
+      "candidate_url": "http://www.pizzerialore.com/",
+      "candidate_registrable_domain": "pizzerialore.com"
+    },
+    {
+      "index": 396,
+      "venue_id": "venue:075035:lecce:viale",
+      "name": "IL VIALE",
+      "aliases": [
+        "IL VIALE"
+      ],
+      "address": "Viale della Libertà, 66, 73100 Lecce",
+      "postcode": "73100",
+      "municipality": "Lecce",
+      "region_code": "16",
+      "phone": "+393517742815",
+      "candidate_url": "http://www.instagram.con/ilviale_bar",
+      "candidate_registrable_domain": "instagram.con"
+    },
+    {
+      "index": 397,
+      "venue_id": "venue:075052:nardo:parisi",
+      "name": "Caffe Parisi",
+      "aliases": [
+        "Caffe Parisi",
+        "Parisi"
+      ],
+      "address": "Piazza Antonio Salandra, 38, 73048 Nardò",
+      "postcode": "73048",
+      "municipality": "Nardò",
+      "region_code": "16",
+      "phone": "+3908331823223",
+      "candidate_url": "http://www.caffeparisinardo.it/",
+      "candidate_registrable_domain": "caffeparisinardo.it"
+    },
+    {
+      "index": 398,
+      "venue_id": "venue:075057:otranto:torre-bar-bistrot",
+      "name": "La Torre Bar & Bistrot",
+      "aliases": [
+        "La Torre Bar & Bistrot"
+      ],
+      "address": "Lungomare degli Eroi, 73028 Otranto",
+      "postcode": "73028",
+      "municipality": "Otranto",
+      "region_code": "16",
+      "phone": "+3908361905366",
+      "candidate_url": "http://www.originalotranto.it/",
+      "candidate_registrable_domain": "originalotranto.it"
+    },
+    {
+      "index": 399,
+      "venue_id": "venue:076063:potenza:bequi-smart-cafe",
+      "name": "Bequi Smart Cafe",
+      "aliases": [
+        "Bequi Smart Cafe"
+      ],
+      "address": "Via del Gallitello, 3, 85100 Potenza",
+      "postcode": "85100",
+      "municipality": "Potenza",
+      "region_code": "17",
+      "phone": "+3909711649927",
+      "candidate_url": "http://bequi.it/",
+      "candidate_registrable_domain": "bequi.it"
+    },
+    {
+      "index": 400,
+      "venue_id": "venue:076063:potenza:fandango-potenza",
+      "name": "Fandango - Potenza",
+      "aliases": [
+        "Fandango -",
+        "Fandango - Potenza"
+      ],
+      "address": "Via dei Molinari, 37, 85100 Potenza",
+      "postcode": "85100",
+      "municipality": "Potenza",
+      "region_code": "17",
+      "phone": "+390971281157",
+      "candidate_url": "http://www.fandangopizzeria.it/",
+      "candidate_registrable_domain": "fandangopizzeria.it"
+    },
+    {
+      "index": 401,
+      "venue_id": "venue:076064:rapolla:vulturis",
+      "name": "Ristorante Vulturis",
+      "aliases": [
+        "Ristorante Vulturis",
+        "Vulturis"
+      ],
+      "address": "via s.lorenzo snc, 85027 Rapolla",
+      "postcode": "85027",
+      "municipality": "Rapolla",
+      "region_code": "17",
+      "phone": "+390972760818",
+      "candidate_url": "http://ristorantevulturis.it/",
+      "candidate_registrable_domain": "ristorantevulturis.it"
+    },
+    {
+      "index": 402,
+      "venue_id": "venue:077021:policoro:espressoin",
+      "name": "Espressoin",
+      "aliases": [
+        "Espressoin"
+      ],
+      "address": "Via Salerno, 52, 75025 Policoro",
+      "postcode": "75025",
+      "municipality": "Policoro",
+      "region_code": "17",
+      "phone": "+390835680122",
+      "candidate_url": "https://espressoin.altervista.org/",
+      "candidate_registrable_domain": "altervista.org"
+    },
+    {
+      "index": 403,
+      "venue_id": "venue:078081:montalto-uffugo:gambilongo-caffe",
+      "name": "Gambilongo Caffe",
+      "aliases": [
+        "Gambilongo",
+        "Gambilongo Caffe"
+      ],
+      "address": "Via dell'Artigianato, 6, 87046 Montalto Uffugo",
+      "postcode": "87046",
+      "municipality": "Montalto Uffugo",
+      "region_code": "18",
+      "phone": "+390984402034",
+      "candidate_url": "https://zaap.bio/Gambilongogroup",
+      "candidate_registrable_domain": "zaap.bio"
+    },
+    {
+      "index": 404,
+      "venue_id": "venue:078081:montalto-uffugo:scalino-cafe",
+      "name": "Scalino Cafe",
+      "aliases": [
+        "Scalino Cafe"
+      ],
+      "address": "Piazza Enrico Bianco, 12, 87040 Montalto Uffugo",
+      "postcode": "87040",
+      "municipality": "Montalto Uffugo",
+      "region_code": "18",
+      "phone": "+390984932095",
+      "candidate_url": "http://www.scalinocafe.com/",
+      "candidate_registrable_domain": "scalinocafe.com"
+    },
+    {
+      "index": 405,
+      "venue_id": "venue:078157:corigliano-rossano:sant-emilia-ristorante-pizzeria",
+      "name": "Sant'Emilia Ristorante Pizzeria",
+      "aliases": [
+        "Sant'Emilia",
+        "Sant'Emilia Ristorante Pizzeria",
+        "SantEmilia"
+      ],
+      "address": "Via Nazionale, 87064 Corigliano-Rossano",
+      "postcode": "87064",
+      "municipality": "Corigliano-Rossano",
+      "region_code": "18",
+      "phone": "+390983884450",
+      "candidate_url": "http://www.ristorantesantemilia.it/",
+      "candidate_registrable_domain": "ristorantesantemilia.it"
+    },
+    {
+      "index": 406,
+      "venue_id": "venue:079012:botricello:da-agostino",
+      "name": "Ristorante Pizzeria Da Agostino",
+      "aliases": [
+        "Pizzeria Da Agostino",
+        "Ristorante Pizzeria Da Agostino"
+      ],
+      "address": "Via Magna Grecia, 33, 88070 Botricello",
+      "postcode": "88070",
+      "municipality": "Botricello",
+      "region_code": "18",
+      "phone": "+390961963331",
+      "candidate_url": "http://www.daagostino.it/",
+      "candidate_registrable_domain": "daagostino.it"
+    },
+    {
+      "index": 407,
+      "venue_id": "venue:080029:condofuri:gemelli-francesco",
+      "name": "Agriturismo Gemelli Francesco",
+      "aliases": [
+        "Agriturismo Gemelli Francesco"
+      ],
+      "address": "Via Salinella, 19, 89030 Condofuri",
+      "postcode": "89030",
+      "municipality": "Condofuri",
+      "region_code": "18",
+      "phone": "+393492627047",
+      "candidate_url": "http://www.agriturismogemelli.it/",
+      "candidate_registrable_domain": "agriturismogemelli.it"
+    },
+    {
+      "index": 408,
+      "venue_id": "venue:080036:gerace:terrazza",
+      "name": "La Terrazza",
+      "aliases": [
+        "La Terrazza"
+      ],
+      "address": "Via Nazionale, 89040 Gerace",
+      "postcode": "89040",
+      "municipality": "Gerace",
+      "region_code": "18",
+      "phone": "+393518531808",
+      "candidate_url": "http://www.ristorantelaterrazzagerace.it/",
+      "candidate_registrable_domain": "ristorantelaterrazzagerace.it"
+    },
+    {
+      "index": 409,
+      "venue_id": "venue:080057:palmi:martins-bar",
+      "name": "Martins Bar",
+      "aliases": [
+        "Martins",
+        "Martins Bar"
+      ],
+      "address": "Via Concordato, 103, 89015 Palmi",
+      "postcode": "89015",
+      "municipality": "Palmi",
+      "region_code": "18",
+      "phone": "+390966420450",
+      "candidate_url": "http://m.facebook.com/martinsbarpalmi/?locale2=it_IT",
+      "candidate_registrable_domain": "facebook.com"
+    },
+    {
+      "index": 410,
+      "venue_id": "venue:080063:reggio-di-calabria:mamas",
+      "name": "Mamas",
+      "aliases": [
+        "Mamas"
+      ],
+      "address": "Via Giuseppe De Nava, 3, 89123 Reggio di Calabria",
+      "postcode": "89123",
+      "municipality": "Reggio di Calabria",
+      "region_code": "18",
+      "phone": "+3909651890348",
+      "candidate_url": "http://www.mamasrc.it/",
+      "candidate_registrable_domain": "mamasrc.it"
+    },
+    {
+      "index": 411,
+      "venue_id": "venue:080065:rizziconi:pignara",
+      "name": "Pizzeria La Pignara",
+      "aliases": [
+        "La Pignara",
+        "Pizzeria La Pignara"
+      ],
+      "address": "Contrada Rotta, 89016 Rizziconi",
+      "postcode": "89016",
+      "municipality": "Rizziconi",
+      "region_code": "18",
+      "phone": "+393404077944",
+      "candidate_url": "https://www.leggimenu.it/menu/79pk1daq7hs2",
+      "candidate_registrable_domain": "leggimenu.it"
+    },
+    {
+      "index": 412,
+      "venue_id": "venue:080093:taurianova:a-casa-di-lolo",
+      "name": "A Casa di Lolo",
+      "aliases": [
+        "A Casa di Lolo"
+      ],
+      "address": "Via Cappuccini, 53, 89029 Taurianova",
+      "postcode": "89029",
+      "municipality": "Taurianova",
+      "region_code": "18",
+      "phone": "+393459313705",
+      "candidate_url": "http://www.hracasadilolo.com/",
+      "candidate_registrable_domain": "hracasadilolo.com"
+    },
+    {
+      "index": 413,
+      "venue_id": "venue:081001:alcamo:tutticaffe",
+      "name": "Tutticaffe",
+      "aliases": [
+        "Tutticaffe"
+      ],
+      "address": "Via Florio, 16, 91011 Alcamo",
+      "postcode": "91011",
+      "municipality": "Alcamo",
+      "region_code": "19",
+      "phone": "+393381011736",
+      "candidate_url": "https://tutticaffe.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 414,
+      "venue_id": "venue:081009:favignana:210-grammi-ristorante-laboratorio",
+      "name": "210 Grammi Ristorante Laboratorio",
+      "aliases": [
+        "210 Grammi Ristorante Laboratorio"
+      ],
+      "address": "Piazza Europa, 46, 91023 Favignana",
+      "postcode": "91023",
+      "municipality": "Favignana",
+      "region_code": "19",
+      "phone": "+393283118888",
+      "candidate_url": "http://www.210grammi.com/",
+      "candidate_registrable_domain": "210grammi.com"
+    },
+    {
+      "index": 415,
+      "venue_id": "venue:081021:trapani:slo-restaurant",
+      "name": "Slo Restaurant",
+      "aliases": [
+        "Slo Restaurant"
+      ],
+      "address": "Corso Vittorio Emanuele, 30, 91100 Trapani",
+      "postcode": "91100",
+      "municipality": "Trapani",
+      "region_code": "19",
+      "phone": "+393881740226",
+      "candidate_url": "https://img.italiaonline.it/0WO5p000002qiXJGAY_slo.png",
+      "candidate_registrable_domain": "italiaonline.it"
+    },
+    {
+      "index": 416,
+      "venue_id": "venue:082027:cefalu:qualia",
+      "name": "Qualia",
+      "aliases": [
+        "Qualia"
+      ],
+      "address": "Via Giovanni Amendola, 16A, 90015 Cefalù",
+      "postcode": "90015",
+      "municipality": "Cefalù",
+      "region_code": "19",
+      "phone": "+390921820104",
+      "candidate_url": "https://www.ristorantequalia.it/",
+      "candidate_registrable_domain": "ristorantequalia.it"
+    },
+    {
+      "index": 417,
+      "venue_id": "venue:082048:misilmeri:costa-d-avorio",
+      "name": "Costa d'Avorio",
+      "aliases": [
+        "Costa d'Avorio",
+        "Costa dAvorio"
+      ],
+      "address": "Corso Vittorio Emanuele, 617, 90036 Misilmeri",
+      "postcode": "90036",
+      "municipality": "Misilmeri",
+      "region_code": "19",
+      "phone": "+390918722674",
+      "candidate_url": "https://img.italiaonline.it/0WO5p000003GbxQGAS_Cattura.png",
+      "candidate_registrable_domain": "italiaonline.it"
+    },
+    {
+      "index": 418,
+      "venue_id": "venue:082053:palermo:ai-sapori-doc",
+      "name": "Ai Sapori Doc",
+      "aliases": [
+        "Ai Sapori Doc"
+      ],
+      "address": "Via Giovanni Paisiello, 1/a, 90145 Palermo",
+      "postcode": "90145",
+      "municipality": "Palermo",
+      "region_code": "19",
+      "phone": "+390917829230",
+      "candidate_url": "https://www.menudigitale.io/aisaporidoc",
+      "candidate_registrable_domain": "menudigitale.io"
+    },
+    {
+      "index": 419,
+      "venue_id": "venue:082053:palermo:antico-caffe-ventimiglia",
+      "name": "Antico Caffè Ventimiglia",
+      "aliases": [
+        "Antico Caffè Ventimiglia"
+      ],
+      "address": "Via Vittorio Emanuele, 434, 90134 Palermo",
+      "postcode": "90134",
+      "municipality": "Palermo",
+      "region_code": "19",
+      "phone": "+390916512185",
+      "candidate_url": "http://anticocaffeventimiglia.it/",
+      "candidate_registrable_domain": "anticocaffeventimiglia.it"
+    },
+    {
+      "index": 420,
+      "venue_id": "venue:082053:palermo:d-orleans",
+      "name": "Pizzeria D'Orleans",
+      "aliases": [
+        "D'Orleans",
+        "Pizzeria D'Orleans",
+        "Pizzeria DOrleans"
+      ],
+      "address": "Via Brasa, 36, 90128 Palermo",
+      "postcode": "90128",
+      "municipality": "Palermo",
+      "region_code": "19",
+      "phone": "+39091593726",
+      "candidate_url": "http://www.justeat.it/restaurants-pizzeriadorleans/menu",
+      "candidate_registrable_domain": "justeat.it"
+    },
+    {
+      "index": 421,
+      "venue_id": "venue:082053:palermo:new-spinnato-food",
+      "name": "New Spinnato Food",
+      "aliases": [
+        "New Spinnato Food"
+      ],
+      "address": "Via Giovanni Bonanno, 42, 90143 Palermo",
+      "postcode": "90143",
+      "municipality": "Palermo",
+      "region_code": "19",
+      "phone": "+39091544543",
+      "candidate_url": "https://www.newspinnatofood.it/",
+      "candidate_registrable_domain": "newspinnatofood.it"
+    },
+    {
+      "index": 422,
+      "venue_id": "venue:082055:petralia-soprana:aspromonte",
+      "name": "Bar Aspromonte",
+      "aliases": [
+        "Aspromonte",
+        "Bar Aspromonte"
+      ],
+      "address": "Corso Umberto I, 87, 90026 Petralia Soprana",
+      "postcode": "90026",
+      "municipality": "Petralia Soprana",
+      "region_code": "19",
+      "phone": "+390921680880",
+      "candidate_url": "http://locator.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 423,
+      "venue_id": "venue:083005:barcellona-pozzo-di-gotto:dop",
+      "name": "DOP",
+      "aliases": [
+        "DOP"
+      ],
+      "address": "Piazza Stazione, 24, 98051 Barcellona Pozzo di Gotto",
+      "postcode": "98051",
+      "municipality": "Barcellona Pozzo di Gotto",
+      "region_code": "19",
+      "phone": "+390909794675",
+      "candidate_url": "https://img.italiaonline.it/0WO0N000002WEARWA4_15538530.png",
+      "candidate_registrable_domain": "italiaonline.it"
+    },
+    {
+      "index": 424,
+      "venue_id": "venue:083041:lipari:del-vicolo-lipari",
+      "name": "Ristorante Trattoria del Vicolo Lipari",
+      "aliases": [
+        "Ristorante Trattoria del Vicolo",
+        "Ristorante Trattoria del Vicolo Lipari",
+        "Trattoria del Vicolo"
+      ],
+      "address": "Vico Ulisse, 17, 98055 Lipari",
+      "postcode": "98055",
+      "municipality": "Lipari",
+      "region_code": "19",
+      "phone": "+390909811066",
+      "candidate_url": "http://trattoriadelvicolo.info/",
+      "candidate_registrable_domain": "trattoriadelvicolo.info"
+    },
+    {
+      "index": 425,
+      "venue_id": "venue:083048:messina:civico-123",
+      "name": "Civico 123",
+      "aliases": [
+        "Civico 123"
+      ],
+      "address": "Via 1 Settembre, 123, 98122 Messina",
+      "postcode": "98122",
+      "municipality": "Messina",
+      "region_code": "19",
+      "phone": "+390902130237",
+      "candidate_url": "http://www.civico-123.eatbu.com/",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 426,
+      "venue_id": "venue:083049:milazzo:primamuri",
+      "name": "Primamuri",
+      "aliases": [
+        "Primamuri"
+      ],
+      "address": "Via Duomo Antico, 17, 98057 Milazzo",
+      "postcode": "98057",
+      "municipality": "Milazzo",
+      "region_code": "19",
+      "phone": "+390903692420",
+      "candidate_url": "https://widget.thefork.com/6ef18ad7-48b1-4138-bd30-3bdce3e3beae",
+      "candidate_registrable_domain": "thefork.com"
+    },
+    {
+      "index": 427,
+      "venue_id": "venue:083097:taormina:bistrot-siciliano-sike",
+      "name": "Bistrot Siciliano Sikè",
+      "aliases": [
+        "Bistrot Siciliano Sikè"
+      ],
+      "address": "Corso Umberto I, 102, 98039 Taormina",
+      "postcode": "98039",
+      "municipality": "Taormina",
+      "region_code": "19",
+      "phone": "+39094224677",
+      "candidate_url": "https://www.ristorantesike.com/it",
+      "candidate_registrable_domain": "ristorantesike.com"
+    },
+    {
+      "index": 428,
+      "venue_id": "venue:084042:siculiana:zizania",
+      "name": "Ristorante  Pizzeria \"zizania\"",
+      "aliases": [
+        "Pizzeria \"zizania\"",
+        "Ristorante Pizzeria \"zizania\""
+      ],
+      "address": "Via Francia, 14, 92010 Siculiana",
+      "postcode": "92010",
+      "municipality": "Siculiana",
+      "region_code": "19",
+      "phone": "+390922818432",
+      "candidate_url": "http://www.ristorantepizzeriazizania.it/",
+      "candidate_registrable_domain": "ristorantepizzeriazizania.it"
+    },
+    {
+      "index": 429,
+      "venue_id": "venue:085017:santa-caterina-villarmosa:delizie",
+      "name": "Le Delizie",
+      "aliases": [
+        "Le Delizie"
+      ],
+      "address": "Via Francesco Crispi, 212, 93018 Santa Caterina Villarmosa",
+      "postcode": "93018",
+      "municipality": "Santa Caterina Villarmosa",
+      "region_code": "19",
+      "phone": "+393394072111",
+      "candidate_url": "http://codicesicilynegozi.com/2016/01/04/trattoria-pizzeria-le-delizie",
+      "candidate_registrable_domain": "codicesicilynegozi.com"
+    },
+    {
+      "index": 430,
+      "venue_id": "venue:085020:sutera:sapori-della-piazzetta",
+      "name": "I Sapori della Piazzetta",
+      "aliases": [
+        "I Sapori della Piazzetta"
+      ],
+      "address": "Via del Popolo, 8, 93010 Sutera",
+      "postcode": "93010",
+      "municipality": "Sutera",
+      "region_code": "19",
+      "phone": "+393687892025",
+      "candidate_url": "https://i-sapori-della-piazzetta.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 431,
+      "venue_id": "venue:086015:pietraperzia:fattoria-di-san-francesco",
+      "name": "La Fattoria di San Francesco",
+      "aliases": [
+        "La Fattoria di San Francesco"
+      ],
+      "address": "Contrada Menta S.N.C., 94016 Pietraperzia",
+      "postcode": "94016",
+      "municipality": "Pietraperzia",
+      "region_code": "19",
+      "phone": "+393279782279",
+      "candidate_url": "https://www.lafattoriadisanfrancesco.it/",
+      "candidate_registrable_domain": "lafattoriadisanfrancesco.it"
+    },
+    {
+      "index": 432,
+      "venue_id": "venue:087004:acireale:gattobianco-osteria-della-musica",
+      "name": "Gattobianco Osteria della musica",
+      "aliases": [
+        "Gattobianco Osteria della musica"
+      ],
+      "address": "Via Vittorio Emanuele II, 196, 95024 Acireale",
+      "postcode": "95024",
+      "municipality": "Acireale",
+      "region_code": "19",
+      "phone": "+393348409487",
+      "candidate_url": "https://www.tiktok.com/@antonioferlito1",
+      "candidate_registrable_domain": "tiktok.com"
+    }
+  ]
+}

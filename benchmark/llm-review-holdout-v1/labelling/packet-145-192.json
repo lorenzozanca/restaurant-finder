@@ -1,0 +1,762 @@
+{
+  "schema_version": 1,
+  "packet": "llm-review-holdout-v1-145-192",
+  "output_file": "locked-holdout-adjudication-145-192.json",
+  "instructions": "LABELLING-INSTRUCTIONS.md",
+  "adjudication_header": {
+    "schema_version": 1,
+    "adjudication_set": "llm-review-holdout-v1-adjudication-145-192",
+    "partition": "locked_holdout",
+    "source": "independent_fixture_review",
+    "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1"
+  },
+  "venues": [
+    {
+      "index": 145,
+      "venue_id": "venue:024100:schio:da-loris",
+      "name": "Pizzeria Ristorante Da Loris",
+      "aliases": [
+        "Pizzeria Ristorante Da Loris",
+        "Ristorante Da Loris"
+      ],
+      "address": "Contra' Barona, 49, 36015 Schio",
+      "postcode": "36015",
+      "municipality": "Schio",
+      "region_code": "05",
+      "phone": "+390445523351",
+      "candidate_url": "http://www.pizzeriadaloris.com/",
+      "candidate_registrable_domain": "pizzeriadaloris.com"
+    },
+    {
+      "index": 146,
+      "venue_id": "venue:024107:torrebelvicino:ai-combattenti",
+      "name": "Bar Trattoria Ai Combattenti",
+      "aliases": [
+        "Bar Trattoria Ai Combattenti",
+        "Trattoria Ai Combattenti"
+      ],
+      "address": "Contrada Sberze, 10, 36036 Torrebelvicino",
+      "postcode": "36036",
+      "municipality": "Torrebelvicino",
+      "region_code": "05",
+      "phone": "+393926243472",
+      "candidate_url": "https://aicombattenti.it/",
+      "candidate_registrable_domain": "aicombattenti.it"
+    },
+    {
+      "index": 147,
+      "venue_id": "venue:024116:vicenza:mana",
+      "name": "Mana",
+      "aliases": [
+        "Mana"
+      ],
+      "address": "Strada Ca' Balbi, 201, 36100 Vicenza",
+      "postcode": "36100",
+      "municipality": "Vicenza",
+      "region_code": "05",
+      "phone": "+393792731251",
+      "candidate_url": "https://www.instagram.com/mana.pizza.bistrot/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 148,
+      "venue_id": "venue:024116:vicenza:pomo-d-oro",
+      "name": "Pizzeria Pomo d'Oro",
+      "aliases": [
+        "Pizzeria Pomo d'Oro",
+        "Pizzeria Pomo dOro",
+        "Pomo d'Oro"
+      ],
+      "address": "Viale Trieste, 133, 36100 Vicenza",
+      "postcode": "36100",
+      "municipality": "Vicenza",
+      "region_code": "05",
+      "phone": "+393454102422",
+      "candidate_url": "http://www.pizzeriapomodoro.it/",
+      "candidate_registrable_domain": "pizzeriapomodoro.it"
+    },
+    {
+      "index": 149,
+      "venue_id": "venue:025006:belluno:manin",
+      "name": "Caffe Manin",
+      "aliases": [
+        "Caffe Manin",
+        "Manin"
+      ],
+      "address": "Piazza dei Martiri, 39, 32100 Belluno",
+      "postcode": "32100",
+      "municipality": "Belluno",
+      "region_code": "05",
+      "phone": "+39043734339",
+      "candidate_url": "http://www.caffemanin.it/",
+      "candidate_registrable_domain": "caffemanin.it"
+    },
+    {
+      "index": 150,
+      "venue_id": "venue:025039:pieve-di-cadore:farmhouse-la-pausa",
+      "name": "Farmhouse La Pausa",
+      "aliases": [
+        "Farmhouse La Pausa"
+      ],
+      "address": "Via Longiarù, 74, 32044 Pieve di Cadore",
+      "postcode": "32044",
+      "municipality": "Pieve di Cadore",
+      "region_code": "05",
+      "phone": "+39043533710",
+      "candidate_url": "http://www.lecapredellantelao.it/",
+      "candidate_registrable_domain": "lecapredellantelao.it"
+    },
+    {
+      "index": 151,
+      "venue_id": "venue:026043:mogliano-veneto:umi",
+      "name": "Ristorante UMI",
+      "aliases": [
+        "Ristorante UMI",
+        "UMI"
+      ],
+      "address": "Via Guglielmo Marconi, 83, 31021 Mogliano Veneto",
+      "postcode": "31021",
+      "municipality": "Mogliano Veneto",
+      "region_code": "05",
+      "phone": "+390415646238",
+      "candidate_url": "http://www.albacareto.it/",
+      "candidate_registrable_domain": "albacareto.it"
+    },
+    {
+      "index": 152,
+      "venue_id": "venue:026049:motta-di-livenza:megusta",
+      "name": "Megusta",
+      "aliases": [
+        "Megusta"
+      ],
+      "address": "Via Roma, 31045 Motta di Livenza",
+      "postcode": "31045",
+      "municipality": "Motta di Livenza",
+      "region_code": "05",
+      "phone": "+393922688286",
+      "candidate_url": "https://megusta.starmenu.it/",
+      "candidate_registrable_domain": "starmenu.it"
+    },
+    {
+      "index": 153,
+      "venue_id": "venue:026089:vedelago:pizzalonga-away-vedelago",
+      "name": "Pizzalonga Away Vedelago",
+      "aliases": [
+        "Pizzalonga Away",
+        "Pizzalonga Away Vedelago"
+      ],
+      "address": "Via Roma, 106, 31050 Vedelago",
+      "postcode": "31050",
+      "municipality": "Vedelago",
+      "region_code": "05",
+      "phone": "0423714628",
+      "candidate_url": "https://www.pizzalongaway.it/",
+      "candidate_registrable_domain": "pizzalongaway.it"
+    },
+    {
+      "index": 154,
+      "venue_id": "venue:026092:vittorio-veneto:europa",
+      "name": "Pizzeria Europa",
+      "aliases": [
+        "Europa",
+        "Pizzeria Europa"
+      ],
+      "address": "Via Dalmazia, 120, 31029 Vittorio Veneto",
+      "postcode": "31029",
+      "municipality": "Vittorio Veneto",
+      "region_code": "05",
+      "phone": "+393294533716",
+      "candidate_url": "https://drive.google.com/file/d/1SrRMwkppmv-WKkrqgs0MWd4mB0iBTlJC/view?usp=sharing",
+      "candidate_registrable_domain": "google.com"
+    },
+    {
+      "index": 155,
+      "venue_id": "venue:027033:san-dona-di-piave:vecchie-maniere",
+      "name": "Vecchie Maniere",
+      "aliases": [
+        "Vecchie Maniere"
+      ],
+      "address": "Piazza Duomo o delle Grazie, 15, 30027 San Donà di Piave",
+      "postcode": "30027",
+      "municipality": "San Donà di Piave",
+      "region_code": "05",
+      "phone": "+393206335369",
+      "candidate_url": "http://it-it.facebook.com/Vecchie-Maniere-1078681075476071",
+      "candidate_registrable_domain": "facebook.com"
+    },
+    {
+      "index": 156,
+      "venue_id": "venue:027034:san-michele-al-tagliamento:fusion-restaurant-lin",
+      "name": "Fusion Restaurant Lin",
+      "aliases": [
+        "Fusion Restaurant Lin"
+      ],
+      "address": "Via Monticano, 3, 30028 San Michele al Tagliamento",
+      "postcode": "30028",
+      "municipality": "San Michele al Tagliamento",
+      "region_code": "05",
+      "phone": "+390431439281",
+      "candidate_url": "https://www.fusionrestaurantlin.it/",
+      "candidate_registrable_domain": "fusionrestaurantlin.it"
+    },
+    {
+      "index": 157,
+      "venue_id": "venue:027042:venezia:amelia-romana",
+      "name": "Ristorante Amelia Romana",
+      "aliases": [
+        "Amelia Romana",
+        "Ristorante Amelia Romana"
+      ],
+      "address": "Via Miranese, 113, 30174 Venezia",
+      "postcode": "30174",
+      "municipality": "Venezia",
+      "region_code": "05",
+      "phone": "+393206379768",
+      "candidate_url": "http://www.ameliaromana.com/",
+      "candidate_registrable_domain": "ameliaromana.com"
+    },
+    {
+      "index": 158,
+      "venue_id": "venue:027042:venezia:bacaro-dai-fioi",
+      "name": "Bacaro dai Fioi",
+      "aliases": [
+        "Bacaro dai Fioi"
+      ],
+      "address": "C. Lunga S. Barnaba, 2715, 30123 Venezia",
+      "postcode": "30123",
+      "municipality": "Venezia",
+      "region_code": "05",
+      "phone": "+390414068130",
+      "candidate_url": "https://bacarodaifioi.eatbu.com/",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 159,
+      "venue_id": "venue:027042:venezia:chiesa",
+      "name": "Bar Alla Chiesa",
+      "aliases": [
+        "Alla Chiesa",
+        "Bar Alla Chiesa"
+      ],
+      "address": "Via Rio Cimetto, 24, 30174 Venezia",
+      "postcode": "30174",
+      "municipality": "Venezia",
+      "region_code": "05",
+      "phone": "+39041915725",
+      "candidate_url": "http://www.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 160,
+      "venue_id": "venue:027042:venezia:puro-gusto",
+      "name": "Puro Gusto",
+      "aliases": [
+        "Puro Gusto"
+      ],
+      "address": "Viale Stazione, 26, 30171 Venezia",
+      "postcode": "30171",
+      "municipality": "Venezia",
+      "region_code": "05",
+      "phone": "041 920701",
+      "candidate_url": "https://www.autogrill.it/",
+      "candidate_registrable_domain": "autogrill.it"
+    },
+    {
+      "index": 161,
+      "venue_id": "venue:027042:venezia:zanze-xvi",
+      "name": "Zanze XVI",
+      "aliases": [
+        "Zanze XVI"
+      ],
+      "address": "Fondamenta dei Tolentini, Sestiere Santa Croce, 227, 30135 Venezia",
+      "postcode": "30135",
+      "municipality": "Venezia",
+      "region_code": "05",
+      "phone": "+39041715394",
+      "candidate_url": "http://zanze.it/",
+      "candidate_registrable_domain": "zanze.it"
+    },
+    {
+      "index": 162,
+      "venue_id": "venue:028001:abano-terme:altabaco",
+      "name": "Altabaco",
+      "aliases": [
+        "Altabaco"
+      ],
+      "address": "Via Romana, 5, 35031 Abano Terme",
+      "postcode": "35031",
+      "municipality": "Abano Terme",
+      "region_code": "05",
+      "phone": "+390496450922",
+      "candidate_url": "http://www.ristopizzatabaco.it/",
+      "candidate_registrable_domain": "ristopizzatabaco.it"
+    },
+    {
+      "index": 163,
+      "venue_id": "venue:028003:albignasego:c-e-voglia-di-pizza",
+      "name": "C'é Voglia di Pizza",
+      "aliases": [
+        "C'é Voglia di Pizza",
+        "Cé Voglia di Pizza"
+      ],
+      "address": "Via Sant'Eurosia, 34, 35020 Albignasego",
+      "postcode": "35020",
+      "municipality": "Albignasego",
+      "region_code": "05",
+      "phone": "+390498625760",
+      "candidate_url": "http://www.cevogliadipizza.it/",
+      "candidate_registrable_domain": "cevogliadipizza.it"
+    },
+    {
+      "index": 164,
+      "venue_id": "venue:028003:albignasego:diemme-strada-battaglia",
+      "name": "Diemme Strada Battaglia",
+      "aliases": [
+        "Diemme Strada Battaglia"
+      ],
+      "address": "Via Battaglia, 71, 35020 Albignasego",
+      "postcode": "35020",
+      "municipality": "Albignasego",
+      "region_code": "05",
+      "phone": "+390492131821",
+      "candidate_url": "https://www.diemmestradabattaglia.com/",
+      "candidate_registrable_domain": "diemmestradabattaglia.com"
+    },
+    {
+      "index": 165,
+      "venue_id": "venue:028005:arqua-petrarca:lapilli",
+      "name": "Osteria Lapilli",
+      "aliases": [
+        "Lapilli",
+        "Osteria Lapilli"
+      ],
+      "address": "Via Roma, 15, 35032 Arquà Petrarca",
+      "postcode": "35032",
+      "municipality": "Arquà Petrarca",
+      "region_code": "05",
+      "phone": "+3904291761863",
+      "candidate_url": "https://www.rainews.it/rubriche/tg2siviaggiare/video/2026/02/TG2-Si-Viaggiare-del-06022026-c729a187-1734-4afd-aed2-67b5410434d0.html",
+      "candidate_registrable_domain": "rainews.it"
+    },
+    {
+      "index": 166,
+      "venue_id": "venue:028015:brugine:arcobaleno",
+      "name": "Pizzeria Arcobaleno",
+      "aliases": [
+        "Arcobaleno",
+        "Pizzeria Arcobaleno"
+      ],
+      "address": "Via Rialto, 26, 35020 Brugine",
+      "postcode": "35020",
+      "municipality": "Brugine",
+      "region_code": "05",
+      "phone": "+390499735544",
+      "candidate_url": "https://www.pizzeriaarcobaleno.net/",
+      "candidate_registrable_domain": "pizzeriaarcobaleno.net"
+    },
+    {
+      "index": 167,
+      "venue_id": "venue:028017:campodarsego:mastiff-bar",
+      "name": "Mastiff Bar",
+      "aliases": [
+        "Mastiff",
+        "Mastiff Bar"
+      ],
+      "address": "Via Bassa Iº, 36, 35011 Campodarsego",
+      "postcode": "35011",
+      "municipality": "Campodarsego",
+      "region_code": "05",
+      "phone": "+390497441067",
+      "candidate_url": "https://mastiff.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 168,
+      "venue_id": "venue:028099:vigodarzere:ombre-moderne",
+      "name": "Ombre Moderne",
+      "aliases": [
+        "Ombre Moderne"
+      ],
+      "address": "Via Chiesa, 9, 35010 Vigodarzere",
+      "postcode": "35010",
+      "municipality": "Vigodarzere",
+      "region_code": "05",
+      "phone": "+39049767858",
+      "candidate_url": "https://ombre-moderne.eatbu.com/",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 169,
+      "venue_id": "venue:029001:adria:tanta-roba",
+      "name": "Tanta Roba",
+      "aliases": [
+        "Tanta Roba"
+      ],
+      "address": "Via Aldo Moro, 33, 45011 Adria",
+      "postcode": "45011",
+      "municipality": "Adria",
+      "region_code": "05",
+      "phone": "+3904261883198",
+      "candidate_url": "http://www.pompeitickets.com/",
+      "candidate_registrable_domain": "pompeitickets.com"
+    },
+    {
+      "index": 170,
+      "venue_id": "venue:029005:bagnolo-di-po:tabaccheria-la-fragranza-della-pizza",
+      "name": "Pizzeria Tabaccheria La Fragranza della Pizza",
+      "aliases": [
+        "Pizzeria Tabaccheria La Fragranza della Pizza",
+        "Tabaccheria La Fragranza della Pizza"
+      ],
+      "address": "Via Arioste, 1648, 45022 Bagnolo di Po",
+      "postcode": "45022",
+      "municipality": "Bagnolo di Po",
+      "region_code": "05",
+      "phone": "+393451147130",
+      "candidate_url": "https://la-fragranza-della-pizza.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 171,
+      "venue_id": "venue:029041:rovigo:chat-noir",
+      "name": "Le Chat Noir",
+      "aliases": [
+        "Le Chat Noir"
+      ],
+      "address": "Via Silvestri, 36, 45100 Rovigo",
+      "postcode": "45100",
+      "municipality": "Rovigo",
+      "region_code": "05",
+      "phone": "+393292373299",
+      "candidate_url": "https://www.menudigitale.io/sabkg",
+      "candidate_registrable_domain": "menudigitale.io"
+    },
+    {
+      "index": 172,
+      "venue_id": "venue:029041:rovigo:tavernetta-dante",
+      "name": "Tavernetta Dante",
+      "aliases": [
+        "Tavernetta Dante"
+      ],
+      "address": "Corso del Popolo, 212, 45100 Rovigo",
+      "postcode": "45100",
+      "municipality": "Rovigo",
+      "region_code": "05",
+      "phone": "+39042526386",
+      "candidate_url": "https://www.tavernettadanterovigo.it/",
+      "candidate_registrable_domain": "tavernettadanterovigo.it"
+    },
+    {
+      "index": 173,
+      "venue_id": "venue:030019:cassacco:mulino-ferrant-di-fant-paolo",
+      "name": "Mulino Ferrant Di Fant Paolo",
+      "aliases": [
+        "Mulino Ferrant Di Fant Paolo"
+      ],
+      "address": "Via dei Mulini, 8, 33010 Cassacco",
+      "postcode": "33010",
+      "municipality": "Cassacco",
+      "region_code": "06",
+      "phone": "+393355488537",
+      "candidate_url": "http://www.mulinoferrant.it/",
+      "candidate_registrable_domain": "mulinoferrant.it"
+    },
+    {
+      "index": 174,
+      "venue_id": "venue:030036:faedis:di-berto",
+      "name": "Osteria La Di Berto",
+      "aliases": [
+        "La Di Berto",
+        "Osteria La Di Berto"
+      ],
+      "address": "Via dei Campi, 1, 33040 Faedis",
+      "postcode": "33040",
+      "municipality": "Faedis",
+      "region_code": "06",
+      "phone": "+393314257330",
+      "candidate_url": "https://it-it.facebook.com/LadiBerto",
+      "candidate_registrable_domain": "facebook.com"
+    },
+    {
+      "index": 175,
+      "venue_id": "venue:030049:lignano-sabbiadoro:croce-del-sud",
+      "name": "Croce Del Sud",
+      "aliases": [
+        "Croce Del Sud"
+      ],
+      "address": "Viale Venezia, 27, 33054 Lignano Sabbiadoro",
+      "postcode": "33054",
+      "municipality": "Lignano Sabbiadoro",
+      "region_code": "06",
+      "phone": "+39043170221",
+      "candidate_url": "https://crocedelsudlignano.it/",
+      "candidate_registrable_domain": "crocedelsudlignano.it"
+    },
+    {
+      "index": 176,
+      "venue_id": "venue:030049:lignano-sabbiadoro:lele-s-chiosco",
+      "name": "Lele's Chiosco",
+      "aliases": [
+        "Lele's Chiosco",
+        "Leles Chiosco"
+      ],
+      "address": "Piazza Marcello d'Olivo, 7, 33054 Lignano Sabbiadoro",
+      "postcode": "33054",
+      "municipality": "Lignano Sabbiadoro",
+      "region_code": "06",
+      "phone": "+3904311930827",
+      "candidate_url": "https://www.tendabar.it/leleschiosco/",
+      "candidate_registrable_domain": "tendabar.it"
+    },
+    {
+      "index": 177,
+      "venue_id": "venue:030102:san-leonardo:melo-innamorato",
+      "name": "Agriturismo Il Melo Innamorato",
+      "aliases": [
+        "Agriturismo Il Melo Innamorato"
+      ],
+      "address": "Frazione Clastra, 1, 33040 San Leonardo",
+      "postcode": "33040",
+      "municipality": "San Leonardo",
+      "region_code": "06",
+      "phone": "+390432723532",
+      "candidate_url": "http://www.friulitipico.org/prt/localita-e-zone-mainmenu-112/122.html",
+      "candidate_registrable_domain": "friulitipico.org"
+    },
+    {
+      "index": 178,
+      "venue_id": "venue:030129:udine:carul-cioc",
+      "name": "Al Carul Cioc",
+      "aliases": [
+        "Al Carul Cioc"
+      ],
+      "address": "Via Giambattista Tiepolo, 64, 33100 Udine",
+      "postcode": "33100",
+      "municipality": "Udine",
+      "region_code": "06",
+      "phone": "+393713372772",
+      "candidate_url": "https://carulcioc.it/",
+      "candidate_registrable_domain": "carulcioc.it"
+    },
+    {
+      "index": 179,
+      "venue_id": "venue:031009:grado:vecchia-marina",
+      "name": "Vecchia Marina",
+      "aliases": [
+        "Vecchia Marina"
+      ],
+      "address": "Calle Lunga, 26, 34073 Grado",
+      "postcode": "34073",
+      "municipality": "Grado",
+      "region_code": "06",
+      "phone": "+393925434915",
+      "candidate_url": "https://ristoranteallavecchiamarina.eatbu.com/",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 180,
+      "venue_id": "venue:031012:monfalcone:emilio",
+      "name": "Bar Emilio",
+      "aliases": [
+        "Bar Emilio",
+        "Emilio"
+      ],
+      "address": "Via Aquileia, 94, 34074 Monfalcone",
+      "postcode": "34074",
+      "municipality": "Monfalcone",
+      "region_code": "06",
+      "phone": "+390481481650",
+      "candidate_url": "http://www.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 181,
+      "venue_id": "venue:032006:trieste:l-antica-pizzeria-da-michele",
+      "name": "L'Antica Pizzeria da Michele",
+      "aliases": [
+        "L'Antica Pizzeria da Michele",
+        "LAntica Pizzeria da Michele"
+      ],
+      "address": "Via Giusto Muratti, 4, 34125 Trieste",
+      "postcode": "34125",
+      "municipality": "Trieste",
+      "region_code": "06",
+      "phone": "+390402034285",
+      "candidate_url": "http://www.damicheletrieste.it/",
+      "candidate_registrable_domain": "damicheletrieste.it"
+    },
+    {
+      "index": 182,
+      "venue_id": "venue:033002:alseno:cantina-la-tollara",
+      "name": "Cantina La Tollara",
+      "aliases": [
+        "Cantina La Tollara"
+      ],
+      "address": "Strada dei Gasperini, 607, 29010 Alseno",
+      "postcode": "29010",
+      "municipality": "Alseno",
+      "region_code": "08",
+      "phone": "+393316357929",
+      "candidate_url": "http://www.tollaravini.it/",
+      "candidate_registrable_domain": "tollaravini.it"
+    },
+    {
+      "index": 183,
+      "venue_id": "venue:033032:piacenza:officina-del-gusto",
+      "name": "Officina del Gusto",
+      "aliases": [
+        "Officina del Gusto"
+      ],
+      "address": "Centro Commerciale Galassia, Via Luigi Gorgni, 20, 29122 Piacenza",
+      "postcode": "29122",
+      "municipality": "Piacenza",
+      "region_code": "08",
+      "phone": "+393382949571",
+      "candidate_url": "http://www.galassiapiacenza.it/",
+      "candidate_registrable_domain": "galassiapiacenza.it"
+    },
+    {
+      "index": 184,
+      "venue_id": "venue:033032:piacenza:tabaccheria-pipa-inversa",
+      "name": "Bar Tabaccheria Pipa Inversa",
+      "aliases": [
+        "Bar Tabaccheria Pipa Inversa",
+        "Tabaccheria Pipa Inversa"
+      ],
+      "address": "Piazzale della Libertà, 18, 29122 Piacenza",
+      "postcode": "29122",
+      "municipality": "Piacenza",
+      "region_code": "08",
+      "phone": "+393514054033",
+      "candidate_url": "http://www.sisalsmartpoint.it/",
+      "candidate_registrable_domain": "sisalsmartpoint.it"
+    },
+    {
+      "index": 185,
+      "venue_id": "venue:033038:rivergaro:olympia",
+      "name": "Ristorante Olympia",
+      "aliases": [
+        "Olympia",
+        "Ristorante Olympia"
+      ],
+      "address": "SS45, 109, 29029 Rivergaro",
+      "postcode": "29029",
+      "municipality": "Rivergaro",
+      "region_code": "08",
+      "phone": "+390523957608",
+      "candidate_url": "http://www.ristoranteolympia.it/",
+      "candidate_registrable_domain": "ristoranteolympia.it"
+    },
+    {
+      "index": 186,
+      "venue_id": "venue:034007:busseto:vecchio-mulino",
+      "name": "Osteria Vecchio Mulino",
+      "aliases": [
+        "Osteria Vecchio Mulino",
+        "Vecchio Mulino"
+      ],
+      "address": "Via Arturo Toscanini, 66, 43011 Busseto",
+      "postcode": "43011",
+      "municipality": "Busseto",
+      "region_code": "08",
+      "phone": "+390524930045",
+      "candidate_url": "http://www.vecchiomulinopallavicino.it/",
+      "candidate_registrable_domain": "vecchiomulinopallavicino.it"
+    },
+    {
+      "index": 187,
+      "venue_id": "venue:034031:sala-baganza:da-fiore",
+      "name": "Osteria da Fiore",
+      "aliases": [
+        "Osteria da Fiore",
+        "da Fiore"
+      ],
+      "address": "Via Vittorio Emanuele II, 50, 43038 Sala Baganza",
+      "postcode": "43038",
+      "municipality": "Sala Baganza",
+      "region_code": "08",
+      "phone": "+390521833169",
+      "candidate_url": "https://www.osteriafiore.it/",
+      "candidate_registrable_domain": "osteriafiore.it"
+    },
+    {
+      "index": 188,
+      "venue_id": "venue:035033:reggio-nell-emilia:dei-mille",
+      "name": "Bar Dei Mille",
+      "aliases": [
+        "Bar Dei Mille",
+        "Dei Mille"
+      ],
+      "address": "Via Tiziano Vecellio, 3, 42121 Reggio nell'Emilia",
+      "postcode": "42121",
+      "municipality": "Reggio nell'Emilia",
+      "region_code": "08",
+      "phone": "+390522927875",
+      "candidate_url": "https://www.parkopedia.it/parcheggi/garage/viale_dei_mille/42121/reggio_emilia/?vendor=here",
+      "candidate_registrable_domain": "parkopedia.it"
+    },
+    {
+      "index": 189,
+      "venue_id": "venue:035033:reggio-nell-emilia:pasticcio",
+      "name": "Il Pasticcio",
+      "aliases": [
+        "Il Pasticcio"
+      ],
+      "address": "Viale Ettore Simonazzi, 27, 42121 Reggio nell'Emilia",
+      "postcode": "42121",
+      "municipality": "Reggio nell'Emilia",
+      "region_code": "08",
+      "phone": "+393668097562",
+      "candidate_url": "http://www.ilpasticcio.it/",
+      "candidate_registrable_domain": "ilpasticcio.it"
+    },
+    {
+      "index": 190,
+      "venue_id": "venue:036023:modena:scoglio-modena",
+      "name": "Ristorante \" Lo scoglio \" Modena",
+      "aliases": [
+        "\" Lo scoglio \"",
+        "Ristorante \" Lo scoglio \"",
+        "Ristorante \" Lo scoglio \" Modena"
+      ],
+      "address": "Via Francesco Ghiaroni, 170, 41126 Modena",
+      "postcode": "41126",
+      "municipality": "Modena",
+      "region_code": "08",
+      "phone": "+39059304455",
+      "candidate_url": "http://www.loscoglio-mo.it/",
+      "candidate_registrable_domain": "loscoglio-mo.it"
+    },
+    {
+      "index": 191,
+      "venue_id": "venue:036043:sestola:forte",
+      "name": "Osteria Il Forte",
+      "aliases": [
+        "Il Forte",
+        "Osteria Il Forte"
+      ],
+      "address": "Piazza della Torre, 10, 41029 Sestola",
+      "postcode": "41029",
+      "municipality": "Sestola",
+      "region_code": "08",
+      "phone": "+39053661293",
+      "candidate_url": "https://eloob.com/osteria-il-forte-it",
+      "candidate_registrable_domain": "eloob.com"
+    },
+    {
+      "index": 192,
+      "venue_id": "venue:037006:bologna:antica-trattoria-del-pontelungo",
+      "name": "Antica Trattoria Del Pontelungo",
+      "aliases": [
+        "Antica Trattoria Del Pontelungo"
+      ],
+      "address": "Via Emilia Ponente, 307, 40133 Bologna",
+      "postcode": "40133",
+      "municipality": "Bologna",
+      "region_code": "08",
+      "phone": "+39051382602",
+      "candidate_url": "http://www.trattoriadelpontelungo.it/",
+      "candidate_registrable_domain": "trattoriadelpontelungo.it"
+    }
+  ]
+}

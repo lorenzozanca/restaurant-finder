@@ -192,7 +192,7 @@ async function reviewOne(store, llm, { entry, candidate }, { crawlResult, venue 
   });
 }
 
-function loadTargetEvidence(path, entries) {
+export function loadTargetEvidence(path, entries) {
   if (!existsSync(path)) throw new Error(`venue database not found: ${path}`);
   const db = new DatabaseSync(path, { readOnly: true });
   try {

@@ -1,0 +1,755 @@
+{
+  "schema_version": 1,
+  "packet": "llm-review-holdout-v1-241-288",
+  "output_file": "locked-holdout-adjudication-241-288.json",
+  "instructions": "LABELLING-INSTRUCTIONS.md",
+  "adjudication_header": {
+    "schema_version": 1,
+    "adjudication_set": "llm-review-holdout-v1-adjudication-241-288",
+    "partition": "locked_holdout",
+    "source": "independent_fixture_review",
+    "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1"
+  },
+  "venues": [
+    {
+      "index": 241,
+      "venue_id": "venue:048017:firenze:empire-rooftop-view",
+      "name": "Empire Rooftop View",
+      "aliases": [
+        "Empire Rooftop View"
+      ],
+      "address": "Lungarno della Zecca Vecchia, 38, 50122 Firenze",
+      "postcode": "50122",
+      "municipality": "Firenze",
+      "region_code": "09",
+      "phone": "+390552623500",
+      "candidate_url": "http://www.empireofirenze.it/",
+      "candidate_registrable_domain": "empireofirenze.it"
+    },
+    {
+      "index": 242,
+      "venue_id": "venue:048017:firenze:fermentino-schiacciata-e-dintorni-by-gianluca-vella",
+      "name": "Fermentino Schiacciata e Dintorni by Gianluca Vella",
+      "aliases": [
+        "Fermentino Schiacciata e Dintorni by Gianluca Vella"
+      ],
+      "address": "Borgo San Lorenzo, 27/r, 50123 Firenze",
+      "postcode": "50123",
+      "municipality": "Firenze",
+      "region_code": "09",
+      "phone": "+390557608537",
+      "candidate_url": "http://www.fermento1889.com/",
+      "candidate_registrable_domain": "fermento1889.com"
+    },
+    {
+      "index": 243,
+      "venue_id": "venue:048017:firenze:genio-italiano",
+      "name": "Il Genio Italiano",
+      "aliases": [
+        "Il Genio Italiano"
+      ],
+      "address": "Viale Alessandro Guidoni, 168, 50127 Firenze",
+      "postcode": "50127",
+      "municipality": "Firenze",
+      "region_code": "09",
+      "phone": "+393282382293",
+      "candidate_url": "http://www.ilgenioitaliano.com/",
+      "candidate_registrable_domain": "ilgenioitaliano.com"
+    },
+    {
+      "index": 244,
+      "venue_id": "venue:048017:firenze:pepo",
+      "name": "Osteria Pepo",
+      "aliases": [
+        "Osteria Pepo",
+        "Pepo"
+      ],
+      "address": "Via Rosina, 4, 50123 Firenze",
+      "postcode": "50123",
+      "municipality": "Firenze",
+      "region_code": "09",
+      "phone": "+39055283259",
+      "candidate_url": "http://www.pepo.it/",
+      "candidate_registrable_domain": "pepo.it"
+    },
+    {
+      "index": 245,
+      "venue_id": "venue:048017:firenze:vecchia-firenze",
+      "name": "Vecchia Firenze",
+      "aliases": [
+        "Vecchia",
+        "Vecchia Firenze"
+      ],
+      "address": "Borgo degli Albizi, 18r, 50122 Firenze",
+      "postcode": "50122",
+      "municipality": "Firenze",
+      "region_code": "09",
+      "phone": "+390552340361",
+      "candidate_url": "http://www.vecchiafirenze.it/",
+      "candidate_registrable_domain": "vecchiafirenze.it"
+    },
+    {
+      "index": 246,
+      "venue_id": "venue:048033:pontassieve:the-trebbiolo-relais",
+      "name": "The Trebbiolo Relais",
+      "aliases": [
+        "The Trebbiolo Relais"
+      ],
+      "address": "Via del Trebbiolo, 8, 50065 Pontassieve",
+      "postcode": "50065",
+      "municipality": "Pontassieve",
+      "region_code": "09",
+      "phone": "+390558300583",
+      "candidate_url": "http://www.iltrebbiolo.it/",
+      "candidate_registrable_domain": "iltrebbiolo.it"
+    },
+    {
+      "index": 247,
+      "venue_id": "venue:048043:sesto-fiorentino:del-pallone",
+      "name": "Osteria del Pallone",
+      "aliases": [
+        "Osteria del Pallone",
+        "del Pallone"
+      ],
+      "address": "Piazza Bagnolet, 4, 50019 Sesto Fiorentino",
+      "postcode": "50019",
+      "municipality": "Sesto Fiorentino",
+      "region_code": "09",
+      "phone": "+390554216298",
+      "candidate_url": "http://www.sestesecalcio.com/l-osteria-del-pallone",
+      "candidate_registrable_domain": "sestesecalcio.com"
+    },
+    {
+      "index": 248,
+      "venue_id": "venue:049009:livorno:borgo-pizza",
+      "name": "Borgo Pizza",
+      "aliases": [
+        "Borgo Pizza"
+      ],
+      "address": "Via Giuseppe Verdi, 137, 57126 Livorno",
+      "postcode": "57126",
+      "municipality": "Livorno",
+      "region_code": "09",
+      "phone": "+393888754913",
+      "candidate_url": "https://oppla.club/borgopizza",
+      "candidate_registrable_domain": "oppla.club"
+    },
+    {
+      "index": 249,
+      "venue_id": "venue:050009:castelfranco-di-sotto:art",
+      "name": "Café Art",
+      "aliases": [
+        "Café Art"
+      ],
+      "address": "Viale Europa, 19, 56022 Castelfranco di Sotto",
+      "postcode": "56022",
+      "municipality": "Castelfranco di Sotto",
+      "region_code": "09",
+      "phone": "+393939169117",
+      "candidate_url": "https://www.instagram.com/cafeartmiriogiusy/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 250,
+      "venue_id": "venue:050012:chianni:boschetto-di-chianni",
+      "name": "Il Boschetto di Chianni",
+      "aliases": [
+        "Il Boschetto di",
+        "Il Boschetto di Chianni"
+      ],
+      "address": "Via del Mercatale, 20, 56034 Chianni",
+      "postcode": "56034",
+      "municipality": "Chianni",
+      "region_code": "09",
+      "phone": "+393461377730",
+      "candidate_url": "https://ilboschettodichianni.eatbu.com/?lang=it",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 251,
+      "venue_id": "venue:050016:lajatico:tenditoio",
+      "name": "Ristorante Il Tenditoio",
+      "aliases": [
+        "Il Tenditoio",
+        "Ristorante Il Tenditoio"
+      ],
+      "address": "Piazzetta del Castello, 4, 56028 San Miniato",
+      "postcode": "56028",
+      "municipality": "Lajatico",
+      "region_code": "09",
+      "phone": "+390587694621",
+      "candidate_url": "http://www.iltenditoio.it/",
+      "candidate_registrable_domain": "iltenditoio.it"
+    },
+    {
+      "index": 252,
+      "venue_id": "venue:050026:pisa:anche-no",
+      "name": "Pizzeria Anche No",
+      "aliases": [
+        "Anche No",
+        "Pizzeria Anche No"
+      ],
+      "address": "Via Fiorentina, 157, 56121 Pisa",
+      "postcode": "56121",
+      "municipality": "Pisa",
+      "region_code": "09",
+      "phone": "+390505200620",
+      "candidate_url": "http://www.pizzeriaanchenopisa.it/",
+      "candidate_registrable_domain": "pizzeriaanchenopisa.it"
+    },
+    {
+      "index": 253,
+      "venue_id": "venue:050031:san-giuliano-terme:gatto-rosso",
+      "name": "Gatto Rosso",
+      "aliases": [
+        "Gatto Rosso"
+      ],
+      "address": "Via Aurelia, 79, 56017 San Giuliano Terme",
+      "postcode": "56017",
+      "municipality": "San Giuliano Terme",
+      "region_code": "09",
+      "phone": "+39050890721",
+      "candidate_url": "https://ilgattorosso.eatbu.com/?lang=it",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 254,
+      "venue_id": "venue:050035:santa-maria-a-monte:luna-rossa-caffe-bar",
+      "name": "Luna Rossa Caffe Bar",
+      "aliases": [
+        "Luna Rossa",
+        "Luna Rossa Caffe Bar"
+      ],
+      "address": "Piazza della Vittoria, 16, 56020 Santa Maria a Monte",
+      "postcode": "56020",
+      "municipality": "Santa Maria a Monte",
+      "region_code": "09",
+      "phone": "+390587705353",
+      "candidate_url": "https://instagram.com/pasticcerialunarossa?igshid=bgpt9gv3liiv",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 255,
+      "venue_id": "venue:050039:volterra:torre-del-porcellino",
+      "name": "Torre del Porcellino",
+      "aliases": [
+        "Torre del Porcellino"
+      ],
+      "address": "Vicolo delle Prigioni, 16, 56048 Volterra",
+      "postcode": "56048",
+      "municipality": "Volterra",
+      "region_code": "09",
+      "phone": "+39058886392",
+      "candidate_url": "http://www.torredelporcellino.it/",
+      "candidate_registrable_domain": "torredelporcellino.it"
+    },
+    {
+      "index": 256,
+      "venue_id": "venue:051005:bucine:tenuta-lupinari",
+      "name": "Tenuta Lupinari",
+      "aliases": [
+        "Tenuta Lupinari"
+      ],
+      "address": "Località i Lupinari, 52021 Bucine",
+      "postcode": "52021",
+      "municipality": "Bucine",
+      "region_code": "09",
+      "phone": "+390559911537",
+      "candidate_url": "http://www.lupinari.com/",
+      "candidate_registrable_domain": "lupinari.com"
+    },
+    {
+      "index": 257,
+      "venue_id": "venue:051026:montevarchi:buca-di-ipo",
+      "name": "La Buca di Ipo",
+      "aliases": [
+        "La Buca di Ipo"
+      ],
+      "address": "Via Giovanni Pascoli, 34, 52025 Montevarchi",
+      "postcode": "52025",
+      "municipality": "Montevarchi",
+      "region_code": "09",
+      "phone": "+39055982233",
+      "candidate_url": "http://www.labucadiipo.it/",
+      "candidate_registrable_domain": "labucadiipo.it"
+    },
+    {
+      "index": 258,
+      "venue_id": "venue:052004:casole-d-elsa:chiaroscuro-bar-tabaccheria-edicola",
+      "name": "Chiaroscuro Bar Tabaccheria Edicola",
+      "aliases": [
+        "Chiaroscuro Bar Tabaccheria Edicola"
+      ],
+      "address": "Via Casolani, 49, 53031 Casole d'Elsa",
+      "postcode": "53031",
+      "municipality": "Casole d'Elsa",
+      "region_code": "09",
+      "phone": "+390577948852",
+      "candidate_url": "https://chiaroscurocafe.myportfolio.com/",
+      "candidate_registrable_domain": "myportfolio.com"
+    },
+    {
+      "index": 259,
+      "venue_id": "venue:052006:castelnuovo-berardenga:del-grigio",
+      "name": "Osteria del Grigio",
+      "aliases": [
+        "Osteria del Grigio",
+        "del Grigio"
+      ],
+      "address": "Località San Felice, 12, 53019 Castelnuovo Berardenga",
+      "postcode": "53019",
+      "municipality": "Castelnuovo Berardenga",
+      "region_code": "09",
+      "phone": "",
+      "candidate_url": "http://www.agricolasanfelice.it/offerte-soggiorni-toscana/",
+      "candidate_registrable_domain": "agricolasanfelice.it"
+    },
+    {
+      "index": 260,
+      "venue_id": "venue:052012:colle-di-val-d-elsa:bona-osteria",
+      "name": "La Bona Osteria",
+      "aliases": [
+        "La Bona",
+        "La Bona Osteria"
+      ],
+      "address": "Via Giotto, 6, 53034 Colle di Val d'Elsa",
+      "postcode": "53034",
+      "municipality": "Colle di Val d'Elsa",
+      "region_code": "09",
+      "phone": "+390577959558",
+      "candidate_url": "http://www.labonaosteria.it/",
+      "candidate_registrable_domain": "labonaosteria.it"
+    },
+    {
+      "index": 261,
+      "venue_id": "venue:052032:siena:degli-svitati",
+      "name": "Osteria degli Svitati",
+      "aliases": [
+        "Osteria degli Svitati",
+        "degli Svitati"
+      ],
+      "address": "Via della Galluzza, 34, 53100 Siena",
+      "postcode": "53100",
+      "municipality": "Siena",
+      "region_code": "09",
+      "phone": "+390577601755",
+      "candidate_url": "https://osteriadeglisvitati.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 262,
+      "venue_id": "venue:053007:cinigiano:riccio",
+      "name": "Ristorante Il Riccio",
+      "aliases": [
+        "Il Riccio",
+        "Ristorante Il Riccio"
+      ],
+      "address": "Via dell'Amiata, 30, 58044 Cinigiano",
+      "postcode": "58044",
+      "municipality": "Cinigiano",
+      "region_code": "09",
+      "phone": "+390564992004",
+      "candidate_url": "http://www.ristoranteilriccioamiata.it/",
+      "candidate_registrable_domain": "ristoranteilriccioamiata.it"
+    },
+    {
+      "index": 263,
+      "venue_id": "venue:053011:grosseto:grano-di-bramante",
+      "name": "Il Grano di Bramante",
+      "aliases": [
+        "Il Grano di Bramante"
+      ],
+      "address": "Str. Marrucheto, 3, 58100 Grosseto",
+      "postcode": "58100",
+      "municipality": "Grosseto",
+      "region_code": "09",
+      "phone": "+3905641886918",
+      "candidate_url": "http://www.ilgranodibramante.it/",
+      "candidate_registrable_domain": "ilgranodibramante.it"
+    },
+    {
+      "index": 264,
+      "venue_id": "venue:053026:sorano:taverna-etrusca",
+      "name": "La Taverna Etrusca",
+      "aliases": [
+        "La Taverna Etrusca"
+      ],
+      "address": "Via del Pretorio, 15, 58010 Sorano",
+      "postcode": "58010",
+      "municipality": "Sorano",
+      "region_code": "09",
+      "phone": "+393491245540",
+      "candidate_url": "http://www.tavernaetrusca.com/",
+      "candidate_registrable_domain": "tavernaetrusca.com"
+    },
+    {
+      "index": 265,
+      "venue_id": "venue:054004:bevagna:miccheletto",
+      "name": "Osteria Miccheletto",
+      "aliases": [
+        "Miccheletto",
+        "Osteria Miccheletto"
+      ],
+      "address": "Largo Antonio Gramsci, 1, 06031 Bevagna",
+      "postcode": "06031",
+      "municipality": "Bevagna",
+      "region_code": "10",
+      "phone": "+390742360999",
+      "candidate_url": "http://www.micchelettopizzeria.com/",
+      "candidate_registrable_domain": "micchelettopizzeria.com"
+    },
+    {
+      "index": 266,
+      "venue_id": "venue:054009:castiglione-del-lago:scalette",
+      "name": "Osteria Le Scalette",
+      "aliases": [
+        "Le Scalette",
+        "Osteria Le Scalette"
+      ],
+      "address": "Via 25 Aprile, 24, 06061 Castiglione del Lago",
+      "postcode": "06061",
+      "municipality": "Castiglione del Lago",
+      "region_code": "10",
+      "phone": "+39075953113",
+      "candidate_url": "http://www.ristoranteosterialescalette.it/",
+      "candidate_registrable_domain": "ristoranteosterialescalette.it"
+    },
+    {
+      "index": 267,
+      "venue_id": "venue:054013:citta-di-castello:dolce-vita-caffe",
+      "name": "La Dolce Vita Caffè",
+      "aliases": [
+        "La Dolce Vita",
+        "La Dolce Vita Caffè"
+      ],
+      "address": "Via Cortonese, 6, 06012 Città di Castello",
+      "postcode": "06012",
+      "municipality": "Città di Castello",
+      "region_code": "10",
+      "phone": "+393494942461",
+      "candidate_url": "http://locations.westernunion.com/it/perugia/citta-di-castello/a0194ba8cbe6457d811bb3971e70da09?loc=52100+Arezzo%2C+Province+of+Arezzo%2C+Italy&q=postal%3A52100%3Bcountry%3AIT",
+      "candidate_registrable_domain": "westernunion.com"
+    },
+    {
+      "index": 268,
+      "venue_id": "venue:054013:citta-di-castello:tassi-ploom-reseller",
+      "name": "CaffÈ Tassi- Ploom Reseller",
+      "aliases": [
+        "CaffÈ Tassi- Ploom Reseller",
+        "Tassi- Ploom Reseller"
+      ],
+      "address": "Piazza Giuseppe Garibaldi, 4, 06012 Città di Castello",
+      "postcode": "06012",
+      "municipality": "Città di Castello",
+      "region_code": "10",
+      "phone": "+393334500434",
+      "candidate_url": "https://instagram.com/caffe__tassi?igshid=YmMyMTA2M2Y%3D",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 269,
+      "venue_id": "venue:054024:gubbio:terra-ribelle",
+      "name": "Agriturismo Ristorante La Terra Ribelle",
+      "aliases": [
+        "Agriturismo Ristorante La Terra Ribelle"
+      ],
+      "address": "Madonna della Cima 1, 06024 Gubbio",
+      "postcode": "06024",
+      "municipality": "Gubbio",
+      "region_code": "10",
+      "phone": "+393317143049",
+      "candidate_url": "https://agriturismo-terra-ribelle.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 270,
+      "venue_id": "venue:054039:perugia:acqua-e-farina",
+      "name": "Acqua e Farina",
+      "aliases": [
+        "Acqua e Farina"
+      ],
+      "address": "Via della Lana, 8, 06125 Perugia",
+      "postcode": "06125",
+      "municipality": "Perugia",
+      "region_code": "10",
+      "phone": "+393314267613",
+      "candidate_url": "https://www.acquaefarinaperugia.it/menu/",
+      "candidate_registrable_domain": "acquaefarinaperugia.it"
+    },
+    {
+      "index": 271,
+      "venue_id": "venue:054039:perugia:click-cafe",
+      "name": "Click Cafe",
+      "aliases": [
+        "Click Cafe"
+      ],
+      "address": "Via Alessandro Manzoni, 4A, 06135 Perugia",
+      "postcode": "06135",
+      "municipality": "Perugia",
+      "region_code": "10",
+      "phone": "+393281663648",
+      "candidate_url": "http://www.clickcafe.it/click-cafe-perugia",
+      "candidate_registrable_domain": "clickcafe.it"
+    },
+    {
+      "index": 272,
+      "venue_id": "venue:054039:perugia:espressino-cafe",
+      "name": "Espressino Cafe",
+      "aliases": [
+        "Espressino Cafe"
+      ],
+      "address": "Piazza Cecilia Coppoli, 6, 06122 Perugia",
+      "postcode": "06122",
+      "municipality": "Perugia",
+      "region_code": "10",
+      "phone": "+390759073146",
+      "candidate_url": "http://www.espressinocafe.it/",
+      "candidate_registrable_domain": "espressinocafe.it"
+    },
+    {
+      "index": 273,
+      "venue_id": "venue:054039:perugia:international-cafe",
+      "name": "International Cafe",
+      "aliases": [
+        "International Cafe"
+      ],
+      "address": "Via Sicilia, 51, 06128 Perugia",
+      "postcode": "06128",
+      "municipality": "Perugia",
+      "region_code": "10",
+      "phone": "+393533824663",
+      "candidate_url": "https://www.google.com/maps/dir//Via+Sicilia,+51,+06128+Perugia+PG/@43.1024482,12.3061699,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x132ea13dc08933bb:0xc97aa94df8ec02!2m2!1d12.3762097!2d43.1024696",
+      "candidate_registrable_domain": "google.com"
+    },
+    {
+      "index": 274,
+      "venue_id": "venue:056003:bagnoregio:antico-forno",
+      "name": "Trattoria Antico Forno",
+      "aliases": [
+        "Antico Forno",
+        "Trattoria Antico Forno"
+      ],
+      "address": "VIA DELLA FRATICELLA, 4, 01022 Bagnoregio",
+      "postcode": "01022",
+      "municipality": "Bagnoregio",
+      "region_code": "12",
+      "phone": "+390761760016",
+      "candidate_url": "http://www.civitadibagnoregio.it/",
+      "candidate_registrable_domain": "civitadibagnoregio.it"
+    },
+    {
+      "index": 275,
+      "venue_id": "venue:057004:ascrea:belvedere",
+      "name": "Locanda Belvedere",
+      "aliases": [
+        "Locanda Belvedere"
+      ],
+      "address": "Piazza Mareri, snc, 02020 Paganico Sabino",
+      "postcode": "02020",
+      "municipality": "Ascrea",
+      "region_code": "12",
+      "phone": "+393485203334",
+      "candidate_url": "https://www.locandabelvederewineshop.it/",
+      "candidate_registrable_domain": "locandabelvederewineshop.it"
+    },
+    {
+      "index": 276,
+      "venue_id": "venue:057009:cantalice:barone-agriturismo",
+      "name": "Il Barone Agriturismo",
+      "aliases": [
+        "Il Barone Agriturismo"
+      ],
+      "address": "Via Giuseppe Garibaldi, 113, 02014 Cantalice",
+      "postcode": "02014",
+      "municipality": "Cantalice",
+      "region_code": "12",
+      "phone": "+390746653952",
+      "candidate_url": "http://www.agriturismoilbarone.com/",
+      "candidate_registrable_domain": "agriturismoilbarone.com"
+    },
+    {
+      "index": 277,
+      "venue_id": "venue:057072:vacone:solo-per-due",
+      "name": "Solo Per Due",
+      "aliases": [
+        "Solo Per Due"
+      ],
+      "address": "Via Villa di Orazio, 2, 02040 Vacone",
+      "postcode": "02040",
+      "municipality": "Vacone",
+      "region_code": "12",
+      "phone": "+390746676873",
+      "candidate_url": "http://www.soloperdue.it/",
+      "candidate_registrable_domain": "soloperdue.it"
+    },
+    {
+      "index": 278,
+      "venue_id": "venue:058004:allumiere:orsola",
+      "name": "Orsola",
+      "aliases": [
+        "Orsola"
+      ],
+      "address": "Piazza della Repubblica, 4, 00051 Allumiere",
+      "postcode": "00051",
+      "municipality": "Allumiere",
+      "region_code": "12",
+      "phone": "+39076696070",
+      "candidate_url": "http://www.ristoranteorsola.it/",
+      "candidate_registrable_domain": "ristoranteorsola.it"
+    },
+    {
+      "index": 279,
+      "venue_id": "venue:058022:castel-gandolfo:quadri",
+      "name": "I Quadri",
+      "aliases": [
+        "I Quadri"
+      ],
+      "address": "Via dei Pescatori, 21, 00073 Castel Gandolfo",
+      "postcode": "00073",
+      "municipality": "Castel Gandolfo",
+      "region_code": "12",
+      "phone": "+39069361400",
+      "candidate_url": "http://www.ristoranteiquadri.it/",
+      "candidate_registrable_domain": "ristoranteiquadri.it"
+    },
+    {
+      "index": 280,
+      "venue_id": "venue:058036:fiano-romano:mixeria",
+      "name": "Mixeria",
+      "aliases": [
+        "Mixeria"
+      ],
+      "address": "Via Milano, 2c, 00065 Fiano Romano",
+      "postcode": "00065",
+      "municipality": "Fiano Romano",
+      "region_code": "12",
+      "phone": "+393898215547",
+      "candidate_url": "http://www.mixeria.it/",
+      "candidate_registrable_domain": "mixeria.it"
+    },
+    {
+      "index": 281,
+      "venue_id": "venue:058047:guidonia-montecelio:moschettieri-2",
+      "name": "I Moschettieri 2",
+      "aliases": [
+        "I Moschettieri 2"
+      ],
+      "address": "Via Maremmana Inferiore, 55, 00012 Guidonia Montecelio",
+      "postcode": "00012",
+      "municipality": "Guidonia Montecelio",
+      "region_code": "12",
+      "phone": "+393922039912",
+      "candidate_url": "http://www.pizzaadomicilio.guidonia.rm.it/",
+      "candidate_registrable_domain": "rm.it"
+    },
+    {
+      "index": 282,
+      "venue_id": "venue:058052:magliano-romano:vecchia-mola",
+      "name": "La Vecchia Mola",
+      "aliases": [
+        "La Vecchia Mola"
+      ],
+      "address": "via di Monte gelato 8, 00060 Mazzano Romano",
+      "postcode": "00060",
+      "municipality": "Magliano Romano",
+      "region_code": "12",
+      "phone": "+39069049213",
+      "candidate_url": "http://lavecchiamola.it/",
+      "candidate_registrable_domain": "lavecchiamola.it"
+    },
+    {
+      "index": 283,
+      "venue_id": "venue:058072:nettuno:taverna-nettuno",
+      "name": "Taverna Nettuno",
+      "aliases": [
+        "Taverna",
+        "Taverna Nettuno"
+      ],
+      "address": "Piazza Giuseppe Mazzini, 40, 00048 Nettuno",
+      "postcode": "00048",
+      "municipality": "Nettuno",
+      "region_code": "12",
+      "phone": "+390623483157",
+      "candidate_url": "http://www.tavernanettuno.it/",
+      "candidate_registrable_domain": "tavernanettuno.it"
+    },
+    {
+      "index": 284,
+      "venue_id": "venue:058091:roma:39",
+      "name": "Bar 39",
+      "aliases": [
+        "39",
+        "Bar 39"
+      ],
+      "address": "Via Fulda, 39, 00148 Roma",
+      "postcode": "00148",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39066572746",
+      "candidate_url": "http://www.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 285,
+      "venue_id": "venue:058091:roma:antichi-sapori",
+      "name": "Osteria Antichi Sapori",
+      "aliases": [
+        "Antichi Sapori",
+        "Osteria Antichi Sapori"
+      ],
+      "address": "Via Aurelia, 366, 00165 Roma",
+      "postcode": "00165",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39066627014",
+      "candidate_url": "http://www.antichisaporidaleo.com/",
+      "candidate_registrable_domain": "antichisaporidaleo.com"
+    },
+    {
+      "index": 286,
+      "venue_id": "venue:058091:roma:candy-cream-ice-cream",
+      "name": "Candy Cream Ice Cream",
+      "aliases": [
+        "Candy Cream Ice Cream"
+      ],
+      "address": "Via Gregorio XI, 17, 00166 Roma",
+      "postcode": "00166",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+390666012162",
+      "candidate_url": "http://www.gelateriacandycream.it/",
+      "candidate_registrable_domain": "gelateriacandycream.it"
+    },
+    {
+      "index": 287,
+      "venue_id": "venue:058091:roma:casale-di-roma",
+      "name": "Il Casale Di Roma",
+      "aliases": [
+        "Il Casale Di",
+        "Il Casale Di Roma"
+      ],
+      "address": "Via Flaminia, KM 15/600, 00188 Roma",
+      "postcode": "00188",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+39063321264",
+      "candidate_url": "https://www.ilcasalediroma.it/",
+      "candidate_registrable_domain": "ilcasalediroma.it"
+    },
+    {
+      "index": 288,
+      "venue_id": "venue:058091:roma:cottage-forum",
+      "name": "Cottage Forum",
+      "aliases": [
+        "Cottage Forum"
+      ],
+      "address": "Via di Sant'Eufemia, 5, 00187 Roma",
+      "postcode": "00187",
+      "municipality": "Roma",
+      "region_code": "12",
+      "phone": "+393456602910",
+      "candidate_url": "http://www.cottageforum.it/",
+      "candidate_registrable_domain": "cottageforum.it"
+    }
+  ]
+}

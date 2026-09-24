@@ -1,0 +1,761 @@
+{
+  "schema_version": 1,
+  "packet": "llm-review-holdout-v1-433-480",
+  "output_file": "locked-holdout-adjudication-433-480.json",
+  "instructions": "LABELLING-INSTRUCTIONS.md",
+  "adjudication_header": {
+    "schema_version": 1,
+    "adjudication_set": "llm-review-holdout-v1-adjudication-433-480",
+    "partition": "locked_holdout",
+    "source": "independent_fixture_review",
+    "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1"
+  },
+  "venues": [
+    {
+      "index": 433,
+      "venue_id": "venue:087004:acireale:vulcanica-pizzeria",
+      "name": "Vulcanica Pizzeria",
+      "aliases": [
+        "Vulcanica",
+        "Vulcanica Pizzeria"
+      ],
+      "address": "Via Paolo Vasta, 29, 95024 Acireale",
+      "postcode": "95024",
+      "municipality": "Acireale",
+      "region_code": "19",
+      "phone": "+390958363930",
+      "candidate_url": "https://www.vulcanicapizzeria.it/",
+      "candidate_registrable_domain": "vulcanicapizzeria.it"
+    },
+    {
+      "index": 434,
+      "venue_id": "venue:087011:caltagirone:villa-tasca-agriturismo",
+      "name": "Villa Tasca Agriturismo & Spa",
+      "aliases": [
+        "Villa Tasca Agriturismo & Spa"
+      ],
+      "address": "Largo della Fontana, 10, 95041 Caltagirone",
+      "postcode": "95041",
+      "municipality": "Caltagirone",
+      "region_code": "19",
+      "phone": "+393341210205",
+      "candidate_url": "http://www.villatasca.it/",
+      "candidate_registrable_domain": "villatasca.it"
+    },
+    {
+      "index": 435,
+      "venue_id": "venue:087015:catania:internetcafe881",
+      "name": "InternetCafè881",
+      "aliases": [
+        "InternetCafè881"
+      ],
+      "address": "Via Plebiscito, 881D, 95124 Catania",
+      "postcode": "95124",
+      "municipality": "Catania",
+      "region_code": "19",
+      "phone": "+390952860187",
+      "candidate_url": "http://locator.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 436,
+      "venue_id": "venue:087015:catania:olio",
+      "name": "Olio",
+      "aliases": [
+        "Olio"
+      ],
+      "address": "Via Umberto I, 233, 95129 Catania",
+      "postcode": "95129",
+      "municipality": "Catania",
+      "region_code": "19",
+      "phone": "+393936475942",
+      "candidate_url": "http://www.oliocatania.it/",
+      "candidate_registrable_domain": "oliocatania.it"
+    },
+    {
+      "index": 437,
+      "venue_id": "venue:087015:catania:sicilia-street-food",
+      "name": "Sicilia Street Food",
+      "aliases": [
+        "Sicilia Street Food"
+      ],
+      "address": "Via Etnea, 235, 95129 Catania",
+      "postcode": "95129",
+      "municipality": "Catania",
+      "region_code": "19",
+      "phone": "+390954198204",
+      "candidate_url": "https://siciliastreetfood.it/",
+      "candidate_registrable_domain": "siciliastreetfood.it"
+    },
+    {
+      "index": 438,
+      "venue_id": "venue:087052:valverde:miro",
+      "name": "Trattoria Miro",
+      "aliases": [
+        "Miro",
+        "Trattoria Miro"
+      ],
+      "address": "Corso Vittorio Emanuele, 31, 95028 Valverde",
+      "postcode": "95028",
+      "municipality": "Valverde",
+      "region_code": "19",
+      "phone": "+393319774251",
+      "candidate_url": "http://it-it.facebook.com/TrattoriaMiro",
+      "candidate_registrable_domain": "facebook.com"
+    },
+    {
+      "index": 439,
+      "venue_id": "venue:087053:viagrande:salumeria-sapori-di-sicilia",
+      "name": "Salumeria Sapori di Sicilia",
+      "aliases": [
+        "Salumeria Sapori di Sicilia"
+      ],
+      "address": "Via Giuseppe Garibaldi, 107, 95029 Viagrande",
+      "postcode": "95029",
+      "municipality": "Viagrande",
+      "region_code": "19",
+      "phone": "+390957900260",
+      "candidate_url": "https://felicinisaporidisicilia.it/",
+      "candidate_registrable_domain": "felicinisaporidisicilia.it"
+    },
+    {
+      "index": 440,
+      "venue_id": "venue:088008:pozzallo:cornetteria-da-salvo",
+      "name": "Bar Cornetteria Da Salvo",
+      "aliases": [
+        "Bar Cornetteria Da Salvo",
+        "Cornetteria Da Salvo"
+      ],
+      "address": "Piazza Madonnina, 4, 97016 Pozzallo",
+      "postcode": "97016",
+      "municipality": "Pozzallo",
+      "region_code": "19",
+      "phone": "+390932516977",
+      "candidate_url": "http://www.misterimprese.it/sicilia/ragusa/pozzallo/bar-e-caffe/2096372.html",
+      "candidate_registrable_domain": "misterimprese.it"
+    },
+    {
+      "index": 441,
+      "venue_id": "venue:088009:ragusa:met",
+      "name": "Met",
+      "aliases": [
+        "Met"
+      ],
+      "address": "Piazza della Torre, 1, 97100 Ragusa",
+      "postcode": "97100",
+      "municipality": "Ragusa",
+      "region_code": "19",
+      "phone": "+390932615173",
+      "candidate_url": "http://www.metsicilia.it/",
+      "candidate_registrable_domain": "metsicilia.it"
+    },
+    {
+      "index": 442,
+      "venue_id": "venue:088009:ragusa:off-odierna-finestra-ferreri",
+      "name": "OFF Odierna Finestra Ferreri",
+      "aliases": [
+        "OFF Odierna Finestra Ferreri"
+      ],
+      "address": "Via Giardino, 5, 97100 Ragusa",
+      "postcode": "97100",
+      "municipality": "Ragusa",
+      "region_code": "19",
+      "phone": "+393761246206",
+      "candidate_url": "http://www.odiernafinestraferreri.it/",
+      "candidate_registrable_domain": "odiernafinestraferreri.it"
+    },
+    {
+      "index": 443,
+      "venue_id": "venue:089014:pachino:del-centro",
+      "name": "Caffe del Centro",
+      "aliases": [
+        "Caffe del Centro",
+        "del Centro"
+      ],
+      "address": "Piazza Vittorio Emanuele, 35, 96018 Pachino",
+      "postcode": "96018",
+      "municipality": "Pachino",
+      "region_code": "19",
+      "phone": "+393281452325",
+      "candidate_url": "http://www.caffedelcentropachino.it/",
+      "candidate_registrable_domain": "caffedelcentropachino.it"
+    },
+    {
+      "index": 444,
+      "venue_id": "venue:089014:pachino:sumar-pizzeria",
+      "name": "Sumar Pizzeria",
+      "aliases": [
+        "Sumar",
+        "Sumar Pizzeria"
+      ],
+      "address": "Viale Paolo Calleri, 96018 Pachino",
+      "postcode": "96018",
+      "municipality": "Pachino",
+      "region_code": "19",
+      "phone": "+393516387630",
+      "candidate_url": "https://ssdeveloping.ssdeveloping.it/MenuSumar/",
+      "candidate_registrable_domain": "ssdeveloping.it"
+    },
+    {
+      "index": 445,
+      "venue_id": "venue:089017:siracusa:aranblu",
+      "name": "Aranblu",
+      "aliases": [
+        "Aranblu"
+      ],
+      "address": "Largo Porta Marina, 4, 96100 Siracusa",
+      "postcode": "96100",
+      "municipality": "Siracusa",
+      "region_code": "19",
+      "phone": "+39093168402",
+      "candidate_url": "http://aranbluortigia.it/",
+      "candidate_registrable_domain": "aranbluortigia.it"
+    },
+    {
+      "index": 446,
+      "venue_id": "venue:093053:valvasone-arzene:da-pippo",
+      "name": "Pizzeria da Pippo",
+      "aliases": [
+        "Pizzeria da Pippo",
+        "da Pippo"
+      ],
+      "address": "Via Chiesa, 13, 33098 Valvasone Arzene",
+      "postcode": "33098",
+      "municipality": "Valvasone Arzene",
+      "region_code": "06",
+      "phone": "+390434899572",
+      "candidate_url": "https://www.studiocreativity.it/qrcode/index.php/dapippo",
+      "candidate_registrable_domain": "studiocreativity.it"
+    },
+    {
+      "index": 447,
+      "venue_id": "venue:097076:sirtori:in-piadineria-penati-luciano",
+      "name": "In Piadineria Penati Luciano",
+      "aliases": [
+        "In Piadineria Penati Luciano"
+      ],
+      "address": "Via Como, 18, 23896 Sirtori",
+      "postcode": "23896",
+      "municipality": "Sirtori",
+      "region_code": "03",
+      "phone": "+39039956052",
+      "candidate_url": "http://www.inpiadineria.com/",
+      "candidate_registrable_domain": "inpiadineria.com"
+    },
+    {
+      "index": 448,
+      "venue_id": "venue:099003:coriano:bistrot-72",
+      "name": "Bistrot 72",
+      "aliases": [
+        "Bistrot 72"
+      ],
+      "address": "Via Rigardara, 39, 47853 Coriano",
+      "postcode": "47853",
+      "municipality": "Coriano",
+      "region_code": "08",
+      "phone": "+393703724893",
+      "candidate_url": "http://www.ecoarea.eu/",
+      "candidate_registrable_domain": "ecoarea.eu"
+    },
+    {
+      "index": 449,
+      "venue_id": "venue:099003:coriano:piazzetta",
+      "name": "Bar La Piazzetta",
+      "aliases": [
+        "Bar La Piazzetta",
+        "La Piazzetta"
+      ],
+      "address": "Piazza Giovanni Falcone, 4, 47853 Coriano",
+      "postcode": "47853",
+      "municipality": "Coriano",
+      "region_code": "08",
+      "phone": "+390541656817",
+      "candidate_url": "http://www.nanatsu.pl/",
+      "candidate_registrable_domain": "nanatsu.pl"
+    },
+    {
+      "index": 450,
+      "venue_id": "venue:099014:rimini:del-mare",
+      "name": "Osteria del Mare",
+      "aliases": [
+        "Osteria del Mare",
+        "del Mare"
+      ],
+      "address": "Viale Regina Margherita, 75, 47924 Rimini",
+      "postcode": "47924",
+      "municipality": "Rimini",
+      "region_code": "08",
+      "phone": "+393290877781",
+      "candidate_url": "http://osteriadelmarerimini.it/",
+      "candidate_registrable_domain": "osteriadelmarerimini.it"
+    },
+    {
+      "index": 451,
+      "venue_id": "venue:099014:rimini:gallo",
+      "name": "Osteria il Gallo",
+      "aliases": [
+        "Osteria il Gallo",
+        "il Gallo"
+      ],
+      "address": "Via Tristano e Isotta, 18, 47922 Rimini",
+      "postcode": "47922",
+      "municipality": "Rimini",
+      "region_code": "08",
+      "phone": "+390541775813",
+      "candidate_url": "https://www.osteriailgallo.it/",
+      "candidate_registrable_domain": "osteriailgallo.it"
+    },
+    {
+      "index": 452,
+      "venue_id": "venue:099024:pennabilli:torre",
+      "name": "Agriturismo La Torre",
+      "aliases": [
+        "Agriturismo La Torre"
+      ],
+      "address": "strada per castello di bascio, 12, 47864 Pennabilli",
+      "postcode": "47864",
+      "municipality": "Pennabilli",
+      "region_code": "08",
+      "phone": "+393482620337",
+      "candidate_url": "http://www.latorreagriturismo.it/",
+      "candidate_registrable_domain": "latorreagriturismo.it"
+    },
+    {
+      "index": 453,
+      "venue_id": "venue:099028:poggio-torriana:chiosco-di-bacco",
+      "name": "Il Chiosco di Bacco",
+      "aliases": [
+        "Il Chiosco di Bacco"
+      ],
+      "address": "Via Santarcangiolese, 62, 47824 Poggio Torriana",
+      "postcode": "47824",
+      "municipality": "Poggio Torriana",
+      "region_code": "08",
+      "phone": "+393333060279",
+      "candidate_url": "http://www.chioscodibacco.it/",
+      "candidate_registrable_domain": "chioscodibacco.it"
+    },
+    {
+      "index": 454,
+      "venue_id": "venue:100005:prato:cinzia",
+      "name": "Bar Cinzia",
+      "aliases": [
+        "Bar Cinzia",
+        "Cinzia"
+      ],
+      "address": "Via dei Ciliani, 81, 59100 Prato",
+      "postcode": "59100",
+      "municipality": "Prato",
+      "region_code": "09",
+      "phone": "+390574740685",
+      "candidate_url": "http://www.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 455,
+      "venue_id": "venue:100005:prato:l-orto-di-nene",
+      "name": "L'Orto di Nene",
+      "aliases": [
+        "L'Orto di Nene",
+        "LOrto di Nene"
+      ],
+      "address": "Via Santa Trinità, 47A, 59100 Prato",
+      "postcode": "59100",
+      "municipality": "Prato",
+      "region_code": "09",
+      "phone": "+393928478186",
+      "candidate_url": "https://www.instagram.com/lortodinene/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 456,
+      "venue_id": "venue:100005:prato:saloon",
+      "name": "Saloon",
+      "aliases": [
+        "Saloon"
+      ],
+      "address": "Via Pistoiese, 755, 59100 Prato",
+      "postcode": "59100",
+      "municipality": "Prato",
+      "region_code": "09",
+      "phone": "+390574669124",
+      "candidate_url": "https://linktr.ee/saloonprato",
+      "candidate_registrable_domain": "linktr.ee"
+    },
+    {
+      "index": 457,
+      "venue_id": "venue:100005:prato:stefano",
+      "name": "Caffè Stefano",
+      "aliases": [
+        "Bar Stefano 1974",
+        "Caffè Stefano",
+        "Stefano",
+        "Stefano 1974"
+      ],
+      "address": "Via Roma, 308, 59100 Prato",
+      "postcode": "59100",
+      "municipality": "Prato",
+      "region_code": "09",
+      "phone": "+390574636495",
+      "candidate_url": "http://caffe-stefano.eatbu.com/",
+      "candidate_registrable_domain": "eatbu.com"
+    },
+    {
+      "index": 458,
+      "venue_id": "venue:102050:zungri:caffetteria-pub-civico-69",
+      "name": "Caffetteria Pub Civico 69",
+      "aliases": [
+        "Caffetteria Pub Civico 69"
+      ],
+      "address": "Via Umberto Iº, 69, 89867 Zungri",
+      "postcode": "89867",
+      "municipality": "Zungri",
+      "region_code": "18",
+      "phone": "+393780625681",
+      "candidate_url": "http://caffetteria-civico69.webnote.it/",
+      "candidate_registrable_domain": "webnote.it"
+    },
+    {
+      "index": 459,
+      "venue_id": "venue:103061:san-bernardino-verbano:rifugio-fantoli",
+      "name": "Rifugio Fantoli",
+      "aliases": [
+        "Rifugio Fantoli"
+      ],
+      "address": "Alpe Ompio - S.Bernardino Verbano, 28804 Pallanza",
+      "postcode": "28804",
+      "municipality": "San Bernardino Verbano",
+      "region_code": "01",
+      "phone": "+393405783883",
+      "candidate_url": "http://www.rifugiofantoli.it/it/la-nostra-cucina.html",
+      "candidate_registrable_domain": "rifugiofantoli.it"
+    },
+    {
+      "index": 460,
+      "venue_id": "venue:103064:stresa:cascina",
+      "name": "Ristorante La Cascina",
+      "aliases": [
+        "La Cascina",
+        "Ristorante La Cascina"
+      ],
+      "address": "Via Galileo Galilei, 4, 28838 Stresa",
+      "postcode": "28838",
+      "municipality": "Stresa",
+      "region_code": "01",
+      "phone": "+39032330445",
+      "candidate_url": "http://www.lacascinastresa.it/",
+      "candidate_registrable_domain": "lacascinastresa.it"
+    },
+    {
+      "index": 461,
+      "venue_id": "venue:103064:stresa:mamma-mia",
+      "name": "Ristorante Pizzeria Mamma Mia",
+      "aliases": [
+        "Pizzeria Mamma Mia",
+        "Ristorante Pizzeria Mamma Mia"
+      ],
+      "address": "Via Principe Tomaso, 11, 28838 Stresa",
+      "postcode": "28838",
+      "municipality": "Stresa",
+      "region_code": "01",
+      "phone": "+39032330124",
+      "candidate_url": "https://www.ristorantepizzeriamammamia.it/",
+      "candidate_registrable_domain": "ristorantepizzeriamammamia.it"
+    },
+    {
+      "index": 462,
+      "venue_id": "venue:103072:verbania:del-castello",
+      "name": "Osteria del Castello",
+      "aliases": [
+        "Osteria del Castello",
+        "del Castello"
+      ],
+      "address": "Piazza Castello, 9, 28921 Verbania",
+      "postcode": "28921",
+      "municipality": "Verbania",
+      "region_code": "01",
+      "phone": "+390323516579",
+      "candidate_url": "http://www.osteriacastello.com/",
+      "candidate_registrable_domain": "osteriacastello.com"
+    },
+    {
+      "index": 463,
+      "venue_id": "venue:103072:verbania:piada-cafe-d428ac05",
+      "name": "Piada Café",
+      "aliases": [
+        "Piada Café"
+      ],
+      "address": "Via Michelangelo Buonarroti, 15, 28922 Verbania",
+      "postcode": "28922",
+      "municipality": "Verbania",
+      "region_code": "01",
+      "phone": "+390323343164",
+      "candidate_url": "https://disv.it/PiadaCafe",
+      "candidate_registrable_domain": "disv.it"
+    },
+    {
+      "index": 464,
+      "venue_id": "venue:108026:lesmo:crazy-bar",
+      "name": "Crazy Bar",
+      "aliases": [
+        "Crazy",
+        "Crazy Bar"
+      ],
+      "address": "Via Carlo Maria Maggi, 41, 20855 Lesmo",
+      "postcode": "20855",
+      "municipality": "Lesmo",
+      "region_code": "03",
+      "phone": "+390396066308",
+      "candidate_url": "http://www.crazy-bar.net/",
+      "candidate_registrable_domain": "crazy-bar.net"
+    },
+    {
+      "index": 465,
+      "venue_id": "venue:108033:monza:l-albero-dei-gelati",
+      "name": "L'albero dei gelati",
+      "aliases": [
+        "L'albero dei gelati",
+        "Lalbero dei gelati"
+      ],
+      "address": "Via Giuseppe Sirtori, 1, 20900 Monza",
+      "postcode": "20900",
+      "municipality": "Monza",
+      "region_code": "03",
+      "phone": "+39039388981",
+      "candidate_url": "http://www.alberodeigelati.it/",
+      "candidate_registrable_domain": "alberodeigelati.it"
+    },
+    {
+      "index": 466,
+      "venue_id": "venue:109037:sant-elpidio-a-mare:gelateria-paradiso",
+      "name": "Bar Gelateria PARADISO",
+      "aliases": [
+        "Bar Gelateria PARADISO",
+        "Gelateria PARADISO"
+      ],
+      "address": "Viale Roma, 7, 63811 Sant'Elpidio a Mare",
+      "postcode": "63811",
+      "municipality": "Sant'Elpidio a Mare",
+      "region_code": "11",
+      "phone": "+390734810125",
+      "candidate_url": "https://gelatoacasa.shop/",
+      "candidate_registrable_domain": "gelatoacasa.shop"
+    },
+    {
+      "index": 467,
+      "venue_id": "venue:110009:trani:4m-bar-gelateria",
+      "name": "4M Bar Gelateria",
+      "aliases": [
+        "4M Bar Gelateria"
+      ],
+      "address": "Lungomare Cristoforo Colombo, 62, 76125 Trani",
+      "postcode": "76125",
+      "municipality": "Trani",
+      "region_code": "16",
+      "phone": "+390883018416",
+      "candidate_url": "https://bit.ly/menu-4m",
+      "candidate_registrable_domain": "bit.ly"
+    },
+    {
+      "index": 468,
+      "venue_id": "venue:112001:alghero:lanterna",
+      "name": "Ristorante Pizzeria La Lanterna",
+      "aliases": [
+        "Pizzeria La Lanterna",
+        "Ristorante Pizzeria La Lanterna"
+      ],
+      "address": "Viale Giovanni XXIII, 82A, 07041 Alghero",
+      "postcode": "07041",
+      "municipality": "Alghero",
+      "region_code": "20",
+      "phone": "+39079978556",
+      "candidate_url": "http://www.lalanterna-alghero.com/",
+      "candidate_registrable_domain": "lalanterna-alghero.com"
+    },
+    {
+      "index": 469,
+      "venue_id": "venue:112016:castelsardo:su-tazeri",
+      "name": "Su Tazeri",
+      "aliases": [
+        "Su Tazeri"
+      ],
+      "address": "Via Cristoforo Colombo, 5, 07031 Castelsardo",
+      "postcode": "07031",
+      "municipality": "Castelsardo",
+      "region_code": "20",
+      "phone": "+39079479040",
+      "candidate_url": "http://www.ateliergavoisutazeri.it/",
+      "candidate_registrable_domain": "ateliergavoisutazeri.it"
+    },
+    {
+      "index": 470,
+      "venue_id": "venue:112050:sassari:gambrinus-pub-ristopub-birreria-paninoteca",
+      "name": "Gambrinus Pub Ristopub Birreria-Paninoteca",
+      "aliases": [
+        "Gambrinus Pub Ristopub Birreria-Paninoteca"
+      ],
+      "address": "viale trieste 6, 07100 Sassari",
+      "postcode": "07100",
+      "municipality": "Sassari",
+      "region_code": "20",
+      "phone": "3477021854",
+      "candidate_url": "http://gambrinuspub.net/",
+      "candidate_registrable_domain": "gambrinuspub.net"
+    },
+    {
+      "index": 471,
+      "venue_id": "venue:112050:sassari:white-house-cafe",
+      "name": "White House Cafe",
+      "aliases": [
+        "White House Cafe"
+      ],
+      "address": "Via Francesco Porcellana, 32, 07100 Sassari",
+      "postcode": "07100",
+      "municipality": "Sassari",
+      "region_code": "20",
+      "phone": "+393441612617",
+      "candidate_url": "https://www.whitecafe.it/",
+      "candidate_registrable_domain": "whitecafe.it"
+    },
+    {
+      "index": 472,
+      "venue_id": "venue:113017:olbia:vecchio-porto",
+      "name": "Il Vecchio Porto",
+      "aliases": [
+        "Il Vecchio Porto"
+      ],
+      "address": "Corso Umberto I, 12, 07026 Olbia",
+      "postcode": "07026",
+      "municipality": "Olbia",
+      "region_code": "20",
+      "phone": "+39078921479",
+      "candidate_url": "http://www.ristorantepizzeriailvecchioportoolbia.com/contatti",
+      "candidate_registrable_domain": "ristorantepizzeriailvecchioportoolbia.com"
+    },
+    {
+      "index": 473,
+      "venue_id": "venue:114036:orosei:mamay-sardinian-foods",
+      "name": "Mamay sardinian foods",
+      "aliases": [
+        "Mamay sardinian foods"
+      ],
+      "address": "Via Sebastiano Satta, 12, 08028 Orosei",
+      "postcode": "08028",
+      "municipality": "Orosei",
+      "region_code": "20",
+      "phone": "+39078498515",
+      "candidate_url": "http://www.mamay.it/",
+      "candidate_registrable_domain": "mamay.it"
+    },
+    {
+      "index": 474,
+      "venue_id": "venue:115019:cabras:ittiturismo-sa-pischera-e-mar-e-pontis",
+      "name": "Ittiturismo Sa Pischera e Mar e Pontis",
+      "aliases": [
+        "Ittiturismo Sa Pischera e Mar e Pontis"
+      ],
+      "address": "Corso Umberto I, 6, 09072 Cabras",
+      "postcode": "09072",
+      "municipality": "Cabras",
+      "region_code": "20",
+      "phone": "+393357497626",
+      "candidate_url": "https://linktr.ee/SaPischeraeMarePontis",
+      "candidate_registrable_domain": "linktr.ee"
+    },
+    {
+      "index": 475,
+      "venue_id": "venue:116017:tortoli:paninoteca-da-bro",
+      "name": "Paninoteca da Bro",
+      "aliases": [
+        "Paninoteca da Bro"
+      ],
+      "address": "Via Foddeddu, 08048 Tortolì",
+      "postcode": "08048",
+      "municipality": "Tortolì",
+      "region_code": "20",
+      "phone": "+393290359262",
+      "candidate_url": "https://www.paninotecadabro.it/it/",
+      "candidate_registrable_domain": "paninotecadabro.it"
+    },
+    {
+      "index": 476,
+      "venue_id": "venue:117014:san-gavino-monreale:babaoi",
+      "name": "Ristorante Pizzeria Babaoi",
+      "aliases": [
+        "Pizzeria Babaoi",
+        "Ristorante Pizzeria Babaoi"
+      ],
+      "address": "Via Roma, 15A, 09037 San Gavino Monreale",
+      "postcode": "09037",
+      "municipality": "San Gavino Monreale",
+      "region_code": "20",
+      "phone": "+393489830510",
+      "candidate_url": "http://www.ristorantebabaoi.com/",
+      "candidate_registrable_domain": "ristorantebabaoi.com"
+    },
+    {
+      "index": 477,
+      "venue_id": "venue:118029:muravera:da-guido-camping-capo-ferrato",
+      "name": "Ristorante da Guido - Camping Capo Ferrato",
+      "aliases": [
+        "Ristorante da Guido - Camping Capo Ferrato",
+        "da Guido - Camping Capo Ferrato"
+      ],
+      "address": "Costa Rei, Via delle Ginestre 12, Muravera",
+      "postcode": "",
+      "municipality": "Muravera",
+      "region_code": "20",
+      "phone": "",
+      "candidate_url": "https://ristorantedaguido.plateform.app/welcome",
+      "candidate_registrable_domain": "plateform.app"
+    },
+    {
+      "index": 478,
+      "venue_id": "venue:118029:muravera:marina-gio",
+      "name": "Marina Gio'",
+      "aliases": [
+        "Marina Gio'"
+      ],
+      "address": "Via degli Anemoni, 4, 09043 Muravera",
+      "postcode": "09043",
+      "municipality": "Muravera",
+      "region_code": "20",
+      "phone": "+393339860200",
+      "candidate_url": "http://www.marinagio.com/",
+      "candidate_registrable_domain": "marinagio.com"
+    },
+    {
+      "index": 479,
+      "venue_id": "venue:118038:quartu-sant-elena:manu-s-caffe",
+      "name": "Manu's Caffe",
+      "aliases": [
+        "Manu's",
+        "Manu's Caffe",
+        "Manus"
+      ],
+      "address": "Via Armando Diaz, 98, 09045 Quartu Sant'Elena",
+      "postcode": "09045",
+      "municipality": "Quartu Sant'Elena",
+      "region_code": "20",
+      "phone": "",
+      "candidate_url": "https://manuscaffe.wordpress.com/",
+      "candidate_registrable_domain": "wordpress.com"
+    },
+    {
+      "index": 480,
+      "venue_id": "venue:119001:buggerru:l-oasi-di-licia",
+      "name": "L'Oasi di Licia",
+      "aliases": [
+        "L'Oasi di Licia",
+        "LOasi di Licia"
+      ],
+      "address": "Via Marina, 09010 Buggerru",
+      "postcode": "09010",
+      "municipality": "Buggerru",
+      "region_code": "20",
+      "phone": "+393938131855",
+      "candidate_url": "https://www.instagram.com/oasi_di_licia",
+      "candidate_registrable_domain": "instagram.com"
+    }
+  ]
+}

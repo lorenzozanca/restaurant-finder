@@ -1,0 +1,752 @@
+{
+  "schema_version": 1,
+  "packet": "llm-review-holdout-v1-001-048",
+  "output_file": "locked-holdout-adjudication-001-048.json",
+  "instructions": "LABELLING-INSTRUCTIONS.md",
+  "adjudication_header": {
+    "schema_version": 1,
+    "adjudication_set": "llm-review-holdout-v1-adjudication-001-048",
+    "partition": "locked_holdout",
+    "source": "independent_fixture_review",
+    "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1"
+  },
+  "venues": [
+    {
+      "index": 1,
+      "venue_id": "venue:001032:borgone-susa:lumiere-cafe",
+      "name": "Lumiere Cafe",
+      "aliases": [
+        "Lumiere Cafe"
+      ],
+      "address": "Via Augusto Abegg, 32, 10050 Borgone Susa",
+      "postcode": "10050",
+      "municipality": "Borgone Susa",
+      "region_code": "01",
+      "phone": "+393282284681",
+      "candidate_url": "http://www.lumierecafe.it/",
+      "candidate_registrable_domain": "lumierecafe.it"
+    },
+    {
+      "index": 2,
+      "venue_id": "venue:001047:caluso:del-giorgione",
+      "name": "La Locanda Del Giorgione",
+      "aliases": [
+        "La Locanda Del Giorgione"
+      ],
+      "address": "Via 4 Novembre, 5, 10014 Caluso",
+      "postcode": "10014",
+      "municipality": "Caluso",
+      "region_code": "01",
+      "phone": "+390119897913",
+      "candidate_url": "https://www.tripadvisor.it/Restaurant_Review-g735173-d1937687-Reviews-La_Locanda_del_Giorgione-Caluso_Province_of_Turin_Piedmont.html",
+      "candidate_registrable_domain": "tripadvisor.it"
+    },
+    {
+      "index": 3,
+      "venue_id": "venue:001063:caselle-torinese:three-wolf",
+      "name": "Three Wolf",
+      "aliases": [
+        "Three Wolf"
+      ],
+      "address": "Via Caldano, 98, 10072 Caselle Torinese",
+      "postcode": "10072",
+      "municipality": "Caselle Torinese",
+      "region_code": "01",
+      "phone": "+393207255572",
+      "candidate_url": "https://disv.it/ThreeWolf",
+      "candidate_registrable_domain": "disv.it"
+    },
+    {
+      "index": 4,
+      "venue_id": "venue:001219:rivoli:america-graffiti",
+      "name": "America Graffiti",
+      "aliases": [
+        "America Graffiti"
+      ],
+      "address": "Via Genova, 52/a, 10098 Rivoli",
+      "postcode": "10098",
+      "municipality": "Rivoli",
+      "region_code": "01",
+      "phone": "0115835850",
+      "candidate_url": "http://www.americagraffiti.it/",
+      "candidate_registrable_domain": "americagraffiti.it"
+    },
+    {
+      "index": 5,
+      "venue_id": "venue:001240:san-francesco-al-campo:strapizzami",
+      "name": "Strapizzami",
+      "aliases": [
+        "Strapizzami"
+      ],
+      "address": "Via Torino, 28, 10070 San Francesco al Campo",
+      "postcode": "10070",
+      "municipality": "San Francesco al Campo",
+      "region_code": "01",
+      "phone": "+390119276792",
+      "candidate_url": "https://www.pizzeriastrapizzamisanfrancescoalcampo.it/menu/",
+      "candidate_registrable_domain": "pizzeriastrapizzamisanfrancescoalcampo.it"
+    },
+    {
+      "index": 6,
+      "venue_id": "venue:001272:torino:caffetteria-grande",
+      "name": "Caffetteria Grande",
+      "aliases": [
+        "Caffetteria Grande"
+      ],
+      "address": "Corso Orbassano, 215H, 10137 Torino",
+      "postcode": "10137",
+      "municipality": "Torino",
+      "region_code": "01",
+      "phone": "+393347558662",
+      "candidate_url": "https://caffetteria-grande.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 7,
+      "venue_id": "venue:001272:torino:calavera-restaurant",
+      "name": "Calavera Restaurant",
+      "aliases": [
+        "Calavera Restaurant"
+      ],
+      "address": "Strada di Altessano, 12, 10151 Torino",
+      "postcode": "10151",
+      "municipality": "Torino",
+      "region_code": "01",
+      "phone": "+393884247615",
+      "candidate_url": "https://www.roadhouse.it/",
+      "candidate_registrable_domain": "roadhouse.it"
+    },
+    {
+      "index": 8,
+      "venue_id": "venue:001272:torino:caveja-madama",
+      "name": "La Caveja Madama",
+      "aliases": [
+        "La Caveja Madama"
+      ],
+      "address": "Via Madama Cristina, 73, 10125 Torino",
+      "postcode": "10125",
+      "municipality": "Torino",
+      "region_code": "01",
+      "phone": "+393898558351",
+      "candidate_url": "https://linktr.ee/lacavejamadama",
+      "candidate_registrable_domain": "linktr.ee"
+    },
+    {
+      "index": 9,
+      "venue_id": "venue:001272:torino:pomme-de-terre",
+      "name": "Pomme de Terre",
+      "aliases": [
+        "Pomme de Terre"
+      ],
+      "address": "Via Paolo Sacchi, 16, 10128 Torino",
+      "postcode": "10128",
+      "municipality": "Torino",
+      "region_code": "01",
+      "phone": "+390115620595",
+      "candidate_url": "http://pommedeterrebistrot.it/",
+      "candidate_registrable_domain": "pommedeterrebistrot.it"
+    },
+    {
+      "index": 10,
+      "venue_id": "venue:001292:venaria-reale:spuntino-9",
+      "name": "Lo Spuntino 9",
+      "aliases": [
+        "Lo Spuntino 9"
+      ],
+      "address": "Via Pietro Mascagni, 16/b, 10078 Venaria Reale",
+      "postcode": "10078",
+      "municipality": "Venaria Reale",
+      "region_code": "01",
+      "phone": "+390114242273",
+      "candidate_url": "https://www.instagram.com/lospuntino9/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 11,
+      "venue_id": "venue:001315:volvera:perla-nera",
+      "name": "Pizzeria Perla Nera",
+      "aliases": [
+        "Perla Nera",
+        "Pizzeria Perla Nera"
+      ],
+      "address": "Via Airasca, 16, 10040 Volvera",
+      "postcode": "10040",
+      "municipality": "Volvera",
+      "region_code": "01",
+      "phone": "+390119850142",
+      "candidate_url": "https://www.machepizza.store/",
+      "candidate_registrable_domain": "machepizza.store"
+    },
+    {
+      "index": 12,
+      "venue_id": "venue:002042:cigliano:fashion-cafe",
+      "name": "Fashion Cafe",
+      "aliases": [
+        "Fashion Cafe"
+      ],
+      "address": "Piazza Vittorio Varese, 6, 13043 Cigliano",
+      "postcode": "13043",
+      "municipality": "Cigliano",
+      "region_code": "01",
+      "phone": "+393319500855",
+      "candidate_url": "https://www.google.it/maps/place/P.za+Vittorio+Varese,+6,+13043+Cigliano+VC/@45.3085022,8.0185562,17z/data=!3m1!4b1!4m5!3m4!1s0x4787d4ba92ac9917:0x7a6db0a921fe3dd2!8m2!3d45.3085022!4d8.0207449",
+      "candidate_registrable_domain": "google.it"
+    },
+    {
+      "index": 13,
+      "venue_id": "venue:003066:fontaneto-d-agogna:amici-miei",
+      "name": "Ristorante Pizzeria Amici Miei",
+      "aliases": [
+        "Pizzeria Amici Miei",
+        "Ristorante Pizzeria Amici Miei"
+      ],
+      "address": "Strada Regionale del Lago d'Orta, 5, 28010 Fontaneto d'Agogna",
+      "postcode": "28010",
+      "municipality": "Fontaneto d'Agogna",
+      "region_code": "01",
+      "phone": "+390322890053",
+      "candidate_url": "http://www.ristorantepizzeriaamicimiei.it/",
+      "candidate_registrable_domain": "ristorantepizzeriaamicimiei.it"
+    },
+    {
+      "index": 14,
+      "venue_id": "venue:003109:oleggio-castello:zentrum-stube",
+      "name": "Zentrum Stube",
+      "aliases": [
+        "Zentrum Stube"
+      ],
+      "address": "Via Vittorio Veneto, 42, 28040 Oleggio Castello",
+      "postcode": "28040",
+      "municipality": "Oleggio Castello",
+      "region_code": "01",
+      "phone": "+393405369434",
+      "candidate_url": "https://zentrum-stube.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 15,
+      "venue_id": "venue:003114:paruzzaro:eclisse",
+      "name": "Bar Eclisse",
+      "aliases": [
+        "Bar Eclisse",
+        "Eclisse"
+      ],
+      "address": "Via Borgomanero, 10, 28040 Paruzzaro",
+      "postcode": "28040",
+      "municipality": "Paruzzaro",
+      "region_code": "01",
+      "phone": "+390322538080",
+      "candidate_url": "http://www.sisal.com/",
+      "candidate_registrable_domain": "sisal.com"
+    },
+    {
+      "index": 16,
+      "venue_id": "venue:004022:bernezzo:lou-ciouch-pizzeria-osteria",
+      "name": "Lou Ciouch pizzeria osteria",
+      "aliases": [
+        "Lou Ciouch",
+        "Lou Ciouch pizzeria osteria"
+      ],
+      "address": "Via Don Giovanni Battista Astre, 25, 12010 Bernezzo",
+      "postcode": "12010",
+      "municipality": "Bernezzo",
+      "region_code": "01",
+      "phone": "+393513733717",
+      "candidate_url": "http://louciouch.it/",
+      "candidate_registrable_domain": "louciouch.it"
+    },
+    {
+      "index": 17,
+      "venue_id": "venue:004034:busca:petit-bistrot",
+      "name": "Le Petit Bistrot",
+      "aliases": [
+        "Le Petit Bistrot"
+      ],
+      "address": "Via Umberto I, 14, 12022 Busca",
+      "postcode": "12022",
+      "municipality": "Busca",
+      "region_code": "01",
+      "phone": "+393296478400",
+      "candidate_url": "https://it-it.facebook.com/Le-Petit-Bistrot-236148259923961",
+      "candidate_registrable_domain": "facebook.com"
+    },
+    {
+      "index": 18,
+      "venue_id": "venue:004064:cervasca:crea",
+      "name": "Crea",
+      "aliases": [
+        "Crea"
+      ],
+      "address": "Via Cuneo, 114, 12010 Cervasca",
+      "postcode": "12010",
+      "municipality": "Cervasca",
+      "region_code": "01",
+      "phone": "+390171611114",
+      "candidate_url": "https://www.creasrl.it/",
+      "candidate_registrable_domain": "creasrl.it"
+    },
+    {
+      "index": 19,
+      "venue_id": "venue:004080:diano-d-alba:d-batista",
+      "name": "Locanda 'd Batista",
+      "aliases": [
+        "Locanda 'd Batista"
+      ],
+      "address": "Via Guglielmo Marconi, 11A, 12055 Diano d'Alba",
+      "postcode": "12055",
+      "municipality": "Diano d'Alba",
+      "region_code": "01",
+      "phone": "+390173468011",
+      "candidate_url": "http://www.locandabatista.it/",
+      "candidate_registrable_domain": "locandabatista.it"
+    },
+    {
+      "index": 20,
+      "venue_id": "venue:004148:neive:umano",
+      "name": "Umano",
+      "aliases": [
+        "Umano"
+      ],
+      "address": "Via Borgese, 26, 12052 Neive",
+      "postcode": "12052",
+      "municipality": "Neive",
+      "region_code": "01",
+      "phone": "+390173677264",
+      "candidate_url": "http://www.umanoneive.it/",
+      "candidate_registrable_domain": "umanoneive.it"
+    },
+    {
+      "index": 21,
+      "venue_id": "venue:005005:asti:golf-club-citta-di-asti",
+      "name": "Golf Club Città di Asti",
+      "aliases": [
+        "Golf Club Città di",
+        "Golf Club Città di Asti"
+      ],
+      "address": "Recinto San Rocco, 5, 14100 Asti",
+      "postcode": "14100",
+      "municipality": "Asti",
+      "region_code": "01",
+      "phone": "+390141208033",
+      "candidate_url": "http://www.golfcittadiasti.it/",
+      "candidate_registrable_domain": "golfcittadiasti.it"
+    },
+    {
+      "index": 22,
+      "venue_id": "venue:005007:baldichieri-d-asti:cascina-lane-agriturismo",
+      "name": "Cascina Lané Agriturismo",
+      "aliases": [
+        "Cascina Lané Agriturismo"
+      ],
+      "address": "Via Nazionale, 120, 14011 Baldichieri d'Asti",
+      "postcode": "14011",
+      "municipality": "Baldichieri d'Asti",
+      "region_code": "01",
+      "phone": "+39014166512",
+      "candidate_url": "http://www.cascinalane.com/",
+      "candidate_registrable_domain": "cascinalane.com"
+    },
+    {
+      "index": 23,
+      "venue_id": "venue:005022:castagnole-delle-lanze:laghetto",
+      "name": "Il Laghetto",
+      "aliases": [
+        "Il Laghetto"
+      ],
+      "address": "Via Acquedotto, 12, 14054 Castagnole delle Lanze",
+      "postcode": "14054",
+      "municipality": "Castagnole delle Lanze",
+      "region_code": "01",
+      "phone": "+393487485870",
+      "candidate_url": "http://www.trattorialaghetto.it/",
+      "candidate_registrable_domain": "trattorialaghetto.it"
+    },
+    {
+      "index": 24,
+      "venue_id": "venue:005057:grazzano-badoglio:bagatto",
+      "name": "Il Bagatto",
+      "aliases": [
+        "Il Bagatto"
+      ],
+      "address": "Piazza Giuseppe e Giacomo Cotti, 17, 14035 Grazzano Badoglio",
+      "postcode": "14035",
+      "municipality": "Grazzano Badoglio",
+      "region_code": "01",
+      "phone": "+390141925110",
+      "candidate_url": "http://www.ristoranteilbagatto.it/",
+      "candidate_registrable_domain": "ristoranteilbagatto.it"
+    },
+    {
+      "index": 25,
+      "venue_id": "venue:006003:alessandria:zushi-alessandria",
+      "name": "Zushi Alessandria",
+      "aliases": [
+        "Zushi",
+        "Zushi Alessandria"
+      ],
+      "address": "Spalto Gamondio, 1, 15121 Alessandria",
+      "postcode": "15121",
+      "municipality": "Alessandria",
+      "region_code": "01",
+      "phone": "0131267833",
+      "candidate_url": "http://www.zushi.eu/",
+      "candidate_registrable_domain": "zushi.eu"
+    },
+    {
+      "index": 26,
+      "venue_id": "venue:006028:cantalupo-ligure:pertuso",
+      "name": "Locanda Pertuso",
+      "aliases": [
+        "Locanda Pertuso"
+      ],
+      "address": "Frazione Pertuso, 9, 15060 Cantalupo Ligure",
+      "postcode": "15060",
+      "municipality": "Cantalupo Ligure",
+      "region_code": "01",
+      "phone": "+39014390247",
+      "candidate_url": "http://www.locandapertuso.com/",
+      "candidate_registrable_domain": "locandapertuso.com"
+    },
+    {
+      "index": 27,
+      "venue_id": "venue:006081:gavi:barbarossa",
+      "name": "Al barbarossa",
+      "aliases": [
+        "Al barbarossa"
+      ],
+      "address": "Via Voltaggio, 21, 15066 Gavi",
+      "postcode": "15066",
+      "municipality": "Gavi",
+      "region_code": "01",
+      "phone": "+393472241185",
+      "candidate_url": "http://al-barbarossa-gavi-piedmont.jany.io/",
+      "candidate_registrable_domain": "jany.io"
+    },
+    {
+      "index": 28,
+      "venue_id": "venue:006107:montegioco:capanna",
+      "name": "Agriturismo La Capanna",
+      "aliases": [
+        "Agriturismo La Capanna"
+      ],
+      "address": "Cascina Capanna, 2, 15050 Montegioco",
+      "postcode": "15050",
+      "municipality": "Montegioco",
+      "region_code": "01",
+      "phone": "+390131875299",
+      "candidate_url": "http://www.cascinacapanna.net/",
+      "candidate_registrable_domain": "cascinacapanna.net"
+    },
+    {
+      "index": 29,
+      "venue_id": "venue:006118:olivola:due-buoi",
+      "name": "I Due Buoi",
+      "aliases": [
+        "I Due Buoi"
+      ],
+      "address": "Via Vittorio Veneto, 4, 15030 Olivola",
+      "postcode": "15030",
+      "municipality": "Olivola",
+      "region_code": "01",
+      "phone": "+393662549251",
+      "candidate_url": "http://www.iduebuoi.it/",
+      "candidate_registrable_domain": "iduebuoi.it"
+    },
+    {
+      "index": 30,
+      "venue_id": "venue:007002:antey-saint-andre:pan-et-vin",
+      "name": "Ristorante Pan et Vin",
+      "aliases": [
+        "Pan et Vin",
+        "Ristorante Pan et Vin"
+      ],
+      "address": "Località Filey, 16C, 11020 Antey-Saint-André",
+      "postcode": "11020",
+      "municipality": "Antey-Saint-André",
+      "region_code": "02",
+      "phone": "+393208940524",
+      "candidate_url": "http://www.panetvin.it/",
+      "candidate_registrable_domain": "panetvin.it"
+    },
+    {
+      "index": 31,
+      "venue_id": "venue:007037:issogne:maniero",
+      "name": "Ristorante Al Maniero",
+      "aliases": [
+        "Al Maniero",
+        "Ristorante Al Maniero"
+      ],
+      "address": "Frazione Pied De Ville, 58, 11020 Issogne",
+      "postcode": "11020",
+      "municipality": "Issogne",
+      "region_code": "02",
+      "phone": "+393533846035",
+      "candidate_url": "http://www.ristorantealmaniero.it/",
+      "candidate_registrable_domain": "ristorantealmaniero.it"
+    },
+    {
+      "index": 32,
+      "venue_id": "venue:008007:bajardo:ra-culeta",
+      "name": "Osteria Ra Culeta",
+      "aliases": [
+        "Osteria Ra Culeta",
+        "Ra Culeta"
+      ],
+      "address": "Piazza de Sonnaz, 10, 18031 Bajardo",
+      "postcode": "18031",
+      "municipality": "Bajardo",
+      "region_code": "07",
+      "phone": "+393893124271",
+      "candidate_url": "http://www.vallenervia.it/Ra-Culeta.htm",
+      "candidate_registrable_domain": "vallenervia.it"
+    },
+    {
+      "index": 33,
+      "venue_id": "venue:008046:pornassio:mia",
+      "name": "Pizzeria MIA",
+      "aliases": [
+        "MIA",
+        "Pizzeria MIA"
+      ],
+      "address": "Via Nazionale, 161, 18024 Pornassio",
+      "postcode": "18024",
+      "municipality": "Pornassio",
+      "region_code": "07",
+      "phone": "+393297234491",
+      "candidate_url": "http://cinque-valli.com/listing/pizzeria-mia/",
+      "candidate_registrable_domain": "cinque-valli.com"
+    },
+    {
+      "index": 34,
+      "venue_id": "venue:008053:san-biagio-della-cima:vecchia-ostaia",
+      "name": "Ristorante la Vecchia Ostaia",
+      "aliases": [
+        "Ristorante la Vecchia Ostaia",
+        "la Vecchia Ostaia"
+      ],
+      "address": "Via Provinciale, 34, 18036 San Biagio della Cima",
+      "postcode": "18036",
+      "municipality": "San Biagio della Cima",
+      "region_code": "07",
+      "phone": "+393408464461",
+      "candidate_url": "http://www.mirazur.fr/",
+      "candidate_registrable_domain": "mirazur.fr"
+    },
+    {
+      "index": 35,
+      "venue_id": "venue:008055:sanremo:sanremo-citta-della-musica",
+      "name": "Sanremo Città della Musica",
+      "aliases": [
+        "Sanremo Città della Musica"
+      ],
+      "address": "Corso Felice Cavallotti, 59, 18038 Sanremo",
+      "postcode": "18038",
+      "municipality": "Sanremo",
+      "region_code": "07",
+      "phone": "+390184580500",
+      "candidate_url": "https://www.sanremoliveandlove.it/",
+      "candidate_registrable_domain": "sanremoliveandlove.it"
+    },
+    {
+      "index": 36,
+      "venue_id": "venue:009001:alassio:sail-inn",
+      "name": "Sail Inn",
+      "aliases": [
+        "Sail Inn"
+      ],
+      "address": "Via Brennero, 30, 17021 Alassio",
+      "postcode": "17021",
+      "municipality": "Alassio",
+      "region_code": "07",
+      "phone": "+390182640232",
+      "candidate_url": "http://www.sailinnalassio.com/",
+      "candidate_registrable_domain": "sailinnalassio.com"
+    },
+    {
+      "index": 37,
+      "venue_id": "venue:009002:albenga:punta-lena-albenga",
+      "name": "Ristorante Punta Lena Albenga",
+      "aliases": [
+        "Punta Lena",
+        "Ristorante Punta Lena",
+        "Ristorante Punta Lena Albenga"
+      ],
+      "address": "Lungomare Cristoforo Colombo, 2, 17031 Albenga",
+      "postcode": "17031",
+      "municipality": "Albenga",
+      "region_code": "07",
+      "phone": "+390182577276",
+      "candidate_url": "http://www.puntalena.it/",
+      "candidate_registrable_domain": "puntalena.it"
+    },
+    {
+      "index": 38,
+      "venue_id": "venue:009056:savona:agriotto",
+      "name": "AgriOtto",
+      "aliases": [
+        "AgriOtto"
+      ],
+      "address": "Via Pietragrossa, 21, 17100 Savona",
+      "postcode": "17100",
+      "municipality": "Savona",
+      "region_code": "07",
+      "phone": "+393926430914",
+      "candidate_url": "http://www.agriotto.it/",
+      "candidate_registrable_domain": "agriotto.it"
+    },
+    {
+      "index": 39,
+      "venue_id": "venue:009057:spotorno:samoa-beach-restaurant",
+      "name": "Samoa Beach & Restaurant",
+      "aliases": [
+        "Samoa Beach & Restaurant"
+      ],
+      "address": "Via Maremma, 2, 17028 Spotorno",
+      "postcode": "17028",
+      "municipality": "Spotorno",
+      "region_code": "07",
+      "phone": "+39019741125",
+      "candidate_url": "http://www.bagnisamoa.it/",
+      "candidate_registrable_domain": "bagnisamoa.it"
+    },
+    {
+      "index": 40,
+      "venue_id": "venue:010017:cogoleto:bagni-le-vele",
+      "name": "Bagni Le Vele",
+      "aliases": [
+        "Bagni Le Vele"
+      ],
+      "address": "Via Aurelia di Levante, 16016 Cogoleto",
+      "postcode": "16016",
+      "municipality": "Cogoleto",
+      "region_code": "07",
+      "phone": "+393472555310",
+      "candidate_url": "http://www.bagnilevele.it/",
+      "candidate_registrable_domain": "bagnilevele.it"
+    },
+    {
+      "index": 41,
+      "venue_id": "venue:010025:genova:goletta-seaside-food-craft-spirits",
+      "name": "La Goletta Seaside - Food & Craft Spirits",
+      "aliases": [
+        "La Goletta Seaside - Food & Craft Spirits"
+      ],
+      "address": "Molo Vecchio, 1, 16128 Genova",
+      "postcode": "16128",
+      "municipality": "Genova",
+      "region_code": "07",
+      "phone": "+390102518279",
+      "candidate_url": "http://www.lagolettaseaside.it/",
+      "candidate_registrable_domain": "lagolettaseaside.it"
+    },
+    {
+      "index": 42,
+      "venue_id": "venue:010025:genova:mantero",
+      "name": "Mantero",
+      "aliases": [
+        "Mantero"
+      ],
+      "address": "Via Sestri, 157/r, 16154 Genova",
+      "postcode": "16154",
+      "municipality": "Genova",
+      "region_code": "07",
+      "phone": "+390108959460",
+      "candidate_url": "https://pasticceriamantero.it/",
+      "candidate_registrable_domain": "pasticceriamantero.it"
+    },
+    {
+      "index": 43,
+      "venue_id": "venue:010059:sestri-levante:piccola",
+      "name": "Osteria La Piccola",
+      "aliases": [
+        "La Piccola",
+        "Osteria La Piccola"
+      ],
+      "address": "Via Nazionale, 280, 16039 Sestri Levante",
+      "postcode": "16039",
+      "municipality": "Sestri Levante",
+      "region_code": "07",
+      "phone": "+390185022860",
+      "candidate_url": "http://www.osterialapiccola.com/",
+      "candidate_registrable_domain": "osterialapiccola.com"
+    },
+    {
+      "index": 44,
+      "venue_id": "venue:011019:monterosso-al-mare:ciliegio",
+      "name": "Il Ciliegio",
+      "aliases": [
+        "Il Ciliegio"
+      ],
+      "address": "Localita' Beo, 19016 Monterosso al Mare",
+      "postcode": "19016",
+      "municipality": "Monterosso al Mare",
+      "region_code": "07",
+      "phone": "+390187801220",
+      "candidate_url": "https://www.instagram.com/ilciliegio5terre/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 45,
+      "venue_id": "venue:011022:portovenere:del-pescatore",
+      "name": "Ristorante del Pescatore",
+      "aliases": [
+        "Ristorante del Pescatore",
+        "del Pescatore"
+      ],
+      "address": "Via Olivo, 33, 19025 Portovenere",
+      "postcode": "19025",
+      "municipality": "Portovenere",
+      "region_code": "07",
+      "phone": "+390187798015",
+      "candidate_url": "http://www.ristorantedelpescatore.it/",
+      "candidate_registrable_domain": "ristorantedelpescatore.it"
+    },
+    {
+      "index": 46,
+      "venue_id": "venue:011022:portovenere:miramare",
+      "name": "Ristorante Miramare",
+      "aliases": [
+        "Miramare",
+        "Ristorante Miramare"
+      ],
+      "address": "Calata Doria, 66, 19025 Portovenere",
+      "postcode": "19025",
+      "municipality": "Portovenere",
+      "region_code": "07",
+      "phone": "+390187790630",
+      "candidate_url": "http://www.portoveneremiramare.it/",
+      "candidate_registrable_domain": "portoveneremiramare.it"
+    },
+    {
+      "index": 47,
+      "venue_id": "venue:011026:santo-stefano-di-magra:ristoro-nell-aia",
+      "name": "Il Ristoro Nell'aia",
+      "aliases": [
+        "Il Ristoro Nell'aia",
+        "Il Ristoro Nellaia"
+      ],
+      "address": "Via Arenelle, 9, 19037 Santo Stefano di Magra",
+      "postcode": "19037",
+      "municipality": "Santo Stefano di Magra",
+      "region_code": "07",
+      "phone": "+390187699166",
+      "candidate_url": "http://www.ristoronellaia.it/",
+      "candidate_registrable_domain": "ristoronellaia.it"
+    },
+    {
+      "index": 48,
+      "venue_id": "venue:011030:vernazza:gianni-franzi",
+      "name": "Gianni Franzi",
+      "aliases": [
+        "Gianni Franzi"
+      ],
+      "address": "Piazza Guglielmo Marconi, 1, 19018 Vernazza",
+      "postcode": "19018",
+      "municipality": "Vernazza",
+      "region_code": "07",
+      "phone": "+390187821003",
+      "candidate_url": "http://www.giannifranzi.it/",
+      "candidate_registrable_domain": "giannifranzi.it"
+    }
+  ]
+}

@@ -1,0 +1,1278 @@
+{
+  "selected_at": "2026-09-24T16:46:14.054Z",
+  "seed": "locked-holdout-llm-v1",
+  "count": 480,
+  "partition": "locked_holdout",
+  "eligible_source_candidate_venues": 86616,
+  "excluded_venue_ids": 2376,
+  "exclusion_inputs": [
+    {
+      "path": "benchmark/AUTOMATIC-FIRST-PARTY-DEVELOPMENT-EVALUATION-V7.json",
+      "sha256": "589c956d9e1e9780b7cbba1e118d89f31f08be86ab107e7b09dbc8ef2620b104",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/AUTOMATIC-FIRST-PARTY-LOCKED-HOLDOUT-EVALUATION-V1.json",
+      "sha256": "ef900e97c2beeddf5c4ac6aab31bdc2d9dd4aa07363cf7b69eec71ed7f68f89e",
+      "venue_ids_added": 1
+    },
+    {
+      "path": "benchmark/AUTOMATIC-FIRST-PARTY-RULE-FREEZE.json",
+      "sha256": "8125b4b46fcb2289650834fece9b9d9552a73cda0b85f65bb85641cd2a03120c",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/ITALY-OFFLINE-INVENTORY-2026-08-28.json",
+      "sha256": "dd573872a7be10625c7cd7dadf2f72b164f4dc1e28fcd7f5b6cd96d132d2f074",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-10-FRESH-COLD-RUN.json",
+      "sha256": "4c90f811bc069f5ee93162e22edde4d2db48f44a3790a6aa96523839d40ad440",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-10-FRESH-PILOT-SELECTION.json",
+      "sha256": "b6cb9777eeee6b3bef531cfd1c5663cf22b2d4f225c493e76d0dd2bfec882efd",
+      "venue_ids_added": 40
+    },
+    {
+      "path": "benchmark/SESSION-10-FRESH-WARM-RUN.json",
+      "sha256": "c89ff6fc172bb0fc9f580599a9f44cf03ccd25ed2db94e75ab6ade5448ec930c",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-10-LIVE-PILOT-RUN.json",
+      "sha256": "64e77726dbb06a2f4a73c88a5661f4ed89341c630efce6b291b9277f77fc63ec",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-10-PILOT-SELECTION.json",
+      "sha256": "9546da07c0a84e0f1dfee17a0c0faeae114176e62f672d3dc0aa4457b6dd573d",
+      "venue_ids_added": 40
+    },
+    {
+      "path": "benchmark/SESSION-11-DEVELOPMENT-WEB-EVALUATION-V2.json",
+      "sha256": "5fd323071525aaea5a0152ecb4d2f924614e4eb9c9a002a4e8c3df12e8187c5b",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-11-DEVELOPMENT-WEB-EVALUATION-V3.json",
+      "sha256": "5fd323071525aaea5a0152ecb4d2f924614e4eb9c9a002a4e8c3df12e8187c5b",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-11-DEVELOPMENT-WEB-EVALUATION.json",
+      "sha256": "5fd323071525aaea5a0152ecb4d2f924614e4eb9c9a002a4e8c3df12e8187c5b",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-11-FINAL-LOCKED-HOLDOUT-EVALUATION.json",
+      "sha256": "5b4f9a4a81fd49b259a108f69b40416244d8a94baa01a0888d3db812f031b9a6",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-11-FINAL-UNSEEN-SELECTION.json",
+      "sha256": "862763ae7d3aedb9cbeb5914b0ca944828ed064928110953575b41d5cb900920",
+      "venue_ids_added": 300
+    },
+    {
+      "path": "benchmark/SESSION-11-LOCKED-HOLDOUT-RETIREMENT.json",
+      "sha256": "9e61d2c7d46dae3cb99df145bc9a8add4daaa647336c0d934528e7e0e417a97c",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-11-REPLACEMENT-HOLDOUT-V2-RETIREMENT.json",
+      "sha256": "9855b69d0682bd05692dedf64395310cad413cd6578b14a949c8ffb7928cf38b",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-11-REPLACEMENT-UNSEEN-SELECTION.json",
+      "sha256": "ef54d3322e78d386bf68e025afecfba6c1b58d2d642280d91f2b66ae0863b8fd",
+      "venue_ids_added": 300
+    },
+    {
+      "path": "benchmark/SESSION-11-UNSEEN-SELECTION.json",
+      "sha256": "e14d973e563aea814accf0dff991a9ef5a21dd1a7db6370dc215492b3874d630",
+      "venue_ids_added": 300
+    },
+    {
+      "path": "benchmark/SESSION-11-WEB-IMPLEMENTATION-FREEZE-V2.json",
+      "sha256": "6d177a45ecc1884c827bbad4d40f2627ef26354db1fb2d0e29c71e7ec9969c3d",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-11-WEB-IMPLEMENTATION-FREEZE-V3.json",
+      "sha256": "fb97244f4d11da51b3a85e9f3ee7a7748856cc8171bafc6440d0a5c29c4c25b4",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-11-WEB-IMPLEMENTATION-FREEZE.json",
+      "sha256": "743fc107234ea0386b125bd003763693e7a35a7a3062ff5329516b693c221cc8",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-EXTENSION-ADJUDICATION-CHECKPOINT-100.json",
+      "sha256": "5d45e8c57948b6ed755fd21194434f9a45d5fc844f05dd6564fc30fa27460c09",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-EXTENSION-ADJUDICATION-CHECKPOINT-200.json",
+      "sha256": "4ffeb123934d9dc9f3326107b305b47bcb086bc5fe3ac4f37573af45972290fa",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-EXTENSION-ADJUDICATION-CHECKPOINT-300.json",
+      "sha256": "19a1f0875c730cc122df9d0cb2a6da227e11f9946f956b467a988f911582ae33",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-EXTENSION-ADJUDICATION-CHECKPOINT-400.json",
+      "sha256": "c93244671dc7ed96dcebb8d06b18cc3d0d701e062259d5d2492b599e615abb2f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-EXTENSION-ADJUDICATION-CHECKPOINT-500.json",
+      "sha256": "a0030bb1edd10da9d5a66d4efe52b7a18f508e390a8c071a7fd6deba3a64e243",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-EXTENSION-CAPTURE-CHECKPOINT-100.json",
+      "sha256": "e62b4a7e0bd2760f3266d8d23f6edf8f7bda82a2f94026a0b91abb9cc6a7d5be",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-EXTENSION-CAPTURE-CHECKPOINT-200.json",
+      "sha256": "bdf8b08c1da1bce0b7d2e8a34e509ff371e466bf41fdde34015e66234a0671e4",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-EXTENSION-CAPTURE-CHECKPOINT-300.json",
+      "sha256": "ecb8527291217df6227f39dd2cd58309f883467a615ee5a9fa66e643b44b7bff",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-EXTENSION-CAPTURE-CHECKPOINT-400.json",
+      "sha256": "72a9fb719ea0b30010063e1ad1b57ec52e934819e8e1fcdff17b155fd30a3783",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-EXTENSION-CAPTURE-CHECKPOINT-500.json",
+      "sha256": "b5426090de7a77e3539c83ad966420601c776a065a7965bc0f0c8c2d632ac0c5",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-POWERED-HOLDOUT-COMBINED-EVALUATION.json",
+      "sha256": "ee375419af2fb74bb3663f17960a07b71f9dd3b824b760818488ab29a3fe9b18",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-POWERED-HOLDOUT-EXTENSION-FREEZE.json",
+      "sha256": "52a25cef3a8fa4d6891cbe2c784504e85ae5bdbc913ca8cd4166b0577bd79dbc",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-POWERED-HOLDOUT-EXTENSION-QUERIES.json",
+      "sha256": "d0f39d422aee8dc7e1a7db315bff119177873efa1f986dd3cb3f472dded60b2e",
+      "venue_ids_added": 500
+    },
+    {
+      "path": "benchmark/SESSION-12-POWERED-HOLDOUT-EXTENSION-SELECTION.json",
+      "sha256": "2841998716788cb45523202b28509f75e3f0f893997a1fcf60ffd8a355f139f7",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-POWERED-HOLDOUT-FREEZE.json",
+      "sha256": "c753c176d35f26d88422d7eb7b22e5309659af478796e8dfdeac78dd2fb5ae91",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/SESSION-12-POWERED-HOLDOUT-SELECTION.json",
+      "sha256": "5a867db62b5ced8b39bb56a1b784cbe7065b9dcc7ea15a0ca6b0254992a25d60",
+      "venue_ids_added": 499
+    },
+    {
+      "path": "benchmark/VENETO-OFFLINE-INVENTORY-2026-08-27.json",
+      "sha256": "f626d885d3727cc88ede652f6e073b7ef802c8edc2ffa877f23728e08c020b22",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/ZERO-COST-PHASE-0-SAMPLE-20.json",
+      "sha256": "f7950d51096def67255bfec80f00f66af39442c91fa15b19da01233977a349dd",
+      "venue_ids_added": 20
+    },
+    {
+      "path": "benchmark/session-11-web/development-001-020.json",
+      "sha256": "d4d7c4d19abc2a4c6b88fe19cce9b8e04a3e2c9e095116e3e98d396000058767",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-021-060.json",
+      "sha256": "2fb08932a1bcb34c08156f11d458d35400d31b526031961aa49503577097d117",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-061-100.json",
+      "sha256": "acb6338a9dc6503fddf4f9b98facc6310f3170fa463ad5e6363a33b957153288",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-101-140.json",
+      "sha256": "a7e8986f2fb6930878bc2898fddc4f0a6e2f599c51af05ff3b338122925e44ba",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-141-180.json",
+      "sha256": "e8cc520a4b58586832b48bf53df4980cbc4a9a7acadf258e71cdf980c9bb9b40",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-181-200.json",
+      "sha256": "2fe5d1abc9a621c2cdabe47b70e8626a697b16dbcd7735db2d295c94262e57c2",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-adjudication-001-020.json",
+      "sha256": "1c3b6eb7ad8c8c49d6724ec99851781dfba3acb745566839d5e2c237e21b64ee",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-adjudication-021-040.json",
+      "sha256": "3ea32667d5663d8b309117c433a18bdfd5b672d1d98b080225a9322441f4e8b5",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-adjudication-041-060.json",
+      "sha256": "0e48ab898caeb27d853419212ec523ec5e33e3362937e7c9202970ef256abfc9",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-adjudication-061-080.json",
+      "sha256": "155371464382942a5a9deff51acc1005a4f2e3148c81257e1421545185056004",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-adjudication-081-100.json",
+      "sha256": "5c6f317ed5cf6e4c1bc0483ae73e6983c9a932b555a23bb3b9eb9ad9eb8d5a3b",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-adjudication-101-120.json",
+      "sha256": "0b888235b89cc5778ab642ce8bd9c0ecd482588f0b0f36d8227797935cceb35c",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-adjudication-121-140.json",
+      "sha256": "4407625931753d51e1d3faf36834ca7633bafabd87e9ebf13c31affc49e3fcec",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-adjudication-141-160.json",
+      "sha256": "81af6c1c1547b19e4215644d60b411e53831dc941a4278669ed1423a39b517ec",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-adjudication-161-180.json",
+      "sha256": "495843e012e88b2d82d23b2e2b6ff89d5daca387f375250440ab8597b0c35a20",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/development-adjudication-181-200.json",
+      "sha256": "62c42da2b5f74c88ed422a94eff071c5fa8ab19761d20b23ceeb5c973ad63dbe",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-001-004.json",
+      "sha256": "bf40a195a6316246bc66d0a3dcf9cf323c619fb48df5c7cc911f756f828056f6",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-005-008.json",
+      "sha256": "d2579a7980334e70f5f143a5c0cce6e7773c55252652d2e4ec478f8d7f5b0ffd",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-009-012.json",
+      "sha256": "03f268ded1d8297c05bee554034dda6bbbb37c6599e970e05eadffcacf06c204",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-013-016.json",
+      "sha256": "4c0e58264050736a2f36129e28a277b1d89aa449570dacfb8831f0625158b33b",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-017-020.json",
+      "sha256": "57e98bee9367f645f97d49f859a8c379a91d1e810833391ea2524ee17412f823",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-021-024.json",
+      "sha256": "95cb348c1e953b161a40b63ba854f8b0fa7d2fdb94902b3bd17eb3fc784c4177",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-025-028.json",
+      "sha256": "d27713d58d8498a2f687d681a11d2babf62790f1b3e1d8898dee948538e41f36",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-029-032.json",
+      "sha256": "d9c3692ce3a607749b3d334d992a5513f7803c7b7a962ff80feebccb7ffa4f45",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-033-036.json",
+      "sha256": "61da7b58302ec01e10ead4df98f7183d3eaa675c99eed235c2f332b0687b73ed",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-037-040.json",
+      "sha256": "56f6f3bb33d9f65d7dbdfb6d9d78e1846579606b390328c0f736fcdeec5957dd",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-041-044.json",
+      "sha256": "45ee43d317c826a4dceec741fbf2e64c78a4054ccb0e7208fa66f065e688a650",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-045-048.json",
+      "sha256": "7772ee785c6d8df27edcacc860261acc9aa83dd872ab7629a5170200f6dd117f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-049-052.json",
+      "sha256": "ecbfddb7461fdba540137fa68729c531d438d520f79456ea08466c051bbf089b",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-053-056.json",
+      "sha256": "8a805a466d4392252dcb2ce90452ea0cb6b61364e77435b7a05663c4d924d72b",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-057-060.json",
+      "sha256": "2ff0fbbb7873413e85030ca20c34338806a6fc73971c8e0682be2419afb1f70f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-061-064.json",
+      "sha256": "f726569c7c485f8ccd63e4bbe8bebd5cf5f5625089f3b192802d4fcc1faf68b9",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-065-068.json",
+      "sha256": "1a878b10a5a7c7be6035c10a3820a95341baf44ba1e2367b87046d77797c19f5",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-069-072.json",
+      "sha256": "27e5308cdb5767ede176d2cefaa86eb5219be92df959bbe458fd61ed82258c61",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-073-076.json",
+      "sha256": "7c46d73c7196cca37059e4eb861c9b78d52ccbcbf1fea4f667d66c914717ed84",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-077-080.json",
+      "sha256": "8b53b49de3d89c38c71440b536dd826c1a81cf434afdb4a3ebacdcff45a3c1ce",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-081-084.json",
+      "sha256": "92fb240fda9fc7588b5b88480dd3f0084d1c54ca83588e9afe66405204a505d7",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-085-088.json",
+      "sha256": "682bef2cb97489f335c2289f67713dcc10e137d034c2ef729a56776fb361911c",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-089-092.json",
+      "sha256": "e5641ca4376bf772da7b1374c9cf73624c6d2986fe26228a723900806094695b",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-093-096.json",
+      "sha256": "3c3f9db6b8d01357dbb9429d6c25528303a722e0368aff3b457fcc3321964044",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-097-100.json",
+      "sha256": "59b63a8a4a96e906a9a2dcfdedc7301b504eb482b0b266ea66a93f8eef91689d",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web/locked-holdout-capture-001-008.partial.json",
+      "sha256": "fa9b20c757d8dd8989cbc5512482df71550fb4f337b2064c964862179e445974",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-001-004.json",
+      "sha256": "00cee5ff23d0e0129e5ed810411a2cc4cd6220d6fbc22310b414981136ca15ab",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-005-008.json",
+      "sha256": "2c35d91563d146a1ab73fc2fad2306c279f694ba4c562cf2514d84759e5da3d1",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-009-012.json",
+      "sha256": "ac1388ec40aa1095aa1a0fdc7fe6e19b83f25fe744b9b3ebf267f7b8eb725ad7",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-013-016.json",
+      "sha256": "4c1f1e261db2e4732ac562cf2ba746297b9861e74d1ee861a40bae4d1d207701",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-017-020.json",
+      "sha256": "99f8b759f2ebd60b4cd3a3aa90ecab4d8bd7bcc7780ddd22bca2d2274402a0ab",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-021-024.json",
+      "sha256": "3276b0fa3214b5a0f1f3fd5b0eaa1baf2232caeb20c9d3ed4ea0056bb73725e0",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-025-028.json",
+      "sha256": "ce6e811019ffc778216332db07e4ebf1b5d8ca336187423d5795ffe55a884d21",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-029-032.json",
+      "sha256": "3a3f1b2556befba883c30bdcb3d93859514839659d9c32a133e4ff43848111c6",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-033-036.json",
+      "sha256": "dee6096603dd603000d4fcd1f29799c2ec34415326baba4740227eb0c65065ce",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-037-040.json",
+      "sha256": "cc0d0268df220b6189afb3e2b49ca16fdaf211bc1313d422a2c38795ebdbac17",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-041-044.json",
+      "sha256": "cb260654ae46dccc75c1d9d32ea5301df318acb23e151fd545a76d66ab20838f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-045-048.json",
+      "sha256": "bbfde5f118838f559cd096d64f19bab9fb4bb31b8bb8ddb4fa93f5000df0dadd",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-049-052.json",
+      "sha256": "c7640295abedc53b3d5d3f0c00f7c43022a94fa1bc8c72baddba8428465564f5",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-053-056.json",
+      "sha256": "83ace65aeccfd2396d2cb95f8b3c4f4b9ad0a2a4b411422ab74896245f073658",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-057-060.json",
+      "sha256": "2131c465f7a4cd2446dfaac40dbb6422ccdb47e547c16251bac09e22d12325a9",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-061-064.json",
+      "sha256": "bb6ecc4c7ce32c955c307f547b8e9bbc9c8a42fd5c958040aea09ba28978f8b1",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-065-068.json",
+      "sha256": "dfb2c014af0d2973c76be4983b46497d7e79ff5f0b3d37ace23cab4bbd6645df",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-069-072.json",
+      "sha256": "edda5b37b3b0d37b3988e8ce250e5d85ba3cb62fa75ea6654c2883dcadcef0e6",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-073-076.json",
+      "sha256": "c67cc1f33294f1fdc483032f80035e6690b893a13147808db577fc1bd5d0d52e",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-077-080.json",
+      "sha256": "21d0795bf845acff674e960fa9c94990829e9976ac79c69a8aaef1f2b746ce10",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-081-084.json",
+      "sha256": "9a42a861756a8103fcbe711ebd885edd61635225cd3b35ea1ed9c35dba83f7ce",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-085-088.json",
+      "sha256": "89d7061f73b5d0bf561a395db16ebb5174efd330fd90765b6e143557aecbca7c",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-089-092.json",
+      "sha256": "5a2b9c03a9e0ad35d64852e59fa9c58c5095ce43c11ca35eee20e400a074ce46",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-093-096.json",
+      "sha256": "ae420809956a690bd7d41e0f82a1f968b06b4a56154d4ec13287c855de70ad2b",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v2/locked-holdout-097-100.json",
+      "sha256": "30f572ad86dba776b8d6d2a5d224755fe366f86e7c7ff65e85a1ee051da77452",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v3/locked-holdout-001-020.json",
+      "sha256": "d74b806fc133afe209f20802f9cdd02c8049b5ee4baa304bac6e0eb9b9aed293",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v3/locked-holdout-021-040.json",
+      "sha256": "edf00d3563b6624a856e09505982c259ed66c6d13e7aa671cba182a3899da330",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v3/locked-holdout-041-060.json",
+      "sha256": "f6d77a3ab52bcf1ac99319052b7e159404d676e80d49b1ea6f0a3e0c86a4c05d",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v3/locked-holdout-061-080.json",
+      "sha256": "9763485d543ae96ae41d1cc72e89f668e4dddd0e6e05e425ae926853aedae184",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v3/locked-holdout-081-100.json",
+      "sha256": "243ff63429841af13bc95c3ea6c435b0cbdf3c71e05f72c44179295a5a46ade2",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v3/locked-holdout-adjudication-001-020.json",
+      "sha256": "bc5618f3f210b4278ce1591221a13a91ae979e4b96027c2937f6edbe354a1479",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v3/locked-holdout-adjudication-021-040.json",
+      "sha256": "033821292a7fafab220efcc973240645b5cb439b660f36b1ab9478499f5b4972",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v3/locked-holdout-adjudication-041-060.json",
+      "sha256": "f74933e24555138c95caf68d76e01f063008d2af4971bbb0f15553e24f4cc6e3",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v3/locked-holdout-adjudication-061-080.json",
+      "sha256": "e6f65379641ea8a751e5a23ff43724fc8f55deea0e501b650bcc27cafea97e68",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-11-web-v3/locked-holdout-adjudication-081-100.json",
+      "sha256": "e155a11fb6334c4f83176d81690e8c5ada726e872dfd33aefb18e86d81d43f37",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-001-008.json",
+      "sha256": "b1c45fdb98fe4d785e31e985d7adfa5eccada7b4fd607997bcd5530317d61b03",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-009-024.json",
+      "sha256": "136173a2638405833b367a5205e4fbeaa217c4950b655d2f8f26d2675d699575",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-025-040.json",
+      "sha256": "987fd38828766186d2b4ebc60a3c40ddc8f33ad488e98517c1342834e9de332a",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-041-048.json",
+      "sha256": "41876acc104645080a35b01ca02874d1366c49e18484488af8f92fe9649b4f4f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-049-064.json",
+      "sha256": "44bf1ec3c777b16f451da5a610a79a881c0a83964a281db3f46fe5cfb3524ced",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-065-080.json",
+      "sha256": "b0617002585238373654a9cc9f5aeeb2347641ba465854a07c191f115d4e224f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-081-096.json",
+      "sha256": "ba194a7395b2b052e95e890bacb4cf94b53b3f8397bea36bdfed451ecea6db14",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-097-112.json",
+      "sha256": "d98c691281529c7f803f426ce745e544d1323eeef304cff51b4e7e538c830385",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-113-128.json",
+      "sha256": "ed7bb41e6d56e53bbecc3007bc94d7943125cca2024cb32e4ebc2148a3f07e51",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-129-144.json",
+      "sha256": "deea282ab89727ac14339d2b35003e4f355f34a8b0badb67b319653247d001c9",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-145-160.json",
+      "sha256": "dd5474dc8dd7b3dcd12fbbc943f8472a597bd65fb70045a410c4dd8caa759e0e",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-161-176.json",
+      "sha256": "38303345bd6af1c13ad9a82c8620c40c7ef06d0257d3d2486146e6edbf6324aa",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-177-192.json",
+      "sha256": "b50d5944cd0436c99bb7d1234101c31293e7eda8429d3251bf06840de3a50724",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-193-200.json",
+      "sha256": "d669af0381d40ad44e99c055dab33eb6ee8e845e755bc42d35f2bf8d4bd50bf0",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-201-216.json",
+      "sha256": "0006efd11758ba14389a407a5bd52b48314c2ab3464b328e1409e8533dfa31a4",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-217-220.json",
+      "sha256": "9e68e67d0afd41c5b61909a5f7493361ec82df912ad5f47da40a51491e6dc1e5",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-221-236.json",
+      "sha256": "ea0c9ca90fc803960d02313365eec2130faf672a24b91cd90cf7b1f518790659",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-237-252.json",
+      "sha256": "40b40f150baefeceb8d1ab62a3a10b5b20b67c1243c395188ad50c43ab85502d",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-253-268.json",
+      "sha256": "38707da578465fd6eec7d75bae657432e0c69a7b054774a50dd2096b5bd188d5",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-269-284.json",
+      "sha256": "0a95deae3066aeebab1d61a6bed6ee8d23af45194b424f095b165fd5674c9d0f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-285-300.json",
+      "sha256": "75c1b858bbce6f4a3a2bbb09ce52c61885758f3a392c21fada7533ff2cb11270",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-301-316.json",
+      "sha256": "d07bc7042cd6bfdeb92bfe91fd65372530a0817e93e971da294c16aaf26d5444",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-317-332.json",
+      "sha256": "750e3d42b2b7c0f43d84161d39910fcd23fec60852203f939788326aec1de1a3",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-333-348.json",
+      "sha256": "6423df5c73b1ae2902bbc9d19b1c4e88358baf509e113521c22b3dffc35a3385",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-349-364.json",
+      "sha256": "d69c47347f89fe2f6711266df7a13b632b68584378126269df6be2026d096d5d",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-365-380.json",
+      "sha256": "5d4362bf932f1fbffe245f532d42abfe8db6abd0b5d8c17623c20ff97ea020ed",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-381-396.json",
+      "sha256": "39792c10cb061e323c5ca9013ad771ca7cd09b99884323518b9b9cf7a99b66a7",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-397-412.json",
+      "sha256": "bfc5181fa0b626a165e6e079db053b1a0763c29ce1c1ccd3d6b108b65e55c18f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-413-428.json",
+      "sha256": "b338b84e814488f9a2f7acd0c57db3cdd4a40022bddae8f3835f4ad7a59b7f79",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-429-444.json",
+      "sha256": "07e59013ab9844bfb99f235b712cbb41f6e992a71c00f34ee3a4e27055672117",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-445-460.json",
+      "sha256": "5f31551f83eb0735c6a32ead8c64459cf836d8448fc7ca4ad38d8c068b1c406c",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-461-476.json",
+      "sha256": "e12d014273c8ac48362371b7ce48d37b33f93116ab30d31bc4b401b1ab65a2a7",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-477-492.json",
+      "sha256": "40c210ba80cef2609d2f83497d15a788111667e2297da285d94b92fc56094667",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-493-500.json",
+      "sha256": "8dacfa1c4d7e832cc31393ebfb4eab77b3df2bc53f47c8f1abf6cdfa910db284",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-adjudication-001-020.json",
+      "sha256": "e66aad4d0dbe1ee17fb6a515d693ef86681e5dcc30e174e8a015ea0888fbc1db",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-adjudication-021-120.json",
+      "sha256": "9405ce2bc43d5a44f44d74f8801c04d53d906fe38e228d3e3048d57af796d291",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-adjudication-121-220.json",
+      "sha256": "4da06dbd9ec782e0440dbca8e7cb17bd28b003fdbebb0737c6ebf76f8f6b6806",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-adjudication-221-320.json",
+      "sha256": "aa242b0fb014369a22cb337d0c3343a7cf8d5b9f59b16bd356f738edf2b05209",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-adjudication-321-420.json",
+      "sha256": "c6b7f1406e9d854bc0f0fb91afd0fc3e88bb0379217b5ce63ee54384caa286a2",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-1/locked-holdout-adjudication-421-500.json",
+      "sha256": "a87ab3a8c61d2cd3e68117dfb720ba1fc6695078b58bde316f214e11f7a8d7f5",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-2/locked-holdout-001-100.json",
+      "sha256": "aa01bdfe99b77d396fa3e9ea1fb257df0d58f75a28aa26461373321b30292ef5",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-2/locked-holdout-101-200.json",
+      "sha256": "01d682dd149fb152ffeecf67eefe73be643509e2d53a90930ded6209725952c5",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-2/locked-holdout-201-300.json",
+      "sha256": "edc4b87b0625fc55b75012607da15264c9e5a436b88441156ea27722ec283be1",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-2/locked-holdout-301-400.json",
+      "sha256": "e434ea87b660456c0e7e578888f242f1796e83e5c7205e3442c75cc81322c983",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-2/locked-holdout-401-500.json",
+      "sha256": "e8c5dc7ec2324da8a7c621bbd4a1e110d1fd85cec5197bf5b3fbdfe569ec21e4",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-2/locked-holdout-adjudication-001-100.json",
+      "sha256": "1e41591661cb3c51db0f7df6c68070e7d2db02b4d13fa687ab511c5c9cfd0c4f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-2/locked-holdout-adjudication-101-200.json",
+      "sha256": "4706a24ed17cb8a38b8f4c070c65fbeb2e6a88e9cc2ff4aa0f1797497881d9f4",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-2/locked-holdout-adjudication-201-300.json",
+      "sha256": "25ab3a491ef735b37e78905b28c86eabf78cccbb5c0300c3d7809874dcdc73a0",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-2/locked-holdout-adjudication-301-400.json",
+      "sha256": "6407333e1f671bec896020c7787e485e8871be3a4d9f660488f309d679e5e4ef",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-combined-final/cohort-2/locked-holdout-adjudication-401-500.json",
+      "sha256": "f28b5a599268302eb5f95b0fc32527e063e11f004679285a8842dbae9fad82ff",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-extension-web/locked-holdout-adjudication-001-100.json",
+      "sha256": "1e41591661cb3c51db0f7df6c68070e7d2db02b4d13fa687ab511c5c9cfd0c4f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-extension-web/locked-holdout-adjudication-101-200.json",
+      "sha256": "4706a24ed17cb8a38b8f4c070c65fbeb2e6a88e9cc2ff4aa0f1797497881d9f4",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-extension-web/locked-holdout-adjudication-201-300.json",
+      "sha256": "25ab3a491ef735b37e78905b28c86eabf78cccbb5c0300c3d7809874dcdc73a0",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-extension-web/locked-holdout-adjudication-301-400.json",
+      "sha256": "6407333e1f671bec896020c7787e485e8871be3a4d9f660488f309d679e5e4ef",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-extension-web/locked-holdout-adjudication-401-500.json",
+      "sha256": "f28b5a599268302eb5f95b0fc32527e063e11f004679285a8842dbae9fad82ff",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-extension-web/locked-holdout-capture-001-100.partial.json",
+      "sha256": "e6a48208547bc7ac684b40c6edb46663b2e8c50ee413aa233d451dd3baad3e10",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-extension-web/locked-holdout-capture-101-200.partial.json",
+      "sha256": "6ffb7506c715a677d9f342d4cc9c6314ce9d0c722a77936bffaf9be871d2216f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-extension-web/locked-holdout-capture-201-300.partial.json",
+      "sha256": "1794f96e610a66450dfdcf947e594115f4e06611581c052269255aee69a311cd",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-extension-web/locked-holdout-capture-301-400.partial.json",
+      "sha256": "1110029c916a833d3864d8ed7d6ee50099489ccd504ae8ad1e572e95ab692c02",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-extension-web/locked-holdout-capture-401-500.partial.json",
+      "sha256": "fbd10979776346d3820a8eb2b526f74129e2aaef0db57b4a20ac1b6698d532ef",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-adjudication-001-020.json",
+      "sha256": "e66aad4d0dbe1ee17fb6a515d693ef86681e5dcc30e174e8a015ea0888fbc1db",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-adjudication-021-120.json",
+      "sha256": "9405ce2bc43d5a44f44d74f8801c04d53d906fe38e228d3e3048d57af796d291",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-adjudication-121-220.json",
+      "sha256": "4da06dbd9ec782e0440dbca8e7cb17bd28b003fdbebb0737c6ebf76f8f6b6806",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-adjudication-221-320.json",
+      "sha256": "aa242b0fb014369a22cb337d0c3343a7cf8d5b9f59b16bd356f738edf2b05209",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-adjudication-321-420.json",
+      "sha256": "c6b7f1406e9d854bc0f0fb91afd0fc3e88bb0379217b5ce63ee54384caa286a2",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-adjudication-421-500.json",
+      "sha256": "a87ab3a8c61d2cd3e68117dfb720ba1fc6695078b58bde316f214e11f7a8d7f5",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-001-008.partial.json",
+      "sha256": "ef91cfe95eee007f9c1b108fd22e26cc7d80dc5a30a325d27d45224f1a0fe908",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-009-024.partial.json",
+      "sha256": "172ae60e37cccb45ee6c7443c5b2d000bf7b2073135d070cca48559211b37bb4",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-025-040.partial.json",
+      "sha256": "8af16f9458101b5ed6bf069292b37a78784eda417a0b3c20f5222a8e61bd460f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-041-048.partial.json",
+      "sha256": "19baa2218277c35b9972c493f92abb0a270a0c1fa9813635938eeaca2f915257",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-049-064.partial.json",
+      "sha256": "3bd2506f956e2799f5707ef6477d0eadfcc92d29edcc44a4794b1cf602655019",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-065-080.partial.json",
+      "sha256": "f1923e99207e7eebf305da406ed51a7a62d2604541374cb89f2bfee8cf4acdef",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-081-096.partial.json",
+      "sha256": "46677fa064da9fdbe5cb2ca5ed4f53f7c7000b87fbaa8c26cf47bf006317f304",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-097-112.partial.json",
+      "sha256": "1bf32db2b8783ce509e19458aafc5640135e6ec75e8f481921de0ac9dd56e377",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-113-128.partial.json",
+      "sha256": "0cb4b3febcba89f3843704a53300a6f9402738ba71478e1e656ae32a7834989c",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-129-144.partial.json",
+      "sha256": "1f2533030dd7759468bca93a4623e13bf003cf279aef1bee41a076a32d7487ab",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-145-160.partial.json",
+      "sha256": "5f8af44fa1ef12b306a2f1672b3dfe97de0dad83aa6c4bef05487bcfb21b3a3a",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-161-176.partial.json",
+      "sha256": "bc2c9b2331ed3c80469b29445885cc5c5f83857789a604e6a380b987462d51ed",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-177-192.partial.json",
+      "sha256": "43bb31861b36e24ff62df23c30399dd3f87d54098a08da6314960df489e2adc7",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-193-200.partial.json",
+      "sha256": "0c49f7ef264ea4d667248276718daac24a7c7bb0cdf1dc51262d0f0e74c13ae1",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-201-216.partial.json",
+      "sha256": "6bca9ffb2c7e1d0fb6d0c3bb89886488ea181f3d123f5b2ca00733939c10ec39",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-217-220.partial.json",
+      "sha256": "d0848f370cfb6e2084df6804dcb28f38b023db4ab77d30c1b08affb2ddf37734",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-221-236.partial.json",
+      "sha256": "21ee389b4f43a683c38380736adfc9384e08053689ca22af08cc654f5f928ab6",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-237-252.partial.json",
+      "sha256": "d846281bc003dc5c5f9cd9845a8ff8934004d0639a40afcc3dc7a96573abe176",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-253-268.partial.json",
+      "sha256": "7578f43b55f21e5e34a3d6156b3df4b2bf8abd2fbbfd82841d7a29dee968c385",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-269-284.partial.json",
+      "sha256": "c8a8995c3acd63732d9ce96b9393df50e485c8a33ae380842ca9702232bac034",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-285-300.partial.json",
+      "sha256": "f703b75ac56d81a4d21584c278f61cd8b662d990ecf24d298c7fdc2e450e6d36",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-301-316.partial.json",
+      "sha256": "5d5609b22dd8ae813726885a8794e036bd907031fddcb54c0c5bb08bc5e71805",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-317-332.partial.json",
+      "sha256": "e5edc7a1b515388b5acee7e0d1e947f9272dbe6ce8117bf5e121a4a21f7c9906",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-333-348.partial.json",
+      "sha256": "3cfe932b87b856723370c6aaa4e0d9f72bc29570f94c199208a242af87c2e90d",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-349-364.partial.json",
+      "sha256": "577aadfa73d47f6b1baab91cbc9eddd22d34a1b1edd014528e6aadf00f4ae40f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-365-380.partial.json",
+      "sha256": "0a20fa8ae5a9381c01167ef7cc96a9a8ecc90a9a52ff7b9737d1667570b8d74f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-381-396.partial.json",
+      "sha256": "6d6eb4d474f2fc40c29585770ab5c2c343bc2bd7bdf817a334f890fe74a0afd2",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-397-412.partial.json",
+      "sha256": "524a378385eaff0fbf09be26845d7242ad5aeb6afe67fcdc7aed0e5b84503fdc",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-413-428.partial.json",
+      "sha256": "8d0e334528d08b2bbde83a52fe119e5164b9bf82af914952bfdca431358f02fc",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-429-444.partial.json",
+      "sha256": "295f5294917d796ac91ef8ca695ac1dc4d01ce356b5408089d066c1c44bf47ac",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-445-460.partial.json",
+      "sha256": "0bcb689f21e4b8d11f890fa9c8bb2e93dafb2641f4ed5288503adb053500c307",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-461-476.partial.json",
+      "sha256": "e4a0e9e07b2868146daed7e85765ab72e4700acd5af6ffe851c46044bfc8e908",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-477-492.partial.json",
+      "sha256": "c7fea9fa9687f36f84fef1effa7c5203078a7afb2cbc4189623712cfe8986fbd",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/session-12-web/locked-holdout-capture-493-500.partial.json",
+      "sha256": "99312277eaac6e0817855faa563bbf74b214e474b414794dc9b85f32a9a81efb",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/baseline.json",
+      "sha256": "07987eab104700d7908c8c683078d08ba34bd1fd5960f762fcdb8c866c04faba",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/benchmark.json",
+      "sha256": "714f903df366e520ab9b301851c900943f6aee34ff0a5456a9c0bd94dae931a0",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans/castro-ambiguity.json",
+      "sha256": "869192ef284d09483ecc05187c34d7a53b521be241068dbd0346503c221547a3",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans/oderzo.json",
+      "sha256": "abdda04694ec761ece21fc65fb8c3862068809e7b73de47b1a46f65de7f3fbc3",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans/parma-medium.json",
+      "sha256": "3a154874d06c430af66d9508eee6e2b090b219e6da56267a6948d53b03508ccc",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans/roma-municipio-i.json",
+      "sha256": "6d78b2523cb5dbd3d93e1194ab21e0ff292320e62a88ce77e933663eda2b30e6",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans/sauris-rural.json",
+      "sha256": "11200d94529bcf428b8f26c9901c4e351522935cbdeef483536988750b6721ac",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans/taormina-tourism.json",
+      "sha256": "a01d83b2b6755d152214bf88137f1122525fbda08b58c8ed1054b4b7cd30f2a2",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans-session-2/castro-ambiguity.json",
+      "sha256": "9a18ed66f39026b0590966885e7b48c2392315b047b572bf80833035732f345d",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans-session-2/oderzo.json",
+      "sha256": "719be012cf0792ef7a96170a91c8aa18bba1de43b1ffb2d8bbfee0a259afcffc",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans-session-2/parma-medium.json",
+      "sha256": "761bd57f5459f5748e069e0c99aa34bd61a5b8da4949d6a11d32f3b231aa0463",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans-session-2/roma-municipio-i.json",
+      "sha256": "cb412b48bfbfe77b4e1af36298f2c2bda78250cddb36a5689b2c28d501bd56a4",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans-session-2/sauris-rural.json",
+      "sha256": "7dec78f0a334e26c7d61972d89a299eb2fc3df3b689da833c238ba1e3b9154e6",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans-session-2/taormina-tourism.json",
+      "sha256": "febb2505b4a4f3cf73095b176ee9683d2e19d181b0ad0989343a385ca9297f87",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/scans-session-4/oderzo.json",
+      "sha256": "a84e25e9683a27b48a0e1c47e41df1ac8c366b33a9422ea698e0857588faebf0",
+      "venue_ids_added": 3
+    },
+    {
+      "path": "benchmark/v1/session-2-baseline.json",
+      "sha256": "a797645eb71e13637b43cf61d3f956c9b995c3d4447d267b48ac7ccc02be68ae",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/session-2.json",
+      "sha256": "ea3abcec29c3bcd30cc06034d29a4d3ddeff65d76ac6838dbda2a0591ea23618",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/session-4.json",
+      "sha256": "046f2e5572078fb8de599095d22a48128771cf05523a0f2a860e7769007e143d",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/session-5-enrichment.json",
+      "sha256": "a603d4479f0fe6495d6da1b9b96d05a66afc69d1b03df64de32bc16228aa9258",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/session-6-websites.json",
+      "sha256": "c881433a444004146f568b7128697dbeb7e13f147ea3c83f2103ac6fa05aaaf2",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v1/session-7-resources.json",
+      "sha256": "5e9d45720f8502265c32b9eac2c8d25d210fb0c5a2273439203244dc04a99d2f",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v2/benchmark.json",
+      "sha256": "c5bce76ffa216207e7a47568646646400fbaab603dd5d6b9b7466736607edbec",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v2/gap-query-replay.json",
+      "sha256": "ed6dd85ccfba38835da0094c3538242145d5ed5d45cbab499770b34b5c454669",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v2/oderzo-truth.json",
+      "sha256": "ec8e374347ef482e99b0b6d04fa41204d9923af440b986fb016adb4c650d8105",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v2/phase-8-acceptance.json",
+      "sha256": "8a573765314d803bfd4706eaf551a34803f27ef14a409216c615726e5b337b8c",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v2/phase-8-live-acceptance.json",
+      "sha256": "4c9e5b809de42508eb17188437cffcd69ca3a1a83875b901177d7ab763da8963",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v2/scans/live/oderzo-2026-08-27.phase-8-cold-final-1.json",
+      "sha256": "cacc80e69a1faa8deef481312304fb4f9913031bb792e541dc8ac6691cf3b4c1",
+      "venue_ids_added": 73
+    },
+    {
+      "path": "benchmark/v2/scans/live/oderzo-2026-08-27.phase-8-cold-final-2.json",
+      "sha256": "74f7a51566ada19ddfa1b393d2bb985195e7eac1f3bcf099f47eb17f93e25afb",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v2/scans/live/oderzo-2026-08-27.phase-8-warm-final.json",
+      "sha256": "92c39f1c2e5e21ae86a1489a7053a27111aa0bbfbae66e838633fc10778a4501",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v2/scans/oderzo-2026-08-26.json",
+      "sha256": "30b8791983189cac0faaeda4eae13156855e808e1563abcdc2b482d7074672ac",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "benchmark/v2/search-replay/captured.json",
+      "sha256": "60cd4570e108e345f308eeeccc3b6e24bdf2fdfa325f200dc24dc229a4d14129",
+      "venue_ids_added": 0
+    },
+    {
+      "path": "data/llm-review/source-pilot/development-001-300.json",
+      "sha256": "0cab285eafbd56b3a519509ee1b92a9957bd5d443182a70da96fd6076e76c841",
+      "venue_ids_added": 300
+    },
+    {
+      "path": "data/llm-review/source-pilot/selection-manifest.json",
+      "sha256": "c3f9dce38a4f93362b79100be3447bfe3b8a93ea3be9642838f4a1705c1a7f17",
+      "venue_ids_added": 0
+    }
+  ],
+  "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1",
+  "by_region": {
+    "10": 9,
+    "11": 14,
+    "12": 47,
+    "13": 11,
+    "14": 2,
+    "15": 39,
+    "16": 27,
+    "17": 4,
+    "18": 11,
+    "19": 33,
+    "20": 13,
+    "01": 34,
+    "02": 2,
+    "07": 17,
+    "03": 72,
+    "04": 13,
+    "05": 42,
+    "06": 10,
+    "08": 40,
+    "09": 40
+  }
+}

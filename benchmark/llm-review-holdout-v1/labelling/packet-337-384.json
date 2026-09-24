@@ -1,0 +1,760 @@
+{
+  "schema_version": 1,
+  "packet": "llm-review-holdout-v1-337-384",
+  "output_file": "locked-holdout-adjudication-337-384.json",
+  "instructions": "LABELLING-INSTRUCTIONS.md",
+  "adjudication_header": {
+    "schema_version": 1,
+    "adjudication_set": "llm-review-holdout-v1-adjudication-337-384",
+    "partition": "locked_holdout",
+    "source": "independent_fixture_review",
+    "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1"
+  },
+  "venues": [
+    {
+      "index": 337,
+      "venue_id": "venue:063057:pomigliano-d-arco:braceri-i-quattro-monelli",
+      "name": "Braceri I Quattro Monelli",
+      "aliases": [
+        "Braceri I 4 Monelli",
+        "Braceri I Quattro Monelli"
+      ],
+      "address": "Via San Giusto, 71, 80038 Pomigliano d'Arco",
+      "postcode": "80038",
+      "municipality": "Pomigliano d'Arco",
+      "region_code": "15",
+      "phone": "+393445596891",
+      "candidate_url": "https://braceriquattromonelli.it/",
+      "candidate_registrable_domain": "braceriquattromonelli.it"
+    },
+    {
+      "index": 338,
+      "venue_id": "venue:063061:procida:sottosopra",
+      "name": "Ristorante Sottosopra",
+      "aliases": [
+        "Ristorante Sottosopra",
+        "Sottosopra"
+      ],
+      "address": "Via Roma, 11, 80079 Procida",
+      "postcode": "80079",
+      "municipality": "Procida",
+      "region_code": "15",
+      "phone": "+390818101013",
+      "candidate_url": "http://www.visitprocida.it/",
+      "candidate_registrable_domain": "visitprocida.it"
+    },
+    {
+      "index": 339,
+      "venue_id": "venue:063062:qualiano:experience-pizza-fritti",
+      "name": "Experience Pizza & Fritti",
+      "aliases": [
+        "Experience Pizza & Fritti"
+      ],
+      "address": "Via Giuseppe Di Vittorio, 255, 80019 Qualiano",
+      "postcode": "80019",
+      "municipality": "Qualiano",
+      "region_code": "15",
+      "phone": "+393922875610",
+      "candidate_url": "https://experience-pizzaecozze.jimdosite.com/",
+      "candidate_registrable_domain": "jimdosite.com"
+    },
+    {
+      "index": 340,
+      "venue_id": "venue:063067:san-giorgio-a-cremano:bani-s-pizzeria",
+      "name": "Bani's Pizzeria",
+      "aliases": [
+        "Bani's",
+        "Bani's Pizzeria",
+        "Banis"
+      ],
+      "address": "Via Palmiro Togliatti, 80, 80046 San Giorgio a Cremano",
+      "postcode": "80046",
+      "municipality": "San Giorgio a Cremano",
+      "region_code": "15",
+      "phone": "+390810191468",
+      "candidate_url": "https://www.instagram.com/banispizzeria/",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 341,
+      "venue_id": "venue:063079:somma-vesuviana:snack-house",
+      "name": "Snack House",
+      "aliases": [
+        "Snack House"
+      ],
+      "address": "Via Aldo Moro, 73, 80049 Somma Vesuviana",
+      "postcode": "80049",
+      "municipality": "Somma Vesuviana",
+      "region_code": "15",
+      "phone": "+390818997010",
+      "candidate_url": "https://www.instagram.com/snackhousesomma",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 342,
+      "venue_id": "venue:063080:sorrento:accento-restaurant",
+      "name": "Accento Restaurant",
+      "aliases": [
+        "Accento Restaurant"
+      ],
+      "address": "Corso Italia, 38D, 80067 Sorrento NA, Italia, 80067 Sorrento",
+      "postcode": "80067",
+      "municipality": "Sorrento",
+      "region_code": "15",
+      "phone": "+390818785216",
+      "candidate_url": "https://www.accentosorrento.com/",
+      "candidate_registrable_domain": "accentosorrento.com"
+    },
+    {
+      "index": 343,
+      "venue_id": "venue:063080:sorrento:mo-mo-kitchen-bar",
+      "name": "Mo’Mo’ Kitchen & Bar",
+      "aliases": [
+        "MoMo Kitchen &",
+        "Mo’Mo’ Kitchen &",
+        "Mo’Mo’ Kitchen & Bar"
+      ],
+      "address": "Piazza Sant'Antonino, 16, 80067 Sorrento",
+      "postcode": "80067",
+      "municipality": "Sorrento",
+      "region_code": "15",
+      "phone": "+390813597555",
+      "candidate_url": "http://www.momosorrento.it/",
+      "candidate_registrable_domain": "momosorrento.it"
+    },
+    {
+      "index": 344,
+      "venue_id": "venue:063080:sorrento:pollio",
+      "name": "Bar Pollio",
+      "aliases": [
+        "Bar Pollio",
+        "Pollio"
+      ],
+      "address": "Corso Italia, 172, 80067 Sorrento NA, Italia, 80067 Sorrento",
+      "postcode": "80067",
+      "municipality": "Sorrento",
+      "region_code": "15",
+      "phone": "+390818782190",
+      "candidate_url": "http://www.tripadvisor.ru/Restaurant_Review-g187782-d2281660-Reviews-Pasticceria_Pollio-Sorrento_Province_of_Naples_Campania.html",
+      "candidate_registrable_domain": "tripadvisor.ru"
+    },
+    {
+      "index": 345,
+      "venue_id": "venue:063082:terzigno:casale",
+      "name": "Il Casale",
+      "aliases": [
+        "Il Casale"
+      ],
+      "address": "Via Carlo Amati, 183, 80040 Terzigno",
+      "postcode": "80040",
+      "municipality": "Terzigno",
+      "region_code": "15",
+      "phone": "+390815299428",
+      "candidate_url": "https://instagram.com/ristoranteilcasale_",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 346,
+      "venue_id": "venue:063086:vico-equense:tradizione",
+      "name": "La Tradizione",
+      "aliases": [
+        "La Tradizione"
+      ],
+      "address": "Via Raffaele Bosco, 969, 80066 Vico Equense",
+      "postcode": "80066",
+      "municipality": "Vico Equense",
+      "region_code": "15",
+      "phone": "+390818028437",
+      "candidate_url": "https://latradizionevicoequense.it/",
+      "candidate_registrable_domain": "latradizionevicoequense.it"
+    },
+    {
+      "index": 347,
+      "venue_id": "venue:063087:villaricca:tenuta-degli-antichi-sapori",
+      "name": "Tenuta degli Antichi Sapori",
+      "aliases": [
+        "Tenuta degli Antichi Sapori"
+      ],
+      "address": "Via Bologna, 112, 80010 Villaricca",
+      "postcode": "80010",
+      "municipality": "Villaricca",
+      "region_code": "15",
+      "phone": "+390818189526",
+      "candidate_url": "http://www.tenutadegliantichisapori.it/",
+      "candidate_registrable_domain": "tenutadegliantichisapori.it"
+    },
+    {
+      "index": 348,
+      "venue_id": "venue:064054:monteforte-irpino:summit-restaurant",
+      "name": "Summit Restaurant",
+      "aliases": [
+        "Summit Restaurant"
+      ],
+      "address": "Via Piano Alvanella Traversa 1, 38a, 83024 Monteforte Irpino",
+      "postcode": "83024",
+      "municipality": "Monteforte Irpino",
+      "region_code": "15",
+      "phone": "+393203474475",
+      "candidate_url": "http://www.summitrestaurant.it/",
+      "candidate_registrable_domain": "summitrestaurant.it"
+    },
+    {
+      "index": 349,
+      "venue_id": "venue:065002:agropoli:umami",
+      "name": "Umami",
+      "aliases": [
+        "Umami"
+      ],
+      "address": "'u Salecaro, Via Selva, 5, 84043 Agropoli",
+      "postcode": "84043",
+      "municipality": "Agropoli",
+      "region_code": "15",
+      "phone": "+393389428542",
+      "candidate_url": "https://linktr.ee/umamiagropoli",
+      "candidate_registrable_domain": "linktr.ee"
+    },
+    {
+      "index": 350,
+      "venue_id": "venue:065006:amalfi:dei-cappuccini",
+      "name": "Ristorante Dei Cappuccini",
+      "aliases": [
+        "Dei Cappuccini",
+        "Ristorante Dei Cappuccini"
+      ],
+      "address": "Via Annunziatella, 46, 84011 Amalfi",
+      "postcode": "84011",
+      "municipality": "Amalfi",
+      "region_code": "15",
+      "phone": "+390898736711",
+      "candidate_url": "http://www.ghconventodiamalfi.com/it/ristorante-dei-cappuccini-natale-giunta",
+      "candidate_registrable_domain": "ghconventodiamalfi.com"
+    },
+    {
+      "index": 351,
+      "venue_id": "venue:065014:battipaglia:amadeus",
+      "name": "Amadeus",
+      "aliases": [
+        "Amadeus"
+      ],
+      "address": "Via Enrico De Nicola, 7, 84091 Battipaglia",
+      "postcode": "84091",
+      "municipality": "Battipaglia",
+      "region_code": "15",
+      "phone": "+393663290186",
+      "candidate_url": "http://www.amadeuslaspaghetteria.it/",
+      "candidate_registrable_domain": "amadeuslaspaghetteria.it"
+    },
+    {
+      "index": 352,
+      "venue_id": "venue:065028:casal-velino:nido",
+      "name": "Il Nido",
+      "aliases": [
+        "Il Nido"
+      ],
+      "address": "Località Portararo, 37, 84040 Casal Velino",
+      "postcode": "84040",
+      "municipality": "Casal Velino",
+      "region_code": "15",
+      "phone": "+390974907981",
+      "candidate_url": "https://ilnidocountryhouse.it/vacanze-casal-velino/index.asp",
+      "candidate_registrable_domain": "ilnidocountryhouse.it"
+    },
+    {
+      "index": 353,
+      "venue_id": "venue:065037:cava-de-tirreni:remo",
+      "name": "Bar Remo",
+      "aliases": [
+        "Bar Remo",
+        "Remo"
+      ],
+      "address": "Via Vittorio Veneto, 284, 84013 Cava de' Tirreni",
+      "postcode": "84013",
+      "municipality": "Cava de' Tirreni",
+      "region_code": "15",
+      "phone": "+39089340059",
+      "candidate_url": "https://www.facebook.com/barremocava",
+      "candidate_registrable_domain": "facebook.com"
+    },
+    {
+      "index": 354,
+      "venue_id": "venue:065041:cetara:piennolo",
+      "name": "Il piennolo",
+      "aliases": [
+        "Il piennolo"
+      ],
+      "address": "Via Cantone, 4, 84010 Cetara",
+      "postcode": "84010",
+      "municipality": "Cetara",
+      "region_code": "15",
+      "phone": "+390897010396",
+      "candidate_url": "https://il-piennolo.business.site/?m=true",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 355,
+      "venue_id": "venue:065050:eboli:gelateria-tutti-gusti",
+      "name": "BAR Gelateria TUTTI GUSTI",
+      "aliases": [
+        "BAR Gelateria TUTTI GUSTI",
+        "Gelateria TUTTI GUSTI"
+      ],
+      "address": "Viale Giovanni Amendola, 9, 84025 Eboli",
+      "postcode": "84025",
+      "municipality": "Eboli",
+      "region_code": "15",
+      "phone": "+3908281846007",
+      "candidate_url": "http://www.latorracagroup.it/bar",
+      "candidate_registrable_domain": "latorracagroup.it"
+    },
+    {
+      "index": 356,
+      "venue_id": "venue:065053:furore:relish-lounge-bar-ristorante",
+      "name": "Relish Lounge Bar & Ristorante",
+      "aliases": [
+        "Relish Lounge Bar &",
+        "Relish Lounge Bar & Ristorante"
+      ],
+      "address": "Via Benedetto Croce, 2, 84010 Furore",
+      "postcode": "84010",
+      "municipality": "Furore",
+      "region_code": "15",
+      "phone": "+390892140795",
+      "candidate_url": "http://www.villamena.it/",
+      "candidate_registrable_domain": "villamena.it"
+    },
+    {
+      "index": 357,
+      "venue_id": "venue:065079:nocera-superiore:braceria-carne-cruda",
+      "name": "Braceria Carne Cruda",
+      "aliases": [
+        "Braceria Carne Cruda"
+      ],
+      "address": "Via Portaromana, 199, 84015 Nocera Superiore",
+      "postcode": "84015",
+      "municipality": "Nocera Superiore",
+      "region_code": "15",
+      "phone": "+393533693892",
+      "candidate_url": "http://www.braceriacarnecruda.it/",
+      "candidate_registrable_domain": "braceriacarnecruda.it"
+    },
+    {
+      "index": 358,
+      "venue_id": "venue:065114:sala-consilina:pigliati-un-cafe",
+      "name": "Bar Pigliati un Cafè",
+      "aliases": [
+        "Bar Pigliati un Cafè",
+        "Pigliati un Cafè"
+      ],
+      "address": "Via Tressanti, 55, 84036 Sala Consilina",
+      "postcode": "84036",
+      "municipality": "Sala Consilina",
+      "region_code": "15",
+      "phone": "+390975206403",
+      "candidate_url": "https://instagram.com/pigliatinucafe?igshid=MzNlNGNkZWQ4Mg%3D%3D",
+      "candidate_registrable_domain": "instagram.com"
+    },
+    {
+      "index": 359,
+      "venue_id": "venue:065116:salerno:chocolat-cafe",
+      "name": "Chocolat Café",
+      "aliases": [
+        "Chocolat Café"
+      ],
+      "address": "Via Settimio Mobilio, 116, 84134 Salerno",
+      "postcode": "84134",
+      "municipality": "Salerno",
+      "region_code": "15",
+      "phone": "+390898150005",
+      "candidate_url": "https://www.chocolatcafesalerno.it/",
+      "candidate_registrable_domain": "chocolatcafesalerno.it"
+    },
+    {
+      "index": 360,
+      "venue_id": "venue:066006:avezzano:centrale",
+      "name": "Bar Centrale",
+      "aliases": [
+        "Bar Centrale",
+        "Centrale"
+      ],
+      "address": "Via Giuseppe Garibaldi, 96, 67051 Avezzano",
+      "postcode": "67051",
+      "municipality": "Avezzano",
+      "region_code": "13",
+      "phone": "+390863413823",
+      "candidate_url": "http://barcentrale42.placeweb.site/",
+      "candidate_registrable_domain": "placeweb.site"
+    },
+    {
+      "index": 361,
+      "venue_id": "venue:066015:campo-di-giove:fiorildo",
+      "name": "Ristorante Pizzeria Fiorildo",
+      "aliases": [
+        "Pizzeria Fiorildo",
+        "Ristorante Pizzeria Fiorildo"
+      ],
+      "address": "Piazza del mastro, 67030 Campo di Giove",
+      "postcode": "67030",
+      "municipality": "Campo di Giove",
+      "region_code": "13",
+      "phone": "+393391901353",
+      "candidate_url": "http://ristopizzeriafiorildo.altervista.org/index.html",
+      "candidate_registrable_domain": "altervista.org"
+    },
+    {
+      "index": 362,
+      "venue_id": "venue:066049:l-aquila:olimpia-caffe",
+      "name": "Olimpia Caffe",
+      "aliases": [
+        "Olimpia",
+        "Olimpia Caffe"
+      ],
+      "address": "Corso Vittorio Emanuele, 67100 L'Aquila",
+      "postcode": "67100",
+      "municipality": "L'Aquila",
+      "region_code": "13",
+      "phone": "+393886260026",
+      "candidate_url": "https://business.google.com/manage/?noredirect=1",
+      "candidate_registrable_domain": "google.com"
+    },
+    {
+      "index": 363,
+      "venue_id": "venue:067041:teramo:corte-dei-tini",
+      "name": "Corte dei Tini",
+      "aliases": [
+        "Corte dei Tini"
+      ],
+      "address": "Contrada Villa Vomano, 49, 64100 Teramo",
+      "postcode": "64100",
+      "municipality": "Teramo",
+      "region_code": "13",
+      "phone": "+390861319510",
+      "candidate_url": "http://www.cortedeitini.com/",
+      "candidate_registrable_domain": "cortedeitini.com"
+    },
+    {
+      "index": 364,
+      "venue_id": "venue:068024:montesilvano:diavolo-dei-polli",
+      "name": "Il Diavolo dei Polli",
+      "aliases": [
+        "Il Diavolo dei Polli"
+      ],
+      "address": "Corso Umberto I, 42, 65015 Montesilvano",
+      "postcode": "65015",
+      "municipality": "Montesilvano",
+      "region_code": "13",
+      "phone": "+390852934887",
+      "candidate_url": "https://www.ildiavolodeipollimontesilvano.it/",
+      "candidate_registrable_domain": "ildiavolodeipollimontesilvano.it"
+    },
+    {
+      "index": 365,
+      "venue_id": "venue:068028:pescara:diana",
+      "name": "Pizzeria Diana",
+      "aliases": [
+        "Diana",
+        "Pizzeria Diana"
+      ],
+      "address": "Via del Circuito, 141, 65124 Pescara",
+      "postcode": "65124",
+      "municipality": "Pescara",
+      "region_code": "13",
+      "phone": "+390854212672",
+      "candidate_url": "http://www.pizzeriadiana.it/",
+      "candidate_registrable_domain": "pizzeriadiana.it"
+    },
+    {
+      "index": 366,
+      "venue_id": "venue:068028:pescara:siesta",
+      "name": "La Siesta",
+      "aliases": [
+        "La Siesta"
+      ],
+      "address": "Via Marco Polo, 6, 65126 Pescara",
+      "postcode": "65126",
+      "municipality": "Pescara",
+      "region_code": "13",
+      "phone": "+390854549292",
+      "candidate_url": "http://www.lasiestapiadineria.it/",
+      "candidate_registrable_domain": "lasiestapiadineria.it"
+    },
+    {
+      "index": 367,
+      "venue_id": "venue:069035:francavilla-al-mare:villetta",
+      "name": "Trattoria La Villetta",
+      "aliases": [
+        "La Villetta",
+        "Trattoria La Villetta"
+      ],
+      "address": "Viale Alcione, 241, 66023 Francavilla al Mare",
+      "postcode": "66023",
+      "municipality": "Francavilla al Mare",
+      "region_code": "13",
+      "phone": "+390858676515",
+      "candidate_url": "http://www.ristorantelavilletta.com/",
+      "candidate_registrable_domain": "ristorantelavilletta.com"
+    },
+    {
+      "index": 368,
+      "venue_id": "venue:069046:lanciano:malu",
+      "name": "Pizzeria Malu",
+      "aliases": [
+        "Malu",
+        "Pizzeria Malu"
+      ],
+      "address": "Piazza Pietrosa, 2, 66034 Lanciano",
+      "postcode": "66034",
+      "municipality": "Lanciano",
+      "region_code": "13",
+      "phone": "+39087244062",
+      "candidate_url": "http://www.pizzeriamalu.it/",
+      "candidate_registrable_domain": "pizzeriamalu.it"
+    },
+    {
+      "index": 369,
+      "venue_id": "venue:069046:lanciano:ruhental",
+      "name": "Pizzeria Trattoria Ruhental",
+      "aliases": [
+        "Pizzeria Trattoria Ruhental",
+        "Trattoria Ruhental"
+      ],
+      "address": "Contrada Fontanelle, 100, 66034 Lanciano",
+      "postcode": "66034",
+      "municipality": "Lanciano",
+      "region_code": "13",
+      "phone": "+39087244101",
+      "candidate_url": "https://pnssm.pro/yy81s3s",
+      "candidate_registrable_domain": "pnssm.pro"
+    },
+    {
+      "index": 370,
+      "venue_id": "venue:069079:san-buono:di-santo",
+      "name": "Agriturismo Di Santo",
+      "aliases": [
+        "Agriturismo Di Santo"
+      ],
+      "address": "Contrada Pantano, 28, 66050 San Buono",
+      "postcode": "66050",
+      "municipality": "San Buono",
+      "region_code": "13",
+      "phone": "+390873939272",
+      "candidate_url": "http://disanto.abruzzoverdeblu.it/",
+      "candidate_registrable_domain": "abruzzoverdeblu.it"
+    },
+    {
+      "index": 371,
+      "venue_id": "venue:070006:campobasso:pasticceria-manzoni",
+      "name": "Bar Pasticceria Manzoni",
+      "aliases": [
+        "Bar Pasticceria Manzoni",
+        "Pasticceria Manzoni"
+      ],
+      "address": "Viale Alessandro Manzoni, 77, 86100 Campobasso",
+      "postcode": "86100",
+      "municipality": "Campobasso",
+      "region_code": "14",
+      "phone": "+39087496773",
+      "candidate_url": "https://bar-manzoni.jimdosite.com/",
+      "candidate_registrable_domain": "jimdosite.com"
+    },
+    {
+      "index": 372,
+      "venue_id": "venue:070078:termoli:family-day",
+      "name": "Family Day",
+      "aliases": [
+        "Family Day"
+      ],
+      "address": "Via degli Abeti, 8, 86039 Termoli",
+      "postcode": "86039",
+      "municipality": "Termoli",
+      "region_code": "14",
+      "phone": "+393924888168",
+      "candidate_url": "https://www.pizzeriafamilyday.it/",
+      "candidate_registrable_domain": "pizzeriafamilyday.it"
+    },
+    {
+      "index": 373,
+      "venue_id": "venue:072006:bari:my-day",
+      "name": "My Day",
+      "aliases": [
+        "My Day"
+      ],
+      "address": "Via Sparano da Bari, 143, 70121 Bari",
+      "postcode": "70121",
+      "municipality": "Bari",
+      "region_code": "16",
+      "phone": "+390802460598",
+      "candidate_url": "http://www.mydaycoffee.it/",
+      "candidate_registrable_domain": "mydaycoffee.it"
+    },
+    {
+      "index": 374,
+      "venue_id": "venue:072006:bari:terzotempo",
+      "name": "Terzotempo",
+      "aliases": [
+        "Terzotempo"
+      ],
+      "address": "Via Alessandro Volta, 6, 70125 Bari",
+      "postcode": "70125",
+      "municipality": "Bari",
+      "region_code": "16",
+      "phone": "+393427001160",
+      "candidate_url": "http://www.terzotempobirreria.it/",
+      "candidate_registrable_domain": "terzotempobirreria.it"
+    },
+    {
+      "index": 375,
+      "venue_id": "venue:072019:conversano:banco",
+      "name": "Banco",
+      "aliases": [
+        "Banco"
+      ],
+      "address": "Via Alessandro Volta, 4, 70014 Conversano",
+      "postcode": "70014",
+      "municipality": "Conversano",
+      "region_code": "16",
+      "phone": "+393488418769",
+      "candidate_url": "https://app.doitsquare.com/qrcodes/74c01182-2013-4557-93df-8ae5aaca0d17/pdf",
+      "candidate_registrable_domain": "doitsquare.com"
+    },
+    {
+      "index": 376,
+      "venue_id": "venue:072019:conversano:crema-cioccolato-conversano",
+      "name": "Crema & Cioccolato Conversano",
+      "aliases": [
+        "Crema & Cioccolato",
+        "Crema & Cioccolato Conversano",
+        "Dolci Creazioni"
+      ],
+      "address": "Via Francesco Positano, 34, 70014 Conversano",
+      "postcode": "70014",
+      "municipality": "Conversano",
+      "region_code": "16",
+      "phone": "+393515131300",
+      "candidate_url": "https://website--3636226916728989695161-espressobar.business.site/",
+      "candidate_registrable_domain": "business.site"
+    },
+    {
+      "index": 377,
+      "venue_id": "venue:072025:locorotondo:vecchio-arco",
+      "name": "Trattoria al Vecchio Arco",
+      "aliases": [
+        "Trattoria al Vecchio Arco",
+        "al Vecchio Arco"
+      ],
+      "address": "Via Antonio Bruno, 5, 70010 Locorotondo",
+      "postcode": "70010",
+      "municipality": "Locorotondo",
+      "region_code": "16",
+      "phone": "+390804317014",
+      "candidate_url": "http://www.trattoriaalvecchioarco.com/",
+      "candidate_registrable_domain": "trattoriaalvecchioarco.com"
+    },
+    {
+      "index": 378,
+      "venue_id": "venue:072029:molfetta:spoon-spaghetteria",
+      "name": "Spoon spaghetteria",
+      "aliases": [
+        "Spoon spaghetteria"
+      ],
+      "address": "Piazza Giuseppe Garibaldi, 49, 70056 Molfetta",
+      "postcode": "70056",
+      "municipality": "Molfetta",
+      "region_code": "16",
+      "phone": "+390808508901",
+      "candidate_url": "http://leggimenu.it/menu/spoonspaghetteria",
+      "candidate_registrable_domain": "leggimenu.it"
+    },
+    {
+      "index": 379,
+      "venue_id": "venue:072030:monopoli:sir-pizzeria-e-ristorante",
+      "name": "SIR Pizzeria e Ristorante",
+      "aliases": [
+        "SIR Pizzeria e",
+        "SIR Pizzeria e Ristorante"
+      ],
+      "address": "Via Cosimo Turi, 1B, 70043 Monopoli",
+      "postcode": "70043",
+      "municipality": "Monopoli",
+      "region_code": "16",
+      "phone": "+390804722837",
+      "candidate_url": "https://specialitalianroots.it/",
+      "candidate_registrable_domain": "specialitalianroots.it"
+    },
+    {
+      "index": 380,
+      "venue_id": "venue:072030:monopoli:vinarius-restaurant-winebar",
+      "name": "Vinarius - Restaurant & WineBar",
+      "aliases": [
+        "Vinarius - Restaurant & WineBar"
+      ],
+      "address": "Cala Fontanelle, 14, 70043 Monopoli",
+      "postcode": "70043",
+      "municipality": "Monopoli",
+      "region_code": "16",
+      "phone": "+390804136388",
+      "candidate_url": "https://vinariusbymaremosso.it/",
+      "candidate_registrable_domain": "vinariusbymaremosso.it"
+    },
+    {
+      "index": 381,
+      "venue_id": "venue:072032:noicattaro:d-d-ristorante-friggitoria-gourmet",
+      "name": "D&D Ristorante Friggitoria Gourmet",
+      "aliases": [
+        "D&D Ristorante Friggitoria Gourmet"
+      ],
+      "address": "Viale 20 Settembre, 2A, 70016 Noicattaro",
+      "postcode": "70016",
+      "municipality": "Noicattaro",
+      "region_code": "16",
+      "phone": "+393208668709",
+      "candidate_url": "http://www.ristoranteded.it/",
+      "candidate_registrable_domain": "ristoranteded.it"
+    },
+    {
+      "index": 382,
+      "venue_id": "venue:072035:polignano-a-mare:euforia-restaurant",
+      "name": "Euforia Restaurant",
+      "aliases": [
+        "Euforia Restaurant"
+      ],
+      "address": "Via dei Longobardi, 891, 70044 Polignano a Mare",
+      "postcode": "70044",
+      "municipality": "Polignano a Mare",
+      "region_code": "16",
+      "phone": "+393479380830",
+      "candidate_url": "http://www.almadava.it/",
+      "candidate_registrable_domain": "almadava.it"
+    },
+    {
+      "index": 383,
+      "venue_id": "venue:072035:polignano-a-mare:terrazze-monachile",
+      "name": "Terrazze Monachile",
+      "aliases": [
+        "Terrazze Monachile"
+      ],
+      "address": "Piazza Caduti di Via Fani, 11, 70044 Polignano a Mare",
+      "postcode": "70044",
+      "municipality": "Polignano a Mare",
+      "region_code": "16",
+      "phone": "+390804265565",
+      "candidate_url": "http://www.terrazzemonachile.com/",
+      "candidate_registrable_domain": "terrazzemonachile.com"
+    },
+    {
+      "index": 384,
+      "venue_id": "venue:072036:putignano:premiata-pizzeria",
+      "name": "Premiata Pizzeria",
+      "aliases": [
+        "Premiata",
+        "Premiata Pizzeria"
+      ],
+      "address": "Via San Lorenzo, 1, 70017 Putignano",
+      "postcode": "70017",
+      "municipality": "Putignano",
+      "region_code": "16",
+      "phone": "+390804058523",
+      "candidate_url": "https://premiatapizzeria.com/",
+      "candidate_registrable_domain": "premiatapizzeria.com"
+    }
+  ]
+}

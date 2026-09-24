@@ -1,0 +1,69 @@
+{
+  "fixture": "benchmark/llm-review-holdout-v1/locked-holdout-001-480.json",
+  "fixture_sha256": "555ed1fd9d1a0b9484a368bfc388094542498c73c21385e66e435e2f8a263b25",
+  "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1",
+  "venues": 480,
+  "batch_size": 48,
+  "packets": [
+    {
+      "file": "packet-001-048.json",
+      "output_file": "locked-holdout-adjudication-001-048.json",
+      "venues": 48,
+      "sha256": "28dbc1b7273a31238796dc794b25086391ba6399edd9242b2d5849987c5366bb"
+    },
+    {
+      "file": "packet-049-096.json",
+      "output_file": "locked-holdout-adjudication-049-096.json",
+      "venues": 48,
+      "sha256": "a740485b5dcb9e01804aca071c06a552f7deeb9e0c9a4104846b870e4f4b10e5"
+    },
+    {
+      "file": "packet-097-144.json",
+      "output_file": "locked-holdout-adjudication-097-144.json",
+      "venues": 48,
+      "sha256": "77f35ad0e6f9bbc6e318aeda868a298515ee976b1b2fb60dc52d3fada29e2269"
+    },
+    {
+      "file": "packet-145-192.json",
+      "output_file": "locked-holdout-adjudication-145-192.json",
+      "venues": 48,
+      "sha256": "a73d1d1c8cd460d71333b328e103dc5d03b3a696eda36853e0e5b74f65815593"
+    },
+    {
+      "file": "packet-193-240.json",
+      "output_file": "locked-holdout-adjudication-193-240.json",
+      "venues": 48,
+      "sha256": "f6189863458e7b66b7eea2472e6c11899ba74d1988eee8dd8dd77ab2cc9d2d43"
+    },
+    {
+      "file": "packet-241-288.json",
+      "output_file": "locked-holdout-adjudication-241-288.json",
+      "venues": 48,
+      "sha256": "40d1a226940fd14208876e1b3ee2d5135d348fae355de2ca1efed51e4e83d405"
+    },
+    {
+      "file": "packet-289-336.json",
+      "output_file": "locked-holdout-adjudication-289-336.json",
+      "venues": 48,
+      "sha256": "0cd09d6033e76fdb0980c63a767ff05da0cdd9530756772faa9254288b8ba033"
+    },
+    {
+      "file": "packet-337-384.json",
+      "output_file": "locked-holdout-adjudication-337-384.json",
+      "venues": 48,
+      "sha256": "522d03f98dae390e31da4957370bd05bc0ca2600e009e64fb34c383915bbe351"
+    },
+    {
+      "file": "packet-385-432.json",
+      "output_file": "locked-holdout-adjudication-385-432.json",
+      "venues": 48,
+      "sha256": "921293b537eff01279ef0db5155b92a2c99238face512292b366c6a0e2ba4b65"
+    },
+    {
+      "file": "packet-433-480.json",
+      "output_file": "locked-holdout-adjudication-433-480.json",
+      "venues": 48,
+      "sha256": "028896bf533d1faf44c58fb9df8f6294277ba155eaeb0246871863028a6d954c"
+    }
+  ]
+}
