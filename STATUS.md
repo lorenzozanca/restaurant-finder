@@ -85,6 +85,26 @@ holdout can no longer qualify anything; it may serve as development data.
   false rejections). Final: 105 correct, 0 false, Wilson lower bound 96.5%. The frozen
   reviewer (`REVIEWER-FREEZE.json`) is certified for `PROCESS.md` step 4.
 
+## Production pipeline for the 86,852 candidates (PROCESS.md step 4)
+
+- Built 2026-09-24 (commit `8722786`; `npm test` 266 passed, 0 failed):
+  `prepare-national-batch.mjs --size N` writes the next N source candidates (fixed
+  SHA-256 order of venue IDs, so every batch is spread nationally) into
+  `data/national-review/batches/bNNN/` for the unchanged frozen runner;
+  `publish-national-review.mjs` copies the review database's assessments and
+  frozen-reviewer outcomes into the national store (accepted -> verified website as an
+  `automated_llm_ownership_review` attestation plus the accepted website fact; rejected
+  -> rejected candidate). It backs up the national store once
+  (`italy-import.pre-llm-publish.sqlite`), is idempotent, skips outcomes from any other
+  model or prompt, and never overrides a manual verification.
+- Freeze note: the reviewer's decision code is unchanged, but two files hashed in
+  `REVIEWER-FREEZE.json` changed additively: `lib/evidence-store.mjs` (new method
+  allowed only with `source_kind: certified_llm_review`, new `publishLlmVerifiedWebsite`)
+  and `lib/publisher-ownership.mjs` (the new method counts as verified).
+- Batch `b001` (5,000 venues) is prepared. Its first run was stopped at once because the
+  Wi-Fi had degraded again (rx VHT-MCS 0, 5.3 s to Google): nothing was saved, $0 spent.
+- National counts unchanged: 112 verified, 0 candidate assessments.
+
 ## LLM reviewer core and first development runs (2026-09-24)
 
 - Implemented and tested (fake transports, zero spend):
@@ -284,11 +304,13 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-`PROCESS.md` step 4: run the frozen reviewer (exact `REVIEWER-FREEZE.json` settings) over
-the 86,852 source candidates in resumable zero-search batches with an operator-approved
-USD cap per batch (about $0.0012 per reviewed candidate), write outcomes to the
-national store as `automated_llm_ownership_review` attestations, and expose progress
-counts on the map. Start with one small capped batch and check the map counts.
+1. Check the link (`iw dev wlp58s0 station dump`: rx bitrate well above VHT-MCS 0);
+   if degraded, the operator runs `sudo nmcli connection up "Italia Uno"`.
+2. Run batch `b001` with the frozen settings and a $5 cap:
+   `node assess-labelled-corpus.mjs --partition development --fixture-dir data/national-review/batches/b001 --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --db data/national-review/review.sqlite --cache-dir data/national-review/cache --concurrency 12 --llm-review --run-id national-b001 --budget-usd 5 --verifier-model xiaomi/mimo-v2.6-pro`
+3. `node publish-national-review.mjs`, restart `node ui/server.mjs`, and report the map's
+   verified, rejected, and assessed counts. Then ask the operator before the next batch
+   (`prepare-national-batch.mjs --size 5000`, run ID `national-b002`).
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
