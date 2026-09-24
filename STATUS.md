@@ -52,7 +52,11 @@ holdout can no longer qualify anything; it may serve as development data.
   candidate plus one contact page and keeps ~1.5 KB identity excerpts in
   `data/holdout-labelling/pages-AAA-BBB.json` (gitignored). Trial on packet 001-048:
   only 5/48 fetched (36 connect timeouts) because the Wi-Fi association had degraded
-  again (rx VHT-MCS 0; see the network diagnosis below).
+  again (rx VHT-MCS 0; see the network diagnosis below). After the operator reconnected
+  (rx 325 Mbit/s), the full run fetched 328/480 candidates: 77 ENOTFOUND, 39 HTTP 403,
+  23 HTTP 404, 5 HTTP 5xx, 3 TLS certificate errors, 5 connection errors or timeouts.
+  Contact pages were found for only 16 venues. Excerpts average 579 characters per
+  venue (~28 KB per packet).
 
 ## LLM reviewer core and first development runs (2026-09-24)
 
@@ -253,11 +257,9 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-1. Operator: restore the Wi-Fi (`sudo nmcli connection up "Italia Uno"`; check that
-   `iw dev wlp58s0 station dump` shows an rx bitrate well above VHT-MCS 0).
-2. Run `node prefetch-holdout-pages.mjs` (zero LLM; all 10 packets into
-   `data/holdout-labelling/`) and report fetched counts per packet.
-3. Label packet 001-048 with **one** Sonnet agent that reads the instructions, the
+1. Prefetch is done (`data/holdout-labelling/pages-*.json`; rerun
+   `node prefetch-holdout-pages.mjs` if that local directory is gone).
+2. Label packet 001-048 with **one** Sonnet agent that reads the instructions, the
    packet, and `data/holdout-labelling/pages-001-048.json`, using the web only for
    unclear venues. Report its usage to the operator before labelling any other packet.
 
