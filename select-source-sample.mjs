@@ -56,7 +56,7 @@ export function sourceFixtureDocument(selected, { partition, fingerprint, retrie
   };
 }
 
-function loadRows(dbPath) {
+export function loadRows(dbPath) {
   const db = new DatabaseSync(dbPath, { readOnly: true });
   try {
     const rows = new Map();
