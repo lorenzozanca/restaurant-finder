@@ -38,7 +38,11 @@ holdout can no longer qualify anything; it may serve as development data.
     all McDonald's corporate pages that the labels accept as the chain's official
     domain. Prompt dev-3 now treats brand/chain sites that don't identify the branch
     as "insufficient". Cost $0.0285.
-  - Total LLM spend to date: $0.040 of the operator's $2 first-try limit.
+  - `dev-3` (MiMo only; prompt dev-3; stopped after 20 reviews to diagnose the network):
+    1 publication, correct, 0 false; 0 false rejections (the McDonald's fix held);
+    3 labelled-official candidates left unresolved. Cost $0.0226 ($0.0011 per
+    reviewed candidate).
+  - Total LLM spend to date: $0.073 of the operator's $2 first-try limit.
   - These runs are not evidence of accuracy yet. Almost the whole corpus is still
     unreviewed because of the network (below): 250 of 351 crawlable candidates are
     still `retryable`.
@@ -250,8 +254,8 @@ Earlier (2026-09-13):
 
 - Internet throughput on this machine is capped at ~20 KB/s. At that rate, the
   development crawl takes hours and the 86,852-candidate crawl would take weeks, and
-  every crawl saturates the operator's connection. `dev-3` is stopped (0 outcomes;
-  resumable with the command above). It needs either a restored line or a better
+  every crawl saturates the operator's connection. `dev-3` is stopped after 20 reviews (resumable with the
+  command above). It needs either a restored line or a better
   connection (another network or a small cloud machine).
 - No LLM verdict is "verified". Publication still requires certification on a new
   locked holdout (`PROCESS.md` step 3).
