@@ -7,6 +7,10 @@ will later be scored against your labels, so your labels must be independent of 
 
 - Read only this file and the one packet you were given in `labelling/`. You may use
   the web freely (open the candidate URL, search, open other sites).
+- You may also read `data/holdout-labelling/pages-AAA-BBB.json` for your packet: a
+  plain crawl of each candidate (status, final URL, and short identity excerpts),
+  made without any model. Excerpts are cut to lines mentioning the venue, so when a
+  page failed or an excerpt is inconclusive, check the live web yourself.
 - Never open `data/llm-review/`, any other file in this repository, or any other
   batch's labels. Running the format check at the end of this file is allowed. Never call OpenRouter, and never use the `xiaomi/mimo-*` models.
 - Work in a fresh session for each packet. Do not reuse a session that has seen
