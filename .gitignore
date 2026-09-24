@@ -17,3 +17,5 @@ data/llm-review/
 .compliance/
 data/holdout-labelling/
 data/national-review/
+data/holdout-adjudication/
+data/holdout-adjudication*.log

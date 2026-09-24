@@ -1,13 +1,13 @@
 # Execution status
 
-Updated: 2026-09-24 (LLM reviewer passed the adjudicated holdout gate)
+Updated: 2026-09-25 (reviewer certified; production pipeline built; batch b001 ready)
 Branch: `main`
 
 ## Current milestone
 
-Certify the LLM ownership reviewer (`PROCESS.md` steps 2–3) before any
-86,852-candidate production run. The frozen v1 rule is rejected, and its locked
-holdout can no longer qualify anything; it may serve as development data.
+Process the 86,852 known candidates with the certified reviewer (`PROCESS.md` step 4),
+in operator-approved batches of about 5,000 venues with a $5 cap each. The reviewer
+passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 ## Locked holdout v1 for the LLM reviewer (2026-09-24)
 
