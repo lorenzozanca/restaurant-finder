@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-24 (locked holdout selected; labelling packets ready)
+Updated: 2026-09-24 (locked holdout labelled and sealed)
 Branch: `main`
 
 ## Current milestone
@@ -57,6 +57,16 @@ holdout can no longer qualify anything; it may serve as development data.
   23 HTTP 404, 5 HTTP 5xx, 3 TLS certificate errors, 5 connection errors or timeouts.
   Contact pages were found for only 16 venues. Excerpts average 579 characters per
   venue (~28 KB per packet).
+
+- Labels done and sealed (2026-09-24): the operator chose opencode with
+  `opencode/muse-spark-1.3-contributor-free` (free; Meta may train on the prompts,
+  which contain only public business data). `label-holdout-with-opencode.mjs` ran one
+  packet at a time under a $10 cap, measured from the opencode OpenRouter key: 3–6
+  minutes per packet, $0.00 total. Each agent read the instructions, its packet, and
+  the prefetched excerpts, and searched the web for failed or unclear venues.
+  `node validate-holdout-labels.mjs --complete`: 480 venues; domain verdicts 216
+  verified, 181 rejected, 83 uncertain. `LABELS-SEAL.json` records the file hashes.
+  Nothing from the reviewer has been run on these venues.
 
 ## LLM reviewer core and first development runs (2026-09-24)
 
@@ -257,20 +267,14 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-1. Prefetch is done (`data/holdout-labelling/pages-*.json`; rerun
-   `node prefetch-holdout-pages.mjs` if that local directory is gone).
-2. Label packet 001-048 with **one** Sonnet agent that reads the instructions, the
-   packet, and `data/holdout-labelling/pages-001-048.json`, using the web only for
-   unclear venues. Report its usage to the operator before labelling any other packet.
-
-While the labels are pending, an implementing session may only fix the redirect
-scoring issue in `evaluate-llm-review.mjs` (see the holdout section), tested with fake
-data, without opening any label file.
-
-When all 10 files are committed, the next session runs
-`node validate-holdout-labels.mjs --seal`, commits `LABELS-SEAL.json`, freezes the
-reviewer and evaluator (model IDs, prompt version and hash, text budget, code hashes),
-and runs the reviewer once on the holdout (`PROCESS.md` steps 3.4–3.7).
+Freeze the reviewer and run it once on the sealed holdout (`PROCESS.md` steps 3.4–3.7).
+Record in a freeze manifest the model IDs (`xiaomi/mimo-v2.6-pro`), prompt version and
+hash (`llm-ownership-dev-3`), the text budget, and SHA-256 of the reviewer, crawler,
+runner, and evaluator code plus `LABELS-SEAL.json`. Then run
+`assess-labelled-corpus.mjs --llm-review` on `benchmark/llm-review-holdout-v1` once
+(operator-approved USD cap; the pilot's 300 venues cost $0.18) and evaluate it with
+`evaluate-llm-review.mjs --partition locked_holdout`. Then do blind adjudication of
+the disagreements and the agreement audit (steps 3.5–3.6).
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
