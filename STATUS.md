@@ -42,10 +42,16 @@ holdout can no longer qualify anything; it may serve as development data.
   - These runs are not evidence of accuracy yet. Almost the whole corpus is still
     unreviewed because of the network (below): 250 of 351 crawlable candidates are
     still `retryable`.
-- Network diagnosis: the Wi-Fi link is healthy (−39 dBm, router RTT 2–30 ms, 0%
-  loss). Internet RTT to 1.1.1.1 measured 1.4 s, then 3.4 s with 70% loss, then 8 s
-  average with the crawler frozen (laptop traffic ~39 KB/s). The crawl is not the
-  cause; the congestion is upstream of this laptop.
+- Network diagnosis (corrected): the internet line's throughput from this laptop is
+  capped at ~20 KB/s (~160 kbit/s). Idle RTT to 1.1.1.1 is 9.6 ms with 0% loss. One
+  `curl` of a large file got 20,751 B/s, and RTT rose to 728 ms average (1.7 s max)
+  during it. Any sustained crawl therefore fills the line: with `dev-3` running,
+  latency reached seconds with up to 100% loss; with it stopped, 17 ms and 0% loss.
+  Headless Chrome is not required for this (it also happened with `--no-headless`).
+  The pattern (low idle latency, hard throughput ceiling) suggests a data-allowance
+  or per-device throttle, not Wi-Fi quality (−39 dBm link, router RTT 2–30 ms).
+  An earlier SIGSTOP test wrongly exonerated the crawler, because stopped processes
+  keep their connections open.
 
 ## Route decision and crawler work (2026-09-24)
 
@@ -242,9 +248,10 @@ Earlier (2026-09-13):
 
 ## Blockers
 
-- Internet connectivity: RTT to 1.1.1.1 of 1.4–8 s with up to 70% loss (the Wi-Fi link
-  itself is healthy). Crawls and OpenRouter calls time out until it recovers. A
-  background watcher started on 2026-09-24 launches `dev-3` automatically once RTT is
-  under 300 ms (it gives up after 6 hours).
+- Internet throughput on this machine is capped at ~20 KB/s. At that rate, the
+  development crawl takes hours and the 86,852-candidate crawl would take weeks, and
+  every crawl saturates the operator's connection. `dev-3` is stopped (0 outcomes;
+  resumable with the command above). It needs either a restored line or a better
+  connection (another network or a small cloud machine).
 - No LLM verdict is "verified". Publication still requires certification on a new
   locked holdout (`PROCESS.md` step 3).
