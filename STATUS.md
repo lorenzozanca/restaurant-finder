@@ -38,24 +38,32 @@ holdout can no longer qualify anything; it may serve as development data.
     all McDonald's corporate pages that the labels accept as the chain's official
     domain. Prompt dev-3 now treats brand/chain sites that don't identify the branch
     as "insufficient". Cost $0.0285.
-  - `dev-3` (MiMo only; prompt dev-3; stopped after 20 reviews to diagnose the network):
-    1 publication, correct, 0 false; 0 false rejections (the McDonald's fix held);
-    3 labelled-official candidates left unresolved. Cost $0.0226 ($0.0011 per
-    reviewed candidate).
-  - Total LLM spend to date: $0.073 of the operator's $2 first-try limit.
-  - These runs are not evidence of accuracy yet. Almost the whole corpus is still
-    unreviewed because of the network (below): 250 of 351 crawlable candidates are
-    still `retryable`.
-- Network diagnosis (corrected): the internet line's throughput from this laptop is
-  capped at ~20 KB/s (~160 kbit/s). Idle RTT to 1.1.1.1 is 9.6 ms with 0% loss. One
-  `curl` of a large file got 20,751 B/s, and RTT rose to 728 ms average (1.7 s max)
-  during it. Any sustained crawl therefore fills the line: with `dev-3` running,
-  latency reached seconds with up to 100% loss; with it stopped, 17 ms and 0% loss.
-  Headless Chrome is not required for this (it also happened with `--no-headless`).
-  The pattern (low idle latency, hard throughput ceiling) suggests a data-allowance
-  or per-device throttle, not Wi-Fi quality (−39 dBm link, router RTT 2–30 ms).
-  An earlier SIGSTOP test wrongly exonerated the crawler, because stopped processes
-  keep their connections open.
+  - `dev-3` (MiMo only; prompt dev-3; completed after the Wi-Fi fix, retrying earlier
+    timeouts): 193 candidates reviewed across 96 venues (34 accepted, 124 rejected,
+    35 ambiguous). Venue publications: 20, of which 16 have a verified label, all 16
+    correct and 0 false; the other 4 venues are labelled `uncertain` by Codex, and each
+    was accepted with a matched phone or street address on the venue's own domain
+    (pennylanetavern.com, oltregusto.it, hoteldolomiticastelmezzano.com,
+    lefolliedellochef.com). Precision 16/16, Wilson lower bound 80.6% (too few
+    publications for the 73-publication gate). Recall 16/29 labelled official sites
+    (55%). 0 false rejections. 30 labelled-official candidates were left ambiguous,
+    mostly McDonald's PDFs with no extractable text and chain pages that don't name the
+    branch. Cost $0.2298 for 193 calls ($0.0012 per review; about 2,490 prompt and 290
+    completion tokens per call); 1 invalid output.
+  - Throughput after the fix: 303 candidates crawled and 173 reviewed in 7.5 minutes at
+    concurrency 8 (about 40 candidates/min), with RTT to 1.1.1.1 at about 7 ms during
+    the run. Retryable candidates fell from 250 to 97.
+  - Total LLM spend after `dev-3`: about $0.30 of the operator's $2 first-try limit.
+
+- Network diagnosis (resolved 15:27 UTC): the bottleneck was the laptop's Wi-Fi
+  association, not the internet line. After 52 hours connected on DFS channel 124,
+  the router was sending to the laptop at VHT-MCS 0 (15 Mbit/s) with 2.9 M dropped
+  frames against 1.45 M received. A 250-packet load to the router gave 3.5 s RTT
+  with 15% loss, and internet throughput was ~20 KB/s, which any crawl saturated.
+  Wi-Fi power saving off: no change. `sudo nmcli connection up "Italia Uno"`
+  (operator) restored the link: rx 390 Mbit/s, the router load test at 2.6 ms with
+  0% loss, and 100 MB downloaded in 1.96 s (53.5 MB/s). If crawls slow down again,
+  check the `rx bitrate` in `iw dev wlp58s0 station dump` and reconnect.
 
 ## Route decision and crawler work (2026-09-24)
 
@@ -165,24 +173,26 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-Finish development run `dev-3` on the 200-venue corpus, once internet RTT to 1.1.1.1
-is healthy (under 300 ms):
+Finish and evaluate the capped development run on the spent v1 holdout (1,000 venues;
+2,804 candidates; development use only; started 2026-09-24):
 
 ```bash
-node assess-labelled-corpus.mjs --partition development --fixture-dir benchmark/session-11-web \
-  --db data/llm-review/development-run-1.sqlite --cache-dir output/.cache \
-  --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --concurrency 4 --timeout 45000 \
-  --retry-state retryable --llm-review --run-id dev-3 --budget-usd 1.90 \
-  --verifier-model xiaomi/mimo-v2.6-pro
-node evaluate-llm-review.mjs --partition development --fixture-dir benchmark/session-11-web \
-  --db data/llm-review/development-run-1.sqlite --run-id dev-3 --output data/llm-review/dev-3-evaluation.json
+node assess-labelled-corpus.mjs --partition locked_holdout \
+  --fixture-dir benchmark/session-12-combined-final/cohort-1 \
+  --fixture-dir benchmark/session-12-combined-final/cohort-2 \
+  --db data/llm-review/v1-holdout-development.sqlite --cache-dir output/.cache \
+  --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --concurrency 12 --timeout 20000 \
+  --llm-review --run-id v1h-dev-3 --budget-usd 1.60 --verifier-model xiaomi/mimo-v2.6-pro
+node evaluate-llm-review.mjs --partition locked_holdout \
+  --fixture-dir benchmark/session-12-combined-final/cohort-1 \
+  --fixture-dir benchmark/session-12-combined-final/cohort-2 \
+  --db data/llm-review/v1-holdout-development.sqlite --run-id v1h-dev-3 \
+  --output data/llm-review/v1h-dev-3-evaluation.json
 ```
 
-Then record in this file: false publications, false rejections, verified sites left
-unresolved, cost per reviewed candidate, and candidates per minute. Keep the total
-first-try spend under $2. If the result has zero false publications, extend
-development to the spent v1 holdout (`benchmark/session-12-combined-final`, 1,000
-venues) under a new capped run before designing the new locked holdout.
+Record the false publications (each by name), false rejections, recall, cost, and
+throughput here. If there are zero false publications, the next task is to design and
+select the new locked holdout from the Overture source candidates (`PROCESS.md` step 3).
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
@@ -252,10 +262,5 @@ Earlier (2026-09-13):
 
 ## Blockers
 
-- Internet throughput on this machine is capped at ~20 KB/s. At that rate, the
-  development crawl takes hours and the 86,852-candidate crawl would take weeks, and
-  every crawl saturates the operator's connection. `dev-3` is stopped after 20 reviews (resumable with the
-  command above). It needs either a restored line or a better
-  connection (another network or a small cloud machine).
 - No LLM verdict is "verified". Publication still requires certification on a new
   locked holdout (`PROCESS.md` step 3).
