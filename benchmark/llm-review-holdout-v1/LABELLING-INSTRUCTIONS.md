@@ -153,9 +153,10 @@ A rejected candidate's domain review looks like:
 From the repository root:
 
 ```bash
-node validate-holdout-labels.mjs --holdout-dir benchmark/llm-review-holdout-v1
+node validate-holdout-labels.mjs --holdout-dir benchmark/llm-review-holdout-v1 \
+  --file locked-holdout-adjudication-AAA-BBB.json
 ```
 
-It checks every label file present against the fixture and its packet (reading no
-reviewer output). Fix any error it reports. Do not run it with `--seal`; the operator
+It checks your label file against the fixture and its packet (reading no reviewer
+output). Fix any error it reports. Do not run it with `--seal`; the operator
 seals the complete set.

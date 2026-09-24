@@ -20,8 +20,11 @@ export function evaluateLlmReview(options) {
     const calls = store.db.prepare("SELECT * FROM llm_review_calls WHERE run_id = ? ORDER BY call_id")
       .all(runId);
     const byVenue = Map.groupBy(outcomes, (row) => row.venue_id);
+    const labelledDomains = new Map(groups.flatMap((group) => group.adjudications.flatMap((document) =>
+      document.entries.map((entry) => [entry.venue_id,
+        new Set(entry.domain_reviews.map((review) => review.registrable_domain))]))));
     const predictions = [...byVenue].map(([venueId, rows]) => ({ venue_id: venueId,
-      prediction: { official_website_url: predictionForVenue(rows) } }));
+      prediction: { official_website_url: predictionForVenue(rows, labelledDomains) } }));
     const evaluated = groups.flatMap((group) => joinWebStressEntries(group.fixtures,
       group.adjudications, predictions));
     const labels = new Map(evaluated.map((entry) => [entry.venue_id, entry]));
@@ -78,11 +81,21 @@ export function evaluateLlmReview(options) {
   } finally { store.close(); }
 }
 
-function predictionForVenue(rows) {
-  const accepted = rows.filter((row) => row.outcome === "accepted");
-  const domains = new Set(accepted.map((row) => registrableDomain(row.final_url)).filter(Boolean));
+function predictionForVenue(rows, labelledDomains) {
+  const accepted = rows.filter((row) => row.outcome === "accepted")
+    .map((row) => scoredUrl(row, labelledDomains.get(row.venue_id)));
+  const domains = new Set(accepted.map((url) => registrableDomain(url)).filter(Boolean));
   if (domains.size !== 1) return null;
-  return accepted.map((row) => row.final_url).sort()[0];
+  return accepted.sort()[0];
+}
+
+// Labels judge candidate domains, including whether the venue controls a redirect
+// away from one. A publication that redirected to an unlabelled domain is therefore
+// scored against its candidate domain's label.
+function scoredUrl(row, labelledDomains = new Set()) {
+  return labelledDomains.has(registrableDomain(row.final_url))
+    || registrableDomain(row.final_url) === registrableDomain(row.candidate_url)
+    ? row.final_url : row.candidate_url;
 }
 
 function detail(row) {

@@ -34,11 +34,18 @@ holdout can no longer qualify anything; it may serve as development data.
   requires all 10 batches; `--seal` writes an immutable `LABELS-SEAL.json` with
   file hashes. `validate-holdout-labels.test.mjs` validates the instruction example
   block itself, so the documented format cannot drift from the validator.
-- Known issue before the freeze (step 3.4): `evaluate-llm-review.mjs` scores a
-  publication by the domain of the crawl's final URL. If a candidate redirects to
-  another domain, that domain has no label and the publication counts as false. Map
-  redirected publications to the candidate domain's label (the labeller records the
-  redirect in `final_url`) before freezing the evaluator.
+- Fixed before the freeze: `evaluate-llm-review.mjs` scored a publication by the
+  domain of the crawl's final URL, so a candidate that redirected to an unlabelled
+  domain counted as false. It now scores such a publication against the candidate
+  domain's label (the labeller judges whether the venue controls the redirect); a final
+  domain that has its own label is still scored by that label.
+  `evaluate-llm-review.test.mjs` fails on the old code and passes now; `dev-3`
+  development metrics are unchanged (20 publications, 16 true, 0 false).
+- Labelling (operator decision, 2026-09-24): instead of ten manual sessions, the
+  operator asked this session to do all packets. It spawned ten fresh-context Claude
+  subagents, one per packet, each told to read only the instructions and its packet
+  (`PROCESS.md` step 3.3). `validate-holdout-labels.mjs --file` checks one batch so
+  the agents do not trip over each other's partial files.
 
 ## LLM reviewer core and first development runs (2026-09-24)
 

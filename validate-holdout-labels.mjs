@@ -45,7 +45,7 @@ export function validateHoldoutLabels(adjudications, fixture, packets, options =
   return totals;
 }
 
-export function loadHoldoutDirectory(directory) {
+export function loadHoldoutDirectory(directory, onlyFile = null) {
   const names = readdirSync(directory).sort();
   const fixtureNames = names.filter((name) => /^locked-holdout-\d{3}-\d{3}\.json$/.test(name));
   if (fixtureNames.length !== 1) throw new Error("expected exactly one locked-holdout fixture");
@@ -53,7 +53,7 @@ export function loadHoldoutDirectory(directory) {
   const packets = readdirSync(labelling).sort().filter((name) => /^packet-\d{3}-\d{3}\.json$/.test(name))
     .map((name) => JSON.parse(readFileSync(join(labelling, name), "utf8")));
   const adjudications = names.filter((name) => /^locked-holdout-adjudication-\d{3}-\d{3}\.json$/.test(name))
-    .map((file) => {
+    .filter((name) => !onlyFile || name === onlyFile).map((file) => {
       const bytes = readFileSync(join(directory, file));
       return { file, sha256: sha256(bytes), document: JSON.parse(bytes) };
     });
@@ -66,9 +66,13 @@ function sha256(bytes) { return createHash("sha256").update(bytes).digest("hex")
 
 if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
   const argv = process.argv.slice(2);
-  const directory = resolve(argv[argv.indexOf("--holdout-dir") + 1] || "benchmark/llm-review-holdout-v1");
+  const directory = resolve(argv.includes("--holdout-dir") ? argv[argv.indexOf("--holdout-dir") + 1]
+    : "benchmark/llm-review-holdout-v1");
   const seal = argv.includes("--seal");
-  const loaded = loadHoldoutDirectory(directory);
+  const only = argv.includes("--file") ? argv[argv.indexOf("--file") + 1] : null;
+  const loaded = loadHoldoutDirectory(directory, only);
+  if (only && seal) throw new Error("--seal checks the whole set; do not combine it with --file");
+  if (only && !loaded.adjudications.length) throw new Error(`${only}: label file not found`);
   const result = validateHoldoutLabels(loaded.adjudications, loaded.fixture, loaded.packets,
     { complete: seal || argv.includes("--complete") });
   if (seal) {

@@ -203,8 +203,12 @@ Protocol fixed 2026-09-24, before any new holdout is selected or labelled:
    holdout venue: official website status plus a verdict on its candidate domain. It
    works in sessions that never see the reviewer's output (nothing under
    `data/llm-review/`). This is the operator's choice (2026-09-24) and replaces
-   labelling by OpenAI models through OpenRouter. Seal the labels before the reviewer
-   runs.
+   labelling by OpenAI models through OpenRouter. For holdout v1 the operator asked
+   that one session do all packets: it spawns one fresh-context Claude subagent per
+   packet, whose prompt names only `LABELLING-INSTRUCTIONS.md` and its packet and
+   forbids reading any other repository file. The spawning session only validates and
+   commits the files and changes no reviewer code, prompt, or setting after seeing
+   them. Seal the labels before the reviewer runs.
 4. **Freeze.** Freeze the reviewer's model IDs, prompt version and hash, text budget,
    and code hashes. Then run it once on the holdout.
 5. **Blind adjudication (symmetric).** A pinned adjudicator re-reviews every
