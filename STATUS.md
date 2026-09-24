@@ -253,13 +253,13 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-**Operator action (blocking):** label the 10 packets. For each
-`benchmark/llm-review-holdout-v1/labelling/packet-AAA-BBB.json`, start a fresh agent
-session of your choice (Claude, Codex, …; web research allowed) with the prompt:
-"Follow `benchmark/llm-review-holdout-v1/LABELLING-INSTRUCTIONS.md` for
-`labelling/packet-AAA-BBB.json`." Commit each resulting
-`locked-holdout-adjudication-AAA-BBB.json`. Implementing sessions must not label: they
-have seen reviewer outputs.
+1. Operator: restore the Wi-Fi (`sudo nmcli connection up "Italia Uno"`; check that
+   `iw dev wlp58s0 station dump` shows an rx bitrate well above VHT-MCS 0).
+2. Run `node prefetch-holdout-pages.mjs` (zero LLM; all 10 packets into
+   `data/holdout-labelling/`) and report fetched counts per packet.
+3. Label packet 001-048 with **one** Sonnet agent that reads the instructions, the
+   packet, and `data/holdout-labelling/pages-001-048.json`, using the web only for
+   unclear venues. Report its usage to the operator before labelling any other packet.
 
 While the labels are pending, an implementing session may only fix the redirect
 scoring issue in `evaluate-llm-review.mjs` (see the holdout section), tested with fake
