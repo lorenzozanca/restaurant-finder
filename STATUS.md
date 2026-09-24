@@ -45,7 +45,11 @@ holdout can no longer qualify anything; it may serve as development data.
   operator asked this session to do all packets. It spawned ten fresh-context Claude
   subagents, one per packet, each told to read only the instructions and its packet
   (`PROCESS.md` step 3.3). `validate-holdout-labels.mjs --file` checks one batch so
-  the agents do not trip over each other's partial files.
+  the agents do not trip over each other's partial files. The operator stopped the run
+  because it took their Claude usage from 0% to 75%. All ten were stopped with **0
+  label files written**: 10 parallel agents contended for the network (DNS failures,
+  slow fetches) and one hit an API timeout. A cheaper labelling method is pending the
+  operator's choice.
 
 ## LLM reviewer core and first development runs (2026-09-24)
 
