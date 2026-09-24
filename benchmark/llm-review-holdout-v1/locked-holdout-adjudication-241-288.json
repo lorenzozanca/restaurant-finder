@@ -1,0 +1,1077 @@
+{
+  "adjudication_set": "llm-review-holdout-v1-adjudication-241-288",
+  "entries": [
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.empireofirenze.it/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.empireofirenze.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Candidate home page names Empireo Rooftop/American Bar at Lungarno Zecca Vecchia 38, Firenze, with phone +39 055 2623500, matching the record's address and phone.",
+          "registrable_domain": "empireofirenze.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.empireofirenze.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.empireofirenze.it/",
+      "venue_id": "venue:048017:firenze:empire-rooftop-view"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.fermento1889.com/"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Candidate is the site of Fermento 1889 pizzeria at Borgo San Frediano 42R, a different venue by the same chef; Fermentino's own official site is fermentinofirenze.com.",
+          "registrable_domain": "fermento1889.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.fermento1889.com/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "other_official_website_url": "https://www.fermentinofirenze.com/",
+      "venue_id": "venue:048017:firenze:fermentino-schiacciata-e-dintorni-by-gianluca-vella"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.ilgenioitaliano.com/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.ilgenioitaliano.com/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site names Il Genio Italiano at Viale Alessandro Guidoni 168, Firenze, with phone 3282382293 matching the record.",
+          "registrable_domain": "ilgenioitaliano.com",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.ilgenioitaliano.com/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.ilgenioitaliano.com/",
+      "venue_id": "venue:048017:firenze:genio-italiano"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.pepo.it/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.pepo.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site names Osteria Pepo at Via Rosina 4, Firenze, with phone +39 055 283259 matching the record.",
+          "registrable_domain": "pepo.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.pepo.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.pepo.it/",
+      "venue_id": "venue:048017:firenze:pepo"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.vecchiafirenze.it/"
+          ],
+          "rationale": "Candidate serves a generic hosting maintenance page with no venue name or details; directories historically list it as the restaurant's site but current control cannot be confirmed.",
+          "registrable_domain": "vecchiafirenze.it",
+          "uncertainty_evidence_urls": [
+            "http://www.vecchiafirenze.it/",
+            "https://www.opentable.com/r/vecchia-firenze-florence"
+          ],
+          "uncertainty_reason": "Live candidate page is a generic maintenance notice with no venue identity, and the alternate domain listed for the venue (vecchiafirenze.eu) is unreachable, so current control of the candidate domain cannot be established.",
+          "uncertainty_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "ownership_status": "uncertain",
+          "publisher_class": "uncertain"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.vecchiafirenze.it/"
+      ],
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "venue_id": "venue:048017:firenze:vecchia-firenze"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.iltrebbiolo.it/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.iltrebbiolo.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site presents Il Trebbiolo Relais restaurant at Via del Trebbiolo 8 with phones 055 8300098/055 8300583 matching the record's address and phone.",
+          "registrable_domain": "iltrebbiolo.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.iltrebbiolo.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.iltrebbiolo.it/",
+      "venue_id": "venue:048033:pontassieve:the-trebbiolo-relais"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.sestesecalcio.com/l-osteria-del-pallone"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.sestesecalcio.com/l-osteria-del-pallone"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Sestese Calcio club site presents its Osteria del Pallone at Piazza Bagnolet 4, Sesto Fiorentino, with phone 055 4216298 matching the record.",
+          "registrable_domain": "sestesecalcio.com",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.sestesecalcio.com/l-osteria-del-pallone"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.sestesecalcio.com/l-osteria-del-pallone",
+      "venue_id": "venue:048043:sesto-fiorentino:del-pallone"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://oppla.club/borgopizza"
+          ],
+          "publisher_class": "booking_or_order_platform",
+          "rationale": "Candidate is a Borgo Pizza ordering page on the Oppla delivery platform's shared domain, redirecting to oppla.delivery, not a venue-controlled site.",
+          "registrable_domain": "oppla.club",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "https://oppla.club/borgopizza"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:049009:livorno:borgo-pizza"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://www.instagram.com/cafeartmiriogiusy/"
+          ],
+          "publisher_class": "social",
+          "rationale": "Candidate is an Instagram profile, which is never the official website.",
+          "registrable_domain": "instagram.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "https://www.instagram.com/cafeartmiriogiusy/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:050009:castelfranco-di-sotto:art"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://ilboschettodichianni.eatbu.com/?lang=it"
+          ],
+          "publisher_class": "booking_or_order_platform",
+          "rationale": "Page is a venue profile with booking on eatbu.com, a DISH Digital Solutions platform on a shared domain (menu-hosting/booking subdomain), not venue-controlled despite matching phone.",
+          "registrable_domain": "eatbu.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "https://ilboschettodichianni.eatbu.com/?lang=it"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:050012:chianni:boschetto-di-chianni"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.iltenditoio.it/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.iltenditoio.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site names Ristorante Il Tenditoio in Lajatico at Piazzetta di Castello with phone (+39) 0587 694621 matching the record.",
+          "registrable_domain": "iltenditoio.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.iltenditoio.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.iltenditoio.it/",
+      "venue_id": "venue:050016:lajatico:tenditoio"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.pizzeriaanchenopisa.it/"
+          ],
+          "publisher_class": "booking_or_order_platform",
+          "rationale": "Candidate domain redirects to a JustEat page (utm microsite parameters) and returns 403; the only content is a delivery-platform page on a shared domain, not a venue site.",
+          "registrable_domain": "pizzeriaanchenopisa.it",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.pizzeriaanchenopisa.it/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:050026:pisa:anche-no"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://ilgattorosso.eatbu.com/?lang=it"
+          ],
+          "publisher_class": "booking_or_order_platform",
+          "rationale": "Page is a Bar Il Gatto Rosso profile with booking on eatbu.com, a shared booking/menu platform domain, not venue-controlled.",
+          "registrable_domain": "eatbu.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "https://ilgattorosso.eatbu.com/?lang=it"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:050031:san-giuliano-terme:gatto-rosso"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://instagram.com/pasticcerialunarossa?igshid=bgpt9gv3liiv"
+          ],
+          "publisher_class": "social",
+          "rationale": "Candidate is an Instagram profile, which is never the official website.",
+          "registrable_domain": "instagram.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "https://instagram.com/pasticcerialunarossa?igshid=bgpt9gv3liiv"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:050035:santa-maria-a-monte:luna-rossa-caffe-bar"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.torredelporcellino.it/"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Domain now serves Spanish escort-service spam for Sevilla with no trace of the Volterra restaurant.",
+          "registrable_domain": "torredelporcellino.it",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.torredelporcellino.it/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:050039:volterra:torre-del-porcellino"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.lupinari.com/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.lupinari.com/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Official site of Tenuta Lupinari at Localita i Lupinari, Bucine, with phone +39 055 9911537 and info@lupinari.com matching the record.",
+          "registrable_domain": "lupinari.com",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.lupinari.com/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.lupinari.com/",
+      "venue_id": "venue:051005:bucine:tenuta-lupinari"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.labucadiipo.it/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.labucadiipo.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site names Ristorante Pizzeria La Buca di Ipo, Montevarchi, at Via Giovanni Pascoli 34/B with Tel. 055 982233 matching the record.",
+          "registrable_domain": "labucadiipo.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.labucadiipo.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.labucadiipo.it/",
+      "venue_id": "venue:051026:montevarchi:buca-di-ipo"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://chiaroscurocafe.myportfolio.com/"
+          ],
+          "rationale": "Adobe Portfolio page for Chiaroscuro Cafe is deleted (redirects to a missing-page notice); no third-party page attributes this URL to the venue.",
+          "registrable_domain": "myportfolio.com",
+          "uncertainty_evidence_urls": [
+            "https://chiaroscurocafe.myportfolio.com/",
+            "https://restaurantguru.it/Chiaroscuro-Bar-Tabaccheria-Edicola-Casole-dElsa"
+          ],
+          "uncertainty_reason": "Candidate portfolio page is deleted and returns a generic missing-page notice, and nothing found ties the chiaroscurocafe portfolio URL to the Casole d'Elsa bar, so control cannot be established.",
+          "uncertainty_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "ownership_status": "uncertain",
+          "publisher_class": "uncertain"
+        }
+      ],
+      "evidence_urls": [
+        "https://chiaroscurocafe.myportfolio.com/"
+      ],
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "venue_id": "venue:052004:casole-d-elsa:chiaroscuro-bar-tabaccheria-edicola"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.agricolasanfelice.it/offerte-soggiorni-toscana/"
+          ],
+          "rationale": "Candidate and its redirect target (sanfelice.com) both refuse automated fetching, so venue presentation on the candidate domain could not be confirmed.",
+          "registrable_domain": "agricolasanfelice.it",
+          "uncertainty_evidence_urls": [
+            "http://www.agricolasanfelice.it/offerte-soggiorni-toscana/",
+            "https://www.borgosanfelice.com/en/gourmet-restaurant-chianti/osteria-del-grigio"
+          ],
+          "uncertainty_reason": "Both the candidate URL and its redirect target return 403 to live checks; the venue is run by the Borgo San Felice group but whether the candidate domain presents Osteria del Grigio could not be verified.",
+          "uncertainty_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "ownership_status": "uncertain",
+          "publisher_class": "uncertain"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.agricolasanfelice.it/offerte-soggiorni-toscana/"
+      ],
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "venue_id": "venue:052006:castelnuovo-berardenga:del-grigio"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.labonaosteria.it/"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Domain no longer resolves though registered since 2015; the active restaurant now uses a Facebook page, so the candidate is an expired domain.",
+          "registrable_domain": "labonaosteria.it",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.labonaosteria.it/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:052012:colle-di-val-d-elsa:bona-osteria"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://osteriadeglisvitati.business.site/"
+          ],
+          "ownership_evidence_urls": [
+            "https://osteriadeglisvitati.business.site/",
+            "https://www.waze.com/live-map/directions/it/toscana/siena/osteria-degli-svitati?to=place.ChIJr9X3-OMtKhMRpq7Z2v09p-Q"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Exact-name Google Business site slug for the osteria, attributed to Osteria degli Svitati at Via della Galluzza 34 with phone 0577 601755 by map data; unreachable only because Google retired Business Sites.",
+          "registrable_domain": "business.site",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "https://osteriadeglisvitati.business.site/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "https://osteriadeglisvitati.business.site/",
+      "venue_id": "venue:052032:siena:degli-svitati"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.ristoranteilriccioamiata.it/"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Domain no longer resolves though directories truncated-list it (www.ristoranteilricc...) as the restaurant's site; treated as an expired domain of Ristorante Il Riccio.",
+          "registrable_domain": "ristoranteilriccioamiata.it",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.ristoranteilriccioamiata.it/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:053007:cinigiano:riccio"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.ilgranodibramante.it/"
+          ],
+          "rationale": "Candidate serves only a coming-soon notice with no venue name, address, or phone.",
+          "registrable_domain": "ilgranodibramante.it",
+          "uncertainty_evidence_urls": [
+            "http://www.ilgranodibramante.it/"
+          ],
+          "uncertainty_reason": "The exact-name domain shows only a generic 'new site coming soon' page with no identity details, so venue control cannot be established.",
+          "uncertainty_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "ownership_status": "uncertain",
+          "publisher_class": "uncertain"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.ilgranodibramante.it/"
+      ],
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "venue_id": "venue:053011:grosseto:grano-di-bramante"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.tavernaetrusca.com/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.tavernaetrusca.com/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site names Taverna Etrusca at Piazza del Pretorio, Sovana (Sorano), with mobile +39 349 124 5540 matching the record.",
+          "registrable_domain": "tavernaetrusca.com",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.tavernaetrusca.com/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.tavernaetrusca.com/",
+      "venue_id": "venue:053026:sorano:taverna-etrusca"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.micchelettopizzeria.com/"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Domain serves only an Aruba domain-parked notice with no venue content.",
+          "registrable_domain": "micchelettopizzeria.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.micchelettopizzeria.com/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:054004:bevagna:miccheletto"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.ristoranteosterialescalette.it/"
+          ],
+          "rationale": "Candidate domain does not resolve, and the venue's confirmed official site is a different domain (osterialescalette.it).",
+          "registrable_domain": "ristoranteosterialescalette.it",
+          "uncertainty_evidence_urls": [
+            "http://www.ristoranteosterialescalette.it/",
+            "https://www.osterialescalette.it/"
+          ],
+          "uncertainty_reason": "Candidate domain has no DNS resolution and nothing ties it to the venue; the venue's official site lives on osterialescalette.it instead.",
+          "uncertainty_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "ownership_status": "uncertain",
+          "publisher_class": "uncertain"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.ristoranteosterialescalette.it/"
+      ],
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "other_official_website_url": "https://www.osterialescalette.it/",
+      "venue_id": "venue:054009:castiglione-del-lago:scalette"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://locations.westernunion.com/it/perugia/citta-di-castello/a0194ba8cbe6457d811bb3971e70da09?loc=52100+Arezzo%2C+Province+of+Arezzo%2C+Italy&q=postal%3A52100%3Bcountry%3AIT"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Candidate is a Western Union agent-locator page for a different business, unrelated to La Dolce Vita Caffe.",
+          "registrable_domain": "westernunion.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://locations.westernunion.com/it/perugia/citta-di-castello/a0194ba8cbe6457d811bb3971e70da09?loc=52100+Arezzo%2C+Province+of+Arezzo%2C+Italy&q=postal%3A52100%3Bcountry%3AIT"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:054013:citta-di-castello:dolce-vita-caffe"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://instagram.com/caffe__tassi?igshid=YmMyMTA2M2Y%3D"
+          ],
+          "publisher_class": "social",
+          "rationale": "Candidate is an Instagram profile, which is never the official website.",
+          "registrable_domain": "instagram.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "https://instagram.com/caffe__tassi?igshid=YmMyMTA2M2Y%3D"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:054013:citta-di-castello:tassi-ploom-reseller"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://agriturismo-terra-ribelle.business.site/"
+          ],
+          "rationale": "Candidate Google Business page returns 404 and no third-party page attributes this URL to the venue.",
+          "registrable_domain": "business.site",
+          "uncertainty_evidence_urls": [
+            "https://agriturismo-terra-ribelle.business.site/",
+            "https://restaurantguru.it/Agriturismo-La-Terra-Ribelle-Gubbio"
+          ],
+          "uncertainty_reason": "Candidate page is dead (404 after Google retired Business Sites) and nothing found ties this exact URL to Agriturismo Ristorante La Terra Ribelle, so control cannot be established.",
+          "uncertainty_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "ownership_status": "uncertain",
+          "publisher_class": "uncertain"
+        }
+      ],
+      "evidence_urls": [
+        "https://agriturismo-terra-ribelle.business.site/"
+      ],
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "venue_id": "venue:054024:gubbio:terra-ribelle"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://www.acquaefarinaperugia.it/menu/"
+          ],
+          "ownership_evidence_urls": [
+            "https://www.acquaefarinaperugia.it/menu/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Venue menu page on its own domain lists ordering phones 3314267613/3338767153 matching the record's phone.",
+          "registrable_domain": "acquaefarinaperugia.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "https://www.acquaefarinaperugia.it/menu/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.acquaefarinaperugia.it/menu/",
+      "venue_id": "venue:054039:perugia:acqua-e-farina"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.clickcafe.it/click-cafe-perugia"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Candidate is the Click Cafe franchise brand site (Salerno company) with no page for the Perugia shop; the location path redirects to the brand homepage.",
+          "registrable_domain": "clickcafe.it",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.clickcafe.it/click-cafe-perugia"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:054039:perugia:click-cafe"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.espressinocafe.it/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.espressinocafe.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site names Espressino Cafe at Nuova Monteluce, Perugia, with Tel. 075.9073146 matching the record.",
+          "registrable_domain": "espressinocafe.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.espressinocafe.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.espressinocafe.it/",
+      "venue_id": "venue:054039:perugia:espressino-cafe"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://www.google.com/maps/dir//Via+Sicilia,+51,+06128+Perugia+PG/@43.1024482,12.3061699,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x132ea13dc08933bb:0xc97aa94df8ec02!2m2!1d12.3762097!2d43.1024696"
+          ],
+          "publisher_class": "directory",
+          "rationale": "Candidate is a Google Maps directions URL, a directory/mapping service not controlled by the venue.",
+          "registrable_domain": "google.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "https://www.google.com/maps/dir//Via+Sicilia,+51,+06128+Perugia+PG/@43.1024482,12.3061699,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x132ea13dc08933bb:0xc97aa94df8ec02!2m2!1d12.3762097!2d43.1024696"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:054039:perugia:international-cafe"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.civitadibagnoregio.it/"
+          ],
+          "publisher_class": "directory",
+          "rationale": "Site is a Civita di Bagnoregio tourism/accommodation page that never names Trattoria Antico Forno; the shared phone reflects a common operator but the venue is not presented.",
+          "registrable_domain": "civitadibagnoregio.it",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.civitadibagnoregio.it/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:056003:bagnoregio:antico-forno"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://www.locandabelvederewineshop.it/"
+          ],
+          "rationale": "Candidate domain has no DNS resolution and no source ties it to the Paganico Sabino venue.",
+          "registrable_domain": "locandabelvederewineshop.it",
+          "uncertainty_evidence_urls": [
+            "https://www.locandabelvederewineshop.it/"
+          ],
+          "uncertainty_reason": "Candidate domain does not resolve and nothing found shows who controls it; the only same-named results belong to a different Locanda Belvedere in Molise.",
+          "uncertainty_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "ownership_status": "uncertain",
+          "publisher_class": "uncertain"
+        }
+      ],
+      "evidence_urls": [
+        "https://www.locandabelvederewineshop.it/"
+      ],
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "venue_id": "venue:057004:ascrea:belvedere"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.agriturismoilbarone.com/"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Domain no longer resolves though a 2019 Corriere/Dove Viaggi guide listed it as the agriturismo's site; treated as an expired domain.",
+          "registrable_domain": "agriturismoilbarone.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.agriturismoilbarone.com/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:057009:cantalice:barone-agriturismo"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.soloperdue.it/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.soloperdue.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site names Solo Per Due at Via Villa di Orazio 2, Vacone, with info@soloperdue.it and Tel. (+39) 0746 matching the record's address and phone prefix.",
+          "registrable_domain": "soloperdue.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.soloperdue.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.soloperdue.it/",
+      "venue_id": "venue:057072:vacone:solo-per-due"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.ristoranteorsola.it/"
+          ],
+          "rationale": "Candidate domain has no DNS resolution and no source ties it to Ristorante Orsola.",
+          "registrable_domain": "ristoranteorsola.it",
+          "uncertainty_evidence_urls": [
+            "http://www.ristoranteorsola.it/",
+            "https://restaurantguru.it/Orsola-Allumiere"
+          ],
+          "uncertainty_reason": "Candidate domain does not resolve and nothing found shows who controls it; the active restaurant's web presence is on an eatbu platform subdomain instead.",
+          "uncertainty_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "ownership_status": "uncertain",
+          "publisher_class": "uncertain"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.ristoranteorsola.it/"
+      ],
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "venue_id": "venue:058004:allumiere:orsola"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.ristoranteiquadri.it/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.ristoranteiquadri.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site names Ristorante i Quadri at Via dei Pescatori 21, Castel Gandolfo, with phone 06 936 14 00 matching the record.",
+          "registrable_domain": "ristoranteiquadri.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.ristoranteiquadri.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.ristoranteiquadri.it/",
+      "venue_id": "venue:058022:castel-gandolfo:quadri"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.mixeria.it/"
+          ],
+          "rationale": "Candidate domain has no DNS resolution and no source ties it to the Fiano Romano venue.",
+          "registrable_domain": "mixeria.it",
+          "uncertainty_evidence_urls": [
+            "http://www.mixeria.it/"
+          ],
+          "uncertainty_reason": "Candidate domain does not resolve and nothing found shows who controls it, though the Mixeria pizzeria at Via Milano 2c is confirmed to exist.",
+          "uncertainty_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "ownership_status": "uncertain",
+          "publisher_class": "uncertain"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.mixeria.it/"
+      ],
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "venue_id": "venue:058036:fiano-romano:mixeria"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.pizzaadomicilio.guidonia.rm.it/"
+          ],
+          "rationale": "Candidate domain has no DNS resolution and nothing ties it to I Moschettieri 2.",
+          "registrable_domain": "rm.it",
+          "uncertainty_evidence_urls": [
+            "http://www.pizzaadomicilio.guidonia.rm.it/",
+            "https://i-moschettieri-2.it/"
+          ],
+          "uncertainty_reason": "Candidate domain does not resolve and nothing found shows who controls it; the venue's official site lives on i-moschettieri-2.it instead.",
+          "uncertainty_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "ownership_status": "uncertain",
+          "publisher_class": "uncertain"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.pizzaadomicilio.guidonia.rm.it/"
+      ],
+      "official_website_status": "uncertain",
+      "official_website_url": null,
+      "other_official_website_url": "https://i-moschettieri-2.it/",
+      "venue_id": "venue:058047:guidonia-montecelio:moschettieri-2"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://lavecchiamola.it/"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Domain no longer resolves though the Valle del Treja park portal lists lavecchiamola.it with the restaurant's email and phone as its site; treated as an expired domain.",
+          "registrable_domain": "lavecchiamola.it",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://lavecchiamola.it/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:058052:magliano-romano:vecchia-mola"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.tavernanettuno.it/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.tavernanettuno.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Domain serves the Taverna Nettuno site with phone 0623483157 matching the record's phone.",
+          "registrable_domain": "tavernanettuno.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.tavernanettuno.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.tavernanettuno.it/",
+      "venue_id": "venue:058072:nettuno:taverna-nettuno"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.sisal.com/"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Candidate is the Sisal betting company's corporate site with no page for Bar 39 in Via Fulda.",
+          "registrable_domain": "sisal.com",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.sisal.com/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:058091:roma:39"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.antichisaporidaleo.com/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.antichisaporidaleo.com/",
+            "https://restaurantguru.it/Antichi-Sapori-Rome-6"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Exact-name domain names Osteria Antichi Sapori da Leo in Roma, corroborated at Via Aurelia 366 with phone 06 6627014 matching the record.",
+          "registrable_domain": "antichisaporidaleo.com",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.antichisaporidaleo.com/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.antichisaporidaleo.com/",
+      "venue_id": "venue:058091:roma:antichi-sapori"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.gelateriacandycream.it/"
+          ],
+          "publisher_class": "unrelated",
+          "rationale": "Domain now serves generic marketing/news articles for an unrelated Sicilian company with no trace of the Rome gelateria.",
+          "registrable_domain": "gelateriacandycream.it",
+          "ownership_status": "rejected"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.gelateriacandycream.it/"
+      ],
+      "official_website_status": "no_official_site",
+      "official_website_url": null,
+      "venue_id": "venue:058091:roma:candy-cream-ice-cream"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "https://www.ilcasalediroma.it/"
+          ],
+          "ownership_evidence_urls": [
+            "https://www.ilcasalediroma.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site names Agriturismo Il Casale di Roma at Via Flaminia km 15/600 with info@ilcasalediroma.it and phone 063321264 matching the record.",
+          "registrable_domain": "ilcasalediroma.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "https://www.ilcasalediroma.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "https://www.ilcasalediroma.it/",
+      "venue_id": "venue:058091:roma:casale-di-roma"
+    },
+    {
+      "domain_reviews": [
+        {
+          "evidence_urls": [
+            "http://www.cottageforum.it/"
+          ],
+          "ownership_evidence_urls": [
+            "http://www.cottageforum.it/"
+          ],
+          "ownership_method": "manual_first_party_review",
+          "ownership_reviewed_at": "2026-09-24T18:45:05.000Z",
+          "publisher_class": "official",
+          "rationale": "Site names Cottage Forum bar ristorante at Via di S. Eufemia 5, Piazza Venezia, Roma, matching the record's address.",
+          "registrable_domain": "cottageforum.it",
+          "ownership_status": "verified"
+        }
+      ],
+      "evidence_urls": [
+        "http://www.cottageforum.it/"
+      ],
+      "official_website_status": "accepted",
+      "official_website_url": "http://www.cottageforum.it/",
+      "venue_id": "venue:058091:roma:cottage-forum"
+    }
+  ],
+  "partition": "locked_holdout",
+  "review_basis": "Judged each candidate domain from the prefetched crawl excerpts; checked the live web (candidate sites, map/directory listings, venue sites) for every failed page or inconclusive excerpt.",
+  "reviewed_at": "2026-09-24T18:45:05.000Z",
+  "reviewer": "opencode/muse-spark-1.3-contributor-free via opencode, operator-run holdout labelling",
+  "schema_version": 1,
+  "scope_limitations": "Unreachable or bot-walled pages were retried live once; where control could not be established the venue was labelled uncertain. eatbu/oppla subdomains were judged platform-controlled.",
+  "selection_fingerprint_sha256": "440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1",
+  "source": "independent_fixture_review"
+}
