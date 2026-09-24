@@ -28,14 +28,14 @@ without candidates.
 
 [`PROCESS.md`](PROCESS.md) is the sole active delivery plan. In one sentence:
 
-> Certify one strict automatic first-party verification rule on labelled development
-> evidence and a frozen holdout, crawl the 86,852 known candidates without search,
-> apply the passing rule nationally, then discover URLs for the remaining 69,205
-> venues and pass them through the same
-> verifier.
+> Crawl every known candidate reliably without search, certify one LLM ownership
+> reviewer (cheap triage model plus stronger verifier, with quoted evidence checked
+> deterministically) on a new locked holdout, apply it to the 86,852 known candidates
+> under explicit spending caps, then discover URLs for the remaining 69,205 venues
+> and pass them through the same verifier.
 
 Search finds candidates; it does not verify them. Brave is reserved for the unresolved
-tail and requires an explicit budget.
+tail, and every Brave or LLM run requires an explicit budget.
 
 ## Documentation status
 

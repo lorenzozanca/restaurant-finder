@@ -25,6 +25,44 @@ test("candidate crawl falls back to the same publisher root after a dead path", 
   assert.equal(result.candidate_http_status, 404);
 });
 
+test("candidate crawl renders bot-walled, TLS-rejected, and script-only pages", async () => {
+  const page = "Venue Test ristorante Roma Via Roma 1 ".repeat(20);
+  const rendered = [];
+  const getRendered = async (url) => { rendered.push(url);
+    return { ok: true, status: 200, final_url: url, body: `<p>${page}</p>`, rendered: true }; };
+
+  const walled = await crawlWebsiteCandidate("https://walled.test/", {
+    get: async (url) => ({ ok: false, status: 403, final_url: url, body: "" }), getRendered });
+  assert.equal(walled.status, "succeeded");
+  assert.equal(walled.rendered, true);
+
+  const tls = await crawlWebsiteCandidate("https://chain.test/", {
+    get: async () => { throw Object.assign(new TypeError("fetch failed"),
+      { cause: { code: "UNABLE_TO_VERIFY_LEAF_SIGNATURE" } }); }, getRendered });
+  assert.equal(tls.status, "succeeded");
+
+  const scripted = await crawlWebsiteCandidate("https://spa.test/", {
+    get: async (url) => ({ ok: true, status: 200, final_url: url,
+      body: `<div id="app"></div><script>${"var x = 1;".repeat(200)}</script>` }), getRendered });
+  assert.match(scripted.site_facts.text, /Venue Test ristorante/);
+  assert.deepEqual(rendered, ["https://walled.test/", "https://chain.test/", "https://spa.test/"]);
+});
+
+test("dead DNS is recorded as a retryable reason without a root retry or render", async () => {
+  const requested = [];
+  const result = await crawlWebsiteCandidate("https://gone.test/menu", {
+    get: async (url) => { requested.push(url); throw Object.assign(new TypeError("fetch failed"),
+      { cause: { code: "ENOTFOUND" } }); },
+    getRendered: async () => assert.fail("DNS failures are not rendered"),
+  });
+  assert.deepEqual(requested, ["https://gone.test/menu"]);
+  assert.equal(result.failure_reason, "ENOTFOUND");
+  const decision = scoreOfficialWebsite({ url: "https://gone.test/menu", crawl: result },
+    { name: "Venue Test" }, { municipality: "Roma" });
+  assert.equal(decision.assessment_state, "retryable");
+  assert.ok(decision.reasons.includes("failure_ENOTFOUND"));
+});
+
 const oderzo = { name: "Al Giardinetto", type: "ristorante" };
 
 function owned(restaurant, websiteUrl = restaurant.website) {

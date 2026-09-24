@@ -5,6 +5,8 @@ import { pathToFileURL } from "node:url";
 import { DatabaseSync } from "node:sqlite";
 import { EvidenceStore } from "./lib/evidence-store.mjs";
 import { get } from "./lib/lib.mjs";
+import { cacheGet, cacheSet } from "./lib/cache.mjs";
+import { createHeadlessRenderer } from "./lib/headless-browser.mjs";
 import { classifyWebsite, crawlWebsiteCandidate, scoreOfficialWebsite } from "./find-menu.mjs";
 import { validateWebFixtureDocument } from "./lib/web-stress-fixture.mjs";
 
@@ -27,13 +29,15 @@ export async function assessLabelledCorpus(options, dependencies = {}) {
   const units = entries.flatMap((entry) => entry.candidates.map((candidate) => ({ entry, candidate })));
   const store = new EvidenceStore(dbPath);
   const browserHeaders = { "User-Agent": "Mozilla/5.0 restaurant-finder candidate assessor" };
+  const renderer = dependencies.crawl || options.headless === false ? null
+    : createHeadlessRenderer({ concurrency: Math.min(4, concurrency) });
   const crawl = dependencies.crawl || ((url) => crawlWebsiteCandidate(url, {
     get: (target, requestOptions) => get(target, { ...requestOptions, cacheDir,
       headers: browserHeaders }),
-    getRendered: (target, requestOptions) => get(target, {
-      ...requestOptions, cacheDir,
-      headers: browserHeaders,
-    }),
+    getRendered: renderer?.available
+      ? (target, requestOptions) => renderCached(renderer, target, requestOptions, cacheDir)
+      : (target, requestOptions) => get(target, { ...requestOptions, cacheDir,
+        headers: browserHeaders }),
     timeout,
     renderedTimeout: timeout,
     maxBytes: 256_000,
@@ -78,7 +82,17 @@ export async function assessLabelledCorpus(options, dependencies = {}) {
     };
   } finally {
     store.close();
+    await renderer?.close();
   }
+}
+
+async function renderCached(renderer, url, requestOptions, cacheDir) {
+  const cacheKey = `rendered:v1:${requestOptions.maxBytes}:${url}`;
+  const cached = await cacheGet(cacheKey, { cacheDir });
+  if (cached !== null) return cached;
+  const result = await renderer.render(url, requestOptions);
+  if (result.ok) await cacheSet(cacheKey, result, { cacheDir });
+  return result;
 }
 
 async function assessOne(store, { entry, candidate }, crawl, clock, target = {}) {
@@ -201,6 +215,7 @@ function parseArgs(argv) {
     else if (flag === "--venue-db") result.venueDbPath = argv[++index];
     else if (flag === "--concurrency") result.concurrency = argv[++index];
     else if (flag === "--timeout") result.timeout = argv[++index];
+    else if (flag === "--no-headless") result.headless = false;
     else if (flag === "--retry-state") (result.retryStates ||= []).push(argv[++index]);
     else throw new Error(`unknown argument: ${flag}`);
   }

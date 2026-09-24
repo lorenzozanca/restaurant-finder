@@ -255,33 +255,54 @@ async function huntOnWebsite(website, dependencies, crawlCache) {
 async function crawlWebsiteUncached(website, dependencies) {
   let html;
   let requestCount = 1;
+  let responseFacts;
+  const render = async () => {
+    requestCount++;
+    try {
+      return await dependencies.getRendered(website, {
+        timeout: dependencies.renderedTimeout || 10_000,
+        maxBytes: dependencies.maxBytes || MAX_HTML_BODY_BYTES,
+      });
+    } catch { return { ok: false }; }
+  };
   try {
     const res = await dependencies.get(website, {
       timeout: dependencies.timeout || 8_000,
       maxBytes: dependencies.maxBytes || MAX_HTML_BODY_BYTES,
     });
-    if (!res.ok) return {
+    if (!res.ok) {
+      // Bot walls and overload answers can still serve a real browser.
+      const rendered = RENDERABLE_HTTP_STATUSES.has(res.status) ? await render() : null;
+      if (!rendered?.ok || !rendered.body) return {
+        status: "failed", resources: [], cache_hit: false, request_count: requestCount,
+        final_url: res.final_url || website, http_status: res.status || 0,
+        failure_reason: res.status ? `http_${res.status}` : "timeout",
+      };
+      html = rendered.body;
+      responseFacts = rendered;
+    } else {
+      html = res.body;
+      responseFacts = res;
+    }
+  } catch (error) {
+    const reason = transportFailureReason(error);
+    // Chrome completes incomplete certificate chains that Node's TLS stack rejects.
+    const rendered = TLS_FAILURE_PATTERN.test(reason) ? await render() : null;
+    if (!rendered?.ok || !rendered.body) return {
       status: "failed", resources: [], cache_hit: false, request_count: requestCount,
-      final_url: res.final_url || website, http_status: res.status || 0,
+      failure_reason: reason,
     };
-    html = res.body;
-    var responseFacts = res;
-  } catch {
-    return { status: "failed", resources: [], cache_hit: false, request_count: requestCount };
+    html = rendered.body;
+    responseFacts = rendered;
   }
-  const textLen = stripTags(html).length;
-  if (textLen < 200 || /enable\s?(js|javascript)/i.test(html)) {
-    try {
-      requestCount++;
-      const rendered = await dependencies.getRendered(website, {
-        timeout: dependencies.renderedTimeout || 10_000,
-        maxBytes: dependencies.maxBytes || MAX_HTML_BODY_BYTES,
-      });
-      if (rendered.ok && rendered.body && rendered.body.length > html.length + 100) {
-        html = rendered.body;
-        responseFacts = { ...responseFacts, ...rendered };
-      }
-    } catch {}
+  if (!responseFacts.rendered
+      && (visibleText(html).length < 200 || /enable\s?(js|javascript)/i.test(html))) {
+    const rendered = await render();
+    if (rendered.ok && rendered.body
+        && visibleText(rendered.body).length > visibleText(html).length + 100) {
+      html = rendered.body;
+      responseFacts = { ...responseFacts, ...rendered };
+    }
   }
   const resources = extractRelevantSiteResources(html, website);
   return {
@@ -295,6 +316,7 @@ async function crawlWebsiteUncached(website, dependencies) {
     content_length: responseFacts?.content_length,
     last_modified: responseFacts?.last_modified,
     body_truncated: Boolean(responseFacts?.body_truncated),
+    rendered: Boolean(responseFacts?.rendered),
     site_facts: extractWebsiteFacts(html, website),
   };
 }
@@ -311,7 +333,7 @@ export async function crawlWebsiteCandidate(website, options = {}) {
     maxBytes: options.maxBytes,
   };
   const first = await crawlWebsiteUncached(website, dependencies);
-  if (first.status === "succeeded") return first;
+  if (first.status === "succeeded" || first.failure_reason === "ENOTFOUND") return first;
   let root;
   try {
     const requested = new URL(website);
@@ -508,7 +530,8 @@ export function scoreOfficialWebsite(candidate, restaurant, location) {
   if (crawl.status === "failed") {
     return officialDecision(requestedUrl, url, "review", 0, 0, 0,
       ["candidate_temporarily_unreachable",
-        Number.isInteger(crawl.http_status) ? `http_status_${crawl.http_status}` : "transport_failure"],
+        Number.isInteger(crawl.http_status) ? `http_status_${crawl.http_status}` : "transport_failure",
+        ...(crawl.failure_reason ? [`failure_${crawl.failure_reason}`] : [])],
       undefined, "retryable");
   }
 
@@ -1186,6 +1209,15 @@ function crawlCacheKey(url) {
   return isHomepage(canonical) ? new URL(canonical).origin : canonical;
 }
 function stripTags(value) { return String(value || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim(); }
+function visibleText(html) {
+  return stripTags(String(html || "").replace(/<(script|style|noscript)\b[\s\S]*?<\/\1>/gi, " "));
+}
+const RENDERABLE_HTTP_STATUSES = new Set([403, 429, 503]);
+const TLS_FAILURE_PATTERN = /CERT|SSL|TLS|SIGNATURE/i;
+function transportFailureReason(error) {
+  const code = error?.cause?.code || error?.code || error?.cause?.name || error?.name || "error";
+  return String(code).slice(0, 60);
+}
 function decodeEntities(value) {
   return String(value || "").replace(/&amp;/gi, "&").replace(/&quot;/gi, "\"")
     .replace(/&#39;|&apos;/gi, "'").replace(/&nbsp;|&#160;/gi, " ");

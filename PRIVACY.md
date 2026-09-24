@@ -1,6 +1,6 @@
 # Privacy and retention process
 
-Last reviewed: 2026-08-24
+Last reviewed: 2026-09-24
 
 This is the operating process for Restaurant Finder, not a completed public
 privacy notice or legal opinion. Before deployment, replace every bracketed
@@ -47,17 +47,34 @@ is not automatically outside GDPR.
 | Venue identity/location | Name, type, address, coordinates, cuisine, OSM ID | OSM/Nominatim, search results, public websites | Result JSON |
 | Contact/link data | Phone number, website, directory URL, menu/resource URL | OSM/Nominatim and public websites | Result JSON |
 | Discovery evidence | Search title, snippet, fetched HTML, request URL | Search provider and public websites | Transient cache only; snippets are removed from result JSON |
+| Ownership-review evidence | Model decision, publisher kind, short verbatim quotes of business name/address/phone, input hash, model ID, cost | LLM ownership reviewer via OpenRouter, from the crawled public page | Candidate-assessment database; full prompts and page text are not retained |
 
 The application itself has no user accounts, cookies, analytics, or persistent
 IP-address log. Hosting platforms, reverse proxies, DNS providers, and the
 external search tool may process additional data; the controller must add them
 to the register and public notice.
 
+**LLM processors.** The ownership reviewer sends the venue record and the visible
+text of the public candidate page to OpenRouter. OpenRouter forwards it to the
+upstream provider serving the pinned model, possibly outside the EU. Both are
+processors/recipients and must be recorded under release-gate item 4, including
+the transfer safeguards. The safeguards are:
+
+- requests set `data_collection: "deny"` (and `zdr: true` when available), so
+  providers that store or train on prompts are excluded;
+- only public venue pages are sent, never data-subject requests, operator notes,
+  or other internal records;
+- only the minimal output listed in the register is kept.
+
+A page containing a sole trader's personal contact data is processed only to decide
+whether it is the venue's official site. Erasure searches under the data-subject
+procedure include the ownership-review records.
+
 ## Minimisation and accuracy
 
 - Collect only fields used for venue discovery, deduplication, display, or
   source verification. Never submit confidential or special-category data to
-  Nominatim or search providers.
+  Nominatim, search providers, or LLM providers.
 - Do not add reviews, customer information, private contact details, inferred
   traits, or downloaded menu media to the output.
 - Prefer an official business contact over a named individual's direct contact.

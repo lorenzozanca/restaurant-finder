@@ -12,23 +12,37 @@ state:
 2. **Candidate, unverified** — Overture or another source supplied a URL, but the
    project has not proved that it belongs to this venue.
 3. **Verified** — the live page matches the venue and publisher ownership passed the
-   approved verification rule.
+   approved verification route (currently: none approved for automatic use; see
+   below).
 4. **Rejected** — evidence shows that the candidate is a directory, social profile,
    unrelated publisher, conflicting venue, or otherwise not an official website.
 
-Current baseline (2026-09-08):
+Current baseline (2026-09-24, unchanged since 2026-09-08):
 
 - 156,057 venues in 7,398 municipalities;
 - 86,852 venues with a source website candidate;
 - 69,205 without a source website candidate;
 - 112 verified websites;
-- 6 rejected candidate domains.
-- 0 persisted candidate assessments (the assessment schema is ready; no national
-  candidate crawl has run).
+- 6 rejected candidate domains;
+- 0 persisted national candidate assessments (no national candidate crawl has run).
 
 Run `node ui/server.mjs` and open `http://localhost:4188/map.html`. The server uses
 `data/istat/2026-01-01/derived/italy-import.sqlite` by default. Override it with
 `NATIONAL_DB_PATH` only when intentionally testing another national store.
+
+## Route decision (2026-09-24)
+
+The deterministic `strict-first-party-v1` rule failed its locked holdout on
+2026-09-09 (2 correct and 1 false publication; 66.7% precision, 20.8% Wilson lower
+bound; false publication `lalunanelpozzo.metro.bar`). The operator has replaced the
+hand-written rule route with an **LLM ownership reviewer** called through
+OpenRouter: a cheap model triages every crawled candidate, and a stronger model
+performs the ownership check on the candidates the cheap model escalates.
+
+The operator accepts OpenAI/Codex agent reviews as the reference labels for
+development and for the new locked holdout. No human audit sample is required.
+The existing labels were produced that way: the 1,000-venue Session 12 holdout
+adjudications are signed `Codex independent bounded-fixture review`.
 
 ## The verification pipeline
 
@@ -39,86 +53,142 @@ locator, manual correction, or paid search:
 venue + candidate URL
         |
         v
-live crawl (no search) -> identity/geography/officialness signals
+live crawl, no search (Node fetch; headless Chrome for thin, 403/429/503, TLS)
         |
-        +-- contradiction, directory, social, dead replacement -> rejected or retry
-        +-- insufficient evidence                         -> manual-review queue
-        +-- strong first-party corroboration              -> automatic-verification rule
-                                                               |
-                                                               v
-                                                   verified website + resources
+        v
+deterministic gates (no LLM)
+        +-- directory/social/booking/platform domain -> unsupported_publisher
+        +-- crawl failure or timeout                  -> retryable (never rejected)
+        +-- identity/geography contradiction         -> contradicted (not publishable)
+        |
+        v
+stage 1: cheap triage model      -> not_official (rejected) | insufficient | escalate
+        |
+        v
+stage 2: strong verifier model   -> official | not_official | insufficient
+        |
+        v
+deterministic acceptance of quoted evidence -> verified website + resources
 ```
 
 Search is only a way to find a missing candidate. It is not the verifier.
 
-The existing resolver and scorer already perform the live crawl and compute identity,
-geography, and officialness. During the Brave pilots, that scorer was allowed to
-publish a plausible-looking domain. It produced unacceptable false positives from
-directories and third-party menu publishers. The correction added a separate
-publisher-ownership attestation requirement. That stopped false publication, but it
-also coupled the scorer to the ownership gate: without an attestation, a strong crawl
-can only return `review`. The 86,852 candidates were consequently neither processed
-nationally nor shown as candidates.
+Schema v5 already persists one assessment per venue/candidate URL (crawl outcome;
+identity, geography, and officialness scores; evidence; origin; time) independently
+of publisher attestations. The LLM stages add their own audited records on top of
+that assessment; they never bypass it.
 
-The map now fixes visibility, and schema v5 decouples **automatic corroboration** from
-**publication**. Every crawled candidate can persist its crawl outcome, identity,
-geography, and officialness scores as `strongly_correlated`, `ambiguous`,
-`contradicted`, `retryable`, or `unsupported_publisher`. These assessments never
-create an ownership attestation. The map/API exposes their counts and the assessment
-attached to each source candidate.
+## LLM ownership reviewer specification
+
+**Input** (the same for both stages, built from the crawl in the same pass; page
+text is not stored long term): the venue record (name, aliases, street address,
+postcode, municipality, province, phone), the requested URL, the final URL after
+redirects, the canonical URL, the root-fallback flag, schema.org types, `tel:` links,
+and the page's visible text with scripts and styles removed, capped at a fixed
+character budget chosen in development and then frozen.
+
+**Stage 1: triage (cheap model).** Returns strict JSON: `decision`
+(`not_official` | `insufficient` | `escalate`), `publisher_kind` (official venue,
+directory, booking/ordering platform, social, editorial, public body, unrelated
+business, parked/dead), and short reasons. It **cannot publish**. `not_official`
+becomes `rejected`, and the holdout reports its false-rejection count.
+`insufficient` stays unverified.
+
+**Stage 2: verifier (strong model).** Returns strict JSON: `decision`
+(`official` | `not_official` | `insufficient`), `publisher_kind`, and verbatim
+evidence quotes for the venue name, the municipality, and at least one of the street
+address or phone number.
+
+**Deterministic acceptance.** A candidate is published only when:
+
+- the verifier says `official`;
+- every quote occurs verbatim in the page text that was sent;
+- the quoted phone normalizes to the venue phone, or the quoted address matches the
+  venue street and house number;
+- the name and municipality/postcode are compatible;
+- no deterministic contradiction or non-official publisher class exists.
+
+Anything else stays `ambiguous`. The model cannot override a deterministic veto.
+
+**Call settings.** Pinned exact model IDs, temperature 0, JSON-schema structured
+output, and OpenRouter provider routing with `data_collection: "deny"` and
+`require_parameters: true` (`zdr: true` wherever the chosen model supports it). The
+verifier must not be the same model that produced the reference labels.
+
+**Audit.** Every call persists the stage, model ID, prompt version and hash, input
+hash, output JSON, token counts, `usage.cost`, and time. Automatic publications use
+the attestation method `automated_llm_ownership_review`. The reviewer identity is
+the verifier model ID plus the prompt version, the evidence URL is the final URL,
+and expiry and revalidation follow the other attestations.
+
+## Spending limit
+
+Every LLM run has a hard USD cap, **default $5** (`--budget-usd`). The runner loads
+OpenRouter model prices at start. Before each call it reserves the worst-case cost
+(input estimate plus `max_tokens` at the pinned prices) and refuses the call if
+spent plus reservation would exceed the cap. After the call it books the reported
+`usage.cost`. The spend ledger is stored with the assessments, so a resumed run
+keeps counting prior spend. Reaching the cap stops the run cleanly; the work stays
+resumable. As a backstop, the operator also sets an OpenRouter API-key credit
+limit. No LLM run starts without an explicit cap, and Brave budgets stay separate.
 
 ## Execution order
 
-### 1. Certify one automatic ownership rule
+### 1. Make the crawl trustworthy — done 2026-09-24, re-measure pending
 
-Use the already-reviewed Session 10–12 material as development data and a frozen,
-previously unseen stratified subset as the final test. The proposed rule may verify a
-source candidate only when all of these are true:
+- 1,113 of the 2,804 v1-holdout candidates (40%) failed as transport failures. On
+  re-probing 120 of them, about half were sites that curl loads but Node rejected
+  after its 250 ms per-address connect race (this host has no IPv6 route).
+  `lib/lib.mjs` now allows 2 s per address; 56/120 then loaded, 54/120 were 403 bot
+  walls (almost all directories, which are rejected anyway), and ~7% were
+  unreachable.
+- `lib/headless-browser.mjs` renders thin/script-only pages, HTTP 403/429/503, and
+  TLS-chain failures in the installed Chrome over the DevTools protocol, with no
+  npm dependency. The previous "rendered" fallback was only a second plain fetch.
+- Crawl failures now record their cause (`failure_ENOTFOUND`, `failure_http_403`,
+  …). Dead DNS is not retried at the root.
+- Pending: re-measure the success rate on a random national candidate sample over a
+  healthy network. The 2026-09-24 link was saturated (~20 KB/s).
 
-- the page and candidate domain are not classified as directory, booking, social,
-  editorial, or generic platform content;
-- the venue name is compatible;
-- municipality/postcode is compatible;
-- at least one high-specificity identity signal matches: normalized phone or street
-  address;
-- redirects and canonical URLs do not point to a conflicting publisher;
-- no geography, identity, or publisher contradiction exists.
+### 2. Build and develop the LLM reviewer
 
-The rule ships only if the frozen test demonstrates at least 95% precision and every
-false positive is reported. Until that test passes, results remain
-`strongly_correlated`, not `verified`. This is the single bounded validation task;
-there will be no new sequence of exploratory session plans.
+Implement the budget-capped OpenRouter client, both stages, deterministic
+acceptance, and the audit tables. Develop prompts, the text budget, and model choice
+on the 200-venue development corpus. Because the v1 holdout (1,000 venues) can no
+longer qualify anything, it may also be used as development data. Every
+development run is capped (default $5) and reports publications, false
+publications, false rejections, abstentions, and cost per candidate.
 
-The frozen `strict-first-party-v1` rule was evaluated once on 2026-09-09 and failed
-the gate: 3 conclusive publications included 2 correct and 1 false publication, for
-66.7% precision and a 20.8% two-sided 95% Wilson lower bound. The false publication
-was a rejected `metro.bar` booking/order-platform page. The immutable result is in
-`benchmark/AUTOMATIC-FIRST-PARTY-LOCKED-HOLDOUT-EVALUATION-V1.json`. This rule is not
-approved, and the 86,852-candidate production run remains unauthorized. Because the
-locked labels have now been exposed, this holdout cannot be reused to qualify a
-revised rule.
+### 3. Certify on a new locked holdout
 
-If it passes, record the method as `automated_first_party_corroboration`, with the same
-audit, expiry, and revalidation requirements as other attestations. The subsequent
-known-candidate run may then apply it to strong-corroboration outcomes and update the
+Select a new stratified holdout from the **source candidates** (the production
+population). It must exclude every venue ID in prior benchmark artifacts and be
+sized so the expected publications exceed 73. Label it with an independent
+OpenAI/Codex agent review before the reviewer sees it, and seal the labels. Then
+freeze the model IDs, prompts, text budget, and code hashes, and evaluate once. The
+gate:
+
+- at least 73 correct automatic verifications;
+- zero false automatic verifications;
+- two-sided 95% Wilson precision lower bound at or above 95%;
+- timeouts and inaccessible pages abstain or retry, never reject;
+- false rejections and cost per candidate are reported.
+
+A failed gate spends that holdout, exactly as v1 did.
+
+### 4. Process the known candidates
+
+Only after the gate passes, run crawl, gates, and the reviewer over all 86,852
+source candidates with search budgets fixed at zero. Use bounded, resumable,
+cached batches, each with an explicit USD cap, and expose the progress counts on the
 map.
 
-### 2. Process the known candidates
+### 5. Review the residual known-candidate tail
 
-Only after the accuracy gate passes, run the crawl/scoring flow over all 86,852 source
-candidates with search budgets fixed at zero. Persist the crawl result and its signals
-independently of the ownership gate. Reuse cached pages and run in bounded, resumable
-batches.
+Ambiguous and conflicting candidates, plus a continuing quality sample of automatic
+verifications, go to agent review. It is not the way through all 86,852 rows.
 
-This run sorts candidates into contradiction/retry/manual-review/strong-corroboration
-buckets. It does not spend Brave requests and it does not hide unresolved venues.
-
-### 3. Review the residual known-candidate tail
-
-Human review is only for ambiguous/conflicting candidates and a continuing quality
-sample of automatically verified results. It is not the way through all 86,852 rows.
-
-### 4. Discover candidates for the remaining 69,205 venues
+### 6. Discover candidates for the remaining 69,205 venues
 
 After the known-candidate run is producing verified websites, supply missing URLs in
 this order:
@@ -132,24 +202,24 @@ architecture for Brave results.
 
 ## Current milestone and definition of done
 
-Current milestone: **resolve the failed automatic-publication gate before any
-86,852-candidate production run**. The operator must choose whether to authorize a
-development-only v2 effort with a genuinely new independent locked test, or replace
-automatic publication with a different delivery route. Neither path is authorized by
-the failed v1 result alone.
+Current milestone: **certify the LLM ownership reviewer (steps 2–3) before any
+86,852-candidate production run.**
 
-The milestone is done only when the map reports counts for crawled, strongly
-corroborated, verified, rejected, retryable, and unresolved candidates; the holdout
-result is reproducible; and the national verified count materially increases. More
-planning documents, tiny manual batches, or a backlog census alone do not complete it.
+The milestone is done only when the frozen reviewer passes the new locked holdout.
+The whole route is delivered only when the map reports counts for crawled, strongly
+corroborated, verified, rejected, retryable, and unresolved candidates, and the
+national verified count materially increases. More planning documents, tiny manual
+batches, or a backlog census alone do not complete it.
 
 ## Safety boundaries
 
 - Candidate URLs remain visible but are never labelled verified prematurely.
 - A timeout is retryable, not rejection.
 - A plausible name or branded domain alone is never enough.
+- A model's `official` verdict alone is never enough: its quoted evidence must pass
+  the deterministic acceptance checks.
 - National work is batched, resumable, cached, and audited.
-- No paid search run occurs without an explicit budget.
+- No paid search or LLM run occurs without an explicit budget.
 
 Historical plans and reports are evidence, not instructions. Superseded top-level
 plans are in `docs/archive/`; frozen evaluation artifacts remain under `benchmark/`

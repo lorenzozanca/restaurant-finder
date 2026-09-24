@@ -1,12 +1,47 @@
 # Execution status
 
-Updated: 2026-09-13
+Updated: 2026-09-24
 Branch: `main`
 
 ## Current milestone
 
-Resolve the failed automatic-publication gate before any 86,852-candidate production
-run. The frozen v1 rule is rejected and its locked holdout cannot be reused.
+Certify the LLM ownership reviewer (`PROCESS.md` steps 2–3) before any
+86,852-candidate production run. The frozen v1 rule is rejected, and its locked
+holdout can no longer qualify anything; it may serve as development data.
+
+## Route decision and crawler work (2026-09-24)
+
+- Operator decision: the automatic route is now an LLM ownership reviewer through
+  OpenRouter (cheap triage model → stronger verifier → deterministic acceptance of
+  quoted evidence). OpenAI/Codex agent reviews are accepted as reference labels,
+  with no human audit sample. Every LLM run has a hard USD cap, default $5.
+  `PROCESS.md`, `AGENTS.md`, and `PLAN.md` record the route; the reviewer is not
+  built yet.
+- `DATA-LICENSING.md` and `PRIVACY.md` register OpenRouter and the upstream model
+  providers as processors. Requests must set `data_collection: "deny"` and
+  `require_parameters: true` (`zdr: true` where supported). Only hashes, decisions,
+  short quotes, and cost are kept.
+- Crawl-failure diagnosis: 1,113 of 2,804 v1-holdout candidates were transport
+  failures. This host has no IPv6 route, and Node's 250 ms per-address connect race
+  failed slow sites that curl loads. After the fix (`lib/lib.mjs`, 2 s per address),
+  a re-probe of 120 of those failures gave 56 × 200, 54 × 403 (almost all directory
+  bot walls: tuttiaffari, cylex, justeat, deliveroo…), 8 unreachable, one 404, and one 429.
+- New `lib/headless-browser.mjs` drives the installed Google Chrome 152 over the
+  DevTools protocol, with no npm dependency (npm registry calls hang on this host).
+  It returns the rendered DOM, main-document status, and final URL, and waits for
+  client-rendered text to stop growing. A live check turned a Wix page from 67 into
+  3,177 visible characters. Cloudflare challenge pages still return 403 (expected).
+- `find-menu.mjs`: `crawlWebsiteCandidate` now renders pages that are thin once
+  scripts and styles are removed, or that answer HTTP 403/429/503 or fail on a TLS
+  chain. Crawl results carry `rendered` and `failure_reason`, and retryable evidence
+  gains `failure_<code>`. `ENOTFOUND` no longer retries the site root.
+  `assess-labelled-corpus.mjs` uses the Chrome renderer with a cache (`--no-headless`
+  opts out). The pre-existing `getRendered` in `lib/lib.mjs` is still only a
+  second plain fetch for other callers.
+- Not measured: the production-scale success rate. During this session the link ran
+  at ~20 KB/s. Two 132-URL national samples were dominated by connect timeouts
+  (62/132 and 64/132 succeeded), so neither is evidence for or against the fix.
+- National counts are unchanged: 0 candidate assessments, 112 verified, 6 rejected.
 
 ## Completed and visible
 
@@ -72,28 +107,64 @@ run. The frozen v1 rule is rejected and its locked holdout cannot be reused.
 
 - The 14-venue Oderzo acceptance did not generalize.
 - National pilots achieved only 41.7% and 35.7% official-website precision.
-- The later 1,000-venue result tested a human ownership gate: 96 human-verified
-  publications, zero false publications, and 904 abstentions. It did not validate an
-  automatic ownership classifier.
+- The later 1,000-venue result tested an agent-reviewed ownership gate (labels signed
+  `Codex independent bounded-fixture review`): 96 verified publications, zero false
+  publications, and 904 abstentions. It did not validate an automatic ownership
+  classifier.
 - The 86,852 source candidates already exist and need no Brave search.
 - A 20-venue zero-search crawl sample fetched 18 candidates but published zero because
   automatic crawl evidence cannot currently create an ownership attestation.
 
 ## Next executable task
 
-Obtain the operator's product decision: either authorize a development-only v2 rule
-effort with a genuinely new independent locked holdout, or replace the automatic
-publication route. Do not tune against or reevaluate the now-exposed v1 holdout, and
-do not start the 86,852-candidate production run under v1.
+Implement the LLM ownership reviewer's offline core (`PROCESS.md` step 2), with
+tests that use a fake transport:
 
-## Acceptance gate for the automatic rule
+1. `lib/openrouter-client.mjs`: chat completions with a JSON-schema response;
+   provider routing `data_collection: "deny"`, `require_parameters: true`, optional
+   `zdr`; model prices loaded at start; worst-case reservation before each call;
+   `usage.cost` booked after each call; hard stop at `--budget-usd` (default 5);
+   the spend ledger persisted per run ID so resumed runs keep counting prior spend.
+2. `lib/llm-ownership-reviewer.mjs`: build the input from a crawl (visible text,
+   fixed character budget); stage-1 triage and stage-2 verifier schemas and prompts
+   (versioned and hashed); deterministic acceptance (verbatim quotes; phone or
+   street-and-number match; name and municipality compatible; no deterministic
+   veto).
+3. Evidence-store schema v6: an `llm_reviews` audit table (stage, model, prompt hash,
+   input hash, output JSON, tokens, cost, time) and a `run_spend` ledger.
+4. Wire the reviewer into `assess-labelled-corpus.mjs` behind `--llm-review` and
+   `--budget-usd`, so it runs in the same pass as the crawl.
+
+The first live development run (200-venue development corpus, $5 cap) needs the
+operator to put `OPENROUTER_API_KEY` in `.env`, set the same credit limit on that
+key, and pick the two model IDs.
+
+## Acceptance gate for the automatic verifier (unchanged from v1)
 
 - At least 73 correct automatic verifications on the locked evaluation.
 - Zero false automatic verifications.
 - Two-sided 95% Wilson precision lower bound at or above 95%.
 - Timeouts and inaccessible pages abstain or retry; they never become rejections.
+- Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Crawler and renderer (2026-09-24):
+  - `node --test lib/headless-browser.test.mjs find-menu.test.mjs assess-labelled-corpus.test.mjs`:
+    49 passed, 0 failed. This includes a live Chrome render of a local server
+    (redirect → final URL, text inserted by JavaScript after 300 ms, 404 status)
+    and crawler tests for 403, TLS, script-only, and ENOTFOUND handling.
+  - `npm test`: 249 tests. The first run had 248 passed and 1 failed: `get does not
+    load PDF or image bodies into text memory` (`lib/lib.test.mjs`, unchanged; it
+    passes alone before and after this change and shares a fixed `/tmp` cache dir).
+    Two reruns: 249 passed, 0 failed.
+  - Connect-race check: `https://www.lidoauroracampomarino.it/` and
+    `https://www.palazzosantelena.it/servizi/` failed with ETIMEDOUT after ~260 ms
+    under Node's default settings and returned 200 with a 2,000 ms attempt timeout
+    or with autoselection disabled; `curl -6` fails immediately on this host.
+  - `git diff --check`: clean.
+
+Earlier (2026-09-13):
 
 - Map cluster verification (2026-09-13, real national store):
   - `node --test lib/national-map.test.mjs`: 4 tests passed (candidate
@@ -125,7 +196,9 @@ do not start the 86,852-candidate production run under v1.
 
 ## Blockers
 
-The required automatic-publication gate failed and the v1 holdout is now exposed.
-Continuing requires a product decision between a new independently tested v2 effort
-and a different delivery route. No paid-search budget was used; Brave remains
-disabled.
+- The LLM reviewer does not exist yet; building its offline core needs no external
+  permission.
+- Live LLM runs need an operator-supplied `OPENROUTER_API_KEY`, a key credit limit,
+  and the two model IDs. No LLM or Brave spend has occurred.
+- The crawler success rate at production scale is unmeasured because the network was
+  saturated during this session.

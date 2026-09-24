@@ -20,23 +20,32 @@ The current product and execution order are:
 
 1. Keep the national map usable and honest: all 156,057 venues are visible; source
    URLs are labelled candidates until verified.
-2. Decouple crawl corroboration from publisher-ownership approval and persist the
-   result for every candidate.
-3. Develop the automatic first-party rule on the existing labelled development data
-   and evaluate it against the existing locked national holdout.
+2. Crawl reliably with no search: Node fetch plus headless Chrome for thin,
+   bot-walled, and TLS-rejected pages; persist a crawl assessment for every candidate.
+3. Build the LLM ownership reviewer (a cheap OpenRouter triage model and a stronger
+   verifier model, with deterministic acceptance of quoted evidence). Develop it on
+   the existing labelled data, then certify it once on a new locked holdout drawn
+   from the source candidates.
 4. If the accuracy gate in `PROCESS.md` passes, run the 86,852 known source candidates
-   in resumable zero-search batches and expose progress on the map.
-5. Only then discover candidates for the 69,205 venues that lack one; Brave is a
+   in resumable zero-search batches, each with an explicit USD cap, and expose
+   progress on the map.
+5. Only then discover candidates for the 69,205 venues that lack one. Brave is a
    budgeted discovery tool for this residual group, never the verifier.
 
 Do not describe planning, test-fixture preparation, small manual batches, or a backlog
 census as delivery progress. Report progress using visible map/database counts and
 completed production candidate outcomes.
 
-Never call the old automatic scorer “verified.” The small Oderzo acceptance did not
-generalize; the later 1,000-venue result verified a human ownership gate, not an
-automatic ownership classifier. Preserve this distinction in code, documentation,
-and operator updates.
+Never call the old automatic scorer or the failed `strict-first-party-v1` rule
+“verified.” The small Oderzo acceptance did not generalize. The later 1,000-venue
+result validated an agent-reviewed ownership gate: its labels came from Codex/OpenAI
+review, which the operator accepts as reference labels. It did not validate any
+automatic classifier. An LLM verdict is not "verified" until the frozen reviewer has
+passed its locked holdout. Preserve this distinction in code, documentation, and
+operator updates.
+
+Every OpenRouter (LLM) run needs an explicit USD cap (default $5). Never start one
+without an `OPENROUTER_API_KEY` supplied by the operator and a cap.
 
 ## Required end-of-session handoff
 
