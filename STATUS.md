@@ -48,8 +48,11 @@ holdout can no longer qualify anything; it may serve as development data.
   the agents do not trip over each other's partial files. The operator stopped the run
   because it took their Claude usage from 0% to 75%. All ten were stopped with **0
   label files written**: 10 parallel agents contended for the network (DNS failures,
-  slow fetches) and one hit an API timeout. A cheaper labelling method is pending the
-  operator's choice.
+  slow fetches) and one hit an API timeout. Operator chose a zero-LLM prefetch: `prefetch-holdout-pages.mjs` crawls each
+  candidate plus one contact page and keeps ~1.5 KB identity excerpts in
+  `data/holdout-labelling/pages-AAA-BBB.json` (gitignored). Trial on packet 001-048:
+  only 5/48 fetched (36 connect timeouts) because the Wi-Fi association had degraded
+  again (rx VHT-MCS 0; see the network diagnosis below).
 
 ## LLM reviewer core and first development runs (2026-09-24)
 
