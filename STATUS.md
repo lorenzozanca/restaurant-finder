@@ -208,18 +208,26 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-Select the 480-venue locked holdout (`PROCESS.md` step 3.2), disjoint from the pilot:
+1. Select the 480-venue locked holdout (`PROCESS.md` step 3.2), disjoint from the
+   pilot, and commit the fixture and manifest:
 
-```bash
-node select-source-sample.mjs --db data/istat/2026-01-01/derived/italy-import.sqlite \
-  --count 480 --seed locked-holdout-llm-v1 --partition locked_holdout \
-  --output-dir benchmark/llm-review-holdout-v1 --exclude-dir data/llm-review/source-pilot
-```
+   ```bash
+   node select-source-sample.mjs --db data/istat/2026-01-01/derived/italy-import.sqlite \
+     --count 480 --seed locked-holdout-llm-v1 --partition locked_holdout \
+     --output-dir benchmark/llm-review-holdout-v1 --exclude-dir data/llm-review/source-pilot
+   ```
 
-Commit the fixture and manifest. Then Claude labels the holdout in fresh sessions
-(batches of about 50 venues, with web research, never seeing reviewer output) into
-`locked-holdout-adjudication-*.json` files in the existing adjudication format. Only
-after the labels are sealed: freeze the reviewer and run it once.
+2. Prepare the labelling packets for the operator: split the holdout into batches of
+   about 50 venues, and write one self-contained instruction file
+   (`benchmark/llm-review-holdout-v1/LABELLING-INSTRUCTIONS.md`). It must give the
+   task, the output format (`locked-holdout-adjudication-NNN-NNN.json`, matching the
+   existing adjudication schema validated by `validateWebAdjudicationSet`), and the
+   rule never to read `data/llm-review/`. Validate the format with a fake
+   one-entry example in a test, not with real labels.
+3. Stop and hand over to the operator. They run a labelling agent of their choice
+   (Claude, Codex, etc.) manually in fresh sessions. The implementing session must not
+   label the holdout: it has seen reviewer outputs. Once the labels are committed and
+   sealed: freeze the reviewer and run it once (steps 3.4–3.7).
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 

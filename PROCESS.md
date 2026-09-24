@@ -198,18 +198,20 @@ Protocol fixed 2026-09-24, before any new holdout is selected or labelled:
    remaining source-candidate venues (same exclusions, disjoint from the pilot). Size
    it from the pilot's publication rate, so the expected number of publications is at
    least 1.5 × 73. Record the selection fingerprint before labelling.
-3. **Reference labels.** Claude (the operator's subscription, strongest available
-   model, with web research, in sessions that never see the reviewer's output) labels
-   each holdout venue: official website status plus a verdict on its candidate domain.
-   This is the operator's choice (2026-09-24) and replaces labelling by OpenAI models
-   through OpenRouter. Seal the labels before the reviewer runs.
+3. **Reference labels.** An agent the operator runs manually on a subscription (for
+   example Claude or Codex, strongest available model, with web research) labels each
+   holdout venue: official website status plus a verdict on its candidate domain. It
+   works in sessions that never see the reviewer's output (nothing under
+   `data/llm-review/`). This is the operator's choice (2026-09-24) and replaces
+   labelling by OpenAI models through OpenRouter. Seal the labels before the reviewer
+   runs.
 4. **Freeze.** Freeze the reviewer's model IDs, prompt version and hash, text budget,
    and code hashes. Then run it once on the holdout.
 5. **Blind adjudication (symmetric).** A pinned adjudicator re-reviews every
    disagreement between reviewer and label: a reviewer publication whose domain is not
    label-verified (including `uncertain` labels), and every candidate the reviewer
-   rejected while the label verifies it. The adjudicator (Claude in a fresh session that did not
-   produce the labels; not the MiMo reviewer) receives the venue record, the live
+   rejected while the label verifies it. The adjudicator (an operator-run agent in a fresh session that
+   did not produce the labels; not the MiMo reviewer) receives the venue record, the live
    page text, and both claims as "A" and "B" in random order, without knowing which is
    the label. Its verdict is final in either direction.
 6. **Agreement audit.** The same adjudicator also re-reviews a random 20% (at least
