@@ -68,6 +68,17 @@ holdout can no longer qualify anything; it may serve as development data.
   verified, 181 rejected, 83 uncertain. `LABELS-SEAL.json` records the file hashes.
   Nothing from the reviewer has been run on these venues.
 
+- Holdout run `holdout-v1` (2026-09-24, once, frozen per
+  `REVIEWER-FREEZE.json`; MiMo v2.6 Pro, prompt dev-3; $2 cap): crawl 135 strongly
+  correlated, 109 ambiguous, 41 contradicted, 146 retryable, 49 unsupported; 244
+  reviewed (105 accepted, 62 rejected, 77 ambiguous); 0 provider errors; $0.2946.
+  **Raw** metrics against the sealed labels (`RAW-EVALUATION.json`): 105 venue
+  publications, 105 correct, 0 false; Wilson 95% lower bound 96.5%; recall 105/216
+  (48.6%); 2 false rejections. The raw numbers meet all three gate thresholds, but
+  the gate is decided on adjudicated labels: steps 3.5–3.6 are still open (blind
+  adjudication of the 2 false rejections; agreement audit of a random 21 of the 105
+  publications by a model that is neither MiMo nor Muse Spark). Not certified yet.
+
 ## LLM reviewer core and first development runs (2026-09-24)
 
 - Implemented and tested (fake transports, zero spend):
@@ -267,14 +278,11 @@ holdout can no longer qualify anything; it may serve as development data.
 
 ## Next executable task
 
-Freeze the reviewer and run it once on the sealed holdout (`PROCESS.md` steps 3.4–3.7).
-Record in a freeze manifest the model IDs (`xiaomi/mimo-v2.6-pro`), prompt version and
-hash (`llm-ownership-dev-3`), the text budget, and SHA-256 of the reviewer, crawler,
-runner, and evaluator code plus `LABELS-SEAL.json`. Then run
-`assess-labelled-corpus.mjs --llm-review` on `benchmark/llm-review-holdout-v1` once
-(operator-approved USD cap; the pilot's 300 venues cost $0.18) and evaluate it with
-`evaluate-llm-review.mjs --partition locked_holdout`. Then do blind adjudication of
-the disagreements and the agreement audit (steps 3.5–3.6).
+Finish certification (`PROCESS.md` steps 3.5–3.7) for `holdout-v1`: draw a seeded random
+21 of the 105 publications (20%, at least 15) and blind-adjudicate them plus the 2
+false rejections with an operator-chosen adjudicator (not MiMo, not Muse Spark), under
+a USD cap. Any audit error counts as a false publication and fails the gate. Then write
+the final gate report.
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 

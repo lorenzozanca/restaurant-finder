@@ -1,0 +1,1068 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "locked_holdout-holdout-v1",
+  "evaluated_at": "2026-09-24T19:53:58.551Z",
+  "partition": "locked_holdout",
+  "run_id": "holdout-v1",
+  "status": "development_evidence_not_publication",
+  "prompt_versions": [
+    "llm-ownership-dev-3"
+  ],
+  "reviewed_candidates": 244,
+  "reviewed_venues": 244,
+  "outcome_counts": {
+    "accepted": 105,
+    "rejected": 62,
+    "ambiguous": 77
+  },
+  "venue_metrics": {
+    "reviewed": 480,
+    "publications": 105,
+    "conclusive_publications": 105,
+    "unresolved_publications": 0,
+    "true_publications": 105,
+    "false_publications": 0,
+    "false_publication_by_publisher_class": {
+      "official": 0,
+      "directory": 0,
+      "menu_mirror": 0,
+      "booking_or_order_platform": 0,
+      "editorial_or_review": 0,
+      "social": 0,
+      "unrelated": 0,
+      "uncertain": 0
+    },
+    "official_sites": 216,
+    "official_site_precision": 1,
+    "official_site_precision_wilson_95": {
+      "lower": 0.9647059230708901,
+      "upper": 1
+    },
+    "official_site_recall": 0.4861111111111111,
+    "official_site_recall_wilson_95": {
+      "lower": 0.42028466897921146,
+      "upper": 0.5524229357092487
+    },
+    "search_discovery_recall": 1,
+    "search_discovery_recall_wilson_95": {
+      "lower": 0.9825262312154358,
+      "upper": 1.0000000000000002
+    },
+    "abstentions": 375,
+    "coverage": 0.21875,
+    "passes_non_vacuity": true,
+    "passes_precision_target": true
+  },
+  "false_publications": [],
+  "candidate_audit": {
+    "accepted_not_labelled_verified": [],
+    "false_rejections": [
+      {
+        "venue_id": "venue:023061:pressana:prosciutteria-crosare",
+        "candidate_url": "https://www.ristorantecrosare.it/",
+        "final_url": "https://www.ristorantecrosare.it/",
+        "outcome": "rejected",
+        "stage": "verifier",
+        "publisher_kind": "unrelated_business",
+        "reasons": [
+          "verifier_unrelated_business"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the website of Ristorante Le Crosare / Ristorante Crosare, a restaurant adjacent to the Prosciuttificio Crosare, not of the venue in the record (Prosciutteria Crosare). The name shown is different, and the street address given (Via Crosare di Sotto 47, Crosare) does not match the record's Via Crosare di Sotto, 51, Pressana (only the phone matches). This is a different venue/business with a similar name.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:063086:vico-equense:tradizione",
+        "candidate_url": "https://latradizionevicoequense.it/",
+        "final_url": "https://latradizionevicoequense.it/",
+        "outcome": "rejected",
+        "stage": "verifier",
+        "publisher_kind": "parked_or_empty",
+        "reasons": [
+          "verifier_parked_or_empty"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is a bot-verification stub with no venue content at all: it shows no name, municipality, address or phone, so it cannot be verified as the venue's own site (publisher kind would be parked_or_empty/content-free).",
+        "triage_reason": null
+      }
+    ],
+    "verified_left_ambiguous": [
+      {
+        "venue_id": "venue:001219:rivoli:america-graffiti",
+        "candidate_url": "http://www.americagraffiti.it/",
+        "final_url": "https://www.americagraffiti.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "This is the corporate site of the America Graffiti chain (operated by Cigierre), so the publisher would qualify as the venue's operator. However, the page does not identify the Rivoli branch: the location selector lists many cities but not Rivoli, and the page shows no branch address or phone number (only the operator's registered office in Tavagnacco). Name and municipality of this specific venue are not established, so ownership cannot be confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:004148:neive:umano",
+        "candidate_url": "http://www.umanoneive.it/",
+        "final_url": "https://www.umanoneive.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is on the venue's own domain (umanoneive.it) and shows the name UMANO and the matching phone number, but the page text does not show the municipality of Neive or the street address (only the domain hints at Neive), so ownership cannot be fully confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:006003:alessandria:zushi-alessandria",
+        "candidate_url": "http://www.zushi.eu/",
+        "final_url": "https://www.zushi.eu/de",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "This is the Zushi chain's own corporate site (ZUSHi Italia SPA), so it would qualify as the venue's own site for its branches. However, the page does not identify the Alessandria branch at all: the city selector lists Firenze, Torino, Verona, Vicenza, Padova, Treviso, Brescia, Bergamo, Modena, Trieste, Trento (plus Mantova, Parma, Reggio in the notices) but no Alessandria. The page shows no 'Zushi Alessandria' name, no Alessandria municipality or 15121 postcode, and no Spalto Gamondio address or 0131267833 phone (only the Verona head office contact). Identity of this specific branch is not established.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:007037:issogne:maniero",
+        "candidate_url": "http://www.ristorantealmaniero.it/",
+        "final_url": "https://www.ristorantealmaniero.it/almaniero.asp",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own site and shows the name and municipality (Issogne (AO)), but it contains no street address and no phone number, so ownership cannot be fully verified.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:005022:castagnole-delle-lanze:laghetto",
+        "candidate_url": "http://www.trattorialaghetto.it/",
+        "final_url": "https://www.trattorialaghetto.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page at trattorialaghetto.it appears to be the venue's own site and its title names 'Trattoria \"Il Laghetto\"', but the page text contains only the title: no municipality or postcode, no street address and no phone number are shown, so identity cannot be confirmed against the record.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:009056:savona:agriotto",
+        "candidate_url": "http://www.agriotto.it/",
+        "final_url": "https://www.agriotto.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is on the venue's own domain (agriotto.it) and names 'Agriotto' / 'Agriturismo Agriotto', but it does not show the municipality of Savona or the postcode 17100 (it only mentions nearby Bergегgi and Varazze), and it displays no phone number or street address matching the record (only VAT and tourism codes). Identity cannot be confirmed, so the evidence is insufficient.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:006118:olivola:due-buoi",
+        "candidate_url": "http://www.iduebuoi.it/",
+        "final_url": "https://www.iduebuoi.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is on the venue's own domain and shows the name 'I DUE BUOI' plus the exact phone number +39 366 254 9251, but it does not show the municipality (Olivola) or postcode, nor any street address, so ownership criteria 3 and 4 are unmet.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:011022:portovenere:miramare",
+        "candidate_url": "http://www.portoveneremiramare.it/",
+        "final_url": "https://www.portoveneremiramare.it/index.php/it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page shows only a navigation menu; the venue name, municipality, address and phone number are not present in the page text, so the identity check cannot be satisfied.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:012039:casorate-sempione:crazy-pub",
+        "candidate_url": "http://www.ilcrazypub.it/",
+        "final_url": "http://www.ilcrazypub.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page appears to be the venue's own site (ilcrazypub.it) and shows the name 'Il Crazy Pub' and the municipality 'Casorate Sempione', but it does not display the venue's phone number or its street address (Via Torino, 20). Without a matching phone or address, ownership cannot be confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:010017:cogoleto:bagni-le-vele",
+        "candidate_url": "http://www.bagnilevele.it/",
+        "final_url": "https://www.bagnilevele.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "no_phone_or_address_match"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (bagnilevele.it), titled and self-identifying as Bagni Le Vele in Cogoleto. It shows the venue name, the municipality (Cogoleto, 16016) and the street address 'Via Aurelia di Levante, 16016 Cogoleto (Ge)', which matches the record exactly. Phone numbers listed on the page differ from the record, but the address, name, municipality and own domain all corroborate identity, so ownership is confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:013075:como:baita-pian-valle",
+        "candidate_url": "http://www.baitapianvalle.it/",
+        "final_url": "https://www.baitapianvalle.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is clearly the venue's own site (baitapianvalle.it, self-published, describing the venue's cuisine and setting). It shows the name 'Baita Pianvalle' and the municipality ('Parco Spina Verde di Como'). However, it shows no street address, and the only phone number displayed (338-4638723) does not match the record's +39031505137. Since the contact details do not confirm the record identity, the evidence is insufficient.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:004080:diano-d-alba:d-batista",
+        "candidate_url": "http://www.locandabatista.it/",
+        "final_url": "http://www.locandabatista.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (locandabatista.it) and shows the name 'Locanda 'd Batista' and the municipality Diano d'Alba, but it contains no street address and no phone number, so the ownership check cannot be completed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:015146:milano:trive-time",
+        "candidate_url": "http://www.trivetime.it/",
+        "final_url": "https://trivetime.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the brand/chain site (Trive Group Srl, franchising, format in Torino and Milano), but it does not identify this specific branch: no venue name 'Trive Time', no street address, no phone, and no municipality/postcode of the venue shown. Therefore identity cannot be confirmed despite the matching domain.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:012133:varese:fradiavolo-pizzeria",
+        "candidate_url": "https://fradiavolopizzeria.com/",
+        "final_url": "https://fradiavolopizzeria.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "This is the corporate site of the Fradiavolo chain (Fragesa S.r.l.), which would be official for its branches, but the page is only the chain homepage. It does not identify the Varese location at all: no Varese mention, no postcode 21100, no Via Gaetano Donizetti address and no phone number for this venue (the only address shown is the company's legal seat in Torino). Identity of this specific branch is therefore not established.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:017029:brescia:laboratorio-lanzani",
+        "candidate_url": "http://www.laboratoriolanzani.it/",
+        "final_url": "https://laboratoriolanzani.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "name_quote_not_on_page",
+          "name_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (laboratoriolanzani.it), showing the name 'Laboratorio Lanzani', the municipality of Brescia, and the phone 030 3733097 (matching +390303733097). The 'Dove siamo' section gives the venue location at Via Milano 49 in Brescia with parking on the back in Via Villa Glori 3, which matches the record's address entry.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:014019:chiesa-in-valmalenco:vassallo",
+        "candidate_url": "http://www.ristorantevassallo.it/",
+        "final_url": "https://www.ristorantevassallo.it/default.aspx",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is clearly the venue's own site (ristorantevassallo.it, operated by Fratelli Giordano srl) and shows the name 'Ristorante Il Vassallo' and the municipality/postcode (23023 Chiesa in Valmalenco). However, the street address shown is 'via Vassalini 27' while the record has 'Vassalini, 35', and no phone number appears on the page. Since the address differs from the record and the phone is absent, identity cannot be fully confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:017067:desenzano-del-garda:pizza-per-caso",
+        "candidate_url": "https://www.pizzapercaso.it/",
+        "final_url": "https://www.pizzapercaso.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is clearly the venue's own site (pizzapercaso.it, page title 'Pizza per Caso', with menu/dove siamo/contatti sections) and it shows the name, the municipality 'Desenzano Del Garda' and a phone number matching the record (393 9826058). However, the street address shown is 'Via Ca Vecchie 13' while the record has 'Via Cà Vecchie, 11': the house number differs. Since the page's address does not match the record, identity of this exact location cannot be fully confirmed, so the final ownership check is not satisfied.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:021006:badia-abtei:l-fana",
+        "candidate_url": "http://www.lfana.com/",
+        "final_url": "https://www.lfana.com/it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The domain lfana.com plausibly belongs to the venue, but the extracted page text contains only a title about 'Ristorante, Pizzeria, Steakhouse La Villa in Alta Badia', a welcome line 'Benvenuti a La Villa' and large SVG path data. It never states the venue name 'L'Fana'/'LFana', the municipality/postcode of Badia (39036), nor the phone number or street address (Strada Colz, 57). Ownership cannot be confirmed from the page text itself.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:021071:rasun-anterselva-rasen-antholz:platzl-am-see",
+        "candidate_url": "https://www.seerestaurant.it/",
+        "final_url": "https://www.seerestaurant.it/de/index.html",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "no_phone_or_address_match"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (seerestaurant.it, titled 'Platzl am See | Antholzer See | Restaurant | Cafe'), run by the operating family (Fam. Egger). It shows the venue name 'Platzl am See', the municipality/postcode '39030 Rasen-Antholz', and the street address 'Obertal 39', which matches the record's Obertaler Straße 39. No phone number appears on the page, but the address satisfies the identity requirement.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:021033:funes-villno:dreimadelhaus",
+        "candidate_url": "http://www.dreimaedelhaus.info/",
+        "final_url": "https://www.dreimaedelhaus.info/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "municipality_not_matched",
+          "no_phone_or_address_match"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own site (dreimaedelhaus.info), and it shows the name 'Restaurant Pizzeria Dreimädelhaus', the municipality (Funes / Villnöss) and the street address 'Coller Straße, 10, Funes', matching the record. No phone number appears on the page, but the street address satisfies the fourth requirement.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:016152:osio-sopra:retro",
+        "candidate_url": "http://www.ristoretro.it/",
+        "final_url": "https://www.ristoretro.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "name_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (ristoretro.it), presenting the restaurant and pizzeria 'Retrò'/'Ristoretrò'. It shows the municipality Osio Sopra (BG), the street address Via Rasica, 19, 24040, Osio Sopra BG matching the record, and the phone 03550 0077 matching +39035500077. All ownership criteria are satisfied.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:023001:affi:l-hostaria",
+        "candidate_url": "http://www.hostaria-affi.com/",
+        "final_url": "https://www.hostaria-affi.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own site and shows the name 'L'Hostaria' and the municipality 'Affi', but the visible text contains no phone number and no street address (only a reference to the Grand'Affi Shopping Center). Without the phone or street address matching the record, ownership cannot be fully confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:017085:iseo:pane-al-sale",
+        "candidate_url": "http://www.osteriapanealsale.it/",
+        "final_url": "https://www.osteriapanealsale.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "parked_or_empty",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is on the venue's own domain (osteriapanealsale.it) and the title names the venue, but the fetched page text is essentially empty (only CSS boilerplate). It shows no street address and no phone number, and 'Lago d'Iseo' refers to the lake rather than clearly stating the municipality. Ownership cannot be confirmed from the page text.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:027042:venezia:zanze-xvi",
+        "candidate_url": "http://zanze.it/",
+        "final_url": "https://zanze.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (zanze.it) and shows the name 'Zanze XVI' and the municipality 'Venezia', but the page text does not display the venue's street address or phone number, so the ownership check cannot be completed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:028003:albignasego:c-e-voglia-di-pizza",
+        "candidate_url": "http://www.cevogliadipizza.it/",
+        "final_url": "https://www.cevogliadipizza.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "name_quote_not_on_page",
+          "municipality_quote_not_on_page",
+          "address_quote_not_on_page",
+          "name_not_matched",
+          "municipality_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (cevogliadipizza.it), showing the name 'C'è Voglia di Pizza', the municipality Albignasego, the street address Via Sant'Eurosia 34 and the phone 049 8625760, all matching the record.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:026089:vedelago:pizzalonga-away-vedelago",
+        "candidate_url": "https://www.pizzalongaway.it/",
+        "final_url": "https://www.pizzalongaway.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "This is the corporate/franchising site of the Pizzalonga Away chain (operated by Da Pino Srl), which would count as the venue's own site for its branches. However, the page does not identify the Vedelago branch at all: no mention of Vedelago, no postcode 31050, no Via Roma 106 address and no phone number. The only address shown (Via F.Erizzo, 3/C) is the company head office, not this venue. Identity of this specific branch cannot be confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:030049:lignano-sabbiadoro:lele-s-chiosco",
+        "candidate_url": "https://www.tendabar.it/leleschiosco/",
+        "final_url": "https://www.tendabar.it/leleschiosco/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is on tendabar.it and describes Lele's Chiosco as situated 'nel cuore del Tenda Bar', operated by 'Tenda Bar di Bornacin Federico e C.', i.e. the same operator/venue complex, so the publisher qualifies as the venue's own site. The venue name is shown. However, the page gives no street address and no phone number (no tel: links, no contact details), so ownership cannot be verified. Also, the only locality mentioned is 'Lignano Pineta', not the municipality Lignano Sabbiadoro or postcode 33054.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:039007:cervia:treseicinque",
+        "candidate_url": "http://osteria365.wordpress.com/",
+        "final_url": "https://osteria365.wordpress.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is a WordPress.com blog titled 'Osteria TreSeiCinque' presenting its own menu, so it plausibly belongs to the venue. However, the text shows no street address, no postcode and no phone number. 'Cervia' appears only in the dish name 'cozze di Cervia', which does not establish the venue's municipality, let alone its address or phone. Ownership and identity cannot be fully confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:040007:cesena:incanto-cesena",
+        "candidate_url": "https://incantocesena.it/",
+        "final_url": "https://incantocesena.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "no_phone_or_address_match"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (incantocesena.it), naming Incanto Cesena, showing the municipality Cesena (postcode 47521) and the street address Via A. Manuzzi, 145, which matches the record. No phone number appears, but the street address suffices.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:040012:forli:giustospirito",
+        "candidate_url": "http://www.giustospirito.com/",
+        "final_url": "https://giustospirito.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the Giustospirito chain's own corporate site, so the publisher is the venue's operator. However, it is a generic brand homepage that never mentions the Forlì location: it names only the founding site in Rubiera (RE) and the company headquarters address, with no Forlì municipality/postcode, no Via Edith Stein address and no phone number for this branch. Identity of this specific branch cannot be confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:041030:montecalvo-in-foglia:cavaliere",
+        "candidate_url": "http://www.ristorantecavaliere.com/",
+        "final_url": "https://www.ristorantecavaliere.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own site and shows the name and the phone number (+39 0722 580312, matching the record), but it does not show the municipality of Montecalvo in Foglia, the postcode 61020, or the street address, so the identity checks are not fully satisfied.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:042002:ancona:maway-al-passetto",
+        "candidate_url": "https://www.maway.it/",
+        "final_url": "https://www.maway.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is clearly the venue's own site (maway.it, by the MaWay operators at Il Passetto) and shows the venue name and Ancona. The street address 'Piazza IV Novembre, 1' matches the record, though the postcode shown is 60121 vs 60124 in the record. More importantly, the phone shown on the page is (+39) 338 9698360 (and 071 0973425), which does not match the record's +393510776705. Since contact details differ from the record, identity cannot be fully confirmed and the answer is insufficient.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:048006:campi-bisenzio:zero3",
+        "candidate_url": "https://www.zero3pizzeria.com/",
+        "final_url": "https://zero3pizzeria.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is clearly the venue's own site and shows the name, municipality and the matching phone number (055 098 4400 = +390550984400), but the street address shown is Via San Quirico, 300 while the record has number 298. Since the address on the page differs from the record, identity cannot be fully confirmed, so the verdict is insufficient.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:048004:borgo-san-lorenzo:mediceo",
+        "candidate_url": "http://www.caffemediceo.it/",
+        "final_url": "https://www.caffemediceo.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "This is the official multi-location site of Caffè Mediceo (it lists both Barberino di Mugello and Borgo San Lorenzo branches). The page shows the name and the municipality Borgo San Lorenzo, but it shows neither the street address (Viale della Resistenza, 2) nor the phone number, and it does not identify this specific branch beyond the town name. Ownership identity check is incomplete.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:043043:potenza-picena:nettuno",
+        "candidate_url": "https://www.ristorantenettuno1960.com/",
+        "final_url": "https://www.ristorantenettuno1960.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page appears to be the venue's own site and shows the matching phone number (+39 0733 880714) and municipality/postcode (62018 Potenza Picena), but the street address shown (Lungomare Marinai D'Italia, Snc, Porto Potenza Picena) differs from the record's address (Piazzale Stazione, 2). The name is also presented as 'Ristorante Nettuno 1960' rather than the record's 'Ristorante Pizzeria Nettuno'. Since the address on the page does not match the record, identity of this specific venue cannot be confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:051026:montevarchi:buca-di-ipo",
+        "candidate_url": "http://www.labucadiipo.it/",
+        "final_url": "https://www.labucadiipo.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "name_quote_not_on_page",
+          "name_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (labucadiipo.it), naming 'La Buca di Ipo' as a ristorante pizzeria in Montevarchi, with the street address Via Giovanni Pascoli, 34/B – Montevarchi – 52025 and phone 055 982233, matching the record's phone and address (34/B vs 34, same street/postcode).",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:058022:castel-gandolfo:quadri",
+        "candidate_url": "http://www.ristoranteiquadri.it/",
+        "final_url": "https://ristoranteiquadri.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "name_quote_not_on_page",
+          "name_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website, showing the name 'Ristorante I Quadri', the municipality Castel Gandolfo with postcode 00073, the street address Via dei Pescatori, 21, and the phone (+39) 06 936 14 00 matching the record.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:058091:roma:antichi-sapori",
+        "candidate_url": "http://www.antichisaporidaleo.com/",
+        "final_url": "http://www.antichisaporidaleo.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page text contains only the title, showing the venue name and municipality but no street address or phone number, so ownership cannot be confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:058091:roma:cottage-forum",
+        "candidate_url": "http://www.cottageforum.it/",
+        "final_url": "https://www.cottageforum.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "municipality_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is on the venue's own domain (cottageforum.it) and describes the bar-restaurant 'cottage forum' in Piazza Venezia, Rome. The name 'COTTAGE FORUM' is displayed, the municipality is shown as Rome/Roma, and the street address 'Via di S. Eufemia, 5' matches the record. No phone number appears on the page, but the address satisfies the contact requirement.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:058091:roma:fattoria-toccaferro",
+        "candidate_url": "https://fattoriatoccaferro.it/",
+        "final_url": "https://fattoriatoccaferro.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website and names Fattoria Toccaferro, but it shows no municipality/postcode, no street address and no phone number (only a VAT number). The location and contact details required for the ownership check are absent, so identity cannot be fully confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:058091:roma:scarpetta-rome",
+        "candidate_url": "https://www.scarpettarestaurants.com/location/rome/",
+        "final_url": "https://www.scarpettarestaurants.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The requested Rome location page redirected to the Scarpetta Restaurants chain homepage. The page shows the brand name but not the venue 'Scarpetta Rome' as such, and provides no Roma address, postcode, or phone number for that branch (Rome appears only in a founder biography). It is the operator's own site but does not identify this specific branch, so identity is not established.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:058091:roma:rimessa-roscioli",
+        "candidate_url": "http://www.rimessaroscioli.com/",
+        "final_url": "https://rimessaroscioli.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "municipality_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (rimessaroscioli.com), naming Rimessa Roscioli and showing the Rome municipality, the street address Via del Conservatorio 58 and the phone +39 06 6880 3914, all matching the record.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:054039:perugia:acqua-e-farina",
+        "candidate_url": "https://www.acquaefarinaperugia.it/menu/",
+        "final_url": "https://www.acquaefarinaperugia.it/menu/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "municipality_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (acquaefarinaperugia.it), naming 'Acqua e Farina' in the title and footer. The footer shows the street address 'Via della Lana, 8' and the phone '331 4267613', both matching the record (+393314267613). The locality shown is 'Santa Lucia (PG)', the frazione of Perugia where Via della Lana 8 lies (postcode 06125), so the municipality is identified consistently with the record.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:058091:roma:fraschetta-di-mastro-giorgio",
+        "candidate_url": "https://www.mastro-giorgio.it/",
+        "final_url": "https://www.mastro-giorgio.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The fetched page contains only Wix/CSS boilerplate with no visible venue name, municipality, address, or phone number, so ownership cannot be verified.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:059008:formia:gretel-factory",
+        "candidate_url": "http://www.gretelfactory.it/",
+        "final_url": "https://www.gretelfactory.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the official Gretel Factory site and shows the venue name, the municipality (04023 Formia (LT)) and a phone number matching the record (+39 0771 268293). However, the street address shown for the Formia point of sale is 'Via Vitruvio, 2', which differs from the record's 'Via Abate Tosti, 51'. Since the address on the page does not match the record, identity cannot be fully confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:063049:napoli:concettina-ai-tre-santi",
+        "candidate_url": "http://www.pizzeriaoliva.it/",
+        "final_url": "https://www.concettinaaitresanti.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own official website (pizzeriaoliva.it redirects to concettinaaitresanti.com) and shows the venue name and the municipality Napoli, but it contains no street address and no phone number, so the identity check cannot be completed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:061005:aversa:contrada",
+        "candidate_url": "http://lacontradaristorante.it/",
+        "final_url": "http://lacontradaristorante.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page appears to be the venue's own site (domain lacontradaristorante.it, title 'La Contrada'), and it shows the venue name. However, the text is a minimal menu snippet with no municipality or postcode, no street address and no phone number, so the ownership check cannot be completed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:069046:lanciano:malu",
+        "candidate_url": "http://www.pizzeriamalu.it/",
+        "final_url": "https://www.pizzeriamalu.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "municipality_quote_not_on_page",
+          "address_quote_not_on_page",
+          "municipality_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (pizzeriamalu.it), showing the name 'Pizzeria Malù', the municipality Lanciano (CH) 66034 and the phone 087244062, which matches the record +39087244062. The street address shown ('Piazza della Pietrosa, 33') has a different house number than the record (2), but the exact phone and municipality match confirm the identity, so ownership is established via the phone.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:072006:bari:terzotempo",
+        "candidate_url": "http://www.terzotempobirreria.it/",
+        "final_url": "https://terzotempobirreria.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "name_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own site (terzotempobirreria.it). It names 'Terzo tempo Birreria', shows the municipality Bari, and gives the matching street address Via Alessandro Volta 6 and phone 342 700 1160 (= +393427001160), so all ownership checks are satisfied.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:065028:casal-velino:nido",
+        "candidate_url": "https://ilnidocountryhouse.it/vacanze-casal-velino/index.asp",
+        "final_url": "https://ilnidocountryhouse.it/vacanze-casal-velino/index.asp",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "address_quote_not_on_page"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is on ilnidocountryhouse.it, the venue's own site, and presents the Country House Il Nido with its restaurant. It shows the name, the municipality and postcode (84040 Casal Velino (SA)), and a phone number matching the record exactly (+39 0974 907981), which confirms identity. Note the page states street number 25 rather than 37, but the exact phone match plus name, locality and domain leave no doubt about ownership.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:072035:polignano-a-mare:terrazze-monachile",
+        "candidate_url": "http://www.terrazzemonachile.com/",
+        "final_url": "https://terrazzemonachile.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own official website and shows the name 'Terrazze Monachile' and the municipality 'Polignano a Mare', but it does not display the venue's phone number or its street address (Piazza Caduti di Via Fani, 11). Since the ownership check requires the phone or street address on the page, the evidence is insufficient.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:072035:polignano-a-mare:euforia-restaurant",
+        "candidate_url": "http://www.almadava.it/",
+        "final_url": "https://www.almadava.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the official site of Masseria Almadava, the resort that operates the restaurant Euforia, and it names 'Euforia Restaurant' and shows the municipality 'Polignano a Mare'. However, the page text shows no street address and no phone number (no tel links either), so the ownership check cannot be completed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:072036:putignano:premiata-pizzeria",
+        "candidate_url": "https://premiatapizzeria.com/",
+        "final_url": "https://premiatapizzeria.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "municipality_quote_not_on_page",
+          "municipality_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (premiatapizzeria.com), showing the name 'Premiata Pizzeria', the municipality Putignano, and the phone number (39) 080 405 8523 matching the record's +390804058523. The street address is not shown, but the phone match satisfies the contact requirement.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:073013:martina-franca:tomato-and-basil",
+        "candidate_url": "https://sites.google.com/view/pizzeriapomodoroebasilico",
+        "final_url": "https://sites.google.com/view/pizzeriapomodoroebasilico",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page appears to be a self-published Google Sites page for a pizzeria in Martina Franca, matching the venue name in Italian ('Pomodoro e basilico' = 'Tomato and Basil') and the municipality. However, the page text shows no street address and no phone number (only menu links such as 'Come Trovarci' and 'Chiama subito!' with no contact details rendered). Without the address or phone, the ownership check fails, so the answer is insufficient.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:075029:galatina:signoria",
+        "candidate_url": "https://www.nohasipalace.com/ristorante/",
+        "final_url": "https://www.nohasipalace.com/ristorante-pizzeria-a-galatina/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own site and matches the record's address (Via Castello, 19, 73013 Noha LE) and phone (+39 0836 210616) exactly, but it names the venue only as 'Nohasi Palace' / 'Ristorante & Pizzeria a Galatina'. The name 'Ristorante Signoria' never appears on the page, so the page does not show the venue's name from the record and identity is unclear (possible rebrand/rename).",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:078157:corigliano-rossano:sant-emilia-ristorante-pizzeria",
+        "candidate_url": "http://www.ristorantesantemilia.it/",
+        "final_url": "https://www.ristorantesantemilia.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "name_quote_not_on_page",
+          "municipality_quote_not_on_page",
+          "name_not_matched",
+          "municipality_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (ristorantesantemilia.it), names 'Ristorante Pizzeria Sant'Emilia', gives the municipality of Corigliano Rossano/Corigliano Scalo CS (87064), and shows both the street address Via Nazionale, 87064 and the phone +39 0983 884450, matching the record's phone and address.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:065053:furore:relish-lounge-bar-ristorante",
+        "candidate_url": "http://www.villamena.it/",
+        "final_url": "https://www.villamena.it/it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "other",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the site of B&B Villamena, which does list a 'Ristorante Relish' and gives the municipality Furore, but the contact details shown (Via Croce 2/a, Furore (SA); +39 089 830519) do not match the record's address (Via Benedetto Croce, 2) and phone (+390892140795). The page mainly promotes the B&B and does not clearly establish this specific venue identity, so ownership cannot be confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:081009:favignana:210-grammi-ristorante-laboratorio",
+        "candidate_url": "http://www.210grammi.com/",
+        "final_url": "https://www.210grammi.it/en/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own official site (210grammi.it) and names the Favignana branch, showing municipality Favignana. However, the address shown is Piazza Europa, 38 while the record has Piazza Europa, 46, and the phone numbers shown (+39.342.3950873, +39.328.9260536) do not match the record's +393283118888. Identity details therefore do not match, so ownership cannot be confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:063031:forio:da-nicola",
+        "candidate_url": "https://www.ristorantedanicola.it/",
+        "final_url": "https://www.ristorantedanicola.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": null,
+        "reasons": [
+          "invalid_verifier_output"
+        ],
+        "label_status": "verified",
+        "verifier_reason": null,
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:080029:condofuri:gemelli-francesco",
+        "candidate_url": "http://www.agriturismogemelli.it/",
+        "final_url": "http://www.agriturismogemelli.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is clearly the venue's own official site (agriturismogemelli.it) and shows the name 'Agriturismo Gemelli DI Francesco Gemelli', the municipality 'Condofuri (RC)' and the phone '+39 349 262 7047' matching the record. However, the street address shown is 'VIA SALINELLA 45' while the record has 'Via Salinella, 19', so the address on the page differs from the record and identity cannot be fully confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:083041:lipari:del-vicolo-lipari",
+        "candidate_url": "http://trattoriadelvicolo.info/",
+        "final_url": "https://www.trattoriadelvicolo.info/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page appears to be the venue's own site (domain and title match the venue name and mention Lipari), but the extracted page text contains only CSS and no visible street address or phone number, so ownership cannot be fully verified against the record.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:089017:siracusa:aranblu",
+        "candidate_url": "http://aranbluortigia.it/",
+        "final_url": "https://www.aranbluortigia.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "name_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is the venue's own website (aranbluortigia.it), presenting itself as Aran Blu in Ortigia. It shows the name, the municipality Siracusa (with postcode 96100), the street address Largo Porta Marina, 4 and the phone +39 0931 68402, all matching the record.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:113017:olbia:vecchio-porto",
+        "candidate_url": "http://www.ristorantepizzeriailvecchioportoolbia.com/contatti",
+        "final_url": "https://www.ristorantepizzeriailvecchioportoolbia.com/contatti",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "This is clearly the venue's own website (own domain, venue name, Olbia), and the page shows the landline +39 0789 21479 matching the record. However, the street address on the page is 'Corso Umberto I 10' while the record has Corso Umberto I, 12, and the contact blocks repeatedly show a different number (+39 3514855091), so identity details conflict and cannot be confirmed as official.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:103061:san-bernardino-verbano:rifugio-fantoli",
+        "candidate_url": "http://www.rifugiofantoli.it/it/la-nostra-cucina.html",
+        "final_url": "https://www.rifugiofantoli.it/it/la-nostra-cucina.html",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "municipality_not_matched"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "The page is on the venue's own domain (rifugiofantoli.it) and its footer identifies the venue as 'Rifugio Antonio Fantoli C.A.I. Pallanza - Alpe Ompio', showing the locality/municipality (Pallanza, Alpe Ompio) and the phone number +39 340 5783883, which matches the record. The venue operates its own site (self-built Joomla), so it is the official venue site.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:118029:muravera:marina-gio",
+        "candidate_url": "http://www.marinagio.com/",
+        "final_url": "https://www.marinagio.com/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": "official_venue_site",
+        "reasons": [
+          "verifier_insufficient"
+        ],
+        "label_status": "verified",
+        "verifier_reason": "marinagio.com is plausibly the venue's own site and names Ristorante Marina Giò, but it shows no phone number and places the venue at Via degli Anemoni 4, 09040 Villaputzu/Porto Tramatzu, which does not match the record's Muravera/09043 location. Since the municipality/postcode on the page differs from the record and no phone is given, identity cannot be confirmed.",
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:075052:nardo:parisi",
+        "candidate_url": "http://www.caffeparisinardo.it/",
+        "final_url": "https://www.caffeparisinardo.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": null,
+        "reasons": [
+          "invalid_verifier_output"
+        ],
+        "label_status": "verified",
+        "verifier_reason": null,
+        "triage_reason": null
+      },
+      {
+        "venue_id": "venue:076063:potenza:bequi-smart-cafe",
+        "candidate_url": "http://bequi.it/",
+        "final_url": "https://www.bequi.it/",
+        "outcome": "ambiguous",
+        "stage": "verifier",
+        "publisher_kind": null,
+        "reasons": [
+          "invalid_verifier_output"
+        ],
+        "label_status": "verified",
+        "verifier_reason": null,
+        "triage_reason": null
+      }
+    ]
+  },
+  "cost": {
+    "total_usd": 0.294596,
+    "by_stage": {
+      "triage": {
+        "calls": 0,
+        "invalid_outputs": 0,
+        "cost_usd": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "models": []
+      },
+      "verifier": {
+        "calls": 244,
+        "invalid_outputs": 3,
+        "cost_usd": 0.294596,
+        "prompt_tokens": 539617,
+        "completion_tokens": 98473,
+        "models": [
+          "xiaomi/mimo-v2.6-pro"
+        ]
+      }
+    },
+    "per_reviewed_candidate_usd": 0.001207
+  }
+}
