@@ -2,6 +2,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
+import { DatabaseSync } from "node:sqlite";
 import { pathToFileURL } from "node:url";
 import { loadRows, sourceFixtureDocument } from "./select-source-sample.mjs";
 import { validateWebFixtureDocument } from "./lib/web-stress-fixture.mjs";
@@ -9,7 +10,8 @@ import { validateWebFixtureDocument } from "./lib/web-stress-fixture.mjs";
 // Writes the next batch of national source candidates (PROCESS.md step 4) in the
 // fixture format the frozen reviewer runner reads, so the certified code runs
 // unchanged. Order is a fixed hash of the venue ID, which spreads every batch across
-// the country; venues already in an earlier batch are skipped.
+// the country; venues already in an earlier batch, or with an assessment already
+// published to the national store, are skipped.
 
 const CHUNK = 999;
 
@@ -31,14 +33,23 @@ export function batchedVenueIds(root) {
   return ids;
 }
 
+export function assessedVenueIds(dbPath) {
+  const db = new DatabaseSync(dbPath, { readOnly: true });
+  try {
+    return new Set(db.prepare("SELECT DISTINCT venue_id FROM candidate_assessments").all().map((row) => row.venue_id));
+  } finally { db.close(); }
+}
+
 if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
   const argv = process.argv.slice(2);
   const arg = (flag, fallback) => argv.includes(flag) ? argv[argv.indexOf(flag) + 1] : fallback;
   const size = Number(arg("--size", NaN));
   if (!Number.isInteger(size) || size < 1) throw new Error("--size is required");
   const root = resolve(arg("--batches-dir", "data/national-review/batches"));
-  const rows = loadRows(resolve(arg("--db", "data/istat/2026-01-01/derived/italy-import.sqlite")));
+  const dbPath = resolve(arg("--db", "data/istat/2026-01-01/derived/italy-import.sqlite"));
+  const rows = loadRows(dbPath);
   const done = batchedVenueIds(root);
+  for (const venueId of assessedVenueIds(dbPath)) done.add(venueId);
   const selected = nextBatch(rows, done, size);
   if (!selected.length) { console.log(JSON.stringify({ remaining: 0 })); process.exit(0); }
   const batchId = `b${String((existsSync(root) ? readdirSync(root).length : 0) + 1).padStart(3, "0")}`;
@@ -56,5 +67,6 @@ if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
     writeFileSync(join(directory, `development-${index}-${index}.json`), `${JSON.stringify(document)}\n`);
   }
   console.log(JSON.stringify({ batch: batchId, directory, venues: selected.length,
-    previously_batched: done.size, remaining_after: rows.length - done.size - selected.length }));
+    previously_done: rows.filter((row) => done.has(row.venue_id)).length,
+    remaining_after: rows.filter((row) => !done.has(row.venue_id)).length - selected.length }));
 }
