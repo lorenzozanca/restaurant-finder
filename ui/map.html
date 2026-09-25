@@ -22,7 +22,7 @@
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html, body { height: 100%; margin: 0; overflow: hidden; }
   body { font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--fg); background: var(--bg); }
-  button, input, select { font: inherit; color: inherit; }
+  button, input, select, textarea { font: inherit; color: inherit; }
   button { cursor: pointer; }
   #map { position: fixed; inset: 0; background: #dfe3e8; }
 
@@ -102,6 +102,24 @@
   dd { margin: 0; overflow-wrap: anywhere; }
   dd a { color: var(--accent); }
   .back { border: 0; background: none; color: var(--accent); font-weight: 600; padding: 8px 0; min-height: 44px; }
+  .review { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 4px; }
+  .review h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 10px 0 6px; }
+  .review p { margin: 6px 0; font-size: 14px; }
+  .review a { color: var(--accent); overflow-wrap: anywhere; }
+  .review .reason { background: var(--soft); border-radius: 10px; padding: 8px 10px; }
+  .review .quotes { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; font-size: 12px; }
+  .review .quotes span { border-radius: 10px; padding: 2px 8px; background: var(--soft); }
+  .review .quotes .hit { background: #dcfce7; color: #14532d; }
+  .review label { display: block; font-size: 13px; color: var(--muted); margin: 10px 0 4px; }
+  .review input.field, .review select, .review textarea { font-size: 16px; }
+  .review textarea { width: 100%; min-height: 64px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg);
+    padding: 8px 10px; resize: vertical; }
+  .decide { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0 4px; }
+  .decide button { height: 46px; border-radius: 10px; font-weight: 700; border: 0; color: #fff; }
+  .decide .yes { background: var(--verified); }
+  .decide .no { background: var(--rejected); }
+  .decide button:disabled { opacity: .5; }
+  #r-result.err { color: var(--rejected); }
 
   #toast { position: fixed; z-index: 1002; left: 50%; top: calc(var(--safe-top) + 112px); transform: translateX(-50%);
     background: var(--fg); color: var(--bg); padding: 8px 14px; border-radius: 18px; font-size: 14px; box-shadow: var(--shadow);
@@ -560,8 +578,128 @@
         (venue.candidate_url && venue.candidate_url !== venue.verified_url ? '<dt>Source link</dt><dd><a href="' + esc(venue.candidate_url) + '" target="_blank" rel="noopener">' + esc(venue.candidate_url) + '</a> <span class="note">(not verified)</span></dd>' : '') +
         (venue.checked_at ? '<dt>Checked</dt><dd>' + esc(venue.checked_at.slice(0, 10)) + (venue.assessment ? ' · ' + esc(venue.assessment.replace(/_/g, ' ')) : '') + '</dd>' : '') +
       '</dl>' +
+      (venue.candidate_url || venue.verified_url ? '<div class="review" id="review"><p class="note">Loading review details…</p></div>' : '') +
       '<p class="note">' + esc(venue.id) + '</p>';
     $('back').addEventListener('click', function () { setView(returnView); });
+    if ($('review')) loadReview(venue);
+  }
+
+  // --- Manual ownership review -----------------------------------------------
+  // Shows why a venue has its status (crawl, LLM reviewer, earlier decisions) and
+  // records an operator's decision. An approval publishes the website; the map
+  // snapshot is rebuilt and the venue changes colour a few seconds later.
+  var OUTCOME = { accepted: 'accepted it as the official site', rejected: 'judged it not official', ambiguous: 'could not decide' };
+  var CRAWL = { strongly_correlated: 'matches the venue strongly', ambiguous: 'loaded, identity unclear',
+    contradicted: 'contradicts the venue record', retryable: 'could not be loaded', unsupported_publisher: 'directory, social or booking site' };
+  function loadReview(venue) {
+    fetch('/api/national/review/' + venue.i + '?v=' + meta.version).then(function (r) {
+      if (!r.ok) throw new Error(r.status === 409 ? 'The map was updated; reopen this venue.' : 'HTTP ' + r.status);
+      return r.json();
+    }).then(function (detail) {
+      if ($('review')) renderReview(venue, detail);
+    }).catch(function (error) {
+      if ($('review')) $('review').innerHTML = '<p class="note">Review details unavailable: ' + esc(error.message) + '</p>';
+    });
+  }
+  function day(value) { return String(value || '').slice(0, 10); }
+  function renderReview(venue, detail) {
+    var html = ['<h3>Why this status</h3>'];
+    var llm = detail.llm;
+    if (llm) {
+      var q = llm.quotes || {};
+      html.push('<p>The LLM reviewer ' + esc(OUTCOME[llm.outcome] || llm.outcome) + ' <span class="note">(' +
+        esc(String(llm.model || '').split('/').pop()) + ', ' + esc(day(llm.decided_at)) + ')</span></p>');
+      if (llm.reason) html.push('<p class="reason">' + esc(llm.reason) + '</p>');
+      html.push('<div class="quotes">' + ['name', 'municipality', 'address', 'phone'].map(function (key) {
+        return '<span class="' + (q[key] ? 'hit' : '') + '" title="' + esc(q[key] || 'not found on the page') + '">' +
+          (q[key] ? '✓ ' : '– ') + key + '</span>';
+      }).join('') + '</div>');
+    }
+    detail.assessments.slice(0, 2).forEach(function (a) {
+      var failure = (a.evidence || []).filter(function (e) { return /^failure_/.test(e); })[0];
+      html.push('<p>Crawl ' + esc(day(a.checked_at)) + ': ' + esc(CRAWL[a.state] || a.state.replace(/_/g, ' ')) +
+        (failure ? ' (' + esc(failureText(failure.slice(8))) + ')' : '') +
+        (a.final_url && a.final_url !== a.candidate_url ? ' · ended at <a href="' + esc(a.final_url) + '" target="_blank" rel="noopener">' +
+          esc(a.final_url) + '</a>' : '') + '</p>');
+    });
+    detail.attestations.forEach(function (a) {
+      var manual = a.method === 'manual_first_party_review';
+      html.push('<p>' + (a.status === 'verified' ? '✓ ' : '✗ ') + '<b>' + esc(a.domain) + '</b> ' +
+        (a.status === 'verified' ? 'verified' : 'rejected') + ' by ' + esc(manual ? a.reviewer : 'the LLM reviewer') +
+        ' on ' + esc(day(a.reviewed_at)) + (a.notes ? ' — ' + esc(a.notes) : '') + '</p>');
+    });
+    if (!llm && !detail.assessments.length && !detail.attestations.length) html.push('<p class="note">Not checked yet.</p>');
+    if (detail.candidates.length) {
+      var first = detail.candidates[0];
+      html.push('<button class="secondary" type="button" id="r-open">Review this website</button>',
+        '<div id="r-form" hidden>',
+        '<h3>Your decision</h3>',
+        detail.candidates.length > 1 ? '<label for="r-domain">Candidate</label><select id="r-domain">' +
+          detail.candidates.map(function (c, k) { return '<option value="' + k + '">' + esc(c.domain) + '</option>'; }).join('') + '</select>'
+          : '<p>Candidate: <b>' + esc(first.domain) + '</b></p>',
+        '<label for="r-site">Official website <span class="note">(correct it if the real site is elsewhere)</span></label>',
+        '<input class="field" id="r-site" type="url" inputmode="url" autocomplete="off">',
+        '<label for="r-evidence">Evidence pages, one per line <span class="note">(showing the address or phone)</span></label>',
+        '<textarea id="r-evidence" placeholder="https://…/contatti"></textarea>',
+        '<label for="r-reviewer">Your name</label><input class="field" id="r-reviewer" autocomplete="name">',
+        '<label for="r-notes">Notes (optional)</label><input class="field" id="r-notes">',
+        '<div class="decide"><button class="yes" type="button" id="r-yes">✓ Official site</button>',
+        '<button class="no" type="button" id="r-no">✗ Not official</button></div>',
+        '<p class="note" id="r-result"></p></div>');
+    }
+    $('review').innerHTML = html.join('');
+    if (!detail.candidates.length) return;
+    var candidate = function () { return detail.candidates[$('r-domain') ? Number($('r-domain').value) : 0]; };
+    var fill = function () {
+      var c = candidate();
+      $('r-site').value = llm && llm.final_url && llm.candidate_url === c.url ? llm.final_url : c.url;
+    };
+    fill();
+    if ($('r-domain')) $('r-domain').addEventListener('change', fill);
+    try { $('r-reviewer').value = localStorage.getItem('reviewer') || ''; } catch (e) {}
+    $('r-open').addEventListener('click', function () {
+      this.hidden = true; $('r-form').hidden = false;
+      if (sheet.dataset.state !== 'full') setSheet('full');
+    });
+    $('r-yes').addEventListener('click', function () { decide(venue, candidate(), 'approve'); });
+    $('r-no').addEventListener('click', function () { decide(venue, candidate(), 'reject'); });
+  }
+  function decide(venue, candidate, kind) {
+    var reviewer = $('r-reviewer').value.trim();
+    var site = kind === 'approve' ? $('r-site').value.trim() : candidate.url;
+    var evidence = $('r-evidence').value.split('\n').map(function (line) { return line.trim(); }).filter(Boolean);
+    if (!evidence.length && site) evidence = [site];
+    var result = $('r-result');
+    if (!reviewer) { result.className = 'note err'; result.textContent = 'Enter your name first.'; $('r-reviewer').focus(); return; }
+    try { localStorage.setItem('reviewer', reviewer); } catch (e) {}
+    $('r-yes').disabled = $('r-no').disabled = true;
+    result.className = 'note'; result.textContent = 'Saving…';
+    fetch('/api/national/review', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ venue_id: venue.id, candidate_domain: candidate.domain, decision: kind, website_url: site,
+        evidence_urls: evidence, reviewer: reviewer, notes: $('r-notes').value.trim() || undefined }) })
+      .then(function (r) { return r.json().then(function (body) { if (!r.ok) throw new Error(body.error || 'HTTP ' + r.status); return body; }); })
+      .then(function (attestation) {
+        var verified = attestation.status === 'verified';
+        result.textContent = (verified ? 'Verified ' : 'Rejected ') + attestation.publisher_domain + '. The map updates in a few seconds.';
+        if (verified || venue.status !== 'verified') {
+          venue.status = verified ? 'verified' : 'rejected';
+          var badge = document.querySelector('#venue .badge-status');
+          if (badge) badge.innerHTML = '<span class="dot" style="background:' + COLORS[venue.status] + '"></span>' + esc(STATUS[venue.status].short);
+        }
+        waitForMapUpdate();
+      })
+      .catch(function (error) {
+        $('r-yes').disabled = $('r-no').disabled = false;
+        result.className = 'note err'; result.textContent = 'Not saved: ' + error.message;
+      });
+  }
+  // The server rebuilds the snapshot after a decision (about 10 s on the national store).
+  function waitForMapUpdate() {
+    var version = meta.version, tries = 0;
+    (function poll() {
+      if (meta.version !== version || ++tries > 20) return;
+      setTimeout(function () { reloadMeta().then(poll); }, 3000);
+    })();
   }
   function failureText(code) {
     return { ENOTFOUND: 'the domain no longer exists', http_404: 'page not found', http_403: 'the site blocked the check',
@@ -698,7 +836,7 @@
     }).catch(function (error) { $('head-text').textContent = 'Map unavailable: ' + error.message; });
   }
 
-  window.leadMap = { map: map, tileData: tileData }; // read by ui/map-mobile-check.mjs
+  window.leadMap = { map: map, tileData: tileData, openVenue: openVenue }; // used by ui/map-mobile-check.mjs
   map.on('moveend', function () { writeUrlState(); refresh(); });
   reloadMeta();
   setInterval(function () { if (document.visibilityState === 'visible') reloadMeta(); }, 60000);

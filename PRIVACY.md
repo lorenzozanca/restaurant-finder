@@ -1,6 +1,6 @@
 # Privacy and retention process
 
-Last reviewed: 2026-09-24
+Last reviewed: 2026-09-25
 
 This is the operating process for Restaurant Finder, not a completed public
 privacy notice or legal opinion. Before deployment, replace every bracketed
@@ -48,6 +48,7 @@ is not automatically outside GDPR.
 | Contact/link data | Phone number, website, directory URL, menu/resource URL | OSM/Nominatim and public websites | Result JSON |
 | Discovery evidence | Search title, snippet, fetched HTML, request URL | Search provider and public websites | Transient cache only; snippets are removed from result JSON |
 | Ownership-review evidence | Model decision, publisher kind, short verbatim quotes of business name/address/phone, input hash, model ID, cost | LLM ownership reviewer via OpenRouter, from the crawled public page | Candidate-assessment database; full prompts and page text are not retained |
+| Manual review decisions | Reviewer name (as typed), decision, website, evidence URLs, optional notes, time | Operator, from the map's venue card | Publisher attestations in the national store |
 | National map snapshot and lead exports | Venue name, category, address, phone, coordinates, website state, crawl outcome | National store (Overture Places plus review outcomes) | `*.map-snapshot.json` next to the national store, rebuilt from it; CSV files the operator downloads from the map are kept on the operator's device and are the operator's responsibility |
 
 The application itself has no user accounts, cookies, analytics, or persistent

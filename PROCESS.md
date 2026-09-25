@@ -308,6 +308,19 @@ data (tiles plus API), against 800 KB–2 MB per view before. Server side: tiles
 answered in under 1 ms, counts and lists in about 15 ms, and the snapshot loads in 1.7 s
 at startup (building it takes about 9 s, in a worker).
 
+### Manual review on the venue card (2026-09-25)
+
+The town scanner (`ui/index.html`) and the separate review page (`ui/review.html`) are
+retired; `/` redirects to the map. Manual ownership review, the other approved
+verification route, now happens on the map's venue card, against the national store:
+the card shows the crawl assessment, the LLM reviewer's reason and quotes (from
+`data/national-review/review.sqlite`, or `NATIONAL_REVIEW_DB_PATH`), and earlier
+attestations. An approval writes a `manual_first_party_review` attestation plus the
+accepted website fact; a rejection writes the attestation only. The map snapshot is
+rebuilt immediately. `publish-national-review.mjs` never overwrites a manually decided
+venue or domain. This is the working tool for step 5 (the residual tail): filter to
+**Undecided** and review down the list.
+
 ## Current milestone and definition of done
 
 Current milestone: resume step 4 (process the 86,852 known candidates with the

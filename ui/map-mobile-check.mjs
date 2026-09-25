@@ -164,6 +164,20 @@ report.timings_ms.venue = Date.now() - t;
 await sleep(1500);
 await shot("4-venue");
 
+// Review an undecided venue: the card explains its status and opens the decision
+// form. Nothing is submitted, so the check never writes to the national store.
+t = Date.now();
+const reviewName = await evaluate("fetch('/api/national/list?status=unresolved&limit=1').then((r) => r.json()).then((d) => { window.leadMap.openVenue(d.items[0].i, false); return d.items[0].name; })");
+report.checks.review_details = await waitFor(`document.querySelector('#venue h2')?.textContent === ${JSON.stringify(reviewName)}
+  && /Why this status/.test(document.getElementById('review')?.textContent || '') && !!document.getElementById('r-open')`, 10_000);
+report.timings_ms.review_details = Date.now() - t;
+report.checks.review_text = await evaluate("document.getElementById('review').innerText.slice(0, 300)");
+await evaluate("document.getElementById('r-open').click()");
+await sleep(800);
+report.checks.review_form_open = await evaluate("!document.getElementById('r-form').hidden && document.getElementById('r-site').value");
+await shot("4b-review");
+report.checks.old_pages_redirect = await evaluate("Promise.all(['/', '/review.html'].map((path) => fetch(path).then((r) => new URL(r.url).pathname))).then((paths) => paths.every((path) => path === '/map.html'))");
+
 // Filters: verified websites in Veneto.
 await evaluate("document.querySelector('.tab[data-view=filters]').click(); document.getElementById('sheet').dataset.state = 'full'");
 await sleep(600);

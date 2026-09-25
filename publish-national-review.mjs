@@ -5,11 +5,14 @@ import { pathToFileURL } from "node:url";
 import { DatabaseSync } from "node:sqlite";
 import { EvidenceStore } from "./lib/evidence-store.mjs";
 import { writeMapSnapshot } from "./lib/map-snapshot.mjs";
+import { registrableDomain } from "./lib/publisher-ownership.mjs";
 
 // Copies national review batches (PROCESS.md step 4) into the national store the map
 // reads: every crawl assessment, and each certified-reviewer outcome as an ownership
 // attestation (accepted -> verified website, rejected -> rejected candidate). Only
-// outcomes from the frozen reviewer settings are published. Idempotent.
+// outcomes from the frozen reviewer settings are published. Idempotent. A manual
+// decision always wins: a venue with a manual verification, or a domain with any
+// manual decision, is never overwritten by the reviewer.
 
 export function publishNationalReview(reviewDbPath, nationalStore, freeze, options = {}) {
   const review = new DatabaseSync(reviewDbPath, { readOnly: true });
@@ -19,9 +22,11 @@ export function publishNationalReview(reviewDbPath, nationalStore, freeze, optio
     const assessments = review.prepare("SELECT * FROM candidate_assessments ORDER BY assessment_id").all();
     const outcomes = review.prepare(`SELECT * FROM llm_review_outcomes WHERE run_id LIKE ?
       AND outcome IN ('accepted', 'rejected') ORDER BY outcome_id`).all(`${options.runPrefix || "national-"}%`);
-    const manual = new Set(nationalStore.db.prepare(`SELECT venue_id FROM publisher_attestations
-      WHERE decision_status = 'verified' AND lifecycle_status = 'active'
-        AND method <> 'automated_llm_ownership_review'`).all().map((row) => row.venue_id));
+    const manualRows = nationalStore.db.prepare(`SELECT venue_id, publisher_domain, decision_status
+      FROM publisher_attestations WHERE lifecycle_status = 'active'
+        AND method <> 'automated_llm_ownership_review'`).all();
+    const manual = new Set(manualRows.filter((row) => row.decision_status === "verified").map((row) => row.venue_id));
+    const manualDomains = new Set(manualRows.map((row) => `${row.venue_id}\n${row.publisher_domain}`));
     nationalStore.transaction(() => {
       for (const row of assessments) {
         nationalStore.recordCandidateAssessment(row.venue_id, { candidate_url: row.candidate_url,
@@ -35,7 +40,10 @@ export function publishNationalReview(reviewDbPath, nationalStore, freeze, optio
       for (const row of outcomes) {
         if (row.verifier_model !== freeze.reviewer.verifier_model
             || row.prompt_version !== freeze.reviewer.prompt_version) { counts.skipped_unfrozen++; continue; }
-        if (manual.has(row.venue_id)) { counts.skipped_manual++; continue; }
+        const url = row.outcome === "accepted" ? row.final_url : row.candidate_url;
+        if (manual.has(row.venue_id) || manualDomains.has(`${row.venue_id}\n${registrableDomain(url)}`)) {
+          counts.skipped_manual++; continue;
+        }
         const common = { reviewed_at: row.decided_at, reviewer, source_fingerprint: row.input_sha256 };
         if (row.outcome === "accepted") {
           nationalStore.publishLlmVerifiedWebsite(row.venue_id, { ...common, website_url: row.final_url,

@@ -5,86 +5,10 @@ import { tmpdir } from "node:os";
 import { Readable } from "node:stream";
 import test from "node:test";
 import { gunzipSync } from "node:zlib";
-import { EvidenceStore } from "../lib/evidence-store.mjs";
+import { setTimeout as delay } from "node:timers/promises";
 import { writeMapSnapshot } from "../lib/map-snapshot.mjs";
 import { leadFixtureStore } from "../lib/national-leads.fixture.mjs";
 import { handle } from "./server.mjs";
-
-test("review HTTP endpoints advance rejected candidates without publishing facts", async (t) => {
-  const directory = await mkdtemp(join(tmpdir(), "review-server-"));
-  const db = join(directory, "store.sqlite");
-  const priorPath = process.env.EVIDENCE_DB_PATH;
-  process.env.EVIDENCE_DB_PATH = db;
-  const store = new EvidenceStore(db);
-  store.rememberVenue({
-    canonical_venue_id: "venue:http:review", name: "HTTP Review",
-    source_records: [
-      { source_record_id: "overture:http", source: "overture_places",
-        name: "HTTP Review", website: "https://directory.example/listing" },
-      { source_record_id: "osm:http", source: "openstreetmap",
-        name: "HTTP Review", website: "https://official.example/" },
-    ],
-  }, { checkedAt: "2026-09-01T00:00:00.000Z", municipality: "Torino" });
-  store.close();
-
-  t.after(async () => {
-    if (priorPath === undefined) delete process.env.EVIDENCE_DB_PATH;
-    else process.env.EVIDENCE_DB_PATH = priorPath;
-    await rm(directory, { recursive: true, force: true });
-  });
-
-  const page = await request("GET", "/review.html");
-  assert.equal(page.status, 200);
-  assert.match(page.headers["Content-Type"], /^text\/html/);
-
-  const firstResponse = await request("GET", "/api/review/next");
-  assert.equal(firstResponse.status, 200);
-  const first = JSON.parse(firstResponse.body);
-  assert.equal(first.candidate_domain, "directory.example");
-  assert.equal(first.queue_remaining, 2);
-
-  const malformed = await request("POST", "/api/review/decision", "not-json");
-  assert.equal(malformed.status, 400);
-
-  const forbiddenRegistry = await request("POST", "/api/review/decision", JSON.stringify({
-    venue_id: first.venue_id, candidate_domain: first.candidate_domain,
-    decision: "approve", website_url: first.candidate_url,
-    evidence_urls: [first.candidate_url], reviewer: "http-reviewer",
-    method: "official_registry",
-  }));
-  assert.equal(forbiddenRegistry.status, 400);
-  assert.match(JSON.parse(forbiddenRegistry.body).error, /manual_first_party_review/);
-
-  const rejection = await request("POST", "/api/review/decision", JSON.stringify({
-    venue_id: first.venue_id, candidate_domain: first.candidate_domain,
-    decision: "reject", website_url: first.candidate_url,
-    evidence_urls: [first.candidate_url], reviewer: "http-reviewer",
-    method: "manual_first_party_review",
-  }));
-  assert.equal(rejection.status, 200);
-  assert.equal(JSON.parse(rejection.body).status, "rejected");
-
-  const next = JSON.parse((await request("GET", "/api/review/next")).body);
-  assert.equal(next.candidate_domain, "official.example");
-  assert.equal(next.queue_remaining, 1);
-
-  const correctedApproval = await request("POST", "/api/review/decision", JSON.stringify({
-    venue_id: next.venue_id, candidate_domain: next.candidate_domain,
-    decision: "approve", website_url: "https://corrected.example/",
-    evidence_urls: ["https://corrected.example/contatti"], reviewer: "http-reviewer",
-    method: "manual_first_party_review",
-  }));
-  assert.equal(correctedApproval.status, 200);
-  assert.equal(JSON.parse(correctedApproval.body).publisher_domain, "corrected.example");
-
-  const reopened = new EvidenceStore(db);
-  assert.equal(reopened.db.prepare("SELECT COUNT(*) AS count FROM facts").get().count, 0);
-  reopened.close();
-
-  process.env.EVIDENCE_DB_PATH = join(directory, "missing.sqlite");
-  const missing = await request("GET", "/api/review/next");
-  assert.equal(missing.status, 503);
-});
 
 test("national lead map endpoints serve compressed, versioned data", async (t) => {
   const directory = await mkdtemp(join(tmpdir(), "national-server-"));
@@ -126,6 +50,71 @@ test("national lead map endpoints serve compressed, versioned data", async (t) =
   const csv = await request("GET", "/api/national/export.csv?status=verified");
   assert.match(csv.headers["Content-Disposition"], /attachment; filename="venues-.*-1\.csv"/);
   assert.match(csv.body, /Da Mario/);
+});
+
+test("the old pages redirect to the map", async () => {
+  for (const path of ["/", "/index.html", "/review.html"]) {
+    const response = await request("GET", path);
+    assert.equal(response.status, 302);
+    assert.equal(response.headers.Location, "/map.html");
+  }
+  assert.equal((await request("GET", "/api/scans")).status, 404);
+  assert.equal((await request("POST", "/api/scan", "{}")).status, 404);
+});
+
+test("a review from the venue card publishes the decision and updates the map", async (t) => {
+  const directory = await mkdtemp(join(tmpdir(), "national-review-"));
+  const db = join(directory, "national.sqlite");
+  const prior = [process.env.NATIONAL_DB_PATH, process.env.NATIONAL_REVIEW_DB_PATH];
+  process.env.NATIONAL_DB_PATH = db;
+  process.env.NATIONAL_REVIEW_DB_PATH = join(directory, "missing-review.sqlite");
+  leadFixtureStore(db);
+  writeMapSnapshot(db);
+  t.after(async () => {
+    for (const [name, value] of [["NATIONAL_DB_PATH", prior[0]], ["NATIONAL_REVIEW_DB_PATH", prior[1]]]) {
+      if (value === undefined) delete process.env[name]; else process.env[name] = value;
+    }
+    await rm(directory, { recursive: true, force: true });
+  });
+
+  const info = JSON.parse((await request("GET", "/api/national/meta")).body);
+  const list = JSON.parse((await request("GET", "/api/national/list?status=unresolved")).body);
+  assert.equal(list.total, 1);
+  const i = list.items[0].i;
+  const detail = JSON.parse((await request("GET", `/api/national/review/${i}?v=${info.version}`)).body);
+  assert.equal(detail.venue_id, "venue:amb");
+  assert.deepEqual(detail.candidates.map((item) => item.domain), ["amb.example"]);
+  assert.equal(detail.assessments[0].state, "ambiguous");
+  assert.equal(detail.llm, null);
+  assert.equal((await request("GET", `/api/national/review/${i}?v=stale`)).status, 409);
+
+  const decision = (overrides) => JSON.stringify({ venue_id: "venue:amb", candidate_domain: "amb.example",
+    decision: "approve", website_url: "https://amb.example/", evidence_urls: ["https://amb.example/contatti"],
+    reviewer: "tester", ...overrides });
+  assert.equal((await request("POST", "/api/national/review", "not-json")).status, 400);
+  const invented = await request("POST", "/api/national/review", decision({ candidate_domain: "invented.example" }));
+  assert.equal(invented.status, 400);
+  assert.match(JSON.parse(invented.body).error, /not a stored candidate/);
+  assert.equal((await request("POST", "/api/national/review", decision({ method: "official_registry" }))).status, 400);
+
+  const approved = await request("POST", "/api/national/review", decision());
+  assert.equal(approved.status, 200);
+  assert.equal(JSON.parse(approved.body).status, "verified");
+
+  // The snapshot is rebuilt in a worker; the venue turns verified once it lands.
+  let meta = info;
+  for (let attempt = 0; attempt < 100 && meta.version === info.version; attempt++) {
+    await delay(50);
+    meta = JSON.parse((await request("GET", "/api/national/meta")).body);
+  }
+  assert.notEqual(meta.version, info.version, "the map snapshot was rebuilt");
+  assert.equal(meta.statuses.find((status) => status.code === "verified").count, 2);
+  assert.equal(meta.statuses.find((status) => status.code === "unresolved").count, 0);
+  const after = JSON.parse((await request("GET", `/api/national/review/${i}`)).body);
+  assert.equal(after.attestations[0].reviewer, "tester");
+
+  process.env.NATIONAL_DB_PATH = join(directory, "missing.sqlite");
+  assert.equal((await request("POST", "/api/national/review", decision())).status, 503);
 });
 
 function request(method, url, body = "", headers = {}) {

@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-25 (mobile-first lead map shipped; batches b001–b002 published, 2,265 verified)
+Updated: 2026-09-25 (old pages retired; manual review on the map's venue card; 2,265 verified)
 Branch: `main`
 
 ## Current milestone
@@ -114,13 +114,44 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
     counts, a canvas tile layer (green arc = verified share), a draggable bottom sheet
     (list / filters / venue card with call, website, maps), URL state, a side panel on
     desktop, and Leaflet 1.9.4 served from `ui/vendor/` (hashes match the SRI values
-    in `index.html`).
+    in the since retired `index.html`).
   - `ui/map-mobile-check.mjs [--desktop]`: a headless Chrome check (phone viewport,
     touch, 4G), with screenshots in `output/map-check*/`.
   - `PRIVACY.md` registers the snapshot and CSV exports.
 - Measured (real store, 156,057 venues; lead statuses sum to 156,057): 2,265 verified,
   1,289 rejected, 837 directory, 2,606 undecided, 2,933 unreachable, 76,938 not
   checked, 69,189 no website.
+
+## Old pages retired; manual review on the venue card (2026-09-25)
+
+- Operator decision: retire the town scanner and the separate review page, and move
+  manual review into the map.
+- Removed: `ui/index.html` (town scanner, its scan-based "Italy" tab and history; its
+  scan button could spend Brave queries with no USD cap), `ui/review.html` (read a
+  separate `EVIDENCE_DB_PATH` store in venue-ID order and needed the GeoJSON export),
+  `ui/verified-venues.geojson`, `export-verified-map.mjs` and its test, and the
+  `/api/scan*`, `/api/map`, `/api/review/*` endpoints. `/`, `/index.html` and
+  `/review.html` redirect to `/map.html`. `discover.mjs` stays as a command-line tool.
+- Added:
+  - `GET /api/national/review/:i`: candidates, active attestations, crawl assessments,
+    and the latest LLM reviewer outcome (reason, quotes) for one venue
+    (`venueReview` in `lib/review-queue.mjs`; 17 ms on the real store).
+  - `POST /api/national/review`: `recordReviewDecision` against the national store.
+    The candidate domain must belong to the venue; an approval publishes
+    (`EvidenceStore.publishManuallyVerifiedWebsite`: `manual_first_party_review`
+    attestation plus the accepted website fact the map requires); a rejection records
+    the attestation only. The server then rebuilds the map snapshot
+    (`NationalMapService.storeChanged`, which also re-runs a build that was already
+    in progress).
+  - `ui/map.html`: a "Why this status" section and a **Review this website** form on
+    every venue card with a website. The reviewer name is remembered on the device.
+  - `publish-national-review.mjs` now also skips reviewer outcomes on any domain with a
+    manual decision, so a manual rejection is never overwritten by a later publish.
+- Freeze note: `lib/evidence-store.mjs` (hashed in `REVIEWER-FREEZE.json`) changed
+  additively again: the new `publishManuallyVerifiedWebsite` method. The reviewer's
+  decision code, prompt, and settings are unchanged.
+- National counts unchanged by this work (no decision was recorded on the real store):
+  2,265 verified, 1,289 rejected, 2,606 undecided, 10,000 assessed, 156,057 venues.
 
 ## Production pipeline for the 86,852 candidates (PROCESS.md step 4)
 
@@ -373,8 +404,9 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 ## Next executable task
 
-The lead map is delivered; the operator is trying it on a phone. Report any issue as a
-map fix before resuming batches.
+The lead map is delivered, with manual review on the venue card; the operator is trying
+it on a phone. Report any issue as a map fix before resuming batches. Manual reviews of
+undecided venues (filter **Undecided**) may go on meanwhile; they need no budget.
 
 Parked by the operator on 2026-09-25: the OpenRouter credit is used up. Do not prepare
 or start `b003` until the operator tops up the credit and approves it (`b001` $2.74,
@@ -398,6 +430,22 @@ or start `b003` until the operator tops up the credit and approves it (`b001` $2
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Old pages retired, review on the venue card (2026-09-25):
+  - `npm test`: 274 passed, 0 failed (three runs; an earlier run had 1 failure in the
+    unchanged `lib/lib.test.mjs` PDF-body test, the known flaky one). `git diff
+    --check`: clean.
+  - `node --test ui/server.test.mjs lib/review-queue.test.mjs publish-national-review.test.mjs`
+    cover the redirects, the review GET/POST (invalid JSON, invented domain, wrong
+    method, missing store → 503), an approval turning an undecided venue verified after
+    the snapshot rebuild, corrected sites, and manual precedence in publishing.
+  - `node ui/map-mobile-check.mjs --url http://127.0.0.1:4199/map.html` (real store,
+    Pixel 7, 4G; now also opens an undecided venue's review without submitting): all
+    checks passed; review details in 575 ms, form opens, `/` and `/review.html`
+    redirect. `--desktop`: all checks passed (review details 118 ms).
+  - Browser end-to-end on a throwaway fixture store: a decision without a name is
+    refused; an approval showed "Verified" at once, and the map updated after 3.0 s
+    (verified 1 → 2, undecided 1 → 0).
 
 - Lead map (2026-09-25):
   - `npm test`: 273 passed, 0 failed. `git diff --check`: clean.

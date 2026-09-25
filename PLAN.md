@@ -9,7 +9,7 @@ verification state.
 node ui/server.mjs
 ```
 
-Open <http://localhost:4188/map.html>.
+Open <http://localhost:4188/> (it redirects to `/map.html`; the map is the only page).
 
 The map reads the national store at
 `data/istat/2026-01-01/derived/italy-import.sqlite` and currently shows:
@@ -28,6 +28,14 @@ maps). Filters: lead status (verified, rejected, directory or social link, check
 undecided, unreachable, not checked yet, no website), category, region, province, and
 phone. The list shows the venues in view, and **Download CSV** exports the selection or
 a reproducible random sample. Filter state is kept in the URL.
+
+Every venue card with a website shows why it has its status: the crawl result, the
+LLM reviewer's reason and which identity quotes it found, and earlier decisions.
+**Review this website** records a manual ownership decision (official or not, with the
+corrected site, evidence pages, and your name). An approval publishes the website as
+verified (`manual_first_party_review`); the map updates a few seconds later, and later
+reviewer batches never overwrite a manual decision. To work through a backlog, filter
+to **Undecided** in a region and go down the list.
 
 The server answers from a compact snapshot of the store
 (`italy-import.map-snapshot.json`). `publish-national-review.mjs` rebuilds it after

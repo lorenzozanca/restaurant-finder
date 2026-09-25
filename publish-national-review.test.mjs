@@ -23,12 +23,17 @@ test("certified review outcomes publish verified and rejected websites to the na
   const review = new EvidenceStore(join(directory, "review.sqlite"));
   const national = new EvidenceStore(join(directory, "national.sqlite"));
   const venues = [["venue:ok", "https://ok.example/"], ["venue:dir", "https://dir.example/x"],
-    ["venue:manual", "https://manual.example/"], ["venue:old", "https://old.example/"]];
+    ["venue:manual", "https://manual.example/"], ["venue:old", "https://old.example/"],
+    ["venue:overruled", "https://overruled.example/"]];
   for (const store of [review, national]) for (const [id, url] of venues) remember(store, id, url);
   national.recordPublisherAttestation("venue:manual", { status: "verified", method: "manual_first_party_review",
     venue_id: "venue:manual", website_url: "https://manual.example/", evidence_urls: ["https://manual.example/"],
     reviewed_at: at, expires_at: "2027-09-25T00:00:00.000Z", reviewer: "human", source_kind: "human_review" },
   { recordedAt: at });
+  national.recordPublisherAttestation("venue:overruled", { status: "rejected", method: "manual_first_party_review",
+    venue_id: "venue:overruled", website_url: "https://overruled.example/",
+    evidence_urls: ["https://overruled.example/"], reviewed_at: at, expires_at: "2027-09-25T00:00:00.000Z",
+    reviewer: "human", source_kind: "human_review" }, { recordedAt: at });
   const outcome = (id, url, verdict, model = freeze.reviewer.verifier_model) => {
     review.recordCandidateAssessment(id, { candidate_url: url, final_url: url, assessment_state: "strongly_correlated",
       crawl_outcome: "succeeded", scores: { identity: 90, geography: 90, officialness: 90 }, evidence: [],
@@ -41,10 +46,12 @@ test("certified review outcomes publish verified and rejected websites to the na
   outcome("venue:dir", "https://dir.example/x", "rejected");
   outcome("venue:manual", "https://manual.example/", "rejected");
   outcome("venue:old", "https://old.example/", "accepted", "other/model");
+  outcome("venue:overruled", "https://overruled.example/", "accepted");
   review.close();
 
   const counts = publishNationalReview(join(directory, "review.sqlite"), national, freeze);
-  assert.deepEqual(counts, { assessments: 4, verified: 1, rejected: 1, skipped_manual: 1, skipped_unfrozen: 1 });
+  assert.deepEqual(counts, { assessments: 5, verified: 1, rejected: 1, skipped_manual: 2, skipped_unfrozen: 1 },
+    "a manual rejection is never overwritten by a reviewer acceptance");
   assert.deepEqual(publishNationalReview(join(directory, "review.sqlite"), national, freeze), counts,
     "publishing again is idempotent");
   assert.throws(() => national.recordPublisherAttestation("venue:old", { status: "verified",
@@ -55,8 +62,8 @@ test("certified review outcomes publish verified and rejected websites to the na
 
   const index = loadNationalVenueIndex(join(directory, "national.sqlite"), { at: "2026-09-21T00:00:00.000Z" });
   assert.equal(index.stats.verified, 1, "the manual venue has no accepted website fact in this fixture");
-  assert.equal(index.stats.rejected, 1);
-  assert.equal(index.stats.assessed, 4);
+  assert.equal(index.stats.rejected, 2);
+  assert.equal(index.stats.assessed, 5);
 });
 
 test("national batches follow a fixed hash order and never repeat a venue", () => {
