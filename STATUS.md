@@ -336,8 +336,9 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 ## Next executable task
 
-Awaiting operator approval for batch `b003` (`b001` $2.74, `b002` $2.86, each under its
-$5 cap). Once approved:
+Parked by the operator on 2026-09-25: the OpenRouter credit is used up. Do not prepare
+or start `b003` until the operator tops up the credit and approves it (`b001` $2.74,
+`b002` $2.86, each under its $5 cap). Then:
 
 1. Check the link (`iw dev wlp58s0 station dump`: rx bitrate well above VHT-MCS 0);
    if degraded, the operator runs `sudo nmcli connection up "Italia Uno"`.
@@ -445,6 +446,7 @@ Earlier (2026-09-13):
 
 ## Blockers
 
-- None. Each further batch needs the operator's approval and its own $5 cap. Only
+- OpenRouter credit used up (operator, 2026-09-25); production batches are parked until
+  it is topped up. Each further batch needs the operator's approval and its own $5 cap. Only
   outcomes of the frozen reviewer certified on holdout v1 (`REVIEWER-FREEZE.json`) are
   published as verified.
