@@ -16,8 +16,8 @@ The map reads the national store at
 
 - 156,057 venues;
 - 86,852 source website candidates, unverified until reviewed;
-- 3,361 verified websites (2026-09-25, after three 5,000-candidate batches);
-- 1,891 rejected candidates and 15,000 assessed candidates;
+- 4,455 verified websites (2026-09-25, after four 5,000-candidate batches);
+- 2,562 rejected candidates and 20,000 assessed candidates;
 - 69,205 venues without a source website candidate.
 
 The map is built for phones as well as desktops (from another device, open it at the

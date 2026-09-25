@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-25 (batch `b003` published; 3,361 verified)
+Updated: 2026-09-25 (batch `b004` published; 4,455 verified)
 Branch: `main`
 
 ## Current milestone
@@ -226,6 +226,26 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
   rejected, 1,250 directory, 3,893 undecided, 4,439 unreachable, 72,034 not checked,
   69,189 no website. 71,616 eligible venues remain. LLM spend on production batches:
   $8.52. The API key has $0.24 left of its $10 limit.
+- **Batch `b004` completed and published (2026-09-25).** The operator raised the key limit
+  to $25 and approved another batch. Link reconnected first (MCS 0 → MCS 8). Run
+  `national-b004`, frozen settings, $5 cap, concurrency 12. The first process stopped at
+  925/5,000 (21:49 local) when the Claude session that launched it ended; it was resumed
+  under the same run ID as a detached process (`setsid nohup`) together with a detached
+  Wi-Fi watchdog (reconnect when RTT to 1.1.1.1 exceeds 500 ms). The watchdog never had
+  to act. The resumed run finished at 22:53 (4,058 assessed, 942 resumed). No retry pass
+  was needed: 0 provider errors and only 15 EAI_AGAIN.
+  b004 crawl: 1,333 strongly correlated, 1,233 ambiguous, 538 contradicted, 1,447
+  retryable, 449 unsupported publisher. Review: 2,566 candidates (every reviewable one),
+  1,098 accepted, 672 rejected, 796 ambiguous; $2.98. Retryable causes: 842 ENOTFOUND,
+  270 HTTP 404, 166 HTTP 403, 34 timeouts, 29 HTTP 500.
+  `publish-national-review.mjs` (cumulative): 4,343 verified, 2,556 rejected, 13 skipped
+  as already manually verified, 0 from an unfrozen reviewer.
+- National counts after `b004`, read from `/api/national/meta` on a fresh server:
+  **4,455 verified**, **2,562 rejected**, **20,000 assessed**, 86,852 source candidates,
+  69,205 without a candidate, 156,057 venues. Lead statuses: 4,455 verified, 2,562
+  rejected, 1,664 directory, 5,212 undecided, 5,858 unreachable, 67,117 not checked,
+  69,189 no website. 66,616 eligible venues remain. LLM spend on production batches:
+  $11.50. The API key has $12.35 left of its $25 limit.
 
 ## LLM reviewer core and first development runs (2026-09-24)
 
@@ -356,8 +376,8 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 - National inventory: 156,057 venues in 7,398 municipalities.
 - National map: `http://localhost:4188/map.html` via `node ui/server.mjs`.
-- Map states (after `b003`, 2026-09-25): 86,852 source candidates, 3,361 verified
-  websites, 1,891 rejected candidates, 15,000 assessed candidates, and 69,205 venues
+- Map states (after `b004`, 2026-09-25): 86,852 source candidates, 4,455 verified
+  websites, 2,562 rejected candidates, 20,000 assessed candidates, and 69,205 venues
   without a source candidate.
 - The map supports municipality/venue search, municipality autocomplete, status
   filters, national clustering, and individual venue details.
@@ -431,20 +451,24 @@ The lead map is delivered, with manual review on the venue card; the operator is
 it on a phone. Report any issue as a map fix before resuming batches. Manual reviews of
 undecided venues (filter **Undecided**) may go on meanwhile; they need no budget.
 
-Blocked on the OpenRouter **API key limit**: the key has $0.24 left of its $10 limit
-(the account itself had about $20 of credit before `b003`). Batches cost about $2.9 each.
-Do not start `b004` until the operator raises the key limit (or supplies a new key) and
-approves it (`b001` $2.74, `b002` $2.86, `b003` $2.92). Then:
+Batch `b005` needs the operator's approval (each batch is approved separately). The API
+key has $12.35 left of its $25 limit; batches cost about $2.9 each (`b001` $2.74, `b002`
+$2.86, `b003` $2.92, `b004` $2.98). Once approved:
 
 1. Check the link (`iw dev wlp58s0 station dump`: rx bitrate well above VHT-MCS 0; ping
    1.1.1.1 under 50 ms). If degraded, run `nmcli connection up "Italia Uno"` (works
-   without sudo). While a batch runs, watch the RTT and reconnect when it exceeds 500 ms;
-   under crawl load the link degraded every 10–20 minutes during `b003`.
-2. `node prepare-national-batch.mjs --size 5000` (writes `b004`), then run the `b001`
-   command with `batches/b004`, `--run-id national-b004`, and a cap below the key's
-   remaining limit (default $5), logging to `data/national-review/b004.log`. Afterwards,
-   rerun it once with `--retry-state retryable` (same run ID and cap) to re-crawl
-   candidates that failed during link drops.
+   without sudo). Under crawl load the link degraded every 10–20 minutes during `b003`
+   (not during `b004`).
+2. `node prepare-national-batch.mjs --size 5000` (writes `b005`), then run the `b001`
+   command with `batches/b005`, `--run-id national-b005`, and a cap below the key's
+   remaining limit (default $5), logging to `data/national-review/b005.log`. Launch it
+   detached (`setsid nohup bash -c '…; echo "exit $?" >> …log' &`) so it survives the
+   session, with a detached watchdog that reconnects the Wi-Fi when RTT exceeds 500 ms
+   (a loop: every 30 s, ping 1.1.1.1 five times; if the average is above 500 ms or all
+   are lost, run the `nmcli` command, at most once per 2 minutes; stop when the log has
+   its `exit` line). If the link dropped during the run (many
+   EAI_AGAIN or connect timeouts, or provider errors), rerun once with
+   `--retry-state retryable` (same run ID and cap).
 3. `node publish-national-review.mjs` (also rebuilds the map snapshot), then read
    `/api/national/meta` (`stats` and `statuses`) and report the verified, rejected, and
    assessed counts.
@@ -458,6 +482,18 @@ approves it (`b001` $2.74, `b002` $2.86, `b003` $2.92). Then:
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Batch `b004` (2026-09-25; no code changed):
+  - `node prepare-national-batch.mjs --size 5000`: `b004`, 5,000 venues,
+    `previously_done` 15,000, `remaining_after` 66,616.
+  - `node assess-labelled-corpus.mjs ... --run-id national-b004 --budget-usd 5 ...`
+    (first process stopped at 925; resumed detached): 4,058 assessed, 942 resumed,
+    `reviewed_total` 2,566, 0 provider errors, $2.9797, `stopped_reason: null`.
+  - `node publish-national-review.mjs`: `{"assessments":20000,"verified":4343,"rejected":2556,"skipped_manual":13,"skipped_unfrozen":0}`;
+    map snapshot rebuilt (156,057 venues).
+  - `PORT=4197 node ui/server.mjs`, `GET /api/national/meta`: verified 4,455, rejected
+    2,562, assessed 20,000, no_candidate 69,205; lead statuses sum to 156,057.
+  - OpenRouter `GET /api/v1/key`: limit $25, remaining $12.35.
 
 - Batch `b003` (2026-09-25; no code changed):
   - `node prepare-national-batch.mjs --size 5000`: `b003`, 5,000 venues,
@@ -591,8 +627,8 @@ Earlier (2026-09-13):
 
 ## Blockers
 
-- The OpenRouter API key has $0.24 left of its $10 limit (after `b003`); production
-  batches are parked until the operator raises it. Each further batch needs the
+- No hard blocker. The OpenRouter API key has $12.35 left of its $25 limit (after
+  `b004`), enough for about four more batches. Each further batch needs the
   operator's approval and its own cap (default $5, never above the key's remaining limit). Only
   outcomes of the frozen reviewer certified on holdout v1 (`REVIEWER-FREEZE.json`) are
   published as verified.
