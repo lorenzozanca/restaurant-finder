@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-25 (batch b001 published: 1,202 verified on the map)
+Updated: 2026-09-25 (batches b001–b002 published: 2,265 verified on the map)
 Branch: `main`
 
 ## Current milestone
@@ -117,8 +117,24 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
   already manually verified, 0 from an unfrozen reviewer.
 - National counts after `b001`, read from `/api/national-map` on a fresh server:
   **1,202 verified** (was 112), **632 rejected** (was 6), **5,000 assessed** (was 0),
-  86,852 source candidates, 69,205 without a candidate, 156,057 venues. 81,852 source
-  candidates are not yet assessed.
+  86,852 source candidates, 69,205 without a candidate, 156,057 venues.
+- `prepare-national-batch.mjs` now also skips venues that already have an assessment in
+  the national store (commit `9a5f569`; `prepare-national-batch.test.mjs`), so losing
+  the gitignored batch folders cannot cause a venue to be crawled and reviewed twice.
+  Its eligible population is 86,616 venues (the selector's rule; 236 fewer than the
+  map's 86,852 source candidates).
+- **Batch `b002` completed and published (2026-09-25).** Link rx VHT-MCS 7. Run
+  `national-b002`, same frozen settings and $5 cap: 5,000 new venues (none overlapping
+  `b001`) in 71 minutes (06:58–08:09 UTC). Crawl: 1,304 strongly correlated, 1,212
+  ambiguous, 532 contradicted, 1,506 retryable, 446 unsupported publisher. Review:
+  2,516 candidates, 1,064 accepted, 657 rejected, 795 ambiguous; 0 provider errors;
+  $2.8616. Retryable causes: 850 ENOTFOUND, 297 HTTP 404, 160 HTTP 403, 39 timeouts,
+  29 HTTP 500, 27 EAI_AGAIN. `publish-national-review.mjs` (cumulative):
+  2,153 verified, 1,283 rejected, 5 skipped as already manually verified.
+- National counts after `b002`, read from `/api/national-map` on a fresh server:
+  **2,265 verified**, **1,289 rejected**, **10,000 assessed**, 86,852 source
+  candidates, 69,205 without a candidate, 156,057 venues. 76,616 eligible venues
+  remain for later batches. LLM spend on production batches: $5.60.
 
 ## LLM reviewer core and first development runs (2026-09-24)
 
@@ -249,8 +265,8 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 - National inventory: 156,057 venues in 7,398 municipalities.
 - National map: `http://localhost:4188/map.html` via `node ui/server.mjs`.
-- Map states (after `b001`, 2026-09-25): 86,852 source candidates, 1,202 verified
-  websites, 632 rejected candidates, 5,000 assessed candidates, and 69,205 venues
+- Map states (after `b002`, 2026-09-25): 86,852 source candidates, 2,265 verified
+  websites, 1,289 rejected candidates, 10,000 assessed candidates, and 69,205 venues
   without a source candidate.
 - The map supports municipality/venue search, municipality autocomplete, status
   filters, national clustering, and individual venue details.
@@ -320,14 +336,14 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 ## Next executable task
 
-Awaiting operator approval for batch `b002` (b001 cost $2.74 of its $5 cap). Once
-approved:
+Awaiting operator approval for batch `b003` (`b001` $2.74, `b002` $2.86, each under its
+$5 cap). Once approved:
 
 1. Check the link (`iw dev wlp58s0 station dump`: rx bitrate well above VHT-MCS 0);
    if degraded, the operator runs `sudo nmcli connection up "Italia Uno"`.
-2. `node prepare-national-batch.mjs --size 5000` (writes `b002`), then run it with the
-   frozen settings and a $5 cap: the `b001` command with `batches/b002` and
-   `--run-id national-b002`, logging to `data/national-review/b002.log`.
+2. `node prepare-national-batch.mjs --size 5000` (writes `b003`), then run it with the
+   frozen settings and a $5 cap: the `b001` command with `batches/b003` and
+   `--run-id national-b003`, logging to `data/national-review/b003.log`.
 3. `node publish-national-review.mjs`, read `/api/national-map` on a fresh server, and
    report the verified, rejected, and assessed counts.
 
@@ -340,6 +356,18 @@ approved:
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Batch `b002` and batch picker (2026-09-25):
+  - `node --test prepare-national-batch.test.mjs`: 1 passed. `npm test`: 267 passed,
+    0 failed. `git diff --check`: clean. With `batches/b001` moved aside, a 5,000-venue
+    selection overlapped the 5,000 assessed venues 0 times.
+  - `node prepare-national-batch.mjs --size 5000`: `b002`, 5,000 venues,
+    `previously_done` 5,000, `remaining_after` 76,616.
+  - `node assess-labelled-corpus.mjs ... --run-id national-b002 --budget-usd 5 ...`:
+    5,000 assessed, 2,516 reviewed, `stopped_reason: null`, 0 provider errors, $2.8616.
+  - `node publish-national-review.mjs`: `{"assessments":10000,"verified":2153,"rejected":1283,"skipped_manual":5,"skipped_unfrozen":0}`.
+  - `GET /api/national-map?zoom=6` (fresh server): verified 2,265, rejected 1,289,
+    assessed 10,000.
 
 - Batch `b001` (2026-09-25; no code changed):
   - `node assess-labelled-corpus.mjs ... --run-id national-b001 --budget-usd 5 ...`:
