@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-25 (reviewer certified; production pipeline built; batch b001 ready)
+Updated: 2026-09-25 (batch b001 published: 1,202 verified on the map)
 Branch: `main`
 
 ## Current milestone
@@ -103,7 +103,22 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
   and `lib/publisher-ownership.mjs` (the new method counts as verified).
 - Batch `b001` (5,000 venues) is prepared. Its first run was stopped at once because the
   Wi-Fi had degraded again (rx VHT-MCS 0, 5.3 s to Google): nothing was saved, $0 spent.
-- National counts unchanged: 112 verified, 0 candidate assessments.
+- **Batch `b001` completed and published (2026-09-25).** Link checked first (rx
+  VHT-MCS 5, 0% loss, ~11 ms RTT). Run `national-b001`, frozen reviewer (MiMo v2.6
+  Pro, prompt `llm-ownership-dev-3`), $5 cap, concurrency 12: 5,000 candidates in
+  58 minutes (05:51–06:49 UTC, ~86/min). Crawl: 1,338 strongly correlated, 1,157
+  ambiguous, 552 contradicted, 1,491 retryable, 462 unsupported publisher. Review:
+  2,495 candidates, 1,094 accepted, 626 rejected, 775 ambiguous; 0 provider errors;
+  $2.7385 ($0.0011 per review). Retryable causes: 840 ENOTFOUND (dead domains), 276
+  HTTP 404, 173 HTTP 403, 34 timeouts, 32 HTTP 500, 23 connect timeouts, 18
+  EAI_AGAIN, others fewer than 15 each.
+  `publish-national-review.mjs`: 5,000 assessments, 1,090 verified
+  (`automated_llm_ownership_review`), 626 rejected, 4 skipped because they were
+  already manually verified, 0 from an unfrozen reviewer.
+- National counts after `b001`, read from `/api/national-map` on a fresh server:
+  **1,202 verified** (was 112), **632 rejected** (was 6), **5,000 assessed** (was 0),
+  86,852 source candidates, 69,205 without a candidate, 156,057 venues. 81,852 source
+  candidates are not yet assessed.
 
 ## LLM reviewer core and first development runs (2026-09-24)
 
@@ -234,8 +249,9 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 - National inventory: 156,057 venues in 7,398 municipalities.
 - National map: `http://localhost:4188/map.html` via `node ui/server.mjs`.
-- Map states: 86,852 source candidates, 112 verified websites, 6 rejected candidate
-  domains, and 69,205 venues without a source candidate.
+- Map states (after `b001`, 2026-09-25): 86,852 source candidates, 1,202 verified
+  websites, 632 rejected candidates, 5,000 assessed candidates, and 69,205 venues
+  without a source candidate.
 - The map supports municipality/venue search, municipality autocomplete, status
   filters, national clustering, and individual venue details.
 - Map clusters (2026-09-13): numeric grid counts at every zoom until close-up.
@@ -304,13 +320,16 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 ## Next executable task
 
+Awaiting operator approval for batch `b002` (b001 cost $2.74 of its $5 cap). Once
+approved:
+
 1. Check the link (`iw dev wlp58s0 station dump`: rx bitrate well above VHT-MCS 0);
    if degraded, the operator runs `sudo nmcli connection up "Italia Uno"`.
-2. Run batch `b001` with the frozen settings and a $5 cap:
-   `node assess-labelled-corpus.mjs --partition development --fixture-dir data/national-review/batches/b001 --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --db data/national-review/review.sqlite --cache-dir data/national-review/cache --concurrency 12 --llm-review --run-id national-b001 --budget-usd 5 --verifier-model xiaomi/mimo-v2.6-pro`
-3. `node publish-national-review.mjs`, restart `node ui/server.mjs`, and report the map's
-   verified, rejected, and assessed counts. Then ask the operator before the next batch
-   (`prepare-national-batch.mjs --size 5000`, run ID `national-b002`).
+2. `node prepare-national-batch.mjs --size 5000` (writes `b002`), then run it with the
+   frozen settings and a $5 cap: the `b001` command with `batches/b002` and
+   `--run-id national-b002`, logging to `data/national-review/b002.log`.
+3. `node publish-national-review.mjs`, read `/api/national-map` on a fresh server, and
+   report the verified, rejected, and assessed counts.
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
@@ -321,6 +340,14 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Batch `b001` (2026-09-25; no code changed):
+  - `node assess-labelled-corpus.mjs ... --run-id national-b001 --budget-usd 5 ...`:
+    5,000 assessed, 2,495 reviewed, `stopped_reason: null`, 0 provider errors, $2.7385.
+  - `node publish-national-review.mjs`: `{"assessments":5000,"verified":1090,"rejected":626,"skipped_manual":4,"skipped_unfrozen":0}`.
+  - `PORT=4191 node ui/server.mjs`, `GET /api/national-map?zoom=6`: stats venues
+    156,057, source_candidates 86,852, verified 1,202, rejected 632, no_candidate
+    69,205, assessed 5,000.
 
 - Locked holdout selection and labelling packets (2026-09-24):
   - `node select-source-sample.mjs ... --count 480 --seed locked-holdout-llm-v1 ...`:
@@ -390,5 +417,6 @@ Earlier (2026-09-13):
 
 ## Blockers
 
-- No LLM verdict is "verified". Publication still requires certification on a new
-  locked holdout (`PROCESS.md` step 3).
+- None. Each further batch needs the operator's approval and its own $5 cap. Only
+  outcomes of the frozen reviewer certified on holdout v1 (`REVIEWER-FREEZE.json`) are
+  published as verified.

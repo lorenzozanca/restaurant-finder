@@ -15,8 +15,9 @@ The map reads the national store at
 `data/istat/2026-01-01/derived/italy-import.sqlite` and currently shows:
 
 - 156,057 venues;
-- 86,852 source website candidates, explicitly marked unverified;
-- 112 verified websites;
+- 86,852 source website candidates, unverified until reviewed;
+- 1,202 verified websites (2026-09-25, after the first 5,000-candidate batch);
+- 632 rejected candidates and 5,000 assessed candidates;
 - 69,205 venues without a source website candidate.
 
 Search accepts an Italian municipality or venue name. At national zoom the inventory

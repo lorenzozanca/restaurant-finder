@@ -12,19 +12,19 @@ state:
 2. **Candidate, unverified** — Overture or another source supplied a URL, but the
    project has not proved that it belongs to this venue.
 3. **Verified** — the live page matches the venue and publisher ownership passed the
-   approved verification route (currently: none approved for automatic use; see
-   below).
+   approved verification route (manual review, or the frozen LLM reviewer certified
+   on holdout v1 on 2026-09-24; see below).
 4. **Rejected** — evidence shows that the candidate is a directory, social profile,
    unrelated publisher, conflicting venue, or otherwise not an official website.
 
-Current baseline (2026-09-24, unchanged since 2026-09-08):
+Current baseline (2026-09-25, after production batch `b001`):
 
 - 156,057 venues in 7,398 municipalities;
 - 86,852 venues with a source website candidate;
 - 69,205 without a source website candidate;
-- 112 verified websites;
-- 6 rejected candidate domains;
-- 0 persisted national candidate assessments (no national candidate crawl has run).
+- 1,202 verified websites (112 earlier plus 1,090 from the certified reviewer);
+- 632 rejected candidates;
+- 5,000 persisted national candidate assessments (81,852 source candidates remain).
 
 Run `node ui/server.mjs` and open `http://localhost:4188/map.html`. The server uses
 `data/istat/2026-01-01/derived/italy-import.sqlite` by default. Override it with
