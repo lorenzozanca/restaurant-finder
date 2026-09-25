@@ -17,14 +17,14 @@ state:
 4. **Rejected** — evidence shows that the candidate is a directory, social profile,
    unrelated publisher, conflicting venue, or otherwise not an official website.
 
-Current baseline (2026-09-25, after production batches `b001`–`b002`):
+Current baseline (2026-09-25, after production batches `b001`–`b003`):
 
 - 156,057 venues in 7,398 municipalities;
 - 86,852 venues with a source website candidate;
 - 69,205 without a source website candidate;
-- 2,265 verified websites (112 earlier plus 2,153 from the certified reviewer);
-- 1,289 rejected candidates;
-- 10,000 persisted national candidate assessments (76,616 eligible venues remain).
+- 3,361 verified websites (112 earlier plus 3,249 from the certified reviewer);
+- 1,891 rejected candidates;
+- 15,000 persisted national candidate assessments (71,616 eligible venues remain).
 
 Run `node ui/server.mjs` and open `http://localhost:4188/map.html`. The server uses
 `data/istat/2026-01-01/derived/italy-import.sqlite` by default. Override it with
@@ -323,8 +323,8 @@ venue or domain. This is the working tool for step 5 (the residual tail): filter
 
 ## Current milestone and definition of done
 
-Current milestone: resume step 4 (process the 86,852 known candidates with the
-certified reviewer) once the operator tops up OpenRouter credit. The reviewer passed the adjudicated holdout-v1 gate on 2026-09-24 (105
+Current milestone: continue step 4 (process the 86,852 known candidates with the
+certified reviewer; `b001`–`b003` done) once the operator raises the OpenRouter key limit. The reviewer passed the adjudicated holdout-v1 gate on 2026-09-24 (105
 correct, 0 false, Wilson lower bound 96.5%).
 
 The milestone is done only when the frozen reviewer passes the new locked holdout.
