@@ -2,267 +2,707 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Italy venue map — restaurant-finder</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Italy venue leads — restaurant-finder</title>
+<link rel="stylesheet" href="/vendor/leaflet-1.9.4/leaflet.css">
 <style>
-  :root { color-scheme: dark; }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; margin: 0; }
-  body { background: #0f1115; color: #e5e7eb; font-family: Inter, system-ui, sans-serif; }
-  #bar { display: grid; grid-template-columns: auto minmax(18rem, 1fr) auto; gap: .8rem;
-    align-items: center; padding: .65rem .9rem; background: #171a21; border-bottom: 1px solid #30343d; }
-  h1 { font-size: 1rem; margin: 0; white-space: nowrap; }
-  h1 b { color: #4ade80; }
-  #search { display: flex; gap: .45rem; min-width: 0; }
-  input, select, button { border: 1px solid #3f4652; background: #222630; color: #f3f4f6;
-    border-radius: 5px; padding: .48rem .62rem; font: inherit; }
-  input { min-width: 8rem; flex: 1; }
-  button { cursor: pointer; background: #315c42; border-color: #4c8b64; }
-  #summary { grid-column: 1 / -1; display: flex; gap: 1rem; flex-wrap: wrap; font-size: .78rem; color: #aeb4c0; }
-  #summary b { color: #f3f4f6; }
-  #status { margin-left: auto; }
-  #legend { font-size: .78rem; white-space: nowrap; color: #c1c6d0; }
-  .dot { display: inline-block; width: .7rem; height: .7rem; border-radius: 50%; margin: 0 .25rem 0 .65rem; }
-  .verified { background: #22c55e; } .candidate { background: #f59e0b; }
-  .none { background: #64748b; } .rejected { background: #ef4444; }
-  #map { height: calc(100% - 6.2rem); min-height: 20rem; }
-  .leaflet-popup-content-wrapper { background: #20242d; color: #e5e7eb; }
-  .leaflet-popup-tip { background: #20242d; }
-  .leaflet-popup-content { font-size: 13px; line-height: 1.45; min-width: 220px; }
-  .leaflet-popup-content a { color: #6ee7b7; word-break: break-all; }
-  .venue-name { font-weight: 700; font-size: 14px; }
-  .venue-meta { color: #aeb4c0; margin-bottom: .35rem; }
-  .badge { display: inline-block; margin: .35rem 0; padding: .15rem .4rem; border-radius: 4px;
-    color: #111827; font-weight: 700; font-size: 11px; text-transform: uppercase; }
-  .badge.verified { background: #4ade80; } .badge.candidate { background: #fbbf24; }
-  .badge.no_candidate { background: #94a3b8; } .badge.rejected { background: #f87171; }
-  .cluster-badge { background: #252b36; color: #fff; border: 2px solid #768096; border-radius: 50%;
-    box-shadow: 0 1px 4px #0008; font-weight: 700; text-align: center;
-    display: flex; align-items: center; justify-content: center; }
-  .cluster-small { width: 36px; height: 36px; font-size: 12px; }
-  .cluster-medium { width: 46px; height: 46px; font-size: 13px; border-color: #f59e0b; }
-  .cluster-large { width: 58px; height: 58px; font-size: 14px; border-color: #4ade80; }
-  @media (max-width: 850px) {
-    #bar { grid-template-columns: 1fr; }
-    #legend { white-space: normal; }
-    #map { height: calc(100% - 10.5rem); }
+  :root {
+    --bg: #ffffff; --fg: #111827; --muted: #6b7280; --line: #e5e7eb; --soft: #f3f4f6;
+    --accent: #15803d; --shadow: 0 4px 18px rgba(15, 23, 42, .18);
+    --sheet-peek: 92px; --panel: 380px; --radius: 16px;
+    --safe-top: env(safe-area-inset-top, 0px); --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --verified: #16a34a; --rejected: #dc2626; --directory: #7c3aed; --unresolved: #2563eb;
+    --unreachable: #92400e; --unchecked: #f59e0b; --no_website: #94a3b8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16181d; --fg: #f3f4f6; --muted: #9ca3af; --line: #2d313a; --soft: #22252c;
+      --shadow: 0 4px 18px rgba(0, 0, 0, .5); }
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; margin: 0; overflow: hidden; }
+  body { font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--fg); background: var(--bg); }
+  button, input, select { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  #map { position: fixed; inset: 0; background: #dfe3e8; }
+
+  /* Floating search and status chips */
+  #top { position: fixed; z-index: 1000; left: 0; right: 0; top: 0; padding: calc(var(--safe-top) + 10px) 10px 0;
+    pointer-events: none; }
+  #search { pointer-events: auto; display: flex; align-items: center; gap: 6px; background: var(--bg);
+    border-radius: 24px; box-shadow: var(--shadow); padding: 4px 4px 4px 14px; max-width: 560px; }
+  #search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; height: 40px; font-size: 16px; }
+  .icon-btn { border: 0; background: transparent; min-width: 44px; height: 40px; border-radius: 20px;
+    display: inline-flex; align-items: center; justify-content: center; gap: 4px; padding: 0 10px; }
+  .icon-btn:active { background: var(--soft); }
+  #filter-btn { background: var(--soft); font-weight: 600; font-size: 14px; }
+  #filter-btn .badge { background: var(--accent); color: #fff; border-radius: 10px; padding: 0 6px; font-size: 12px; }
+  #chips { pointer-events: auto; display: flex; gap: 6px; overflow-x: auto; padding: 10px 2px 8px;
+    scrollbar-width: none; -webkit-overflow-scrolling: touch; max-width: 760px; }
+  #chips::-webkit-scrollbar { display: none; }
+  .chip { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px;
+    border-radius: 18px; border: 1px solid var(--line); background: var(--bg); box-shadow: 0 1px 4px rgba(15, 23, 42, .12);
+    font-size: 14px; white-space: nowrap; }
+  .chip[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+  .chip .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .chip[aria-pressed="true"] .n { color: inherit; opacity: .75; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; display: inline-block; }
+
+  /* Bottom sheet (side panel on wide screens) */
+  #sheet { position: fixed; z-index: 1001; left: 0; right: 0; bottom: 0; height: calc(100dvh - var(--safe-top) - 64px);
+    background: var(--bg); border-radius: var(--radius) var(--radius) 0 0; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; transform: translateY(calc(100% - var(--sheet-peek) - var(--safe-bottom)));
+    transition: transform .25s cubic-bezier(.2, .8, .2, 1); will-change: transform; }
+  #sheet.dragging { transition: none; }
+  #sheet[data-state="half"] { transform: translateY(52%); }
+  #sheet[data-state="full"] { transform: translateY(0); }
+  #grip { flex: none; padding: 8px 16px 6px; touch-action: none; cursor: grab; }
+  #grip::before { content: ""; display: block; width: 40px; height: 5px; border-radius: 3px; background: var(--line); margin: 0 auto 8px; }
+  #head { display: flex; align-items: center; gap: 8px; }
+  #head-text { flex: 1; min-width: 0; font-size: 14px; color: var(--muted); }
+  #head-text b { color: var(--fg); font-size: 17px; font-variant-numeric: tabular-nums; }
+  .tabs { display: flex; gap: 4px; }
+  .tab { border: 1px solid var(--line); background: var(--bg); border-radius: 18px; height: 36px; padding: 0 14px; font-size: 14px; }
+  .tab[aria-selected="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+  #body { flex: 1; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+    padding: 0 16px calc(16px + var(--safe-bottom)); }
+  .view[hidden] { display: none; }
+  .note { color: var(--muted); font-size: 13px; margin: 8px 0; }
+
+  .item { display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; border: 0; background: none;
+    border-bottom: 1px solid var(--line); padding: 12px 2px; min-height: 60px; }
+  .item:active { background: var(--soft); }
+  .item .t { flex: 1; min-width: 0; }
+  .item .name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .item .sub { color: var(--muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .more { width: 100%; margin: 12px 0; height: 44px; border: 1px solid var(--line); border-radius: 10px; background: var(--soft); }
+
+  fieldset { border: 0; padding: 0; margin: 14px 0; }
+  legend { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: 8px; }
+  .wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+  .wrap .chip { box-shadow: none; }
+  select, input.field { width: 100%; height: 44px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); padding: 0 10px; }
+  .row { display: flex; gap: 8px; align-items: center; }
+  .row > * { flex: 1; }
+  .toggle { display: flex; align-items: center; justify-content: space-between; min-height: 44px; }
+  .toggle input { width: 22px; height: 22px; }
+  .primary { height: 46px; border: 0; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; width: 100%; }
+  .secondary { height: 46px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); width: 100%; }
+
+  #venue h2 { font-size: 20px; margin: 4px 0 2px; }
+  .badge-status { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 13px; padding: 4px 10px;
+    border-radius: 12px; background: var(--soft); margin: 8px 0 4px; }
+  .actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); gap: 8px; margin: 14px 0; }
+  .action { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 58px;
+    border-radius: 12px; background: var(--soft); color: var(--fg); text-decoration: none; font-size: 13px; font-weight: 600; border: 0; }
+  .action .ico { font-size: 20px; line-height: 1; }
+  .action.off { opacity: .4; pointer-events: none; }
+  dl { margin: 8px 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 12px; font-size: 14px; }
+  dt { color: var(--muted); }
+  dd { margin: 0; overflow-wrap: anywhere; }
+  dd a { color: var(--accent); }
+  .back { border: 0; background: none; color: var(--accent); font-weight: 600; padding: 8px 0; min-height: 44px; }
+
+  #toast { position: fixed; z-index: 1002; left: 50%; top: calc(var(--safe-top) + 112px); transform: translateX(-50%);
+    background: var(--fg); color: var(--bg); padding: 8px 14px; border-radius: 18px; font-size: 14px; box-shadow: var(--shadow);
+    pointer-events: none; opacity: 0; transition: opacity .2s; max-width: 90vw; text-align: center; }
+  #toast.show { opacity: .95; }
+  #locate { position: fixed; z-index: 1000; right: 12px; bottom: calc(var(--sheet-peek) + var(--safe-bottom) + 14px);
+    width: 48px; height: 48px; border-radius: 24px; border: 0; background: var(--bg); box-shadow: var(--shadow); font-size: 20px; }
+  .leaflet-control-attribution { font-size: 10px; }
+  .leaflet-bottom { bottom: calc(var(--sheet-peek) + var(--safe-bottom)); }
+
+  @media (min-width: 900px) {
+    #sheet { top: 0; bottom: 0; left: 0; right: auto; width: var(--panel); height: auto; border-radius: 0;
+      transform: none !important; }
+    #grip { cursor: default; padding-top: calc(var(--safe-top) + 132px); }
+    #grip::before { display: none; }
+    #top { left: 0; width: var(--panel); padding-right: 10px; z-index: 1002; }
+    #map { left: var(--panel); }
+    #locate { bottom: 100px; }
+    .leaflet-bottom { bottom: 0; }
+    #toast { left: calc(var(--panel) + (100vw - var(--panel)) / 2); }
   }
 </style>
 </head>
 <body>
-<div id="bar">
-  <h1>restaurant-finder <b>Italy inventory</b></h1>
-  <form id="search">
-    <input id="place" list="municipalities" placeholder="Search a municipality or venue" autocomplete="off">
-    <datalist id="municipalities"></datalist>
-    <button type="submit">Find</button>
-    <button id="clear" type="button">All Italy</button>
+<div id="map" aria-label="Map of Italian venues"></div>
+
+<div id="top">
+  <form id="search" role="search">
+    <span aria-hidden="true">🔍</span>
+    <input id="q" type="search" list="towns" placeholder="Town or venue name" autocomplete="off" enterkeyhint="search" aria-label="Search a town or venue">
+    <datalist id="towns"></datalist>
+    <button id="filter-btn" class="icon-btn" type="button" aria-label="Filters">Filters <span class="badge" id="filter-count" hidden></span></button>
   </form>
-  <select id="filter" aria-label="Website status">
-    <option value="all">All venues</option>
-    <option value="candidate">Has source candidate</option>
-    <option value="verified">Verified website</option>
-    <option value="no_candidate">No website candidate</option>
-    <option value="rejected">Rejected candidate</option>
-  </select>
-  <div id="summary">
-    <span><b id="all-count">…</b> venues</span>
-    <span><b id="candidate-count">…</b> source candidates</span>
-    <span><b id="verified-count">…</b> verified</span>
-    <span><b id="assessed-count">…</b> candidate assessments</span>
-    <span><b id="strong-count">…</b> strong</span>
-    <span><b id="ambiguous-count">…</b> ambiguous</span>
-    <span><b id="contradicted-count">…</b> contradicted</span>
-    <span><b id="retryable-count">…</b> retryable</span>
-    <span><b id="unsupported-count">…</b> unsupported publisher</span>
-    <span><b id="missing-count">…</b> without candidate</span>
-    <span id="legend"><span class="dot verified"></span>verified<span class="dot candidate"></span>candidate, unverified<span class="dot none"></span>no candidate<span class="dot rejected"></span>rejected</span>
-    <span id="status">loading national inventory…</span>
-  </div>
+  <div id="chips" role="group" aria-label="Lead status"></div>
 </div>
-<div id="map"></div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+<section id="sheet" data-state="peek" aria-label="Venues">
+  <div id="grip">
+    <div id="head">
+      <div id="head-text">Loading the map…</div>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" data-view="list" aria-selected="true">List</button>
+        <button class="tab" role="tab" data-view="filters" aria-selected="false">Filters</button>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <div class="view" id="list">
+      <div id="list-items"></div>
+      <button class="more" id="more" hidden>Show more</button>
+      <p class="note" id="list-note"></p>
+    </div>
+    <div class="view" id="filters" hidden>
+      <fieldset><legend>Lead status</legend><div class="wrap" id="f-status"></div></fieldset>
+      <fieldset><legend>Category</legend><div class="wrap" id="f-cat"></div></fieldset>
+      <fieldset><legend>Area</legend>
+        <div class="row"><select id="f-region" aria-label="Region"></select><select id="f-prov" aria-label="Province"></select></div>
+      </fieldset>
+      <fieldset>
+        <label class="toggle">Only venues with a phone number <input type="checkbox" id="f-phone"></label>
+      </fieldset>
+      <button class="secondary" id="reset" type="button">Clear all filters</button>
+      <fieldset><legend>Export</legend>
+        <div class="row">
+          <select id="x-scope" aria-label="Export scope"><option value="all">Whole selection</option><option value="view">Visible area only</option></select>
+          <input class="field" id="x-sample" type="number" min="1" inputmode="numeric" placeholder="All rows" aria-label="Random sample size">
+        </div>
+        <p class="note">Leave the size empty for every matching venue. A sample is random but reproducible: the same filters, size, and seed give the same venues. Seed: <input class="field" id="x-seed" style="width:9em;height:32px;display:inline-block" aria-label="Sample seed"></p>
+        <button class="primary" id="export" type="button">Download CSV</button>
+      </fieldset>
+      <p class="note">Venue data: Overture Maps Foundation Places (CDLA-Permissive-2.0). Map: © OpenStreetMap contributors.</p>
+    </div>
+    <div class="view" id="venue" hidden></div>
+  </div>
+</section>
+
+<button id="locate" type="button" aria-label="Show my location" hidden>◎</button>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="/vendor/leaflet-1.9.4/leaflet.js"></script>
 <script>
 (function () {
   'use strict';
-  var map = L.map('map', { preferCanvas: true }).setView([42.8, 12.8], 6);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; Overture Maps Foundation and data providers'
-  }).addTo(map);
-  var layer = L.layerGroup().addTo(map);
-  var filter = document.getElementById('filter');
-  var place = document.getElementById('place');
-  var status = document.getElementById('status');
-  var activeQuery = '';
-  var activeProvince = '';
-  var requestNumber = 0;
-  var loadTimer = null;
-  var abortController = null;
+  var TILE = 512;
+  var STATUS = {
+    verified: { short: 'Verified', text: 'This website was verified as the venue\'s own site.' },
+    rejected: { short: 'Rejected', text: 'The source website was checked and is not this venue\'s official site.' },
+    directory: { short: 'Directory', text: 'The source link is a directory, social, or booking page, not an own website.' },
+    unresolved: { short: 'Undecided', text: 'The site was loaded, but its ownership could not be confirmed.' },
+    unreachable: { short: 'Unreachable', text: 'The source website could not be loaded.' },
+    unchecked: { short: 'Not checked', text: 'The source website has not been checked yet.' },
+    no_website: { short: 'No website', text: 'No website is known for this venue.' }
+  };
+  var CATEGORY_ICON = { restaurant: '🍝', pizzeria: '🍕', bar: '🍸', cafe: '☕', pub: '🍺', fast_food: '🍔', ice_cream: '🍨', other: '📍' };
+  var css = getComputedStyle(document.documentElement);
+  var COLORS = {};
+  Object.keys(STATUS).forEach(function (code) { COLORS[code] = css.getPropertyValue('--' + code).trim(); });
 
-  fetch('italian-municipalities.json').then(function (response) { return response.json(); })
-    .then(function (data) {
-      var list = document.getElementById('municipalities');
-      (data.towns || []).forEach(function (town) {
-        var option = document.createElement('option');
-        option.value = town[0] + ' (' + town[1] + ')';
-        list.appendChild(option);
-      });
-    });
+  var meta = null;           // /api/national/meta
+  var statusCodes = [];      // index -> status code, from meta
+  var provinceNames = {};    // code -> name, loaded with the town list
+  var state = readUrlState();
+  var tileData = new Map();  // "x:y:z" -> tile items, for tap hit-testing
+  var listOffset = 0;
+  var view = 'list';
 
-  document.getElementById('search').addEventListener('submit', function (event) {
-    event.preventDefault();
-    var match = place.value.trim().match(/^(.*) \(([A-Z]{2})\)$/);
-    activeQuery = match ? match[1] : place.value.trim();
-    activeProvince = match ? match[2] : '';
-    load(true);
+  var $ = function (id) { return document.getElementById(id); };
+  var sheet = $('sheet');
+
+  // --- Map -------------------------------------------------------------------
+  var map = L.map('map', { zoomControl: false, minZoom: 5, maxZoom: 19, zoomSnap: 1,
+    maxBounds: [[33.5, 2], [49.5, 23]], maxBoundsViscosity: 0.8, attributionControl: true });
+  if (window.matchMedia('(min-width: 900px)').matches) L.control.zoom({ position: 'bottomright' }).addTo(map);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19,
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · venues © Overture Maps Foundation' }).addTo(map);
+  if (state.view) map.setView([state.view[0], state.view[1]], state.view[2]);
+  else map.fitBounds([[36.6, 6.6], [47.1, 18.5]]);
+
+  var LeadLayer = L.GridLayer.extend({
+    createTile: function (coords, done) {
+      var canvas = document.createElement('canvas');
+      var ratio = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = TILE * ratio; canvas.height = TILE * ratio;
+      var key = coords.x + ':' + coords.y + ':' + coords.z;
+      fetch('/api/national/tile/' + coords.z + '/' + coords.x + '/' + coords.y + '?' + filterQuery(true))
+        .then(function (response) { if (!response.ok) throw new Error('HTTP ' + response.status); return response.json(); })
+        .then(function (data) { tileData.set(key, data); drawTile(canvas, data, ratio); done(null, canvas); })
+        .catch(function (error) { done(error, canvas); });
+      return canvas;
+    }
   });
-  document.getElementById('clear').addEventListener('click', function () {
-    activeQuery = ''; activeProvince = ''; place.value = ''; filter.value = 'all';
-    map.setView([42.8, 12.8], 6); load(false);
-  });
-  filter.addEventListener('change', function () { load(false); });
-  // Debounced: every pan/zoom fires moveend, but the backend scans 156k venues
-  // per request, so waiting 250ms collapses a drag into one fetch.
-  map.on('moveend', function () { if (!activeQuery) scheduleLoad(false); });
+  var leads = new LeadLayer({ tileSize: TILE, updateWhenIdle: true, keepBuffer: 1, zIndex: 400 });
+  leads.on('tileunload', function (event) { tileData.delete(event.coords.x + ':' + event.coords.y + ':' + event.coords.z); });
 
-  function scheduleLoad(fitResults) {
-    if (loadTimer) clearTimeout(loadTimer);
-    loadTimer = setTimeout(function () { loadTimer = null; load(fitResults); }, 250);
+  // At most 24 px, so neighbouring bubbles (at least RADIUS_PX = 60 px apart) rarely overlap.
+  function bubbleRadius(count) { return 13 + Math.min(11, Math.log10(count) * 2.6); }
+  function shortCount(n) { return n >= 10000 ? Math.round(n / 1000) + 'k' : n >= 1000 ? (n / 1000).toFixed(1).replace('.0', '') + 'k' : String(n); }
+
+  function drawTile(canvas, data, ratio) {
+    var ctx = canvas.getContext('2d');
+    ctx.scale(ratio, ratio);
+    var p = data.p, c = data.c, k;
+    for (k = 0; k < p.length; k += 4) {
+      var code = statusCodes[p[k + 3]];
+      var r = code === 'verified' ? 7.5 : 5.5;
+      ctx.beginPath(); ctx.arc(p[k], p[k + 1], r, 0, Math.PI * 2);
+      ctx.fillStyle = COLORS[code] || '#888'; ctx.fill();
+      ctx.lineWidth = 1.5; ctx.strokeStyle = '#fff'; ctx.stroke();
+    }
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    for (k = 0; k < c.length; k += 5) {
+      var x = c[k], y = c[k + 1], count = c[k + 2], verified = c[k + 3], radius = bubbleRadius(count);
+      ctx.beginPath(); ctx.arc(x, y, radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(31, 41, 55, .92)'; ctx.fill();
+      ctx.lineWidth = 2; ctx.strokeStyle = '#fff'; ctx.stroke();
+      if (verified > 0) { // green arc: share of verified websites in the cluster
+        ctx.beginPath();
+        ctx.arc(x, y, radius - 2.5, -Math.PI / 2, -Math.PI / 2 + Math.max(0.12, Math.PI * 2 * verified / count));
+        ctx.lineWidth = 3.5; ctx.strokeStyle = COLORS.verified; ctx.stroke();
+      }
+      ctx.fillStyle = '#fff'; ctx.font = '700 ' + (count >= 1000 ? 12 : 13) + 'px system-ui, sans-serif';
+      ctx.fillText(shortCount(count), x, y + 0.5);
+    }
   }
 
-  function load(fitResults) {
-    if (loadTimer) { clearTimeout(loadTimer); loadTimer = null; }
-    if (abortController) { try { abortController.abort(); } catch (e) {} }
-    abortController = ('AbortController' in window) ? new AbortController() : null;
-    var current = ++requestNumber;
-    var bounds = map.getBounds();
-    var params = new URLSearchParams({
-      zoom: String(Math.round(map.getZoom())), status: filter.value,
-      bbox: [bounds.getWest(), bounds.getSouth(), bounds.getEast(), bounds.getNorth()].join(',')
+  // Taps are resolved against the items of the tile under the finger.
+  map.on('click', function (event) {
+    var z = map.getZoom();
+    var point = map.project(event.latlng, z);
+    var tx = Math.floor(point.x / TILE), ty = Math.floor(point.y / TILE);
+    var data = tileData.get(tx + ':' + ty + ':' + z);
+    if (!data) return;
+    var lx = point.x - tx * TILE, ly = point.y - ty * TILE, best = null, bestDistance = Infinity, k, d;
+    for (k = 0; k < data.c.length; k += 5) {
+      d = Math.hypot(data.c[k] - lx, data.c[k + 1] - ly);
+      if (d <= bubbleRadius(data.c[k + 2]) + 8 && d < bestDistance) { best = k; bestDistance = d; }
+    }
+    if (best !== null) {
+      var target = map.unproject([tx * TILE + data.c[best], ty * TILE + data.c[best + 1]], z);
+      map.flyTo(target, Math.min(data.c[best + 4], map.getMaxZoom()), { duration: 0.6 });
+      return;
+    }
+    var hits = [];
+    for (k = 0; k < data.p.length; k += 4) {
+      d = Math.hypot(data.p[k] - lx, data.p[k + 1] - ly);
+      if (d <= 18) hits.push({ i: data.p[k + 2], d: d });
+    }
+    hits.sort(function (a, b) { return a.d - b.d; });
+    if (hits.length === 1 || (hits.length > 1 && hits[1].d > 6)) openVenue(hits[0].i, false);
+    else if (hits.length > 1) showVenueGroup(hits.map(function (hit) { return hit.i; }));
+  });
+
+  // --- Filters and URL state -----------------------------------------------
+  function readUrlState() {
+    var params = new URLSearchParams(location.search);
+    var list = function (name) { return (params.get(name) || '').split(',').filter(Boolean); };
+    var at = (location.hash.match(/^#@(-?[\d.]+),(-?[\d.]+),(\d+)z$/) || []).slice(1).map(Number);
+    return { status: list('status'), cat: list('cat'), region: params.get('region') || '', prov: params.get('prov') || '',
+      phone: params.get('phone') === '1', q: params.get('q') || '', view: at.length === 3 ? at : null };
+  }
+  function filterQuery(withVersion) {
+    var params = new URLSearchParams();
+    if (state.status.length) params.set('status', state.status.join(','));
+    if (state.cat.length) params.set('cat', state.cat.join(','));
+    if (state.region) params.set('region', state.region);
+    if (state.prov) params.set('prov', state.prov);
+    if (state.phone) params.set('phone', '1');
+    if (state.q) params.set('q', state.q);
+    if (withVersion && meta) params.set('v', meta.version);
+    return params.toString();
+  }
+  function writeUrlState() {
+    var c = map.getCenter();
+    var query = filterQuery(false);
+    history.replaceState(null, '', location.pathname + (query ? '?' + query : '') +
+      '#@' + c.lat.toFixed(5) + ',' + c.lng.toFixed(5) + ',' + map.getZoom() + 'z');
+  }
+  function activeFilterCount() {
+    return (state.status.length ? 1 : 0) + (state.cat.length ? 1 : 0) + (state.region ? 1 : 0) +
+      (state.prov ? 1 : 0) + (state.phone ? 1 : 0) + (state.q ? 1 : 0);
+  }
+  function filtersChanged() {
+    leads.redraw();
+    renderFilterControls();
+    writeUrlState();
+    refresh();
+  }
+
+  function toggle(list, code) {
+    var at = list.indexOf(code);
+    if (at >= 0) list.splice(at, 1); else list.push(code);
+  }
+
+  function renderChips(counts) {
+    var chips = $('chips');
+    if (!chips.childElementCount) {
+      statusCodes.forEach(function (code) {
+        var chip = document.createElement('button');
+        chip.type = 'button'; chip.className = 'chip'; chip.dataset.code = code;
+        chip.innerHTML = '<span class="dot" style="background:' + COLORS[code] + '"></span>' + STATUS[code].short + ' <span class="n"></span>';
+        chip.addEventListener('click', function () { toggle(state.status, code); filtersChanged(); });
+        chips.appendChild(chip);
+      });
+    }
+    Array.prototype.forEach.call(chips.children, function (chip) {
+      chip.setAttribute('aria-pressed', String(state.status.indexOf(chip.dataset.code) >= 0));
+      if (counts) chip.querySelector('.n').textContent = shortCount(counts[chip.dataset.code] || 0);
     });
-    if (activeQuery) params.set('q', activeQuery);
-    if (activeProvince) params.set('province', activeProvince);
-    status.textContent = 'loading…';
-    var fetchOptions = abortController ? { signal: abortController.signal } : undefined;
-    fetch('/api/national-map?' + params, fetchOptions).then(function (response) {
-      if (!response.ok) return response.json().then(function (body) { throw new Error(body.error || ('HTTP ' + response.status)); });
+  }
+
+  function renderFilterControls() {
+    renderChips(null);
+    $('filter-count').hidden = !activeFilterCount();
+    $('filter-count').textContent = activeFilterCount();
+    var statusBox = $('f-status');
+    statusBox.innerHTML = '';
+    meta.statuses.forEach(function (status) {
+      statusBox.appendChild(filterChip(STATUS[status.code].short, COLORS[status.code], state.status, status.code));
+    });
+    var catBox = $('f-cat');
+    catBox.innerHTML = '';
+    meta.categories.forEach(function (category) {
+      catBox.appendChild(filterChip(CATEGORY_ICON[category.code] + ' ' + category.label, null, state.cat, category.code));
+    });
+    var region = $('f-region');
+    region.innerHTML = '<option value="">All regions</option>' + meta.regions.map(function (entry) {
+      return '<option value="' + entry.code + '"' + (entry.code === state.region ? ' selected' : '') + '>' + esc(entry.name) + '</option>';
+    }).join('');
+    var provinces = meta.provinces.filter(function (entry) { return !state.region || entry.region === state.region; });
+    $('f-prov').innerHTML = '<option value="">All provinces</option>' + provinces.map(function (entry) {
+      var name = provinceNames[entry.code] ? provinceNames[entry.code] + ' (' + entry.code + ')' : entry.code;
+      return '<option value="' + entry.code + '"' + (entry.code === state.prov ? ' selected' : '') + '>' + esc(name) + '</option>';
+    }).sort(function (a, b) { return a.replace(/<[^>]+>/g, '').localeCompare(b.replace(/<[^>]+>/g, ''), 'it'); }).join('');
+    $('f-phone').checked = state.phone;
+    $('q').value = state.q;
+  }
+
+  function filterChip(label, color, list, code) {
+    var chip = document.createElement('button');
+    chip.type = 'button'; chip.className = 'chip';
+    chip.setAttribute('aria-pressed', String(list.indexOf(code) >= 0));
+    chip.innerHTML = (color ? '<span class="dot" style="background:' + color + '"></span>' : '') + esc(label);
+    chip.addEventListener('click', function () { toggle(list, code); filtersChanged(); });
+    return chip;
+  }
+
+  $('f-region').addEventListener('change', function () {
+    state.region = this.value;
+    if (state.prov && !meta.provinces.some(function (p) { return p.code === state.prov && p.region === state.region; })) state.prov = '';
+    filtersChanged();
+    if (state.region) fitSelection();
+  });
+  $('f-prov').addEventListener('change', function () { state.prov = this.value; filtersChanged(); if (state.prov) fitSelection(); });
+  $('f-phone').addEventListener('change', function () { state.phone = this.checked; filtersChanged(); });
+  $('reset').addEventListener('click', function () {
+    state.status = []; state.cat = []; state.region = ''; state.prov = ''; state.phone = false; state.q = '';
+    filtersChanged();
+  });
+  $('filter-btn').addEventListener('click', function () { setView('filters'); setSheet('full'); });
+
+  // Zoom to the venues of the current selection (region/province picks).
+  function fitSelection() {
+    fetch('/api/national/summary?' + filterQuery(false)).then(function (r) { return r.json(); }).then(function (data) {
+      var b = data.total.bounds;
+      if (!b) return toast('No venues match these filters');
+      map.fitBounds([[b[1], b[0]], [b[3], b[2]]], { maxZoom: 15, padding: [20, 20] });
+    });
+  }
+
+  // --- Search ----------------------------------------------------------------
+  var townsLoaded = false;
+  function loadTowns() {
+    if (townsLoaded) return Promise.resolve();
+    townsLoaded = true;
+    return fetch('italian-municipalities.json').then(function (r) { return r.json(); }).then(function (data) {
+      (data.provinces || []).forEach(function (entry) { provinceNames[entry[0]] = entry[1]; });
+      var options = (data.towns || []).map(function (town) { return '<option value="' + esc(town[0] + ' (' + town[1] + ')') + '">'; });
+      $('towns').innerHTML = options.join('');
+      if (meta) renderFilterControls();
+    });
+  }
+  $('q').addEventListener('focus', loadTowns);
+  $('search').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var text = $('q').value.trim();
+    $('q').blur();
+    if (!text) { if (state.q) { state.q = ''; filtersChanged(); } return; }
+    var match = text.match(/^(.*) \(([A-Z]{2})\)$/);
+    var name = match ? match[1] : text;
+    fetch('/api/national/locate?name=' + encodeURIComponent(name) + (match ? '&prov=' + match[2] : ''))
+      .then(function (r) { return r.ok ? r.json() : null; }).then(function (place) {
+        if (place) { // a town: move there, keep the filters
+          if (state.q) { state.q = ''; filtersChanged(); }
+          $('q').value = place.name + ' (' + place.province + ')';
+          map.fitBounds([[place.south, place.west], [place.north, place.east]], { maxZoom: 15, padding: [30, 30] });
+          return;
+        }
+        state.q = text; // otherwise: filter venues by name
+        filtersChanged();
+        setView('list'); setSheet('half');
+        fitSelection();
+      });
+  });
+  $('q').addEventListener('input', function () {
+    if (!this.value && state.q) { state.q = ''; filtersChanged(); }
+  });
+
+  // --- Summary and list ------------------------------------------------------
+  function bboxParam() {
+    var b = map.getBounds();
+    return [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()].map(function (v) { return v.toFixed(5); }).join(',');
+  }
+  var refreshTimer = null, summaryRequest = 0;
+  function refresh() {
+    clearTimeout(refreshTimer);
+    refreshTimer = setTimeout(function () {
+      var current = ++summaryRequest;
+      fetch('/api/national/summary?' + filterQuery(false) + '&bbox=' + bboxParam()).then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (current !== summaryRequest) return;
+          var view_ = data.in_view;
+          renderChips(view_.status);
+          // Verified count is shown only without a status filter (the status facet ignores it).
+          var verified = !state.status.length && view_.status.verified;
+          $('head-text').innerHTML = '<b>' + number(view_.matching) + '</b> in view' +
+            (verified ? ' · <b style="color:var(--verified)">' + number(view_.status.verified) + '</b> verified' : '') +
+            '<br><span>' + number(data.total.matching) + ' in Italy' + (activeFilterCount() ? ' with these filters' : '') + '</span>';
+        });
+      if (view === 'list' && sheet.dataset.state !== 'peek') loadList(true);
+      else listStale = true;
+    }, 200);
+  }
+  var listStale = true, listRequest = 0;
+  function loadList(reset) {
+    if (reset) { listOffset = 0; listStale = false; }
+    var current = ++listRequest;
+    fetch('/api/national/list?' + filterQuery(false) + '&bbox=' + bboxParam() + '&offset=' + listOffset + '&limit=50')
+      .then(function (r) { return r.json(); }).then(function (data) {
+        if (current !== listRequest) return;
+        var box = $('list-items');
+        if (reset) { box.innerHTML = ''; $('body').scrollTop = 0; }
+        data.items.forEach(function (item) { box.appendChild(listRow(item)); });
+        listOffset += data.items.length;
+        $('more').hidden = listOffset >= data.total;
+        $('list-note').textContent = data.total ? (listOffset < data.total ? 'Showing ' + number(listOffset) + ' of ' + number(data.total) + ' in view.' : '') : 'No venues in view match these filters. Zoom out or clear filters.';
+      });
+  }
+  function listRow(item) {
+    var row = document.createElement('button');
+    row.type = 'button'; row.className = 'item';
+    row.innerHTML = '<span class="dot" style="background:' + COLORS[item.status] + ';width:12px;height:12px"></span>' +
+      '<span class="t"><div class="name">' + esc(item.name) + '</div><div class="sub">' + CATEGORY_ICON[item.category] + ' ' +
+      esc(STATUS[item.status].short) + ' · ' + esc(item.municipality) + (item.province ? ' (' + esc(item.province) + ')' : '') +
+      (item.phone ? ' · ☎' : '') + '</div></span>';
+    row.addEventListener('click', function () { openVenue(item.i, true); });
+    return row;
+  }
+  $('more').addEventListener('click', function () { loadList(false); });
+  $('body').addEventListener('scroll', function () {
+    var body = this;
+    if (view === 'list' && !$('more').hidden && body.scrollTop + body.clientHeight > body.scrollHeight - 200) {
+      $('more').hidden = true; loadList(false);
+    }
+  }, { passive: true });
+
+  function showVenueGroup(indexes) {
+    var box = $('list-items');
+    box.innerHTML = '';
+    setView('list'); setSheet('half');
+    $('more').hidden = true;
+    $('list-note').textContent = indexes.length + ' venues at this spot.';
+    listStale = true;
+    indexes.forEach(function (i) {
+      fetch('/api/national/venue/' + i + '?v=' + meta.version).then(function (r) { return r.json(); })
+        .then(function (venue) { box.appendChild(listRow(venue)); });
+    });
+  }
+
+  // --- Venue details ---------------------------------------------------------
+  var returnView = 'list';
+  function openVenue(i, fly) {
+    fetch('/api/national/venue/' + i + '?v=' + meta.version).then(function (r) {
+      if (r.status === 409) { reloadMeta(); throw new Error('The map was updated; tap again.'); }
+      return r.json();
+    }).then(function (venue) {
+      returnView = view === 'venue' ? returnView : view;
+      renderVenue(venue);
+      setView('venue');
+      if (sheet.dataset.state === 'peek') setSheet('half');
+      if (fly) flyAboveSheet([venue.lat, venue.lon], Math.max(map.getZoom(), 17));
+    }).catch(function (error) { toast(error.message); });
+  }
+  function renderVenue(venue) {
+    var website = venue.verified_url || venue.candidate_url;
+    var websiteLabel = venue.verified_url ? 'Website' : 'Unverified site';
+    var maps = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(venue.name + ' ' + venue.address);
+    var why = STATUS[venue.status].text;
+    if (venue.status === 'unreachable' && venue.failure) why += ' (' + failureText(venue.failure) + ')';
+    $('venue').innerHTML =
+      '<button class="back" type="button" id="back">‹ Back</button>' +
+      '<h2>' + esc(venue.name) + '</h2>' +
+      '<div class="note" style="margin:0">' + CATEGORY_ICON[venue.category] + ' ' + esc(categoryLabel(venue.category)) + ' · ' +
+        esc(venue.municipality) + (venue.province ? ' (' + esc(venue.province) + ')' : '') + ' · ' + esc(venue.region_name) + '</div>' +
+      '<div class="badge-status"><span class="dot" style="background:' + COLORS[venue.status] + '"></span>' + esc(STATUS[venue.status].short) + '</div>' +
+      '<div class="note" style="margin-top:0">' + esc(why) + '</div>' +
+      '<div class="actions">' +
+        '<a class="action' + (venue.phone ? '' : ' off') + '" href="tel:' + esc(venue.phone.replace(/\s+/g, '')) + '"><span class="ico">📞</span>Call</a>' +
+        '<a class="action' + (website ? '' : ' off') + '" href="' + esc(website || '#') + '" target="_blank" rel="noopener"><span class="ico">🌐</span>' + websiteLabel + '</a>' +
+        '<a class="action" href="' + esc(maps) + '" target="_blank" rel="noopener"><span class="ico">🧭</span>Maps</a>' +
+        (venue.menu_url ? '<a class="action" href="' + esc(venue.menu_url) + '" target="_blank" rel="noopener"><span class="ico">📋</span>Menu</a>' : '') +
+      '</div>' +
+      '<dl>' +
+        (venue.address ? '<dt>Address</dt><dd>' + esc(venue.address) + '</dd>' : '') +
+        (venue.phone ? '<dt>Phone</dt><dd><a href="tel:' + esc(venue.phone.replace(/\s+/g, '')) + '">' + esc(venue.phone) + '</a></dd>' : '') +
+        (venue.verified_url ? '<dt>Verified</dt><dd><a href="' + esc(venue.verified_url) + '" target="_blank" rel="noopener">' + esc(venue.verified_url) + '</a></dd>' : '') +
+        (venue.candidate_url && venue.candidate_url !== venue.verified_url ? '<dt>Source link</dt><dd><a href="' + esc(venue.candidate_url) + '" target="_blank" rel="noopener">' + esc(venue.candidate_url) + '</a> <span class="note">(not verified)</span></dd>' : '') +
+        (venue.checked_at ? '<dt>Checked</dt><dd>' + esc(venue.checked_at.slice(0, 10)) + (venue.assessment ? ' · ' + esc(venue.assessment.replace(/_/g, ' ')) : '') + '</dd>' : '') +
+      '</dl>' +
+      '<p class="note">' + esc(venue.id) + '</p>';
+    $('back').addEventListener('click', function () { setView(returnView); });
+  }
+  function failureText(code) {
+    return { ENOTFOUND: 'the domain no longer exists', http_404: 'page not found', http_403: 'the site blocked the check',
+      timeout: 'timed out', EAI_AGAIN: 'DNS lookup failed' }[code] || code.replace(/_/g, ' ');
+  }
+  function categoryLabel(code) {
+    var found = meta.categories.filter(function (c) { return c.code === code; })[0];
+    return found ? found.label : code;
+  }
+  // Centre a point in the part of the map the sheet does not cover.
+  function flyAboveSheet(latlng, zoom) {
+    var covered = window.matchMedia('(min-width: 900px)').matches ? 0 : sheet.getBoundingClientRect().height *
+      (sheet.dataset.state === 'full' ? 0 : 0.48) / 2;
+    var point = map.project(latlng, zoom).add([0, covered]);
+    map.flyTo(map.unproject(point, zoom), zoom, { duration: 0.6 });
+  }
+
+  // --- Export ------------------------------------------------------------------
+  $('x-seed').value = Math.random().toString(36).slice(2, 8);
+  $('export').addEventListener('click', function () {
+    var params = filterQuery(false);
+    var extra = new URLSearchParams();
+    if ($('x-scope').value === 'view') extra.set('bbox', bboxParam());
+    var sample = parseInt($('x-sample').value, 10);
+    if (sample > 0) { extra.set('sample', String(sample)); extra.set('seed', $('x-seed').value || 'seed'); }
+    var link = document.createElement('a');
+    link.href = '/api/national/export.csv?' + [params, extra.toString()].filter(Boolean).join('&');
+    link.download = '';
+    document.body.appendChild(link); link.click(); link.remove();
+  });
+
+  // --- Sheet -----------------------------------------------------------------
+  function setView(name) {
+    view = name;
+    ['list', 'filters', 'venue'].forEach(function (id) { $(id).hidden = id !== name; });
+    Array.prototype.forEach.call(document.querySelectorAll('.tab'), function (tab) {
+      tab.setAttribute('aria-selected', String(tab.dataset.view === name));
+    });
+    if (name === 'list' && listStale) loadList(true);
+  }
+  function setSheet(stateName) {
+    sheet.dataset.state = stateName;
+    if (stateName !== 'peek' && view === 'list' && listStale) loadList(true);
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.tab'), function (tab) {
+    tab.addEventListener('click', function (event) {
+      event.stopPropagation();
+      setView(tab.dataset.view);
+      if (sheet.dataset.state === 'peek') setSheet('half');
+    });
+  });
+  // Drag the sheet between peek, half, and full; a tap on the header toggles it.
+  (function () {
+    var grip = $('grip'), startY = 0, startOffset = 0, lastY = 0, lastT = 0, velocity = 0, moved = false, dragging = false;
+    function offsetFor(name) {
+      var h = sheet.getBoundingClientRect().height;
+      var peek = parseFloat(css.getPropertyValue('--sheet-peek')) || 92;
+      return name === 'full' ? 0 : name === 'half' ? h * 0.52 : h - peek;
+    }
+    grip.addEventListener('pointerdown', function (event) {
+      if (window.matchMedia('(min-width: 900px)').matches || event.target.closest('.tab')) return;
+      dragging = true; moved = false; startY = lastY = event.clientY; lastT = event.timeStamp;
+      startOffset = offsetFor(sheet.dataset.state);
+      grip.setPointerCapture(event.pointerId);
+    });
+    grip.addEventListener('pointermove', function (event) {
+      if (!dragging) return;
+      var dy = event.clientY - startY;
+      if (Math.abs(dy) > 4) moved = true;
+      if (!moved) return;
+      sheet.classList.add('dragging');
+      velocity = (event.clientY - lastY) / Math.max(1, event.timeStamp - lastT);
+      lastY = event.clientY; lastT = event.timeStamp;
+      var offset = Math.max(0, Math.min(offsetFor('peek'), startOffset + dy));
+      sheet.style.transform = 'translateY(' + offset + 'px)';
+    });
+    function end(event) {
+      if (!dragging) return;
+      dragging = false;
+      sheet.classList.remove('dragging');
+      sheet.style.transform = '';
+      if (!moved) { setSheet(sheet.dataset.state === 'peek' ? 'half' : 'peek'); return; }
+      var offset = Math.max(0, Math.min(offsetFor('peek'), startOffset + event.clientY - startY));
+      var projected = offset + velocity * 180;
+      var names = ['full', 'half', 'peek'];
+      var best = names.reduce(function (a, b) { return Math.abs(offsetFor(a) - projected) < Math.abs(offsetFor(b) - projected) ? a : b; });
+      setSheet(best);
+    }
+    grip.addEventListener('pointerup', end);
+    grip.addEventListener('pointercancel', end);
+  })();
+
+  // --- Location ----------------------------------------------------------------
+  if (window.isSecureContext && navigator.geolocation) {
+    $('locate').hidden = false;
+    $('locate').addEventListener('click', function () {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        flyAboveSheet([position.coords.latitude, position.coords.longitude], 15);
+      }, function () { toast('Location unavailable'); }, { enableHighAccuracy: false, timeout: 8000 });
+    });
+  }
+
+  // --- Start -------------------------------------------------------------------
+  var toastTimer = null;
+  function toast(text) {
+    var box = $('toast');
+    box.textContent = text; box.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { box.classList.remove('show'); }, 2600);
+  }
+  function number(value) { return Number(value || 0).toLocaleString('en-US'); }
+  function esc(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function reloadMeta() {
+    return fetch('/api/national/meta').then(function (response) {
+      if (response.status === 503) {
+        $('head-text').textContent = 'Preparing the map… (about 10 seconds after an update)';
+        return new Promise(function (resolve) { setTimeout(resolve, 2000); }).then(reloadMeta);
+      }
+      if (!response.ok) throw new Error('HTTP ' + response.status);
       return response.json();
     }).then(function (data) {
-      if (current !== requestNumber) return;
-      render(data);
-      setStats(data.stats || {});
-      status.style.color = '';
-      status.textContent = statusText(data);
-      if (fitResults && data.features.length) {
-        var resultBounds = L.latLngBounds(data.features.map(function (feature) {
-          return [feature.geometry.coordinates[1], feature.geometry.coordinates[0]];
-        }));
-        map.fitBounds(resultBounds.pad(.15), { maxZoom: 14 });
-      }
-    }).catch(function (error) {
-      if (current !== requestNumber) return;
-      if (error && error.name === 'AbortError') return;
-      status.textContent = 'failed: ' + error.message;
-      status.style.color = '#f87171';
-    });
+      if (meta && meta.version === data.version) return;
+      var changed = Boolean(meta);
+      meta = data;
+      statusCodes = data.statuses.map(function (s) { return s.code; });
+      renderFilterControls();
+      if (!map.hasLayer(leads)) leads.addTo(map);
+      else if (changed) { leads.redraw(); toast('Map updated'); }
+      refresh();
+    }).catch(function (error) { $('head-text').textContent = 'Map unavailable: ' + error.message; });
   }
 
-  function statusText(data) {
-    var base = number(data.visible_count);
-    if (data.mode === 'clusters') {
-      base += ' venues in ' + number(data.features.length) + ' clusters — click a cluster to zoom in';
-    } else if (data.truncated) {
-      base += ' venues match — showing first ' + number(data.features.length) + ' — zoom in for the rest';
-    } else {
-      base += ' venues shown — zoom out for clusters';
-    }
-    return base;
-  }
-
-  function render(data) {
-    layer.clearLayers();
-    (data.features || []).forEach(function (feature) {
-      var coordinates = feature.geometry.coordinates;
-      var props = feature.properties || {};
-      if (props.kind === 'cluster') {
-        // Fixed-size circular badge with the count only: cheap to lay out,
-        // identical shape at every zoom, no per-cluster popup content.
-        var size = props.count >= 1000 ? 58 : props.count >= 100 ? 46 : 36;
-        var tier = props.count >= 1000 ? 'large' : props.count >= 100 ? 'medium' : 'small';
-        var icon = L.divIcon({
-          className: 'cluster-badge cluster-' + tier,
-          html: '<span>' + number(props.count) + '</span>',
-          iconSize: [size, size]
-        });
-        L.marker([coordinates[1], coordinates[0]], { icon: icon, keyboard: false }).addTo(layer)
-          .on('click', function () { drillDown(props, coordinates); });
-      } else {
-        L.circleMarker([coordinates[1], coordinates[0]], {
-          radius: props.status === 'verified' ? 6 : 4,
-          color: color(props.status), weight: props.status === 'verified' ? 2 : 1,
-          fillColor: color(props.status), fillOpacity: .72
-        }).addTo(layer).bindPopup(venuePopup(props));
-      }
-    });
-  }
-
-  function drillDown(props, coordinates) {
-    var bounds = props.bounds;
-    if (bounds && isFinite(bounds[0]) && isFinite(bounds[1]) && isFinite(bounds[2]) && isFinite(bounds[3])
-        && (bounds[2] > bounds[0] || bounds[3] > bounds[1])) {
-      map.fitBounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]], {
-        padding: [30, 30],
-        maxZoom: Math.min(map.getZoom() + 3, 16)
-      });
-      // Degenerate bounds (single venue point) still need a zoom step.
-      var after = map.getBounds();
-      if (after.getEast() - after.getWest() < 1e-9) map.setView([coordinates[1], coordinates[0]], map.getZoom() + 2);
-    } else {
-      map.setView([coordinates[1], coordinates[0]], map.getZoom() + 2);
-    }
-  }
-
-  function venuePopup(props) {
-    var html = '<div class="venue-name">' + esc(props.name) + '</div>' +
-      '<div class="venue-meta">' + esc([props.municipality, props.province, props.type].filter(Boolean).join(' · ')) + '</div>' +
-      '<span class="badge ' + esc(props.status) + '">' + esc(label(props.status)) + '</span>';
-    if (props.address) html += '<div>' + esc(props.address) + '</div>';
-    if (props.phone) html += '<div>' + esc(props.phone) + '</div>';
-    if (props.verified_url) html += '<div><a target="_blank" rel="noopener" href="' + esc(props.verified_url) + '">verified website</a></div>';
-    if (props.candidate_url && props.candidate_url !== props.verified_url) html += '<div><a target="_blank" rel="noopener" href="' + esc(props.candidate_url) + '">source candidate — not verified</a></div>';
-    if (props.candidate_assessment) {
-      var assessment = props.candidate_assessment;
-      html += '<div>crawl assessment: <b>' + esc(assessmentLabel(assessment.state)) + '</b></div>' +
-        '<div class="venue-meta">identity ' + number(assessment.scores.identity) +
-        ' · geography ' + number(assessment.scores.geography) +
-        ' · officialness ' + number(assessment.scores.officialness) + '</div>';
-    }
-    if (props.menu_url) html += '<div><a target="_blank" rel="noopener" href="' + esc(props.menu_url) + '">menu/resource</a></div>';
-    return html;
-  }
-
-  function setStats(stats) {
-    document.getElementById('all-count').textContent = number(stats.venues);
-    document.getElementById('candidate-count').textContent = number(stats.source_candidates);
-    document.getElementById('verified-count').textContent = number(stats.verified);
-    document.getElementById('assessed-count').textContent = number(stats.assessed);
-    var assessments = stats.assessments || {};
-    document.getElementById('strong-count').textContent = number(assessments.strongly_correlated);
-    document.getElementById('ambiguous-count').textContent = number(assessments.ambiguous);
-    document.getElementById('contradicted-count').textContent = number(assessments.contradicted);
-    document.getElementById('retryable-count').textContent = number(assessments.retryable);
-    document.getElementById('unsupported-count').textContent = number(assessments.unsupported_publisher);
-    document.getElementById('missing-count').textContent = number(stats.no_candidate);
-  }
-  function label(value) { return { verified: 'verified', candidate: 'candidate — unverified', rejected: 'candidate rejected', no_candidate: 'no website candidate' }[value] || value; }
-  function assessmentLabel(value) { return String(value || 'unassessed').replace(/_/g, ' '); }
-  function color(value) { return { verified: '#22c55e', candidate: '#f59e0b', rejected: '#ef4444', no_candidate: '#64748b' }[value] || '#64748b'; }
-  function number(value) { return Number(value || 0).toLocaleString('en'); }
-  function esc(value) { return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-
-  load(false);
+  window.leadMap = { map: map, tileData: tileData }; // read by ui/map-mobile-check.mjs
+  map.on('moveend', function () { writeUrlState(); refresh(); });
+  reloadMeta();
+  setInterval(function () { if (document.visibilityState === 'visible') reloadMeta(); }, 60000);
+  if (state.prov || state.region) loadTowns();
 })();
 </script>
 </body>

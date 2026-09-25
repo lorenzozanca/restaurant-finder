@@ -273,10 +273,45 @@ this order:
 Every discovered URL enters the same pipeline above. There is no second verification
 architecture for Brave results.
 
+## Map and lead interface (operator priority from 2026-09-25) — delivered 2026-09-25
+
+Step 4 is parked until the operator tops up OpenRouter (batches `b001`–`b002` done).
+Meanwhile the national map becomes a fast, mobile-first lead browser. Measured on
+2026-09-25: the first request blocked 6.8 s to build the index; a zoomed-in Rome view
+sent 800 KB and a "roma" search 2 MB of uncompressed GeoJSON; clusters were a fixed
+degree grid with up to 2,500 DOM markers; only one status filter existed.
+
+1. **Data layer.** A compact map snapshot, rebuilt after each publish and whenever the
+   national store changes (in a worker, never blocking requests), loads in about
+   1 s. Supercluster-style clustering in screen space (60 px), stable
+   while panning, with an expansion zoom per cluster. Map data is served as
+   cached, versioned tiles drawn on canvas; venue details are loaded on tap; responses
+   are gzip-compressed. Targets: at most 50 ms server time per request and at most
+   30 KB per screen.
+2. **Filters and samples.** Region → province → municipality, name search, category
+   (7 Overture types), lead status (verified, rejected, checked but unresolved,
+   unreachable, not yet checked, no website), has phone. Facet counts in view and in
+   total, filter state in the URL, a list of venues in view, and a CSV export of the
+   whole selection or a seeded random sample (with Overture attribution).
+3. **Mobile-first page.** Full-screen map, floating search, filter chips, a draggable
+   bottom sheet (counts / list / filters or details), tap-to-call, touch targets of
+   at least 44 px, safe-area insets, and Leaflet served locally. On desktop the sheet
+   becomes a side panel.
+4. **Verification.** Tests for count conservation across zooms and tile edges, for filter
+   counts against the store, and for response-size budgets; a mobile-emulation run
+   (headless Chrome, phone viewport, 4G throttling) with timings and screenshots.
+
+Result (2026-09-25): all four steps are implemented. On a Pixel 7 viewport over
+throttled 4G (150 ms RTT, 9 Mbit/s), clusters and counts appear 1.1 s after navigation.
+A whole session of search, list, venue card, filters and street zoom moved 47 KB of map
+data (tiles plus API), against 800 KB–2 MB per view before. Server side: tiles are
+answered in under 1 ms, counts and lists in about 15 ms, and the snapshot loads in 1.7 s
+at startup (building it takes about 9 s, in a worker).
+
 ## Current milestone and definition of done
 
-Current milestone: **process the 86,852 known candidates with the certified reviewer
-(step 4).** The reviewer passed the adjudicated holdout-v1 gate on 2026-09-24 (105
+Current milestone: resume step 4 (process the 86,852 known candidates with the
+certified reviewer) once the operator tops up OpenRouter credit. The reviewer passed the adjudicated holdout-v1 gate on 2026-09-24 (105
 correct, 0 false, Wilson lower bound 96.5%).
 
 The milestone is done only when the frozen reviewer passes the new locked holdout.

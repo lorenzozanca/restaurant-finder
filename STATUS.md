@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-25 (batches b001–b002 published: 2,265 verified on the map)
+Updated: 2026-09-25 (mobile-first lead map shipped; batches b001–b002 published, 2,265 verified)
 Branch: `main`
 
 ## Current milestone
@@ -84,6 +84,43 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
   0 errors, 0 uncertain. Both disputed rejections were adjudicated official (2 real
   false rejections). Final: 105 correct, 0 false, Wilson lower bound 96.5%. The frozen
   reviewer (`REVIEWER-FREEZE.json`) is certified for `PROCESS.md` step 4.
+
+## Mobile-first lead map (PROCESS.md "Map and lead interface", 2026-09-25)
+
+- Operator priority while batches are parked. Before: 6.8 s blocking index build on the
+  first request, 800 KB (Rome zoom) to 2 MB ("roma" search) of uncompressed GeoJSON,
+  fixed-degree grid clusters with up to 2,500 DOM markers, one status filter.
+- Shipped:
+  - `lib/map-snapshot.mjs` + `build-map-snapshot.mjs`: a columnar snapshot
+    (`italy-import.map-snapshot.json`, 32 MB, gitignored) with one lead status per
+    venue. The statuses are verified, rejected (both from attestations only), directory
+    (unsupported publisher), undecided, unreachable (retryable, with the failure code),
+    not checked, and no website. `publish-national-review.mjs` rebuilds it after
+    publishing.
+  - `lib/national-map-service.mjs`: loads the snapshot at server start. When the store
+    changes it rebuilds the snapshot in a worker thread (`lib/map-snapshot-worker.mjs`)
+    while the old index keeps answering.
+  - `lib/map-cluster.mjs`: supercluster-style clustering over zooms 4–16, 60 px
+    screen radius, weighted centroids, and an expansion zoom per cluster, bucketed by
+    512 px tile.
+  - `lib/national-leads.mjs`: filters (status, category, region, province, phone,
+    name), a 12-entry cluster cache per filter set, tiles, facet counts, the list, venue
+    details, municipality lookup, and CSV export (whole selection or a seeded sample,
+    with Overture attribution).
+  - `ui/server.mjs`: `/api/national/{meta,tile/z/x/y,summary,list,venue/i,locate,export.csv}`,
+    gzip, and versioned immutable tiles. The old `/api/national-map` and its grid code
+    are removed. `NATIONAL_DB_PATH` no longer falls back to `EVIDENCE_DB_PATH`.
+  - `ui/map.html`, rewritten: full-screen map, floating search, status chips with
+    counts, a canvas tile layer (green arc = verified share), a draggable bottom sheet
+    (list / filters / venue card with call, website, maps), URL state, a side panel on
+    desktop, and Leaflet 1.9.4 served from `ui/vendor/` (hashes match the SRI values
+    in `index.html`).
+  - `ui/map-mobile-check.mjs [--desktop]`: a headless Chrome check (phone viewport,
+    touch, 4G), with screenshots in `output/map-check*/`.
+  - `PRIVACY.md` registers the snapshot and CSV exports.
+- Measured (real store, 156,057 venues; lead statuses sum to 156,057): 2,265 verified,
+  1,289 rejected, 837 directory, 2,606 undecided, 2,933 unreachable, 76,938 not
+  checked, 69,189 no website.
 
 ## Production pipeline for the 86,852 candidates (PROCESS.md step 4)
 
@@ -336,6 +373,9 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 ## Next executable task
 
+The lead map is delivered; the operator is trying it on a phone. Report any issue as a
+map fix before resuming batches.
+
 Parked by the operator on 2026-09-25: the OpenRouter credit is used up. Do not prepare
 or start `b003` until the operator tops up the credit and approves it (`b001` $2.74,
 `b002` $2.86, each under its $5 cap). Then:
@@ -345,8 +385,9 @@ or start `b003` until the operator tops up the credit and approves it (`b001` $2
 2. `node prepare-national-batch.mjs --size 5000` (writes `b003`), then run it with the
    frozen settings and a $5 cap: the `b001` command with `batches/b003` and
    `--run-id national-b003`, logging to `data/national-review/b003.log`.
-3. `node publish-national-review.mjs`, read `/api/national-map` on a fresh server, and
-   report the verified, rejected, and assessed counts.
+3. `node publish-national-review.mjs` (also rebuilds the map snapshot), then read
+   `/api/national/meta` (`stats` and `statuses`) and report the verified, rejected, and
+   assessed counts.
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
@@ -357,6 +398,20 @@ or start `b003` until the operator tops up the credit and approves it (`b001` $2
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Lead map (2026-09-25):
+  - `npm test`: 273 passed, 0 failed. `git diff --check`: clean.
+  - `node build-map-snapshot.mjs`: 156,057 venues in 8,793 ms. Load in a fresh
+    process: 1,714 ms and 150 MB heap. Full cluster build: 780 ms. Tile queries:
+    under 1 ms and at most 1.1 KB. Summary and list: 13–18 ms. Filtered cluster
+    builds: 7–43 ms.
+  - `node ui/map-mobile-check.mjs --url http://127.0.0.1:4191/map.html` (Pixel 7,
+    4G): all checks passed; clusters and counts at 1,139 ms; list 216 ms; venue card
+    212 ms. A bubble tap zoomed 5 → 6. Veneto + verified = 232. Map data for the whole
+    session: 32.6 KB of tiles and 14.9 KB of API. The `--desktop` run passed, with the
+    bubble tap zooming 6 → 7.
+  - `curl .../api/national/export.csv?status=verified`: 2,265 rows plus the header.
+    The seeded sample was byte-identical on repeat. A full export took 1.0 s.
 
 - Batch `b002` and batch picker (2026-09-25):
   - `node --test prepare-national-batch.test.mjs`: 1 passed. `npm test`: 267 passed,

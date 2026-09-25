@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { DatabaseSync } from "node:sqlite";
 import { EvidenceStore } from "./lib/evidence-store.mjs";
+import { writeMapSnapshot } from "./lib/map-snapshot.mjs";
 
 // Copies national review batches (PROCESS.md step 4) into the national store the map
 // reads: every crawl assessment, and each certified-reviewer outcome as an ownership
@@ -65,4 +66,6 @@ if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
     const counts = publishNationalReview(resolve(arg("--review-db", "data/national-review/review.sqlite")), store, freeze);
     console.log(JSON.stringify({ ...counts, backup, national_assessments: store.candidateAssessmentCounts() }));
   } finally { store.close(); }
+  // Refresh the map snapshot now so the map shows the new outcomes at once.
+  console.log(JSON.stringify({ map_snapshot: writeMapSnapshot(nationalPath) }));
 }

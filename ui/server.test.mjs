@@ -4,7 +4,10 @@ import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { Readable } from "node:stream";
 import test from "node:test";
+import { gunzipSync } from "node:zlib";
 import { EvidenceStore } from "../lib/evidence-store.mjs";
+import { writeMapSnapshot } from "../lib/map-snapshot.mjs";
+import { leadFixtureStore } from "../lib/national-leads.fixture.mjs";
 import { handle } from "./server.mjs";
 
 test("review HTTP endpoints advance rejected candidates without publishing facts", async (t) => {
@@ -83,13 +86,55 @@ test("review HTTP endpoints advance rejected candidates without publishing facts
   assert.equal(missing.status, 503);
 });
 
-function request(method, url, body = "") {
+test("national lead map endpoints serve compressed, versioned data", async (t) => {
+  const directory = await mkdtemp(join(tmpdir(), "national-server-"));
+  const db = join(directory, "national.sqlite");
+  const priorPath = process.env.NATIONAL_DB_PATH;
+  process.env.NATIONAL_DB_PATH = db;
+  leadFixtureStore(db);
+  writeMapSnapshot(db);
+  t.after(async () => {
+    if (priorPath === undefined) delete process.env.NATIONAL_DB_PATH;
+    else process.env.NATIONAL_DB_PATH = priorPath;
+    await rm(directory, { recursive: true, force: true });
+  });
+
+  const meta = await request("GET", "/api/national/meta", "", { "accept-encoding": "gzip, br" });
+  assert.equal(meta.status, 200);
+  assert.equal(meta.headers["Content-Encoding"], "gzip");
+  const info = JSON.parse(gunzipSync(meta.raw).toString("utf8"));
+  assert.equal(info.venues, 7);
+  assert.equal(info.statuses.find((status) => status.code === "verified").count, 1);
+
+  const tile = await request("GET", `/api/national/tile/5/8/5?v=${info.version}&status=verified,unchecked`);
+  assert.equal(tile.status, 200);
+  assert.match(tile.headers["Cache-Control"], /immutable/);
+  const data = JSON.parse(tile.body);
+  assert.equal(data.v, info.version);
+  assert.equal(data.c.filter((_, k) => k % 5 === 2).reduce((a, b) => a + b, 0) + data.p.length / 4, 2);
+  assert.match((await request("GET", "/api/national/tile/5/8/5?v=old")).headers["Cache-Control"], /no-cache/);
+  assert.equal((await request("GET", "/api/national/tile/5/99/5")).status, 400);
+
+  const list = JSON.parse((await request("GET", "/api/national/list?region=12&limit=2")).body);
+  assert.equal(list.total, 4);
+  assert.equal(list.items.length, 2);
+  const venue = JSON.parse((await request("GET", `/api/national/venue/${list.items[0].i}?v=${info.version}`)).body);
+  assert.equal(venue.region_name, "Lazio");
+  assert.equal((await request("GET", `/api/national/venue/0?v=stale`)).status, 409);
+  assert.equal((await request("GET", "/api/national/locate?name=Roma&prov=RM")).status, 200);
+
+  const csv = await request("GET", "/api/national/export.csv?status=verified");
+  assert.match(csv.headers["Content-Disposition"], /attachment; filename="venues-.*-1\.csv"/);
+  assert.match(csv.body, /Da Mario/);
+});
+
+function request(method, url, body = "", headers = {}) {
   return new Promise((resolve, reject) => {
     const req = Readable.from(body ? [body] : []);
     req.method = method;
     req.url = url;
-    req.headers = { host: "localhost" };
-    const response = { status: 0, headers: {}, body: "" };
+    req.headers = { host: "localhost", ...headers };
+    const response = { status: 0, headers: {}, body: "", raw: Buffer.alloc(0) };
     const res = {
       headersSent: false,
       writeHead(status, headers) {
@@ -98,7 +143,8 @@ function request(method, url, body = "") {
         this.headersSent = true;
       },
       end(chunk = "") {
-        response.body += Buffer.isBuffer(chunk) ? chunk.toString("utf8") : String(chunk);
+        response.raw = Buffer.isBuffer(chunk) ? chunk : Buffer.from(String(chunk));
+        response.body += response.raw.toString("utf8");
         resolve(response);
       },
     };

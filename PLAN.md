@@ -20,10 +20,21 @@ The map reads the national store at
 - 1,289 rejected candidates and 10,000 assessed candidates;
 - 69,205 venues without a source website candidate.
 
-Search accepts an Italian municipality or venue name. At national zoom the inventory
-is clustered; zooming in shows individual venues. The status filter switches between
-all venues, source candidates, verified websites, rejected candidates, and venues
-without candidates.
+The map is built for phones as well as desktops (from another device, open it at the
+server's Tailscale address). Search a town to jump there, or a venue name to filter by it.
+Bubbles cluster venues by screen distance; a green arc shows each bubble's share of
+verified websites; tap a bubble to zoom in, or a dot for the venue card (call, website,
+maps). Filters: lead status (verified, rejected, directory or social link, checked but
+undecided, unreachable, not checked yet, no website), category, region, province, and
+phone. The list shows the venues in view, and **Download CSV** exports the selection or
+a reproducible random sample. Filter state is kept in the URL.
+
+The server answers from a compact snapshot of the store
+(`italy-import.map-snapshot.json`). `publish-national-review.mjs` rebuilds it after
+publishing, and the server rebuilds it in the background whenever the store changes
+(`node build-map-snapshot.mjs` does it by hand). `node ui/map-mobile-check.mjs
+[--desktop]` checks the page in headless Chrome as a phone on 4G, recording timings and
+screenshots.
 
 ## One direction
 

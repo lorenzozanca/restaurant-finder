@@ -8,7 +8,9 @@ import { networkInterfaces } from "node:os";
 import { normalizeScanDocument } from "../scan-schema.mjs";
 import { EvidenceStore } from "../lib/evidence-store.mjs";
 import { recordReviewDecision } from "../lib/review-queue.mjs";
-import { loadNationalVenueIndex, queryNationalVenueIndex } from "../lib/national-map.mjs";
+import { gzipSync } from "node:zlib";
+import { NationalMapService } from "../lib/national-map-service.mjs";
+import { parseBbox, parseFilters } from "../lib/national-leads.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const UI_DIR = __dirname;
@@ -42,7 +44,7 @@ let runningScan = null;
 // Kept after a scan finishes so a page reload can restore the last run's
 // results and full log instead of showing an empty form.
 let lastScan = null;
-let nationalIndexCache = null;
+let nationalMapService = null;
 
 const server = createServer(handle);
 // Bound in addition to a tailnet HOST so http://localhost:PORT keeps working on this
@@ -71,8 +73,8 @@ export async function handle(req, res) {
       await handleScans(req, res);
     } else if (url.pathname === "/api/map" && req.method === "GET") {
       await handleMap(req, res);
-    } else if (url.pathname === "/api/national-map" && req.method === "GET") {
-      await handleNationalMap(req, res, url);
+    } else if (url.pathname.startsWith("/api/national/") && req.method === "GET") {
+      handleNational(req, res, url);
     } else if (url.pathname === "/api/review/next" && req.method === "GET") {
       await handleReviewNext(req, res, url);
     } else if (url.pathname === "/api/review/decision" && req.method === "POST") {
@@ -102,7 +104,14 @@ async function serveStatic(_req, res, url) {
   try {
     const data = await readFile(filePath);
     const ext = extname(filePath).toLowerCase();
-    res.writeHead(200, { "Content-Type": CTYPES[ext] || "application/octet-stream" });
+    const headers = { "Content-Type": CTYPES[ext] || "application/octet-stream" };
+    // Vendored libraries are versioned by path; the app's own pages revalidate.
+    headers["Cache-Control"] = url.pathname.startsWith("/vendor/") ? "public, max-age=604800" : "no-cache";
+    if (/^(text\/|application\/(javascript|json|geo\+json)|image\/svg)/.test(headers["Content-Type"])) {
+      send(_req, res, data, headers);
+      return;
+    }
+    res.writeHead(200, headers);
     res.end(data);
   } catch {
     json(res, 404, { error: "not found" });
@@ -482,28 +491,78 @@ async function handleMap(_req, res) {
   });
 }
 
-async function handleNationalMap(_req, res, url) {
-  const dbPath = resolve(String(process.env.NATIONAL_DB_PATH
-    || process.env.EVIDENCE_DB_PATH || DEFAULT_NATIONAL_DB));
-  if (!existsSync(dbPath)) {
-    return json(res, 503, {
-      error: "national inventory is not configured",
-      expected_path: dbPath,
+function nationalService() {
+  const dbPath = resolve(String(process.env.NATIONAL_DB_PATH || DEFAULT_NATIONAL_DB));
+  if (!nationalMapService || nationalMapService.databasePath !== dbPath) {
+    nationalMapService = new NationalMapService(dbPath);
+  }
+  return nationalMapService;
+}
+
+// National lead map API (lib/national-leads.mjs). Tiles carry the snapshot
+// version in their URL, so they are cached by the browser until the next publish.
+function handleNational(req, res, url) {
+  const service = nationalService();
+  const index = service.current();
+  if (!index) {
+    return json(res, 503, { error: service.state().error || "the map is being prepared", ...service.state() });
+  }
+  const route = url.pathname.slice("/api/national/".length);
+  const params = url.searchParams;
+  const filters = parseFilters(params);
+  const bbox = parseBbox(params.get("bbox"));
+  if (route === "meta") return sendJson(req, res, { ...index.meta(), building: service.state().building });
+  const tile = route.match(/^tile\/(\d{1,2})\/(\d+)\/(\d+)$/);
+  if (tile) {
+    const [z, x, y] = tile.slice(1).map(Number);
+    if (z > 22 || x >= 2 ** z || y >= 2 ** z) return json(res, 400, { error: "invalid tile" });
+    const cache = params.get("v") === index.version ? "public, max-age=86400, immutable" : "no-cache";
+    return sendJson(req, res, index.tile(filters, z, x, y), cache);
+  }
+  if (route === "summary") return sendJson(req, res, index.summary(filters, bbox));
+  if (route === "list") {
+    const offset = Math.max(0, Number.parseInt(params.get("offset"), 10) || 0);
+    const limit = Number.parseInt(params.get("limit"), 10) || 50;
+    return sendJson(req, res, index.list(filters, bbox, offset, limit));
+  }
+  const venue = route.match(/^venue\/(\d+)$/);
+  if (venue) {
+    if (params.get("v") && params.get("v") !== index.version) return json(res, 409, { error: "map updated", v: index.version });
+    const detail = index.venue(Number(venue[1]));
+    return detail ? sendJson(req, res, detail) : json(res, 404, { error: "venue not found" });
+  }
+  if (route === "locate") {
+    const place = index.locate(params.get("name") || "", params.get("prov") || "");
+    return place ? sendJson(req, res, place) : json(res, 404, { error: "municipality not found" });
+  }
+  if (route === "export.csv") {
+    const sample = Math.max(0, Number.parseInt(params.get("sample"), 10) || 0);
+    const rows = index.exportRows(filters, bbox, sample, params.get("seed") || "");
+    const body = index.csv(rows);
+    const name = `venues-${new Date().toISOString().slice(0, 10)}-${rows.length}.csv`;
+    return send(req, res, body, {
+      "Content-Type": "text/csv; charset=utf-8",
+      "Content-Disposition": `attachment; filename="${name}"`,
+      "Cache-Control": "no-store",
     });
   }
-  if (!nationalIndexCache || nationalIndexCache.path !== dbPath) {
-    nationalIndexCache = { path: dbPath, index: loadNationalVenueIndex(dbPath) };
-  }
-  const bounds = url.searchParams.get("bbox") || "";
-  const document = queryNationalVenueIndex(nationalIndexCache.index, {
-    bbox: bounds,
-    zoom: url.searchParams.get("zoom") || 6,
-    query: url.searchParams.get("q") || "",
-    province: url.searchParams.get("province") || "",
-    status: url.searchParams.get("status") || "all",
-    limit: url.searchParams.get("limit") || 2000,
+  return json(res, 404, { error: "not found" });
+}
+
+function sendJson(req, res, data, cacheControl = "no-cache") {
+  return send(req, res, JSON.stringify(data), {
+    "Content-Type": "application/json; charset=utf-8", "Cache-Control": cacheControl,
   });
-  json(res, 200, document);
+}
+
+function send(req, res, body, headers) {
+  const buffer = Buffer.from(body);
+  if (buffer.length > 1024 && /\bgzip\b/.test(String(req.headers["accept-encoding"] || ""))) {
+    res.writeHead(200, { ...headers, "Content-Encoding": "gzip", Vary: "Accept-Encoding" });
+    return res.end(gzipSync(buffer));
+  }
+  res.writeHead(200, { ...headers, Vary: "Accept-Encoding" });
+  return res.end(buffer);
 }
 
 // Ownership review queue on top of the durable attestation store. Reads the
@@ -766,6 +825,8 @@ if (isMain) {
     );
     process.exit(1);
   }
+  // Load (or start building) the map snapshot now, not on the first map request.
+  nationalService().current();
   loopbackServer?.listen(PORT, "127.0.0.1", () => {
     console.log(`restaurant-finder UI — http://127.0.0.1:${PORT}`);
   });
