@@ -20,3 +20,10 @@ test("next batch skips venues already assessed in the national store", () => {
   const batch = nextBatch(rows, done, 10).map((row) => row.venue_id).sort();
   assert.deepEqual(batch, ["venue:b", "venue:c"]);
 });
+
+test("next batch can be limited to one region", () => {
+  const rows = [["venue:a", "05"], ["venue:b", "05"], ["venue:c", "06"], ["venue:d", "05"]]
+    .map(([venue_id, region]) => ({ venue_id, region }));
+  const batch = nextBatch(rows, new Set(["venue:a"]), 10, { region: "05" }).map((row) => row.venue_id).sort();
+  assert.deepEqual(batch, ["venue:b", "venue:d"]);
+});

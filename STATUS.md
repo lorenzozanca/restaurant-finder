@@ -1,12 +1,13 @@
 # Execution status
 
-Updated: 2026-09-26 (map search no longer freezes phones; 4,455 verified)
+Updated: 2026-09-26 (Veneto batch `b005` published; 5,979 verified)
 Branch: `main`
 
 ## Current milestone
 
 Process the 86,852 known candidates with the certified reviewer (`PROCESS.md` step 4),
-in operator-approved batches of about 5,000 venues with a $5 cap each. The reviewer
+in operator-approved batches with a $5 cap each (about 5,000 venues nationally, or one
+whole region with `--region`). The reviewer
 passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 ## Locked holdout v1 for the LLM reviewer (2026-09-24)
@@ -266,6 +267,46 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
   69,189 no website. 66,616 eligible venues remain. LLM spend on production batches:
   $11.50. The API key has $12.35 left of its $25 limit.
 
+- **Batch `b005`: all of Veneto (2026-09-26).** The operator asked to finish Veneto
+  instead of a national 5,000. `prepare-national-batch.mjs --region CODE` (ISTAT region
+  code; `05` = Veneto) now limits a batch to one region; the certified runner is
+  unchanged. `b005`: 5,796 venues, every remaining Veneto source candidate (1,755 had
+  been in `b001`–`b004`). Run `national-b005`, frozen settings, $5 cap, concurrency 12,
+  detached with the Wi-Fi watchdog (it never had to act).
+  - The first process stopped at 525/5,796 (11:49): `ristorantestorione.it` is a thin page
+    whose meta refresh points at a dead domain, so headless Chrome ended on its own error
+    page and `lib/headless-browser.mjs` returned it as a 200 with final URL
+    `chrome-error://chromewebdata/`. The store refused that URL, the error rejected the
+    worker pool, and the process then hung on shutdown instead of exiting. Fix: a render
+    whose final page is not http(s) is now a failed render (`client_redirect_failed`).
+    Three such renders cached as successes (two from 25 Sep) were deleted from
+    `data/national-review/cache`. The hung process and its Chrome were killed and the run
+    resumed under the same run ID (528 resumed, 5,268 assessed, 12:13–13:13).
+  - b005 crawl: 1,805 strongly correlated, 1,355 ambiguous, 664 contradicted, 1,434
+    retryable, 538 unsupported publisher. Review: 3,160 candidates, 1,527 accepted, 729
+    rejected, 904 ambiguous; 0 provider errors; $3.43. Retryable causes: 727 ENOTFOUND,
+    322 HTTP 404, 142 HTTP 403, 42 timeouts, 35 HTTP 500, 30 EAI_AGAIN, 27 connect
+    timeouts, 27 TLS name mismatches. No retry pass (few transient failures).
+  - `publish-national-review.mjs` (cumulative): 5,867 verified, 3,285 rejected, 16 skipped
+    as already manually verified, 0 from an unfrozen reviewer.
+  - Map fix found while checking Veneto: the map joined assessments to venues by the raw
+    source URL, but batches store the normalized candidate (no fragment or tracking
+    parameters, sorted query). 445 assessed venues nationally (124 in Veneto) showed
+    "Not checked yet". `lib/national-map.mjs` now normalizes with the batch rule.
+    Verified and rejected are matched by domain and were not affected.
+  - Freeze note: `lib/headless-browser.mjs` (hashed in `REVIEWER-FREEZE.json`) changed
+    for the render fix above. The reviewer's decision code, prompt, model, and settings
+    are unchanged.
+- National counts after `b005`, read from `/api/national/meta` on a fresh server:
+  **5,979 verified**, **3,291 rejected**, **25,796 assessed**, 86,852 source candidates,
+  69,205 without a candidate, 156,057 venues. Lead statuses: 5,979 verified, 3,291
+  rejected, 2,350 directory, 6,862 undecided, 7,409 unreachable, 60,977 not checked,
+  69,189 no website. **Veneto** (13,073 venues): 1,966 verified, 928 rejected, 687
+  directory, 2,057 undecided, 1,914 unreachable, 22 not checked, 5,499 no website. The
+  22 have a source URL without a scheme (`www.…`), which the batch selector
+  (`loadRows`, `LIKE 'http%'`) excludes everywhere. 60,820 eligible venues remain. LLM
+  spend on production batches: $14.93. The API key has $8.93 left of its $25 limit.
+
 ## LLM reviewer core and first development runs (2026-09-24)
 
 - Implemented and tested (fake transports, zero spend):
@@ -395,8 +436,8 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 - National inventory: 156,057 venues in 7,398 municipalities.
 - National map: `http://localhost:4188/map.html` via `node ui/server.mjs`.
-- Map states (after `b004`, 2026-09-25): 86,852 source candidates, 4,455 verified
-  websites, 2,562 rejected candidates, 20,000 assessed candidates, and 69,205 venues
+- Map states (after `b005`, 2026-09-26): 86,852 source candidates, 5,979 verified
+  websites, 3,291 rejected candidates, 25,796 assessed candidates, and 69,205 venues
   without a source candidate.
 - The map supports municipality/venue search, municipality autocomplete, status
   filters, national clustering, and individual venue details.
@@ -466,28 +507,27 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 ## Next executable task
 
-The lead map is delivered, with manual review on the venue card; the operator is trying
-it on a phone. The search freeze is fixed (2026-09-26); the operator should confirm it on
-the phone. Report any issue as a map fix before resuming batches. Manual reviews of
-undecided venues (filter **Undecided**) may go on meanwhile; they need no budget.
+Veneto is done (`b005`). The map server on port 4188 (started before this change) must be
+restarted to pick up the map join fix; until then it shows 445 checked venues as "Not
+checked yet". Report any map issue as a fix before resuming batches. Manual reviews of
+undecided venues (filter **Undecided**, e.g. 2,057 in Veneto) need no budget.
 
-Batch `b005` needs the operator's approval (each batch is approved separately). The API
-key has $12.35 left of its $25 limit; batches cost about $2.9 each (`b001` $2.74, `b002`
-$2.86, `b003` $2.92, `b004` $2.98). Once approved:
+Batch `b006` needs the operator's approval and their choice of scope (national 5,000, or
+one region with `--region CODE`). The API key has $8.93 left of its $25 limit; a
+5,000-venue batch costs about $3 (`b005`, 5,796 venues, cost $3.43). Once approved:
 
 1. Check the link (`iw dev wlp58s0 station dump`: rx bitrate well above VHT-MCS 0; ping
    1.1.1.1 under 50 ms). If degraded, run `nmcli connection up "Italia Uno"` (works
-   without sudo). Under crawl load the link degraded every 10–20 minutes during `b003`
-   (not during `b004`).
-2. `node prepare-national-batch.mjs --size 5000` (writes `b005`), then run the `b001`
-   command with `batches/b005`, `--run-id national-b005`, and a cap below the key's
-   remaining limit (default $5), logging to `data/national-review/b005.log`. Launch it
-   detached (`setsid nohup bash -c '…; echo "exit $?" >> …log' &`) so it survives the
-   session, with a detached watchdog that reconnects the Wi-Fi when RTT exceeds 500 ms
-   (a loop: every 30 s, ping 1.1.1.1 five times; if the average is above 500 ms or all
-   are lost, run the `nmcli` command, at most once per 2 minutes; stop when the log has
-   its `exit` line). If the link dropped during the run (many
-   EAI_AGAIN or connect timeouts, or provider errors), rerun once with
+   without sudo).
+2. `node prepare-national-batch.mjs --size 5000 [--region CODE]` (writes `b006`), then:
+   `node assess-labelled-corpus.mjs --partition development --fixture-dir data/national-review/batches/b006 --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --db data/national-review/review.sqlite --cache-dir data/national-review/cache --concurrency 12 --llm-review --run-id national-b006 --budget-usd 5 --verifier-model xiaomi/mimo-v2.6-pro`
+   with a cap below the key's remaining limit, logging to `data/national-review/b006.log`.
+   Launch it detached (`setsid nohup bash -c '…; echo "exit $?" >> …log' &`) with the
+   detached Wi-Fi watchdog (every 30 s, ping 1.1.1.1 five times; if the average is above
+   500 ms or all are lost, run the `nmcli` command, at most once per 2 minutes; stop when
+   the log has its `exit` line). Watch for a stalled log, not only for the `exit` line: a
+   worker error rejects the pool and the process can hang instead of exiting. If the link
+   dropped (many EAI_AGAIN or connect timeouts, or provider errors), rerun once with
    `--retry-state retryable` (same run ID and cap).
 3. `node publish-national-review.mjs` (also rebuilds the map snapshot), then read
    `/api/national/meta` (`stats` and `statuses`) and report the verified, rejected, and
@@ -502,6 +542,28 @@ $2.86, `b003` $2.92, `b004` $2.98). Once approved:
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Veneto batch `b005`, render fix, map join fix (2026-09-26):
+  - `npm test`: 276 passed, 0 failed. `git diff --check`: clean.
+  - `node --test lib/headless-browser.test.mjs`: the new meta-refresh-to-dead-site case
+    fails on the old renderer (`ok: true`) and passes now. A live render of
+    `https://www.ristorantestorione.it/` now returns `ok: false`, final URL the page itself.
+  - `node --test lib/national-map.test.mjs`: the new fragment/tracking-query case fails on
+    the old join and passes now.
+  - Reproduction before the fix: the runner without `--llm-review` on the 12 in-flight
+    venues (scratch database, shared cache) failed with "candidate assessment requires
+    valid candidate and final URLs" on `venue:024116:vicenza:del-mare`.
+  - `node prepare-national-batch.mjs --size 10000 --region 05`: `b005`, 5,796 venues,
+    `previously_done` 1,755, `remaining_after` 0.
+  - `node assess-labelled-corpus.mjs ... --run-id national-b005 --budget-usd 5 ...`
+    (resumed after the fix): 5,268 assessed, 528 resumed, `reviewed_total` 3,160, 0
+    provider errors, $3.4261, `stopped_reason: null`.
+  - `node publish-national-review.mjs`: `{"assessments":25796,"verified":5867,"rejected":3285,"skipped_manual":16,"skipped_unfrozen":0}`;
+    `node build-map-snapshot.mjs` after the join fix: 156,057 venues.
+  - `PORT=4197 node ui/server.mjs`: `GET /api/national/meta` verified 5,979, rejected
+    3,291, assessed 25,796, lead statuses sum to 156,057; `GET /api/national/summary?region=05`
+    as above (22 not checked).
+  - OpenRouter `GET /api/v1/key`: limit $25, remaining $8.93.
 
 - Map search fix (2026-09-26):
   - `npm test`: 274 passed, 0 failed. `git diff --check`: clean.
@@ -659,8 +721,8 @@ Earlier (2026-09-13):
 
 ## Blockers
 
-- No hard blocker. The OpenRouter API key has $12.35 left of its $25 limit (after
-  `b004`), enough for about four more batches. Each further batch needs the
+- No hard blocker. The OpenRouter API key has $8.93 left of its $25 limit (after
+  `b005`), enough for about two more 5,000-venue batches. Each further batch needs the
   operator's approval and its own cap (default $5, never above the key's remaining limit). Only
   outcomes of the frozen reviewer certified on holdout v1 (`REVIEWER-FREEZE.json`) are
   published as verified.

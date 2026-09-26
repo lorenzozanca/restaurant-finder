@@ -11,12 +11,13 @@ import { validateWebFixtureDocument } from "./lib/web-stress-fixture.mjs";
 // fixture format the frozen reviewer runner reads, so the certified code runs
 // unchanged. Order is a fixed hash of the venue ID, which spreads every batch across
 // the country; venues already in an earlier batch, or with an assessment already
-// published to the national store, are skipped.
+// published to the national store, are skipped. `--region CODE` (ISTAT region code,
+// e.g. 05 for Veneto) limits the batch to one region.
 
 const CHUNK = 999;
 
-export function nextBatch(rows, alreadyBatched, size) {
-  return rows.filter((row) => !alreadyBatched.has(row.venue_id))
+export function nextBatch(rows, alreadyBatched, size, { region } = {}) {
+  return rows.filter((row) => !alreadyBatched.has(row.venue_id) && (!region || row.region === region))
     .map((row) => ({ row, order: createHash("sha256").update(row.venue_id).digest("hex") }))
     .sort((left, right) => left.order.localeCompare(right.order))
     .slice(0, size).map(({ row }) => row);
@@ -47,10 +48,13 @@ if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
   if (!Number.isInteger(size) || size < 1) throw new Error("--size is required");
   const root = resolve(arg("--batches-dir", "data/national-review/batches"));
   const dbPath = resolve(arg("--db", "data/istat/2026-01-01/derived/italy-import.sqlite"));
-  const rows = loadRows(dbPath);
+  const region = arg("--region", "");
+  const allRows = loadRows(dbPath);
+  if (region && !allRows.some((row) => row.region === region)) throw new Error(`no source candidates in region ${region}`);
+  const rows = region ? allRows.filter((row) => row.region === region) : allRows;
   const done = batchedVenueIds(root);
   for (const venueId of assessedVenueIds(dbPath)) done.add(venueId);
-  const selected = nextBatch(rows, done, size);
+  const selected = nextBatch(allRows, done, size, { region });
   if (!selected.length) { console.log(JSON.stringify({ remaining: 0 })); process.exit(0); }
   const batchId = `b${String((existsSync(root) ? readdirSync(root).length : 0) + 1).padStart(3, "0")}`;
   const directory = join(root, batchId);
@@ -66,7 +70,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
     const index = String(chunk).padStart(3, "0");
     writeFileSync(join(directory, `development-${index}-${index}.json`), `${JSON.stringify(document)}\n`);
   }
-  console.log(JSON.stringify({ batch: batchId, directory, venues: selected.length,
+  console.log(JSON.stringify({ batch: batchId, directory, region: region || "all", venues: selected.length,
     previously_done: rows.filter((row) => done.has(row.venue_id)).length,
     remaining_after: rows.filter((row) => !done.has(row.venue_id)).length - selected.length }));
 }
