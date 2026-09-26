@@ -149,6 +149,7 @@ function handleNational(req, res, url) {
     const place = index.locate(params.get("name") || "", params.get("prov") || "");
     return place ? sendJson(req, res, place) : json(res, 404, { error: "municipality not found" });
   }
+  if (route === "towns") return sendJson(req, res, { v: index.version, towns: index.towns() });
   if (route === "export.csv") {
     const sample = Math.max(0, Number.parseInt(params.get("sample"), 10) || 0);
     const rows = index.exportRows(filters, bbox, sample, params.get("seed") || "");

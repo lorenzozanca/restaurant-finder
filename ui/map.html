@@ -37,6 +37,14 @@
   .icon-btn:active { background: var(--soft); }
   #filter-btn { background: var(--soft); font-weight: 600; font-size: 14px; }
   #filter-btn .badge { background: var(--accent); color: #fff; border-radius: 10px; padding: 0 6px; font-size: 12px; }
+  /* Town suggestions: our own short list (a native datalist of 7,894 towns froze phones) */
+  #top.suggesting { z-index: 1003; }
+  #suggest { pointer-events: auto; list-style: none; margin: 6px 0 0; padding: 4px 0; max-width: 560px; background: var(--bg);
+    border-radius: 14px; box-shadow: var(--shadow); max-height: min(50vh, 400px); overflow-y: auto; }
+  #suggest[hidden] { display: none; }
+  #suggest li { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; cursor: pointer; }
+  #suggest li .sub { color: var(--muted); font-size: 13px; margin-left: auto; white-space: nowrap; }
+  #suggest li.active, #suggest li:active { background: var(--soft); }
   #chips { pointer-events: auto; display: flex; gap: 6px; overflow-x: auto; padding: 10px 2px 8px;
     scrollbar-width: none; -webkit-overflow-scrolling: touch; max-width: 760px; }
   #chips::-webkit-scrollbar { display: none; }
@@ -149,10 +157,11 @@
 <div id="top">
   <form id="search" role="search">
     <span aria-hidden="true">🔍</span>
-    <input id="q" type="search" list="towns" placeholder="Town or venue name" autocomplete="off" enterkeyhint="search" aria-label="Search a town or venue">
-    <datalist id="towns"></datalist>
+    <input id="q" type="search" placeholder="Town or venue name" autocomplete="off" enterkeyhint="search" aria-label="Search a town or venue"
+      role="combobox" aria-autocomplete="list" aria-controls="suggest" aria-expanded="false">
     <button id="filter-btn" class="icon-btn" type="button" aria-label="Filters">Filters <span class="badge" id="filter-count" hidden></span></button>
   </form>
+  <ul id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
   <div id="chips" role="group" aria-label="Lead status"></div>
 </div>
 
@@ -394,7 +403,7 @@
       return '<option value="' + entry.code + '"' + (entry.code === state.prov ? ' selected' : '') + '>' + esc(name) + '</option>';
     }).sort(function (a, b) { return a.replace(/<[^>]+>/g, '').localeCompare(b.replace(/<[^>]+>/g, ''), 'it'); }).join('');
     $('f-phone').checked = state.phone;
-    $('q').value = state.q;
+    if (document.activeElement !== $('q')) $('q').value = state.q; // never overwrite what is being typed
   }
 
   function filterChip(label, color, list, code) {
@@ -430,41 +439,115 @@
   }
 
   // --- Search ----------------------------------------------------------------
+  // Town suggestions come from an in-page list and show at most SUGGESTIONS rows. A
+  // native <datalist> of all 7,894 towns froze phones at the first letter typed.
+  var SUGGESTIONS = 8;
+  var towns = [];            // { name, province, count, key }, busiest first; key = searchKey(name)
   var townsLoaded = false;
+  var suggestions = [], activeSuggestion = -1;
+  function searchKey(text) {
+    return String(text).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  }
   function loadTowns() {
     if (townsLoaded) return Promise.resolve();
     townsLoaded = true;
-    return fetch('italian-municipalities.json').then(function (r) { return r.json(); }).then(function (data) {
-      (data.provinces || []).forEach(function (entry) { provinceNames[entry[0]] = entry[1]; });
-      var options = (data.towns || []).map(function (town) { return '<option value="' + esc(town[0] + ' (' + town[1] + ')') + '">'; });
-      $('towns').innerHTML = options.join('');
+    var json = function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); };
+    return Promise.all([fetch('italian-municipalities.json').then(json), fetch('/api/national/towns').then(json)]).then(function (data) {
+      (data[0].provinces || []).forEach(function (entry) { provinceNames[entry[0]] = entry[1]; });
+      towns = data[1].towns.map(function (town) { return { name: town[0], province: town[1], count: town[2], key: searchKey(town[0]) }; });
       if (meta) renderFilterControls();
-    });
+      if (document.activeElement === $('q')) suggest();
+    }).catch(function () { townsLoaded = false; });
   }
-  $('q').addEventListener('focus', loadTowns);
-  $('search').addEventListener('submit', function (event) {
-    event.preventDefault();
+  // Towns whose name starts with the text first, then towns with a later word that does.
+  function matchTowns(text) {
+    var key = searchKey(text), starts = [], words = [];
+    if (!key) return [];
+    for (var k = 0; k < towns.length && starts.length < SUGGESTIONS; k++) {
+      if (towns[k].key.lastIndexOf(key, 0) === 0) starts.push(towns[k]);
+      else if (words.length < SUGGESTIONS && towns[k].key.indexOf(' ' + key) > 0) words.push(towns[k]);
+    }
+    return starts.concat(words).slice(0, SUGGESTIONS);
+  }
+  function suggest() {
     var text = $('q').value.trim();
+    suggestions = text ? matchTowns(text) : [];
+    if (text) suggestions = suggestions.concat([{ venues: text }]);
+    activeSuggestion = -1;
+    renderSuggestions();
+  }
+  function renderSuggestions() {
+    var list = $('suggest'), open = suggestions.length > 0;
+    list.innerHTML = suggestions.map(function (item, k) {
+      return '<li role="option" id="sg-' + k + '" data-k="' + k + '"' + (k === activeSuggestion ? ' class="active" aria-selected="true"' : '') + '>' +
+        (item.venues ? 'Venues named “' + esc(item.venues) + '”'
+          : esc(item.name) + '<span class="sub">' + esc(provinceNames[item.province] || item.province) + ' · ' +
+            item.count.toLocaleString('en') + '</span>') + '</li>';
+    }).join('');
+    list.hidden = !open;
+    $('top').classList.toggle('suggesting', open);
+    $('q').setAttribute('aria-expanded', String(open));
+    if (activeSuggestion >= 0) $('q').setAttribute('aria-activedescendant', 'sg-' + activeSuggestion);
+    else $('q').removeAttribute('aria-activedescendant');
+  }
+  function closeSuggestions() { suggestions = []; activeSuggestion = -1; renderSuggestions(); }
+  function pickSuggestion(k) {
+    var item = suggestions[k];
+    closeSuggestions();
+    if (!item) return;
+    $('q').value = item.venues || item.name + ' (' + item.province + ')';
+    runSearch($('q').value, Boolean(item.venues));
+  }
+
+  function runSearch(text, venuesOnly) {
     $('q').blur();
     if (!text) { if (state.q) { state.q = ''; filtersChanged(); } return; }
+    var filterByName = function () {
+      state.q = text;
+      filtersChanged();
+      setView('list'); setSheet('half');
+      fitSelection();
+    };
+    if (venuesOnly) return filterByName();
     var match = text.match(/^(.*) \(([A-Z]{2})\)$/);
     var name = match ? match[1] : text;
     fetch('/api/national/locate?name=' + encodeURIComponent(name) + (match ? '&prov=' + match[2] : ''))
       .then(function (r) { return r.ok ? r.json() : null; }).then(function (place) {
-        if (place) { // a town: move there, keep the filters
-          if (state.q) { state.q = ''; filtersChanged(); }
-          $('q').value = place.name + ' (' + place.province + ')';
-          map.fitBounds([[place.south, place.west], [place.north, place.east]], { maxZoom: 15, padding: [30, 30] });
-          return;
-        }
-        state.q = text; // otherwise: filter venues by name
-        filtersChanged();
-        setView('list'); setSheet('half');
-        fitSelection();
+        if (!place) return filterByName(); // not a town: filter venues by name
+        if (state.q) { state.q = ''; filtersChanged(); } // a town: move there, keep the filters
+        $('q').value = place.name + ' (' + place.province + ')';
+        map.fitBounds([[place.south, place.west], [place.north, place.east]], { maxZoom: 15, padding: [30, 30] });
       });
-  });
+  }
+
+  $('q').addEventListener('focus', loadTowns);
+  $('q').addEventListener('blur', closeSuggestions);
   $('q').addEventListener('input', function () {
     if (!this.value && state.q) { state.q = ''; filtersChanged(); }
+    suggest();
+  });
+  $('q').addEventListener('keydown', function (event) {
+    if (!suggestions.length) return;
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      var step = event.key === 'ArrowDown' ? 1 : -1;
+      activeSuggestion = (activeSuggestion + 1 + step + suggestions.length + 1) % (suggestions.length + 1) - 1; // -1 = none
+      renderSuggestions();
+    } else if (event.key === 'Enter' && activeSuggestion >= 0) {
+      event.preventDefault();
+      pickSuggestion(activeSuggestion);
+    } else if (event.key === 'Escape') closeSuggestions();
+  });
+  // Keep the focus in the box while a suggestion is pressed, so blur does not close the list first.
+  $('suggest').addEventListener('mousedown', function (event) { event.preventDefault(); });
+  $('suggest').addEventListener('click', function (event) {
+    var row = event.target.closest('li');
+    if (row) pickSuggestion(Number(row.dataset.k));
+  });
+  $('search').addEventListener('submit', function (event) {
+    event.preventDefault();
+    closeSuggestions();
+    runSearch($('q').value.trim(), false);
   });
 
   // --- Summary and list ------------------------------------------------------

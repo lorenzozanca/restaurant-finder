@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-25 (batch `b004` published; 4,455 verified)
+Updated: 2026-09-26 (map search no longer freezes phones; 4,455 verified)
 Branch: `main`
 
 ## Current milestone
@@ -152,6 +152,25 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
   decision code, prompt, and settings are unchanged.
 - National counts unchanged by this work (no decision was recorded on the real store):
   2,265 verified, 1,289 rejected, 2,606 undecided, 10,000 assessed, 156,057 venues.
+
+## Map search fix (2026-09-26)
+
+- Operator report: typing in the map's search box froze the app on a phone at the first
+  letter. Cause: the box was bound to a native `<datalist>` of all 7,894 municipalities.
+  Mobile browsers match it by substring and build their native suggestion popup from
+  every match (thousands of rows for one letter). Headless Chrome shows no such popup,
+  so the freeze does not reproduce there: typing took about 20 ms per letter.
+- Fix: the datalist is gone. `ui/map.html` keeps its own town list and shows at most 8
+  towns plus a "Venues named …" row. Matching ignores accents and case, puts name
+  prefixes before later-word prefixes, and ranks towns by venue count (for "trev",
+  Treviso comes first, not Trevenzuolo). Rows are 44 px touch targets; the arrow keys,
+  Enter, and Escape work, and the box has combobox ARIA. The ranked list comes from
+  the new `GET /api/national/towns` (`LeadIndex.towns()`: name, province, venue count;
+  7,398 towns, 57 KB gzipped, fetched once on focus). The filter panel no longer
+  overwrites text being typed when the town list arrives.
+- `ui/map-mobile-check.mjs` now types "trev" letter by letter, times each keystroke,
+  and taps the Treviso suggestion instead of submitting the form from a script.
+- Not yet confirmed on the operator's real phone.
 
 ## Production pipeline for the 86,852 candidates (PROCESS.md step 4)
 
@@ -448,7 +467,8 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 ## Next executable task
 
 The lead map is delivered, with manual review on the venue card; the operator is trying
-it on a phone. Report any issue as a map fix before resuming batches. Manual reviews of
+it on a phone. The search freeze is fixed (2026-09-26); the operator should confirm it on
+the phone. Report any issue as a map fix before resuming batches. Manual reviews of
 undecided venues (filter **Undecided**) may go on meanwhile; they need no budget.
 
 Batch `b005` needs the operator's approval (each batch is approved separately). The API
@@ -482,6 +502,18 @@ $2.86, `b003` $2.92, `b004` $2.98). Once approved:
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Map search fix (2026-09-26):
+  - `npm test`: 274 passed, 0 failed. `git diff --check`: clean.
+  - `GET /api/national/towns` on the real store: 7,398 towns, first
+    `["Roma","RM",7016]`, 175 KB raw / 57 KB gzipped, about 10 ms.
+  - `node ui/map-mobile-check.mjs --url http://127.0.0.1:4199/map.html` (Pixel 7, 4G):
+    all checks passed; keystrokes 26–34 ms each (to the second animation frame), 9
+    suggestion rows for "trev" with Treviso first, tapping it moved the map to Treviso
+    with the box reading "Treviso (TV)". `--desktop`: all checks passed.
+  - An ad-hoc headless probe: "forli" → Forlì first; clearing the box hides the list;
+    "Venues named “pizzeria da”" filtered to `?q=pizzeria+da` (1,284 venues);
+    ArrowDown + Enter on "venez" jumped to Venezia (VE).
 
 - Batch `b004` (2026-09-25; no code changed):
   - `node prepare-national-batch.mjs --size 5000`: `b004`, 5,000 venues,

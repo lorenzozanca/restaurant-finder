@@ -140,10 +140,28 @@ if (target) {
   report.checks.tap_zoomed_to = await evaluate("window.leadMap.map.getZoom()");
 }
 
-// Search a town: the map jumps there.
+// Search a town the way a person does: tap the box, type letter by letter, and tap
+// the suggestion. Every keystroke must answer quickly with a short suggestion list.
+const box = await evaluate("(() => { const r = document.getElementById('q').getBoundingClientRect(); return { x: r.left + 60, y: r.top + r.height / 2 }; })()");
+await tap(box.x, box.y);
+await waitFor("document.activeElement === document.getElementById('q')", 5_000);
+await sleep(1000); // the town list loads on focus
+report.timings_ms.keystrokes = [];
+for (const letter of "trev") {
+  const typed = Date.now();
+  await send("Input.insertText", { text: letter });
+  await evaluate("new Promise((done) => requestAnimationFrame(() => requestAnimationFrame(done)))");
+  report.timings_ms.keystrokes.push(Date.now() - typed);
+}
+report.checks.suggestion_rows = await evaluate("document.querySelectorAll('#suggest li').length");
+report.checks.suggestion_first = await evaluate("document.querySelector('#suggest li')?.textContent || null");
+await shot("2a-suggestions");
 let t = Date.now();
-await evaluate("(() => { const q = document.getElementById('q'); q.value = 'Treviso (TV)'; document.getElementById('search').requestSubmit(); })()");
-await waitFor("/,1[1-6]z$/.test(location.hash)", 10_000);
+const row = await evaluate(`(() => { const li = [...document.querySelectorAll('#suggest li')].find((el) => /^Treviso/.test(el.textContent));
+  if (!li) return null; const r = li.getBoundingClientRect(); return { x: r.left + 40, y: r.top + r.height / 2 }; })()`);
+report.checks.suggestion_found = Boolean(row);
+if (row) await tap(row.x, row.y);
+report.checks.search_to_town = await waitFor("/,1[1-6]z$/.test(location.hash) && document.getElementById('q').value === 'Treviso (TV)' && document.getElementById('suggest').hidden", 10_000);
 await sleep(2500);
 report.timings_ms.search_to_town = Date.now() - t;
 await shot("2-treviso");
