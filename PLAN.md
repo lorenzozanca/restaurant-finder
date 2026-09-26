@@ -16,8 +16,8 @@ The map reads the national store at
 
 - 156,057 venues;
 - 86,852 source website candidates, unverified until reviewed;
-- 5,979 verified websites (2026-09-26, after four national batches and one Veneto batch);
-- 3,291 rejected candidates and 25,796 assessed candidates;
+- 5,982 verified websites (2026-09-26, after four national batches and all of Veneto);
+- 3,294 rejected candidates and 25,818 assessed candidates;
 - 69,205 venues without a source website candidate.
 
 The map is built for phones as well as desktops (from another device, open it at the

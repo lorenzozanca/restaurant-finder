@@ -4,6 +4,7 @@ import { mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "n
 import { join, relative, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { DatabaseSync } from "node:sqlite";
+import { sourceWebsiteUrl } from "./lib/national-map.mjs";
 import { collectVenueIds } from "./lib/unseen-selector.mjs";
 import { normalizeCandidateUrl, validateWebFixtureDocument } from "./lib/web-stress-fixture.mjs";
 
@@ -56,7 +57,9 @@ export function sourceFixtureDocument(selected, { partition, fingerprint, retrie
   };
 }
 
-export function loadRows(dbPath) {
+// `bareHosts` also admits websites given without a scheme ("www.example.it"). It is off
+// by default so the populations of past selections (pilot, holdout v1) are unchanged.
+export function loadRows(dbPath, { bareHosts = false } = {}) {
   const db = new DatabaseSync(dbPath, { readOnly: true });
   try {
     const rows = new Map();
@@ -65,10 +68,11 @@ export function loadRows(dbPath) {
         json_extract(s.payload_json, '$.address') AS address,
         json_extract(s.payload_json, '$.website') AS website
       FROM venues v JOIN source_records s ON s.venue_id = v.venue_id
-      WHERE v.lifecycle_status = 'active' AND json_extract(s.payload_json, '$.website') LIKE 'http%'
+      WHERE v.lifecycle_status = 'active' AND ${bareHosts ? "json_type(s.payload_json, '$.website') = 'text'"
+        : "json_extract(s.payload_json, '$.website') LIKE 'http%'"}
       ORDER BY v.venue_id, s.source_record_id`).iterate()) {
       if (rows.has(row.venue_id)) continue;
-      const url = normalizeCandidateUrl(row.website);
+      const url = normalizeCandidateUrl(bareHosts ? sourceWebsiteUrl(row.website) : row.website);
       if (!url) continue;
       rows.set(row.venue_id, { venue_id: row.venue_id, name: row.display_name,
         municipality: row.municipality, region: row.region || "", address: row.address || "", url });

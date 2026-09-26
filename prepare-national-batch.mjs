@@ -12,7 +12,8 @@ import { validateWebFixtureDocument } from "./lib/web-stress-fixture.mjs";
 // unchanged. Order is a fixed hash of the venue ID, which spreads every batch across
 // the country; venues already in an earlier batch, or with an assessment already
 // published to the national store, are skipped. `--region CODE` (ISTAT region code,
-// e.g. 05 for Veneto) limits the batch to one region.
+// e.g. 05 for Veneto) limits the batch to one region. Websites given as a bare host
+// ("www.example.it") are included as http URLs.
 
 const CHUNK = 999;
 
@@ -49,7 +50,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
   const root = resolve(arg("--batches-dir", "data/national-review/batches"));
   const dbPath = resolve(arg("--db", "data/istat/2026-01-01/derived/italy-import.sqlite"));
   const region = arg("--region", "");
-  const allRows = loadRows(dbPath);
+  const allRows = loadRows(dbPath, { bareHosts: true });
   if (region && !allRows.some((row) => row.region === region)) throw new Error(`no source candidates in region ${region}`);
   const rows = region ? allRows.filter((row) => row.region === region) : allRows;
   const done = batchedVenueIds(root);

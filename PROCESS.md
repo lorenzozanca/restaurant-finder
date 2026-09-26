@@ -17,15 +17,16 @@ state:
 4. **Rejected** — evidence shows that the candidate is a directory, social profile,
    unrelated publisher, conflicting venue, or otherwise not an official website.
 
-Current baseline (2026-09-26, after production batches `b001`–`b005`; `b005` was all of
-Veneto, at the operator's request):
+Current baseline (2026-09-26, after production batches `b001`–`b006`; `b005`–`b006` were all
+of Veneto, at the operator's request):
 
 - 156,057 venues in 7,398 municipalities;
 - 86,852 venues with a source website candidate;
 - 69,205 without a source website candidate;
-- 5,979 verified websites (112 earlier plus 5,867 from the certified reviewer);
-- 3,291 rejected candidates;
-- 25,796 persisted national candidate assessments (60,820 eligible venues remain).
+- 5,982 verified websites (112 earlier plus 5,870 from the certified reviewer);
+- 3,294 rejected candidates;
+- 25,818 persisted national candidate assessments (61,029 eligible venues remain, now
+  including source websites given as a bare host such as `www.example.it`).
 
 Run `node ui/server.mjs` and open `http://localhost:4188/map.html`. The server uses
 `data/istat/2026-01-01/derived/italy-import.sqlite` by default. Override it with
@@ -325,7 +326,7 @@ venue or domain. This is the working tool for step 5 (the residual tail): filter
 ## Current milestone and definition of done
 
 Current milestone: continue step 4 (process the 86,852 known candidates with the
-certified reviewer; `b001`–`b005` done) in operator-approved batches, which
+certified reviewer; `b001`–`b006` done) in operator-approved batches, which
 `prepare-national-batch.mjs --region CODE` can limit to one region. The reviewer passed the adjudicated holdout-v1 gate on 2026-09-24 (105
 correct, 0 false, Wilson lower bound 96.5%).
 

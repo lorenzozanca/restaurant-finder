@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-26 (Veneto batch `b005` published; 5,979 verified)
+Updated: 2026-09-26 (all of Veneto checked, `b005`–`b006`; 5,982 verified)
 Branch: `main`
 
 ## Current milestone
@@ -307,6 +307,26 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
   (`loadRows`, `LIKE 'http%'`) excludes everywhere. 60,820 eligible venues remain. LLM
   spend on production batches: $14.93. The API key has $8.93 left of its $25 limit.
 
+- **Batch `b006`: the last 22 Veneto venues (2026-09-26).** Operator request. Their source
+  website is a bare host (`www.ilmulinodibibano.it`), which the selector's
+  `LIKE 'http%'` rule excluded everywhere (232 venues nationally, 231 host-like). New
+  `sourceWebsiteUrl` (`lib/national-map.mjs`) prefixes `http://` to a bare host. It is
+  used by the map loader (candidate URL, assessment join, rejected-domain match), by
+  manual review's candidate lookup (`lib/review-queue.mjs`, which dropped these domains),
+  and by `loadRows(dbPath, { bareHosts: true })`, which only `prepare-national-batch.mjs`
+  passes. The default `loadRows` population (pilot and holdout-v1 selection) is unchanged
+  at 86,616; the batch population is now 86,847.
+  Run `national-b006`, frozen settings, **$1 cap**: 22 assessed, 14 reviewed (3 accepted,
+  3 rejected, 8 ambiguous), 0 provider errors, $0.0206. Veneto map: 3 verified
+  (davalentino.it, aifrati.com, alforno.it), 3 rejected, 8 undecided, 8 unreachable
+  (all ENOTFOUND).
+- National counts after `b006`: **5,982 verified**, **3,294 rejected**, **25,818
+  assessed**; lead statuses 5,982 verified, 3,294 rejected, 2,350 directory, 6,870
+  undecided, 7,417 unreachable, 60,955 not checked, 69,189 no website. **Veneto** (13,073):
+  1,969 verified, 931 rejected, 687 directory, 2,065 undecided, 1,922 unreachable,
+  **0 not checked**, 5,499 no website. 61,029 eligible venues remain. LLM spend on
+  production batches: $14.95. The API key has $8.91 left of its $25 limit.
+
 ## LLM reviewer core and first development runs (2026-09-24)
 
 - Implemented and tested (fake transports, zero spend):
@@ -438,7 +458,8 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 - National map: `http://localhost:4188/map.html` via `node ui/server.mjs`.
 - Map states (after `b005`, 2026-09-26): 86,852 source candidates, 5,979 verified
   websites, 3,291 rejected candidates, 25,796 assessed candidates, and 69,205 venues
-  without a source candidate.
+  without a source candidate. After `b006`: 5,982 verified, 3,294 rejected, 25,818
+  assessed; every Veneto source candidate checked.
 - The map supports municipality/venue search, municipality autocomplete, status
   filters, national clustering, and individual venue details.
 - Map clusters (2026-09-13): numeric grid counts at every zoom until close-up.
@@ -507,13 +528,13 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 ## Next executable task
 
-Veneto is done (`b005`). The map server on port 4188 (started before this change) must be
-restarted to pick up the map join fix; until then it shows 445 checked venues as "Not
-checked yet". Report any map issue as a fix before resuming batches. Manual reviews of
+Veneto is fully checked (`b005`–`b006`). The operator restarts the map server
+themselves (`node ui/server.mjs`); a server started before the bare-host change shows the
+Veneto 22 as "Not checked yet" until restarted. Report any map issue as a fix before resuming batches. Manual reviews of
 undecided venues (filter **Undecided**, e.g. 2,057 in Veneto) need no budget.
 
 Batch `b006` needs the operator's approval and their choice of scope (national 5,000, or
-one region with `--region CODE`). The API key has $8.93 left of its $25 limit; a
+one region with `--region CODE`). The API key has $8.91 left of its $25 limit; a
 5,000-venue batch costs about $3 (`b005`, 5,796 venues, cost $3.43). Once approved:
 
 1. Check the link (`iw dev wlp58s0 station dump`: rx bitrate well above VHT-MCS 0; ping
@@ -542,6 +563,18 @@ one region with `--region CODE`). The API key has $8.93 left of its $25 limit; a
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Veneto remainder `b006` and bare-host websites (2026-09-26):
+  - `npm test`: 277 passed, 0 failed. `git diff --check`: clean.
+  - `loadRows` populations: default 86,616 (unchanged), `bareHosts` 86,847.
+  - `node prepare-national-batch.mjs --size 1000 --region 05`: `b006`, 22 venues,
+    `previously_done` 7,551, `remaining_after` 0.
+  - `node assess-labelled-corpus.mjs ... --run-id national-b006 --budget-usd 1 ...`:
+    22 assessed, 14 reviewed, 0 provider errors, $0.0206, `stopped_reason: null`.
+  - `node publish-national-review.mjs`: `{"assessments":25818,"verified":5870,"rejected":3288,"skipped_manual":16,"skipped_unfrozen":0}`.
+  - `PORT=4197 node ui/server.mjs`: meta verified 5,982, rejected 3,294, assessed 25,818,
+    statuses sum to 156,057; Veneto summary 0 not checked; the 22 venues listed above.
+  - OpenRouter `GET /api/v1/key`: limit $25, remaining $8.91.
 
 - Veneto batch `b005`, render fix, map join fix (2026-09-26):
   - `npm test`: 276 passed, 0 failed. `git diff --check`: clean.
@@ -721,8 +754,8 @@ Earlier (2026-09-13):
 
 ## Blockers
 
-- No hard blocker. The OpenRouter API key has $8.93 left of its $25 limit (after
-  `b005`), enough for about two more 5,000-venue batches. Each further batch needs the
+- No hard blocker. The OpenRouter API key has $8.91 left of its $25 limit (after
+  `b006`), enough for about two more 5,000-venue batches. Each further batch needs the
   operator's approval and its own cap (default $5, never above the key's remaining limit). Only
   outcomes of the frozen reviewer certified on holdout v1 (`REVIEWER-FREEZE.json`) are
   published as verified.
