@@ -28,27 +28,30 @@ npm run dev                       # http://127.0.0.1:3000
 Google flow; it is ignored in production. `sync:local` passes `--no-reviews`, so manual
 decisions made against the local database never reach the real national store.
 
-## Going online (operator, one time)
+## Online (set up 2026-09-27)
 
-1. **Neon.** Create a project in **AWS Europe Central 1 (Frankfurt)**. Copy the
-   *pooled* connection string. Free plan: 0.5 GB (the app uses about 90 MB), 6 hours
-   of point-in-time restore, which is why every sync also backs up the CRM tables.
-2. **Google OAuth client.** Google Cloud console → Google Auth Platform → Clients →
-   *Web application*. Authorized redirect URI:
-   `https://<your-vercel-domain>/api/auth/callback/google` (add
-   `http://localhost:3000/api/auth/callback/google` to test sign-in locally). While
-   the audience is *Testing*, add your address under **Audience → Test users**.
-3. **Vercel.** New project from this repository, **Root Directory `web`** (keep
-   "Include files outside the root directory" on: the app imports `../lib`).
-   Environment variables (Production): `DATABASE_URL`, `AUTH_SECRET`
-   (`npx auth secret`), `AUTH_GOOGLE_ID`, `AUTH_GOOGLE_SECRET`, `AUTH_OWNER_EMAILS`.
-   Functions run in `fra1` (`vercel.json`), next to Neon.
-4. **First sync** from the repository root:
-   `DATABASE_URL='<neon string>' node --no-network-family-autoselection --dns-result-order=ipv4first sync-online.mjs`
-   (or put `DATABASE_URL` in the root `.env` and use `--env-file=.env`). The IPv4 flags
-   are the ones bh-os needs on this laptop.
-5. Open the Vercel URL on the phone and sign in with Google.
+- **URL:** <https://restaurant-finder-iota.vercel.app> (also
+  `restaurant-finder-lorenzozanca.vercel.app`). Vercel project `restaurant-finder`,
+  team `lorenzozanca`, Hobby, Root Directory `web`, functions in `fra1`.
+- **Database:** Neon `restaurant-finder` (free plan `free_v3`, AWS eu-central-1),
+  created through Vercel's Neon integration, which sets `DATABASE_URL` (pooled) and
+  friends on the project. The repository root is linked (`.vercel/`), and
+  `vercel env pull` writes them to the root `.env.local` (gitignored).
+- **Sync** from the repository root, after each publish:
+  `node --no-network-family-autoselection --dns-result-order=ipv4first --env-file=.env.local sync-online.mjs`
+  (the IPv4 flags are the ones bh-os needs on this laptop; about 35 s the first time).
+- **Deploy** from the repository root: `npx vercel deploy --prod`. `.vercelignore` is an
+  allowlist (`web/`, `lib/`, `ui/`): the CLI does not read `.gitignore`, and `data/`
+  holds 8 GB of stores.
+- **Sign-in:** Google OAuth web client with the redirect URIs
+  `https://restaurant-finder-iota.vercel.app/api/auth/callback/google` and
+  `https://restaurant-finder-lorenzozanca.vercel.app/api/auth/callback/google`; its ID
+  and secret are `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` (Production), with
+  `AUTH_SECRET` and `AUTH_OWNER_EMAILS`. A changed variable needs a redeploy. While the
+  OAuth audience is *Testing*, the address must be listed under Audience → Test users.
 
+Neon's free plan: 0.5 GB (the app uses about 90 MB) and 6 hours of point-in-time
+restore, which is why every sync also backs up the CRM tables to `data/online-backups/`.
 Hobby is for non-commercial use: move the project to Pro when the app is first used
 to contact a venue.
 

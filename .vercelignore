@@ -1,0 +1,19 @@
+# The Vercel CLI does not read .gitignore: without this file `vercel deploy` from the
+# repository root would upload data/ (8 GB of stores, caches and review databases),
+# output/, and any .env. Allowlist: only what the online app (web/) builds from.
+/*
+!/web
+!/lib
+!/ui
+
+# Inside the allowed folders: never secrets, local databases, or build output.
+/web/node_modules
+/web/.next
+/web/.env*
+!/web/.env.example
+/web/.local-db
+/web/generated
+/web/public/vendor
+/web/public/italian-municipalities.json
+/lib/*.test.mjs
+/ui/*.test.mjs

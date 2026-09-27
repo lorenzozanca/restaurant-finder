@@ -1,7 +1,7 @@
 # Execution status
 
-Updated: 2026-09-27 (online lead CRM built and verified locally, not yet deployed;
-national counts unchanged: 5,982 verified)
+Updated: 2026-09-27 (online lead CRM deployed at restaurant-finder-iota.vercel.app and
+synced; Google sign-in client pending; national counts unchanged: 5,982 verified)
 Branch: `main`
 
 ## Current milestone
@@ -16,8 +16,11 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 Operator decision: the map and a sales pipeline go online, private behind Google
 sign-in (the bh-os pattern); this repo is the CRM; Pomovi builds demos.
 
-- Shipped and verified **locally** (not deployed: Neon, the Google OAuth client and the
-  Vercel project need the operator's accounts):
+- Deployed 2026-09-27 with the operator's Vercel login: project `restaurant-finder`
+  (Hobby, Root Directory `web`), Neon `restaurant-finder` (free plan, eu-central-1) via
+  the Vercel integration, `AUTH_SECRET` and `AUTH_OWNER_EMAILS` set, first sync done.
+  Only the Google OAuth client is missing. Details in `web/README.md` → "Online".
+- Built and verified locally first:
   - `lib/map-constants.mjs` and `lib/review-decision.mjs`: codes and review validation
     without SQLite imports, so `web/` can load them on Vercel. `lib/map-snapshot.mjs`
     and `lib/review-queue.mjs` re-export them.
@@ -570,18 +573,21 @@ sign-in (the bh-os pattern); this repo is the CRM; Pomovi builds demos.
 
 ## Next executable task
 
-**Put the lead CRM online** (`web/README.md` → "Going online"). The operator does
-steps 1–3, which need their accounts: a Neon project in Frankfurt (pooled connection
-string), a Google OAuth web client (redirect URI on the Vercel domain; their address as
-test user), and a Vercel project with Root Directory `web` and the five environment
-variables. Then the agent, with `DATABASE_URL` supplied by the operator:
+**Finish the online sign-in and verify the live CRM.** Deployed 2026-09-27 at
+<https://restaurant-finder-iota.vercel.app>, with Neon synced; sign-in is missing only
+the Google OAuth client, which needs the operator's Google Cloud console:
 
-1. `DATABASE_URL='…' node --no-network-family-autoselection --dns-result-order=ipv4first sync-online.mjs`
-   (migrates, uploads 156,057 venues and ~86,900 details, writes a CRM backup);
-2. on the Vercel URL, signed in: `/api/national/meta` gives verified 5,982, rejected
-   3,294, statuses summing to 156,057; measure the first (cold) meta request and a
-   whole-selection CSV export; add a venue to the pipeline and see it in the Pipeline
-   tab; record the numbers here.
+1. Operator: create a Web application OAuth client (in the same Google Cloud project as
+   bh-os, so its test-user list already has their address) with the two redirect URIs
+   in `web/README.md` → "Online", and add its ID and secret as `AUTH_GOOGLE_ID` and
+   `AUTH_GOOGLE_SECRET` (Production), e.g. `npx vercel env add AUTH_GOOGLE_ID production`
+   from the repository root.
+2. Agent: `npx vercel deploy --prod` from the repository root (a changed variable needs
+   a redeploy).
+3. Operator signs in on the phone; then check `/api/national/meta` (verified 5,982,
+   rejected 3,294, statuses summing to 156,057), the time of the first (cold) meta
+   request, a whole-selection CSV export, and a pipeline entry in the Pipeline tab;
+   record the numbers here.
 
 Do not record a manual review on the production app as a test: the next sync applies it
 to the national store.
@@ -623,6 +629,17 @@ one region with `--region CODE`). The API key has $8.91 left of its $25 limit; a
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Online deploy (2026-09-27):
+  - `node --no-network-family-autoselection --dns-result-order=ipv4first --env-file=.env.local sync-online.mjs`:
+    migration applied; snapshot `3a86b85efbc5` (156,057 venues) uploaded; 86,895 venue
+    details; 0 manual reviews; 35.4 s.
+  - `npx vercel deploy --prod`: ready; the deployment's source tree is only `lib/`,
+    `ui/`, `web/` (checked through the deployments files API); `web/.env*` other than
+    the example excluded.
+  - Live, signed out: `/` and `/vendor/…` → 307 `/signin`; `/signin` 200;
+    `/api/national/meta` and `/api/crm/list` → 401, also with a forged
+    `__Secure-authjs.session-token`.
 
 - Online lead CRM (2026-09-27):
   - `npm test`: 280 passed, 0 failed (new: the overlay test in

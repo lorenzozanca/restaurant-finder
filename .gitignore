@@ -22,3 +22,7 @@ data/holdout-adjudication*.log
 
 # Copies of the online CRM tables (sync-online.mjs): business notes, never committed.
 data/online-backups/
+
+# Vercel CLI link (project and team IDs)
+.vercel
+.env*
