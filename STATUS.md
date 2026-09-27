@@ -1,7 +1,8 @@
 # Execution status
 
 Updated: 2026-09-27 (online lead CRM deployed at restaurant-finder-iota.vercel.app and
-live, operator signed in; national counts unchanged: 5,982 verified)
+live at restaurants.trelua.com, operator signed in; national counts unchanged: 5,982
+verified)
 Branch: `main`
 
 ## Current milestone
@@ -622,6 +623,12 @@ one region with `--region CODE`). The API key has $8.91 left of its $25 limit; a
 
 ## Last verification
 
+- Custom domain (2026-09-27): `restaurants.trelua.com` added to the Vercel project
+  (trelua.com already verified in the team); the operator added the Hostinger CNAME to
+  `78e539ce3f31b4e2.vercel-dns-017.com` and the Google redirect URI. `dig` resolves the
+  CNAME (also at Hostinger's nameserver); Vercel config `misconfigured: false`; HTTPS
+  verifies; `/` → 307 `/signin`, `/api/national/meta` 401 signed out; sign-in redirects
+  to accounts.google.com with `redirect_uri=https://restaurants.trelua.com/api/auth/callback/google`.
 - Cold start of the online map (2026-09-27): the operator signed in on the live app;
   the venues took "some seconds" to appear. Timed from the laptop against Neon, the
   same steps as a cold instance: connect 566 ms, fetch the 7.1 MB snapshot 501 ms,
