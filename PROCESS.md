@@ -323,6 +323,76 @@ rebuilt immediately. `publish-national-review.mjs` never overwrites a manually d
 venue or domain. This is the working tool for step 5 (the residual tail): filter to
 **Undecided** and review down the list.
 
+## Online lead CRM (operator decision 2026-09-27)
+
+The venues are the leads for Pomovi (the sibling repo that builds each prospect a demo
+site). The operator decided on 2026-09-27 that this repository also becomes the sales
+CRM, and that it runs online, reachable only by the operator through Google sign-in,
+like the sibling `bh-os`. HubSpot was considered and rejected as the bridge: its free
+plan allows 10 custom properties in total, cannot show the map or the verification
+state, and its strongest tools (cold email) are largely unusable for Italian B2B
+prospecting. The sales motion is in person and by post.
+
+**Split of ownership.** Each fact has exactly one owner, so sync never merges edits.
+
+| Laptop (the verification factory) | Online (`web/`, Vercel + Neon Postgres) |
+|---|---|
+| Crawl, headless Chrome, LLM review batches, budget ledgers, the 1 GB evidence store | The map snapshot, per-venue review details, manual review decisions, the sales pipeline |
+| Owner of automatic verification | Owner of manual decisions and every CRM record |
+
+**Sync** (`node sync-online.mjs`, run on the laptop after each publish): 1. pull
+manual review decisions made online and apply them to the local store through
+`recordReviewDecision` (so later reviewer batches still never overwrite them);
+2. rebuild the map snapshot if the store changed; 3. push the snapshot (one gzipped
+row, ~7 MB) and changed per-venue review details; 4. copy every CRM table to
+`data/online-backups/` (Neon's free point-in-time restore covers only 6 hours).
+
+**Online app** (`web/`, a Next.js app copied from `bh-os`'s pattern): Auth.js with
+Google only and an email allow-list (`AUTH_OWNER_EMAILS`); `requireUser()` on every
+data route; `AUTH_DEV_EMAIL` for local work, ignored in production. It serves the same
+`ui/map.html` and the same `/api/national/*` API over the same `LeadIndex`, loaded from
+the newest snapshot in Neon, plus an overlay of pending manual decisions and pipeline
+stages. The local `ui/server.mjs` keeps working without the CRM.
+
+**Pipeline.** Stages: shortlisted, demo requested, demo ready, contacted, follow-up,
+won, lost, do not contact. Every change and every touch (visit, card, letter, call,
+note) is an event with a date. "Do not contact" is terminal until the operator
+explicitly reopens it. The map filters by stage, and a Pipeline tab lists venues by
+next action date.
+
+**Pomovi bridge.** Keyed on this repo's `venue_id` (stored in Pomovi as
+`venues.source_ref`). The online app calls Pomovi's console with a bearer token:
+`POST /api/bridge/venues` creates (idempotently) a `prospect` with the lead's name and
+website and returns its wizard URL; `GET /api/bridge/venues` returns each bridged
+venue's status, slug, and public URL. The contract and Pomovi's side are in
+`../pomovi/docs/plans/restaurant-finder-bridge.md`; until Pomovi ships it, the app
+shows the bridge as not configured.
+
+**Before real outreach:** `PRIVACY.md` must record the new purpose (B2B prospecting),
+Vercel and Neon as processors, and the operator's signed legitimate-interests
+assessment. Vercel's Hobby plan is for non-commercial use: build on it, and move the
+project to Pro when the app is first used to contact a venue.
+
+**Steps.**
+
+1. Shared code usable online: map constants and review-decision validation split
+   from their SQLite-bound modules; `LeadIndex` overlay (pending decisions, stages)
+   and a stage filter.
+2. Neon schema (plain SQL migrations in `web/db/migrations/`) and `sync-online.mjs`
+   with bulk per-venue review details and the CRM backup.
+3. `web/` app: Google sign-in, the map API over the Neon snapshot, manual review
+   into `manual_reviews`.
+4. Pipeline API and UI on the venue card, stage filter, Pipeline tab.
+5. Pomovi client (create demo, refresh status) behind `POMOVI_BRIDGE_URL` and
+   `POMOVI_BRIDGE_TOKEN`.
+6. Operator setup: Google OAuth client, Neon project (EU), Vercel project with root
+   directory `web`, environment variables, first sync. Written in `web/README.md`.
+7. Pomovi side (another agent, in that repo): the plan file above.
+
+Done means: the operator signs in from a phone, sees all 156,057 venues with the same
+counts as the local map, records a manual review that reaches the local store on the
+next sync, moves a venue through the pipeline, and (after step 7) creates its demo.
+
 ## Current milestone and definition of done
 
 Current milestone: continue step 4 (process the 86,852 known candidates with the

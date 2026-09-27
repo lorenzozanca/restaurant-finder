@@ -32,6 +32,11 @@ The current product and execution order are:
 5. Only then discover candidates for the 69,205 venues that lack one. Brave is a
    budgeted discovery tool for this residual group, never the verifier.
 
+In parallel (operator decision 2026-09-27): the online lead CRM in `web/`, described in
+`PROCESS.md` → "Online lead CRM". It never changes what counts as verified: online
+manual decisions reach the store only through `sync-online.mjs` and
+`recordReviewDecision`.
+
 Do not describe planning, test-fixture preparation, small manual batches, or a backlog
 census as delivery progress. Report progress using visible map/database counts and
 completed production candidate outcomes.
