@@ -47,8 +47,13 @@ async function refresh(): Promise<LeadIndex> {
       (SELECT count(*)::text FROM pipeline) AS pipeline_n`;
   if (!stamp.snapshot) throw new NoSnapshotError("no map snapshot online yet: run sync-online.mjs on the laptop");
   if (stamp.snapshot !== state.snapshotVersion || !state.index) {
+    const started = performance.now();
     const [row] = await sql`SELECT version, built_at, payload FROM map_snapshots WHERE version = ${stamp.snapshot}`;
+    const fetched = performance.now();
     state.index = new LeadIndex(JSON.parse(gunzipSync(row.payload).toString("utf8")));
+    // Visible in the Vercel runtime logs: how long a cold start spends on the map.
+    console.log(`lead index ${row.version}: fetch ${Math.round(fetched - started)} ms, `
+      + `build ${Math.round(performance.now() - fetched)} ms`);
     state.snapshotVersion = row.version;
     state.builtAt = new Date(row.built_at).toISOString();
     state.overlayKey = "";

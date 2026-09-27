@@ -1,7 +1,7 @@
 # Execution status
 
 Updated: 2026-09-27 (online lead CRM deployed at restaurant-finder-iota.vercel.app and
-synced, Google sign-in configured; national counts unchanged: 5,982 verified)
+live, operator signed in; national counts unchanged: 5,982 verified)
 Branch: `main`
 
 ## Current milestone
@@ -575,17 +575,16 @@ sign-in (the bh-os pattern); this repo is the CRM; Pomovi builds demos.
 
 ## Next executable task
 
-**Verify the live CRM signed in.** <https://restaurant-finder-iota.vercel.app> is
-deployed with all sign-in variables (Google client added 2026-09-27). The operator
-signs in on the phone; then check `/api/national/meta` (verified 5,982, rejected 3,294,
-statuses summing to 156,057), the time of the first (cold) meta request, a
-whole-selection CSV export, and a pipeline entry in the Pipeline tab; record the
-numbers here.
+The online CRM is live and the operator has signed in (2026-09-27). The main track
+resumes: the next national batch below. Open CRM checks, to do on the next agent
+visit to the live app: read the cold-start timing line (`lead index …: fetch … ms,
+build … ms`) with `npx vercel logs --since 1h --expand`, and try a whole-selection CSV
+export (Vercel's response-size limit is unmeasured).
 
 Do not record a manual review on the production app as a test: the next sync applies it
 to the national store.
 
-### Parallel track: the next national batch (`b007`)
+### The next national batch (`b007`)
 
 Veneto is fully checked (`b005`–`b006`). The operator restarts the map server
 themselves (`node ui/server.mjs`); a server started before the bare-host change shows the
@@ -623,6 +622,16 @@ one region with `--region CODE`). The API key has $8.91 left of its $25 limit; a
 
 ## Last verification
 
+- Cold start of the online map (2026-09-27): the operator signed in on the live app;
+  the venues took "some seconds" to appear. Timed from the laptop against Neon, the
+  same steps as a cold instance: connect 566 ms, fetch the 7.1 MB snapshot 501 ms,
+  gunzip 134 ms, parse 334 ms, build the index 1,188 ms, then an empty overlay 824 ms
+  (a needless second cluster build). `LeadIndex.applyOverlay` now rebuilds the order
+  and unfiltered clusters only when a status changes (empty overlay: 2 ms; total about
+  2.6 s from the laptop), and `/` starts the load with `after()` while the phone fetches
+  the page. `node --test lib/national-leads.test.mjs`: 6 passed (new: empty and
+  stage-only overlays keep the cluster index); `npm test`: 280 passed; `web` tsc clean,
+  build compiled; `npx vercel deploy --prod` ready.
 - Google sign-in (2026-09-27): `npx vercel deploy --prod` ready; `/api/auth/providers`
   lists google; `POST /api/auth/signin/google` redirects to accounts.google.com with a
   `*.apps.googleusercontent.com` client ID and redirect URI
