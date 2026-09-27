@@ -129,6 +129,18 @@
   .decide button:disabled { opacity: .5; }
   #r-result.err { color: var(--rejected); }
 
+  /* Sales pipeline (online app only: meta.crm) */
+  .stage-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 10px;
+    background: #e0e7ff; color: #3730a3; margin-left: 4px; }
+  .stage-tag.do_not_contact, .stage-tag.lost { background: #fee2e2; color: #991b1b; }
+  .stage-tag.won { background: #dcfce7; color: #14532d; }
+  .crm .banner { background: #fee2e2; color: #991b1b; border-radius: 10px; padding: 8px 10px; font-size: 14px; }
+  .crm .events { list-style: none; padding: 0; margin: 8px 0; font-size: 14px; }
+  .crm .events li { border-bottom: 1px solid var(--line); padding: 6px 0; }
+  .crm .events .when { color: var(--muted); font-size: 12px; }
+  .crm .links { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+  .crm .links a { color: var(--accent); font-weight: 600; }
+  .overdue { color: var(--rejected); font-weight: 600; }
   #toast { position: fixed; z-index: 1002; left: 50%; top: calc(var(--safe-top) + 112px); transform: translateX(-50%);
     background: var(--fg); color: var(--bg); padding: 8px 14px; border-radius: 18px; font-size: 14px; box-shadow: var(--shadow);
     pointer-events: none; opacity: 0; transition: opacity .2s; max-width: 90vw; text-align: center; }
@@ -171,6 +183,7 @@
       <div id="head-text">Loading the map…</div>
       <div class="tabs" role="tablist">
         <button class="tab" role="tab" data-view="list" aria-selected="true">List</button>
+        <button class="tab" role="tab" data-view="pipeline" aria-selected="false" hidden>Pipeline</button>
         <button class="tab" role="tab" data-view="filters" aria-selected="false">Filters</button>
       </div>
     </div>
@@ -183,6 +196,7 @@
     </div>
     <div class="view" id="filters" hidden>
       <fieldset><legend>Lead status</legend><div class="wrap" id="f-status"></div></fieldset>
+      <fieldset id="f-stage-box" hidden><legend>Pipeline</legend><div class="wrap" id="f-stage"></div></fieldset>
       <fieldset><legend>Category</legend><div class="wrap" id="f-cat"></div></fieldset>
       <fieldset><legend>Area</legend>
         <div class="row"><select id="f-region" aria-label="Region"></select><select id="f-prov" aria-label="Province"></select></div>
@@ -200,6 +214,15 @@
         <button class="primary" id="export" type="button">Download CSV</button>
       </fieldset>
       <p class="note">Venue data: Overture Maps Foundation Places (CDLA-Permissive-2.0). Map: © OpenStreetMap contributors.</p>
+      <p class="note" id="signed-in" hidden></p>
+    </div>
+    <div class="view" id="pipeline" hidden>
+      <div class="row" style="margin:8px 0">
+        <select id="p-stage" aria-label="Pipeline stage"><option value="">Open stages</option><option value="all">All stages</option></select>
+        <button class="secondary" type="button" id="p-refresh" hidden style="height:44px">Refresh from Pomovi</button>
+      </div>
+      <div id="p-items"></div>
+      <p class="note" id="p-note"></p>
     </div>
     <div class="view" id="venue" hidden></div>
   </div>
@@ -326,13 +349,14 @@
     var params = new URLSearchParams(location.search);
     var list = function (name) { return (params.get(name) || '').split(',').filter(Boolean); };
     var at = (location.hash.match(/^#@(-?[\d.]+),(-?[\d.]+),(\d+)z$/) || []).slice(1).map(Number);
-    return { status: list('status'), cat: list('cat'), region: params.get('region') || '', prov: params.get('prov') || '',
+    return { status: list('status'), cat: list('cat'), stage: list('stage'), region: params.get('region') || '', prov: params.get('prov') || '',
       phone: params.get('phone') === '1', q: params.get('q') || '', view: at.length === 3 ? at : null };
   }
   function filterQuery(withVersion) {
     var params = new URLSearchParams();
     if (state.status.length) params.set('status', state.status.join(','));
     if (state.cat.length) params.set('cat', state.cat.join(','));
+    if (state.stage.length) params.set('stage', state.stage.join(','));
     if (state.region) params.set('region', state.region);
     if (state.prov) params.set('prov', state.prov);
     if (state.phone) params.set('phone', '1');
@@ -347,7 +371,7 @@
       '#@' + c.lat.toFixed(5) + ',' + c.lng.toFixed(5) + ',' + map.getZoom() + 'z');
   }
   function activeFilterCount() {
-    return (state.status.length ? 1 : 0) + (state.cat.length ? 1 : 0) + (state.region ? 1 : 0) +
+    return (state.status.length ? 1 : 0) + (state.cat.length ? 1 : 0) + (state.stage.length ? 1 : 0) + (state.region ? 1 : 0) +
       (state.prov ? 1 : 0) + (state.phone ? 1 : 0) + (state.q ? 1 : 0);
   }
   function filtersChanged() {
@@ -393,6 +417,14 @@
     meta.categories.forEach(function (category) {
       catBox.appendChild(filterChip(CATEGORY_ICON[category.code] + ' ' + category.label, null, state.cat, category.code));
     });
+    if (meta.crm) {
+      var stageBox = $('f-stage');
+      stageBox.innerHTML = '';
+      stageBox.appendChild(filterChip('Not in pipeline', null, state.stage, 'none'));
+      meta.stages.forEach(function (stage) {
+        stageBox.appendChild(filterChip(stage.label + ' · ' + number(stage.count), null, state.stage, stage.code));
+      });
+    }
     var region = $('f-region');
     region.innerHTML = '<option value="">All regions</option>' + meta.regions.map(function (entry) {
       return '<option value="' + entry.code + '"' + (entry.code === state.region ? ' selected' : '') + '>' + esc(entry.name) + '</option>';
@@ -424,7 +456,7 @@
   $('f-prov').addEventListener('change', function () { state.prov = this.value; filtersChanged(); if (state.prov) fitSelection(); });
   $('f-phone').addEventListener('change', function () { state.phone = this.checked; filtersChanged(); });
   $('reset').addEventListener('click', function () {
-    state.status = []; state.cat = []; state.region = ''; state.prov = ''; state.phone = false; state.q = '';
+    state.status = []; state.cat = []; state.stage = []; state.region = ''; state.prov = ''; state.phone = false; state.q = '';
     filtersChanged();
   });
   $('filter-btn').addEventListener('click', function () { setView('filters'); setSheet('full'); });
@@ -596,7 +628,7 @@
     row.innerHTML = '<span class="dot" style="background:' + COLORS[item.status] + ';width:12px;height:12px"></span>' +
       '<span class="t"><div class="name">' + esc(item.name) + '</div><div class="sub">' + CATEGORY_ICON[item.category] + ' ' +
       esc(STATUS[item.status].short) + ' · ' + esc(item.municipality) + (item.province ? ' (' + esc(item.province) + ')' : '') +
-      (item.phone ? ' · ☎' : '') + '</div></span>';
+      (item.phone ? ' · ☎' : '') + (item.stage ? ' ' + stageTag(item.stage) : '') + '</div></span>';
     row.addEventListener('click', function () { openVenue(item.i, true); });
     return row;
   }
@@ -661,10 +693,12 @@
         (venue.candidate_url && venue.candidate_url !== venue.verified_url ? '<dt>Source link</dt><dd><a href="' + esc(venue.candidate_url) + '" target="_blank" rel="noopener">' + esc(venue.candidate_url) + '</a> <span class="note">(not verified)</span></dd>' : '') +
         (venue.checked_at ? '<dt>Checked</dt><dd>' + esc(venue.checked_at.slice(0, 10)) + (venue.assessment ? ' · ' + esc(venue.assessment.replace(/_/g, ' ')) : '') + '</dd>' : '') +
       '</dl>' +
+      (meta.crm ? '<div class="review crm" id="crm"><p class="note">Loading the pipeline…</p></div>' : '') +
       (venue.candidate_url || venue.verified_url ? '<div class="review" id="review"><p class="note">Loading review details…</p></div>' : '') +
       '<p class="note">' + esc(venue.id) + '</p>';
     $('back').addEventListener('click', function () { setView(returnView); });
     if ($('review')) loadReview(venue);
+    if ($('crm')) loadCrm(venue);
   }
 
   // --- Manual ownership review -----------------------------------------------
@@ -800,6 +834,149 @@
     map.flyTo(map.unproject(point, zoom), zoom, { duration: 0.6 });
   }
 
+  // --- Sales pipeline (online app only) -------------------------------------------
+  // The online app (web/) reports `crm` in /api/national/meta; the laptop server does
+  // not, and then none of this appears. Stages and touches are stored online.
+  var STAGE_LABEL = {}, stageOrder = [];
+  var TOUCH = { visit: 'Visit', card: 'Card left', letter: 'Letter', call: 'Call', email: 'Email', note: 'Note' };
+  function enableCrm(crm) {
+    meta.stages.forEach(function (stage) { STAGE_LABEL[stage.code] = stage.label; });
+    stageOrder = meta.stages.map(function (stage) { return stage.code; });
+    $('f-stage-box').hidden = false;
+    document.querySelector('.tab[data-view="pipeline"]').hidden = false;
+    $('p-refresh').hidden = !crm.pomovi;
+    $('signed-in').hidden = false;
+    $('signed-in').innerHTML = 'Signed in as ' + esc(crm.user) + ' · <a href="/api/auth/signout">Sign out</a>';
+    if (!$('p-stage').dataset.ready) {
+      $('p-stage').dataset.ready = '1';
+      $('p-stage').innerHTML += meta.stages.map(function (stage) {
+        return '<option value="' + stage.code + '">' + esc(stage.label) + '</option>';
+      }).join('');
+    }
+  }
+  function stageTag(code) {
+    return '<span class="stage-tag ' + esc(code) + '">' + esc(STAGE_LABEL[code] || code) + '</span>';
+  }
+  function today() { return new Date().toISOString().slice(0, 10); }
+  function api(path, body) {
+    return fetch(path, body ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : {})
+      .then(function (r) { return r.json().then(function (data) { if (!r.ok) throw new Error(data.error || 'HTTP ' + r.status); return data; }); });
+  }
+
+  function loadPipeline() {
+    var pick = $('p-stage').value;
+    var open = ['shortlisted', 'demo_requested', 'demo_ready', 'contacted', 'follow_up'];
+    var stages = pick === 'all' ? [] : pick ? [pick] : open;
+    $('p-note').textContent = 'Loading…';
+    api('/api/crm/list' + (stages.length ? '?stage=' + stages.join(',') : '')).then(function (data) {
+      var box = $('p-items');
+      box.innerHTML = '';
+      data.items.forEach(function (item) {
+        var row = document.createElement('button');
+        row.type = 'button'; row.className = 'item';
+        var due = item.next_action_on ? (item.next_action_on < today() ? '<span class="overdue">' + esc(item.next_action_on) + '</span>' : esc(item.next_action_on)) : '';
+        row.innerHTML = '<span class="t"><div class="name">' + esc(item.venue_name) + ' ' + stageTag(item.stage) + '</div>' +
+          '<div class="sub">' + esc(item.municipality) + (item.province ? ' (' + esc(item.province) + ')' : '') +
+          (item.next_action || due ? ' · ' + due + ' ' + esc(item.next_action) : '') + '</div></span>';
+        row.addEventListener('click', function () { if (item.i >= 0) openVenue(item.i, true); });
+        box.appendChild(row);
+      });
+      $('p-note').textContent = data.items.length ? data.items.length + (data.items.length === 1 ? ' venue' : ' venues') + ', next actions first.' : 'No venues in these stages. Open a venue and add it to the pipeline.';
+    }).catch(function (error) { $('p-note').textContent = 'Pipeline unavailable: ' + error.message; });
+  }
+  $('p-stage').addEventListener('change', loadPipeline);
+  $('p-refresh').addEventListener('click', function () {
+    var button = this;
+    button.disabled = true;
+    api('/api/crm/pomovi-refresh', {}).then(function (data) {
+      toast(data.refreshed + ' demos read from Pomovi'); reloadMeta(); loadPipeline();
+    }).catch(function (error) { toast(error.message); }).then(function () { button.disabled = false; });
+  });
+
+  function loadCrm(venue) {
+    api('/api/crm/venue?id=' + encodeURIComponent(venue.id)).then(function (data) {
+      if ($('crm')) renderCrm(venue, data);
+    }).catch(function (error) {
+      if ($('crm')) $('crm').innerHTML = '<p class="note">Pipeline unavailable: ' + esc(error.message) + '</p>';
+    });
+  }
+  function renderCrm(venue, data) {
+    var entry = data.entry, html = ['<h3>Pipeline</h3>'];
+    var website = venue.verified_url || venue.candidate_url;
+    if (!entry) {
+      html.push('<p class="note">Not in the pipeline.</p>',
+        '<div class="decide"><button class="primary" type="button" id="c-add">Add to pipeline</button>',
+        '<button class="secondary" type="button" id="c-dnc">Do not contact</button></div>');
+    } else {
+      if (entry.stage === 'do_not_contact') html.push('<p class="banner">Do not contact. Changing the stage reopens this venue.</p>');
+      html.push('<label for="c-stage">Stage</label><select id="c-stage">' + stageOrder.map(function (code) {
+          return '<option value="' + code + '"' + (code === entry.stage ? ' selected' : '') + '>' + esc(STAGE_LABEL[code]) + '</option>';
+        }).join('') + '</select>',
+        '<label for="c-next">Next action</label><div class="row"><input class="field" id="c-next" value="' + esc(entry.next_action) + '" placeholder="e.g. go back with the card">' +
+          '<input class="field" id="c-next-on" type="date" value="' + esc(entry.next_action_on || '') + '" style="flex:0 0 10.5em"></div>',
+        '<div id="c-lost-box"' + (entry.stage === 'lost' ? '' : ' hidden') + '><label for="c-lost">Why lost</label><input class="field" id="c-lost" value="' + esc(entry.lost_reason) + '"></div>',
+        '<button class="secondary" type="button" id="c-save" style="margin-top:8px">Save</button>',
+        '<h3>Add a contact or note</h3>',
+        '<div class="row"><select id="c-kind">' + Object.keys(TOUCH).map(function (kind) { return '<option value="' + kind + '">' + TOUCH[kind] + '</option>'; }).join('') + '</select>' +
+          '<input class="field" id="c-on" type="date" value="' + today() + '"></div>',
+        '<textarea id="c-note" placeholder="What happened, who you spoke to" style="margin-top:8px"></textarea>',
+        '<button class="secondary" type="button" id="c-touch">Add</button>');
+    }
+    html.push('<h3>Demo</h3>');
+    if (entry && entry.pomovi_slug) {
+      html.push('<p>Pomovi: <b>' + esc(entry.pomovi_slug) + '</b> · ' + esc(entry.pomovi_status || '') +
+        (entry.pomovi_menu_items != null ? ' · ' + number(entry.pomovi_menu_items) + ' menu items' : '') + '</p><div class="links">' +
+        (entry.pomovi_public_url ? '<a href="' + esc(entry.pomovi_public_url) + '" target="_blank" rel="noopener">Open the demo</a>' : '') +
+        (entry.pomovi_wizard_url ? '<a href="' + esc(entry.pomovi_wizard_url) + '" target="_blank" rel="noopener">Continue in Pomovi</a>' : '') + '</div>');
+    } else if (!meta.crm.pomovi) {
+      html.push('<p class="note">The Pomovi bridge is not configured yet (POMOVI_BRIDGE_URL, POMOVI_BRIDGE_TOKEN).</p>');
+    } else if (!website) {
+      html.push('<p class="note">No website to build a demo from.</p>');
+    } else {
+      html.push('<p class="note">Builds from ' + esc(website) + (venue.verified_url ? '' : ' (not verified)') + '.</p>',
+        '<button class="secondary" type="button" id="c-demo"' + (entry && entry.stage === 'do_not_contact' ? ' disabled' : '') + '>Create demo in Pomovi</button>');
+    }
+    if (data.events.length) {
+      html.push('<h3>History</h3><ul class="events">' + data.events.map(function (event) {
+        var what = event.kind === 'stage' ? (event.stage_from ? esc(STAGE_LABEL[event.stage_from] || event.stage_from) + ' → ' : 'Added as ') +
+          esc(STAGE_LABEL[event.stage_to] || event.stage_to) : '<b>' + esc(TOUCH[event.kind] || event.kind) + '</b>';
+        return '<li>' + what + (event.note ? ' — ' + esc(event.note) : '') + '<div class="when">' + esc(event.happened_on) + ' · ' + esc(event.created_by) + '</div></li>';
+      }).join('') + '</ul>');
+    }
+    html.push('<p class="note" id="c-result"></p>');
+    $('crm').innerHTML = html.join('');
+    var result = $('c-result');
+    var send = function (path, body, done) {
+      result.className = 'note'; result.textContent = 'Saving…';
+      return api(path, body).then(function (answer) {
+        result.textContent = done || 'Saved.';
+        renderCrm(venue, answer.entry !== undefined ? answer : data);
+        if ($('c-result')) $('c-result').textContent = done || 'Saved.';
+        reloadMeta(true);
+      }).catch(function (error) { result.className = 'note err'; result.textContent = 'Not saved: ' + error.message; });
+    };
+    if ($('c-add')) $('c-add').addEventListener('click', function () { send('/api/crm/venue', { venue_id: venue.id, stage: 'shortlisted' }, 'Added to the pipeline.'); });
+    if ($('c-dnc')) $('c-dnc').addEventListener('click', function () {
+      if (confirm('Mark ' + venue.name + ' as do not contact?')) send('/api/crm/venue', { venue_id: venue.id, stage: 'do_not_contact' }, 'Marked do not contact.');
+    });
+    if ($('c-stage')) $('c-stage').addEventListener('change', function () { $('c-lost-box').hidden = this.value !== 'lost'; });
+    if ($('c-save')) $('c-save').addEventListener('click', function () {
+      var stage = $('c-stage').value;
+      var reopen = entry.stage === 'do_not_contact' && stage !== 'do_not_contact';
+      if (reopen && !confirm('This venue is marked do not contact. Reopen it?')) return;
+      send('/api/crm/venue', { venue_id: venue.id, stage: stage, next_action: $('c-next').value, next_action_on: $('c-next-on').value,
+        lost_reason: $('c-lost').value, reopen: reopen });
+    });
+    if ($('c-touch')) $('c-touch').addEventListener('click', function () {
+      if (entry.stage === 'do_not_contact') { result.className = 'note err'; result.textContent = 'Do not contact: reopen it first.'; return; }
+      send('/api/crm/venue', { venue_id: venue.id, event: { kind: $('c-kind').value, note: $('c-note').value, happened_on: $('c-on').value } }, 'Added.');
+    });
+    if ($('c-demo')) $('c-demo').addEventListener('click', function () {
+      this.disabled = true;
+      send('/api/crm/demo', { venue_id: venue.id }, 'Demo requested in Pomovi.');
+    });
+  }
+
   // --- Export ------------------------------------------------------------------
   $('x-seed').value = Math.random().toString(36).slice(2, 8);
   $('export').addEventListener('click', function () {
@@ -817,11 +994,12 @@
   // --- Sheet -----------------------------------------------------------------
   function setView(name) {
     view = name;
-    ['list', 'filters', 'venue'].forEach(function (id) { $(id).hidden = id !== name; });
+    ['list', 'filters', 'venue', 'pipeline'].forEach(function (id) { $(id).hidden = id !== name; });
     Array.prototype.forEach.call(document.querySelectorAll('.tab'), function (tab) {
       tab.setAttribute('aria-selected', String(tab.dataset.view === name));
     });
     if (name === 'list' && listStale) loadList(true);
+    if (name === 'pipeline') loadPipeline();
   }
   function setSheet(stateName) {
     sheet.dataset.state = stateName;
@@ -899,7 +1077,8 @@
     });
   }
 
-  function reloadMeta() {
+  // quiet: the change is the operator's own (a pipeline edit), so no "Map updated" toast.
+  function reloadMeta(quiet) {
     return fetch('/api/national/meta').then(function (response) {
       if (response.status === 503) {
         $('head-text').textContent = 'Preparing the map… (about 10 seconds after an update)';
@@ -912,9 +1091,10 @@
       var changed = Boolean(meta);
       meta = data;
       statusCodes = data.statuses.map(function (s) { return s.code; });
+      if (data.crm) enableCrm(data.crm);
       renderFilterControls();
       if (!map.hasLayer(leads)) leads.addTo(map);
-      else if (changed) { leads.redraw(); toast('Map updated'); }
+      else if (changed) { leads.redraw(); if (quiet !== true) toast('Map updated'); }
       refresh();
     }).catch(function (error) { $('head-text').textContent = 'Map unavailable: ' + error.message; });
   }

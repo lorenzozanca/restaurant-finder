@@ -1,0 +1,13 @@
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+!.env.example
+.vercel
+# Copied from ../ui by scripts/copy-ui.mjs
+generated/
+public/vendor/
+public/italian-municipalities.json
+# Local PGlite database (scripts/local-db.mjs)
+.local-db/

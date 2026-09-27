@@ -389,6 +389,10 @@ project to Pro when the app is first used to contact a venue.
    directory `web`, environment variables, first sync. Written in `web/README.md`.
 7. Pomovi side (another agent, in that repo): the plan file above.
 
+State (2026-09-27): steps 1–5 are built and verified against a local Postgres with the
+real national store; step 6 (the operator's accounts) is next; step 7 is planned in
+Pomovi.
+
 Done means: the operator signs in from a phone, sees all 156,057 venues with the same
 counts as the local map, records a manual review that reaches the local store on the
 next sync, moves a venue through the pipeline, and (after step 7) creates its demo.

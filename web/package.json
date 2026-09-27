@@ -1,0 +1,30 @@
+{
+  "name": "restaurant-finder-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/copy-ui.mjs",
+    "dev": "next dev --hostname 127.0.0.1",
+    "prebuild": "node scripts/copy-ui.mjs",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:local": "node scripts/local-db.mjs",
+    "db:migrate": "node --env-file-if-exists=.env.local ../sync-online.mjs --migrate-only",
+    "sync:local": "node --env-file-if-exists=.env.local ../sync-online.mjs --no-reviews"
+  },
+  "dependencies": {
+    "next": "^16.2.6",
+    "next-auth": "^5.0.0-beta.32",
+    "postgres": "^3.4.9",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}

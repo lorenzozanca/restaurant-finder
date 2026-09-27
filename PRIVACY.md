@@ -1,6 +1,6 @@
 # Privacy and retention process
 
-Last reviewed: 2026-09-25
+Last reviewed: 2026-09-27
 
 This is the operating process for Restaurant Finder, not a completed public
 privacy notice or legal opinion. Before deployment, replace every bracketed
@@ -37,6 +37,17 @@ Do not reuse the data for profiling, direct marketing, eligibility decisions,
 or enrichment unrelated to that purpose without a new legal-basis and
 compatibility assessment.
 
+**Second purpose, B2B prospecting (operator decision 2026-09-27; not yet cleared).**
+The online lead CRM (`web/`, `PROCESS.md` → "Online lead CRM") uses the same venue
+records to choose and track venues the operator offers Pomovi to, in person or by
+post. Before the app is used to contact any venue, the controller must: complete and
+sign the legitimate-interests assessment for this purpose (release-gate item 1), add
+it to the public notice (item 2), and record Vercel and Neon below (item 4). Channel
+rules to respect: no unsolicited marketing email or automated calls without consent
+(Codice privacy art. 130, which the Garante applies to businesses too); check the
+Registro pubblico delle opposizioni before any marketing phone call; honour every
+objection by setting the venue to **Do not contact**, which blocks further entries.
+
 Data subjects may include sole traders, named proprietors, or individuals whose
 direct contact details appear on a public venue page. A public business record
 is not automatically outside GDPR.
@@ -50,9 +61,14 @@ is not automatically outside GDPR.
 | Ownership-review evidence | Model decision, publisher kind, short verbatim quotes of business name/address/phone, input hash, model ID, cost | LLM ownership reviewer via OpenRouter, from the crawled public page | Candidate-assessment database; full prompts and page text are not retained |
 | Manual review decisions | Reviewer name (as typed), decision, website, evidence URLs, optional notes, time | Operator, from the map's venue card | Publisher attestations in the national store |
 | National map snapshot and lead exports | Venue name, category, address, phone, coordinates, website state, crawl outcome | National store (Overture Places plus review outcomes) | `*.map-snapshot.json` next to the national store, rebuilt from it; CSV files the operator downloads from the map are kept on the operator's device and are the operator's responsibility |
+| Online copy for the CRM | The map snapshot, per-venue review details (candidates, attestations, crawl assessments, LLM reason and quotes, source record IDs) | `sync-online.mjs` from the national store | Neon Postgres (EU, Frankfurt), the app on Vercel (`fra1`); replaced on each sync, last two snapshots kept |
+| Sales pipeline | Stage, next action and date, lost reason, contacts made (visit, card, letter, call, email, note) with free-text notes, the operator's email as author, Pomovi demo IDs and status | Operator, in the online app; Pomovi's bridge | Neon; copied to `data/online-backups/` on the laptop at every sync (last 30 kept). Notes must not record private details about named people |
+| Online manual review decisions | As "Manual review decisions", plus the signed-in email | Operator, in the online app | Neon `manual_reviews`, applied to the national store by `sync-online.mjs` |
 
-The application itself has no user accounts, cookies, analytics, or persistent
-IP-address log. Hosting platforms, reverse proxies, DNS providers, and the
+The laptop application has no user accounts, cookies, analytics, or persistent
+IP-address log. The online app (`web/`) has one: Google sign-in for the addresses in
+`AUTH_OWNER_EMAILS`, an Auth.js session cookie (JWT), and whatever request logs Vercel
+keeps. Hosting platforms, reverse proxies, DNS providers, and the
 external search tool may process additional data; the controller must add them
 to the register and public notice.
 

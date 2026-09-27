@@ -1,6 +1,7 @@
 # Execution status
 
-Updated: 2026-09-26 (all of Veneto checked, `b005`–`b006`; 5,982 verified)
+Updated: 2026-09-27 (online lead CRM built and verified locally, not yet deployed;
+national counts unchanged: 5,982 verified)
 Branch: `main`
 
 ## Current milestone
@@ -9,6 +10,47 @@ Process the 86,852 known candidates with the certified reviewer (`PROCESS.md` st
 in operator-approved batches with a $5 cap each (about 5,000 venues nationally, or one
 whole region with `--region`). The reviewer
 passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
+
+## Online lead CRM (`PROCESS.md` → "Online lead CRM", 2026-09-27)
+
+Operator decision: the map and a sales pipeline go online, private behind Google
+sign-in (the bh-os pattern); this repo is the CRM; Pomovi builds demos.
+
+- Shipped and verified **locally** (not deployed: Neon, the Google OAuth client and the
+  Vercel project need the operator's accounts):
+  - `lib/map-constants.mjs` and `lib/review-decision.mjs`: codes and review validation
+    without SQLite imports, so `web/` can load them on Vercel. `lib/map-snapshot.mjs`
+    and `lib/review-queue.mjs` re-export them.
+  - `LeadIndex.applyOverlay()` and a `stage` filter/facet (`lib/national-leads.mjs`);
+    the CSV export has a `pipeline_stage` column.
+  - The snapshot version is now a hash of its content, so a rebuild that changed
+    nothing keeps its version (merely opening the store moves its stamp).
+  - `web/db/migrations/0001_online_crm.sql` (map_snapshots, venue_details,
+    manual_reviews, pipeline, pipeline_events, sync_runs), `lib/online-db.mjs`.
+  - `sync-online.mjs` + `lib/online-sync.mjs` + `lib/venue-details.mjs`: apply online
+    manual decisions through `recordReviewDecision` (keeping the online decision time;
+    a refused one is marked with its error), push the snapshot (gzipped, last 2 kept)
+    and changed venue details, copy the CRM tables to `data/online-backups/` (last 30).
+    `--no-reviews` skips the first step (`web/`'s `sync:local` uses it).
+  - `web/`: Next.js 16 + Auth.js (Google, `AUTH_OWNER_EMAILS`), the same `ui/map.html`
+    and `/api/national/*` over the Neon snapshot plus the overlay, manual review into
+    `manual_reviews`, the pipeline API (`/api/crm/*`), and a Pomovi client for the
+    contract in `../pomovi/docs/plans/restaurant-finder-bridge.md` (inactive until
+    `POMOVI_BRIDGE_URL`/`POMOVI_BRIDGE_TOKEN` are set). Setup: `web/README.md`.
+  - `ui/map.html`: when `/api/national/meta` reports `crm`, a Pipeline section on the
+    venue card (stage, next action, contacts, history, demo), a Pipeline tab (next
+    actions first), and stage filter chips. The laptop server does not report `crm`,
+    so its map is unchanged.
+  - `PRIVACY.md`: the prospecting purpose, the online data, and what the operator must
+    sign before the app is used to contact a venue.
+- Pomovi side: plan committed there as `7354496` (local `main`, not pushed); nothing
+  implemented in Pomovi.
+- Measured on the real national store, local PGlite database: first sync 10.3 s
+  (156,057 venues, 86,895 venue details); database 80 MB (venue_details 65 MB,
+  snapshot 7 MB) against Neon's 0.5 GB free limit.
+- Not yet measured: cold start of a Vercel function loading the 7 MB snapshot from
+  Neon, and whether a whole-Italy CSV export (tens of MB) exceeds Vercel's response
+  limit. Check both after the first deploy.
 
 ## Locked holdout v1 for the LLM reviewer (2026-09-24)
 
@@ -528,21 +570,39 @@ passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
 
 ## Next executable task
 
+**Put the lead CRM online** (`web/README.md` → "Going online"). The operator does
+steps 1–3, which need their accounts: a Neon project in Frankfurt (pooled connection
+string), a Google OAuth web client (redirect URI on the Vercel domain; their address as
+test user), and a Vercel project with Root Directory `web` and the five environment
+variables. Then the agent, with `DATABASE_URL` supplied by the operator:
+
+1. `DATABASE_URL='…' node --no-network-family-autoselection --dns-result-order=ipv4first sync-online.mjs`
+   (migrates, uploads 156,057 venues and ~86,900 details, writes a CRM backup);
+2. on the Vercel URL, signed in: `/api/national/meta` gives verified 5,982, rejected
+   3,294, statuses summing to 156,057; measure the first (cold) meta request and a
+   whole-selection CSV export; add a venue to the pipeline and see it in the Pipeline
+   tab; record the numbers here.
+
+Do not record a manual review on the production app as a test: the next sync applies it
+to the national store.
+
+### Parallel track: the next national batch (`b007`)
+
 Veneto is fully checked (`b005`–`b006`). The operator restarts the map server
 themselves (`node ui/server.mjs`); a server started before the bare-host change shows the
 Veneto 22 as "Not checked yet" until restarted. Report any map issue as a fix before resuming batches. Manual reviews of
 undecided venues (filter **Undecided**, e.g. 2,057 in Veneto) need no budget.
 
-Batch `b006` needs the operator's approval and their choice of scope (national 5,000, or
+Batch `b007` needs the operator's approval and their choice of scope (national 5,000, or
 one region with `--region CODE`). The API key has $8.91 left of its $25 limit; a
 5,000-venue batch costs about $3 (`b005`, 5,796 venues, cost $3.43). Once approved:
 
 1. Check the link (`iw dev wlp58s0 station dump`: rx bitrate well above VHT-MCS 0; ping
    1.1.1.1 under 50 ms). If degraded, run `nmcli connection up "Italia Uno"` (works
    without sudo).
-2. `node prepare-national-batch.mjs --size 5000 [--region CODE]` (writes `b006`), then:
-   `node assess-labelled-corpus.mjs --partition development --fixture-dir data/national-review/batches/b006 --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --db data/national-review/review.sqlite --cache-dir data/national-review/cache --concurrency 12 --llm-review --run-id national-b006 --budget-usd 5 --verifier-model xiaomi/mimo-v2.6-pro`
-   with a cap below the key's remaining limit, logging to `data/national-review/b006.log`.
+2. `node prepare-national-batch.mjs --size 5000 [--region CODE]` (writes `b007`), then:
+   `node assess-labelled-corpus.mjs --partition development --fixture-dir data/national-review/batches/b007 --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --db data/national-review/review.sqlite --cache-dir data/national-review/cache --concurrency 12 --llm-review --run-id national-b007 --budget-usd 5 --verifier-model xiaomi/mimo-v2.6-pro`
+   with a cap below the key's remaining limit, logging to `data/national-review/b007.log`.
    Launch it detached (`setsid nohup bash -c '…; echo "exit $?" >> …log' &`) with the
    detached Wi-Fi watchdog (every 30 s, ping 1.1.1.1 five times; if the average is above
    500 ms or all are lost, run the `nmcli` command, at most once per 2 minutes; stop when
@@ -552,7 +612,7 @@ one region with `--region CODE`). The API key has $8.91 left of its $25 limit; a
    `--retry-state retryable` (same run ID and cap).
 3. `node publish-national-review.mjs` (also rebuilds the map snapshot), then read
    `/api/national/meta` (`stats` and `statuses`) and report the verified, rejected, and
-   assessed counts.
+   assessed counts. Once the CRM is online, run `sync-online.mjs` after publishing.
 
 ## Acceptance gate for the automatic verifier (unchanged from v1)
 
@@ -563,6 +623,31 @@ one region with `--region CODE`). The API key has $8.91 left of its $25 limit; a
 - Also reported: stage-1 false rejections and cost per candidate.
 
 ## Last verification
+
+- Online lead CRM (2026-09-27):
+  - `npm test`: 280 passed, 0 failed (new: the overlay test in
+    `lib/national-leads.test.mjs`; `lib/online-sync.test.mjs`, two tests against a real
+    Postgres via PGlite's socket server). One earlier full run had 1 failure in
+    `lib/lib.test.mjs` ("get does not load PDF…"); it passed alone 3 times and in the
+    next full run, so it is flaky under parallel load, not caused by this change.
+  - `cd web && npx tsc --noEmit`: clean. `npm run build`: compiled; routes `/`,
+    `/signin`, `/api/auth/[...nextauth]`, `/api/national/[...path]`, `/api/crm/[...path]`,
+    proxy; `route.js.nft.json` traces `generated/map.html`.
+  - `npm run db:local` (temp dir) + `npm run sync:local` on the real store: migration
+    applied; snapshot uploaded; 86,895 details; backup written; 10.3 s; database 80 MB.
+  - `next dev` with `AUTH_DEV_EMAIL`: meta verified 5,982 of 156,057 (same as the laptop
+    map); Rome summary 5,844 in view; pipeline add, next action, touch, do-not-contact
+    blocking until `reopen`, unknown stage refused; stage filter 1; a manual approval
+    showed at once (verified 5,983, "waiting for the laptop sync"); an unknown
+    candidate domain was refused; the demo button answered "not configured". That test
+    approval was deleted from the temporary database and never synced.
+  - `node ui/map-mobile-check.mjs --url http://127.0.0.1:3057/…`: page, tiles, search,
+    list, venue card, review details, filters and street zoom all passed on the online
+    app (the old-page redirects exist only on the laptop server). Headless screenshots
+    of the card's Pipeline section, a touch added through the form, and the Pipeline tab.
+  - `next start` (production mode): `/` → 307 `/signin`; `/api/national/meta` and
+    `/api/crm/list` → 401; with a forged session cookie `/` → `/signin` and the APIs 401;
+    `/signin` 200.
 
 - Veneto remainder `b006` and bare-host websites (2026-09-26):
   - `npm test`: 277 passed, 0 failed. `git diff --check`: clean.
