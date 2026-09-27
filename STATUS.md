@@ -1,7 +1,7 @@
 # Execution status
 
 Updated: 2026-09-27 (online lead CRM deployed at restaurant-finder-iota.vercel.app and
-synced; Google sign-in client pending; national counts unchanged: 5,982 verified)
+synced, Google sign-in configured; national counts unchanged: 5,982 verified)
 Branch: `main`
 
 ## Current milestone
@@ -19,7 +19,9 @@ sign-in (the bh-os pattern); this repo is the CRM; Pomovi builds demos.
 - Deployed 2026-09-27 with the operator's Vercel login: project `restaurant-finder`
   (Hobby, Root Directory `web`), Neon `restaurant-finder` (free plan, eu-central-1) via
   the Vercel integration, `AUTH_SECRET` and `AUTH_OWNER_EMAILS` set, first sync done.
-  Only the Google OAuth client is missing. Details in `web/README.md` → "Online".
+  The Google OAuth client was added the same day (`AUTH_GOOGLE_ID`/`AUTH_GOOGLE_SECRET`
+  copied from the root `.env` to Production, then redeployed). Details in
+  `web/README.md` → "Online".
 - Built and verified locally first:
   - `lib/map-constants.mjs` and `lib/review-decision.mjs`: codes and review validation
     without SQLite imports, so `web/` can load them on Vercel. `lib/map-snapshot.mjs`
@@ -573,21 +575,12 @@ sign-in (the bh-os pattern); this repo is the CRM; Pomovi builds demos.
 
 ## Next executable task
 
-**Finish the online sign-in and verify the live CRM.** Deployed 2026-09-27 at
-<https://restaurant-finder-iota.vercel.app>, with Neon synced; sign-in is missing only
-the Google OAuth client, which needs the operator's Google Cloud console:
-
-1. Operator: create a Web application OAuth client (in the same Google Cloud project as
-   bh-os, so its test-user list already has their address) with the two redirect URIs
-   in `web/README.md` → "Online", and add its ID and secret as `AUTH_GOOGLE_ID` and
-   `AUTH_GOOGLE_SECRET` (Production), e.g. `npx vercel env add AUTH_GOOGLE_ID production`
-   from the repository root.
-2. Agent: `npx vercel deploy --prod` from the repository root (a changed variable needs
-   a redeploy).
-3. Operator signs in on the phone; then check `/api/national/meta` (verified 5,982,
-   rejected 3,294, statuses summing to 156,057), the time of the first (cold) meta
-   request, a whole-selection CSV export, and a pipeline entry in the Pipeline tab;
-   record the numbers here.
+**Verify the live CRM signed in.** <https://restaurant-finder-iota.vercel.app> is
+deployed with all sign-in variables (Google client added 2026-09-27). The operator
+signs in on the phone; then check `/api/national/meta` (verified 5,982, rejected 3,294,
+statuses summing to 156,057), the time of the first (cold) meta request, a
+whole-selection CSV export, and a pipeline entry in the Pipeline tab; record the
+numbers here.
 
 Do not record a manual review on the production app as a test: the next sync applies it
 to the national store.
@@ -630,6 +623,11 @@ one region with `--region CODE`). The API key has $8.91 left of its $25 limit; a
 
 ## Last verification
 
+- Google sign-in (2026-09-27): `npx vercel deploy --prod` ready; `/api/auth/providers`
+  lists google; `POST /api/auth/signin/google` redirects to accounts.google.com with a
+  `*.apps.googleusercontent.com` client ID and redirect URI
+  `https://restaurant-finder-iota.vercel.app/api/auth/callback/google`; signed-out
+  `/api/national/meta` still 401.
 - Online deploy (2026-09-27):
   - `node --no-network-family-autoselection --dns-result-order=ipv4first --env-file=.env.local sync-online.mjs`:
     migration applied; snapshot `3a86b85efbc5` (156,057 venues) uploaded; 86,895 venue
