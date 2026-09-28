@@ -1,7 +1,6 @@
 # Execution status
 
-Updated: 2026-09-28 (first real Pomovi demo created from the CRM; national counts
-unchanged)
+Updated: 2026-09-28 (Pomovi bridge done end to end; national counts unchanged)
 Branch: `main`
 
 ## Current counts
@@ -28,7 +27,7 @@ Vercel project `restaurant-finder` (Hobby, root directory `web`), Neon
 First sync 2026-09-27: snapshot `3a86b85efbc5`, 86,895 venue details, 0 manual reviews.
 Setup, sync, and deploy commands: `web/README.md`.
 
-`PROCESS.md` steps 1–6 are done. "Done means" checklist:
+`PROCESS.md` steps 1–6, 8 and 9 are done; 7 has the cold-start check open. "Done means" checklist:
 
 | Check | State |
 |---|---|
@@ -85,7 +84,9 @@ redeployed (`restaurant-finder-khq5tcjk1`) with `POMOVI_BRIDGE_URL`
 back. First round trip (operator, 2026-09-28): a shortlisted lead
 (`venue:026051:oderzo:giardinetto-oderzo`) → **Create demo** → Pomovi venue 15
 `al-giardinetto-oderzo`; **Continue in Pomovi** opened the wizard, which read the
-branding and found menu sources by itself (checked read-only in Pomovi's database). They add `POST`/`GET /api/bridge/venues`
+branding and found menu sources by itself (checked read-only in Pomovi's database).
+**Refresh from Pomovi** (only on `/map` → Pipeline tab; the venue record and `/leads`
+have no such button) read the demo back. Pomovi's plan is archived there. They add `POST`/`GET /api/bridge/venues`
 (bearer `RESTAURANT_FINDER_BRIDGE_TOKEN`; unset = 404), migration `0069`
 (`venues.source_ref`), a "da restaurant-finder" mark in
 Pomovi's registry, a "Sito non verificato" notice for `candidate` websites, and a
@@ -163,10 +164,9 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
    (the command needs the operator's approval in the agent session; on 2026-09-28 it was
    denied automatically because nobody was at the prompt). If it is well above ~3 s,
    find where the time goes.
-2. Operator: **Refresh from Pomovi** on the Al Giardinetto Oderzo record (the live
-   `GET`); once it shows the demo's state, archive Pomovi's bridge plan (its
-   `CLAUDE.md` → plan reaches `DONE`). Then `PROCESS.md` step 10: the operator picks
-   which CRM features come next.
+2. `PROCESS.md` step 10: the operator picks which CRM features come next. One
+   candidate from the first round trip: a **Refresh from Pomovi** button on the venue
+   record's "Pomovi demo" box and on `/leads` (today it exists only on `/map`).
 
 ## Last verification
 

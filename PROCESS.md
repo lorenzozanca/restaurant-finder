@@ -88,9 +88,8 @@ next action date.
 `POST /api/bridge/venues` creates (idempotently) a `prospect` with the lead's name and
 website and returns its wizard URL; `GET /api/bridge/venues` returns each bridged
 venue's status, slug, and public URL. The contract and Pomovi's side are in
-`../pomovi/docs/plans/restaurant-finder-bridge.md`. This repo's client is built and
-stays inactive until `POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN` are set. It comes
-after the CRM views (step 8).
+`../pomovi/docs/archive/restaurant-finder-bridge.md`. Live since 2026-09-28, with
+`POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN` set here.
 
 **Before real outreach:** the operator clears the items under "Second purpose, B2B
 prospecting" in `PRIVACY.md` (sign the legitimate-interests assessment, add the purpose
@@ -106,7 +105,7 @@ is first used to contact a venue.
 3. `web/` app: Google sign-in, the map API over the Neon snapshot, manual review into
    `manual_reviews`. Done.
 4. Pipeline API and UI on the venue card, stage filter, Pipeline tab. Done.
-5. Pomovi client behind `POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN`. Done (inactive).
+5. Pomovi client behind `POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN`. Done.
 6. Operator setup: Google OAuth, Neon (EU), Vercel (root directory `web`), first sync,
    domain `restaurants.trelua.com`. Done 2026-09-27.
 7. Live checks: cold-start time of the map, and a whole-selection CSV export within
@@ -115,8 +114,8 @@ is first used to contact a venue.
 8. CRM views: tables, record page, contacts (operator decision 2026-09-28, before the
    bridge). See "CRM views" below. Done: deployed 2026-09-28.
 9. Pomovi side: the two bridge endpoints, built in the Pomovi repository following its
-   plan (planned there, not implemented); then set the two variables here and create one
-   real demo end to end. Open.
+   plan; then set the two variables here and create one real demo end to end. Done
+   2026-09-28 (Pomovi venue 15; the demo's state read back with Refresh from Pomovi).
 10. Next CRM features: to be chosen by the operator after the bridge works.
 
 Done means: the operator signs in from a phone, sees all venues with the same counts
