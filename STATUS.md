@@ -1,7 +1,7 @@
 # Execution status
 
-Updated: 2026-09-28 (CRM views built and verified locally, not yet deployed; national
-counts unchanged)
+Updated: 2026-09-28 (CRM views deployed to restaurants.trelua.com; national counts
+unchanged)
 Branch: `main`
 
 ## Current counts
@@ -39,8 +39,9 @@ Setup, sync, and deploy commands: `web/README.md`.
 | Create its demo in Pomovi | Blocked: Pomovi's endpoints are not built |
 
 CRM views (`PROCESS.md` step 8, decided 2026-09-28, before the Pomovi bridge): built
-and verified locally on 2026-09-28 (commits `cd45004`, `4f5785a`, `c542dbe`), **not
-deployed**: the live app still has only the map, and Neon lacks migration `0002`.
+and verified locally (commits `cd45004`, `4f5785a`, `c542dbe`) and **deployed on
+2026-09-28** (migration `0002` applied to Neon; deployment
+`restaurant-finder-cweab535k`). Not yet opened signed in on the live app.
 
 - `/leads`: all 156,057 venues; the map's filters plus next-action due and
   has-contacts; 11 sortable columns (`LeadIndex.table()`, cached permutations); built-in
@@ -62,12 +63,15 @@ deployed**: the live app still has only the map, and Neon lacks migration `0002`
   phone over throttled 4G (dev build), a jump to 60% down the table 0.3–1.2 s, record
   0.2–0.8 s.
 
-Open live checks (`PROCESS.md` step 7):
+Live checks (`PROCESS.md` step 7):
 
+- **CSV export is too big for Vercel above ~17,000 rows.** Vercel's function response
+  limit is 4.5 MB (docs, 2026-08-24; larger answers fail with 413
+  `FUNCTION_PAYLOAD_TOO_LARGE`). Measured on the real snapshot: all of Italy 41.8 MB raw
+  (11.1 MB gzipped), all verified 2.1 MB, Veneto 3.8 MB. The laptop map is unaffected.
 - Cold start: after a fix on 2026-09-27, the same steps timed from the laptop take about
-  2.6 s. The live timing line (`lead index …: fetch … ms, build … ms`) has not been read.
-- Whole-selection CSV export (tens of MB for all of Italy): not tried against Vercel's
-  function response-size limit.
+  2.6 s. The live timing line (`lead index …: fetch … ms, build … ms`) needs a signed-in
+  load first; not read yet.
 
 Pomovi side: the bridge plan is committed and pushed in Pomovi
 (`docs/plans/restaurant-finder-bridge.md`, latest `0bc0a81`). No endpoint is built
@@ -138,23 +142,27 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
 
 ## Next executable task
 
-Deploy the CRM views (needs the operator's go-ahead: it changes the live app and
-applies migration `0002` to Neon):
+1. Make the online CSV export work for any selection (`PROCESS.md` step 7): Vercel
+   refuses function responses above 4.5 MB. Options, in order: stream the CSV from the
+   route in chunks and confirm on a Vercel preview that a whole-Italy export downloads;
+   if streaming is still capped, write the file to Vercel Blob and redirect to a
+   short-lived private URL. Until then, the export needs a selection under ~17,000 rows.
+2. After the operator's first signed-in visit to `/leads`: read the cold-start line with
+   `npx vercel logs --since 1h --expand`, and confirm with the operator that the Leads
+   counts match the map.
 
-1. From the repository root: `node --no-network-family-autoselection --dns-result-order=ipv4first --env-file=.env.local sync-online.mjs`
-   (applies `0002`, then the usual sync), then `npx vercel deploy --prod`.
-2. Signed out: `/leads`, `/contacts`, `/activities`, `/venues/…` redirect to `/signin`;
-   `/api/crm/leads` answers 401. Ask the operator to open `/leads` on the phone and
-   confirm the counts match the map.
-3. Then the live checks (step 7): the cold-start line from `npx vercel logs --since 1h
-   --expand`, and the whole-Italy CSV export size against Vercel's function response
-   limit.
-
-After that: the Pomovi bridge (step 9), built in the Pomovi repository following
+Then the Pomovi bridge (step 9), built in the Pomovi repository following
 `../pomovi/docs/plans/restaurant-finder-bridge.md`.
 
 ## Last verification
 
+- Deploy (2026-09-28): `sync-online.mjs` (the command in `web/README.md`): migration
+  `0002_crm_views.sql` applied; 0 manual reviews; snapshot and 86,895 details already
+  online; backup with the new tables; 3.6 s. (Two earlier runs hung on a degraded Wi-Fi
+  link, 20 KB/s at rx VHT-MCS 0; `nmcli connection up "Italia Uno"` restored 36 MB/s.)
+  `npx vercel deploy --prod`: Ready. Live, signed out: `/`, `/leads`, `/contacts`,
+  `/activities`, `/venues/…` → 307 `/signin`; `/api/crm/{leads,contacts,activities,record,views}`
+  and `/api/national/meta` → 401, also with a forged `__Secure-authjs.session-token`.
 - CRM views (2026-09-28):
   - `npm test`: 290 passed, 0 failed (new: `lib/crm-records.test.mjs`, 7 tests against
     PGlite; table and CRM-overlay tests in `lib/national-leads.test.mjs`).
