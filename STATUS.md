@@ -38,6 +38,12 @@ Setup, sync, and deploy commands: `web/README.md`.
 | A venue moves through the pipeline | Tested on a local copy only |
 | Create its demo in Pomovi | Blocked: Pomovi's endpoints are not built |
 
+Decided 2026-09-28: CRM views (tables of all leads, venue record page, contacts,
+activities) come before the Pomovi bridge (`PROCESS.md` step 8). `PRIVACY.md` now
+covers venue contacts (business data only, notice at first contact, erasure,
+retention); like the rest of the prospecting purpose, it is not cleared until the
+operator signs the assessment.
+
 Open live checks (`PROCESS.md` step 7):
 
 - Cold start: after a fix on 2026-09-27, the same steps timed from the laptop take about
@@ -109,27 +115,26 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
 
 ## Open operator decisions
 
-- Which CRM features come after the Pomovi bridge (`PROCESS.md` step 9).
+- Which CRM features come after the Pomovi bridge (`PROCESS.md` step 10).
 - Approval, scope, and cap of any further verification batch.
 
 ## Next executable task
 
-Finish the CRM's live checks (`PROCESS.md` step 7), then prepare the Pomovi bridge
-(step 8):
+Build the CRM views (`PROCESS.md` step 8, "CRM views"), in this order, committing each
+verified part:
 
-1. Cold start: `npx vercel logs --since 1h --expand` (from the repository root, which
-   is linked) after a fresh load of the live app; record the `lead index …` line. If it
-   is well above ~3 s, find where the time goes.
-2. CSV export: measure the whole-Italy export size on the laptop
-   (`curl -s http://localhost:4188/api/national/export.csv | wc -c` on a fresh
-   `node ui/server.mjs`) and compare it with Vercel's current function response limit.
-   If it exceeds the limit, make the online export fit (for example, stream it or cap it
-   with a clear message), verify, deploy, and ask the operator to try **Download CSV**
-   with no filters on the live app.
-3. The bridge endpoints are built in the Pomovi repository by a session working there,
-   following `../pomovi/docs/plans/restaurant-finder-bridge.md`. Once Pomovi is
-   deployed, set `POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN` on the Vercel project,
-   redeploy, and create one real demo from a verified venue end to end.
+1. `LeadIndex.table()` with sorted permutations, CRM overlay columns and filters, and
+   tests (counts equal to `summary()`, paging without loss or repeats, budgets).
+2. Migration `0002` (`contacts`, `pipeline_events.contact_id`, `saved_views`), the
+   contacts and activities API, the extended overlay, and the backup of the new tables.
+3. The pages: app bar, Leads table, venue record, Contacts (with "Due for deletion"),
+   Activities; a link from the map's venue card to the record.
+4. Phone and desktop checks of the new pages, then deploy.
+
+Then the live checks (step 7): the cold-start line from `npx vercel logs --since 1h
+--expand`, and the whole-Italy CSV export size against Vercel's function response
+limit. Then the Pomovi bridge (step 9), built in the Pomovi repository following
+`../pomovi/docs/plans/restaurant-finder-bridge.md`.
 
 ## Last verification
 

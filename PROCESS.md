@@ -89,7 +89,8 @@ next action date.
 website and returns its wizard URL; `GET /api/bridge/venues` returns each bridged
 venue's status, slug, and public URL. The contract and Pomovi's side are in
 `../pomovi/docs/plans/restaurant-finder-bridge.md`. This repo's client is built and
-stays inactive until `POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN` are set.
+stays inactive until `POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN` are set. It comes
+after the CRM views (step 8).
 
 **Before real outreach:** the operator clears the items under "Second purpose, B2B
 prospecting" in `PRIVACY.md` (sign the legitimate-interests assessment, add the purpose
@@ -110,14 +111,72 @@ is first used to contact a venue.
    domain `restaurants.trelua.com`. Done 2026-09-27.
 7. Live checks: cold-start time of the map, and a whole-selection CSV export within
    Vercel's response limit. Open.
-8. Pomovi side: the two bridge endpoints, built in the Pomovi repository following its
+8. CRM views: tables, record page, contacts (operator decision 2026-09-28, before the
+   bridge). See "CRM views" below. Open.
+9. Pomovi side: the two bridge endpoints, built in the Pomovi repository following its
    plan (planned there, not implemented); then set the two variables here and create one
    real demo end to end. Open.
-9. Next CRM features: to be chosen by the operator after the bridge works.
+10. Next CRM features: to be chosen by the operator after the bridge works.
 
 Done means: the operator signs in from a phone, sees all venues with the same counts
-as the laptop map, records a manual review that reaches the local store on the next
-sync, moves a venue through the pipeline, and creates its demo in Pomovi.
+as the laptop map, finds and sorts them in a table, keeps the people they meet as
+contacts, records a manual review that reaches the local store on the next sync, moves
+a venue through the pipeline, and creates its demo in Pomovi.
+
+### CRM views (step 8)
+
+The map is the geographic view; a CRM also needs the classic one. The operator decided
+on 2026-09-28 to build it before the Pomovi bridge, with contacts and with the table
+of all 156,057 leads from the first version, so the architecture serves the whole
+market from the start.
+
+**Objects.** A venue is the company record, and one venue is one deal: the stage lives
+on the venue, so there is no separate deals object. Contacts are the people at a venue
+(several per venue). Activities are the existing pipeline events (stage changes and
+touches), optionally linked to the contact involved. Tasks are the next action and its
+date.
+
+**Read model.** Venue facts come from the in-memory `LeadIndex` that already serves
+the map, loaded from the snapshot once per server instance. Postgres gets no venues
+table. So the table and the map always agree, a table page costs no database query
+beyond the existing 5-second overlay check, and Neon stays small. CRM facts per venue
+(stage, next action date, last activity date, contact count) join the index as overlay
+columns, reloaded when a CRM table changes; the pipeline is small (thousands of rows at
+most). Contacts and activities are queried in Postgres with indexes and keyset
+pagination.
+
+**Table query.** `LeadIndex.table()`: the map's filters (status, category, region,
+province, phone, stage, name/town search) plus CRM filters (next action overdue or due
+within N days, has contacts); a sort on any column, from a permutation built on first
+use and cached (fact sorts per snapshot, CRM sorts per overlay); pages of 100 rows with
+the total. Budgets: at most 30 ms server time and 20 KB gzipped per page on a warm
+instance.
+
+**Pages** (React, in `web/`, online only; the laptop map is unchanged):
+
+- An app bar on every page: Map · Leads · Contacts · Activities.
+- **Leads**: one table with built-in views (All leads, In pipeline, Follow-ups due) and
+  saved views; a column chooser; sort by header; a filter bar using the map's URL
+  parameters, so "Show on map" and "Show as table" keep the selection. Rows load page
+  by page while scrolling, and only visible rows are rendered. On a phone, each row is
+  a compact card.
+- **Venue record** (`/venues/[id]`): properties grouped as Identity, Website and
+  verification, Sales, Pomovi; the contacts; the timeline; actions (stage, next action,
+  log a touch with a contact, review the website). The map's venue card links to it.
+- **Contacts**: every contact with its venue, searchable and sortable, plus a "Due for
+  deletion" view of contacts past the retention periods in `PRIVACY.md`.
+- **Activities**: every touch and stage change, filtered by date, type, and stage.
+
+**Schema** (`web/db/migrations/0002_…`): `contacts` (venue, name, role, phone, email,
+preferred channel, source of the details, notes, author and times), a nullable
+`contact_id` on `pipeline_events`, and `saved_views` (name, query). `sync-online.mjs`
+backs up the new tables with the others. Deleting a contact is a hard delete (the
+erasure route in `PRIVACY.md`).
+
+**Verification.** Tests for table counts equal to the map's summary under the same
+filters, sort order and paging (no row lost or repeated across pages), the CRM
+filters, contact validation and erasure, and the page budgets; `ui/map-mobile-check.mjs`
+extended (or a sibling check) for the new pages on a phone viewport.
 
 ## Website verification
 

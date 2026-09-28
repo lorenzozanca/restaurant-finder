@@ -1,6 +1,6 @@
 # Privacy and retention process
 
-Last reviewed: 2026-09-27
+Last reviewed: 2026-09-28
 
 This is the operating process for Restaurant Finder, not a completed public
 privacy notice or legal opinion. Before deployment, replace every bracketed
@@ -48,6 +48,31 @@ rules to respect: no unsolicited marketing email or automated calls without cons
 Registro pubblico delle opposizioni before any marketing phone call; honour every
 objection by setting the venue to **Do not contact**, which blocks further entries.
 
+**Venue contacts (operator decision 2026-09-28; part of the second purpose, not yet
+cleared).** The CRM keeps the people the operator deals with at a venue (owner,
+manager, chef, staff). These are named individuals, so the same clearance applies, and
+the legitimate-interests assessment must cover them explicitly. Rules:
+
+- Keep business contact data only: name, role at the venue, the phone number and email
+  address used for the venue's business, the preferred channel, where the details came
+  from (met in person, business card, the venue's own website, a phone call), and
+  short business notes. Never record private life, health, family, opinions, or other
+  special-category data, and no home addresses or personal social profiles.
+- Prefer details the person gave for this purpose or that the venue publishes as its
+  own contact. A private number found elsewhere is not recorded.
+- Tell the person at the first contact who the operator is, why their details are
+  kept, and how to object (Article 13 for details they gave, Article 14 for details
+  taken from the venue's website; release-gate items 2 and 3). A short line on the
+  card or letter left at the venue is enough once the public notice exists.
+- An objection or erasure request from a person deletes their contact record (a hard
+  delete in the app); the activity log keeps only "contact removed on request", without
+  their details. If the venue itself objects, also set it to **Do not contact**.
+- Contacts are deleted when they are no longer needed: 12 months after the venue was
+  set to lost or do not contact, or 24 months after the last activity with a venue that
+  never became a customer. The Contacts page lists the contacts past these dates for
+  deletion; the operator reviews that list at least quarterly. For a venue that becomes
+  a Pomovi customer, the customer relationship is governed by Pomovi's own records.
+
 Data subjects may include sole traders, named proprietors, or individuals whose
 direct contact details appear on a public venue page. A public business record
 is not automatically outside GDPR.
@@ -62,7 +87,9 @@ is not automatically outside GDPR.
 | Manual review decisions | Reviewer name (as typed), decision, website, evidence URLs, optional notes, time | Operator, from the map's venue card | Publisher attestations in the national store |
 | National map snapshot and lead exports | Venue name, category, address, phone, coordinates, website state, crawl outcome | National store (Overture Places plus review outcomes) | `*.map-snapshot.json` next to the national store, rebuilt from it; CSV files the operator downloads from the map are kept on the operator's device and are the operator's responsibility |
 | Online copy for the CRM | The map snapshot, per-venue review details (candidates, attestations, crawl assessments, LLM reason and quotes, source record IDs) | `sync-online.mjs` from the national store | Neon Postgres (EU, Frankfurt), the app on Vercel (`fra1`); replaced on each sync, last two snapshots kept |
-| Sales pipeline | Stage, next action and date, lost reason, contacts made (visit, card, letter, call, email, note) with free-text notes, the operator's email as author, Pomovi demo IDs and status | Operator, in the online app; Pomovi's bridge | Neon; copied to `data/online-backups/` on the laptop at every sync (last 30 kept). Notes must not record private details about named people |
+| Sales pipeline | Stage, next action and date, lost reason, contacts made (visit, card, letter, call, email, note) with free-text notes and the contact involved, the operator's email as author, Pomovi demo IDs and status | Operator, in the online app; Pomovi's bridge | Neon; copied to `data/online-backups/` on the laptop at every sync (last 30 kept). Notes must not record private details about named people; a person's details belong in their contact record |
+| Venue contacts | Name, role at the venue, business phone and email, preferred channel, source of the details, short business notes, author and times | The person (in person, card, call) or the venue's own website, entered by the operator in the online app | Neon `contacts`; copied to `data/online-backups/` at every sync (last 30 kept); deleted on request or at the end of the retention period below |
+| Saved table views | View name and filter/sort settings, author | Operator, in the online app | Neon `saved_views` |
 | Online manual review decisions | As "Manual review decisions", plus the signed-in email | Operator, in the online app | Neon `manual_reviews`, applied to the national store by `sync-online.mjs` |
 
 The laptop application has no user accounts, cookies, analytics, or persistent
@@ -108,6 +135,8 @@ procedure include the ownership-review records.
 | `output/<town>/*.json` scan results | 30 days | Delete |
 | `output/<town>/*.log.json` progress logs | 14 days | Delete |
 | `output/.cache/*` fetched/search responses | 1 day | Delete |
+| Venue contacts (Neon `contacts`) | 12 months after the venue is lost or do not contact; 24 months after the last activity if never a customer | Hard delete in the app (listed for deletion on the Contacts page) |
+| `data/online-backups/*.json` CRM copies | Last 30 syncs | Rotated by `sync-online.mjs` |
 | Backups containing deleted data | 30 additional days | Expire through backup rotation; restrict restoration until then |
 | Data-subject request and erasure audit | 3 years after closure, containing only request date, decision, action, and minimal identity evidence | Delete or aggregate |
 
@@ -134,7 +163,9 @@ Use one ticket per request and restrict it to authorised staff.
    complete.
 3. Search result JSON, logs, cache (by URLs/terms where practicable), active
    memory, and relevant backups/processors using the person's name, business,
-   phone, address, URLs, and source IDs. Record systems and queries checked.
+   phone, address, URLs, and source IDs. For the online CRM, search the Neon
+   `contacts`, `pipeline_events` notes, and `manual_reviews`, plus
+   `data/online-backups/`. Record systems and queries checked.
 4. Assess access, source information, correction, erasure, restriction,
    portability, or objection as applicable. For an Article 21 objection to
    legitimate-interest processing, restrict the disputed record while the
