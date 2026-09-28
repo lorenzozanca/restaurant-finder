@@ -1,877 +1,150 @@
 # Execution status
 
-Updated: 2026-09-27 (online lead CRM deployed at restaurant-finder-iota.vercel.app and
-live at restaurants.trelua.com, operator signed in; national counts unchanged: 5,982
-verified)
+Updated: 2026-09-28 (documents reordered: the online CRM is the primary track; no
+product change since 2026-09-27)
 Branch: `main`
 
-## Current milestone
+## Current counts
 
-Process the 86,852 known candidates with the certified reviewer (`PROCESS.md` step 4),
-in operator-approved batches with a $5 cap each (about 5,000 venues nationally, or one
-whole region with `--region`). The reviewer
-passed the adjudicated holdout-v1 gate on 2026-09-24 (105 correct, 0 false).
+National map (after batch `b006`, 2026-09-26; no batch or online manual decision since):
 
-## Online lead CRM (`PROCESS.md` → "Online lead CRM", 2026-09-27)
+| | Venues |
+|---|---:|
+| All venues | 156,057 |
+| Source website candidates | 86,852 |
+| Verified websites | 5,982 |
+| Rejected candidates | 3,294 |
+| Checked candidates (assessments) | 25,818 |
+| No source candidate | 69,205 |
 
-Operator decision: the map and a sales pipeline go online, private behind Google
-sign-in (the bh-os pattern); this repo is the CRM; Pomovi builds demos.
+Lead statuses (sum 156,057): 5,982 verified, 3,294 rejected, 2,350 directory, 6,870
+undecided, 7,417 unreachable, 60,955 not checked, 69,189 no website.
 
-- Deployed 2026-09-27 with the operator's Vercel login: project `restaurant-finder`
-  (Hobby, Root Directory `web`), Neon `restaurant-finder` (free plan, eu-central-1) via
-  the Vercel integration, `AUTH_SECRET` and `AUTH_OWNER_EMAILS` set, first sync done.
-  The Google OAuth client was added the same day (`AUTH_GOOGLE_ID`/`AUTH_GOOGLE_SECRET`
-  copied from the root `.env` to Production, then redeployed). Details in
-  `web/README.md` → "Online".
-- Built and verified locally first:
-  - `lib/map-constants.mjs` and `lib/review-decision.mjs`: codes and review validation
-    without SQLite imports, so `web/` can load them on Vercel. `lib/map-snapshot.mjs`
-    and `lib/review-queue.mjs` re-export them.
-  - `LeadIndex.applyOverlay()` and a `stage` filter/facet (`lib/national-leads.mjs`);
-    the CSV export has a `pipeline_stage` column.
-  - The snapshot version is now a hash of its content, so a rebuild that changed
-    nothing keeps its version (merely opening the store moves its stamp).
-  - `web/db/migrations/0001_online_crm.sql` (map_snapshots, venue_details,
-    manual_reviews, pipeline, pipeline_events, sync_runs), `lib/online-db.mjs`.
-  - `sync-online.mjs` + `lib/online-sync.mjs` + `lib/venue-details.mjs`: apply online
-    manual decisions through `recordReviewDecision` (keeping the online decision time;
-    a refused one is marked with its error), push the snapshot (gzipped, last 2 kept)
-    and changed venue details, copy the CRM tables to `data/online-backups/` (last 30).
-    `--no-reviews` skips the first step (`web/`'s `sync:local` uses it).
-  - `web/`: Next.js 16 + Auth.js (Google, `AUTH_OWNER_EMAILS`), the same `ui/map.html`
-    and `/api/national/*` over the Neon snapshot plus the overlay, manual review into
-    `manual_reviews`, the pipeline API (`/api/crm/*`), and a Pomovi client for the
-    contract in `../pomovi/docs/plans/restaurant-finder-bridge.md` (inactive until
-    `POMOVI_BRIDGE_URL`/`POMOVI_BRIDGE_TOKEN` are set). Setup: `web/README.md`.
-  - `ui/map.html`: when `/api/national/meta` reports `crm`, a Pipeline section on the
-    venue card (stage, next action, contacts, history, demo), a Pipeline tab (next
-    actions first), and stage filter chips. The laptop server does not report `crm`,
-    so its map is unchanged.
-  - `PRIVACY.md`: the prospecting purpose, the online data, and what the operator must
-    sign before the app is used to contact a venue.
-- Pomovi side: plan committed there as `7354496` (local `main`, not pushed); nothing
-  implemented in Pomovi.
-- Measured on the real national store, local PGlite database: first sync 10.3 s
-  (156,057 venues, 86,895 venue details); database 80 MB (venue_details 65 MB,
-  snapshot 7 MB) against Neon's 0.5 GB free limit.
-- Not yet measured: cold start of a Vercel function loading the 7 MB snapshot from
-  Neon, and whether a whole-Italy CSV export (tens of MB) exceeds Vercel's response
-  limit. Check both after the first deploy.
+## Track 1: online lead CRM (primary)
 
-## Locked holdout v1 for the LLM reviewer (2026-09-24)
+Live at <https://restaurants.trelua.com> (also restaurant-finder-iota.vercel.app):
+Vercel project `restaurant-finder` (Hobby, root directory `web`), Neon
+`restaurant-finder` (free plan, eu-central-1), Google sign-in for `AUTH_OWNER_EMAILS`.
+First sync 2026-09-27: snapshot `3a86b85efbc5`, 86,895 venue details, 0 manual reviews.
+Setup, sync, and deploy commands: `web/README.md`.
 
-- Selected (`PROCESS.md` step 3.2) with the command in the previous next task:
-  480 venues, seed `locked-holdout-llm-v1`, 86,616 eligible source-candidate venues,
-  2,376 venue IDs excluded (2,076 from `benchmark/` plus the 300 pilot venues; overlap
-  with the pilot checked: 0). Stratified across all 20 regions (`region_code`).
-  Selection fingerprint
-  `440ad0dfa6b1db0bcbb6a3ef6a33e840d7e87b570978dd5eee44ce235eecaae1`. Fixture and
-  manifest: `benchmark/llm-review-holdout-v1/locked-holdout-001-480.json`,
-  `selection-manifest.json`. No crawl or reviewer call has touched these venues.
-- Labelling packets: `prepare-holdout-labelling.mjs` wrote 10 packets of 48 venues to
-  `benchmark/llm-review-holdout-v1/labelling/` (plus `packets-manifest.json` with
-  hashes). Each carries the same venue record the reviewer receives (via the now
-  exported `loadTargetEvidence`), the exact candidate URL, and its registrable domain.
-  4 of 480 venues have no phone; all have an address.
-- `benchmark/llm-review-holdout-v1/LABELLING-INSTRUCTIONS.md`: task, independence
-  rules (never read `data/llm-review/` or other repo files; no MiMo), what counts as
-  official, the output format (existing adjudication schema plus a required
-  `rationale` per domain review, optional `final_url` and
-  `other_official_website_url`), and a worked example.
-- `validate-holdout-labels.mjs` checks each label file against the fixture and its
-  packet (exact venue set, rationale present, labeller is not MiMo); `--complete`
-  requires all 10 batches; `--seal` writes an immutable `LABELS-SEAL.json` with
-  file hashes. `validate-holdout-labels.test.mjs` validates the instruction example
-  block itself, so the documented format cannot drift from the validator.
-- Fixed before the freeze: `evaluate-llm-review.mjs` scored a publication by the
-  domain of the crawl's final URL, so a candidate that redirected to an unlabelled
-  domain counted as false. It now scores such a publication against the candidate
-  domain's label (the labeller judges whether the venue controls the redirect); a final
-  domain that has its own label is still scored by that label.
-  `evaluate-llm-review.test.mjs` fails on the old code and passes now; `dev-3`
-  development metrics are unchanged (20 publications, 16 true, 0 false).
-- Labelling (operator decision, 2026-09-24): instead of ten manual sessions, the
-  operator asked this session to do all packets. It spawned ten fresh-context Claude
-  subagents, one per packet, each told to read only the instructions and its packet
-  (`PROCESS.md` step 3.3). `validate-holdout-labels.mjs --file` checks one batch so
-  the agents do not trip over each other's partial files. The operator stopped the run
-  because it took their Claude usage from 0% to 75%. All ten were stopped with **0
-  label files written**: 10 parallel agents contended for the network (DNS failures,
-  slow fetches) and one hit an API timeout. Operator chose a zero-LLM prefetch: `prefetch-holdout-pages.mjs` crawls each
-  candidate plus one contact page and keeps ~1.5 KB identity excerpts in
-  `data/holdout-labelling/pages-AAA-BBB.json` (gitignored). Trial on packet 001-048:
-  only 5/48 fetched (36 connect timeouts) because the Wi-Fi association had degraded
-  again (rx VHT-MCS 0; see the network diagnosis below). After the operator reconnected
-  (rx 325 Mbit/s), the full run fetched 328/480 candidates: 77 ENOTFOUND, 39 HTTP 403,
-  23 HTTP 404, 5 HTTP 5xx, 3 TLS certificate errors, 5 connection errors or timeouts.
-  Contact pages were found for only 16 venues. Excerpts average 579 characters per
-  venue (~28 KB per packet).
+`PROCESS.md` steps 1–6 are done. "Done means" checklist:
 
-- Labels done and sealed (2026-09-24): the operator chose opencode with
-  `opencode/muse-spark-1.3-contributor-free` (free; Meta may train on the prompts,
-  which contain only public business data). `label-holdout-with-opencode.mjs` ran one
-  packet at a time under a $10 cap, measured from the opencode OpenRouter key: 3–6
-  minutes per packet, $0.00 total. Each agent read the instructions, its packet, and
-  the prefetched excerpts, and searched the web for failed or unclear venues.
-  `node validate-holdout-labels.mjs --complete`: 480 venues; domain verdicts 216
-  verified, 181 rejected, 83 uncertain. `LABELS-SEAL.json` records the file hashes.
-  Nothing from the reviewer has been run on these venues.
+| Check | State |
+|---|---|
+| Operator signs in from a phone | Done 2026-09-27 |
+| Same counts as the laptop map | Matched on a local copy (5,982 of 156,057); not compared on the live app |
+| A manual review made online reaches the local store on sync | Tested on a local database only; confirm on the first real review's sync |
+| A venue moves through the pipeline | Tested on a local copy only |
+| Create its demo in Pomovi | Blocked: Pomovi's endpoints are not built |
 
-- Holdout run `holdout-v1` (2026-09-24, once, frozen per
-  `REVIEWER-FREEZE.json`; MiMo v2.6 Pro, prompt dev-3; $2 cap): crawl 135 strongly
-  correlated, 109 ambiguous, 41 contradicted, 146 retryable, 49 unsupported; 244
-  reviewed (105 accepted, 62 rejected, 77 ambiguous); 0 provider errors; $0.2946.
-  **Raw** metrics against the sealed labels (`RAW-EVALUATION.json`): 105 venue
-  publications, 105 correct, 0 false; Wilson 95% lower bound 96.5%; recall 105/216
-  (48.6%); 2 false rejections. The raw numbers meet all three gate thresholds, but
-  the gate is decided on adjudicated labels: steps 3.5–3.6 are still open (blind
-  adjudication of the 2 false rejections; agreement audit of a random 21 of the 105
-  publications by a model that is neither MiMo nor Muse Spark). Not certified yet.
-- **Adjudicated gate: PASSED** (`ADJUDICATED-GATE-REPORT.json`, `adjudicate-holdout.mjs`;
-  DeepSeek V4 Pro via opencode, 4 parallel groups, $0.0971 total incl. one rerun of a
-  group whose verdict file was malformed JSON). Agreement audit: 21 of 105 publications,
-  0 errors, 0 uncertain. Both disputed rejections were adjudicated official (2 real
-  false rejections). Final: 105 correct, 0 false, Wilson lower bound 96.5%. The frozen
-  reviewer (`REVIEWER-FREEZE.json`) is certified for `PROCESS.md` step 4.
+Open live checks (`PROCESS.md` step 7):
 
-## Mobile-first lead map (PROCESS.md "Map and lead interface", 2026-09-25)
+- Cold start: after a fix on 2026-09-27, the same steps timed from the laptop take about
+  2.6 s. The live timing line (`lead index …: fetch … ms, build … ms`) has not been read.
+- Whole-selection CSV export (tens of MB for all of Italy): not tried against Vercel's
+  function response-size limit.
 
-- Operator priority while batches are parked. Before: 6.8 s blocking index build on the
-  first request, 800 KB (Rome zoom) to 2 MB ("roma" search) of uncompressed GeoJSON,
-  fixed-degree grid clusters with up to 2,500 DOM markers, one status filter.
-- Shipped:
-  - `lib/map-snapshot.mjs` + `build-map-snapshot.mjs`: a columnar snapshot
-    (`italy-import.map-snapshot.json`, 32 MB, gitignored) with one lead status per
-    venue. The statuses are verified, rejected (both from attestations only), directory
-    (unsupported publisher), undecided, unreachable (retryable, with the failure code),
-    not checked, and no website. `publish-national-review.mjs` rebuilds it after
-    publishing.
-  - `lib/national-map-service.mjs`: loads the snapshot at server start. When the store
-    changes it rebuilds the snapshot in a worker thread (`lib/map-snapshot-worker.mjs`)
-    while the old index keeps answering.
-  - `lib/map-cluster.mjs`: supercluster-style clustering over zooms 4–16, 60 px
-    screen radius, weighted centroids, and an expansion zoom per cluster, bucketed by
-    512 px tile.
-  - `lib/national-leads.mjs`: filters (status, category, region, province, phone,
-    name), a 12-entry cluster cache per filter set, tiles, facet counts, the list, venue
-    details, municipality lookup, and CSV export (whole selection or a seeded sample,
-    with Overture attribution).
-  - `ui/server.mjs`: `/api/national/{meta,tile/z/x/y,summary,list,venue/i,locate,export.csv}`,
-    gzip, and versioned immutable tiles. The old `/api/national-map` and its grid code
-    are removed. `NATIONAL_DB_PATH` no longer falls back to `EVIDENCE_DB_PATH`.
-  - `ui/map.html`, rewritten: full-screen map, floating search, status chips with
-    counts, a canvas tile layer (green arc = verified share), a draggable bottom sheet
-    (list / filters / venue card with call, website, maps), URL state, a side panel on
-    desktop, and Leaflet 1.9.4 served from `ui/vendor/` (hashes match the SRI values
-    in the since retired `index.html`).
-  - `ui/map-mobile-check.mjs [--desktop]`: a headless Chrome check (phone viewport,
-    touch, 4G), with screenshots in `output/map-check*/`.
-  - `PRIVACY.md` registers the snapshot and CSV exports.
-- Measured (real store, 156,057 venues; lead statuses sum to 156,057): 2,265 verified,
-  1,289 rejected, 837 directory, 2,606 undecided, 2,933 unreachable, 76,938 not
-  checked, 69,189 no website.
+Pomovi side: the bridge plan is committed and pushed in Pomovi
+(`docs/plans/restaurant-finder-bridge.md`, latest `0bc0a81`). No endpoint is built
+(`/api/bridge/venues` does not exist there yet).
 
-## Old pages retired; manual review on the venue card (2026-09-25)
+Before real outreach (operator): clear the "Second purpose, B2B prospecting" items in
+`PRIVACY.md`, and move Vercel to Pro when the app is first used to contact a venue.
 
-- Operator decision: retire the town scanner and the separate review page, and move
-  manual review into the map.
-- Removed: `ui/index.html` (town scanner, its scan-based "Italy" tab and history; its
-  scan button could spend Brave queries with no USD cap), `ui/review.html` (read a
-  separate `EVIDENCE_DB_PATH` store in venue-ID order and needed the GeoJSON export),
-  `ui/verified-venues.geojson`, `export-verified-map.mjs` and its test, and the
-  `/api/scan*`, `/api/map`, `/api/review/*` endpoints. `/`, `/index.html` and
-  `/review.html` redirect to `/map.html`. `discover.mjs` stays as a command-line tool.
-- Added:
-  - `GET /api/national/review/:i`: candidates, active attestations, crawl assessments,
-    and the latest LLM reviewer outcome (reason, quotes) for one venue
-    (`venueReview` in `lib/review-queue.mjs`; 17 ms on the real store).
-  - `POST /api/national/review`: `recordReviewDecision` against the national store.
-    The candidate domain must belong to the venue; an approval publishes
-    (`EvidenceStore.publishManuallyVerifiedWebsite`: `manual_first_party_review`
-    attestation plus the accepted website fact the map requires); a rejection records
-    the attestation only. The server then rebuilds the map snapshot
-    (`NationalMapService.storeChanged`, which also re-runs a build that was already
-    in progress).
-  - `ui/map.html`: a "Why this status" section and a **Review this website** form on
-    every venue card with a website. The reviewer name is remembered on the device.
-  - `publish-national-review.mjs` now also skips reviewer outcomes on any domain with a
-    manual decision, so a manual rejection is never overwritten by a later publish.
-- Freeze note: `lib/evidence-store.mjs` (hashed in `REVIEWER-FREEZE.json`) changed
-  additively again: the new `publishManuallyVerifiedWebsite` method. The reviewer's
-  decision code, prompt, and settings are unchanged.
-- National counts unchanged by this work (no decision was recorded on the real store):
-  2,265 verified, 1,289 rejected, 2,606 undecided, 10,000 assessed, 156,057 venues.
+## Track 2: website verification (on operator request)
 
-## Map search fix (2026-09-26)
+The frozen reviewer (MiMo v2.6 Pro, prompt `llm-ownership-dev-3`,
+`benchmark/llm-review-holdout-v1/REVIEWER-FREEZE.json`) passed the adjudicated
+holdout-v1 gate on 2026-09-24: 105 correct, 0 false, Wilson lower bound 96.5%.
 
-- Operator report: typing in the map's search box froze the app on a phone at the first
-  letter. Cause: the box was bound to a native `<datalist>` of all 7,894 municipalities.
-  Mobile browsers match it by substring and build their native suggestion popup from
-  every match (thousands of rows for one letter). Headless Chrome shows no such popup,
-  so the freeze does not reproduce there: typing took about 20 ms per letter.
-- Fix: the datalist is gone. `ui/map.html` keeps its own town list and shows at most 8
-  towns plus a "Venues named …" row. Matching ignores accents and case, puts name
-  prefixes before later-word prefixes, and ranks towns by venue count (for "trev",
-  Treviso comes first, not Trevenzuolo). Rows are 44 px touch targets; the arrow keys,
-  Enter, and Escape work, and the box has combobox ARIA. The ranked list comes from
-  the new `GET /api/national/towns` (`LeadIndex.towns()`: name, province, venue count;
-  7,398 towns, 57 KB gzipped, fetched once on focus). The filter panel no longer
-  overwrites text being typed when the town list arrives.
-- `ui/map-mobile-check.mjs` now types "trev" letter by letter, times each keystroke,
-  and taps the Treviso suggestion instead of submitting the form from a script.
-- Not yet confirmed on the operator's real phone.
+Production batches (`PROCESS.md` step 4), each published with
+`publish-national-review.mjs`:
 
-## Production pipeline for the 86,852 candidates (PROCESS.md step 4)
+| Batch | Scope | Venues | Reviewed | Accepted | Rejected | Cost |
+|---|---|---:|---:|---:|---:|---:|
+| `b001` | national | 5,000 | 2,495 | 1,094 | 626 | $2.74 |
+| `b002` | national | 5,000 | 2,516 | 1,064 | 657 | $2.86 |
+| `b003` | national | 5,000 | 2,477 | 1,097 | 604 | $2.92 |
+| `b004` | national | 5,000 | 2,566 | 1,098 | 672 | $2.98 |
+| `b005` | Veneto | 5,796 | 3,160 | 1,527 | 729 | $3.43 |
+| `b006` | Veneto (bare-host URLs) | 22 | 14 | 3 | 3 | $0.02 |
+| Total | | 25,818 | 13,228 | 5,883 | 3,291 | $14.95 |
 
-- Built 2026-09-24 (commit `8722786`; `npm test` 266 passed, 0 failed):
-  `prepare-national-batch.mjs --size N` writes the next N source candidates (fixed
-  SHA-256 order of venue IDs, so every batch is spread nationally) into
-  `data/national-review/batches/bNNN/` for the unchanged frozen runner;
-  `publish-national-review.mjs` copies the review database's assessments and
-  frozen-reviewer outcomes into the national store (accepted -> verified website as an
-  `automated_llm_ownership_review` attestation plus the accepted website fact; rejected
-  -> rejected candidate). It backs up the national store once
-  (`italy-import.pre-llm-publish.sqlite`), is idempotent, skips outcomes from any other
-  model or prompt, and never overrides a manual verification.
-- Freeze note: the reviewer's decision code is unchanged, but two files hashed in
-  `REVIEWER-FREEZE.json` changed additively: `lib/evidence-store.mjs` (new method
-  allowed only with `source_kind: certified_llm_review`, new `publishLlmVerifiedWebsite`)
-  and `lib/publisher-ownership.mjs` (the new method counts as verified).
-- Batch `b001` (5,000 venues) is prepared. Its first run was stopped at once because the
-  Wi-Fi had degraded again (rx VHT-MCS 0, 5.3 s to Google): nothing was saved, $0 spent.
-- **Batch `b001` completed and published (2026-09-25).** Link checked first (rx
-  VHT-MCS 5, 0% loss, ~11 ms RTT). Run `national-b001`, frozen reviewer (MiMo v2.6
-  Pro, prompt `llm-ownership-dev-3`), $5 cap, concurrency 12: 5,000 candidates in
-  58 minutes (05:51–06:49 UTC, ~86/min). Crawl: 1,338 strongly correlated, 1,157
-  ambiguous, 552 contradicted, 1,491 retryable, 462 unsupported publisher. Review:
-  2,495 candidates, 1,094 accepted, 626 rejected, 775 ambiguous; 0 provider errors;
-  $2.7385 ($0.0011 per review). Retryable causes: 840 ENOTFOUND (dead domains), 276
-  HTTP 404, 173 HTTP 403, 34 timeouts, 32 HTTP 500, 23 connect timeouts, 18
-  EAI_AGAIN, others fewer than 15 each.
-  `publish-national-review.mjs`: 5,000 assessments, 1,090 verified
-  (`automated_llm_ownership_review`), 626 rejected, 4 skipped because they were
-  already manually verified, 0 from an unfrozen reviewer.
-- National counts after `b001`, read from `/api/national-map` on a fresh server:
-  **1,202 verified** (was 112), **632 rejected** (was 6), **5,000 assessed** (was 0),
-  86,852 source candidates, 69,205 without a candidate, 156,057 venues.
-- `prepare-national-batch.mjs` now also skips venues that already have an assessment in
-  the national store (commit `9a5f569`; `prepare-national-batch.test.mjs`), so losing
-  the gitignored batch folders cannot cause a venue to be crawled and reviewed twice.
-  Its eligible population is 86,616 venues (the selector's rule; 236 fewer than the
-  map's 86,852 source candidates).
-- **Batch `b002` completed and published (2026-09-25).** Link rx VHT-MCS 7. Run
-  `national-b002`, same frozen settings and $5 cap: 5,000 new venues (none overlapping
-  `b001`) in 71 minutes (06:58–08:09 UTC). Crawl: 1,304 strongly correlated, 1,212
-  ambiguous, 532 contradicted, 1,506 retryable, 446 unsupported publisher. Review:
-  2,516 candidates, 1,064 accepted, 657 rejected, 795 ambiguous; 0 provider errors;
-  $2.8616. Retryable causes: 850 ENOTFOUND, 297 HTTP 404, 160 HTTP 403, 39 timeouts,
-  29 HTTP 500, 27 EAI_AGAIN. `publish-national-review.mjs` (cumulative):
-  2,153 verified, 1,283 rejected, 5 skipped as already manually verified.
-- National counts after `b002`, read from `/api/national-map` on a fresh server:
-  **2,265 verified**, **1,289 rejected**, **10,000 assessed**, 86,852 source
-  candidates, 69,205 without a candidate, 156,057 venues. 76,616 eligible venues
-  remain for later batches. LLM spend on production batches: $5.60.
-- **Batch `b003` completed and published (2026-09-25).** The operator asked to continue.
-  The OpenRouter account had credit again, but the API key's own limit had only $3.01
-  left, so the cap was **$2.95** (below the key limit, so the run stops cleanly). The Wi-Fi
-  had fallen to rx VHT-MCS 0 (16 KB/s); `nmcli connection up "Italia Uno"` (no sudo
-  needed) restored it. Under crawl load it fell back to MCS 0 three more times
-  (RTT 0.7–4.6 s) and was reconnected each time. Run `national-b003`, frozen settings,
-  concurrency 12: first pass 5,000 candidates (finished 20:25 local), 1,240 reviewed, 37
-  OpenRouter transport timeouts, $1.51. A second pass with `--retry-state retryable` (same
-  run ID, same cap) re-crawled 2,734 of the 3,012 retryable candidates, re-sent the
-  timed-out reviews, and stopped at the cap (`budget_exhausted`, $2.92 spent in total).
-  b003 crawl: 1,293 strongly correlated, 1,186 ambiguous, 529 contradicted, 1,534
-  retryable, 458 unsupported publisher. Review: 2,477 candidates, 1,097 accepted, 604
-  rejected, 776 ambiguous (2 reviewable candidates lack an outcome; ~278 retryable were
-  not re-crawled before the cap). Retryable causes: 850 ENOTFOUND, 251 HTTP 404, 161 HTTP
-  403, 102 EAI_AGAIN (DNS failures during the degraded link), 45 timeouts.
-  `publish-national-review.mjs` (cumulative): 3,249 verified, 1,885 rejected, 8 skipped as
-  already manually verified, 0 from an unfrozen reviewer.
-- National counts after `b003`, read from `/api/national/meta` on a fresh server:
-  **3,361 verified**, **1,891 rejected**, **15,000 assessed**, 86,852 source candidates,
-  69,205 without a candidate, 156,057 venues. Lead statuses: 3,361 verified, 1,891
-  rejected, 1,250 directory, 3,893 undecided, 4,439 unreachable, 72,034 not checked,
-  69,189 no website. 71,616 eligible venues remain. LLM spend on production batches:
-  $8.52. The API key has $0.24 left of its $10 limit.
-- **Batch `b004` completed and published (2026-09-25).** The operator raised the key limit
-  to $25 and approved another batch. Link reconnected first (MCS 0 → MCS 8). Run
-  `national-b004`, frozen settings, $5 cap, concurrency 12. The first process stopped at
-  925/5,000 (21:49 local) when the Claude session that launched it ended; it was resumed
-  under the same run ID as a detached process (`setsid nohup`) together with a detached
-  Wi-Fi watchdog (reconnect when RTT to 1.1.1.1 exceeds 500 ms). The watchdog never had
-  to act. The resumed run finished at 22:53 (4,058 assessed, 942 resumed). No retry pass
-  was needed: 0 provider errors and only 15 EAI_AGAIN.
-  b004 crawl: 1,333 strongly correlated, 1,233 ambiguous, 538 contradicted, 1,447
-  retryable, 449 unsupported publisher. Review: 2,566 candidates (every reviewable one),
-  1,098 accepted, 672 rejected, 796 ambiguous; $2.98. Retryable causes: 842 ENOTFOUND,
-  270 HTTP 404, 166 HTTP 403, 34 timeouts, 29 HTTP 500.
-  `publish-national-review.mjs` (cumulative): 4,343 verified, 2,556 rejected, 13 skipped
-  as already manually verified, 0 from an unfrozen reviewer.
-- National counts after `b004`, read from `/api/national/meta` on a fresh server:
-  **4,455 verified**, **2,562 rejected**, **20,000 assessed**, 86,852 source candidates,
-  69,205 without a candidate, 156,057 venues. Lead statuses: 4,455 verified, 2,562
-  rejected, 1,664 directory, 5,212 undecided, 5,858 unreachable, 67,117 not checked,
-  69,189 no website. 66,616 eligible venues remain. LLM spend on production batches:
-  $11.50. The API key has $12.35 left of its $25 limit.
+Veneto is fully checked. 61,029 eligible venues remain. A national batch of 5,000 costs
+about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 limit on
+2026-09-26.
 
-- **Batch `b005`: all of Veneto (2026-09-26).** The operator asked to finish Veneto
-  instead of a national 5,000. `prepare-national-batch.mjs --region CODE` (ISTAT region
-  code; `05` = Veneto) now limits a batch to one region; the certified runner is
-  unchanged. `b005`: 5,796 venues, every remaining Veneto source candidate (1,755 had
-  been in `b001`–`b004`). Run `national-b005`, frozen settings, $5 cap, concurrency 12,
-  detached with the Wi-Fi watchdog (it never had to act).
-  - The first process stopped at 525/5,796 (11:49): `ristorantestorione.it` is a thin page
-    whose meta refresh points at a dead domain, so headless Chrome ended on its own error
-    page and `lib/headless-browser.mjs` returned it as a 200 with final URL
-    `chrome-error://chromewebdata/`. The store refused that URL, the error rejected the
-    worker pool, and the process then hung on shutdown instead of exiting. Fix: a render
-    whose final page is not http(s) is now a failed render (`client_redirect_failed`).
-    Three such renders cached as successes (two from 25 Sep) were deleted from
-    `data/national-review/cache`. The hung process and its Chrome were killed and the run
-    resumed under the same run ID (528 resumed, 5,268 assessed, 12:13–13:13).
-  - b005 crawl: 1,805 strongly correlated, 1,355 ambiguous, 664 contradicted, 1,434
-    retryable, 538 unsupported publisher. Review: 3,160 candidates, 1,527 accepted, 729
-    rejected, 904 ambiguous; 0 provider errors; $3.43. Retryable causes: 727 ENOTFOUND,
-    322 HTTP 404, 142 HTTP 403, 42 timeouts, 35 HTTP 500, 30 EAI_AGAIN, 27 connect
-    timeouts, 27 TLS name mismatches. No retry pass (few transient failures).
-  - `publish-national-review.mjs` (cumulative): 5,867 verified, 3,285 rejected, 16 skipped
-    as already manually verified, 0 from an unfrozen reviewer.
-  - Map fix found while checking Veneto: the map joined assessments to venues by the raw
-    source URL, but batches store the normalized candidate (no fragment or tracking
-    parameters, sorted query). 445 assessed venues nationally (124 in Veneto) showed
-    "Not checked yet". `lib/national-map.mjs` now normalizes with the batch rule.
-    Verified and rejected are matched by domain and were not affected.
-  - Freeze note: `lib/headless-browser.mjs` (hashed in `REVIEWER-FREEZE.json`) changed
-    for the render fix above. The reviewer's decision code, prompt, model, and settings
-    are unchanged.
-- National counts after `b005`, read from `/api/national/meta` on a fresh server:
-  **5,979 verified**, **3,291 rejected**, **25,796 assessed**, 86,852 source candidates,
-  69,205 without a candidate, 156,057 venues. Lead statuses: 5,979 verified, 3,291
-  rejected, 2,350 directory, 6,862 undecided, 7,409 unreachable, 60,977 not checked,
-  69,189 no website. **Veneto** (13,073 venues): 1,966 verified, 928 rejected, 687
-  directory, 2,057 undecided, 1,914 unreachable, 22 not checked, 5,499 no website. The
-  22 have a source URL without a scheme (`www.…`), which the batch selector
-  (`loadRows`, `LIKE 'http%'`) excludes everywhere. 60,820 eligible venues remain. LLM
-  spend on production batches: $14.93. The API key has $8.93 left of its $25 limit.
+### Batch runbook (only after the operator approves a batch and its scope)
 
-- **Batch `b006`: the last 22 Veneto venues (2026-09-26).** Operator request. Their source
-  website is a bare host (`www.ilmulinodibibano.it`), which the selector's
-  `LIKE 'http%'` rule excluded everywhere (232 venues nationally, 231 host-like). New
-  `sourceWebsiteUrl` (`lib/national-map.mjs`) prefixes `http://` to a bare host. It is
-  used by the map loader (candidate URL, assessment join, rejected-domain match), by
-  manual review's candidate lookup (`lib/review-queue.mjs`, which dropped these domains),
-  and by `loadRows(dbPath, { bareHosts: true })`, which only `prepare-national-batch.mjs`
-  passes. The default `loadRows` population (pilot and holdout-v1 selection) is unchanged
-  at 86,616; the batch population is now 86,847.
-  Run `national-b006`, frozen settings, **$1 cap**: 22 assessed, 14 reviewed (3 accepted,
-  3 rejected, 8 ambiguous), 0 provider errors, $0.0206. Veneto map: 3 verified
-  (davalentino.it, aifrati.com, alforno.it), 3 rejected, 8 undecided, 8 unreachable
-  (all ENOTFOUND).
-- National counts after `b006`: **5,982 verified**, **3,294 rejected**, **25,818
-  assessed**; lead statuses 5,982 verified, 3,294 rejected, 2,350 directory, 6,870
-  undecided, 7,417 unreachable, 60,955 not checked, 69,189 no website. **Veneto** (13,073):
-  1,969 verified, 931 rejected, 687 directory, 2,065 undecided, 1,922 unreachable,
-  **0 not checked**, 5,499 no website. 61,029 eligible venues remain. LLM spend on
-  production batches: $14.95. The API key has $8.91 left of its $25 limit.
+1. Check the link: `iw dev wlp58s0 station dump` shows an rx bitrate well above
+   VHT-MCS 0, and ping to 1.1.1.1 is under 50 ms. If not, run
+   `nmcli connection up "Italia Uno"` (no sudo needed).
+2. `node prepare-national-batch.mjs --size 5000 [--region CODE]` (ISTAT region code,
+   e.g. `05` = Veneto) writes the next `bNNN`. Then run, detached, logging to
+   `data/national-review/bNNN.log`, with a cap below the key's remaining limit:
+   `node assess-labelled-corpus.mjs --partition development --fixture-dir data/national-review/batches/bNNN --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --db data/national-review/review.sqlite --cache-dir data/national-review/cache --concurrency 12 --llm-review --run-id national-bNNN --budget-usd 5 --verifier-model xiaomi/mimo-v2.6-pro`
+   Launch with `setsid nohup bash -c '…; echo "exit $?" >> …log' &` (a process tied to
+   the agent session dies with it), plus a detached Wi-Fi watchdog: every 30 s ping
+   1.1.1.1 five times; if the average exceeds 500 ms or all are lost, run the `nmcli`
+   command, at most once per 2 minutes; stop when the log has its `exit` line. Watch for
+   a stalled log too: a worker error can hang the process instead of exiting. If the
+   link dropped (many EAI_AGAIN, connect timeouts, or provider errors), rerun once with
+   `--retry-state retryable` (same run ID and cap).
+3. `node publish-national-review.mjs` (rebuilds the map snapshot), then read
+   `/api/national/meta` (`stats`, `statuses`) on a fresh `node ui/server.mjs` and report
+   verified, rejected, and checked counts. Then run the sync command in `web/README.md`.
+   Update the tables above.
 
-## LLM reviewer core and first development runs (2026-09-24)
+## Operating notes
 
-- Implemented and tested (fake transports, zero spend):
-  - `lib/openrouter-client.mjs`: reserves the worst case before each call, books
-    `usage.cost`, hard-stops at `--budget-usd`, and counts prior spend on resume.
-  - `lib/llm-ownership-reviewer.mjs` (prompt `llm-ownership-dev-3`): optional triage,
-    verifier, deterministic quote acceptance, and a guard so a self-contradictory
-    "own site but not official" answer never becomes a rejection.
-  - Evidence-store schema v6: `llm_review_calls` and `llm_review_outcomes`. These
-    never create publisher attestations.
-  - `assess-labelled-corpus.mjs --llm-review --run-id --budget-usd --verifier-model
-    [--triage-model] [--verifier-reasoning] [--verifier-max-tokens]`, which reads the
-    key from `.env` as `OPENROUTER`.
-  - `evaluate-llm-review.mjs` and `select-llm-models.mjs`.
-- Models: the operator chose `xiaomi/mimo-v2.6-pro` for both roles. Only two free
-  models can be pinned under `data_collection: "deny"`. Muse Spark 1.3 Contributor
-  is refused (Meta trains on its prompts), and full Muse Spark 1.3 costs about 8× MiMo.
-- Live smoke test: free triage plus MiMo verifier accepted a synthetic page with all
-  four quotes checked, for $0.000546.
-- Development runs on the 200-venue / 987-candidate corpus (local
-  `data/llm-review/development-run-1.sqlite`; labels in `benchmark/session-11-web`):
-  - `dev-1` (free Nex triage, then MiMo; prompt dev-1): 33 candidates reviewed.
-    2 venue publications, both correct, 0 false; 2 false rejections, both from the
-    triage self-contradiction that is now guarded. Cost $0.0118.
-  - `dev-2` (MiMo only; prompt dev-2; stopped at 125/335 when a latency test paused
-    its process): 36 reviewed. 1 publication, correct, 0 false; 3 false rejections,
-    all McDonald's corporate pages that the labels accept as the chain's official
-    domain. Prompt dev-3 now treats brand/chain sites that don't identify the branch
-    as "insufficient". Cost $0.0285.
-  - `dev-3` (MiMo only; prompt dev-3; completed after the Wi-Fi fix, retrying earlier
-    timeouts): 193 candidates reviewed across 96 venues (34 accepted, 124 rejected,
-    35 ambiguous). Venue publications: 20, of which 16 have a verified label, all 16
-    correct and 0 false; the other 4 venues are labelled `uncertain` by Codex, and each
-    was accepted with a matched phone or street address on the venue's own domain
-    (pennylanetavern.com, oltregusto.it, hoteldolomiticastelmezzano.com,
-    lefolliedellochef.com). Precision 16/16, Wilson lower bound 80.6% (too few
-    publications for the 73-publication gate). Recall 16/29 labelled official sites
-    (55%). 0 false rejections. 30 labelled-official candidates were left ambiguous,
-    mostly McDonald's PDFs with no extractable text and chain pages that don't name the
-    branch. Cost $0.2298 for 193 calls ($0.0012 per review; about 2,490 prompt and 290
-    completion tokens per call); 1 invalid output.
-  - Throughput after the fix: 303 candidates crawled and 173 reviewed in 7.5 minutes at
-    concurrency 8 (about 40 candidates/min), with RTT to 1.1.1.1 at about 7 ms during
-    the run. Retryable candidates fell from 250 to 97.
-  - Total LLM spend after `dev-3`: about $0.30 of the operator's $2 first-try limit.
-- Development run `v1h-dev-3` on the spent v1 holdout (1,000 venues, 2,804 candidates;
-  development use only; prompt dev-3; MiMo only; local
-  `data/llm-review/v1-holdout-development.sqlite`):
-  - Crawl: 2,804 candidates in 21.5 minutes at concurrency 12 (~130/min): 385 strongly
-    correlated, 209 ambiguous, 166 contradicted, 520 retryable, 1,524 unsupported
-    publisher.
-  - Review: 594 candidates across 363 venues (116 accepted, 417 rejected, 61 ambiguous);
-    0 provider errors; 4 invalid outputs. Cost $0.7060 ($0.0012 per review).
-  - Venue metrics against the Codex labels: 70 publications, 57 conclusive, 52 correct,
-    5 counted false (Wilson 81.1%–96.2%). Recall 52/96 (54%). 6 candidate-level false
-    rejections: 2 JustEat white-label sites and 1 leggimenu-hosted menu (the verifier
-    calls these ordering/menu platforms), 2 pages that were "Account Suspended" at
-    crawl time, and 1 "Don Vittò Pizza e Sfizi" judged a different venue. 43
-    labelled-official candidates were left ambiguous.
-  - All 5 counted false publications look like label errors, not reviewer errors:
-    - `palazzocircolone.it` (Bar Cittadino) and `presu.it` (Presù – Ciarcia Experience)
-      are the venues' own Overture website URLs, and the quoted phone and address match
-      the record.
-    - `agriturismolaterrazza.com` and `agriturismodipetruintoni.it` show the exact
-      record name, address/contrada, and phone.
-    - `peterland.it` is itself labelled `verified` official; the strict metric counts
-      it false only because the labeller named `peterlandolbia.it` as *the* official URL.
-    - The Codex labels carry no notes explaining these rejections.
-- Source-candidate pilot `pilot-dev-3` (`PROCESS.md` step 3.1; development only):
-  300 venues selected by `select-source-sample.mjs` (seed `source-pilot-2026-09-24`;
-  86,616 eligible; 2,076 benchmark venue IDs excluded; fixture in
-  `data/llm-review/source-pilot/`). Crawl: 85 strongly correlated, 71 ambiguous,
-  33 contradicted, 83 retryable, 28 unsupported. Review: 156 candidates; 71 accepted
-  (23.7% of venues), 36 rejected, 49 ambiguous; 0 provider errors; $0.1828; 6 minutes
-  at concurrency 12. No labels exist for the pilot, so precision is not measured here.
-  The sample was not region-stratified (empty `region` field), which is now fixed.
-- `openai/gpt-6-sol` (probe: routes to OpenAI under `data_collection: "deny"` only with
-  `temperature` omitted; the client now accepts `temperature: null`). Superseded: the
-  operator chose Claude, not OpenAI via OpenRouter, for labels and adjudication.
-- Total LLM spend to date: about $1.19 of the operator's $2 first-try limit.
+- Never record a manual review on the live app as a test: the next sync applies it to
+  the national store.
+- Slow crawls usually mean the laptop's Wi-Fi association degraded (rx VHT-MCS 0), not
+  the internet line; reconnecting fixes it.
+- `lib/lib.test.mjs` "get does not load PDF or image bodies…" occasionally fails under
+  a parallel `npm test` (shared `/tmp` cache dir); it passes alone.
+- npm registry calls can hang on this host; the headless renderer uses the installed
+  Chrome with no npm dependency.
 
-- Network diagnosis (resolved 15:27 UTC): the bottleneck was the laptop's Wi-Fi
-  association, not the internet line. After 52 hours connected on DFS channel 124,
-  the router was sending to the laptop at VHT-MCS 0 (15 Mbit/s) with 2.9 M dropped
-  frames against 1.45 M received. A 250-packet load to the router gave 3.5 s RTT
-  with 15% loss, and internet throughput was ~20 KB/s, which any crawl saturated.
-  Wi-Fi power saving off: no change. `sudo nmcli connection up "Italia Uno"`
-  (operator) restored the link: rx 390 Mbit/s, the router load test at 2.6 ms with
-  0% loss, and 100 MB downloaded in 1.96 s (53.5 MB/s). If crawls slow down again,
-  check the `rx bitrate` in `iw dev wlp58s0 station dump` and reconnect.
+## Open operator decisions
 
-## Route decision and crawler work (2026-09-24)
-
-- Operator decision: the automatic route is now an LLM ownership reviewer through
-  OpenRouter (cheap triage model → stronger verifier → deterministic acceptance of
-  quoted evidence). OpenAI/Codex agent reviews are accepted as reference labels,
-  with no human audit sample. Every LLM run has a hard USD cap, default $5.
-  `PROCESS.md`, `AGENTS.md`, and `PLAN.md` record the route; the reviewer core
-  followed later the same day (section above).
-- `DATA-LICENSING.md` and `PRIVACY.md` register OpenRouter and the upstream model
-  providers as processors. Requests must set `data_collection: "deny"` and
-  `require_parameters: true` (`zdr: true` where supported). Only hashes, decisions,
-  short quotes, and cost are kept.
-- Crawl-failure diagnosis: 1,113 of 2,804 v1-holdout candidates were transport
-  failures. This host has no IPv6 route, and Node's 250 ms per-address connect race
-  failed slow sites that curl loads. After the fix (`lib/lib.mjs`, 2 s per address),
-  a re-probe of 120 of those failures gave 56 × 200, 54 × 403 (almost all directory
-  bot walls: tuttiaffari, cylex, justeat, deliveroo…), 8 unreachable, one 404, and one 429.
-- New `lib/headless-browser.mjs` drives the installed Google Chrome 152 over the
-  DevTools protocol, with no npm dependency (npm registry calls hang on this host).
-  It returns the rendered DOM, main-document status, and final URL, and waits for
-  client-rendered text to stop growing. A live check turned a Wix page from 67 into
-  3,177 visible characters. Cloudflare challenge pages still return 403 (expected).
-- `find-menu.mjs`: `crawlWebsiteCandidate` now renders pages that are thin once
-  scripts and styles are removed, or that answer HTTP 403/429/503 or fail on a TLS
-  chain. Crawl results carry `rendered` and `failure_reason`, and retryable evidence
-  gains `failure_<code>`. `ENOTFOUND` no longer retries the site root.
-  `assess-labelled-corpus.mjs` uses the Chrome renderer with a cache (`--no-headless`
-  opts out). The pre-existing `getRendered` in `lib/lib.mjs` is still only a
-  second plain fetch for other callers.
-- Not measured: the production-scale success rate. During this session the link ran
-  at ~20 KB/s. Two 132-URL national samples were dominated by connect timeouts
-  (62/132 and 64/132 succeeded), so neither is evidence for or against the fix.
-- National counts are unchanged: 0 candidate assessments, 112 verified, 6 rejected.
-
-## Completed and visible
-
-- National inventory: 156,057 venues in 7,398 municipalities.
-- National map: `http://localhost:4188/map.html` via `node ui/server.mjs`.
-- Map states (after `b005`, 2026-09-26): 86,852 source candidates, 5,979 verified
-  websites, 3,291 rejected candidates, 25,796 assessed candidates, and 69,205 venues
-  without a source candidate. After `b006`: 5,982 verified, 3,294 rejected, 25,818
-  assessed; every Veneto source candidate checked.
-- The map supports municipality/venue search, municipality autocomplete, status
-  filters, national clustering, and individual venue details.
-- Map clusters (2026-09-13): numeric grid counts at every zoom until close-up.
-  Cell size halves about every zoom level (1.0° at z≤5 down to 0.008° at z≥13),
-  so far-away views show plain counts (224 clusters / ~50KB for all Italy at
-  z6) instead of one chip per venue; an adaptive pass caps output at 2,500
-  clusters. Individual dots appear only at z≥12 with ≤2,000 venues in view
-  (search capped at 2,000 with `truncated=true`). Clicking a count zooms to
-  its cell bounds. No admin name chips: badges are fixed-size circles
-  (36/46/58px) with the count only and no per-cluster popups.
-- Map loader (2026-09-13): source rows are read with SQL `json_extract` instead
-  of parsing the ~4KB provenance blobs in JS; index load ~10s → ~6.5s for
-  156,057 venues / 86,852 candidates, follow-up viewport queries 15–160ms.
-- Map frontend (2026-09-13): `moveend` is debounced 250ms with in-flight abort;
-  the status line reads "N venues in M clusters — click a cluster to zoom in".
-- The main UI Map navigation opens the national inventory map.
-- `PROCESS.md` is the sole active plan. Superseded direction documents are preserved
-  under `docs/archive/`; frozen benchmark evidence remains under `benchmark/`.
-- `AGENTS.md` makes this ledger and the canonical process mandatory session context.
-- Evidence-store schema v5 persists one assessment per venue/candidate URL with its
-  crawl outcome; identity, geography, and officialness scores; evidence; origin; and
-  checked time, independently of publisher attestations and accepted facts.
-- The scorer distinguishes `strongly_correlated`, `ambiguous`, `contradicted`,
-  `retryable`, and `unsupported_publisher`. Strong correlation without ownership
-  remains unpublished.
-- The national map/API reports assessment counts and exposes the assessment and three
-  scores for each assessed source candidate. The real national store is migrated to
-  schema v5 and currently contains 0 assessments because no national crawl has run.
-- The zero-search labelled-corpus runner persists resumable candidate assessments in
-  a dedicated local database and can join minimized locked-holdout fixtures to the
-  national venue identity data without reading their adjudications.
-- The 200-venue development corpus is fully crawled: 987 candidate outcomes comprise
-  42 strongly correlated, 65 ambiguous, 30 contradicted, 214 retryable, and 636
-  unsupported-publisher assessments. The development-only strict first-party rule
-  made 7 correct publications, 0 false publications, and 193 abstentions (precision
-  100%; two-sided 95% Wilson lower bound 64.57%).
-- The rule, crawler, evaluator, development report/database hashes, and locked
-  holdout artifact hashes are frozen in
-  `benchmark/AUTOMATIC-FIRST-PARTY-RULE-FREEZE.json`. Search and Brave are disabled.
-- The frozen locked-holdout crawl completed all 2,804 persisted candidate outcomes
-  across 1,000 venues: 45 strongly correlated, 58 ambiguous, 18 contradicted, 1,159
-  retryable, and 1,524 unsupported publisher. Of the retryable outcomes, 1,113 were
-  transport failures; inaccessible candidates abstained and were not rejected.
-- The one authorized locked-label evaluation was executed and is now spent. The v1
-  rule failed every acceptance condition: 3 conclusive publications versus the
-  required 73; 1 false publication versus the allowed 0; and 66.7% precision with a
-  20.8% two-sided 95% Wilson lower bound versus the required 95%. The 1 false
-  publication was the rejected booking/order platform
-  `https://lalunanelpozzo.metro.bar/?lang=en`. The immutable evaluation report is
-  `benchmark/AUTOMATIC-FIRST-PARTY-LOCKED-HOLDOUT-EVALUATION-V1.json`.
-- The v1 automatic rule is not approved. No automatic ownership attestations were
-  created, the national store still has 0 candidate assessments, and the
-  86,852-candidate production crawl remains unauthorized.
-
-## Verified facts about the old method
-
-- The 14-venue Oderzo acceptance did not generalize.
-- National pilots achieved only 41.7% and 35.7% official-website precision.
-- The later 1,000-venue result tested an agent-reviewed ownership gate (labels signed
-  `Codex independent bounded-fixture review`): 96 verified publications, zero false
-  publications, and 904 abstentions. It did not validate an automatic ownership
-  classifier.
-- The 86,852 source candidates already exist and need no Brave search.
-- A 20-venue zero-search crawl sample fetched 18 candidates but published zero because
-  automatic crawl evidence cannot currently create an ownership attestation.
+- Which CRM features come after the Pomovi bridge (`PROCESS.md` step 9).
+- Approval, scope, and cap of any further verification batch.
 
 ## Next executable task
 
-The online CRM is live and the operator has signed in (2026-09-27). The main track
-resumes: the next national batch below. Open CRM checks, to do on the next agent
-visit to the live app: read the cold-start timing line (`lead index …: fetch … ms,
-build … ms`) with `npx vercel logs --since 1h --expand`, and try a whole-selection CSV
-export (Vercel's response-size limit is unmeasured).
+Finish the CRM's live checks (`PROCESS.md` step 7), then prepare the Pomovi bridge
+(step 8):
 
-Do not record a manual review on the production app as a test: the next sync applies it
-to the national store.
-
-### The next national batch (`b007`)
-
-Veneto is fully checked (`b005`–`b006`). The operator restarts the map server
-themselves (`node ui/server.mjs`); a server started before the bare-host change shows the
-Veneto 22 as "Not checked yet" until restarted. Report any map issue as a fix before resuming batches. Manual reviews of
-undecided venues (filter **Undecided**, e.g. 2,057 in Veneto) need no budget.
-
-Batch `b007` needs the operator's approval and their choice of scope (national 5,000, or
-one region with `--region CODE`). The API key has $8.91 left of its $25 limit; a
-5,000-venue batch costs about $3 (`b005`, 5,796 venues, cost $3.43). Once approved:
-
-1. Check the link (`iw dev wlp58s0 station dump`: rx bitrate well above VHT-MCS 0; ping
-   1.1.1.1 under 50 ms). If degraded, run `nmcli connection up "Italia Uno"` (works
-   without sudo).
-2. `node prepare-national-batch.mjs --size 5000 [--region CODE]` (writes `b007`), then:
-   `node assess-labelled-corpus.mjs --partition development --fixture-dir data/national-review/batches/b007 --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --db data/national-review/review.sqlite --cache-dir data/national-review/cache --concurrency 12 --llm-review --run-id national-b007 --budget-usd 5 --verifier-model xiaomi/mimo-v2.6-pro`
-   with a cap below the key's remaining limit, logging to `data/national-review/b007.log`.
-   Launch it detached (`setsid nohup bash -c '…; echo "exit $?" >> …log' &`) with the
-   detached Wi-Fi watchdog (every 30 s, ping 1.1.1.1 five times; if the average is above
-   500 ms or all are lost, run the `nmcli` command, at most once per 2 minutes; stop when
-   the log has its `exit` line). Watch for a stalled log, not only for the `exit` line: a
-   worker error rejects the pool and the process can hang instead of exiting. If the link
-   dropped (many EAI_AGAIN or connect timeouts, or provider errors), rerun once with
-   `--retry-state retryable` (same run ID and cap).
-3. `node publish-national-review.mjs` (also rebuilds the map snapshot), then read
-   `/api/national/meta` (`stats` and `statuses`) and report the verified, rejected, and
-   assessed counts. Once the CRM is online, run `sync-online.mjs` after publishing.
-
-## Acceptance gate for the automatic verifier (unchanged from v1)
-
-- At least 73 correct automatic verifications on the locked evaluation.
-- Zero false automatic verifications.
-- Two-sided 95% Wilson precision lower bound at or above 95%.
-- Timeouts and inaccessible pages abstain or retry; they never become rejections.
-- Also reported: stage-1 false rejections and cost per candidate.
+1. Cold start: `npx vercel logs --since 1h --expand` (from the repository root, which
+   is linked) after a fresh load of the live app; record the `lead index …` line. If it
+   is well above ~3 s, find where the time goes.
+2. CSV export: measure the whole-Italy export size on the laptop
+   (`curl -s http://localhost:4188/api/national/export.csv | wc -c` on a fresh
+   `node ui/server.mjs`) and compare it with Vercel's current function response limit.
+   If it exceeds the limit, make the online export fit (for example, stream it or cap it
+   with a clear message), verify, deploy, and ask the operator to try **Download CSV**
+   with no filters on the live app.
+3. The bridge endpoints are built in the Pomovi repository by a session working there,
+   following `../pomovi/docs/plans/restaurant-finder-bridge.md`. Once Pomovi is
+   deployed, set `POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN` on the Vercel project,
+   redeploy, and create one real demo from a verified venue end to end.
 
 ## Last verification
 
-- Custom domain (2026-09-27): `restaurants.trelua.com` added to the Vercel project
-  (trelua.com already verified in the team); the operator added the Hostinger CNAME to
-  `78e539ce3f31b4e2.vercel-dns-017.com` and the Google redirect URI. `dig` resolves the
-  CNAME (also at Hostinger's nameserver); Vercel config `misconfigured: false`; HTTPS
-  verifies; `/` → 307 `/signin`, `/api/national/meta` 401 signed out; sign-in redirects
-  to accounts.google.com with `redirect_uri=https://restaurants.trelua.com/api/auth/callback/google`.
-- Cold start of the online map (2026-09-27): the operator signed in on the live app;
-  the venues took "some seconds" to appear. Timed from the laptop against Neon, the
-  same steps as a cold instance: connect 566 ms, fetch the 7.1 MB snapshot 501 ms,
-  gunzip 134 ms, parse 334 ms, build the index 1,188 ms, then an empty overlay 824 ms
-  (a needless second cluster build). `LeadIndex.applyOverlay` now rebuilds the order
-  and unfiltered clusters only when a status changes (empty overlay: 2 ms; total about
-  2.6 s from the laptop), and `/` starts the load with `after()` while the phone fetches
-  the page. `node --test lib/national-leads.test.mjs`: 6 passed (new: empty and
-  stage-only overlays keep the cluster index); `npm test`: 280 passed; `web` tsc clean,
-  build compiled; `npx vercel deploy --prod` ready.
-- Google sign-in (2026-09-27): `npx vercel deploy --prod` ready; `/api/auth/providers`
-  lists google; `POST /api/auth/signin/google` redirects to accounts.google.com with a
-  `*.apps.googleusercontent.com` client ID and redirect URI
-  `https://restaurant-finder-iota.vercel.app/api/auth/callback/google`; signed-out
-  `/api/national/meta` still 401.
-- Online deploy (2026-09-27):
-  - `node --no-network-family-autoselection --dns-result-order=ipv4first --env-file=.env.local sync-online.mjs`:
-    migration applied; snapshot `3a86b85efbc5` (156,057 venues) uploaded; 86,895 venue
-    details; 0 manual reviews; 35.4 s.
-  - `npx vercel deploy --prod`: ready; the deployment's source tree is only `lib/`,
-    `ui/`, `web/` (checked through the deployments files API); `web/.env*` other than
-    the example excluded.
-  - Live, signed out: `/` and `/vendor/…` → 307 `/signin`; `/signin` 200;
-    `/api/national/meta` and `/api/crm/list` → 401, also with a forged
-    `__Secure-authjs.session-token`.
-
-- Online lead CRM (2026-09-27):
-  - `npm test`: 280 passed, 0 failed (new: the overlay test in
-    `lib/national-leads.test.mjs`; `lib/online-sync.test.mjs`, two tests against a real
-    Postgres via PGlite's socket server). One earlier full run had 1 failure in
-    `lib/lib.test.mjs` ("get does not load PDF…"); it passed alone 3 times and in the
-    next full run, so it is flaky under parallel load, not caused by this change.
-  - `cd web && npx tsc --noEmit`: clean. `npm run build`: compiled; routes `/`,
-    `/signin`, `/api/auth/[...nextauth]`, `/api/national/[...path]`, `/api/crm/[...path]`,
-    proxy; `route.js.nft.json` traces `generated/map.html`.
-  - `npm run db:local` (temp dir) + `npm run sync:local` on the real store: migration
-    applied; snapshot uploaded; 86,895 details; backup written; 10.3 s; database 80 MB.
-  - `next dev` with `AUTH_DEV_EMAIL`: meta verified 5,982 of 156,057 (same as the laptop
-    map); Rome summary 5,844 in view; pipeline add, next action, touch, do-not-contact
-    blocking until `reopen`, unknown stage refused; stage filter 1; a manual approval
-    showed at once (verified 5,983, "waiting for the laptop sync"); an unknown
-    candidate domain was refused; the demo button answered "not configured". That test
-    approval was deleted from the temporary database and never synced.
-  - `node ui/map-mobile-check.mjs --url http://127.0.0.1:3057/…`: page, tiles, search,
-    list, venue card, review details, filters and street zoom all passed on the online
-    app (the old-page redirects exist only on the laptop server). Headless screenshots
-    of the card's Pipeline section, a touch added through the form, and the Pipeline tab.
-  - `next start` (production mode): `/` → 307 `/signin`; `/api/national/meta` and
-    `/api/crm/list` → 401; with a forged session cookie `/` → `/signin` and the APIs 401;
-    `/signin` 200.
-
-- Veneto remainder `b006` and bare-host websites (2026-09-26):
-  - `npm test`: 277 passed, 0 failed. `git diff --check`: clean.
-  - `loadRows` populations: default 86,616 (unchanged), `bareHosts` 86,847.
-  - `node prepare-national-batch.mjs --size 1000 --region 05`: `b006`, 22 venues,
-    `previously_done` 7,551, `remaining_after` 0.
-  - `node assess-labelled-corpus.mjs ... --run-id national-b006 --budget-usd 1 ...`:
-    22 assessed, 14 reviewed, 0 provider errors, $0.0206, `stopped_reason: null`.
-  - `node publish-national-review.mjs`: `{"assessments":25818,"verified":5870,"rejected":3288,"skipped_manual":16,"skipped_unfrozen":0}`.
-  - `PORT=4197 node ui/server.mjs`: meta verified 5,982, rejected 3,294, assessed 25,818,
-    statuses sum to 156,057; Veneto summary 0 not checked; the 22 venues listed above.
-  - OpenRouter `GET /api/v1/key`: limit $25, remaining $8.91.
-
-- Veneto batch `b005`, render fix, map join fix (2026-09-26):
-  - `npm test`: 276 passed, 0 failed. `git diff --check`: clean.
-  - `node --test lib/headless-browser.test.mjs`: the new meta-refresh-to-dead-site case
-    fails on the old renderer (`ok: true`) and passes now. A live render of
-    `https://www.ristorantestorione.it/` now returns `ok: false`, final URL the page itself.
-  - `node --test lib/national-map.test.mjs`: the new fragment/tracking-query case fails on
-    the old join and passes now.
-  - Reproduction before the fix: the runner without `--llm-review` on the 12 in-flight
-    venues (scratch database, shared cache) failed with "candidate assessment requires
-    valid candidate and final URLs" on `venue:024116:vicenza:del-mare`.
-  - `node prepare-national-batch.mjs --size 10000 --region 05`: `b005`, 5,796 venues,
-    `previously_done` 1,755, `remaining_after` 0.
-  - `node assess-labelled-corpus.mjs ... --run-id national-b005 --budget-usd 5 ...`
-    (resumed after the fix): 5,268 assessed, 528 resumed, `reviewed_total` 3,160, 0
-    provider errors, $3.4261, `stopped_reason: null`.
-  - `node publish-national-review.mjs`: `{"assessments":25796,"verified":5867,"rejected":3285,"skipped_manual":16,"skipped_unfrozen":0}`;
-    `node build-map-snapshot.mjs` after the join fix: 156,057 venues.
-  - `PORT=4197 node ui/server.mjs`: `GET /api/national/meta` verified 5,979, rejected
-    3,291, assessed 25,796, lead statuses sum to 156,057; `GET /api/national/summary?region=05`
-    as above (22 not checked).
-  - OpenRouter `GET /api/v1/key`: limit $25, remaining $8.93.
-
-- Map search fix (2026-09-26):
-  - `npm test`: 274 passed, 0 failed. `git diff --check`: clean.
-  - `GET /api/national/towns` on the real store: 7,398 towns, first
-    `["Roma","RM",7016]`, 175 KB raw / 57 KB gzipped, about 10 ms.
-  - `node ui/map-mobile-check.mjs --url http://127.0.0.1:4199/map.html` (Pixel 7, 4G):
-    all checks passed; keystrokes 26–34 ms each (to the second animation frame), 9
-    suggestion rows for "trev" with Treviso first, tapping it moved the map to Treviso
-    with the box reading "Treviso (TV)". `--desktop`: all checks passed.
-  - An ad-hoc headless probe: "forli" → Forlì first; clearing the box hides the list;
-    "Venues named “pizzeria da”" filtered to `?q=pizzeria+da` (1,284 venues);
-    ArrowDown + Enter on "venez" jumped to Venezia (VE).
-
-- Batch `b004` (2026-09-25; no code changed):
-  - `node prepare-national-batch.mjs --size 5000`: `b004`, 5,000 venues,
-    `previously_done` 15,000, `remaining_after` 66,616.
-  - `node assess-labelled-corpus.mjs ... --run-id national-b004 --budget-usd 5 ...`
-    (first process stopped at 925; resumed detached): 4,058 assessed, 942 resumed,
-    `reviewed_total` 2,566, 0 provider errors, $2.9797, `stopped_reason: null`.
-  - `node publish-national-review.mjs`: `{"assessments":20000,"verified":4343,"rejected":2556,"skipped_manual":13,"skipped_unfrozen":0}`;
-    map snapshot rebuilt (156,057 venues).
-  - `PORT=4197 node ui/server.mjs`, `GET /api/national/meta`: verified 4,455, rejected
-    2,562, assessed 20,000, no_candidate 69,205; lead statuses sum to 156,057.
-  - OpenRouter `GET /api/v1/key`: limit $25, remaining $12.35.
-
-- Batch `b003` (2026-09-25; no code changed):
-  - `node prepare-national-batch.mjs --size 5000`: `b003`, 5,000 venues,
-    `previously_done` 10,000, `remaining_after` 71,616.
-  - `node assess-labelled-corpus.mjs ... --run-id national-b003 --budget-usd 2.95 ...`:
-    5,000 assessed, 1,240 reviewed, 37 provider errors, $1.5135.
-  - The same command plus `--retry-state retryable`: 2,734 assessed (1,988 resumed),
-    1,237 reviewed, 0 provider errors, `reviewed_total` 2,477, $2.9200 for the run,
-    `stopped_reason: budget_exhausted`.
-  - `node publish-national-review.mjs`: `{"assessments":15000,"verified":3249,"rejected":1885,"skipped_manual":8,"skipped_unfrozen":0}`;
-    map snapshot rebuilt (156,057 venues).
-  - `PORT=4197 node ui/server.mjs`, `GET /api/national/meta`: verified 3,361, rejected
-    1,891, assessed 15,000, no_candidate 69,205; lead statuses sum to 156,057.
-  - OpenRouter `GET /api/v1/key`: limit $10, remaining $0.24.
-
-- Old pages retired, review on the venue card (2026-09-25):
-  - `npm test`: 274 passed, 0 failed (three runs; an earlier run had 1 failure in the
-    unchanged `lib/lib.test.mjs` PDF-body test, the known flaky one). `git diff
-    --check`: clean.
-  - `node --test ui/server.test.mjs lib/review-queue.test.mjs publish-national-review.test.mjs`
-    cover the redirects, the review GET/POST (invalid JSON, invented domain, wrong
-    method, missing store → 503), an approval turning an undecided venue verified after
-    the snapshot rebuild, corrected sites, and manual precedence in publishing.
-  - `node ui/map-mobile-check.mjs --url http://127.0.0.1:4199/map.html` (real store,
-    Pixel 7, 4G; now also opens an undecided venue's review without submitting): all
-    checks passed; review details in 575 ms, form opens, `/` and `/review.html`
-    redirect. `--desktop`: all checks passed (review details 118 ms).
-  - Browser end-to-end on a throwaway fixture store: a decision without a name is
-    refused; an approval showed "Verified" at once, and the map updated after 3.0 s
-    (verified 1 → 2, undecided 1 → 0).
-
-- Lead map (2026-09-25):
-  - `npm test`: 273 passed, 0 failed. `git diff --check`: clean.
-  - `node build-map-snapshot.mjs`: 156,057 venues in 8,793 ms. Load in a fresh
-    process: 1,714 ms and 150 MB heap. Full cluster build: 780 ms. Tile queries:
-    under 1 ms and at most 1.1 KB. Summary and list: 13–18 ms. Filtered cluster
-    builds: 7–43 ms.
-  - `node ui/map-mobile-check.mjs --url http://127.0.0.1:4191/map.html` (Pixel 7,
-    4G): all checks passed; clusters and counts at 1,139 ms; list 216 ms; venue card
-    212 ms. A bubble tap zoomed 5 → 6. Veneto + verified = 232. Map data for the whole
-    session: 32.6 KB of tiles and 14.9 KB of API. The `--desktop` run passed, with the
-    bubble tap zooming 6 → 7.
-  - `curl .../api/national/export.csv?status=verified`: 2,265 rows plus the header.
-    The seeded sample was byte-identical on repeat. A full export took 1.0 s.
-
-- Batch `b002` and batch picker (2026-09-25):
-  - `node --test prepare-national-batch.test.mjs`: 1 passed. `npm test`: 267 passed,
-    0 failed. `git diff --check`: clean. With `batches/b001` moved aside, a 5,000-venue
-    selection overlapped the 5,000 assessed venues 0 times.
-  - `node prepare-national-batch.mjs --size 5000`: `b002`, 5,000 venues,
-    `previously_done` 5,000, `remaining_after` 76,616.
-  - `node assess-labelled-corpus.mjs ... --run-id national-b002 --budget-usd 5 ...`:
-    5,000 assessed, 2,516 reviewed, `stopped_reason: null`, 0 provider errors, $2.8616.
-  - `node publish-national-review.mjs`: `{"assessments":10000,"verified":2153,"rejected":1283,"skipped_manual":5,"skipped_unfrozen":0}`.
-  - `GET /api/national-map?zoom=6` (fresh server): verified 2,265, rejected 1,289,
-    assessed 10,000.
-
-- Batch `b001` (2026-09-25; no code changed):
-  - `node assess-labelled-corpus.mjs ... --run-id national-b001 --budget-usd 5 ...`:
-    5,000 assessed, 2,495 reviewed, `stopped_reason: null`, 0 provider errors, $2.7385.
-  - `node publish-national-review.mjs`: `{"assessments":5000,"verified":1090,"rejected":626,"skipped_manual":4,"skipped_unfrozen":0}`.
-  - `PORT=4191 node ui/server.mjs`, `GET /api/national-map?zoom=6`: stats venues
-    156,057, source_candidates 86,852, verified 1,202, rejected 632, no_candidate
-    69,205, assessed 5,000.
-
-- Locked holdout selection and labelling packets (2026-09-24):
-  - `node select-source-sample.mjs ... --count 480 --seed locked-holdout-llm-v1 ...`:
-    480 selected, 86,616 eligible, 2,376 excluded, fingerprint `440ad0df…caae1`.
-  - `node prepare-holdout-labelling.mjs --fixture benchmark/llm-review-holdout-v1/locked-holdout-001-480.json --db data/istat/2026-01-01/derived/italy-import.sqlite --output-dir benchmark/llm-review-holdout-v1/labelling`:
-    10 packets, 480 unique venues, 4 missing phones, 0 missing addresses.
-  - `node validate-holdout-labels.mjs --holdout-dir benchmark/llm-review-holdout-v1`:
-    0 batches, 10 packets (no labels yet).
-  - `node --test validate-holdout-labels.test.mjs`: 2 passed. `npm test`: 263 passed,
-    0 failed. `git diff --check`: clean.
-
-- LLM reviewer (2026-09-24):
-  - `npm test`: 261 passed, 0 failed.
-  - `git diff --check`: clean.
-  - Live calls: the smoke test ($0.000546), `dev-1`, and `dev-2` as recorded above;
-    `node evaluate-llm-review.mjs ... --run-id dev-1|dev-2` produced the figures above.
-  - `node select-llm-models.mjs --probe-free`: 358 structured-output models. Free
-    models routable under `data_collection: "deny"`: `nex-agi/nex-n2.5-mini:free`,
-    `dots-studio/dots-3-note-preview:free`, and `openrouter/free` (a router, so not
-    pinnable).
-
-
-- Crawler and renderer (2026-09-24):
-  - `node --test lib/headless-browser.test.mjs find-menu.test.mjs assess-labelled-corpus.test.mjs`:
-    49 passed, 0 failed. This includes a live Chrome render of a local server
-    (redirect → final URL, text inserted by JavaScript after 300 ms, 404 status)
-    and crawler tests for 403, TLS, script-only, and ENOTFOUND handling.
-  - `npm test`: 249 tests. The first run had 248 passed and 1 failed: `get does not
-    load PDF or image bodies into text memory` (`lib/lib.test.mjs`, unchanged; it
-    passes alone before and after this change and shares a fixed `/tmp` cache dir).
-    Two reruns: 249 passed, 0 failed.
-  - Connect-race check: `https://www.lidoauroracampomarino.it/` and
-    `https://www.palazzosantelena.it/servizi/` failed with ETIMEDOUT after ~260 ms
-    under Node's default settings and returned 200 with a 2,000 ms attempt timeout
-    or with autoselection disabled; `curl -6` fails immediately on this host.
-  - `git diff --check`: clean.
-
-Earlier (2026-09-13):
-
-- Map cluster verification (2026-09-13, real national store):
-  - `node --test lib/national-map.test.mjs`: 4 tests passed (candidate
-    visibility, numeric counts far / dots up close with count conservation,
-    clusters kept at mid zoom, dense-area cap plus search truncation).
-  - `npm test`: 245 tests passed, 0 failed.
-  - Direct index check: z5 all-Italy 77 clusters / 17KB, z6 224 / 51KB,
-    z7 702 / 160KB, z8+ adaptively capped (750 / 182KB), cluster counts sum
-    to 156,057; Venice bbox at z11 gives 66 clusters for 1,384 venues, Rome
-    centre at z14 gives 1,621 venue dots.
-  - Live `PORT=4190 node ui/server.mjs` then `/api/national-map`: first request
-    (index build) 6,702ms for 224 clusters / 50KB at zoom 6 all-Italy;
-    follow-ups 23ms for 341 clusters / 83KB (zoom 8 bbox), 16ms for
-    66 clusters / 15KB (zoom 11 Venice bbox), 23ms for 1,621 venues / 691KB
-    (zoom 14 Rome centre).
-  - `node --check` on the extracted inline map script: syntax OK.
-- Frozen holdout crawl command from the previous `Next executable task`: completed
-  the remaining 2,135 outcomes and resumed 669 existing outcomes, for 2,804 total.
-- `node evaluate-automatic-rule.mjs --partition locked_holdout --fixture-dir benchmark/session-12-combined-final/cohort-1 --fixture-dir benchmark/session-12-combined-final/cohort-2 --db data/automatic-rule/holdout-assessments.sqlite --expected-venues 1000 --expected-candidates 2804 --output benchmark/AUTOMATIC-FIRST-PARTY-LOCKED-HOLDOUT-EVALUATION-V1.json`: executed once; the gate failed with 2 correct and 1 false conclusive publication.
-- Report invariant check: 2,804 assessed candidates, 1,000 reviewed venues, 1 false
-  publication, and `acceptance.passed=false`.
-- `npm test`: 48 test files passed, 0 failed.
-- Frozen SHA-256 check: all four code artifacts still match the freeze manifest.
-  Evaluation report SHA-256:
-  `ef900e97c2beeddf5c4ac6aab31bdc2d9dd4aa07363cf7b69eec71ed7f68f89e`;
-  local holdout assessment database SHA-256:
-  `24216a740f96f8289295ba1ee5440a74856c69237524dc4cb07bcc67b89ef291`.
-- `git diff --check`: clean.
+- 2026-09-28, documents only (`AGENTS.md`, `PLAN.md`, `PROCESS.md`, `STATUS.md`):
+  `git diff --check` clean; every file path named in the four documents exists; the
+  `PROCESS.md` references in code (`step 2`, `step 3`, `step 3.3`, steps 3.5–3.6,
+  `step 4`, "Online lead CRM") still resolve to the same sections.
+- Last code change (2026-09-27, faster cold start of the online map):
+  `node --test lib/national-leads.test.mjs` 6 passed; `npm test` 280 passed; `web`
+  `npx tsc --noEmit` clean, `npm run build` compiled; `npx vercel deploy --prod` ready.
+  Live, signed out: `/` → 307 `/signin`, `/api/national/meta` 401.
 
 ## Blockers
 
-- No hard blocker. The OpenRouter API key has $8.91 left of its $25 limit (after
-  `b006`), enough for about two more 5,000-venue batches. Each further batch needs the
-  operator's approval and its own cap (default $5, never above the key's remaining limit). Only
-  outcomes of the frozen reviewer certified on holdout v1 (`REVIEWER-FREEZE.json`) are
-  published as verified.
+- Create demo: Pomovi's bridge endpoints are not built.
+- Real outreach: the `PRIVACY.md` prospecting items are not cleared.
+- Verification batches: none technical; each needs operator approval and a cap within
+  the key's remaining limit.

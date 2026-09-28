@@ -1,69 +1,57 @@
 # restaurant-finder
 
-The product is a national, searchable map of Italian food venues and their website
-verification state.
+A national map of Italian food venues, their verified websites, and the sales pipeline
+that turns them into Pomovi customers (Pomovi, the sibling repository, builds each
+prospect a demo site).
 
-## Start the product
+## The two surfaces
 
-```bash
-node ui/server.mjs
-```
+**Online lead CRM** (the daily tool): <https://restaurants.trelua.com>, private behind
+Google sign-in. The Next.js app in `web/` (Vercel + Neon Postgres) serves the national
+map, manual website review, and the pipeline: a stage, next action, and history of
+visits, letters, and calls on every venue card, plus a Pipeline tab ordered by next
+action. Setup and operations: [`web/README.md`](web/README.md).
 
-Open <http://localhost:4188/> (it redirects to `/map.html`; the map is the only page).
+**Laptop** (the verification factory): `node ui/server.mjs`, then
+<http://localhost:4188/>. It shows the same map without the pipeline. The laptop owns
+crawling, the LLM reviewer batches, and the national store
+`data/istat/2026-01-01/derived/italy-import.sqlite`. `node sync-online.mjs` connects
+the two: it applies the manual decisions made online to the store, then uploads the map
+snapshot and review details.
 
-The map reads the national store at
-`data/istat/2026-01-01/derived/italy-import.sqlite` and currently shows:
+## What the map shows (2026-09-26, no batch since)
 
-- 156,057 venues;
+- 156,057 venues in 7,398 municipalities;
 - 86,852 source website candidates, unverified until reviewed;
-- 5,982 verified websites (2026-09-26, after four national batches and all of Veneto);
-- 3,294 rejected candidates and 25,818 assessed candidates;
+- 5,982 verified websites, 3,294 rejected candidates, 25,818 checked candidates;
 - 69,205 venues without a source website candidate.
 
-The map is built for phones as well as desktops (from another device, open it at the
-server's Tailscale address). Search a town to jump there, or a venue name to filter by it.
-Bubbles cluster venues by screen distance; a green arc shows each bubble's share of
-verified websites; tap a bubble to zoom in, or a dot for the venue card (call, website,
-maps). Filters: lead status (verified, rejected, directory or social link, checked but
-undecided, unreachable, not checked yet, no website), category, region, province, and
-phone. The list shows the venues in view, and **Download CSV** exports the selection or
-a reproducible random sample. Filter state is kept in the URL.
+Search a town or a venue name; filter by lead status, category, region, province,
+phone, and (online) pipeline stage; open a venue card to call, visit the website, or
+see why the site has its status; **Download CSV** exports the selection or a
+reproducible sample. **Review this website** records a manual ownership decision, which
+later reviewer batches never overwrite. The layout works on phones and desktops.
 
-Every venue card with a website shows why it has its status: the crawl result, the
-LLM reviewer's reason and which identity quotes it found, and earlier decisions.
-**Review this website** records a manual ownership decision (official or not, with the
-corrected site, evidence pages, and your name). An approval publishes the website as
-verified (`manual_first_party_review`); the map updates a few seconds later, and later
-reviewer batches never overwrite a manual decision. To work through a backlog, filter
-to **Undecided** in a region and go down the list.
+## Direction
 
-The server answers from a compact snapshot of the store
-(`italy-import.map-snapshot.json`). `publish-national-review.mjs` rebuilds it after
-publishing, and the server rebuilds it in the background whenever the store changes
-(`node build-map-snapshot.mjs` does it by hand). `node ui/map-mobile-check.mjs
-[--desktop]` checks the page in headless Chrome as a phone on 4G, recording timings and
-screenshots.
+[`PROCESS.md`](PROCESS.md) is the sole active delivery plan. In short:
 
-## One direction
+> First, finish the CRM so that a lead on the map becomes a Pomovi demo and moves
+> through the pipeline to a customer. Second, when the operator asks, verify more
+> websites: run the certified LLM reviewer over the remaining known candidates in
+> budgeted batches, then discover URLs for the venues that have none.
 
-[`PROCESS.md`](PROCESS.md) is the sole active delivery plan. In one sentence:
+Search finds candidates; it never verifies them. Every Brave or LLM run requires an
+explicit budget.
 
-> Crawl every known candidate reliably without search, certify one LLM ownership
-> reviewer (cheap triage model plus stronger verifier, with quoted evidence checked
-> deterministically) on a new locked holdout, apply it to the 86,852 known candidates
-> under explicit spending caps, then discover URLs for the remaining 69,205 venues
-> and pass them through the same verifier.
+## Documents
 
-Search finds candidates; it does not verify them. Brave is reserved for the unresolved
-tail, and every Brave or LLM run requires an explicit budget.
-
-## Documentation status
-
-- [`PROCESS.md`](PROCESS.md): current process and next milestone.
+- [`PROCESS.md`](PROCESS.md): the plan and the rules of each track.
+- [`STATUS.md`](STATUS.md): the current position and the next executable task.
 - [`DATA-LICENSING.md`](DATA-LICENSING.md): binding source/licensing constraints.
 - [`PRIVACY.md`](PRIVACY.md): binding privacy and retention constraints.
-- [`docs/archive/`](docs/archive/): superseded plans and handoffs, retained for history.
-- [`benchmark/`](benchmark/): historical evaluation evidence and frozen fixtures, not
-  current direction.
+- [`docs/archive/`](docs/archive/): superseded plans, kept for history.
+- [`benchmark/`](benchmark/): frozen evaluation evidence, including the reviewer's
+  certification (`benchmark/llm-review-holdout-v1/`).
 
 No other document may redefine the execution order in `PROCESS.md`.

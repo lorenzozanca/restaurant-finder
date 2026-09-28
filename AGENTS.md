@@ -16,38 +16,31 @@ Documents under `docs/archive/` and evaluation material under `benchmark/` are
 historical evidence. They may explain prior decisions, but they are not current
 instructions and must not supersede `PROCESS.md`.
 
-The current product and execution order are:
+The project has two tracks. The order is the operator's decision (2026-09-28):
 
-1. Keep the national map usable and honest: all 156,057 venues are visible; source
-   URLs are labelled candidates until verified.
-2. Crawl reliably with no search: Node fetch plus headless Chrome for thin,
-   bot-walled, and TLS-rejected pages; persist a crawl assessment for every candidate.
-3. Build the LLM ownership reviewer (a cheap OpenRouter triage model and a stronger
-   verifier model, with deterministic acceptance of quoted evidence). Develop it on
-   the existing labelled data, then certify it once on a new locked holdout drawn
-   from the source candidates.
-4. If the accuracy gate in `PROCESS.md` passes, run the 86,852 known source candidates
-   in resumable zero-search batches, each with an explicit USD cap, and expose
-   progress on the map.
-5. Only then discover candidates for the 69,205 venues that lack one. Brave is a
-   budgeted discovery tool for this residual group, never the verifier.
-
-In parallel (operator decision 2026-09-27): the online lead CRM in `web/`, described in
-`PROCESS.md` → "Online lead CRM". It never changes what counts as verified: online
-manual decisions reach the store only through `sync-online.mjs` and
-`recordReviewDecision`.
+1. **Online lead CRM (primary).** The private app in `web/`
+   (<https://restaurants.trelua.com>) that turns venues into Pomovi prospects:
+   map, manual review, sales pipeline, and the Pomovi bridge. See `PROCESS.md` →
+   "Online lead CRM". It never changes what counts as verified: online manual
+   decisions reach the national store only through `sync-online.mjs` and
+   `recordReviewDecision`.
+2. **Website verification (secondary, only when the operator asks).** Keep the
+   national map honest (all 156,057 venues are visible; source URLs are candidates
+   until verified). Run the certified reviewer over the remaining known source
+   candidates in resumable zero-search batches, each approved by the operator with an
+   explicit USD cap. Only after that, discover candidates for the 69,205 venues that
+   lack one. Brave is a budgeted discovery tool for that group, never the verifier.
 
 Do not describe planning, test-fixture preparation, small manual batches, or a backlog
-census as delivery progress. Report progress using visible map/database counts and
-completed production candidate outcomes.
+census as delivery progress. Report progress with visible map/database counts,
+completed production candidate outcomes, and working CRM features on the live app.
 
-Never call the old automatic scorer or the failed `strict-first-party-v1` rule
-“verified.” The small Oderzo acceptance did not generalize. The later 1,000-venue
-result validated an agent-reviewed ownership gate: its labels came from Codex/OpenAI
-review, which the operator accepts as reference labels. It did not validate any
-automatic classifier. An LLM verdict is not "verified" until the frozen reviewer has
-passed its locked holdout. Preserve this distinction in code, documentation, and
-operator updates.
+"Verified" means one of two routes only: a manual review, or an outcome of the frozen
+LLM reviewer certified on locked holdout v1
+(`benchmark/llm-review-holdout-v1/REVIEWER-FREEZE.json`). A changed model, prompt, or
+decision code is a new reviewer and needs a new locked holdout before its outcomes
+count. Never call the old automatic scorer or the failed `strict-first-party-v1` rule
+"verified". Preserve this distinction in code, documentation, and operator updates.
 
 Every OpenRouter (LLM) run needs an explicit USD cap (default $5). Never start one
 without an `OPENROUTER_API_KEY` supplied by the operator and a cap.
@@ -66,4 +59,6 @@ Before ending any implementation session:
    exist, document them in `STATUS.md` and do not modify or commit them.
 
 `STATUS.md` is an execution ledger, not a second plan. `PROCESS.md` defines direction;
-`STATUS.md` records the current position along that direction.
+`STATUS.md` records the current position along that direction. Keep it short: replace
+outdated entries instead of appending to them, and keep only the latest verification.
+Older detail lives in git history.
