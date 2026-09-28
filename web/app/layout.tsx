@@ -1,4 +1,11 @@
-export const metadata = { title: "restaurant-finder" };
+import type { Metadata, Viewport } from "next";
+
+export const metadata: Metadata = {
+  title: "restaurant-finder",
+  appleWebApp: { capable: true, title: "Restaurants", statusBarStyle: "default" },
+};
+
+export const viewport: Viewport = { themeColor: "#ffffff" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

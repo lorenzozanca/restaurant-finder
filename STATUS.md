@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-28 (Pomovi bridge done end to end; national counts unchanged)
+Updated: 2026-09-28 (installable app; national counts unchanged)
 Branch: `main`
 
 ## Current counts
@@ -55,6 +55,10 @@ and verified locally (commits `cd45004`, `4f5785a`, `c542dbe`) and **deployed on
 - `/contacts` (with "Due for deletion", the retention list) and `/activities`.
 - Data: migration `0002` (`contacts`, `pipeline_events.contact_id`, `saved_views`),
   `lib/crm-records.mjs`, backups include the new tables.
+- Installable app (2026-09-28, operator request): `web/app/manifest.ts`, a tomato icon
+  (`web/app/icon.svg`, `apple-icon.png`, `public/icons/`), iOS web-app metadata. No
+  service worker: every page is live data behind sign-in. `proxy.ts` lets the manifest
+  and icons through signed out, since browsers fetch them without the session cookie.
 - `PRIVACY.md` covers venue contacts (business data only, notice at first contact,
   erasure, retention); like the rest of the prospecting purpose, it is not cleared until
   the operator signs the assessment.
@@ -169,6 +173,10 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
 
 ## Last verification
 
+- Installable app (2026-09-28): `web` `npx tsc --noEmit` clean, `npm test` 291/291,
+  `npm run build` compiled. Deployed (`restaurant-finder-ainb74x5l`); live, signed out:
+  `/manifest.webmanifest`, `/icons/icon-512.png`, `/apple-icon.png`, `/icon.svg` → 200,
+  `/leads` → 307. Not yet installed from a phone: the operator does that next.
 - Refresh from Pomovi on the record and `/leads` (2026-09-28): `web` `npx tsc --noEmit`
   clean; `npm run build` compiled. Deployed (`restaurant-finder-f0gortrel`); live,
   signed out: `/leads` and `/venues/…` → 307, `POST /api/crm/pomovi-refresh` → 401.
