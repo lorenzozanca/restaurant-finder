@@ -1,5 +1,6 @@
 import { parseFilters } from "@rf/national-leads.mjs";
 import { leadIndex } from "@/lib/leads";
+import { pomoviConfigured } from "@/lib/pomovi";
 import { LeadsTable, type LeadsMeta } from "./LeadsTable";
 
 export const metadata = { title: "Leads — restaurant-finder" };
@@ -20,6 +21,7 @@ export default async function LeadsPage({ searchParams }: {
     venues: meta.venues,
     regions: meta.regions.map((r: { code: string; name: string }) => ({ code: r.code, name: r.name })),
     provinces: meta.provinces.map((p: { code: string; region: string }) => ({ code: p.code, region: p.region })),
+    pomovi: pomoviConfigured(),
   };
   return <LeadsTable initialQuery={query.toString()} initial={first} meta={leadsMeta} />;
 }

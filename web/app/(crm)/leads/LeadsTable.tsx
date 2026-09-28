@@ -17,7 +17,8 @@ export type Row = {
   next_action: string; next_action_on: string; last_activity_on: string; contacts: number; pomovi_status: string;
 };
 type Page = { v: string; total: number; offset: number; sort: string; dir: string; items: Row[] };
-export type LeadsMeta = { venues: number; regions: { code: string; name: string }[]; provinces: { code: string; region: string }[] };
+export type LeadsMeta = { venues: number; regions: { code: string; name: string }[]; provinces: { code: string; region: string }[];
+  pomovi: boolean };
 type SavedView = { id: string; name: string; query: string };
 
 const PAGE = 100;
@@ -75,6 +76,7 @@ export function LeadsTable({ initialQuery, initial, meta }: { initialQuery: stri
   const [total, setTotal] = useState(initial.total);
   const [, setTick] = useState(0);
   const [error, setError] = useState("");
+  const [notice, setNotice] = useState("");
   const scroller = useRef<HTMLDivElement>(null);
   const [range, setRange] = useState({ start: 0, end: 40 });
 
@@ -223,6 +225,21 @@ export function LeadsTable({ initialQuery, initial, meta }: { initialQuery: stri
     await api(`/api/crm/view/${savedActive.id}`, { method: "DELETE" }).catch(() => {});
     loadViews();
   };
+  // Reads every bridged demo's state from Pomovi, then reloads the rows in view so
+  // the Demo column shows it.
+  const refreshPomovi = async () => {
+    setNotice("Reading from Pomovi…");
+    try {
+      const { refreshed } = await api<{ refreshed: number }>("/api/crm/pomovi-refresh", { body: {} });
+      pages.current = new Map();
+      loading.current = new Set();
+      setRange((r) => ({ ...r }));
+      setNotice(`${refreshed} ${refreshed === 1 ? "demo" : "demos"} read from Pomovi.`);
+    } catch (reason) {
+      setNotice("");
+      setError(`Pomovi: ${(reason as Error).message}`);
+    }
+  };
   // On a phone these go into a "More" menu, so the rows start higher.
   const actions = (
     <>
@@ -230,6 +247,7 @@ export function LeadsTable({ initialQuery, initial, meta }: { initialQuery: stri
       <button className="btn" type="button" onClick={saveView}>Save view</button>
       {savedActive ? <button className="btn danger" type="button" onClick={deleteView}>Delete view</button> : null}
       <a className="btn" href={`/api/national/export.csv?${filterParams}`} download>CSV</a>
+      {meta.pomovi ? <button className="btn" type="button" onClick={refreshPomovi}>Refresh from Pomovi</button> : null}
     </>
   );
 
@@ -267,6 +285,7 @@ export function LeadsTable({ initialQuery, initial, meta }: { initialQuery: stri
         {narrow ? <details className="more-menu"><summary className="btn">More</summary><div className="menu">{actions}</div></details> : actions}
       </div>
       {error ? <p className="note err" style={{ padding: "0 12px" }}>{error}</p> : null}
+      {notice && !error ? <p className="note" role="status" style={{ padding: "0 12px" }}>{notice}</p> : null}
       <div className="grid-wrap" ref={scroller} onScroll={measure}>
         {!narrow ? (
           <div className="grid-head" style={{ gridTemplateColumns: template }} role="row">

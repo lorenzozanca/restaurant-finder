@@ -427,6 +427,9 @@ function Demo({ venueId, entry, website, verified, configured, run }: { venueId:
         <div className="form-actions">
           {entry.pomovi_public_url ? <a className="btn" href={entry.pomovi_public_url} target="_blank" rel="noopener">Open the demo</a> : null}
           {entry.pomovi_wizard_url ? <a className="btn" href={entry.pomovi_wizard_url} target="_blank" rel="noopener">Continue in Pomovi</a> : null}
+          {configured ? <button className="btn" type="button"
+            onClick={() => run(() => api("/api/crm/pomovi-refresh", { body: {} }), "Read from Pomovi.")}>
+            Refresh from Pomovi</button> : null}
         </div>
       </>
     );
