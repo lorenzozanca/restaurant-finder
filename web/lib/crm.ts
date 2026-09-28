@@ -19,7 +19,7 @@ type Update = {
   next_action_on?: unknown;
   lost_reason?: unknown;
   reopen?: unknown;
-  event?: { kind?: unknown; note?: unknown; happened_on?: unknown } | null;
+  event?: { kind?: unknown; note?: unknown; happened_on?: unknown; contact_id?: unknown } | null;
 };
 
 const text = (value: unknown, max: number) => String(value ?? "").trim().slice(0, max);
@@ -37,8 +37,10 @@ export async function pipelineEntry(venueId: string) {
     next_action_on::text, lost_reason, pomovi_venue_id, pomovi_slug, pomovi_status, pomovi_public_url,
     pomovi_wizard_url, pomovi_menu_items, pomovi_checked_at, created_at, updated_at
     FROM pipeline WHERE venue_id = ${venueId}`;
-  const events = row ? await sql`SELECT id, kind, stage_from, stage_to, note, happened_on::text, created_by, created_at
-    FROM pipeline_events WHERE venue_id = ${venueId} ORDER BY happened_on DESC, id DESC LIMIT 100` : [];
+  const events = row ? await sql`SELECT e.id, e.kind, e.stage_from, e.stage_to, e.note, e.happened_on::text,
+      e.created_by, e.created_at, e.contact_id, c.name AS contact_name
+    FROM pipeline_events e LEFT JOIN contacts c ON c.id = e.contact_id
+    WHERE e.venue_id = ${venueId} ORDER BY e.happened_on DESC, e.id DESC LIMIT 100` : [];
   return { entry: row ?? null, events };
 }
 
@@ -54,8 +56,12 @@ export async function updatePipeline(index: LeadIndex, update: Update, email: st
   if (stage !== undefined && !STAGES.includes(stage)) throw new CrmError(`unknown stage: ${stage}`);
   const event = update.event ? {
     kind: text(update.event.kind, 20), note: text(update.event.note, 2000), on: day(update.event.happened_on),
+    contactId: update.event.contact_id ? Number(update.event.contact_id) : null,
   } : null;
   if (event && !(EVENT_KINDS as readonly string[]).includes(event.kind)) throw new CrmError(`unknown touch: ${event.kind}`);
+  if (event?.contactId !== null && event?.contactId !== undefined && !Number.isSafeInteger(event.contactId)) {
+    throw new CrmError("not a contact id");
+  }
   const sql = db();
   await sql.begin(async (tx) => {
     const [current] = await tx`SELECT stage FROM pipeline WHERE venue_id = ${venueId} FOR UPDATE`;
@@ -77,13 +83,18 @@ export async function updatePipeline(index: LeadIndex, update: Update, email: st
       const [row] = await tx`SELECT next_action, next_action_on::text, lost_reason FROM pipeline WHERE venue_id = ${venueId}`;
       await tx`UPDATE pipeline SET
         next_action = ${update.next_action === undefined ? row.next_action : text(update.next_action, 500)},
-        next_action_on = ${update.next_action_on === undefined ? row.next_action_on : day(update.next_action_on)},
+        next_action_on = ${update.next_action_on === undefined ? row.next_action_on : day(update.next_action_on)}::text::date,
         lost_reason = ${update.lost_reason === undefined ? row.lost_reason : text(update.lost_reason, 500)},
         updated_at = now() WHERE venue_id = ${venueId}`;
     }
     if (event) {
-      await tx`INSERT INTO pipeline_events (venue_id, kind, note, happened_on, created_by)
-        VALUES (${venueId}, ${event.kind}, ${event.note}, coalesce(${event.on}::date, current_date), ${email})`;
+      if (event.contactId) {
+        const [contact] = await tx`SELECT 1 FROM contacts WHERE id = ${event.contactId} AND venue_id = ${venueId}`;
+        if (!contact) throw new CrmError("that contact does not belong to this venue");
+      }
+      await tx`INSERT INTO pipeline_events (venue_id, kind, note, happened_on, contact_id, created_by)
+        VALUES (${venueId}, ${event.kind}, ${event.note}, coalesce(${event.on}::text::date, current_date),
+          ${event.contactId}, ${email})`;
       await tx`UPDATE pipeline SET updated_at = now() WHERE venue_id = ${venueId}`;
     }
   });

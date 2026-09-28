@@ -1,13 +1,15 @@
 import "server-only";
 import { gunzipSync } from "node:zlib";
+import { crmOverlay, crmStamp } from "@rf/crm-records.mjs";
 import { LeadIndex } from "@rf/national-leads.mjs";
 import { registrableDomain } from "@rf/publisher-ownership.mjs";
 import { db } from "@/lib/db";
 
-// The lead index the map API answers from: the newest snapshot the laptop uploaded
-// (sync-online.mjs), plus an overlay of what changed online since: manual decisions
-// not yet in a snapshot, and pipeline stages. Held in memory per server instance and
-// re-checked against the database at most every CHECK_MS.
+// The lead index the map and the tables answer from: the newest snapshot the laptop
+// uploaded (sync-online.mjs), plus an overlay of what changed online since: manual
+// decisions not yet in a snapshot, pipeline stages, and the CRM columns (next action,
+// last touch, contacts). Held in memory per server instance and re-checked against
+// the database at most every CHECK_MS.
 
 const CHECK_MS = 5_000;
 
@@ -39,12 +41,10 @@ export function overlayChanged() {
 
 async function refresh(): Promise<LeadIndex> {
   const sql = db();
-  const [stamp] = await sql`SELECT
+  const [[stamp], crm] = await Promise.all([sql`SELECT
       (SELECT version FROM map_snapshots ORDER BY uploaded_at DESC, built_at DESC LIMIT 1) AS snapshot,
       (SELECT coalesce(max(id), 0)::text FROM manual_reviews) AS reviews,
-      (SELECT coalesce(max(applied_at)::text, '') FROM manual_reviews) AS applied,
-      (SELECT coalesce(max(updated_at)::text, '') FROM pipeline) AS pipeline_at,
-      (SELECT count(*)::text FROM pipeline) AS pipeline_n`;
+      (SELECT coalesce(max(applied_at)::text, '') FROM manual_reviews) AS applied`, crmStamp(sql)]);
   if (!stamp.snapshot) throw new NoSnapshotError("no map snapshot online yet: run sync-online.mjs on the laptop");
   if (stamp.snapshot !== state.snapshotVersion || !state.index) {
     const started = performance.now();
@@ -58,7 +58,7 @@ async function refresh(): Promise<LeadIndex> {
     state.builtAt = new Date(row.built_at).toISOString();
     state.overlayKey = "";
   }
-  const key = [stamp.reviews, stamp.applied, stamp.pipeline_at, stamp.pipeline_n].join("|");
+  const key = [stamp.reviews, stamp.applied, crm].join("|");
   if (key !== state.overlayKey) {
     await applyOverlay(state.index, state.builtAt, key);
     state.overlayKey = key;
@@ -71,8 +71,9 @@ async function applyOverlay(index: LeadIndex, builtAt: string, key: string) {
   const sql = db();
   // A decision is in the snapshot once the laptop applied it and then built a newer
   // snapshot; until then the overlay shows it. Refused decisions change nothing.
-  const reviews = await sql`SELECT venue_id, candidate_domain, decision FROM manual_reviews
-    WHERE apply_error IS NULL AND (applied_at IS NULL OR created_at > ${builtAt}) ORDER BY id`;
+  const [reviews, { stage, crm }] = await Promise.all([sql`SELECT venue_id, candidate_domain, decision
+    FROM manual_reviews WHERE apply_error IS NULL AND (applied_at IS NULL OR created_at > ${builtAt}) ORDER BY id`,
+  crmOverlay(sql)]);
   const status = new Map<string, string>();
   for (const review of reviews) {
     const i = index.indexOf(review.venue_id);
@@ -87,7 +88,5 @@ async function applyOverlay(index: LeadIndex, builtAt: string, key: string) {
     if (current === "verified" && verifiedDomain && verifiedDomain !== review.candidate_domain) continue;
     status.set(review.venue_id, "rejected");
   }
-  const stage = new Map<string, string>();
-  for (const row of await sql`SELECT venue_id, stage FROM pipeline`) stage.set(row.venue_id, row.stage);
-  index.applyOverlay({ status, stage, key: status.size || stage.size ? key : "" });
+  index.applyOverlay({ status, stage, crm, key: status.size || stage.size || crm.size ? key : "" });
 }

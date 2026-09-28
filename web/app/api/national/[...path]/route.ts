@@ -4,6 +4,7 @@ import { registrableDomain } from "@rf/publisher-ownership.mjs";
 import { db } from "@/lib/db";
 import { leadIndex, NoSnapshotError, overlayChanged } from "@/lib/leads";
 import { pomoviConfigured } from "@/lib/pomovi";
+import { venueReview } from "@/lib/review";
 import { currentEmail, unauthorized } from "@/lib/session";
 
 // The national lead map API, the same routes and answers as ui/server.mjs on the
@@ -109,25 +110,6 @@ export async function POST(request: Request, { params }: Params) {
   overlayChanged();
   return Response.json({ status: decision.attestation.status,
     publisher_domain: registrableDomain(decision.attestation.website_url), pending_sync: true });
-}
-
-// The laptop's venueReview() answer, from venue_details, with the decisions made
-// online shown as attestations until the laptop has applied them.
-async function venueReview(venueId: string) {
-  const sql = db();
-  const [row] = await sql`SELECT detail FROM venue_details WHERE venue_id = ${venueId}`;
-  const detail = row?.detail ?? { venue_id: venueId, candidates: [], attestations: [], assessments: [], llm: null };
-  const online = await sql`SELECT candidate_domain, decision, body, decided_by, created_at, applied_at, apply_error
-    FROM manual_reviews WHERE venue_id = ${venueId} AND (applied_at IS NULL OR apply_error IS NOT NULL)
-    ORDER BY id DESC LIMIT 5`;
-  const pending = online.map((review) => ({
-    domain: review.candidate_domain, status: review.decision === "approve" ? "verified" : "rejected",
-    method: "manual_first_party_review", website: review.body.website_url, evidence_urls: review.body.evidence_urls,
-    reviewer: review.body.reviewer, reviewed_at: new Date(review.created_at).toISOString(),
-    notes: review.apply_error ? `not applied: ${review.apply_error}`
-      : `waiting for the laptop sync${review.body.notes ? ` — ${review.body.notes}` : ""}`,
-  }));
-  return { ...detail, attestations: [...pending, ...detail.attestations] };
 }
 
 function json(data: unknown, cacheControl = "no-cache") {
