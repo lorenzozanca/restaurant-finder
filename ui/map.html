@@ -35,7 +35,9 @@
   .icon-btn { border: 0; background: transparent; min-width: 44px; height: 40px; border-radius: 20px;
     display: inline-flex; align-items: center; justify-content: center; gap: 4px; padding: 0 10px; }
   .icon-btn:active { background: var(--soft); }
-  #filter-btn { background: var(--soft); font-weight: 600; font-size: 14px; }
+  #filter-btn, #table-btn { background: var(--soft); font-weight: 600; font-size: 14px; }
+  #table-btn { color: inherit; text-decoration: none; }
+  #table-btn[hidden] { display: none; }
   #filter-btn .badge { background: var(--accent); color: #fff; border-radius: 10px; padding: 0 6px; font-size: 12px; }
   /* Town suggestions: our own short list (a native datalist of 7,894 towns froze phones) */
   #top.suggesting { z-index: 1003; }
@@ -172,6 +174,7 @@
     <input id="q" type="search" placeholder="Town or venue name" autocomplete="off" enterkeyhint="search" aria-label="Search a town or venue"
       role="combobox" aria-autocomplete="list" aria-controls="suggest" aria-expanded="false">
     <button id="filter-btn" class="icon-btn" type="button" aria-label="Filters">Filters <span class="badge" id="filter-count" hidden></span></button>
+    <a id="table-btn" class="icon-btn" href="/leads" hidden title="The same selection as a table">Table</a>
   </form>
   <ul id="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
   <div id="chips" role="group" aria-label="Lead status"></div>
@@ -364,9 +367,15 @@
     if (withVersion && meta) params.set('v', meta.version);
     return params.toString();
   }
+  // The online app's Table button opens the leads table with the same filters.
+  function updateTableLink() {
+    var query = filterQuery(false);
+    $('table-btn').href = '/leads' + (query ? '?' + query : '');
+  }
   function writeUrlState() {
     var c = map.getCenter();
     var query = filterQuery(false);
+    if (!$('table-btn').hidden) updateTableLink();
     history.replaceState(null, '', location.pathname + (query ? '?' + query : '') +
       '#@' + c.lat.toFixed(5) + ',' + c.lng.toFixed(5) + ',' + map.getZoom() + 'z');
   }
@@ -846,7 +855,10 @@
     document.querySelector('.tab[data-view="pipeline"]').hidden = false;
     $('p-refresh').hidden = !crm.pomovi;
     $('signed-in').hidden = false;
-    $('signed-in').innerHTML = 'Signed in as ' + esc(crm.user) + ' · <a href="/api/auth/signout">Sign out</a>';
+    $('signed-in').innerHTML = '<a href="/leads">Leads</a> · <a href="/contacts">Contacts</a> · <a href="/activities">Activities</a><br>' +
+      'Signed in as ' + esc(crm.user) + ' · <a href="/api/auth/signout">Sign out</a>';
+    $('table-btn').hidden = false;
+    updateTableLink();
     if (!$('p-stage').dataset.ready) {
       $('p-stage').dataset.ready = '1';
       $('p-stage').innerHTML += meta.stages.map(function (stage) {
@@ -901,7 +913,8 @@
     });
   }
   function renderCrm(venue, data) {
-    var entry = data.entry, html = ['<h3>Pipeline</h3>'];
+    var entry = data.entry, html = ['<h3>Pipeline</h3>',
+      '<p><a href="/venues/' + encodeURIComponent(venue.id) + '">Open the full record</a> (contacts, timeline)</p>'];
     var website = venue.verified_url || venue.candidate_url;
     if (!entry) {
       html.push('<p class="note">Not in the pipeline.</p>',
