@@ -1,7 +1,7 @@
 # Execution status
 
-Updated: 2026-09-28 (Pomovi bridge live on both sides, first round trip pending;
-national counts unchanged)
+Updated: 2026-09-28 (first real Pomovi demo created from the CRM; national counts
+unchanged)
 Branch: `main`
 
 ## Current counts
@@ -36,7 +36,7 @@ Setup, sync, and deploy commands: `web/README.md`.
 | Same counts as the laptop map | Confirmed by the operator on the live app, 2026-09-28 |
 | A manual review made online reaches the local store on sync | Tested on a local database only; confirm on the first real review's sync |
 | A venue moves through the pipeline | Tested on a local copy only |
-| Create its demo in Pomovi | Bridge live on both sides; first real demo not created yet |
+| Create its demo in Pomovi | Done 2026-09-28: Pomovi venue 15 `al-giardinetto-oderzo` |
 
 CRM views (`PROCESS.md` step 8, decided 2026-09-28, before the Pomovi bridge): built
 and verified locally (commits `cd45004`, `4f5785a`, `c542dbe`) and **deployed on
@@ -82,7 +82,10 @@ Pomovi bridge (2026-09-28, built from this session): steps 1–4 of
 redeployed (`restaurant-finder-khq5tcjk1`) with `POMOVI_BRIDGE_URL`
 (`https://app.pomovi.com`) and `POMOVI_BRIDGE_TOKEN`, the same value as Pomovi's
 `RESTAURANT_FINDER_BRIDGE_TOKEN`. Both are *sensitive* on Vercel and cannot be read
-back, so no authorised call has been made yet. They add `POST`/`GET /api/bridge/venues`
+back. First round trip (operator, 2026-09-28): a shortlisted lead
+(`venue:026051:oderzo:giardinetto-oderzo`) → **Create demo** → Pomovi venue 15
+`al-giardinetto-oderzo`; **Continue in Pomovi** opened the wizard, which read the
+branding and found menu sources by itself (checked read-only in Pomovi's database). They add `POST`/`GET /api/bridge/venues`
 (bearer `RESTAURANT_FINDER_BRIDGE_TOKEN`; unset = 404), migration `0069`
 (`venues.source_ref`), a "da restaurant-finder" mark in
 Pomovi's registry, a "Sito non verificato" notice for `candidate` websites, and a
@@ -160,12 +163,10 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
    (the command needs the operator's approval in the agent session; on 2026-09-28 it was
    denied automatically because nobody was at the prompt). If it is well above ~3 s,
    find where the time goes.
-2. The first Pomovi round trip (operator, signed in): on any venue record's Pipeline
-   tab, **Refresh from Pomovi** (read-only; an empty list with no error proves the
-   token). Then **Create demo in Pomovi** on one venue with a verified website,
-   **Continue in Pomovi**, and **Refresh from Pomovi** again to see its state come
-   back. A 401 means the two tokens differ: set a new one on both projects and
-   redeploy both.
+2. Operator: **Refresh from Pomovi** on the Al Giardinetto Oderzo record (the live
+   `GET`); once it shows the demo's state, archive Pomovi's bridge plan (its
+   `CLAUDE.md` → plan reaches `DONE`). Then `PROCESS.md` step 10: the operator picks
+   which CRM features come next.
 
 ## Last verification
 
