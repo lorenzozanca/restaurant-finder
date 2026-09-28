@@ -69,7 +69,16 @@ export async function GET(request: Request, { params }: Params) {
     const sample = Math.max(0, Number.parseInt(query.get("sample") ?? "", 10) || 0);
     const rows = index.exportRows(filters, bbox, sample, query.get("seed") || "");
     const name = `venues-${new Date().toISOString().slice(0, 10)}-${rows.length}.csv`;
-    return new Response(index.csv(rows), { headers: { "Content-Type": "text/csv; charset=utf-8",
+    // Streamed: Vercel refuses a buffered response above 4.5 MB (all of Italy is ~42 MB).
+    const chunks = index.csvChunks(rows);
+    const encoder = new TextEncoder();
+    const body = new ReadableStream<Uint8Array>({
+      pull(controller) {
+        const next = chunks.next();
+        if (next.done) controller.close(); else controller.enqueue(encoder.encode(next.value));
+      },
+    });
+    return new Response(body, { headers: { "Content-Type": "text/csv; charset=utf-8",
       "Content-Disposition": `attachment; filename="${name}"`, "Cache-Control": "no-store" } });
   }
   return Response.json({ error: "not found" }, { status: 404 });
