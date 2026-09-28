@@ -226,7 +226,7 @@ export function LeadsTable({ initialQuery, initial, meta }: { initialQuery: stri
   // On a phone these go into a "More" menu, so the rows start higher.
   const actions = (
     <>
-      <a className="btn" href={`/?${mapParams}`}>Show on map</a>
+      <a className="btn" href={`/map?${mapParams}`}>Show on map</a>
       <button className="btn" type="button" onClick={saveView}>Save view</button>
       {savedActive ? <button className="btn danger" type="button" onClick={deleteView}>Delete view</button> : null}
       <a className="btn" href={`/api/national/export.csv?${filterParams}`} download>CSV</a>

@@ -7,10 +7,12 @@ prospect a demo site).
 ## The two surfaces
 
 **Online lead CRM** (the daily tool): <https://restaurants.trelua.com>, private behind
-Google sign-in. The Next.js app in `web/` (Vercel + Neon Postgres) serves the national
-map, manual website review, and the pipeline: a stage, next action, and history of
-visits, letters, and calls on every venue card, plus a Pipeline tab ordered by next
-action. Setup and operations: [`web/README.md`](web/README.md).
+Google sign-in. The Next.js app in `web/` (Vercel + Neon Postgres) opens on **Leads**,
+a table of every venue with the map's filters, sortable columns, and saved views; each
+venue has a record page (identity, website verification and manual review, sales stage
+and next action, contacts, timeline). **Contacts** and **Activities** list the people
+met and every visit, letter, and call; **Map** (`/map`) is the same data on the map.
+Setup and operations: [`web/README.md`](web/README.md).
 
 **Laptop** (the verification factory): `node ui/server.mjs`, then
 <http://localhost:4188/>. It shows the same map without the pipeline. The laptop owns

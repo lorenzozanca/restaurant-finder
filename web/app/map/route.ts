@@ -4,8 +4,9 @@ import { after } from "next/server";
 import { leadIndex } from "@/lib/leads";
 import { currentEmail } from "@/lib/session";
 
-// The map is ui/map.html, the same page the laptop's ui/server.mjs serves; it finds
-// the CRM features through /api/national/meta. scripts/copy-ui.mjs copies it here.
+// The map (/map) is ui/map.html, the same page the laptop's ui/server.mjs serves; it
+// finds the CRM features through /api/national/meta. scripts/copy-ui.mjs copies it
+// here. The app opens on the Leads table: next.config.ts redirects / to /leads.
 export const dynamic = "force-dynamic";
 
 let page: Promise<string> | null = null;

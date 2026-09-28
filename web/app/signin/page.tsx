@@ -19,9 +19,9 @@ export default async function SignInPage({
 }: {
   searchParams: Promise<{ error?: string; account?: string }>;
 }) {
-  if (devEmail()) redirect("/");
+  if (devEmail()) redirect("/leads");
   const session = await auth();
-  if (isAllowed(session?.user?.email)) redirect("/");
+  if (isAllowed(session?.user?.email)) redirect("/leads");
   const { error, account } = await searchParams;
 
   return (
@@ -40,7 +40,7 @@ export default async function SignInPage({
       ) : null}
       <form action={async () => {
         "use server";
-        await signIn("google", { redirectTo: "/" });
+        await signIn("google", { redirectTo: "/leads" });
       }}>
         <button type="submit" style={{ width: "100%", height: 46, border: 0, borderRadius: 10, background: "#111827",
           color: "#fff", fontWeight: 700, fontSize: 15, cursor: "pointer" }}>

@@ -83,7 +83,7 @@ export function VenueRecord({ initial }: { initial: Record_ }) {
           <a className="btn" target="_blank" rel="noopener"
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${venue.name} ${venue.address} ${venue.municipality}`)}`}>
             Directions</a>
-          <a className="btn" href={`/#@${venue.lat},${venue.lon},18z`}>Show on map</a>
+          <a className="btn" href={`/map#@${venue.lat},${venue.lon},18z`}>Show on map</a>
         </div>
         {message ? <p className={`note${message.error ? " err" : ""}`} role="status">{message.text}</p> : null}
 

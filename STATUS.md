@@ -33,7 +33,7 @@ Setup, sync, and deploy commands: `web/README.md`.
 | Check | State |
 |---|---|
 | Operator signs in from a phone | Done 2026-09-27 |
-| Same counts as the laptop map | Matched on a local copy (5,982 of 156,057); not compared on the live app |
+| Same counts as the laptop map | Confirmed by the operator on the live app, 2026-09-28 |
 | A manual review made online reaches the local store on sync | Tested on a local database only; confirm on the first real review's sync |
 | A venue moves through the pipeline | Tested on a local copy only |
 | Create its demo in Pomovi | Blocked: Pomovi's endpoints are not built |
@@ -41,7 +41,9 @@ Setup, sync, and deploy commands: `web/README.md`.
 CRM views (`PROCESS.md` step 8, decided 2026-09-28, before the Pomovi bridge): built
 and verified locally (commits `cd45004`, `4f5785a`, `c542dbe`) and **deployed on
 2026-09-28** (migration `0002` applied to Neon; deployment
-`restaurant-finder-cweab535k`). Not yet opened signed in on the live app.
+`restaurant-finder-cweab535k`). The operator checked it signed in on the phone
+(2026-09-28): counts match the map. At their request the app now opens on `/leads`
+(`/` redirects there with its query string; the map moved to `/map`).
 
 - `/leads`: all 156,057 venues; the map's filters plus next-action due and
   has-contacts; 11 sortable columns (`LeadIndex.table()`, cached permutations); built-in
@@ -156,6 +158,11 @@ Then the Pomovi bridge (step 9), built in the Pomovi repository following
 
 ## Last verification
 
+- Open on Leads (2026-09-28): `npx tsc --noEmit` clean; `npm run build` (after clearing
+  the stale `.next/`) lists `/map`, `/leads`, and no root route. Throwaway PGlite synced
+  from the real store, `next dev`: `curl /?status=verified` → 307
+  `/leads?status=verified`; `/map` 200. `node ui/crm-views-check.mjs --base http://127.0.0.1:3057 --venue venue:028001:abano-terme:altabaco [--desktop]`:
+  15 of 15 on phone and desktop (new check: `/` opens the Leads table with its filters).
 - Deploy (2026-09-28): `sync-online.mjs` (the command in `web/README.md`): migration
   `0002_crm_views.sql` applied; 0 manual reviews; snapshot and 86,895 details already
   online; backup with the new tables; 3.6 s. (Two earlier runs hung on a degraded Wi-Fi

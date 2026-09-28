@@ -158,8 +158,12 @@ try {
   check("activities: rows", await waitFor("document.querySelectorAll('table.plain tbody tr').length > 0"), `${Date.now() - started} ms`);
   await shot("activities");
 
-  // The map links to the table with the same filters.
-  await open("/?status=verified&prov=TV");
+  // The app opens on the table; an old map link keeps its filters.
+  await open("/?status=verified");
+  check("/ opens the leads table", await waitFor("location.pathname === '/leads' && location.search.includes('status=verified')"),
+    await evaluate("location.pathname + location.search"));
+  // The map (/map) links to the table with the same filters.
+  await open("/map?status=verified&prov=TV");
   check("map: Table link keeps the filters", await waitFor(
     "(() => { const a = document.getElementById('table-btn'); return a && !a.hidden && a.getAttribute('href').includes('prov=TV'); })()"),
   await evaluate("document.getElementById('table-btn')?.getAttribute('href') || ''"));
