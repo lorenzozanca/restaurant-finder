@@ -1,7 +1,7 @@
 # Execution status
 
-Updated: 2026-09-28 (Pomovi bridge endpoints built in Pomovi, not deployed; national
-counts unchanged)
+Updated: 2026-09-28 (Pomovi bridge live on both sides, first round trip pending;
+national counts unchanged)
 Branch: `main`
 
 ## Current counts
@@ -36,7 +36,7 @@ Setup, sync, and deploy commands: `web/README.md`.
 | Same counts as the laptop map | Confirmed by the operator on the live app, 2026-09-28 |
 | A manual review made online reaches the local store on sync | Tested on a local database only; confirm on the first real review's sync |
 | A venue moves through the pipeline | Tested on a local copy only |
-| Create its demo in Pomovi | Endpoints built in Pomovi, not deployed (below) |
+| Create its demo in Pomovi | Bridge live on both sides; first real demo not created yet |
 
 CRM views (`PROCESS.md` step 8, decided 2026-09-28, before the Pomovi bridge): built
 and verified locally (commits `cd45004`, `4f5785a`, `c542dbe`) and **deployed on
@@ -76,11 +76,15 @@ Live checks (`PROCESS.md` step 7):
   2.6 s. The live timing line (`lead index …: fetch … ms, build … ms`) needs a signed-in
   load first; not read yet.
 
-Pomovi side (2026-09-28, from this session): steps 1–4 of
-`../pomovi/docs/plans/restaurant-finder-bridge.md` are merged and pushed on Pomovi
-`main` (`acc81b4`), **not deployed**. They add `POST`/`GET /api/bridge/venues`
+Pomovi bridge (2026-09-28, built from this session): steps 1–4 of
+`../pomovi/docs/plans/restaurant-finder-bridge.md` are **deployed** in Pomovi
+(`cbb5e01`, migration `0069` applied after a verified backup), and this app is
+redeployed (`restaurant-finder-khq5tcjk1`) with `POMOVI_BRIDGE_URL`
+(`https://app.pomovi.com`) and `POMOVI_BRIDGE_TOKEN`, the same value as Pomovi's
+`RESTAURANT_FINDER_BRIDGE_TOKEN`. Both are *sensitive* on Vercel and cannot be read
+back, so no authorised call has been made yet. They add `POST`/`GET /api/bridge/venues`
 (bearer `RESTAURANT_FINDER_BRIDGE_TOKEN`; unset = 404), migration `0069`
-(`venues.source_ref`, not applied to production), a "da restaurant-finder" mark in
+(`venues.source_ref`), a "da restaurant-finder" mark in
 Pomovi's registry, a "Sito non verificato" notice for `candidate` websites, and a
 wizard that starts branding and menu search by itself when opened from
 `wizard_url`. This app's client (`web/lib/pomovi.ts`) needed no change: the answer
@@ -156,17 +160,22 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
    (the command needs the operator's approval in the agent session; on 2026-09-28 it was
    denied automatically because nobody was at the prompt). If it is well above ~3 s,
    find where the time goes.
-2. Then the Pomovi bridge, step 5 of its plan (each production step needs the
-   operator's go-ahead): in `../pomovi`, `npx tsx scripts/backup-database.ts`, apply
-   migration `0069` (`docs/DATABASE.md` → *Running a migration*), set
-   `RESTAURANT_FINDER_BRIDGE_TOKEN` (`openssl rand -base64 32`) on Pomovi's Vercel,
-   and deploy it (`docs/DEPLOYMENT.md`). Here: `npx vercel env add POMOVI_BRIDGE_URL
-   production` (`https://app.pomovi.com`), `POMOVI_BRIDGE_TOKEN` (same token),
-   `npx vercel deploy --prod`, then **Create demo** on one venue the operator picks
-   and **Refresh from Pomovi**.
+2. The first Pomovi round trip (operator, signed in): on any venue record's Pipeline
+   tab, **Refresh from Pomovi** (read-only; an empty list with no error proves the
+   token). Then **Create demo in Pomovi** on one venue with a verified website,
+   **Continue in Pomovi**, and **Refresh from Pomovi** again to see its state come
+   back. A 401 means the two tokens differ: set a new one on both projects and
+   redeploy both.
 
 ## Last verification
 
+- Bridge deploy (2026-09-28): Pomovi backup 9,609 rows, `restore-verify` clean apart
+  from the three new columns; `0069` applied; local `build:local` 17 HTML files for
+  both `cbb5e01` and pre-bridge `0bc0a81`; `npx vercel --prod` ready, 228 pages,
+  aliased `*.pomovi.com`. Live: `barhacca.pomovi.com/api/health` ok; `app.pomovi.com/api/bridge/venues`
+  without or with a wrong token → 401; on `barhacca.pomovi.com` → 404; menu
+  `x-vercel-cache: PRERENDER`. This app: `npx vercel deploy --prod` ready, aliased
+  restaurants.trelua.com; `/leads` signed out → 307.
 - Pomovi bridge (2026-09-28, in `../pomovi`): `npx tsc --noEmit` clean; `npm run lint`
   exit 0; `npm test` 1311 passed; `npm run test:db` 560 passed (new
   `tests/db/bridge-venues-route.db.test.ts`, 18: token missing/wrong/dormant, venue
