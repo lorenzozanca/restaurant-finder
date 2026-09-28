@@ -112,7 +112,7 @@ is first used to contact a venue.
 7. Live checks: cold-start time of the map, and a whole-selection CSV export within
    Vercel's response limit. Open.
 8. CRM views: tables, record page, contacts (operator decision 2026-09-28, before the
-   bridge). See "CRM views" below. Open.
+   bridge). See "CRM views" below. Built and verified locally 2026-09-28; not deployed.
 9. Pomovi side: the two bridge endpoints, built in the Pomovi repository following its
    plan (planned there, not implemented); then set the two variables here and create one
    real demo end to end. Open.

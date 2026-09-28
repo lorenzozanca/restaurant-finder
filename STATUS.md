@@ -1,7 +1,7 @@
 # Execution status
 
-Updated: 2026-09-28 (documents reordered: the online CRM is the primary track; no
-product change since 2026-09-27)
+Updated: 2026-09-28 (CRM views built and verified locally, not yet deployed; national
+counts unchanged)
 Branch: `main`
 
 ## Current counts
@@ -38,11 +38,29 @@ Setup, sync, and deploy commands: `web/README.md`.
 | A venue moves through the pipeline | Tested on a local copy only |
 | Create its demo in Pomovi | Blocked: Pomovi's endpoints are not built |
 
-Decided 2026-09-28: CRM views (tables of all leads, venue record page, contacts,
-activities) come before the Pomovi bridge (`PROCESS.md` step 8). `PRIVACY.md` now
-covers venue contacts (business data only, notice at first contact, erasure,
-retention); like the rest of the prospecting purpose, it is not cleared until the
-operator signs the assessment.
+CRM views (`PROCESS.md` step 8, decided 2026-09-28, before the Pomovi bridge): built
+and verified locally on 2026-09-28 (commits `cd45004`, `4f5785a`, `c542dbe`), **not
+deployed**: the live app still has only the map, and Neon lacks migration `0002`.
+
+- `/leads`: all 156,057 venues; the map's filters plus next-action due and
+  has-contacts; 11 sortable columns (`LeadIndex.table()`, cached permutations); built-in
+  and saved views; a column chooser; rows load 100 at a time and only rows in view are
+  rendered (cards on phones). "Show on map" and the map's new **Table** button carry the
+  same filters.
+- `/venues/[id]`: identity, website and verification (why, and the manual review
+  form), sales (stage, next action), contacts, log a touch with a contact, timeline,
+  Pomovi demo. The map's venue card links to it.
+- `/contacts` (with "Due for deletion", the retention list) and `/activities`.
+- Data: migration `0002` (`contacts`, `pipeline_events.contact_id`, `saved_views`),
+  `lib/crm-records.mjs`, backups include the new tables.
+- `PRIVACY.md` covers venue contacts (business data only, notice at first contact,
+  erasure, retention); like the rest of the prospecting purpose, it is not cleared until
+  the operator signs the assessment.
+- Measured on the real 156,057 venues: a cached table page 2–15 ms (37 ms with a text
+  search), 100 rows 6–8 KB gzipped, each sort 80–320 ms once per instance, +20 MB heap.
+  Headless checks on a local dev server: first rows 0.4 s on desktop and 1.75 s on a
+  phone over throttled 4G (dev build), a jump to 60% down the table 0.3–1.2 s, record
+  0.2–0.8 s.
 
 Open live checks (`PROCESS.md` step 7):
 
@@ -120,28 +138,39 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
 
 ## Next executable task
 
-Build the CRM views (`PROCESS.md` step 8, "CRM views"), in this order, committing each
-verified part:
+Deploy the CRM views (needs the operator's go-ahead: it changes the live app and
+applies migration `0002` to Neon):
 
-1. `LeadIndex.table()` with sorted permutations, CRM overlay columns and filters, and
-   tests (counts equal to `summary()`, paging without loss or repeats, budgets).
-2. Migration `0002` (`contacts`, `pipeline_events.contact_id`, `saved_views`), the
-   contacts and activities API, the extended overlay, and the backup of the new tables.
-3. The pages: app bar, Leads table, venue record, Contacts (with "Due for deletion"),
-   Activities; a link from the map's venue card to the record.
-4. Phone and desktop checks of the new pages, then deploy.
+1. From the repository root: `node --no-network-family-autoselection --dns-result-order=ipv4first --env-file=.env.local sync-online.mjs`
+   (applies `0002`, then the usual sync), then `npx vercel deploy --prod`.
+2. Signed out: `/leads`, `/contacts`, `/activities`, `/venues/…` redirect to `/signin`;
+   `/api/crm/leads` answers 401. Ask the operator to open `/leads` on the phone and
+   confirm the counts match the map.
+3. Then the live checks (step 7): the cold-start line from `npx vercel logs --since 1h
+   --expand`, and the whole-Italy CSV export size against Vercel's function response
+   limit.
 
-Then the live checks (step 7): the cold-start line from `npx vercel logs --since 1h
---expand`, and the whole-Italy CSV export size against Vercel's function response
-limit. Then the Pomovi bridge (step 9), built in the Pomovi repository following
+After that: the Pomovi bridge (step 9), built in the Pomovi repository following
 `../pomovi/docs/plans/restaurant-finder-bridge.md`.
 
 ## Last verification
 
-- 2026-09-28, documents only (`AGENTS.md`, `PLAN.md`, `PROCESS.md`, `STATUS.md`):
-  `git diff --check` clean; every file path named in the four documents exists; the
-  `PROCESS.md` references in code (`step 2`, `step 3`, `step 3.3`, steps 3.5–3.6,
-  `step 4`, "Online lead CRM") still resolve to the same sections.
+- CRM views (2026-09-28):
+  - `npm test`: 290 passed, 0 failed (new: `lib/crm-records.test.mjs`, 7 tests against
+    PGlite; table and CRM-overlay tests in `lib/national-leads.test.mjs`).
+  - `cd web && npx tsc --noEmit`: clean; `npm run build`: compiled, routes `/leads`,
+    `/contacts`, `/activities`, `/venues/[id]`.
+  - Throwaway PGlite database synced from the real store
+    (`sync-online.mjs --no-reviews --no-backup`: migrations `0001`, `0002`; 156,057
+    venues; 9.9 s), `next dev` with `AUTH_DEV_EMAIL`: contact create and validation,
+    stage and next action, touch with a contact, due and contacts filters, activities,
+    saved views, 404 for an unknown venue, all through the API.
+  - `node ui/crm-views-check.mjs --base http://127.0.0.1:3057 --venue venue:028001:abano-terme:altabaco [--desktop]`:
+    14 of 14 checks passed on phone and desktop (timings above; no page errors).
+  - `next start` (production mode, signed out): the four new pages 307 to `/signin`; every
+    new API route 401, also with a forged session cookie.
+  - The test database was deleted; nothing touched Neon, the national store, or
+    `data/online-backups/`.
 - Last code change (2026-09-27, faster cold start of the online map):
   `node --test lib/national-leads.test.mjs` 6 passed; `npm test` 280 passed; `web`
   `npx tsc --noEmit` clean, `npm run build` compiled; `npx vercel deploy --prod` ready.
