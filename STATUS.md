@@ -67,10 +67,11 @@ and verified locally (commits `cd45004`, `4f5785a`, `c542dbe`) and **deployed on
 
 Live checks (`PROCESS.md` step 7):
 
-- **CSV export is too big for Vercel above ~17,000 rows.** Vercel's function response
-  limit is 4.5 MB (docs, 2026-08-24; larger answers fail with 413
-  `FUNCTION_PAYLOAD_TOO_LARGE`). Measured on the real snapshot: all of Italy 41.8 MB raw
-  (11.1 MB gzipped), all verified 2.1 MB, Veneto 3.8 MB. The laptop map is unaffected.
+- CSV export: Vercel refuses buffered function responses above 4.5 MB (a whole-Italy
+  export is 41.8 MB). Since 2026-09-28 the online export is streamed
+  (`LeadIndex.csvChunks()`, 2,000 rows per chunk); Vercel's guide says streamed
+  responses are exempt. Deployed; a whole-Italy download on the live app has not been
+  tried yet (it needs a signed-in browser).
 - Cold start: after a fix on 2026-09-27, the same steps timed from the laptop take about
   2.6 s. The live timing line (`lead index …: fetch … ms, build … ms`) needs a signed-in
   load first; not read yet.
@@ -144,20 +145,24 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
 
 ## Next executable task
 
-1. Make the online CSV export work for any selection (`PROCESS.md` step 7): Vercel
-   refuses function responses above 4.5 MB. Options, in order: stream the CSV from the
-   route in chunks and confirm on a Vercel preview that a whole-Italy export downloads;
-   if streaming is still capped, write the file to Vercel Blob and redirect to a
-   short-lived private URL. Until then, the export needs a selection under ~17,000 rows.
-2. After the operator's first signed-in visit to `/leads`: read the cold-start line with
-   `npx vercel logs --since 1h --expand`, and confirm with the operator that the Leads
-   counts match the map.
-
-Then the Pomovi bridge (step 9), built in the Pomovi repository following
-`../pomovi/docs/plans/restaurant-finder-bridge.md`.
+1. Confirm the live checks with the operator (`PROCESS.md` step 7): they tap **CSV** on
+   `/leads` with no filters (expect a ~42 MB `venues-…-156057.csv`); then read the
+   cold-start line and any 413 or error with `npx vercel logs --since 1h --expand`. If
+   the streamed export still fails on Vercel, write the file to Vercel Blob and redirect
+   to a short-lived private URL.
+2. Then the Pomovi bridge (step 9): the two endpoints are built in the Pomovi
+   repository, following `../pomovi/docs/plans/restaurant-finder-bridge.md`; then set
+   `POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN` on Vercel and create one real demo.
 
 ## Last verification
 
+- Streamed CSV export (2026-09-28): `node --test lib/national-leads.test.mjs` 10 passed
+  (new: chunks join into the same file, byte-order mark first); `npm test` 291 passed;
+  `web` tsc clean, build compiled. Local `next dev` over a throwaway PGlite synced from
+  the real store: `/api/national/export.csv` → 200, `Transfer-Encoding: chunked`,
+  41,796,552 bytes in 4.6 s, BOM, 156,058 lines; `status=verified` 2,087,340 bytes;
+  `sample=500` 134,375 bytes. Deployed (`restaurant-finder-npamovnkg`); live signed out
+  → 401.
 - Open on Leads (2026-09-28): `npx tsc --noEmit` clean; `npm run build` (after clearing
   the stale `.next/`) lists `/map`, `/leads`, and no root route. Throwaway PGlite synced
   from the real store, `next dev`: `curl /?status=verified` → 307
