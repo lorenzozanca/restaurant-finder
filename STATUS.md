@@ -85,8 +85,9 @@ back. First round trip (operator, 2026-09-28): a shortlisted lead
 (`venue:026051:oderzo:giardinetto-oderzo`) → **Create demo** → Pomovi venue 15
 `al-giardinetto-oderzo`; **Continue in Pomovi** opened the wizard, which read the
 branding and found menu sources by itself (checked read-only in Pomovi's database).
-**Refresh from Pomovi** (only on `/map` → Pipeline tab; the venue record and `/leads`
-have no such button) read the demo back. Pomovi's plan is archived there. They add `POST`/`GET /api/bridge/venues`
+**Refresh from Pomovi** (then only on `/map` → Pipeline tab) read the demo back.
+Pomovi's plan is archived there. Since 2026-09-28 the button is also on the venue
+record's "Pomovi demo" box and in the `/leads` actions (under "More" on a phone). They add `POST`/`GET /api/bridge/venues`
 (bearer `RESTAURANT_FINDER_BRIDGE_TOKEN`; unset = 404), migration `0069`
 (`venues.source_ref`), a "da restaurant-finder" mark in
 Pomovi's registry, a "Sito non verificato" notice for `candidate` websites, and a
@@ -164,12 +165,14 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
    (the command needs the operator's approval in the agent session; on 2026-09-28 it was
    denied automatically because nobody was at the prompt). If it is well above ~3 s,
    find where the time goes.
-2. `PROCESS.md` step 10: the operator picks which CRM features come next. One
-   candidate from the first round trip: a **Refresh from Pomovi** button on the venue
-   record's "Pomovi demo" box and on `/leads` (today it exists only on `/map`).
+2. `PROCESS.md` step 10: the operator picks which CRM features come next.
 
 ## Last verification
 
+- Refresh from Pomovi on the record and `/leads` (2026-09-28): `web` `npx tsc --noEmit`
+  clean; `npm run build` compiled. Deployed (`restaurant-finder-f0gortrel`); live,
+  signed out: `/leads` and `/venues/…` → 307, `POST /api/crm/pomovi-refresh` → 401.
+  Not driven in a browser signed in: the operator sees it on the next visit.
 - Bridge deploy (2026-09-28): Pomovi backup 9,609 rows, `restore-verify` clean apart
   from the three new columns; `0069` applied; local `build:local` 17 HTML files for
   both `cbb5e01` and pre-bridge `0bc0a81`; `npx vercel --prod` ready, 228 pages,
