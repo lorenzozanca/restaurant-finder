@@ -1,7 +1,7 @@
 # Execution status
 
-Updated: 2026-09-28 (CRM views deployed to restaurants.trelua.com; national counts
-unchanged)
+Updated: 2026-09-28 (Pomovi bridge endpoints built in Pomovi, not deployed; national
+counts unchanged)
 Branch: `main`
 
 ## Current counts
@@ -36,7 +36,7 @@ Setup, sync, and deploy commands: `web/README.md`.
 | Same counts as the laptop map | Confirmed by the operator on the live app, 2026-09-28 |
 | A manual review made online reaches the local store on sync | Tested on a local database only; confirm on the first real review's sync |
 | A venue moves through the pipeline | Tested on a local copy only |
-| Create its demo in Pomovi | Blocked: Pomovi's endpoints are not built |
+| Create its demo in Pomovi | Endpoints built in Pomovi, not deployed (below) |
 
 CRM views (`PROCESS.md` step 8, decided 2026-09-28, before the Pomovi bridge): built
 and verified locally (commits `cd45004`, `4f5785a`, `c542dbe`) and **deployed on
@@ -76,9 +76,15 @@ Live checks (`PROCESS.md` step 7):
   2.6 s. The live timing line (`lead index …: fetch … ms, build … ms`) needs a signed-in
   load first; not read yet.
 
-Pomovi side: the bridge plan is committed and pushed in Pomovi
-(`docs/plans/restaurant-finder-bridge.md`, latest `0bc0a81`). No endpoint is built
-(`/api/bridge/venues` does not exist there yet).
+Pomovi side (2026-09-28, from this session): steps 1–4 of
+`../pomovi/docs/plans/restaurant-finder-bridge.md` are merged and pushed on Pomovi
+`main` (`acc81b4`), **not deployed**. They add `POST`/`GET /api/bridge/venues`
+(bearer `RESTAURANT_FINDER_BRIDGE_TOKEN`; unset = 404), migration `0069`
+(`venues.source_ref`, not applied to production), a "da restaurant-finder" mark in
+Pomovi's registry, a "Sito non verificato" notice for `candidate` websites, and a
+wizard that starts branding and menu search by itself when opened from
+`wizard_url`. This app's client (`web/lib/pomovi.ts`) needed no change: the answer
+matches the contract it reads.
 
 Before real outreach (operator): clear the "Second purpose, B2B prospecting" items in
 `PRIVACY.md`, and move Vercel to Pro when the app is first used to contact a venue.
@@ -150,12 +156,25 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
    (the command needs the operator's approval in the agent session; on 2026-09-28 it was
    denied automatically because nobody was at the prompt). If it is well above ~3 s,
    find where the time goes.
-2. Then the Pomovi bridge (step 9): the two endpoints are built in the Pomovi
-   repository, following `../pomovi/docs/plans/restaurant-finder-bridge.md`; then set
-   `POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN` on Vercel and create one real demo.
+2. Then the Pomovi bridge, step 5 of its plan (each production step needs the
+   operator's go-ahead): in `../pomovi`, `npx tsx scripts/backup-database.ts`, apply
+   migration `0069` (`docs/DATABASE.md` → *Running a migration*), set
+   `RESTAURANT_FINDER_BRIDGE_TOKEN` (`openssl rand -base64 32`) on Pomovi's Vercel,
+   and deploy it (`docs/DEPLOYMENT.md`). Here: `npx vercel env add POMOVI_BRIDGE_URL
+   production` (`https://app.pomovi.com`), `POMOVI_BRIDGE_TOKEN` (same token),
+   `npx vercel deploy --prod`, then **Create demo** on one venue the operator picks
+   and **Refresh from Pomovi**.
 
 ## Last verification
 
+- Pomovi bridge (2026-09-28, in `../pomovi`): `npx tsc --noEmit` clean; `npm run lint`
+  exit 0; `npm test` 1311 passed; `npm run test:db` 560 passed (new
+  `tests/db/bridge-venues-route.db.test.ts`, 18: token missing/wrong/dormant, venue
+  host 404, create 201 with source and run, second tap 200 same venue, slug
+  collisions, 400s, GET demo state). Throwaway local Pomovi (temp PGlite, `next dev`
+  on 3011): curl POST 201 then 200 with the same id, venue host 404, GET listed it;
+  Chromium: registry mark on both bridged venues, wizard fired branding and discovery
+  once, unverified notice only for the candidate. Stack stopped, ports free.
 - Streamed CSV export (2026-09-28): `node --test lib/national-leads.test.mjs` 10 passed
   (new: chunks join into the same file, byte-order mark first); `npm test` 291 passed;
   `web` tsc clean, build compiled. Local `next dev` over a throwaway PGlite synced from
