@@ -135,9 +135,10 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
    `data/national-review/bNNN.log`, with a cap below the key's remaining limit:
    `node assess-labelled-corpus.mjs --partition development --fixture-dir data/national-review/batches/bNNN --venue-db data/istat/2026-01-01/derived/italy-import.sqlite --db data/national-review/review.sqlite --cache-dir data/national-review/cache --concurrency 12 --llm-review --run-id national-bNNN --budget-usd 5 --verifier-model xiaomi/mimo-v2.6-pro`
    Launch with `setsid nohup bash -c '…; echo "exit $?" >> …log' &` (a process tied to
-   the agent session dies with it), plus a detached Wi-Fi watchdog: every 30 s ping
-   1.1.1.1 five times; if the average exceeds 500 ms or all are lost, run the `nmcli`
-   command, at most once per 2 minutes; stop when the log has its `exit` line. Watch for
+   the agent session dies with it). No per-batch Wi-Fi watchdog: since 2026-09-28 the
+   machine runs one (`interface/scripts/wifi-watchdog.sh`, user timer
+   `codex-pocket-wifi-watchdog`), reconnecting after two 256 KB probes under 200 KB/s;
+   its reconnects are in `interface/.codex-pocket/wifi-watchdog.log`. Watch for
    a stalled log too: a worker error can hang the process instead of exiting. If the
    link dropped (many EAI_AGAIN, connect timeouts, or provider errors), rerun once with
    `--retry-state retryable` (same run ID and cap).
@@ -151,7 +152,8 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
 - Never record a manual review on the live app as a test: the next sync applies it to
   the national store.
 - Slow crawls usually mean the laptop's Wi-Fi association degraded (rx VHT-MCS 0), not
-  the internet line; reconnecting fixes it.
+  the internet line; reconnecting fixes it, and the machine's Wi-Fi watchdog now does
+  that automatically (Wi-Fi power saving off did not help; a cable is the real fix).
 - `lib/lib.test.mjs` "get does not load PDF or image bodies…" occasionally fails under
   a parallel `npm test` (shared `/tmp` cache dir); it passes alone.
 - npm registry calls can hang on this host; the headless renderer uses the installed
