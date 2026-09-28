@@ -163,6 +163,8 @@ Then the Pomovi bridge (step 9), built in the Pomovi repository following
   from the real store, `next dev`: `curl /?status=verified` → 307
   `/leads?status=verified`; `/map` 200. `node ui/crm-views-check.mjs --base http://127.0.0.1:3057 --venue venue:028001:abano-terme:altabaco [--desktop]`:
   15 of 15 on phone and desktop (new check: `/` opens the Leads table with its filters).
+  Deployed (`restaurant-finder-d9yo5mo3n`); live: `/` → 307 `/leads` (with its query
+  string), `/leads` and `/map` signed out → 307 `/signin`, `/api/crm/leads` 401.
 - Deploy (2026-09-28): `sync-online.mjs` (the command in `web/README.md`): migration
   `0002_crm_views.sql` applied; 0 manual reviews; snapshot and 86,895 details already
   online; backup with the new tables; 3.6 s. (Two earlier runs hung on a degraded Wi-Fi
