@@ -110,9 +110,8 @@ is first used to contact a venue.
 6. Operator setup: Google OAuth, Neon (EU), Vercel (root directory `web`), first sync,
    domain `restaurants.trelua.com`. Done 2026-09-27.
 7. Live checks: cold-start time of the map, and a whole-selection CSV export within
-   Vercel's response limit. CSV: streamed since 2026-09-28 (Vercel's 4.5 MB limit does
-   not apply to streamed responses); waiting for one whole-Italy download on the live
-   app. Cold start: open.
+   Vercel's response limit. CSV: done 2026-09-28 (streamed; the operator downloaded the
+   whole-Italy file, ~42 MB, on the live app). Cold start: open.
 8. CRM views: tables, record page, contacts (operator decision 2026-09-28, before the
    bridge). See "CRM views" below. Done: deployed 2026-09-28.
 9. Pomovi side: the two bridge endpoints, built in the Pomovi repository following its

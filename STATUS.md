@@ -70,8 +70,8 @@ Live checks (`PROCESS.md` step 7):
 - CSV export: Vercel refuses buffered function responses above 4.5 MB (a whole-Italy
   export is 41.8 MB). Since 2026-09-28 the online export is streamed
   (`LeadIndex.csvChunks()`, 2,000 rows per chunk); Vercel's guide says streamed
-  responses are exempt. Deployed; a whole-Italy download on the live app has not been
-  tried yet (it needs a signed-in browser).
+  responses are exempt. **Confirmed live** on 2026-09-28: the operator downloaded the
+  whole-Italy file (~42 MB) from `/leads`.
 - Cold start: after a fix on 2026-09-27, the same steps timed from the laptop take about
   2.6 s. The live timing line (`lead index …: fetch … ms, build … ms`) needs a signed-in
   load first; not read yet.
@@ -145,11 +145,11 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
 
 ## Next executable task
 
-1. Confirm the live checks with the operator (`PROCESS.md` step 7): they tap **CSV** on
-   `/leads` with no filters (expect a ~42 MB `venues-…-156057.csv`); then read the
-   cold-start line and any 413 or error with `npx vercel logs --since 1h --expand`. If
-   the streamed export still fails on Vercel, write the file to Vercel Blob and redirect
-   to a short-lived private URL.
+1. Read the cold-start line (`PROCESS.md` step 7) with
+   `npx vercel logs --since 2h --expand | grep "lead index"` after a signed-in visit
+   (the command needs the operator's approval in the agent session; on 2026-09-28 it was
+   denied automatically because nobody was at the prompt). If it is well above ~3 s,
+   find where the time goes.
 2. Then the Pomovi bridge (step 9): the two endpoints are built in the Pomovi
    repository, following `../pomovi/docs/plans/restaurant-finder-bridge.md`; then set
    `POMOVI_BRIDGE_URL` and `POMOVI_BRIDGE_TOKEN` on Vercel and create one real demo.
