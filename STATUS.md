@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-10-17 (Pomovi signup API prepared; national and live-app counts unchanged)
+Updated: 2026-10-17 (Pomovi signup API live behind Pomovi's gate; search matches word starts; counts unchanged)
 Branch: `main`
 
 ## Current counts
@@ -102,11 +102,15 @@ matches the contract it reads.
 Before real outreach (operator): clear the "Second purpose, B2B prospecting" items in
 `PRIVACY.md`, and move Vercel to Pro when the app is first used to contact a venue.
 
-## Prepared integration — Pomovi self-signup (not live)
+## Integration — Pomovi self-signup (live behind Pomovi's gate)
 
-Pomovi's `signup-and-trial` step 2 is implemented and verified locally: bearer-only
-`GET /api/pomovi/search` and `POST /api/pomovi/signups`, dormant until
-`POMOVI_INBOUND_TOKEN` is configured and the code deployed. Contract:
+Pomovi's `signup-and-trial` step 2: bearer-only `GET /api/pomovi/search` and
+`POST /api/pomovi/signups`. **Deployed 2026-10-17** (`e71cd2c`) with
+`POMOVI_INBOUND_TOKEN` set (Pomovi step 10); Pomovi's signup is password-gated.
+Cold first search on Hobby 10.5 s (index build), ~0.5 s warm. Search matches the
+start of the name first, then the start of any later word («giardinetto» finds
+«Al Giardinetto Oderzo»), never an arbitrary substring; the town stays an exact
+filter. Contract:
 `web/README.md` → *Pomovi self-signup catalogue and notifications*. No migration.
 No production query, sync, website review, model call or deployment was initiated.
 
