@@ -71,22 +71,25 @@ async function applyOverlay(index: LeadIndex, builtAt: string, key: string) {
   const sql = db();
   // A decision is in the snapshot once the laptop applied it and then built a newer
   // snapshot; until then the overlay shows it. Refused decisions change nothing.
-  const [reviews, { stage, crm }] = await Promise.all([sql`SELECT venue_id, candidate_domain, decision
+  const [reviews, { stage, crm }] = await Promise.all([sql`SELECT venue_id, candidate_domain, decision, body
     FROM manual_reviews WHERE apply_error IS NULL AND (applied_at IS NULL OR created_at > ${builtAt}) ORDER BY id`,
   crmOverlay(sql)]);
   const status = new Map<string, string>();
+  const websites = new Map<string, string>();
   for (const review of reviews) {
     const i = index.indexOf(review.venue_id);
     if (i < 0) continue;
     if (review.decision === "approve") {
       status.set(review.venue_id, "verified");
+      websites.set(review.venue_id, String(review.body?.website_url || ""));
       continue;
     }
     // A rejection of another domain leaves a verified website verified.
     const current = status.get(review.venue_id) ?? (index.baseStatus[i] === 0 ? "verified" : "");
-    const verifiedDomain = registrableDomain(index.columns.verified_url[i] || "");
+    const verifiedDomain = registrableDomain(websites.get(review.venue_id) || index.columns.verified_url[i] || "");
     if (current === "verified" && verifiedDomain && verifiedDomain !== review.candidate_domain) continue;
     status.set(review.venue_id, "rejected");
+    websites.delete(review.venue_id);
   }
-  index.applyOverlay({ status, stage, crm, key: status.size || stage.size || crm.size ? key : "" });
+  index.applyOverlay({ status, stage, crm, websites, key: status.size || stage.size || crm.size ? key : "" });
 }

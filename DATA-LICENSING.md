@@ -48,6 +48,11 @@ appropriate production service.
 - `output/.cache` may contain copies of HTML or search results. It is an
   internal transient cache, is git-ignored, and must not be distributed.
 - The application does not download menu documents or images; it records URLs.
+- Pomovi's authenticated catalogue projection returns at most 10 venue identity
+  records per search, with Overture and OpenStreetMap attribution metadata. Its
+  consuming UI must show that credit. It does not include CRM contacts, notes,
+  verification evidence, or source cache contents. Public rollout still follows
+  the release gates below; local implementation is not release clearance.
 
 ## Redistribution checklist
 

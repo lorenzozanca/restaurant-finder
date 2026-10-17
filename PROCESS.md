@@ -71,11 +71,13 @@ gzipped row, ~7 MB) and changed per-venue review details; 4. copy every CRM tabl
 `data/online-backups/` (Neon's free point-in-time restore covers only 6 hours).
 
 **Online app** (`web/`, Next.js): Auth.js with Google only and an email allow-list
-(`AUTH_OWNER_EMAILS`); `requireUser()` on every data route; `AUTH_DEV_EMAIL` for local
+(`AUTH_OWNER_EMAILS`); `currentEmail()` on every operator data route; `AUTH_DEV_EMAIL` for local
 work, ignored in production. It serves the same `ui/map.html` and `/api/national/*` API
 over the same `LeadIndex`, loaded from the newest snapshot in Neon, plus an overlay of
-pending manual decisions and pipeline stages. The laptop server keeps working without
-the CRM.
+pending manual decisions and pipeline stages. Pomovi's two inbound integration paths
+instead require `POMOVI_INBOUND_TOKEN` on every request; they expose only the bounded
+catalogue projection and minimal signup stage events. The laptop server keeps working
+without the CRM.
 
 **Pipeline.** Stages: shortlisted, demo requested, demo ready, contacted, follow-up,
 won, lost, do not contact. Every change and every touch (visit, card, letter, call,
@@ -116,7 +118,12 @@ is first used to contact a venue.
 9. Pomovi side: the two bridge endpoints, built in the Pomovi repository following its
    plan; then set the two variables here and create one real demo end to end. Done
    2026-09-28 (Pomovi venue 15; the demo's state read back with Refresh from Pomovi).
-10. Next CRM features: to be chosen by the operator after the bridge works.
+10. Pomovi self-signup integration (operator, 2026-10-17, Pomovi's
+    `signup-and-trial` step 2): bounded server-to-server catalogue search and
+    retry-safe signup/build stage notifications. Code verified locally; production
+    rollout and Hobby cold-start measurement wait for Pomovi's approved step 10.
+    Contract and safeguards: `web/README.md` → "Pomovi self-signup catalogue and
+    notifications". Further CRM features remain the operator's choice.
 
 Done means: the operator signs in from a phone, sees all venues with the same counts
 as the laptop map, finds and sorts them in a table, keeps the people they meet as
