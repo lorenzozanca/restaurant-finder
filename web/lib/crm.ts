@@ -2,6 +2,7 @@ import "server-only";
 import { PIPELINE_STAGES } from "@rf/map-constants.mjs";
 import type { LeadIndex } from "@rf/national-leads.mjs";
 import { db } from "@/lib/db";
+import { recordPomoviSignup } from "@rf/pomovi-signups.mjs";
 import type { BridgedVenue } from "@/lib/pomovi";
 
 // The sales pipeline (PROCESS.md, "Online lead CRM"): one row per venue in it, and
@@ -135,4 +136,9 @@ export async function recordPomovi(venue: BridgedVenue, email: string) {
           ${next === "won" ? "Pomovi: the venue is active" : "Pomovi: the demo has a menu"}, ${email})`;
     }
   });
+}
+
+/** Inbound signup events use the same pipeline tables, with retry-safe system notes. */
+export async function recordSelfSignup(index: LeadIndex, input: unknown) {
+  return recordPomoviSignup(db(), index, input);
 }

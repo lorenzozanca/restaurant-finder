@@ -9,6 +9,9 @@ import { devEmail } from "@/lib/access";
 const SESSION_COOKIES = ["authjs.session-token", "__Secure-authjs.session-token"];
 
 export function proxy(request: NextRequest) {
+  // These exact paths authenticate with their own server-to-server bearer guard.
+  const path = request.nextUrl.pathname;
+  if (path === "/api/pomovi/search" || path === "/api/pomovi/signups") return NextResponse.next();
   if (devEmail()) return NextResponse.next();
   if (SESSION_COOKIES.some((name) => request.cookies.has(name))) return NextResponse.next();
   if (request.nextUrl.pathname.startsWith("/api/")) {

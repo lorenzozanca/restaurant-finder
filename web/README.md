@@ -71,7 +71,55 @@ menu, won when the venue is active).
 
 - Google sign-in only; `AUTH_OWNER_EMAILS` is checked at sign-in and again on every
   data request (`lib/session.ts`), so removing an address locks it out at once.
-- Every API route answers 401 without an allowed session; the proxy only redirects
-  early. Tiles are cached `private`.
+- Operator API routes answer 401 without an allowed session; the proxy only
+  redirects early. The two Pomovi inbound routes below require their own bearer
+  credential and never accept a Google session instead. Tiles are cached `private`.
 - The database holds business records, your notes, and your email as author of each
   change. No passwords, no Pomovi database credentials.
+
+## Pomovi self-signup catalogue and notifications
+
+The inbound integration for Pomovi's `signup-and-trial` project is implemented but
+**not deployed or configured**. It uses `POMOVI_INBOUND_TOKEN`, a separate, random
+server-only credential from the outbound `POMOVI_BRIDGE_TOKEN`. Set the inbound
+value on both servers during Pomovi's approved step-10 rollout. Do not put it in
+browser code. Unset/blank: the supported calls return 404; missing/wrong bearer:
+401. A Google session does not admit these calls. Responses use `Cache-Control:
+no-store`. Only these exact two paths bypass the OAuth proxy, and each authenticates
+before loading the catalogue or touching Postgres.
+
+- `GET /api/pomovi/search?q=caffe[&municipality=Treviso]`: name prefix, case/accent
+  insensitive; 3–80 normalised characters, optional exact municipality (also
+  case/accent insensitive, ≤100 characters), at most 10 results. Each has `ref`,
+  `name`, `address`, `municipality`, `province`, `region` (ISTAT code), `website`
+  (HTTP(S) or null) and `website_status` (`verified | candidate | none`). Rejected
+  and directory websites are omitted. Pending approved manual reviews use their
+  approved URL. The existing in-memory `LeadIndex` supplies the data; there is no
+  additional catalogue database or provider call.
+- `GET /api/pomovi/search?ref=<encoded-id>`: exact lookup for the Pomovi backend
+  before trusting a submitted catalogue reference. Returns zero or one result;
+  cannot be combined with `q` or `municipality`.
+- `POST /api/pomovi/signups`: JSON `{ref, signup_id, stage}`. `signup_id` is Pomovi's
+  positive integer row ID; `stage` is `demo_requested` or `demo_ready`. Extra fields
+  and bodies over 4 KB are refused. Send no signup name, email, phone or password.
+  Result: `{stage, duplicate}`; unknown venue 404, do-not-contact 409.
+
+Notifications go through the CRM layer, in one transaction. One lead per catalogue
+reference, and one system note (`self-signup:<signup_id>:<stage>`, author
+`pomovi:self-signup`) per notification. Unique insertion plus a row lock makes retries
+safe, including racing and out-of-order requests. Automatic movement is only
+`shortlisted → demo_requested → demo_ready`. Existing contacted, follow-up, won and
+lost stages and next actions remain the operator's; do-not-contact refuses the
+notification without a note. An automatic notification cannot set won or reopen a
+venue. No migration is needed and no manual website-review decision is written.
+
+The response includes `attribution`: the consuming signup UI must display Overture
+Maps Foundation Places (CDLA-Permissive-2.0) and `© OpenStreetMap contributors` with
+the appropriate source links (`../DATA-LICENSING.md`). Pomovi's public API adapts
+`website_status` to its UI's `websiteStatus` field.
+
+Local production-mode verification on snapshot `3a86b85efbc5` (156,057 venues):
+2,162 ms first authenticated request; 20 warm requests median 6 ms, maximum 10 ms.
+This is a local result, **not a Vercel Hobby cold-start measurement**. Capture the
+Hobby timing at the approved rollout, using the existing `lead index … fetch … ms,
+build … ms` runtime log plus the authenticated request timing.

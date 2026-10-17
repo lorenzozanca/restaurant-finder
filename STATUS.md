@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-09-28 (installable app; national counts unchanged)
+Updated: 2026-10-17 (Pomovi signup API prepared; national and live-app counts unchanged)
 Branch: `main`
 
 ## Current counts
@@ -102,6 +102,21 @@ matches the contract it reads.
 Before real outreach (operator): clear the "Second purpose, B2B prospecting" items in
 `PRIVACY.md`, and move Vercel to Pro when the app is first used to contact a venue.
 
+## Prepared integration — Pomovi self-signup (not live)
+
+Pomovi's `signup-and-trial` step 2 is implemented and verified locally: bearer-only
+`GET /api/pomovi/search` and `POST /api/pomovi/signups`, dormant until
+`POMOVI_INBOUND_TOKEN` is configured and the code deployed. Contract:
+`web/README.md` → *Pomovi self-signup catalogue and notifications*. No migration.
+No production query, sync, website review, model call or deployment was initiated.
+
+Search projects the existing `LeadIndex` (at most 10 results), including the correct
+URL of pending manual approvals. Notifications are transactional/idempotent, advance
+only demo stages, preserve manual sales stages, and refuse do-not-contact. No signup
+contact details are copied to the CRM. The ordinary Google guards remain in place.
+Production rollout and actual Hobby cold-start measurement remain pending for
+Pomovi's approved step 10; local timings below are not live measurements.
+
 ## Track 2: website verification (on operator request)
 
 The frozen reviewer (MiMo v2.6 Pro, prompt `llm-ownership-dev-3`,
@@ -161,88 +176,50 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
 
 ## Open operator decisions
 
-- Which CRM features come after the Pomovi bridge (`PROCESS.md` step 10).
+- Further CRM features after the chosen Pomovi self-signup integration (`PROCESS.md` step 10).
 - Approval, scope, and cap of any further verification batch.
 
 ## Next executable task
 
-1. Read the cold-start line (`PROCESS.md` step 7) with
-   `npx vercel logs --since 2h --expand | grep "lead index"` after a signed-in visit
-   (the command needs the operator's approval in the agent session; on 2026-09-28 it was
-   denied automatically because nobody was at the prompt). If it is well above ~3 s,
-   find where the time goes.
-2. `PROCESS.md` step 10: the operator picks which CRM features come next.
+Continue Pomovi's `signup-and-trial` Codex lane at step 3 (limits, signals and bot
+check), then integrate the catalogue client in steps 4–5. The restaurant-finder
+rollout and Hobby timing stay in that plan's owner-approved step 10. Do not deploy,
+configure production secrets, or query production to finish the local code step.
 
 ## Last verification
 
-- Installable app (2026-09-28): `web` `npx tsc --noEmit` clean, `npm test` 291/291,
-  `npm run build` compiled. Deployed (`restaurant-finder-ainb74x5l`); live, signed out:
-  `/manifest.webmanifest`, `/icons/icon-512.png`, `/apple-icon.png`, `/icon.svg` → 200,
-  `/leads` → 307. Not yet installed from a phone: the operator does that next.
-- Refresh from Pomovi on the record and `/leads` (2026-09-28): `web` `npx tsc --noEmit`
-  clean; `npm run build` compiled. Deployed (`restaurant-finder-f0gortrel`); live,
-  signed out: `/leads` and `/venues/…` → 307, `POST /api/crm/pomovi-refresh` → 401.
-  Not driven in a browser signed in: the operator sees it on the next visit.
-- Bridge deploy (2026-09-28): Pomovi backup 9,609 rows, `restore-verify` clean apart
-  from the three new columns; `0069` applied; local `build:local` 17 HTML files for
-  both `cbb5e01` and pre-bridge `0bc0a81`; `npx vercel --prod` ready, 228 pages,
-  aliased `*.pomovi.com`. Live: `barhacca.pomovi.com/api/health` ok; `app.pomovi.com/api/bridge/venues`
-  without or with a wrong token → 401; on `barhacca.pomovi.com` → 404; menu
-  `x-vercel-cache: PRERENDER`. This app: `npx vercel deploy --prod` ready, aliased
-  restaurants.trelua.com; `/leads` signed out → 307.
-- Pomovi bridge (2026-09-28, in `../pomovi`): `npx tsc --noEmit` clean; `npm run lint`
-  exit 0; `npm test` 1311 passed; `npm run test:db` 560 passed (new
-  `tests/db/bridge-venues-route.db.test.ts`, 18: token missing/wrong/dormant, venue
-  host 404, create 201 with source and run, second tap 200 same venue, slug
-  collisions, 400s, GET demo state). Throwaway local Pomovi (temp PGlite, `next dev`
-  on 3011): curl POST 201 then 200 with the same id, venue host 404, GET listed it;
-  Chromium: registry mark on both bridged venues, wizard fired branding and discovery
-  once, unverified notice only for the candidate. Stack stopped, ports free.
-- Streamed CSV export (2026-09-28): `node --test lib/national-leads.test.mjs` 10 passed
-  (new: chunks join into the same file, byte-order mark first); `npm test` 291 passed;
-  `web` tsc clean, build compiled. Local `next dev` over a throwaway PGlite synced from
-  the real store: `/api/national/export.csv` → 200, `Transfer-Encoding: chunked`,
-  41,796,552 bytes in 4.6 s, BOM, 156,058 lines; `status=verified` 2,087,340 bytes;
-  `sample=500` 134,375 bytes. Deployed (`restaurant-finder-npamovnkg`); live signed out
-  → 401.
-- Open on Leads (2026-09-28): `npx tsc --noEmit` clean; `npm run build` (after clearing
-  the stale `.next/`) lists `/map`, `/leads`, and no root route. Throwaway PGlite synced
-  from the real store, `next dev`: `curl /?status=verified` → 307
-  `/leads?status=verified`; `/map` 200. `node ui/crm-views-check.mjs --base http://127.0.0.1:3057 --venue venue:028001:abano-terme:altabaco [--desktop]`:
-  15 of 15 on phone and desktop (new check: `/` opens the Leads table with its filters).
-  Deployed (`restaurant-finder-d9yo5mo3n`); live: `/` → 307 `/leads` (with its query
-  string), `/leads` and `/map` signed out → 307 `/signin`, `/api/crm/leads` 401.
-- Deploy (2026-09-28): `sync-online.mjs` (the command in `web/README.md`): migration
-  `0002_crm_views.sql` applied; 0 manual reviews; snapshot and 86,895 details already
-  online; backup with the new tables; 3.6 s. (Two earlier runs hung on a degraded Wi-Fi
-  link, 20 KB/s at rx VHT-MCS 0; `nmcli connection up "Italia Uno"` restored 36 MB/s.)
-  `npx vercel deploy --prod`: Ready. Live, signed out: `/`, `/leads`, `/contacts`,
-  `/activities`, `/venues/…` → 307 `/signin`; `/api/crm/{leads,contacts,activities,record,views}`
-  and `/api/national/meta` → 401, also with a forged `__Secure-authjs.session-token`.
-- CRM views (2026-09-28):
-  - `npm test`: 290 passed, 0 failed (new: `lib/crm-records.test.mjs`, 7 tests against
-    PGlite; table and CRM-overlay tests in `lib/national-leads.test.mjs`).
-  - `cd web && npx tsc --noEmit`: clean; `npm run build`: compiled, routes `/leads`,
-    `/contacts`, `/activities`, `/venues/[id]`.
-  - Throwaway PGlite database synced from the real store
-    (`sync-online.mjs --no-reviews --no-backup`: migrations `0001`, `0002`; 156,057
-    venues; 9.9 s), `next dev` with `AUTH_DEV_EMAIL`: contact create and validation,
-    stage and next action, touch with a contact, due and contacts filters, activities,
-    saved views, 404 for an unknown venue, all through the API.
-  - `node ui/crm-views-check.mjs --base http://127.0.0.1:3057 --venue venue:028001:abano-terme:altabaco [--desktop]`:
-    14 of 14 checks passed on phone and desktop (timings above; no page errors).
-  - `next start` (production mode, signed out): the four new pages 307 to `/signin`; every
-    new API route 401, also with a forged session cookie.
-  - The test database was deleted; nothing touched Neon, the national store, or
-    `data/online-backups/`.
-- Last code change (2026-09-27, faster cold start of the online map):
-  `node --test lib/national-leads.test.mjs` 6 passed; `npm test` 280 passed; `web`
-  `npx tsc --noEmit` clean, `npm run build` compiled; `npx vercel deploy --prod` ready.
-  Live, signed out: `/` → 307 `/signin`, `/api/national/meta` 401.
+2026-10-17 — Pomovi signup API:
+
+- `cd web && npm run typecheck`: clean.
+- `cd web && NEXT_TELEMETRY_DISABLED=1 DATABASE_URL=postgres://postgres:postgres@127.0.0.1:5435/postgres AUTH_SECRET=<local-test-secret> npm run build -- --webpack`:
+  compiled, both new API routes dynamic. The webpack flag supports worktree-linked
+  dependencies; no build/deployment setting changed.
+- `node --test lib/pomovi-signups.test.mjs lib/national-leads.test.mjs`: **21/21**
+  (11 new integration tests plus 10 existing catalogue tests). Fixtures and PGlite
+  are isolated from the national store and Neon.
+- `npm test`: 300/302; existing renderer failure plus the documented parallel
+  PDF-cache race. `npm test -- --test-concurrency=1`: **301/302**, only
+  `lib/headless-browser.test.mjs:16` fails. The same test fails on unchanged `main`
+  (`974598a`) and alone; a direct local probe reports `cdp_timeout:Page.navigate`.
+  The PDF test passes alone/serially. Renderer/reviewer code was not changed.
+- Built `next start` at 3030, disposable Postgres 17 at 5435: 44 HTTP and real
+  concurrent-transaction checks passed. Unset token 404, wrong/missing token 401,
+  Google/development cookies cannot substitute in production, exact proxy paths,
+  normal APIs remain private, no-store headers, prefix/town/reference search,
+  validation, duplicate and out-of-order events, won preserved, DNC refused,
+  pending manual approval uses its own URL. Five database connections deliver one
+  note per event. No production manual review was recorded.
+- Temporary app/database processes stopped by recorded PID; ports 3030/5435
+  confirmed free; both disposable database directories and worktree dependency
+  symlinks removed. The operator's checkouts and databases were not changed.
+- Full snapshot copy `3a86b85efbc5`, 156,057 venues: first authenticated catalogue
+  request **2162 ms**, 20 warm requests **median 6 ms / max 10 ms**. Runtime index log:
+  fetch **135 ms**, build **1638 ms**. Local only; Hobby measurement still open.
 
 ## Blockers
 
-- Create demo: Pomovi's bridge endpoints are not built.
 - Real outreach: the `PRIVACY.md` prospecting items are not cleared.
-- Verification batches: none technical; each needs operator approval and a cap within
-  the key's remaining limit.
+- Self-signup production rollout: pending Pomovi step 10, with explicit owner approval.
+- The existing local Chrome/CDP test times out on unchanged code; investigate before
+  relying on a further website-review batch. Each batch still needs operator approval
+  and a cap within the key's remaining limit.

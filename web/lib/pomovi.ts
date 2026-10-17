@@ -1,6 +1,6 @@
 import "server-only";
 
-// Client for Pomovi's bridge endpoints (contract: ../pomovi/docs/plans/
+// Client for Pomovi's bridge endpoints (contract: ../pomovi/docs/archive/
 // restaurant-finder-bridge.md). Configured by POMOVI_BRIDGE_URL (Pomovi's console
 // origin, e.g. https://app.pomovi.com) and POMOVI_BRIDGE_TOKEN; without both, the app
 // shows the bridge as not configured and never calls Pomovi.
@@ -66,3 +66,7 @@ export async function listBridged(): Promise<BridgedVenue[]> {
   const body = await call("/api/bridge/venues");
   return Array.isArray(body.venues) ? (body.venues as BridgedVenue[]) : [];
 }
+
+// Inbound self-signup API, a separate credential from the outbound console bridge.
+export { authorizePomovi, catalogueQuery, pomoviJson, PomoviSignupError,
+  searchPomoviCatalogue, signupNotification } from "@rf/pomovi-signups.mjs";
