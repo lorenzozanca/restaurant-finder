@@ -97,7 +97,7 @@ before loading the catalogue or touching Postgres.
   approved URL. The existing in-memory `LeadIndex` supplies the data; there is no
   additional catalogue database or provider call.
 - `GET /api/pomovi/search?municipality=Treviso&all=1[&province=TV]`: a town's whole
-  list for Pomovi's town-first search (2026-10-19), in name order, at most 500
+  list for Pomovi's town-first search (live 2026-10-20), in name order, at most 500
   (`TOWN_LIST_LIMIT`), with `truncated: true` when the town has more (Roma, Milano
   and a few other cities; Pomovi then searches by name within the town). `province`
   (two letters) is also accepted by the name search, and tells apart the four names
