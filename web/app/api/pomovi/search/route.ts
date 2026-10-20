@@ -9,7 +9,8 @@ export async function GET(request: Request) {
   if (denied) return denied;
   try {
     const params = new URL(request.url).searchParams;
-    const query = catalogueQuery({ q: params.get("q") ?? "", municipality: params.get("municipality") ?? "", ref: params.get("ref") ?? "" });
+    const query = catalogueQuery({ q: params.get("q") ?? "", municipality: params.get("municipality") ?? "", ref: params.get("ref") ?? "",
+      all: params.get("all") ?? "", province: params.get("province") ?? "" });
     return pomoviJson(searchPomoviCatalogue(await leadIndex(), query));
   } catch (error) {
     if (error instanceof PomoviSignupError) return pomoviJson({ error: error.message }, error.status);

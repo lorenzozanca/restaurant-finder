@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-10-17 (Pomovi signup API live behind Pomovi's gate; search matches word starts; counts unchanged)
+Updated: 2026-10-19 (town listing for Pomovi's town-first search, not deployed; counts unchanged)
 Branch: `main`
 
 ## Current counts
@@ -114,6 +114,13 @@ filter. Contract:
 `web/README.md` → *Pomovi self-signup catalogue and notifications*. No migration.
 No production query, sync, website review, model call or deployment was initiated.
 
+**Town listing (2026-10-19, branch `pomovi/town-listing`, not deployed):**
+`?municipality=…&all=1[&province=XX]` returns a town's venues in name order (≤500,
+`truncated` beyond), for Pomovi's town-first signup search. Measured on the local
+national snapshot: map build 432 ms once per instance, then Treviso (262) / Oderzo (54)
+0 ms, Roma 3 ms (truncated). Pomovi falls back to name search until this is deployed.
+Deploying is the operator's call.
+
 Search projects the existing `LeadIndex` (at most 10 results), including the correct
 URL of pending manual approvals. Notifications are transactional/idempotent, advance
 only demo stages, preserve manual sales stages, and refuse do-not-contact. No signup
@@ -191,6 +198,11 @@ rollout and Hobby timing stay in that plan's owner-approved step 10. Do not depl
 configure production secrets, or query production to finish the local code step.
 
 ## Last verification
+
+2026-10-19 — town listing: `node --test lib/pomovi-signups.test.mjs` 12/12;
+`cd web && npm run typecheck` clean; timings above from `LeadIndex` over
+`data/istat/2026-01-01/derived/italy-import.map-snapshot.json`.
+
 
 2026-10-17 — Pomovi signup API:
 
