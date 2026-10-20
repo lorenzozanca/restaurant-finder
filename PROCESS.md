@@ -122,8 +122,7 @@ is first used to contact a venue.
     `signup-and-trial` step 2): bounded server-to-server catalogue search and
     retry-safe signup/build stage notifications. Deployed 2026-10-17 behind Pomovi's
     gate; Hobby search measured 10.5 s cold, ~0.5 s warm. The town-list extension
-    (PR #4, merged 2026-10-20) is verified and approved for deployment, pending
-    Vercel authentication.
+    (PR #4) is deployed 2026-10-20, with no database or environment change.
     Contract and safeguards: `web/README.md` → "Pomovi self-signup catalogue and
     notifications". Further CRM features remain the operator's choice.
 

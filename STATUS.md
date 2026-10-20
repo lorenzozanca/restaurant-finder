@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-10-20 (town listing merged and verified; deployment approved, waiting for Vercel login; counts unchanged)
+Updated: 2026-10-20 (town listing deployed; counts unchanged)
 Branch: `main`
 
 ## Current counts
@@ -114,15 +114,17 @@ filter. Contract:
 `web/README.md` → *Pomovi self-signup catalogue and notifications*. No migration.
 No migration, sync, website review or model call is needed for the town-list release.
 
-**Town listing (PR #4 merged 2026-10-20, `e3783d2`, not deployed):**
+**Town listing (PR #4, live 2026-10-20):**
 `?municipality=…&all=1[&province=XX]` returns a town's venues in name order (≤500,
 `truncated` beyond), for Pomovi's town-first signup search. Measured on the local
 national snapshot: map build 432 ms once per instance, then Treviso (262) / Oderzo (54)
-0 ms, Roma 3 ms (truncated). Pomovi falls back to name search until this is deployed.
-The owner approved merging and deploying this service and Pomovi on 2026-10-20.
-The CLI deployment stopped before creating a deployment: no usable saved Vercel
-credentials. A fresh device login needs the owner's authentication. No database or
-environment changes are required.
+0 ms, Roma 3 ms (truncated). Deployed from clean `main` `a2c7c69` as
+`dpl_6U4UwVPK3UqP1utXXJgHhUKoWyKu`, aliased to `restaurants.trelua.com`, on the
+owner's approval for both services. No database or environment changes. Vercel's
+build and typecheck passed; sign-in loads, and the catalogue and operator APIs
+still refuse unauthenticated requests. A positive authenticated town-list check
+remains for the next owner signup; the integration bearer is not stored locally.
+Rollback from this repository: `../pomovi/node_modules/.bin/vercel rollback dpl_DmxnvZ8TA9SzJQrPig1fSAEM3SxE`.
 
 Search projects the existing `LeadIndex` (at most 10 results), including the correct
 URL of pending manual approvals. Notifications are transactional/idempotent, advance
@@ -195,10 +197,9 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
 
 ## Next executable task
 
-Complete Vercel authentication as Linux user `lorenzo`, then deploy the merged town
-listing from clean, current `main` using `web/README.md`. This deployment is already
-approved by the owner (2026-10-20). Verify the live town-list response through
-Pomovi's gated signup, then record the deployment and rollback target here.
+At the next owner signup, check that choosing a town loads its restaurants once
+and typing filters them without more search requests. Both services' deployment
+was approved on 2026-10-20; further CRM features remain the operator's choice.
 
 ## Last verification
 
@@ -206,17 +207,17 @@ Pomovi's gated signup, then record the deployment and rollback target here.
 
 - `node --test lib/pomovi-signups.test.mjs lib/national-leads.test.mjs`: **22/22**.
 - `cd web && npm run typecheck`: clean.
-- PR #4 reviewed and merged; the original checkout is clean on `main` `e3783d2`.
-- Deployment attempts created no deployment: the unpinned `npx vercel` selected
-  CLI 64.7.0; the pinned Pomovi CLI 58.0.0 also confirmed the saved login is missing.
-  The existing Pomovi project-management token cannot authenticate the CLI as a
-  user and has no access to this project. Owner device authentication is required.
+- CLI 58.0.0: owner device login completed; `vercel whoami` confirmed
+  `lorenzozanchetta`. Deployment from clean `main` `a2c7c69` completed READY;
+  Vercel build and TypeScript passed.
+- Live `https://restaurants.trelua.com/signin`: **200**;
+  `/api/pomovi/search?municipality=Oderzo&all=1&province=TV`: **401**, `no-store`,
+  without its bearer; `/api/national/meta`: **401** without operator login.
 - No production database access, sync, manual review, paid extraction or model call.
 
 ## Blockers
 
 - Real outreach: the `PRIVACY.md` prospecting items are not cleared.
-- Town-list release: deployment is approved; Vercel device authentication remains.
 - The existing local Chrome/CDP test times out on unchanged code; investigate before
   relying on a further website-review batch. Each batch still needs operator approval
   and a cap within the key's remaining limit.
