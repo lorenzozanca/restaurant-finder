@@ -1,6 +1,6 @@
 # Execution status
 
-Updated: 2026-10-19 (town listing for Pomovi's town-first search, not deployed; counts unchanged)
+Updated: 2026-10-20 (town listing merged and verified; deployment approved, waiting for Vercel login; counts unchanged)
 Branch: `main`
 
 ## Current counts
@@ -112,21 +112,24 @@ start of the name first, then the start of any later word («giardinetto» finds
 «Al Giardinetto Oderzo»), never an arbitrary substring; the town stays an exact
 filter. Contract:
 `web/README.md` → *Pomovi self-signup catalogue and notifications*. No migration.
-No production query, sync, website review, model call or deployment was initiated.
+No migration, sync, website review or model call is needed for the town-list release.
 
-**Town listing (2026-10-19, branch `pomovi/town-listing`, not deployed):**
+**Town listing (PR #4 merged 2026-10-20, `e3783d2`, not deployed):**
 `?municipality=…&all=1[&province=XX]` returns a town's venues in name order (≤500,
 `truncated` beyond), for Pomovi's town-first signup search. Measured on the local
 national snapshot: map build 432 ms once per instance, then Treviso (262) / Oderzo (54)
 0 ms, Roma 3 ms (truncated). Pomovi falls back to name search until this is deployed.
-Deploying is the operator's call.
+The owner approved merging and deploying this service and Pomovi on 2026-10-20.
+The CLI deployment stopped before creating a deployment: no usable saved Vercel
+credentials. A fresh device login needs the owner's authentication. No database or
+environment changes are required.
 
 Search projects the existing `LeadIndex` (at most 10 results), including the correct
 URL of pending manual approvals. Notifications are transactional/idempotent, advance
 only demo stages, preserve manual sales stages, and refuse do-not-contact. No signup
 contact details are copied to the CRM. The ordinary Google guards remain in place.
-Production rollout and actual Hobby cold-start measurement remain pending for
-Pomovi's approved step 10; local timings below are not live measurements.
+The original integration's production rollout and Hobby measurement were completed
+on 2026-10-17; the town-list timings above are local measurements.
 
 ## Track 2: website verification (on operator request)
 
@@ -192,50 +195,28 @@ about $3 and takes about an hour. The OpenRouter key had $8.91 left of its $25 l
 
 ## Next executable task
 
-Continue Pomovi's `signup-and-trial` Codex lane at step 3 (limits, signals and bot
-check), then integrate the catalogue client in steps 4–5. The restaurant-finder
-rollout and Hobby timing stay in that plan's owner-approved step 10. Do not deploy,
-configure production secrets, or query production to finish the local code step.
+Complete Vercel authentication as Linux user `lorenzo`, then deploy the merged town
+listing from clean, current `main` using `web/README.md`. This deployment is already
+approved by the owner (2026-10-20). Verify the live town-list response through
+Pomovi's gated signup, then record the deployment and rollback target here.
 
 ## Last verification
 
-2026-10-19 — town listing: `node --test lib/pomovi-signups.test.mjs` 12/12;
-`cd web && npm run typecheck` clean; timings above from `LeadIndex` over
-`data/istat/2026-01-01/derived/italy-import.map-snapshot.json`.
+2026-10-20 — release verification:
 
-
-2026-10-17 — Pomovi signup API:
-
+- `node --test lib/pomovi-signups.test.mjs lib/national-leads.test.mjs`: **22/22**.
 - `cd web && npm run typecheck`: clean.
-- `cd web && NEXT_TELEMETRY_DISABLED=1 DATABASE_URL=postgres://postgres:postgres@127.0.0.1:5435/postgres AUTH_SECRET=<local-test-secret> npm run build -- --webpack`:
-  compiled, both new API routes dynamic. The webpack flag supports worktree-linked
-  dependencies; no build/deployment setting changed.
-- `node --test lib/pomovi-signups.test.mjs lib/national-leads.test.mjs`: **21/21**
-  (11 new integration tests plus 10 existing catalogue tests). Fixtures and PGlite
-  are isolated from the national store and Neon.
-- `npm test`: 300/302; existing renderer failure plus the documented parallel
-  PDF-cache race. `npm test -- --test-concurrency=1`: **301/302**, only
-  `lib/headless-browser.test.mjs:16` fails. The same test fails on unchanged `main`
-  (`974598a`) and alone; a direct local probe reports `cdp_timeout:Page.navigate`.
-  The PDF test passes alone/serially. Renderer/reviewer code was not changed.
-- Built `next start` at 3030, disposable Postgres 17 at 5435: 44 HTTP and real
-  concurrent-transaction checks passed. Unset token 404, wrong/missing token 401,
-  Google/development cookies cannot substitute in production, exact proxy paths,
-  normal APIs remain private, no-store headers, prefix/town/reference search,
-  validation, duplicate and out-of-order events, won preserved, DNC refused,
-  pending manual approval uses its own URL. Five database connections deliver one
-  note per event. No production manual review was recorded.
-- Temporary app/database processes stopped by recorded PID; ports 3030/5435
-  confirmed free; both disposable database directories and worktree dependency
-  symlinks removed. The operator's checkouts and databases were not changed.
-- Full snapshot copy `3a86b85efbc5`, 156,057 venues: first authenticated catalogue
-  request **2162 ms**, 20 warm requests **median 6 ms / max 10 ms**. Runtime index log:
-  fetch **135 ms**, build **1638 ms**. Local only; Hobby measurement still open.
+- PR #4 reviewed and merged; the original checkout is clean on `main` `e3783d2`.
+- Deployment attempts created no deployment: the unpinned `npx vercel` selected
+  CLI 64.7.0; the pinned Pomovi CLI 58.0.0 also confirmed the saved login is missing.
+  The existing Pomovi project-management token cannot authenticate the CLI as a
+  user and has no access to this project. Owner device authentication is required.
+- No production database access, sync, manual review, paid extraction or model call.
 
 ## Blockers
 
 - Real outreach: the `PRIVACY.md` prospecting items are not cleared.
-- Self-signup production rollout: pending Pomovi step 10, with explicit owner approval.
+- Town-list release: deployment is approved; Vercel device authentication remains.
 - The existing local Chrome/CDP test times out on unchanged code; investigate before
   relying on a further website-review batch. Each batch still needs operator approval
   and a cap within the key's remaining limit.

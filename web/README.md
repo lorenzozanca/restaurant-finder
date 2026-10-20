@@ -79,16 +79,16 @@ menu, won when the venue is active).
 
 ## Pomovi self-signup catalogue and notifications
 
-The inbound integration for Pomovi's `signup-and-trial` project is implemented but
-**not deployed or configured**. It uses `POMOVI_INBOUND_TOKEN`, a separate, random
-server-only credential from the outbound `POMOVI_BRIDGE_TOKEN`. Set the inbound
-value on both servers during Pomovi's approved step-10 rollout. Do not put it in
+The inbound integration for Pomovi's `signup-and-trial` project is **live since
+2026-10-17 behind Pomovi's signup gate**. It uses `POMOVI_INBOUND_TOKEN`, a separate, random
+server-only credential from the outbound `POMOVI_BRIDGE_TOKEN`. The inbound
+value is configured on both servers. Do not put it in
 browser code. Unset/blank: the supported calls return 404; missing/wrong bearer:
 401. A Google session does not admit these calls. Responses use `Cache-Control:
 no-store`. Only these exact two paths bypass the OAuth proxy, and each authenticates
 before loading the catalogue or touching Postgres.
 
-- `GET /api/pomovi/search?q=caffe[&municipality=Treviso]`: name prefix, case/accent
+- `GET /api/pomovi/search?q=caffe[&municipality=Treviso]`: name or word prefix, case/accent
   insensitive; 3–80 normalised characters, optional exact municipality (also
   case/accent insensitive, ≤100 characters), at most 10 results. Each has `ref`,
   `name`, `address`, `municipality`, `province`, `region` (ISTAT code), `website`

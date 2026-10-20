@@ -120,8 +120,10 @@ is first used to contact a venue.
    2026-09-28 (Pomovi venue 15; the demo's state read back with Refresh from Pomovi).
 10. Pomovi self-signup integration (operator, 2026-10-17, Pomovi's
     `signup-and-trial` step 2): bounded server-to-server catalogue search and
-    retry-safe signup/build stage notifications. Code verified locally; production
-    rollout and Hobby cold-start measurement wait for Pomovi's approved step 10.
+    retry-safe signup/build stage notifications. Deployed 2026-10-17 behind Pomovi's
+    gate; Hobby search measured 10.5 s cold, ~0.5 s warm. The town-list extension
+    (PR #4, merged 2026-10-20) is verified and approved for deployment, pending
+    Vercel authentication.
     Contract and safeguards: `web/README.md` → "Pomovi self-signup catalogue and
     notifications". Further CRM features remain the operator's choice.
 
